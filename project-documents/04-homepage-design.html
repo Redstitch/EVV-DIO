@@ -1,0 +1,3705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catholic Diocese of Evansville — The Catholic Church in Southwestern Indiana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1B2A4A;
+            --navy-90: rgba(27, 42, 74, 0.92);
+            --blue: #24678D;
+            --blue-light: #3A8AB8;
+            --cream: #F5F0E8;
+            --cream-dark: #E8E0D2;
+            --gold: #C5A55A;
+            --gold-light: #D4B86A;
+            --gold-pale: #F0E6CC;
+            --accent-red: #8B1A1A;
+            --accent-red-hover: #A52222;
+            --warm-white: #FDFBF7;
+            --text-dark: #2A2A2A;
+            --text-medium: #5A574F;
+            --text-light: #8A857B;
+            --border: #DDD7CC;
+            --shadow-soft: 0 2px 20px rgba(27, 42, 74, 0.06);
+            --shadow-medium: 0 8px 40px rgba(27, 42, 74, 0.1);
+            --shadow-card: 0 4px 24px rgba(27, 42, 74, 0.08);
+            --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Libre Franklin', sans-serif;
+            color: var(--text-dark);
+            background: var(--warm-white);
+            line-height: 1.65;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        /* === SKIP TO CONTENT === */
+        .skip-to-content {
+            position: absolute;
+            top: -100%;
+            left: 16px;
+            z-index: 9999;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 12px 24px;
+            border-radius: 0 0 6px 6px;
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: top 0.2s ease;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+            outline: 3px solid var(--navy);
+            outline-offset: 2px;
+        }
+
+        /* === FOCUS VISIBLE GLOBAL STYLES === */
+        *:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px;
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        .quick-card:focus-visible,
+        .article-card:focus-visible,
+        .event-card:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px;
+        }
+
+        /* Dark background focus overrides */
+        .utility-nav a:focus-visible,
+        .events-section a:focus-visible,
+        .events-section button:focus-visible,
+        .footer a:focus-visible,
+        .footer button:focus-visible,
+        .footer input:focus-visible,
+        .hero a:focus-visible,
+        .hero button:focus-visible {
+            outline-color: var(--gold);
+        }
+
+        /* ============================================================
+           HEADER SYSTEM — Utility Nav, Main Header, Mega Menu,
+           Mobile Drawer, Responsive
+           ============================================================ */
+
+        /* === UTILITY NAV === */
+        .utility-nav {
+            background: var(--navy);
+            padding: 6px 0;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 100;
+        }
+
+        .utility-nav .container {
+            max-width: 100%;
+            margin: 0;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .utility-nav a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        .utility-nav a:hover { color: var(--gold); }
+
+        .utility-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.08);
+            padding: 3px 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background var(--transition);
+        }
+
+        .lang-toggle:hover { background: rgba(255,255,255,0.15); }
+
+        .lang-toggle .active { color: #fff; font-weight: 600; }
+
+        .lang-toggle .divider {
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* === MAIN HEADER === */
+        .main-header {
+            background: var(--warm-white);
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            transition: box-shadow var(--transition), height var(--transition);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .main-header.scrolled {
+            box-shadow: var(--shadow-medium);
+        }
+
+        .main-header .container {
+            max-width: 100%;
+            margin: 0;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            height: 80px;
+            transition: height var(--transition);
+        }
+
+        .main-header.scrolled .container {
+            height: 64px;
+        }
+
+        /* === LOGO === */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .logo-crest {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            transition: width var(--transition), height var(--transition);
+            background: none;
+        }
+
+        .main-header.scrolled .logo-crest {
+            width: 42px;
+            height: 42px;
+        }
+
+        .logo-crest::after {
+            display: none;
+        }
+
+        .logo-crest img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-crest svg {
+            width: 26px;
+            height: 26px;
+            fill: var(--gold);
+        }
+
+        .main-header.scrolled .logo-crest svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.15;
+            letter-spacing: -0.3px;
+        }
+
+        .logo-text .tagline {
+            font-size: 11px;
+            color: var(--text-light);
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        /* === MAIN NAV === */
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            height: 100%;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-item-wrap {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-item-wrap > a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: all var(--transition);
+            position: relative;
+            letter-spacing: 0.2px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            white-space: nowrap;
+        }
+
+        .nav-item-wrap > a .chevron {
+            width: 10px;
+            height: 10px;
+            fill: none;
+            stroke: var(--text-light);
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform var(--transition), stroke var(--transition);
+        }
+
+        .nav-item-wrap:hover > a .chevron,
+        .nav-item-wrap.active > a .chevron {
+            transform: rotate(180deg);
+            stroke: var(--blue);
+        }
+
+        .nav-item-wrap > a:hover,
+        .nav-item-wrap.active > a {
+            color: var(--blue);
+            background: rgba(36, 103, 141, 0.06);
+        }
+
+        .nav-item-wrap > a::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 14px;
+            right: 14px;
+            height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform var(--transition);
+        }
+
+        .nav-item-wrap:hover > a::after,
+        .nav-item-wrap.active > a::after { transform: scaleX(1); }
+
+        /* === MEGA MENU === */
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(8px);
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(27, 42, 74, 0.15), 0 1px 3px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+            z-index: 200;
+            padding: 28px 32px;
+            min-width: 540px;
+        }
+
+        .mega-menu.wide {
+            min-width: 720px;
+        }
+
+        .mega-menu.extra-wide {
+            min-width: 800px;
+        }
+
+        .mega-menu.narrow {
+            min-width: 320px;
+        }
+
+        .nav-item-wrap.mega-open .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .mega-menu::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 0;
+            right: 0;
+            height: 8px;
+        }
+
+        .mega-menu-grid {
+            display: grid;
+            gap: 0 40px;
+        }
+
+        .mega-menu-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+        .mega-menu-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+        .mega-menu-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+        .mega-col h4 {
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--cream);
+        }
+
+        .mega-col a {
+            display: block;
+            padding: 5px 0;
+            font-size: 13px;
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: color 0.2s, padding-left 0.2s;
+            line-height: 1.4;
+        }
+
+        .mega-col a:hover {
+            color: var(--blue);
+            padding-left: 4px;
+        }
+
+        .mega-col a.featured {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .mega-col a.featured:hover {
+            color: var(--blue);
+        }
+
+        .mega-col a.external::after {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-left: 4px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%238A857B' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+        }
+
+        .mega-col .mega-note {
+            font-size: 11px;
+            color: var(--text-light);
+            margin-top: 12px;
+            font-style: italic;
+        }
+
+        .mega-cta {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--cream);
+        }
+
+        .mega-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: var(--blue);
+            text-decoration: none;
+            transition: color 0.2s, gap 0.2s;
+        }
+
+        .mega-cta a:hover {
+            color: var(--navy);
+            gap: 10px;
+        }
+
+        .mega-cta a svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+        }
+
+        .mega-highlight {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 8px;
+        }
+
+        .mega-highlight h4 {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 6px;
+            color: var(--navy);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        .mega-highlight p {
+            font-size: 12px;
+            color: var(--text-medium);
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .mega-highlight .mega-btn {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #fff;
+            background: var(--blue);
+            padding: 7px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .mega-highlight .mega-btn:hover {
+            background: var(--navy);
+        }
+
+        /* Align mega menus that risk overflowing right side */
+        .nav-item-wrap.align-right .mega-menu {
+            left: auto;
+            right: 0;
+            transform: translateY(8px);
+        }
+
+        .nav-item-wrap.align-right.mega-open .mega-menu {
+            transform: translateY(0);
+        }
+
+        /* === HEADER ACTIONS === */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .search-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1.5px solid var(--border);
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+            color: var(--text-medium);
+        }
+
+        .search-btn:hover {
+            border-color: var(--blue);
+            color: var(--blue);
+            background: rgba(36, 103, 141, 0.05);
+        }
+
+        .search-btn svg { width: 18px; height: 18px; }
+
+        .give-btn {
+            background: var(--accent-red);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            padding: 10px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .give-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.1));
+        }
+
+        .give-btn:hover {
+            background: var(--accent-red-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(139, 26, 26, 0.3);
+        }
+
+        /* Give button pulse animation */
+        @keyframes givePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(139, 26, 26, 0); }
+            50% { box-shadow: 0 0 0 8px rgba(139, 26, 26, 0.15); }
+        }
+
+        .header-actions .give-btn {
+            animation: givePulse 5s ease-in-out infinite;
+        }
+
+        .header-actions .give-btn:hover {
+            animation: none;
+        }
+
+        /* === MOBILE MENU TOGGLE (hamburger) === */
+        .mobile-toggle {
+            display: none;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            position: relative;
+            z-index: 201;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--navy);
+            transition: var(--transition);
+            transform-origin: center;
+        }
+
+        /* Hamburger to X animation */
+        .mobile-toggle.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .mobile-toggle.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* === MOBILE DRAWER OVERLAY === */
+        .mobile-drawer-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(27, 42, 74, 0.6);
+            z-index: 190;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity var(--transition), visibility var(--transition);
+            backdrop-filter: blur(2px);
+        }
+
+        .mobile-drawer-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* === MOBILE DRAWER === */
+        .mobile-drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 380px;
+            max-width: 90vw;
+            height: 100vh;
+            height: 100dvh;
+            background: var(--warm-white);
+            z-index: 200;
+            transform: translateX(100%);
+            transition: transform var(--transition);
+            box-shadow: -8px 0 40px rgba(27, 42, 74, 0.2);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-drawer.active {
+            transform: translateX(0);
+        }
+
+        /* Drawer header with close button */
+        .mobile-drawer-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .mobile-drawer-header .logo-text .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .mobile-drawer-header .logo-text .tagline {
+            font-size: 10px;
+            color: var(--text-light);
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+        }
+
+        .drawer-close-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1.5px solid var(--border);
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+            color: var(--text-medium);
+            flex-shrink: 0;
+        }
+
+        .drawer-close-btn:hover {
+            border-color: var(--accent-red);
+            color: var(--accent-red);
+            background: rgba(139, 26, 26, 0.05);
+        }
+
+        .drawer-close-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Drawer search bar */
+        .mobile-drawer-search {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .mobile-drawer-search .search-wrap {
+            display: flex;
+            gap: 0;
+        }
+
+        .mobile-drawer-search input {
+            flex: 1;
+            padding: 10px 14px;
+            border: 1.5px solid var(--border);
+            border-right: none;
+            border-radius: 6px 0 0 6px;
+            background: #fff;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-family: 'Libre Franklin', sans-serif;
+            outline: none;
+            transition: border-color var(--transition);
+        }
+
+        .mobile-drawer-search input:focus {
+            border-color: var(--blue);
+        }
+
+        .mobile-drawer-search button {
+            padding: 10px 16px;
+            background: var(--navy);
+            color: #fff;
+            border: none;
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background var(--transition);
+        }
+
+        .mobile-drawer-search button:hover {
+            background: var(--blue);
+        }
+
+        .mobile-drawer-search button svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Language toggle in drawer */
+        .mobile-drawer-lang {
+            padding: 10px 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .mobile-drawer-lang span {
+            font-size: 12px;
+            color: var(--text-light);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mobile-lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .mobile-lang-toggle a {
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 4px;
+            color: var(--text-medium);
+            font-size: 13px;
+            font-weight: 500;
+            transition: all var(--transition);
+        }
+
+        .mobile-lang-toggle a.active {
+            background: var(--navy);
+            color: #fff;
+        }
+
+        .mobile-lang-toggle a:hover:not(.active) {
+            background: var(--cream);
+        }
+
+        /* Drawer accordion nav area - scrollable */
+        .mobile-drawer-nav {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Accordion section */
+        .drawer-accordion {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .drawer-accordion-trigger {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 16px 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Libre Franklin', sans-serif;
+            color: var(--navy);
+            text-align: left;
+            transition: all var(--transition);
+        }
+
+        .drawer-accordion-trigger:hover,
+        .drawer-accordion-trigger:focus-visible {
+            background: rgba(36, 103, 141, 0.04);
+            color: var(--blue);
+        }
+
+        .drawer-accordion-trigger .accordion-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .drawer-accordion-trigger .accordion-icon svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--text-light);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: stroke var(--transition);
+        }
+
+        .drawer-accordion-trigger:hover .accordion-icon svg {
+            stroke: var(--blue);
+        }
+
+        .drawer-accordion.open .drawer-accordion-trigger .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .drawer-accordion.open .drawer-accordion-trigger .accordion-icon svg {
+            stroke: var(--blue);
+        }
+
+        .drawer-accordion-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .drawer-accordion.open .drawer-accordion-panel {
+            max-height: 2000px;
+        }
+
+        .drawer-accordion-content {
+            padding: 0 20px 16px;
+        }
+
+        .drawer-group-label {
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-top: 12px;
+            margin-bottom: 6px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--cream);
+        }
+
+        .drawer-group-label:first-child {
+            margin-top: 0;
+        }
+
+        .drawer-accordion-content a {
+            display: block;
+            padding: 6px 0 6px 8px;
+            font-size: 14px;
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: all var(--transition);
+            border-left: 2px solid transparent;
+        }
+
+        .drawer-accordion-content a:hover,
+        .drawer-accordion-content a:focus-visible {
+            color: var(--blue);
+            border-left-color: var(--gold);
+            padding-left: 12px;
+        }
+
+        .drawer-accordion-content a.featured {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .drawer-accordion-content a.featured:hover {
+            color: var(--blue);
+        }
+
+        /* Drawer utility links + sticky Give button at bottom */
+        .mobile-drawer-bottom {
+            flex-shrink: 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .drawer-utility-links {
+            padding: 12px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+        }
+
+        .drawer-utility-links a {
+            font-size: 12px;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        .drawer-utility-links a:hover {
+            color: var(--blue);
+        }
+
+        .mobile-drawer-give {
+            padding: 16px 20px;
+            background: var(--cream);
+        }
+
+        .mobile-drawer-give .give-btn {
+            display: block;
+            text-align: center;
+            padding: 14px 24px;
+            font-size: 15px;
+            animation: none;
+            border-radius: 8px;
+        }
+
+
+        /* ============================================================
+           END HEADER SYSTEM
+           ============================================================ */
+
+
+        /* === HERO === */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--navy);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(27,42,74,0.45) 0%, rgba(27,42,74,0.6) 40%, rgba(27,42,74,0.85) 100%),
+                url('https://www.evdio.org/uploads/2/6/3/0/26308718/background-images/1366250879.jpg');
+            background-size: cover;
+            background-position: center 30%;
+        }
+
+        .hero-texture {
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-decorative {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            border: 1px solid rgba(197, 165, 90, 0.08);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-decorative::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            height: 450px;
+            border: 1px solid rgba(197, 165, 90, 0.05);
+            border-radius: 50%;
+        }
+
+        .hero .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-content {
+            animation: heroFadeIn 1s ease-out;
+        }
+
+        @keyframes heroFadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-label::before {
+            content: '';
+            width: 32px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(42px, 5vw, 64px);
+            font-weight: 300;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 strong {
+            font-weight: 700;
+            display: block;
+        }
+
+        .hero-vision {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-style: italic;
+            color: var(--gold-light);
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 480px;
+            margin-bottom: 36px;
+            line-height: 1.75;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 6px;
+            transition: all var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(197, 165, 90, 0.35);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 1.5px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .btn svg { width: 16px; height: 16px; }
+
+        .hero-bishop {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            animation: heroFadeIn 1s ease-out 0.3s both;
+        }
+
+        .bishop-portrait {
+            width: 380px;
+            height: 460px;
+            background: linear-gradient(170deg, var(--blue) 0%, var(--navy) 70%);
+            border-radius: 200px 200px 20px 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .bishop-portrait::before {
+            content: '';
+            position: absolute;
+            inset: 4px;
+            border: 1px solid rgba(197, 165, 90, 0.2);
+            border-radius: 197px 197px 17px 17px;
+        }
+
+        .bishop-portrait .placeholder-figure {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px;
+            height: 380px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .bishop-silhouette {
+            width: 120px;
+            height: 120px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 50%;
+            position: relative;
+            top: 30px;
+        }
+
+        .bishop-body {
+            width: 200px;
+            height: 260px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 100px 100px 0 0;
+            margin-top: -20px;
+        }
+
+        .bishop-name-plate {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(27, 42, 74, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(197, 165, 90, 0.3);
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .bishop-name-plate .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .bishop-name-plate .title {
+            font-size: 11px;
+            color: var(--gold);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        /* === QUICK ACCESS === */
+        .quick-access {
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+            padding: 0 32px;
+        }
+
+        .quick-access .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .quick-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            box-shadow: var(--shadow-card);
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+        }
+
+        .quick-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .quick-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-medium);
+            border-color: var(--gold-pale);
+        }
+
+        .quick-card:hover::before { transform: scaleX(1); }
+
+        .quick-card .icon-wrap {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            transition: all var(--transition);
+        }
+
+        .quick-card:hover .icon-wrap {
+            background: var(--navy);
+        }
+
+        .quick-card .icon-wrap svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--navy);
+            transition: fill var(--transition);
+        }
+
+        .quick-card:hover .icon-wrap svg { fill: var(--gold); }
+
+        .quick-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 6px;
+        }
+
+        .quick-card p {
+            font-size: 13px;
+            color: var(--text-medium);
+            line-height: 1.5;
+        }
+
+        /* Quick card arrow */
+        .quick-card-arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 12px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--cream);
+            transition: all var(--transition);
+        }
+
+        .quick-card-arrow svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--text-light);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            transition: all var(--transition);
+            transform: translateX(0);
+        }
+
+        .quick-card:hover .quick-card-arrow {
+            background: var(--gold);
+        }
+
+        .quick-card:hover .quick-card-arrow svg {
+            stroke: var(--navy);
+            transform: translateX(2px);
+        }
+
+        /* === SECTIONS === */
+        .section-padding { padding: 100px 32px; }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(32px, 4vw, 44px);
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-medium);
+            max-width: 560px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* === THE MESSAGE === */
+        .message-section {
+            background: var(--cream);
+            position: relative;
+        }
+
+        .message-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+        }
+
+        .article-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--text-dark);
+            box-shadow: var(--shadow-soft);
+            transition: all var(--transition);
+            border: 1px solid rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .article-image {
+            height: 200px;
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(27,42,74,0.4));
+        }
+
+        .article-image .img-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--navy) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .article-image .img-placeholder svg {
+            width: 48px;
+            height: 48px;
+            fill: rgba(255,255,255,0.15);
+        }
+
+        .article-category {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            z-index: 2;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+
+        .article-body {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-date {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .article-body h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .article-body p {
+            font-size: 14px;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        .article-card:hover h3 { color: var(--blue); }
+
+        /* Article card "Read More" link */
+        .article-read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--blue);
+            margin-top: auto;
+            padding-top: 14px;
+            letter-spacing: 0.3px;
+            transition: all var(--transition);
+        }
+
+        .article-read-more svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--blue);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            transition: transform var(--transition);
+        }
+
+        .article-card:hover .article-read-more {
+            color: var(--navy);
+        }
+
+        .article-card:hover .article-read-more svg {
+            transform: translateX(3px);
+            stroke: var(--navy);
+        }
+
+        .section-cta {
+            text-align: center;
+            margin-top: 44px;
+        }
+
+        .btn-secondary {
+            background: var(--navy);
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background: var(--blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(27, 42, 74, 0.25);
+        }
+
+        /* === IMPACT / MINISTRY SPOTLIGHT === */
+        .impact-section {
+            background: var(--warm-white);
+            position: relative;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .impact-visual {
+            position: relative;
+        }
+
+        .impact-main-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, var(--blue), var(--navy)) url('https://www.evdio.org/uploads/2/6/3/0/26308718/published/fnl-become-one-12x18-with-bleed-1.jpg?1774972172') center/cover;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .impact-main-image svg {
+            width: 80px;
+            height: 80px;
+            fill: rgba(255,255,255,0.1);
+        }
+
+        .impact-stat-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 20px 24px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .impact-stat-badge .number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .impact-stat-badge .label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .impact-content .section-label { text-align: left; }
+        .impact-content .section-title { text-align: left; }
+
+        .impact-text {
+            font-size: 16px;
+            color: var(--text-medium);
+            margin-bottom: 24px;
+            line-height: 1.75;
+        }
+
+        .impact-stats-row {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .mini-stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mini-stat .num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1;
+        }
+
+        .mini-stat .lbl {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        /* === GIVING CTA BANNER === */
+        .giving-cta-section {
+            background: var(--accent-red);
+            position: relative;
+            padding: 80px 32px;
+            overflow: hidden;
+        }
+
+        .giving-cta-section::before {
+            content: '';
+            position: absolute;
+            top: -150px;
+            right: -150px;
+            width: 400px;
+            height: 400px;
+            border: 1px solid rgba(197, 165, 90, 0.12);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .giving-cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(197, 165, 90, 0.08);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .giving-cta-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .giving-cta-content {
+            flex: 1;
+            max-width: 680px;
+        }
+
+        .giving-cta-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .giving-cta-label::before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .giving-cta-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(28px, 3.5vw, 40px);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .giving-cta-text {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 28px;
+            max-width: 560px;
+        }
+
+        .giving-cta-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-giving {
+            background: var(--gold);
+            color: var(--navy);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 16px 36px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-giving:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(197, 165, 90, 0.4);
+        }
+
+        .btn-giving svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .btn-giving-outline {
+            background: transparent;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            border: 1.5px solid rgba(255, 255, 255, 0.3);
+            transition: all var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-giving-outline:hover {
+            border-color: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .giving-cta-stat {
+            flex-shrink: 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(197, 165, 90, 0.2);
+            border-radius: 16px;
+            padding: 36px 40px;
+            backdrop-filter: blur(4px);
+        }
+
+        .giving-cta-stat .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .giving-cta-stat .stat-label {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .giving-cta-stat .stat-sub {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 8px;
+            font-weight: 300;
+        }
+
+        /* === EVENTS === */
+        .events-section {
+            background: var(--navy);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .events-section::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            border: 1px solid rgba(197, 165, 90, 0.06);
+            border-radius: 50%;
+        }
+
+        .events-section .section-label { color: var(--gold); }
+        .events-section .section-title { color: #fff; }
+        .events-section .section-subtitle { color: rgba(255,255,255,0.6); }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .event-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 28px;
+            text-decoration: none;
+            color: #fff;
+            transition: all var(--transition);
+            display: flex;
+            gap: 20px;
+        }
+
+        .event-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(197, 165, 90, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .event-date-badge {
+            flex-shrink: 0;
+            width: 64px;
+            text-align: center;
+            padding: 12px 0;
+            border-radius: 10px;
+            background: rgba(197, 165, 90, 0.12);
+            border: 1px solid rgba(197, 165, 90, 0.2);
+        }
+
+        .event-date-badge .month {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .event-date-badge .day {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .event-info h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .event-info .location {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .event-info .location svg {
+            width: 14px;
+            height: 14px;
+            fill: rgba(255,255,255,0.4);
+        }
+
+        .event-register {
+            font-size: 12px;
+            color: var(--gold);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .event-register svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--gold);
+            transition: transform var(--transition);
+        }
+
+        .event-card:hover .event-register svg {
+            transform: translateX(3px);
+        }
+
+        /* === DASHBOARD === */
+        .dashboard-section {
+            background: var(--cream);
+            position: relative;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .dashboard-content .section-label { text-align: left; }
+        .dashboard-content .section-title { text-align: left; }
+
+        .dashboard-text {
+            font-size: 16px;
+            color: var(--text-medium);
+            margin-bottom: 24px;
+            line-height: 1.75;
+        }
+
+        .dashboard-preview {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border);
+        }
+
+        .dashboard-preview-header {
+            background: var(--navy);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dashboard-preview-header h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .dashboard-preview-header .badge {
+            font-size: 10px;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .dashboard-preview-body {
+            padding: 24px;
+        }
+
+        .dash-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--cream);
+            font-size: 14px;
+        }
+
+        .dash-row:last-child { border-bottom: none; }
+
+        .dash-row .label { color: var(--text-medium); }
+        .dash-row .value { font-weight: 600; color: var(--navy); }
+
+        .dash-cta {
+            text-align: center;
+            padding: 16px 24px;
+            background: var(--cream);
+        }
+
+        .dash-cta a {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--blue);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .dash-cta a:hover { color: var(--navy); }
+
+        /* === VIDEO === */
+        .video-section {
+            background: var(--warm-white);
+        }
+
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .video-embed {
+            aspect-ratio: 16/9;
+            background: var(--navy) url('https://www.weebly.com/uploads/b/26308718-842824052618745465/catholic_diocese_of_evansville_video_tour_856.jpg') center/cover;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .video-embed::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(27,42,74,0.8), rgba(36,103,141,0.6));
+        }
+
+        .play-button {
+            position: relative;
+            z-index: 2;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+            box-shadow: 0 4px 24px rgba(197, 165, 90, 0.4);
+        }
+
+        .video-embed:hover .play-button {
+            transform: scale(1.1);
+            box-shadow: 0 8px 36px rgba(197, 165, 90, 0.5);
+        }
+
+        .play-button svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--navy);
+            margin-left: 4px;
+        }
+
+        .video-title {
+            position: absolute;
+            bottom: 24px;
+            left: 32px;
+            z-index: 2;
+        }
+
+        .video-title h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .video-title p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* === BACK TO TOP BUTTON === */
+        .back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(197, 165, 90, 0.4);
+            z-index: 80;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: opacity var(--transition), visibility var(--transition), transform var(--transition), background var(--transition);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(197, 165, 90, 0.5);
+        }
+
+        .back-to-top svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--navy);
+            fill: none;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+        }
+
+        /* === FOOTER === */
+        .footer {
+            background: var(--navy);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 80px 32px 0;
+        }
+
+        .footer .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-brand .logo { margin-bottom: 20px; }
+        .footer-brand .logo-text .name { color: #fff; }
+        .footer-brand .logo-text .tagline { color: rgba(255,255,255,0.4); }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-address {
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .footer-address a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+        }
+
+        .footer-address a:hover { color: var(--gold); }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+        }
+
+        .social-links a:hover {
+            border-color: var(--gold);
+            background: rgba(197, 165, 90, 0.1);
+        }
+
+        .social-links a svg {
+            width: 16px;
+            height: 16px;
+            fill: rgba(255, 255, 255, 0.6);
+            transition: fill var(--transition);
+        }
+
+        .social-links a:hover svg { fill: var(--gold); }
+
+        .footer-column h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color var(--transition);
+        }
+
+        .footer-column a:hover { color: var(--gold); }
+
+        .footer-subscribe {
+            margin-top: 16px;
+        }
+
+        .subscribe-input {
+            display: flex;
+            gap: 0;
+        }
+
+        .subscribe-input input {
+            flex: 1;
+            padding: 10px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-right: none;
+            border-radius: 6px 0 0 6px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 13px;
+            font-family: 'Libre Franklin', sans-serif;
+            outline: none;
+            transition: border-color var(--transition);
+        }
+
+        .subscribe-input input::placeholder {
+            color: rgba(255,255,255,0.3);
+        }
+
+        .subscribe-input input:focus {
+            border-color: var(--gold);
+        }
+
+        .subscribe-input button {
+            padding: 10px 16px;
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            border-radius: 0 6px 6px 0;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            font-family: 'Libre Franklin', sans-serif;
+            transition: background var(--transition);
+        }
+
+        .subscribe-input button:hover {
+            background: var(--gold-light);
+        }
+
+        .footer-bottom {
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.3);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        .footer-bottom a:hover { color: rgba(255, 255, 255, 0.6); }
+
+        .footer-legal {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* === SCROLL ANIMATIONS === */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================================
+           RESPONSIVE DESIGN
+           ============================================================ */
+
+        /* Large Tablet: 1024px - 1200px — condensed nav */
+        @media (max-width: 1200px) and (min-width: 1025px) {
+            .nav-item-wrap > a {
+                font-size: 13px;
+                padding: 8px 10px;
+            }
+
+            .main-header .container {
+                padding: 0 24px;
+            }
+
+            .logo-text .tagline {
+                display: none;
+            }
+        }
+
+        /* Tablet: 768px - 1024px */
+        @media (max-width: 1024px) {
+            .utility-nav { display: none; }
+            .main-nav { display: none; }
+            .header-actions .search-btn { display: none; }
+            .mobile-toggle { display: flex; }
+
+            .main-header .container {
+                height: 68px;
+            }
+
+            .main-header.scrolled .container {
+                height: 56px;
+            }
+
+            /* Keep Give button visible on tablet */
+            .header-actions .give-btn {
+                padding: 8px 18px;
+                font-size: 12px;
+            }
+
+            /* Hero is already centered at all widths */
+            /* Bishop section responsive handled inline */
+            .quick-grid { grid-template-columns: repeat(2, 1fr); }
+            .article-grid { grid-template-columns: repeat(2, 1fr); }
+            .impact-grid { grid-template-columns: 1fr; }
+            .events-grid { grid-template-columns: 1fr; }
+            .dashboard-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+
+            .giving-cta-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .giving-cta-content {
+                max-width: 100%;
+            }
+
+            .giving-cta-actions {
+                justify-content: center;
+            }
+        }
+
+        /* Mobile: < 768px */
+        @media (max-width: 767px) {
+            .utility-nav { display: none; }
+            .main-nav { display: none; }
+            .header-actions .search-btn { display: none; }
+            .mobile-toggle { display: flex; }
+
+            .main-header .container {
+                height: 60px;
+                padding: 0 16px;
+            }
+
+            .main-header.scrolled .container {
+                height: 52px;
+            }
+
+            .logo-crest {
+                width: 40px;
+                height: 40px;
+            }
+
+            .logo-crest svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .logo-text .name {
+                font-size: 17px;
+            }
+
+            .logo-text .tagline {
+                display: none;
+            }
+
+            .logo {
+                gap: 10px;
+            }
+
+            /* Compact Give button */
+            .header-actions .give-btn {
+                padding: 7px 14px;
+                font-size: 11px;
+                letter-spacing: 0.8px;
+            }
+
+            .quick-grid { grid-template-columns: 1fr; }
+            .article-grid { grid-template-columns: 1fr; }
+            .section-padding { padding: 64px 20px; }
+            .hero { min-height: 70vh; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+
+            .giving-cta-section { padding: 60px 20px; }
+            .giving-cta-stat { padding: 28px 32px; }
+            .giving-cta-stat .stat-number { font-size: 44px; }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 44px;
+                height: 44px;
+            }
+
+            .mobile-drawer {
+                width: 100%;
+                max-width: 100vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Skip to Content -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-overlay" id="mobileOverlay" aria-hidden="true"></div>
+
+    <!-- Mobile Drawer -->
+    <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation" aria-hidden="true">
+
+        <!-- Drawer Header -->
+        <div class="mobile-drawer-header">
+            <div class="logo-text">
+                <span class="name">Diocese of Evansville</span>
+                <span class="tagline">Southwestern Indiana</span>
+            </div>
+            <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="mobile-drawer-search">
+            <div class="search-wrap">
+                <input type="search" placeholder="Search the diocese..." aria-label="Search the diocese">
+                <button aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Language Toggle -->
+        <div class="mobile-drawer-lang">
+            <span>Language:</span>
+            <div class="mobile-lang-toggle">
+                <a href="#" class="active">EN</a>
+                <a href="#">ES</a>
+            </div>
+        </div>
+
+        <!-- Accordion Nav Sections -->
+        <div class="mobile-drawer-nav">
+
+            <!-- ABOUT -->
+            <div class="drawer-accordion">
+                <button class="drawer-accordion-trigger" aria-expanded="false">
+                    About
+                    <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="drawer-accordion-panel">
+                    <div class="drawer-accordion-content">
+                        <div class="drawer-group-label">Our Diocese</div>
+                        <a href="#" class="featured">Our Bishop</a>
+                        <a href="#">Diocesan Leadership</a>
+                        <a href="#">Our History</a>
+                        <a href="#">Our Vision</a>
+                        <a href="#">Transparency &amp; Accountability</a>
+                        <a href="#">Official Statements &amp; Decrees</a>
+                        <div class="drawer-group-label">Offices &amp; Resources</div>
+                        <a href="#">Offices &amp; Departments</a>
+                        <a href="#">Staff Directory</a>
+                        <a href="#">Clergy Directory</a>
+                        <a href="#">Parish Directory</a>
+                        <a href="#">Catholic Resources &amp; Links</a>
+                        <a href="#">Careers</a>
+                        <div class="drawer-group-label">Safety &amp; Contact</div>
+                        <a href="#" class="featured">Child &amp; Youth Protection</a>
+                        <a href="#" class="featured">Report Abuse</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Press Room</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARISHES & MASS -->
+            <div class="drawer-accordion">
+                <button class="drawer-accordion-trigger" aria-expanded="false">
+                    Parishes &amp; Mass
+                    <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="drawer-accordion-panel">
+                    <div class="drawer-accordion-content">
+                        <div class="drawer-group-label">Find a Parish</div>
+                        <a href="#" class="featured">Parish Finder Map</a>
+                        <a href="#">Mass Times</a>
+                        <a href="#">Watch Mass Online</a>
+                        <a href="#">Parish Directory</a>
+                        <div class="drawer-group-label">Browse by Deanery</div>
+                        <a href="#">North Deanery</a>
+                        <a href="#">South Deanery</a>
+                        <a href="#">East Deanery</a>
+                        <a href="#">West Deanery</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAITH & SACRAMENTS -->
+            <div class="drawer-accordion">
+                <button class="drawer-accordion-trigger" aria-expanded="false">
+                    Faith &amp; Sacraments
+                    <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="drawer-accordion-panel">
+                    <div class="drawer-accordion-content">
+                        <div class="drawer-group-label">Getting Started</div>
+                        <a href="#" class="featured">How to Become Catholic</a>
+                        <a href="#">Becoming Catholic (OCIA)</a>
+                        <div class="drawer-group-label">Sacraments</div>
+                        <a href="#">Baptism</a>
+                        <a href="#">First Communion</a>
+                        <a href="#">Confirmation</a>
+                        <a href="#">Catholic Marriage</a>
+                        <a href="#">Anointing of the Sick</a>
+                        <a href="#">Vocations</a>
+                        <a href="#">Becoming a Deacon</a>
+                        <div class="drawer-group-label">Prayer &amp; Worship</div>
+                        <a href="#">Prayer &amp; Worship Resources</a>
+                        <a href="#">Church Calendar</a>
+                        <a href="#">Music Resources for Parishes</a>
+                        <a href="#">Year of Jubilee 2025</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATHOLIC SCHOOLS -->
+            <div class="drawer-accordion">
+                <button class="drawer-accordion-trigger" aria-expanded="false">
+                    Catholic Schools
+                    <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="drawer-accordion-panel">
+                    <div class="drawer-accordion-content">
+                        <div class="drawer-group-label">Our Schools</div>
+                        <a href="#" class="featured">Catholic Schools Overview</a>
+                        <a href="#">Find a School / School Listings</a>
+                        <a href="#">Schools Map</a>
+                        <a href="#" class="external">Enroll Your Child</a>
+                        <div class="drawer-group-label">For Families &amp; Staff</div>
+                        <a href="#">Tuition Assistance &amp; Affordability</a>
+                        <a href="#">Programs for Children with Special Needs</a>
+                        <a href="#">Accreditation &amp; Standards</a>
+                        <a href="#">Student Health &amp; Wellness</a>
+                        <a href="#">Teaching &amp; Staff Careers</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MINISTRIES -->
+            <div class="drawer-accordion">
+                <button class="drawer-accordion-trigger" aria-expanded="false">
+                    Ministries
+                    <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="drawer-accordion-panel">
+                    <div class="drawer-accordion-content">
+                        <div class="drawer-group-label">Family &amp; Life</div>
+                        <a href="#" class="featured">Marriage &amp; Family Life</a>
+                        <a href="#">Respect for Life</a>
+                        <a href="#">Healing After Abortion</a>
+                        <a href="#">Support for Expectant Mothers</a>
+                        <a href="#">Men's Ministry</a>
+                        <a href="#">Senior Ministry</a>
+                        <div class="drawer-group-label">Youth &amp; Education</div>
+                        <a href="#" class="featured">Youth &amp; Young Adults</a>
+                        <a href="#">College Campus Ministry</a>
+                        <a href="#">Religious Education</a>
+                        <a href="#">Special Needs Religious Ed</a>
+                        <a href="#">Scholarships &amp; Financial Aid</a>
+                        <div class="drawer-group-label">Community &amp; Outreach</div>
+                        <a href="#">Ministerio Hispano</a>
+                        <a href="#">Disability &amp; Inclusion</a>
+                        <a href="#">Prison &amp; Jail Ministry</a>
+                        <a href="#">Social Justice</a>
+                        <a href="#">Mission &amp; Outreach</a>
+                        <a href="#" class="external">Catholic Charities</a>
+                        <div class="drawer-group-label">Giving &amp; Support</div>
+                        <a href="#">Donate</a>
+                        <a href="#">Catholic Ministries Appeal</a>
+                        <a href="#">Planned &amp; Legacy Giving</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVENTS -->
+            <div class="drawer-accordion">
+                <button class="drawer-accordion-trigger" aria-expanded="false">
+                    Events
+                    <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="drawer-accordion-panel">
+                    <div class="drawer-accordion-content">
+                        <a href="#" class="featured">Events Calendar</a>
+                        <a href="#">Retreats</a>
+                        <a href="#">Meeting Rooms &amp; Spaces</a>
+                        <a href="#">Watch Mass Online</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THE MESSAGE -->
+            <div class="drawer-accordion">
+                <button class="drawer-accordion-trigger" aria-expanded="false">
+                    The Message
+                    <span class="accordion-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="drawer-accordion-panel">
+                    <div class="drawer-accordion-content">
+                        <div class="drawer-group-label">News &amp; Stories</div>
+                        <a href="#" class="featured">Latest Headlines</a>
+                        <a href="#">Diocesan News</a>
+                        <a href="#">Local &amp; Regional News</a>
+                        <a href="#">National &amp; World News</a>
+                        <a href="#">Faith &amp; Spirituality</a>
+                        <a href="#">Special Features</a>
+                        <div class="drawer-group-label">Columns &amp; More</div>
+                        <a href="#">Opinion &amp; Columns</a>
+                        <a href="#">Movie Reviews</a>
+                        <a href="#">Archives</a>
+                        <a href="#">About The Message</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom: Utility links + Give -->
+        <div class="mobile-drawer-bottom">
+            <div class="drawer-utility-links">
+                <a href="#">MyDio Staff Portal</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Child &amp; Youth Protection</a>
+            </div>
+            <div class="mobile-drawer-give">
+                <a href="#" class="give-btn">Give Now</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Utility Nav -->
+    <nav class="utility-nav" aria-label="Utility navigation">
+        <div class="container">
+            <div class="utility-links">
+                <a href="#">MyDio Staff Portal</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="utility-links">
+                <a href="#">Child &amp; Youth Protection</a>
+                <div class="lang-toggle" role="group" aria-label="Language selection">
+                    <span class="active">EN</span>
+                    <span class="divider">|</span>
+                    <span>ES</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Header -->
+    <header class="main-header" id="mainHeader" role="banner">
+        <div class="container">
+            <a href="#" class="logo" aria-label="Diocese of Evansville - Home">
+                <div class="logo-crest">
+                    <img src="https://www.evdio.org/uploads/2/6/3/0/26308718/1395080869.png" alt="Diocese of Evansville crest">
+                </div>
+                <div class="logo-text">
+                    <span class="name">Diocese of Evansville</span>
+                    <span class="tagline">The Catholic Church in Southwestern Indiana</span>
+                </div>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+
+                <!-- 1. ABOUT -->
+                <div class="nav-item-wrap" data-mega="about">
+                    <a href="#">About <svg class="chevron" viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></a>
+                    <div class="mega-menu wide">
+                        <div class="mega-menu-grid cols-3">
+                            <div class="mega-col">
+                                <h4>Our Diocese</h4>
+                                <a href="#" class="featured">Our Bishop</a>
+                                <a href="#">Diocesan Leadership</a>
+                                <a href="#">Our History</a>
+                                <a href="#">Our Vision</a>
+                                <a href="#">Transparency &amp; Accountability</a>
+                                <a href="#">Official Statements &amp; Decrees</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Offices &amp; Resources</h4>
+                                <a href="#">Offices &amp; Departments</a>
+                                <a href="#">Staff Directory</a>
+                                <a href="#">Clergy Directory</a>
+                                <a href="#">Parish Directory</a>
+                                <a href="#">Catholic Resources &amp; Links</a>
+                                <a href="#">Careers</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Safety &amp; Contact</h4>
+                                <a href="#" class="featured">Child &amp; Youth Protection</a>
+                                <a href="#" class="featured">Report Abuse</a>
+                                <a href="#">Contact Us</a>
+                                <a href="#">Press Room</a>
+                                <div class="mega-highlight">
+                                    <h4>Monthly Dashboard</h4>
+                                    <p>See how your support is making an impact across the diocese.</p>
+                                    <a href="#" class="mega-btn">View Latest Report</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. PARISHES & MASS -->
+                <div class="nav-item-wrap" data-mega="parishes">
+                    <a href="#">Parishes &amp; Mass <svg class="chevron" viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-grid cols-2">
+                            <div class="mega-col">
+                                <h4>Find a Parish</h4>
+                                <a href="#" class="featured">Parish Finder Map</a>
+                                <a href="#">Mass Times</a>
+                                <a href="#">Watch Mass Online</a>
+                                <a href="#">Parish Directory</a>
+                                <div class="mega-highlight" style="margin-top: 16px;">
+                                    <h4>New to the Area?</h4>
+                                    <p>Welcome to SW Indiana. Find a Catholic community near you.</p>
+                                    <a href="#" class="mega-btn">Find Your Parish</a>
+                                </div>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Browse by Deanery</h4>
+                                <a href="#">North Deanery</a>
+                                <a href="#">South Deanery</a>
+                                <a href="#">East Deanery</a>
+                                <a href="#">West Deanery</a>
+                                <p class="mega-note">45 parishes across 12 counties</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. FAITH & SACRAMENTS -->
+                <div class="nav-item-wrap" data-mega="faith">
+                    <a href="#">Faith &amp; Sacraments <svg class="chevron" viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></a>
+                    <div class="mega-menu wide">
+                        <div class="mega-menu-grid cols-3">
+                            <div class="mega-col">
+                                <h4>Getting Started</h4>
+                                <a href="#" class="featured">How to Become Catholic</a>
+                                <a href="#">Becoming Catholic (OCIA)</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Sacraments</h4>
+                                <a href="#">Baptism</a>
+                                <a href="#">First Communion</a>
+                                <a href="#">Confirmation</a>
+                                <a href="#">Catholic Marriage</a>
+                                <a href="#">Anointing of the Sick</a>
+                                <a href="#">Vocations</a>
+                                <a href="#">Becoming a Deacon</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Prayer &amp; Worship</h4>
+                                <a href="#">Prayer &amp; Worship Resources</a>
+                                <a href="#">Church Calendar</a>
+                                <a href="#">Music Resources for Parishes</a>
+                                <a href="#">Year of Jubilee 2025</a>
+                                <div class="mega-cta">
+                                    <a href="#">Explore All Sacraments <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. CATHOLIC SCHOOLS (NEW) -->
+                <div class="nav-item-wrap" data-mega="schools">
+                    <a href="#">Catholic Schools <svg class="chevron" viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-grid cols-2">
+                            <div class="mega-col">
+                                <h4>Our Schools</h4>
+                                <a href="#" class="featured">Catholic Schools Overview</a>
+                                <a href="#">Find a School / School Listings</a>
+                                <a href="#">Schools Map</a>
+                                <a href="#" class="external">Enroll Your Child</a>
+                                <div class="mega-highlight" style="margin-top: 16px;">
+                                    <h4>Catholic Schools</h4>
+                                    <p>26 schools providing faith-based education across SW Indiana.</p>
+                                    <a href="#" class="mega-btn">Explore Our Schools</a>
+                                </div>
+                            </div>
+                            <div class="mega-col">
+                                <h4>For Families &amp; Staff</h4>
+                                <a href="#">Tuition Assistance &amp; Affordability</a>
+                                <a href="#">Programs for Children with Special Needs</a>
+                                <a href="#">Accreditation &amp; Standards</a>
+                                <a href="#">Student Health &amp; Wellness</a>
+                                <a href="#">Teaching &amp; Staff Careers</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. MINISTRIES -->
+                <div class="nav-item-wrap" data-mega="ministries">
+                    <a href="#">Ministries <svg class="chevron" viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></a>
+                    <div class="mega-menu extra-wide">
+                        <div class="mega-menu-grid cols-4">
+                            <div class="mega-col">
+                                <h4>Family &amp; Life</h4>
+                                <a href="#" class="featured">Marriage &amp; Family Life</a>
+                                <a href="#">Respect for Life</a>
+                                <a href="#">Healing After Abortion</a>
+                                <a href="#">Support for Expectant Mothers</a>
+                                <a href="#">Men's Ministry</a>
+                                <a href="#">Senior Ministry</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Youth &amp; Education</h4>
+                                <a href="#" class="featured">Youth &amp; Young Adults</a>
+                                <a href="#">College Campus Ministry</a>
+                                <a href="#">Religious Education</a>
+                                <a href="#">Special Needs Religious Ed</a>
+                                <a href="#">Scholarships &amp; Financial Aid</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Community &amp; Outreach</h4>
+                                <a href="#">Ministerio Hispano</a>
+                                <a href="#">Disability &amp; Inclusion</a>
+                                <a href="#">Prison &amp; Jail Ministry</a>
+                                <a href="#">Social Justice</a>
+                                <a href="#">Mission &amp; Outreach</a>
+                                <a href="#" class="external">Catholic Charities</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Giving &amp; Support</h4>
+                                <a href="#">Donate</a>
+                                <a href="#">Catholic Ministries Appeal</a>
+                                <a href="#">Planned &amp; Legacy Giving</a>
+                                <div class="mega-cta">
+                                    <a href="#">View All Ministries <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. EVENTS -->
+                <div class="nav-item-wrap align-right" data-mega="events">
+                    <a href="#">Events <svg class="chevron" viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></a>
+                    <div class="mega-menu narrow">
+                        <div class="mega-col">
+                            <a href="#" class="featured">Events Calendar</a>
+                            <a href="#">Retreats</a>
+                            <a href="#">Meeting Rooms &amp; Spaces</a>
+                            <a href="#">Watch Mass Online</a>
+                        </div>
+                        <div class="mega-cta">
+                            <a href="#">See All Events <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. THE MESSAGE -->
+                <div class="nav-item-wrap align-right" data-mega="message">
+                    <a href="#">The Message <svg class="chevron" viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-grid cols-2">
+                            <div class="mega-col">
+                                <h4>News &amp; Stories</h4>
+                                <a href="#" class="featured">Latest Headlines</a>
+                                <a href="#">Diocesan News</a>
+                                <a href="#">Local &amp; Regional News</a>
+                                <a href="#">National &amp; World News</a>
+                                <a href="#">Faith &amp; Spirituality</a>
+                                <a href="#">Special Features</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Columns &amp; More</h4>
+                                <a href="#">Opinion &amp; Columns</a>
+                                <a href="#">Movie Reviews</a>
+                                <a href="#">Archives</a>
+                                <a href="#">About The Message</a>
+                                <div class="mega-highlight" style="margin-top: 12px;">
+                                    <h4>Subscribe</h4>
+                                    <p>Get The Message delivered weekly.</p>
+                                    <a href="#" class="mega-btn">Subscribe Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+
+            <div class="header-actions">
+                <button class="search-btn" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <a href="#" class="give-btn">Give</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-texture"></div>
+        <div class="hero-decorative" aria-hidden="true"></div>
+        <div class="container" style="grid-template-columns: 1fr; text-align: center; max-width: 900px; margin: 0 auto;">
+            <div class="hero-content" style="align-items: center; display: flex; flex-direction: column;">
+                <div class="hero-label">The Catholic Church in Southwestern Indiana</div>
+                <h1 style="font-size: clamp(40px, 5.5vw, 72px);">Encounter. Deepen.<br><strong>Engage.</strong></h1>
+                <p class="hero-description" style="text-align: center; margin: 0 auto 20px; max-width: 600px; font-size: 17px;">Whether you've been Catholic your whole life, are raising a family in the faith, just moved to the area, or are curious about what we believe &mdash; there's a place for you here.</p>
+                <div class="hero-buttons" style="justify-content: center;">
+                    <a href="#" class="btn btn-primary">
+                        Find a Parish Near You
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                        How to Become Catholic
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                        Mass Times
+                    </a>
+                </div>
+                <p style="font-size: 13px; color: rgba(255,255,255,0.35); margin-top: 32px;">45 parishes &middot; 26 schools &middot; 12 counties &middot; 79,500 Catholics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+
+    <!-- Quick Access -->
+    <section class="quick-access" aria-label="Quick access links">
+        <div class="container">
+            <div class="quick-grid">
+                <a href="#" class="quick-card reveal">
+                    <div class="icon-wrap">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <h3>Find a Parish</h3>
+                    <p>Locate a parish near you, view Mass times, and connect with your community</p>
+                    <span class="quick-card-arrow" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </span>
+                </a>
+                <a href="#" class="quick-card reveal">
+                    <div class="icon-wrap">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                    </div>
+                    <h3>Catholic Schools</h3>
+                    <p>26 schools providing faith-based education across Southwestern Indiana</p>
+                    <span class="quick-card-arrow" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </span>
+                </a>
+                <a href="#" class="quick-card reveal">
+                    <div class="icon-wrap">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                    </div>
+                    <h3>The Message</h3>
+                    <p>Your source for Catholic news, stories, and community journalism since 1970</p>
+                    <span class="quick-card-arrow" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </span>
+                </a>
+                <a href="#" class="quick-card reveal">
+                    <div class="icon-wrap">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+                    <h3>Give</h3>
+                    <p>Support our parishes, schools, and ministries. Your generosity changes lives.</p>
+                    <span class="quick-card-arrow" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Message Section -->
+    <section class="message-section section-padding" aria-label="The Message - Catholic news">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">The Message</div>
+                <h2 class="section-title">Stories of Faith &amp; Community</h2>
+                <p class="section-subtitle">Catholic journalism serving Southwestern Indiana since 1970. News, reflections, and voices from across our diocese.</p>
+            </div>
+            <div class="article-grid">
+                <a href="#" class="article-card reveal">
+                    <div class="article-image" style="background: url('https://www.evdio.org/uploads/2/6/3/0/26308718/published/fnl-become-one-12x18-with-bleed-1.jpg?1774972172') center/cover;">
+                        <span class="article-category">Diocesan News</span>
+                    </div>
+                    <div class="article-body">
+                        <div class="article-date">March 28, 2026</div>
+                        <h3>Bishop Siegel Announces Pastoral Priorities for the Next Five Years</h3>
+                        <p>A new vision for encounter, deepening faith, and engagement across all 45 parishes of the diocese.</p>
+                        <span class="article-read-more">Read More <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    </div>
+                </a>
+                <a href="#" class="article-card reveal">
+                    <div class="article-image" style="background: url('https://www.evdio.org/uploads/2/6/3/0/26308718/editor/catholicministriesappeal.png?1694523688') center/cover;">
+                        <span class="article-category">Local News</span>
+                    </div>
+                    <div class="article-body">
+                        <div class="article-date">March 25, 2026</div>
+                        <h3>Catholic Charities Expands Family Services in Vanderburgh County</h3>
+                        <p>New programs to serve an additional 400 families annually, bringing hope and support to those in need.</p>
+                        <span class="article-read-more">Read More <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    </div>
+                </a>
+                <a href="#" class="article-card reveal">
+                    <div class="article-image" style="background: url('https://www.evdio.org/uploads/2/6/3/0/26308718/becoming-one-with-christ-roadmap-final_orig.jpg') center/cover;">
+                        <span class="article-category">Faith &amp; Spirituality</span>
+                    </div>
+                    <div class="article-body">
+                        <div class="article-date">March 22, 2026</div>
+                        <h3>Preparing for Easter: A Journey Through Holy Week in Our Diocese</h3>
+                        <p>Parishes across all four deaneries invite the faithful to celebrate the most sacred days of the liturgical year.</p>
+                        <span class="article-read-more">Read More <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    </div>
+                </a>
+            </div>
+            <div class="section-cta">
+                <a href="#" class="btn btn-secondary">
+                    Read More from The Message
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact / Ministry Spotlight -->
+    <section class="impact-section section-padding" aria-label="Ministry impact">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-visual reveal">
+                    <div class="impact-main-image">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                    </div>
+                    <div class="impact-stat-badge">
+                        <div class="number">2,400</div>
+                        <div class="label">Families Served</div>
+                    </div>
+                </div>
+                <div class="impact-content reveal">
+                    <div class="section-label">Making a Difference</div>
+                    <h2 class="section-title">Our Ministries<br>Touch Every Life</h2>
+                    <p class="impact-text">From marriage preparation to youth programs, from supporting families in crisis to welcoming those exploring the Catholic faith, our ministries serve the whole community. Every gift and every volunteer hour makes this work possible.</p>
+                    <div class="impact-stats-row" id="impactStats">
+                        <div class="mini-stat">
+                            <span class="num" data-target="45">0</span>
+                            <span class="lbl">Parishes</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="num" data-target="850">0</span>
+                            <span class="lbl">Scholarships</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="num" data-target="26">0</span>
+                            <span class="lbl">Schools</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">
+                        Explore Our Ministries
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giving CTA Banner -->
+    <section class="giving-cta-section" aria-label="Support our mission">
+        <div class="giving-cta-inner">
+            <div class="giving-cta-content reveal">
+                <div class="giving-cta-label">Catholic Ministries Appeal</div>
+                <h2 class="giving-cta-title">Your Generosity Builds<br>a Stronger Diocese</h2>
+                <p class="giving-cta-text">Every gift to the Catholic Ministries Appeal directly supports our parishes, schools, and charitable ministries. Last year, your generosity funded 850 scholarships, served 2,400 families through Catholic Charities, and sustained faith formation across all 12 counties.</p>
+                <div class="giving-cta-actions">
+                    <a href="#" class="btn-giving">
+                        Give Now
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="#" class="btn-giving-outline">
+                        Learn About the Appeal
+                    </a>
+                </div>
+            </div>
+            <div class="giving-cta-stat reveal">
+                <div class="stat-number">67%</div>
+                <div class="stat-label">of Goal Reached</div>
+                <div class="stat-sub">Help us reach 100%</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section section-padding" aria-label="Upcoming events">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">What's Happening</div>
+                <h2 class="section-title">Upcoming Events</h2>
+                <p class="section-subtitle">Join us for worship, fellowship, and community across the diocese.</p>
+            </div>
+            <div class="events-grid">
+                <a href="#" class="event-card reveal">
+                    <div class="event-date-badge">
+                        <div class="month">Apr</div>
+                        <div class="day">5</div>
+                    </div>
+                    <div class="event-info">
+                        <h3>Chrism Mass</h3>
+                        <div class="location">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                            St. Benedict Cathedral, Evansville
+                        </div>
+                        <div class="event-register">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="event-card reveal">
+                    <div class="event-date-badge">
+                        <div class="month">Apr</div>
+                        <div class="day">12</div>
+                    </div>
+                    <div class="event-info">
+                        <h3>Marriage &amp; Family Life Conference</h3>
+                        <div class="location">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                            Sarto Retreat Center
+                        </div>
+                        <div class="event-register">
+                            Register via OSV
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="event-card reveal">
+                    <div class="event-date-badge">
+                        <div class="month">Apr</div>
+                        <div class="day">19</div>
+                    </div>
+                    <div class="event-info">
+                        <h3>Youth Encounter Weekend</h3>
+                        <div class="location">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                            Catholic Center, Evansville
+                        </div>
+                        <div class="event-register">
+                            Register via OSV
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="section-cta" style="margin-top: 44px;">
+                <a href="#" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: #fff;">
+                    View All Events
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard / Transparency Section -->
+    <section class="dashboard-section section-padding" aria-label="Diocesan transparency dashboard">
+        <div class="container">
+            <div class="dashboard-grid">
+                <div class="dashboard-content reveal">
+                    <div class="section-label">Transparency</div>
+                    <h2 class="section-title">Monthly Diocesan Dashboard</h2>
+                    <p class="dashboard-text">We believe in transparency and accountability. Each month, we share a comprehensive report on our ministries, finances, and the impact of your support across the diocese. Because being ambassadors of one another starts with trust.</p>
+                    <a href="#" class="btn btn-primary">
+                        View All Reports
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+                <div class="dashboard-preview reveal">
+                    <div class="dashboard-preview-header">
+                        <h4>February 2026 Report</h4>
+                        <span class="badge">Latest</span>
+                    </div>
+                    <div class="dashboard-preview-body">
+                        <div class="dash-row">
+                            <span class="label">Sunday Mass Attendance</span>
+                            <span class="value">18,240</span>
+                        </div>
+                        <div class="dash-row">
+                            <span class="label">OCIA Candidates</span>
+                            <span class="value">127</span>
+                        </div>
+                        <div class="dash-row">
+                            <span class="label">Catholic Charities Families Served</span>
+                            <span class="value">198</span>
+                        </div>
+                        <div class="dash-row">
+                            <span class="label">Catholic Ministries Appeal Progress</span>
+                            <span class="value">67%</span>
+                        </div>
+                        <div class="dash-row">
+                            <span class="label">School Enrollment</span>
+                            <span class="value">6,842</span>
+                        </div>
+                    </div>
+                    <div class="dash-cta">
+                        <a href="#">Download Full Report (PDF) &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message from the Bishop -->
+    <section class="section-padding" style="background: var(--warm-white);" aria-label="Message from the Bishop">
+        <div class="container" style="max-width: 1280px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; max-width: 960px; margin: 0 auto;">
+                <div class="reveal" style="flex-shrink: 0;">
+                    <div style="width: 220px; height: 280px; border-radius: 120px 120px 16px 16px; position: relative; overflow: hidden; box-shadow: 0 12px 40px rgba(27,42,74,0.2);">
+                        <img src="https://www.evdio.org/uploads/2/6/3/0/26308718/published/bishop-designate-joseph-m-siegel-of-evansville-1513012942-86281.jpg?1513012967" alt="Bishop Joseph M. Siegel" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 12px;">A Message from Our Bishop</div>
+                    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 16px;">Bishop Joseph M. Siegel</h2>
+                    <p style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--blue); margin-bottom: 16px; line-height: 1.5;">&ldquo;We need to be ambassadors of one another &mdash; staff and parishes supporting each other. We are called to tell our story and meet people where they are.&rdquo;</p>
+                    <p style="font-size: 15px; color: var(--text-medium); line-height: 1.7; margin-bottom: 24px;">As the sixth Bishop of Evansville, Bishop Siegel leads our diocese with a vision rooted in encounter, transparency, and service. His pastoral priorities for 2025-2030 call each of us to deepen our faith and engage with our communities across all 12 counties of Southwestern Indiana.</p>
+                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                        <a href="#" class="btn btn-secondary" style="font-size: 12px; padding: 10px 20px;">
+                            Meet Our Bishop
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="14" height="14" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="#" style="font-size: 13px; color: var(--blue); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                            Read Pastoral Priorities
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section section-padding" aria-label="Diocesan video">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Watch</div>
+                <h2 class="section-title">See Our Diocese in Action</h2>
+                <p class="section-subtitle">Experience the faith, community, and ministry that define the Catholic Church in Southwestern Indiana.</p>
+            </div>
+            <div class="video-container reveal">
+                <div class="video-embed" role="button" tabindex="0" aria-label="Play video: A Video Tour of the Diocese of Evansville">
+                    <div class="play-button" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="video-title">
+                        <h3>A Video Tour of the Diocese of Evansville</h3>
+                        <p>Discover the communities, ministries, and people of our diocese</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" aria-label="Diocese of Evansville - Home">
+                        <div class="logo-crest">
+                            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true"><path d="M12 2L14 6.5H18L14.5 9.5L16 14L12 11L8 14L9.5 9.5L6 6.5H10L12 2Z"/></svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="name">Diocese of Evansville</span>
+                            <span class="tagline">The Catholic Church in Southwestern Indiana</span>
+                        </div>
+                    </a>
+                    <p>Serving 79,500 Catholics across 45 parishes, 26 schools, and 12 counties in Southwestern Indiana.</p>
+                    <div class="footer-address">
+                        4200 N Kentucky Ave<br>
+                        Evansville, IN 47711<br>
+                        <a href="tel:8124245536">(812) 424-5536</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="#" aria-label="X/Twitter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Find a Parish</a></li>
+                        <li><a href="#">Mass Times</a></li>
+                        <li><a href="#">Catholic Schools</a></li>
+                        <li><a href="#">Employment</a></li>
+                        <li><a href="#">Safe Environment</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Pastoral Priorities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Ministries</h4>
+                    <ul>
+                        <li><a href="#">Marriage &amp; Family Life</a></li>
+                        <li><a href="#">Youth &amp; Young Adult</a></li>
+                        <li><a href="#">Religious Education</a></li>
+                        <li><a href="#">Hispanic Ministry</a></li>
+                        <li><a href="#">Catholic Charities</a></li>
+                        <li><a href="#">Vocations</a></li>
+                        <li><a href="#">Respect Life</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>The Message</h4>
+                    <ul>
+                        <li><a href="#">Latest News</a></li>
+                        <li><a href="#">Opinion &amp; Columns</a></li>
+                        <li><a href="#">Archives</a></li>
+                        <li><a href="#">About The Message</a></li>
+                    </ul>
+                    <h4 style="margin-top: 28px;">Subscribe</h4>
+                    <p style="font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 10px;">Get The Message delivered weekly.</p>
+                    <div class="footer-subscribe">
+                        <div class="subscribe-input">
+                            <input type="email" placeholder="Your email address" aria-label="Email address for newsletter">
+                            <button aria-label="Subscribe to newsletter">Go</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Catholic Diocese of Evansville. All rights reserved.</span>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+
+    <script>
+        // ============================================================
+        // HEADER JAVASCRIPT
+        // ============================================================
+
+        // === Sticky header shadow + compact on scroll ===
+        const header = document.getElementById('mainHeader');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        // === Mega Menu Hover with Delay (desktop) ===
+        const navItems = document.querySelectorAll('.nav-item-wrap[data-mega]');
+        let megaOpenTimeout = null;
+        let megaCloseTimeout = null;
+        let currentOpenItem = null;
+
+        function openMega(item) {
+            clearTimeout(megaCloseTimeout);
+            clearTimeout(megaOpenTimeout);
+            // Close any currently open item
+            if (currentOpenItem && currentOpenItem !== item) {
+                currentOpenItem.classList.remove('mega-open');
+            }
+            megaOpenTimeout = setTimeout(() => {
+                item.classList.add('mega-open');
+                currentOpenItem = item;
+            }, 80);
+        }
+
+        function closeMega(item) {
+            clearTimeout(megaOpenTimeout);
+            megaCloseTimeout = setTimeout(() => {
+                item.classList.remove('mega-open');
+                if (currentOpenItem === item) {
+                    currentOpenItem = null;
+                }
+            }, 150);
+        }
+
+        navItems.forEach(item => {
+            item.addEventListener('mouseenter', () => openMega(item));
+            item.addEventListener('mouseleave', () => closeMega(item));
+
+            // Keyboard: open on focus of trigger link, close on blur away
+            const triggerLink = item.querySelector(':scope > a');
+            triggerLink.addEventListener('focus', () => {
+                // Close all others
+                navItems.forEach(other => {
+                    if (other !== item) other.classList.remove('mega-open');
+                });
+                item.classList.add('mega-open');
+                currentOpenItem = item;
+            });
+
+            // Keep mega open if focus moves inside it
+            const megaMenu = item.querySelector('.mega-menu');
+            if (megaMenu) {
+                megaMenu.addEventListener('focusin', () => {
+                    clearTimeout(megaCloseTimeout);
+                    item.classList.add('mega-open');
+                    currentOpenItem = item;
+                });
+                megaMenu.addEventListener('focusout', (e) => {
+                    // Only close if focus leaves both the item and its mega menu
+                    requestAnimationFrame(() => {
+                        if (!item.contains(document.activeElement)) {
+                            item.classList.remove('mega-open');
+                            if (currentOpenItem === item) currentOpenItem = null;
+                        }
+                    });
+                });
+            }
+        });
+
+        // Close mega menus when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-item-wrap')) {
+                navItems.forEach(item => item.classList.remove('mega-open'));
+                currentOpenItem = null;
+            }
+        });
+
+        // Close mega menus on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && currentOpenItem) {
+                const triggerLink = currentOpenItem.querySelector(':scope > a');
+                currentOpenItem.classList.remove('mega-open');
+                currentOpenItem = null;
+                if (triggerLink) triggerLink.focus();
+            }
+        });
+
+        // === Mobile Drawer ===
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+
+        function openMobileMenu() {
+            mobileToggle.classList.add('active');
+            mobileDrawer.classList.add('active');
+            mobileOverlay.classList.add('active');
+            mobileDrawer.setAttribute('aria-hidden', 'false');
+            mobileOverlay.setAttribute('aria-hidden', 'false');
+            mobileToggle.setAttribute('aria-label', 'Close menu');
+            mobileToggle.setAttribute('aria-expanded', 'true');
+            document.body.classList.add('menu-open');
+
+            // Focus close button
+            if (drawerCloseBtn) drawerCloseBtn.focus();
+        }
+
+        function closeMobileMenu() {
+            mobileToggle.classList.remove('active');
+            mobileDrawer.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            mobileDrawer.setAttribute('aria-hidden', 'true');
+            mobileOverlay.setAttribute('aria-hidden', 'true');
+            mobileToggle.setAttribute('aria-label', 'Open menu');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('menu-open');
+            mobileToggle.focus();
+        }
+
+        mobileToggle.addEventListener('click', () => {
+            if (mobileDrawer.classList.contains('active')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        });
+
+        if (drawerCloseBtn) {
+            drawerCloseBtn.addEventListener('click', closeMobileMenu);
+        }
+
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close drawer on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileDrawer.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // === Mobile Drawer Accordion ===
+        const accordionTriggers = document.querySelectorAll('.drawer-accordion-trigger');
+
+        accordionTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const accordion = trigger.closest('.drawer-accordion');
+                const isOpen = accordion.classList.contains('open');
+
+                // Update aria-expanded
+                trigger.setAttribute('aria-expanded', !isOpen);
+
+                // Toggle this accordion
+                accordion.classList.toggle('open');
+
+                // If opening, set max-height based on content
+                const panel = accordion.querySelector('.drawer-accordion-panel');
+                if (!isOpen) {
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                } else {
+                    panel.style.maxHeight = '0px';
+                }
+            });
+        });
+
+
+        // ============================================================
+        // NON-HEADER JAVASCRIPT (preserved)
+        // ============================================================
+
+        // === Scroll reveal ===
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 80);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // === Animated Stat Counters ===
+        const statsRow = document.getElementById('impactStats');
+        let statsCounted = false;
+
+        function animateCounter(el, target, duration) {
+            const start = 0;
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                // Ease-out cubic
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.round(start + (target - start) * eased);
+
+                el.textContent = current.toLocaleString();
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !statsCounted) {
+                    statsCounted = true;
+                    const statNums = entry.target.querySelectorAll('.num[data-target]');
+                    statNums.forEach((num, i) => {
+                        const target = parseInt(num.getAttribute('data-target'), 10);
+                        setTimeout(() => {
+                            animateCounter(num, target, 1800);
+                        }, i * 200);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        if (statsRow) {
+            statsObserver.observe(statsRow);
+        }
+
+        // === Back to Top Button ===
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>

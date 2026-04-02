@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diocese of Evansville - Plan of Action</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Libre+Franklin:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --navy: #1B2A4A;
+            --blue: #24678D;
+            --cream: #F5F0E8;
+            --gold: #C5A55A;
+            --accent-red: #8B1A1A;
+            --warm-white: #FDFBF7;
+            --text-dark: #2A2A2A;
+            --text-medium: #555555;
+            --border-light: #E0DCD4;
+            --success: #2D7A3A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Libre Franklin', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: var(--warm-white);
+        }
+
+        .document {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .doc-header {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 3px solid var(--navy);
+            margin-bottom: 50px;
+        }
+
+        .doc-header .label {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .doc-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            color: var(--navy);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .doc-header .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            color: var(--blue);
+            font-style: italic;
+        }
+
+        .doc-header .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--text-medium);
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 30px;
+            color: var(--navy);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        .section h3 {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 18px;
+            color: var(--blue);
+            font-weight: 600;
+            margin: 25px 0 12px 0;
+        }
+
+        p {
+            margin-bottom: 14px;
+            font-size: 15px;
+        }
+
+        ul, ol {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        thead th {
+            background: var(--navy);
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tbody td {
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border-light);
+            vertical-align: top;
+        }
+
+        tbody tr:nth-child(even) {
+            background: var(--cream);
+        }
+
+        .phase-card {
+            background: var(--cream);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-light);
+        }
+
+        .phase-card .phase-header {
+            background: var(--navy);
+            color: #fff;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .phase-card .phase-header h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            color: #fff;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .phase-card .phase-body {
+            padding: 24px;
+        }
+
+        .phase-card .phase-body p {
+            font-size: 14px;
+            color: var(--text-medium);
+            margin-bottom: 16px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .task-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            font-size: 14px;
+        }
+
+        .task-list li:last-child {
+            border-bottom: none;
+        }
+
+        .task-list .task-icon {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            border-radius: 4px;
+            border: 2px solid var(--blue);
+            margin-top: 2px;
+        }
+
+        .task-list .owner {
+            font-size: 11px;
+            background: var(--navy);
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .task-list .owner.diocese {
+            background: var(--accent-red);
+        }
+
+        .task-list .owner.both {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .deliverable-tag {
+            display: inline-block;
+            font-size: 11px;
+            background: var(--blue);
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 500;
+            margin-left: 6px;
+        }
+
+        .callout {
+            background: var(--cream);
+            border-left: 4px solid var(--blue);
+            padding: 20px 24px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .callout.warning {
+            border-left-color: var(--accent-red);
+        }
+
+        .callout.gold {
+            border-left-color: var(--gold);
+        }
+
+        .callout p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .milestone {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, var(--navy), var(--blue));
+            color: #fff;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .milestone .diamond {
+            width: 12px;
+            height: 12px;
+            background: var(--gold);
+            transform: rotate(45deg);
+            min-width: 12px;
+        }
+
+        .milestone .text {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .risk-table td:first-child {
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .risk-high { color: var(--accent-red); font-weight: 700; }
+        .risk-med { color: var(--gold); font-weight: 700; }
+        .risk-low { color: var(--success); font-weight: 700; }
+
+        strong {
+            font-weight: 600;
+        }
+
+        @media print {
+            .document { padding: 20px; }
+            .phase-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="document">
+        <div class="doc-header">
+            <div class="label">Redstitch Digital</div>
+            <h1>Plan of Action</h1>
+            <div class="subtitle">Diocese of Evansville &mdash; Website Consolidation &amp; Redesign</div>
+            <div class="meta">Prepared: March 2026 | Version 1.0</div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="section">
+            <h2>Executive Summary</h2>
+            <p>This plan outlines the consolidation of evdio.org (177 existing pages) and evdiomessage.org into a single, modern website built on Redstitch's headless CMS architecture. The new consolidated site will contain approximately 160+ English pages (320+ with Spanish translation), including 45 individual parish pages, 35+ ministry pages, and a full integrated news platform for The Message. The site will reorganize content around visitor needs (not departmental structure) and deliver an accessible, bilingual experience that tells the Diocese's story.</p>
+            <p>The project follows a phased approach: Discovery and resolution of open items, followed by design, content development, build, and a managed launch with an intentional transition period where the old site remains accessible.</p>
+
+            <div class="callout gold">
+                <p><strong>Guiding Principles:</strong> Tell our story. Meet people where they are. Be ambassadors of one another. Encounter. Deepen. Engage.</p>
+            </div>
+        </div>
+
+        <!-- Phase Overview -->
+        <div class="section">
+            <h2>Project Phases Overview</h2>
+            <table>
+                <thead>
+                    <tr><th>Phase</th><th>Focus</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Phase 1</strong></td><td>Discovery Resolution &amp; Planning</td></tr>
+                    <tr><td><strong>Phase 2</strong></td><td>Design &amp; Visual Identity</td></tr>
+                    <tr><td><strong>Phase 3</strong></td><td>Content Strategy &amp; Development (overlaps with Phase 2 &amp; 4)</td></tr>
+                    <tr><td><strong>Phase 4</strong></td><td>Development &amp; Build</td></tr>
+                    <tr><td><strong>Phase 5</strong></td><td>Testing, Training &amp; QA</td></tr>
+                    <tr><td><strong>Phase 6</strong></td><td>Launch &amp; Transition</td></tr>
+                    <tr><td><strong>Phase 7</strong></td><td>Post-Launch Support &amp; Optimization</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Phase 1 -->
+        <div class="section">
+            <h2>Detailed Phase Breakdown</h2>
+
+            <div class="phase-card">
+                <div class="phase-header">
+                    <h3>Phase 1: Discovery Resolution &amp; Planning</h3>
+                </div>
+                <div class="phase-body">
+                    <p>Resolve all open items identified during the February 9 introductory meeting before design and build can begin.</p>
+
+                    <ul class="task-list">
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Finalize article publishing workflow for The Message in headless CMS <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Confirm parish data ownership and update frequency <span class="owner diocese">Diocese</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Define event registration flow &mdash; confirm all registrations route through OSV <span class="owner both">Both</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Determine department content model: centralized vs. distributed publishing <span class="owner both">Both</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Inventory all legally/institutionally required content <span class="owner diocese">Diocese</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Audit existing documents &amp; PDFs: what migrates, what archives, what's removed <span class="owner both">Both</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Confirm Spanish translation approach: full-site vs. targeted key pages <span class="owner both">Both</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Decide on evdiomessage-archive.org content (preserve or sunset?) <span class="owner diocese">Diocese</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Clarify Safe Environment &mdash; what must be public vs. access-controlled <span class="owner diocese">Diocese</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Finalize navigation structure (refine from prototype) <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Collect all parish data for Parish Finder build <span class="owner diocese">Diocese</span></div>
+                        </li>
+                    </ul>
+
+                    <div class="milestone">
+                        <div class="diamond"></div>
+                        <div class="text">Milestone: All open items resolved &mdash; ready for design</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="phase-card">
+                <div class="phase-header">
+                    <h3>Phase 2: Design &amp; Visual Identity</h3>
+                </div>
+                <div class="phase-body">
+                    <p>Establish the visual identity, refine the prototype into final designs, and create a design system that ensures consistency.</p>
+
+                    <ul class="task-list">
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Finalize color palette (Navy, Blue, Cream, Gold, Accent Red) and typography (Cormorant Garamond + Libre Franklin) <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Design homepage &mdash; hero with Bishop, quick-access cards, Message feed, giving CTA, dashboard section <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Design interior page templates: department landing, article detail, parish detail, events, contact <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Design Parish Finder (map interface, search, results, detail view) <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Design The Message section (article listing, categories, archive browsing, article detail with social sharing) <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Design mobile-responsive versions of all templates <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Design Spanish language toggle and bilingual layout considerations <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Create reusable component library (buttons, cards, forms, callouts, navigation patterns) <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Diocese review and approval of designs <span class="owner diocese">Diocese</span></div>
+                        </li>
+                    </ul>
+
+                    <div class="milestone">
+                        <div class="diamond"></div>
+                        <div class="text">Milestone: Design approved &mdash; ready for development</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="phase-card">
+                <div class="phase-header">
+                    <h3>Phase 3: Content Strategy &amp; Development</h3>
+                </div>
+                <div class="phase-body">
+                    <p>Redstitch researches and writes all website content. This phase overlaps with design and development to maintain momentum.</p>
+
+                    <ul class="task-list">
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Develop full content architecture &amp; page map <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Write homepage content including impact stories and giving narrative <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Write all department/ministry landing page content <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Write About section: Bishop bio, history, offices, staff directory <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Write Faith &amp; Sacraments content: OCIA, Baptism, Marriage, Vocations <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Develop SEO strategy: keyword research, meta descriptions, URL structure <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Migrate and organize existing PDFs and documents <span class="owner both">Both</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Coordinate Spanish translation of completed content <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Diocese provides photography, video embed links, and document files <span class="owner diocese">Diocese</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Diocese reviews and provides feedback on all written content <span class="owner diocese">Diocese</span></div>
+                        </li>
+                    </ul>
+
+                    <div class="milestone">
+                        <div class="diamond"></div>
+                        <div class="text">Milestone: All content approved and ready for population</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="phase-card">
+                <div class="phase-header">
+                    <h3>Phase 4: Development &amp; Build</h3>
+                </div>
+                <div class="phase-body">
+                    <p>Build the site on Redstitch's headless CMS architecture. All features built, content populated, and integrations connected.</p>
+
+                    <ul class="task-list">
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Set up headless CMS environment and hosting infrastructure <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Build homepage with hero, quick-access cards, Message feed, giving section, dashboard area <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Build all interior page templates and component library <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Build Parish Finder &mdash; map interface, search, filtering by deanery, Mass times, contact info <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Build The Message article publishing system &amp; article templates <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Build events section with OSV link-offs for registration/payment <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Implement full-site search <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Implement Spanish language version and language toggle <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Implement social sharing on articles, social channel links <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Build giving section with impact storytelling and OSV links <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Build transparency/dashboard dedicated section <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Populate all content, PDFs, images, and video embeds <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Set up 301 redirects from old URLs to new site structure (177 existing evdio.org pages + evdiomessage.org URLs) <span class="owner">Redstitch</span></div>
+                        </li>
+                    </ul>
+
+                    <div class="milestone">
+                        <div class="diamond"></div>
+                        <div class="text">Milestone: Feature-complete site ready for testing</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 5 -->
+            <div class="phase-card">
+                <div class="phase-header">
+                    <h3>Phase 5: Testing, Training &amp; QA</h3>
+                </div>
+                <div class="phase-body">
+                    <p>Rigorous testing across devices and browsers. Train The Message team on the new CMS. Final stakeholder review.</p>
+
+                    <ul class="task-list">
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Cross-browser testing (Chrome, Safari, Firefox, Edge) <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Mobile/tablet responsive testing across devices <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Accessibility audit (WCAG 2.1 AA compliance) <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Performance testing &amp; page speed optimization <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>SEO audit: meta tags, structured data, sitemap, robots.txt <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Parish Finder data verification <span class="owner both">Both</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Spanish content review <span class="owner diocese">Diocese</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Train Megan &amp; John on article publishing in the new CMS <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Create CMS documentation for The Message team <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Final stakeholder walkthrough and sign-off <span class="owner both">Both</span></div>
+                        </li>
+                    </ul>
+
+                    <div class="milestone">
+                        <div class="diamond"></div>
+                        <div class="text">Milestone: Stakeholder sign-off &mdash; approved for launch</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 6 -->
+            <div class="phase-card">
+                <div class="phase-header">
+                    <h3>Phase 6: Launch &amp; Transition</h3>
+                </div>
+                <div class="phase-body">
+                    <p>Managed launch with an intentional transition period. Old site remains accessible while users adapt.</p>
+
+                    <ul class="task-list">
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>DNS cutover &mdash; point evdio.org to new site <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Redirect evdiomessage.org to new site's Message section <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Maintain old site access for forms/documents during transition <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Monitor for broken links, 404 errors, and redirect issues <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Announce launch through diocesan communications channels <span class="owner diocese">Diocese</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Google Analytics setup and verification <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Submit new sitemap to Google Search Console <span class="owner">Redstitch</span></div>
+                        </li>
+                    </ul>
+
+                    <div class="milestone">
+                        <div class="diamond"></div>
+                        <div class="text">Milestone: New site is live &mdash; consolidated web presence achieved</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 7 -->
+            <div class="phase-card">
+                <div class="phase-header">
+                    <h3>Phase 7: Post-Launch Support &amp; Optimization</h3>
+                </div>
+                <div class="phase-body">
+                    <p>Redstitch provides ongoing hosting, maintenance, and support. Seasonal Mass time updates managed under support agreement.</p>
+
+                    <ul class="task-list">
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Ongoing hosting and technical maintenance <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Seasonal Parish Finder Mass time updates <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Security updates and performance monitoring <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Bug fixes and minor enhancements <span class="owner">Redstitch</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Sunset old Weebly and WordPress sites once transition complete <span class="owner both">Both</span></div>
+                        </li>
+                        <li>
+                            <div class="task-icon"></div>
+                            <div>Evaluate future enhancements: email marketing (Flocknote), booking system, digital directory <span class="owner both">Both</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Risk Assessment -->
+        <div class="section">
+            <h2>Risk Assessment &amp; Mitigation</h2>
+
+            <table class="risk-table">
+                <thead>
+                    <tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Open items not resolved promptly by Diocese</td>
+                        <td class="risk-med">Medium</td>
+                        <td class="risk-high">High</td>
+                        <td>Clear deadlines per item; weekly check-ins; identify single decision-maker (Dean Happe)</td>
+                    </tr>
+                    <tr>
+                        <td>Content review delays from Diocese</td>
+                        <td class="risk-med">Medium</td>
+                        <td class="risk-med">Medium</td>
+                        <td>Batch content for review; set 5-business-day review windows; escalation path</td>
+                    </tr>
+                    <tr>
+                        <td>Parish data incomplete or inaccurate</td>
+                        <td class="risk-med">Medium</td>
+                        <td class="risk-med">Medium</td>
+                        <td>Request data early in Phase 1; validate with Diocese staff; plan for iterative corrections</td>
+                    </tr>
+                    <tr>
+                        <td>Scope creep from department heads</td>
+                        <td class="risk-high">High</td>
+                        <td class="risk-med">Medium</td>
+                        <td>Clearly documented scope boundaries; changes go through Dean Happe; change request process</td>
+                    </tr>
+                    <tr>
+                        <td>Spanish translation quality issues</td>
+                        <td class="risk-low">Low</td>
+                        <td class="risk-med">Medium</td>
+                        <td>Diocese Hispanic Ministry review; professional translation services; iterative review</td>
+                    </tr>
+                    <tr>
+                        <td>PDF migration volume larger than expected</td>
+                        <td class="risk-med">Medium</td>
+                        <td class="risk-low">Low</td>
+                        <td>Early audit in Phase 1; automated migration tools; prioritize essential documents</td>
+                    </tr>
+                    <tr>
+                        <td>Old site dependency post-launch</td>
+                        <td class="risk-med">Medium</td>
+                        <td class="risk-low">Low</td>
+                        <td>Transition period planned; old site access maintained; clear sunset timeline</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Success Metrics -->
+        <div class="section">
+            <h2>Success Metrics</h2>
+            <p>The following metrics should be tracked post-launch to measure the success of the redesign:</p>
+
+            <table>
+                <thead>
+                    <tr><th>Metric</th><th>Baseline (Current)</th><th>Target</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Page load speed</strong></td><td>TBD (Weebly baseline)</td><td>&lt; 3 seconds on mobile</td></tr>
+                    <tr><td><strong>Mobile usability score</strong></td><td>Basic responsive</td><td>Google Mobile-Friendly: Pass</td></tr>
+                    <tr><td><strong>Bounce rate</strong></td><td>TBD</td><td>Reduce by 20%+</td></tr>
+                    <tr><td><strong>Pages per session</strong></td><td>TBD</td><td>Increase by 30%+</td></tr>
+                    <tr><td><strong>Parish Finder usage</strong></td><td>N/A (new feature)</td><td>Track monthly interactions</td></tr>
+                    <tr><td><strong>Article engagement</strong></td><td>Separate site</td><td>Track reads, social shares</td></tr>
+                    <tr><td><strong>Giving page visits</strong></td><td>TBD</td><td>Increase OSV click-through by 25%+</td></tr>
+                    <tr><td><strong>Search usage</strong></td><td>N/A (no search)</td><td>Track queries and click-through</td></tr>
+                    <tr><td><strong>Spanish content usage</strong></td><td>N/A</td><td>Track language toggle and page views</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- RACI -->
+        <div class="section">
+            <h2>Responsibility Matrix (RACI)</h2>
+            <table>
+                <thead>
+                    <tr><th>Activity</th><th>Redstitch</th><th>Dean Happe</th><th>Megan/John</th><th>Ryan Hurless</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Design &amp; UX</td><td><strong>R, A</strong></td><td>C</td><td>I</td><td>I</td></tr>
+                    <tr><td>Content writing</td><td><strong>R, A</strong></td><td>C</td><td>C</td><td>I</td></tr>
+                    <tr><td>Content review &amp; approval</td><td>I</td><td><strong>A</strong></td><td><strong>R</strong></td><td>I</td></tr>
+                    <tr><td>Technical build</td><td><strong>R, A</strong></td><td>I</td><td>I</td><td>C</td></tr>
+                    <tr><td>Parish data</td><td>C</td><td><strong>A</strong></td><td>I</td><td><strong>R</strong></td></tr>
+                    <tr><td>The Message publishing</td><td>C</td><td>I</td><td><strong>R, A</strong></td><td>I</td></tr>
+                    <tr><td>Photography</td><td>I</td><td>C</td><td><strong>R, A</strong></td><td>I</td></tr>
+                    <tr><td>Hosting &amp; security</td><td><strong>R, A</strong></td><td>I</td><td>I</td><td>C</td></tr>
+                    <tr><td>Launch decision</td><td>C</td><td><strong>R, A</strong></td><td>C</td><td>C</td></tr>
+                </tbody>
+            </table>
+            <p style="font-size: 12px; color: var(--text-medium); margin-top: 8px;"><strong>R</strong> = Responsible | <strong>A</strong> = Accountable | <strong>C</strong> = Consulted | <strong>I</strong> = Informed</p>
+        </div>
+
+    </div>
+</body>
+</html>

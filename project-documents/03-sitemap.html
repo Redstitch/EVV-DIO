@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diocese of Evansville - Complete Sitemap</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Libre+Franklin:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --navy: #1B2A4A;
+            --blue: #24678D;
+            --cream: #F5F0E8;
+            --gold: #C5A55A;
+            --accent-red: #8B1A1A;
+            --warm-white: #FDFBF7;
+            --text-dark: #2A2A2A;
+            --text-medium: #555555;
+            --border-light: #E0DCD4;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Libre Franklin', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--warm-white);
+        }
+
+        .document {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .doc-header {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 3px solid var(--navy);
+            margin-bottom: 50px;
+        }
+
+        .doc-header .label {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .doc-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            color: var(--navy);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .doc-header .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            color: var(--blue);
+            font-style: italic;
+        }
+
+        .doc-header .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--text-medium);
+        }
+
+        /* Nav Bar */
+        .nav-bar {
+            display: flex;
+            background: var(--navy);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .nav-bar .nav-item {
+            padding: 14px 20px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-bar .nav-item.give {
+            background: var(--accent-red);
+            margin-left: auto;
+        }
+
+        .nav-bar .nav-item.search {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* Legend */
+        .legend {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            padding: 14px 20px;
+            background: var(--cream);
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+        .legend .item { display: flex; align-items: center; gap: 6px; }
+
+        .tag {
+            display: inline-block;
+            font-size: 9px;
+            padding: 2px 7px;
+            border-radius: 8px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .tag.new { background: #E8F5E9; color: #2D7A3A; }
+        .tag.migrated { background: #E3F2FD; color: #1565C0; }
+        .tag.interactive { background: #FFF3E0; color: #E65100; }
+        .tag.external { background: #F3E5F5; color: #6B2D5B; }
+        .tag.consolidated { background: #FFF8E1; color: #F57F17; }
+
+        /* Sitemap Grid */
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .sitemap-section {
+            background: #fff;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .sitemap-section .section-header {
+            padding: 14px 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-header .count {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 11px;
+            opacity: 0.7;
+            font-weight: 500;
+        }
+
+        .sitemap-section.home .section-header { background: var(--navy); }
+        .sitemap-section.about .section-header { background: var(--navy); }
+        .sitemap-section.parishes .section-header { background: var(--blue); }
+        .sitemap-section.faith .section-header { background: #3A7CA5; }
+        .sitemap-section.ministries .section-header { background: #2D5F4A; }
+        .sitemap-section.events .section-header { background: var(--gold); color: var(--navy); }
+        .sitemap-section.events .section-header .count { color: var(--navy); }
+        .sitemap-section.message .section-header { background: var(--accent-red); }
+        .sitemap-section.give .section-header { background: #6B2D5B; }
+        .sitemap-section.schools .section-header { background: #4A6741; }
+        .sitemap-section.utility .section-header { background: #555; }
+
+        .page-list {
+            padding: 12px 20px;
+            list-style: none;
+            max-height: none;
+        }
+
+        .page-list li {
+            padding: 4px 0;
+            font-size: 13px;
+            border-bottom: 1px solid #f5f3ef;
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+
+        .page-list li:last-child { border-bottom: none; }
+
+        .page-list li::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+            margin-top: 6px;
+        }
+
+        .page-list .sub {
+            padding-left: 18px;
+            font-size: 12px;
+            color: var(--text-medium);
+        }
+
+        .page-list .sub::before {
+            width: 3px;
+            height: 3px;
+            background: var(--border-light);
+        }
+
+        .page-list .sub2 {
+            padding-left: 36px;
+            font-size: 11px;
+            color: #999;
+        }
+
+        .page-list .sub2::before {
+            width: 3px;
+            height: 3px;
+            background: #ddd;
+        }
+
+        .page-list .tag { margin-left: auto; }
+
+        .page-list .group-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            padding: 8px 0 2px;
+            border-bottom: none;
+        }
+
+        .page-list .group-label::before { display: none; }
+
+        /* Global Elements */
+        .global-elements {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 40px;
+        }
+
+        .global-elements h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+
+        .global-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .global-card {
+            background: #fff;
+            padding: 14px;
+            border-radius: 8px;
+            border-left: 3px solid var(--gold);
+        }
+
+        .global-card h4 {
+            font-size: 13px;
+            color: var(--navy);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .global-card p {
+            font-size: 11px;
+            color: var(--text-medium);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Page Count */
+        .page-count {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: var(--navy);
+            color: #fff;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+        }
+
+        .page-count .stat {
+            text-align: center;
+        }
+
+        .page-count .number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .page-count .label {
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        @media print {
+            .document { padding: 20px; }
+            .sitemap-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .sitemap-grid { grid-template-columns: 1fr; }
+            .page-count { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="document">
+        <div class="doc-header">
+            <div class="label">Redstitch Digital</div>
+            <h1>Complete Sitemap</h1>
+            <div class="subtitle">Diocese of Evansville &mdash; Consolidated Website Structure</div>
+            <div class="meta">Prepared: March 2026 | Based on full content inventory of evdio.org (177 pages) + evdiomessage.org</div>
+        </div>
+
+        <!-- Navigation Bar Preview -->
+        <div class="nav-bar">
+            <div class="nav-item">About</div>
+            <div class="nav-item">Parishes &amp; Mass</div>
+            <div class="nav-item">Faith &amp; Sacraments</div>
+            <div class="nav-item">Catholic Schools</div>
+            <div class="nav-item">Ministries</div>
+            <div class="nav-item">Events</div>
+            <div class="nav-item">The Message</div>
+            <div class="nav-item give">Give</div>
+            <div class="nav-item search">Search</div>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <div class="item"><span class="tag new">New</span> New page/feature</div>
+            <div class="item"><span class="tag migrated">Migrated</span> From existing site</div>
+            <div class="item"><span class="tag consolidated">Consolidated</span> Multiple pages merged</div>
+            <div class="item"><span class="tag interactive">Interactive</span> Tool/feature</div>
+            <div class="item"><span class="tag external">External</span> Links out</div>
+        </div>
+
+        <!-- Sitemap Grid -->
+        <div class="sitemap-grid">
+
+            <!-- HOME -->
+            <div class="sitemap-section home">
+                <div class="section-header">Homepage <span class="count">1 page</span></div>
+                <ul class="page-list">
+                    <li>Homepage <span class="tag new">New</span></li>
+                    <li class="sub">Hero with Bishop + Diocese Welcome</li>
+                    <li class="sub">Quick-Access Cards (Parishes, Schools, The Message, Give)</li>
+                    <li class="sub">Latest from The Message (article feed)</li>
+                    <li class="sub">Impact Stories / Ministry Spotlights</li>
+                    <li class="sub">Giving CTA Banner</li>
+                    <li class="sub">Upcoming Events</li>
+                    <li class="sub">Monthly Dashboard / Transparency</li>
+                    <li class="sub">Video Feature (YouTube embed)</li>
+                </ul>
+            </div>
+
+            <!-- ABOUT -->
+            <div class="sitemap-section about">
+                <div class="section-header">About <span class="count">~18 pages</span></div>
+                <ul class="page-list">
+                    <li>Our Bishop <span class="tag new">New</span></li>
+                    <li class="sub">Biography, coat of arms, motto</li>
+                    <li class="sub">Messages &amp; statements from Bishop Siegel</li>
+                    <li>Diocesan Leadership <span class="tag consolidated">Consolidated</span></li>
+                    <li class="sub">Chancellor &amp; Vicar General</li>
+
+                    <li class="group-label">Our Offices</li>
+                    <li>Offices &amp; Departments <span class="tag consolidated">Consolidated</span></li>
+                    <li class="sub">Bishop's Office</li>
+                    <li class="sub">Finance &amp; Administration</li>
+                    <li class="sub">Finance Forms &amp; Documents</li>
+                    <li class="sub">Marriage &amp; Annulment Tribunal</li>
+                    <li class="sub">Communications Office</li>
+                    <li class="sub">Facilities &amp; Meeting Spaces</li>
+
+                    <li class="group-label">Directories &amp; Resources</li>
+                    <li>Staff Directory (PDF) <span class="tag migrated">Migrated</span></li>
+                    <li>Clergy Directory (PDF) <span class="tag migrated">Migrated</span></li>
+                    <li>Parish Directory (PDF) <span class="tag migrated">Migrated</span></li>
+                    <li>Vocations Yearbook (PDF) <span class="tag migrated">Migrated</span></li>
+
+                    <li class="group-label">Our Diocese</li>
+                    <li>Our History <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Past Bishops</li>
+                    <li class="sub">Cathedral Library &amp; Museum</li>
+                    <li>Our Vision &amp; Priorities <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Pastoral Letter (EN + ES PDFs)</li>
+                    <li>Transparency &amp; Accountability <span class="tag new">New</span></li>
+                    <li class="sub">Monthly reports archive</li>
+                    <li>Catholic Resources &amp; Links <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Religious communities in our diocese</li>
+                    <li class="sub">Other Indiana dioceses</li>
+
+                    <li class="group-label">Protecting Our Children</li>
+                    <li>Child &amp; Youth Protection <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">How to report abuse</li>
+                    <li class="sub">Required training for volunteers &amp; staff</li>
+                    <li class="sub">Background check requirements</li>
+                    <li class="sub">Safety curriculum for children</li>
+                    <li class="sub">Independent Review Board</li>
+                    <li class="sub">Published list of credible allegations</li>
+                    <li class="sub">Policies &amp; charter documents (PDFs)</li>
+                    <li class="sub">Report Abuse <span class="tag new">New</span></li>
+                    <li>Official Statements &amp; Decrees <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Diocesan decrees archive</li>
+                    <li class="sub">Policy statements</li>
+
+                    <li class="group-label">Contact</li>
+                    <li>Contact Us <span class="tag migrated">Migrated</span></li>
+                    <li>Press Room <span class="tag migrated">Migrated</span></li>
+                </ul>
+            </div>
+
+            <!-- PARISHES & MASS -->
+            <div class="sitemap-section parishes">
+                <div class="section-header">Parishes &amp; Mass <span class="count">~52 pages</span></div>
+                <ul class="page-list">
+                    <li>Parish Finder (Map Tool) <span class="tag interactive">Interactive</span></li>
+                    <li class="sub">Search by city, zip, or name</li>
+                    <li class="sub">Filter by deanery</li>
+                    <li class="sub">Mass times display</li>
+                    <li class="sub">Contact info &amp; directions</li>
+                    <li>Mass Times Map <span class="tag migrated">Migrated</span></li>
+                    <li>North Deanery <span class="tag new">New</span></li>
+                    <li>South Deanery <span class="tag new">New</span></li>
+                    <li>East Deanery <span class="tag new">New</span></li>
+                    <li>West Deanery <span class="tag new">New</span></li>
+                    <li class="group-label">45 Individual Parish Pages</li>
+                    <li>Parish Detail Page Template (x45) <span class="tag new">New</span></li>
+                    <li class="sub">Mass schedule (weekday + weekend)</li>
+                    <li class="sub">Address, phone, email</li>
+                    <li class="sub">Pastor &amp; staff listing</li>
+                    <li class="sub">Directions / map embed</li>
+                    <li class="sub">Link to parish website (if exists)</li>
+                    <li class="sub">Sacrament schedules</li>
+                </ul>
+            </div>
+
+            <!-- FAITH & SACRAMENTS -->
+            <div class="sitemap-section faith">
+                <div class="section-header">Faith &amp; Sacraments <span class="count">~18 pages</span></div>
+                <ul class="page-list">
+                    <li>How to Become Catholic <span class="tag new">New</span></li>
+                    <li>Becoming Catholic (OCIA) <span class="tag migrated">Migrated</span></li>
+
+                    <li class="group-label">Sacraments</li>
+                    <li>Baptism <span class="tag migrated">Migrated</span></li>
+                    <li>First Communion <span class="tag migrated">Migrated</span></li>
+                    <li>Confirmation <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Confirmation Preparation Resources</li>
+                    <li>Catholic Marriage <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Marriage Preparation Programs</li>
+                    <li class="sub">Pre-Marriage Retreat (UNVEILED)</li>
+                    <li class="sub">Natural Family Planning</li>
+                    <li class="sub">Annulments</li>
+                    <li>Anointing of the Sick <span class="tag new">New</span></li>
+                    <li>Vocations <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Priesthood</li>
+                    <li class="sub">Religious Life</li>
+                    <li class="sub">Becoming a Deacon</li>
+                    <li class="sub">Deacon Formation Program</li>
+                    <li class="sub">Vocations Website <span class="tag external">External</span></li>
+
+                    <li class="group-label">Prayer &amp; Worship</li>
+                    <li>Prayer &amp; Worship Resources <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Church Calendar</li>
+                    <li class="sub">Music Resources for Parishes</li>
+                    <li class="sub">Worship Policies &amp; Guidelines</li>
+                    <li class="sub">Worship Newsletter</li>
+                    <li>Year of Jubilee 2025 <span class="tag migrated">Migrated</span></li>
+                </ul>
+            </div>
+
+            <!-- MINISTRIES -->
+            <div class="sitemap-section ministries">
+                <div class="section-header">Ministries <span class="count">~35 pages</span></div>
+                <ul class="page-list">
+                    <li class="group-label">Marriage, Family &amp; Life</li>
+                    <li>Marriage &amp; Family Life <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Help with Infertility</li>
+                    <li class="sub">Miscarriage &amp; Loss Support</li>
+                    <li class="sub">Marriage Enrichment</li>
+                    <li class="sub">Grief Support for Parents (Red Bird Ministries)</li>
+                    <li class="sub">Men's Ministry (Into the Breach)</li>
+                    <li class="sub">Foster Care &amp; Adoption Support</li>
+                    <li class="sub">LGBTQ+ Support (Courage Ministry)</li>
+                    <li class="sub">Support for Expectant Mothers</li>
+                    <li class="sub">Senior Ministry</li>
+
+                    <li class="group-label">Respect for Life</li>
+                    <li>Respect for Life <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Healing After Abortion (Project Rachel)</li>
+                    <li class="sub">March for Life</li>
+                    <li class="sub">The Church &amp; Capital Punishment</li>
+                    <li class="sub">Healthcare &amp; Ethics</li>
+                    <li class="sub">Caring for Creation</li>
+                    <li class="sub">Faith &amp; Civic Responsibility</li>
+
+                    <li class="group-label">Faith Education</li>
+                    <li>Religious Education <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">For Parish Education Leaders</li>
+                    <li class="sub">Teacher Formation Day</li>
+                    <li class="sub">Religion Curriculum</li>
+                    <li class="sub">Faith Formation Resources</li>
+                    <li class="sub">Special Needs Religious Education (SPRED)</li>
+
+                    <li class="group-label">Youth &amp; Young Adults</li>
+                    <li>Youth &amp; Young Adults <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Young Adult Community</li>
+                    <li class="sub">Diocesan Youth Conference</li>
+                    <li class="sub">National Catholic Youth Conference</li>
+                    <li class="sub">Confirmation Spectacular</li>
+                    <li class="sub">World Youth Day</li>
+                    <li class="sub">Pro-Life Pilgrimage</li>
+                    <li class="sub">Teens Encounter Christ (TEC)</li>
+                    <li class="sub">Source + Summit Retreat</li>
+                    <li class="sub">Catholic Scouting</li>
+                    <li class="sub">St. Maria Goretti Youth Award</li>
+                    <li class="sub">Scholarships &amp; Financial Aid</li>
+
+                    <li class="group-label">College Students</li>
+                    <li>College Campus Ministry <span class="tag new">New</span></li>
+                    <li class="sub">University of Evansville</li>
+                    <li class="sub">University of Southern Indiana</li>
+                    <li class="sub">Vanderburgh University</li>
+
+                    <li class="group-label">More Ministries</li>
+                    <li>Disability &amp; Inclusion Ministry <span class="tag migrated">Migrated</span></li>
+                    <li>Ministerio Hispano (Hispanic Ministry) <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Nuestro Equipo (Our Team)</li>
+                    <li class="sub">Ministerios en Espa&ntilde;ol</li>
+                    <li class="sub">Protecci&oacute;n de Menores</li>
+                    <li class="sub">Servicios</li>
+                    <li class="sub">Nuestra Fe</li>
+                    <li class="sub">Tradiciones Hispanas</li>
+                    <li class="sub">Noticias y Eventos</li>
+                    <li>Prison &amp; Jail Ministry <span class="tag new">New</span></li>
+                    <li>Social Justice <span class="tag migrated">Migrated</span></li>
+                    <li>Mission &amp; Outreach <span class="tag migrated">Migrated</span></li>
+                    <li>Catholic Charities <span class="tag external">External</span></li>
+
+                    <li class="group-label">Supporting Our Mission</li>
+                    <li>Donate <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Annual Catholic Ministries Appeal</li>
+                    <li class="sub">Donor Recognition (Deo Gratias Society)</li>
+                    <li class="sub">Planned &amp; Legacy Giving (Brute Society)</li>
+                </ul>
+            </div>
+
+            <!-- EVENTS -->
+            <div class="sitemap-section events">
+                <div class="section-header">Events <span class="count">~4 pages + dynamic</span></div>
+                <ul class="page-list">
+                    <li>Events Calendar <span class="tag new">New</span></li>
+                    <li class="sub">Filterable by ministry/department</li>
+                    <li class="sub">Filterable by date range</li>
+                    <li class="sub">Filterable by deanery/location</li>
+                    <li>Event Detail Page Template <span class="tag new">New</span></li>
+                    <li class="sub">Description &amp; details</li>
+                    <li class="sub">Registration link (OSV) <span class="tag external">External</span></li>
+                    <li class="sub">Location &amp; directions</li>
+                    <li class="sub">Social sharing</li>
+                    <li>Retreats <span class="tag migrated">Migrated</span></li>
+                    <li>Meeting Rooms &amp; Spaces <span class="tag migrated">Migrated</span></li>
+                    <li>Watch Mass Online / Livestream <span class="tag new">New</span></li>
+                </ul>
+            </div>
+
+            <!-- THE MESSAGE -->
+            <div class="sitemap-section message">
+                <div class="section-header">The Message <span class="count">~12 pages + articles</span></div>
+                <ul class="page-list">
+                    <li>The Message Landing Page <span class="tag new">New</span></li>
+
+                    <li class="group-label">News Categories</li>
+                    <li>Diocesan News <span class="tag migrated">Migrated</span></li>
+                    <li>Local / Regional News <span class="tag migrated">Migrated</span></li>
+                    <li>National / World News <span class="tag migrated">Migrated</span></li>
+                    <li>Faith &amp; Spirituality <span class="tag new">New</span></li>
+                    <li>Special Features <span class="tag migrated">Migrated</span></li>
+
+                    <li class="group-label">Opinion &amp; Columns</li>
+                    <li>Opinion &amp; Columns Hub <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">The Bishop's Corner</li>
+                    <li class="sub">Journey of Faith</li>
+                    <li class="sub">Sunday Scriptures</li>
+                    <li class="sub">Connecting Faith and Life</li>
+                    <li class="sub">Perspective from the Pew</li>
+                    <li class="sub">Grace Notes</li>
+                    <li class="sub">Praying Through</li>
+                    <li class="sub">The Christian Journey</li>
+                    <li class="sub">+ additional recurring columns</li>
+
+                    <li class="group-label">Features</li>
+                    <li>Movie Reviews <span class="tag migrated">Migrated</span></li>
+                    <li>Bulletin Board / Events Roundup <span class="tag migrated">Migrated</span></li>
+
+                    <li class="group-label">Article Templates</li>
+                    <li>Article Detail Page <span class="tag new">New</span></li>
+                    <li class="sub">Featured image</li>
+                    <li class="sub">Author, date, category</li>
+                    <li class="sub">Social sharing buttons</li>
+                    <li class="sub">Related articles</li>
+
+                    <li class="group-label">Archive &amp; Info</li>
+                    <li>Archives (Post-2019) <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Browse by date</li>
+                    <li class="sub">Browse by category</li>
+                    <li class="sub">Browse by location</li>
+                    <li class="sub">Search within archives</li>
+                    <li>Subscribe <span class="tag migrated">Migrated</span></li>
+                    <li>About The Message <span class="tag migrated">Migrated</span></li>
+                    <li>Contact / Staff <span class="tag migrated">Migrated</span></li>
+                </ul>
+            </div>
+
+            <!-- GIVE -->
+            <div class="sitemap-section give">
+                <div class="section-header">Give <span class="count">~4 pages</span></div>
+                <ul class="page-list">
+                    <li>Why Give? <span class="tag new">New</span></li>
+                    <li class="sub">Stories of impact</li>
+                    <li class="sub">How your gift makes a difference</li>
+                    <li class="sub">Ways to give</li>
+                    <li>Give Online <span class="tag external">External</span></li>
+                    <li>Annual Catholic Ministries Appeal <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Donor Recognition (Deo Gratias Society)</li>
+                    <li class="sub">Annual Impact Report</li>
+                    <li>Planned &amp; Legacy Giving <span class="tag migrated">Migrated</span></li>
+                    <li>Give Stock or Securities <span class="tag migrated">Migrated</span></li>
+                </ul>
+            </div>
+
+            <!-- CATHOLIC SCHOOLS -->
+            <div class="sitemap-section schools">
+                <div class="section-header">Catholic Schools <span class="count">~10 pages</span></div>
+                <ul class="page-list">
+                    <li>Catholic Schools Overview <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Mission &amp; Vision</li>
+                    <li class="sub">Shared Beliefs</li>
+                    <li>School Listings <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">22 elementary schools (link to individual sites)</li>
+                    <li class="sub">4 high schools (link to individual sites)</li>
+                    <li>Schools Map <span class="tag migrated">Migrated</span></li>
+                    <li>Accreditation &amp; Standards <span class="tag migrated">Migrated</span></li>
+                    <li>Tuition Assistance &amp; Affordability <span class="tag migrated">Migrated</span></li>
+                    <li>Programs for Children with Special Needs <span class="tag migrated">Migrated</span></li>
+                    <li>Teacher Professional Development <span class="tag migrated">Migrated</span></li>
+                    <li>Student Health &amp; Wellness <span class="tag migrated">Migrated</span></li>
+                    <li>Teaching &amp; Staff Careers <span class="tag migrated">Migrated</span></li>
+                    <li>Resources for School Staff <span class="tag migrated">Migrated</span></li>
+                    <li>Administrative Handbook <span class="tag migrated">Migrated</span></li>
+                    <li>School Advisory Councils <span class="tag migrated">Migrated</span></li>
+                    <li>Enroll Your Child <span class="tag external">External</span></li>
+                </ul>
+            </div>
+
+            <!-- UTILITY -->
+            <div class="sitemap-section utility">
+                <div class="section-header">Utility &amp; Additional <span class="count">~8 pages</span></div>
+                <ul class="page-list">
+                    <li>Careers <span class="tag migrated">Migrated</span></li>
+                    <li class="sub">Diocesan positions</li>
+                    <li class="sub">School positions</li>
+                    <li class="sub">Parish positions</li>
+                    <li class="sub">Application form (PDF)</li>
+                    <li>Search Results Page <span class="tag new">New</span></li>
+                    <li>Privacy Policy <span class="tag new">New</span></li>
+                    <li>Accessibility Statement <span class="tag new">New</span></li>
+                    <li>404 Error Page <span class="tag new">New</span></li>
+                    <li>Spanish Language Version <span class="tag new">New</span></li>
+                    <li class="sub">Full translation of all pages</li>
+                    <li>MyDio Staff Portal <span class="tag external">External</span></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Global Elements -->
+        <div class="global-elements">
+            <h3>Global Elements (Present on Every Page)</h3>
+            <div class="global-grid">
+                <div class="global-card">
+                    <h4>Header</h4>
+                    <p>Diocese logo/crest, main navigation (About, Parishes &amp; Mass, Faith &amp; Sacraments, Ministries, Events, The Message), Give button, Search, Spanish language toggle</p>
+                </div>
+                <div class="global-card">
+                    <h4>Utility Nav</h4>
+                    <p>MyDio, Careers, Contact, Safe Environment links. EN/ES toggle. Visible on desktop, absorbed into mobile drawer.</p>
+                </div>
+                <div class="global-card">
+                    <h4>Footer</h4>
+                    <p>Diocese address &amp; phone, quick links, social media (Facebook, X, Instagram, YouTube), The Message subscribe, privacy, accessibility</p>
+                </div>
+                <div class="global-card">
+                    <h4>Site Search</h4>
+                    <p>In utility nav (desktop) and mobile header. Full-site covering pages, PDFs, and articles.</p>
+                </div>
+                <div class="global-card">
+                    <h4>Give CTA</h4>
+                    <p>Persistent "Give" button in header on desktop and mobile. Links to OSV.</p>
+                </div>
+                <div class="global-card">
+                    <h4>Breadcrumbs</h4>
+                    <p>Contextual breadcrumb navigation on all interior pages for wayfinding.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Count -->
+        <div class="page-count">
+            <div class="stat">
+                <div class="number">~160+</div>
+                <div class="label">Total Pages (English)</div>
+            </div>
+            <div class="stat">
+                <div class="number">45</div>
+                <div class="label">Parish Detail Pages</div>
+            </div>
+            <div class="stat">
+                <div class="number">320+</div>
+                <div class="label">With Spanish Translation</div>
+            </div>
+            <div class="stat">
+                <div class="number">177</div>
+                <div class="label">Current evdio.org Pages</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

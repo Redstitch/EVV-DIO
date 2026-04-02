@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diocese of Evansville - Team Kickoff</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1B2A4A;
+            --blue: #24678D;
+            --cream: #F5F0E8;
+            --gold: #C5A55A;
+            --gold-light: #D4B86A;
+            --accent-red: #8B1A1A;
+            --warm-white: #FDFBF7;
+            --text-dark: #2A2A2A;
+            --text-medium: #5A574F;
+            --text-light: #8A857B;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Libre Franklin', sans-serif;
+            background: #111;
+            color: #fff;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* === SLIDE SYSTEM === */
+        .presentation {
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 100px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+            overflow-y: auto;
+        }
+
+        .slide.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .slide-counter {
+            position: fixed;
+            bottom: 24px;
+            right: 40px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.3);
+            font-weight: 500;
+            z-index: 100;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .nav-hint {
+            position: fixed;
+            bottom: 24px;
+            left: 40px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-hint kbd {
+            display: inline-block;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-family: inherit;
+            font-size: 11px;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gold);
+            z-index: 100;
+            transition: width 0.4s ease;
+        }
+
+        /* === RS BRAND BAR === */
+        .rs-bar {
+            position: fixed;
+            top: 24px;
+            left: 40px;
+            z-index: 100;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.25);
+            font-weight: 600;
+        }
+
+        /* === TYPOGRAPHY === */
+        .slide h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+
+        .slide h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 1.15;
+            margin-bottom: 32px;
+        }
+
+        .slide h3 {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+
+        .slide p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.7);
+            max-width: 700px;
+        }
+
+        .label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        /* === TITLE SLIDE === */
+        .slide-title {
+            background: var(--navy);
+            text-align: center;
+            align-items: center;
+        }
+
+        .slide-title .crest {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+        }
+
+        .slide-title .crest svg { width: 36px; height: 36px; fill: var(--gold); }
+
+        .slide-title h1 {
+            font-size: 64px;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .slide-title .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-style: italic;
+            color: var(--gold-light);
+            margin-bottom: 40px;
+        }
+
+        .slide-title .meta {
+            font-size: 14px;
+            color: rgba(255,255,255,0.35);
+        }
+
+        /* === DARK SLIDES === */
+        .slide-dark {
+            background: #0E1420;
+        }
+
+        .slide-dark h2 { color: #fff; }
+
+        /* === NAVY SLIDES === */
+        .slide-navy {
+            background: var(--navy);
+        }
+
+        .slide-navy h2 { color: #fff; }
+
+        /* === LIGHT SLIDES === */
+        .slide-light {
+            background: var(--cream);
+            color: var(--text-dark);
+        }
+
+        .slide-light h2 { color: var(--navy); }
+        .slide-light p { color: var(--text-medium); }
+        .slide-light .label { color: var(--accent-red); }
+
+        /* === WARM SLIDES === */
+        .slide-warm {
+            background: var(--warm-white);
+            color: var(--text-dark);
+        }
+
+        .slide-warm h2 { color: var(--navy); }
+        .slide-warm p { color: var(--text-medium); }
+        .slide-warm .label { color: var(--accent-red); }
+        .slide-warm ul li { border-bottom-color: rgba(0,0,0,0.06); color: var(--text-medium); }
+        .slide-warm .info-card { background: #fff; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+        .slide-warm .info-card h3 { color: var(--accent-red); }
+        .slide-warm .simple-table th { color: var(--accent-red); border-bottom-color: rgba(0,0,0,0.08); }
+        .slide-warm .simple-table td { border-bottom-color: rgba(0,0,0,0.04); color: var(--text-medium); }
+        .slide-warm .simple-table td:first-child { color: var(--navy); }
+        .slide-warm .stat-card { background: #fff; border: 1px solid rgba(0,0,0,0.06); }
+        .slide-warm .stat-card .num { color: var(--navy); }
+        .slide-warm .stat-card .lbl { color: var(--text-light); }
+        .slide-warm .person { border-bottom-color: rgba(0,0,0,0.06); }
+        .slide-warm .person-info .name { color: var(--navy); }
+        .slide-warm .person-info .role { color: var(--text-light); }
+        .slide-warm .highlight-box { background: rgba(197,165,90,0.06); }
+        .slide-warm .highlight-box p { color: var(--text-dark); }
+
+        /* === RED SLIDES === */
+        .slide-red {
+            background: var(--accent-red);
+        }
+
+        .slide-red h2 { color: #fff; }
+        .slide-red .label { color: var(--gold); }
+
+        /* === LAYOUT HELPERS === */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .three-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 32px;
+        }
+
+        .four-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 24px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            font-size: 15px;
+            color: rgba(255,255,255,0.7);
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .slide-light ul li,
+        .slide-warm ul li {
+            border-bottom-color: rgba(0,0,0,0.06);
+            color: var(--text-medium);
+        }
+
+        ul li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+            margin-top: 6px;
+        }
+
+        /* === CARDS === */
+        .info-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .slide-light .info-card,
+        .slide-warm .info-card {
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+
+        .info-card h3 {
+            color: var(--gold);
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .slide-light .info-card h3 { color: var(--accent-red); }
+
+        .info-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            max-width: none;
+        }
+
+        /* === STAT CARDS === */
+        .stat-card {
+            text-align: center;
+            padding: 32px 20px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+        }
+
+        .slide-light .stat-card {
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .stat-card .num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .stat-card .lbl {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-top: 6px;
+        }
+
+        .slide-light .stat-card .num { color: var(--navy); }
+        .slide-light .stat-card .lbl { color: var(--text-light); }
+
+        /* === PERSON CARDS === */
+        .person {
+            display: flex;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .slide-light .person { border-bottom-color: rgba(0,0,0,0.06); }
+
+        .person-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .person-info .name {
+            font-weight: 600;
+            font-size: 15px;
+            color: #fff;
+        }
+
+        .slide-light .person-info .name { color: var(--navy); }
+
+        .person-info .role {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .slide-light .person-info .role { color: var(--text-light); }
+
+        .person-info .note {
+            font-size: 12px;
+            color: var(--gold);
+            margin-top: 2px;
+        }
+
+        /* === COLOR SWATCHES === */
+        .swatch-row {
+            display: flex;
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .swatch {
+            text-align: center;
+        }
+
+        .swatch .color {
+            width: 72px;
+            height: 72px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .swatch .name {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .swatch .hex {
+            font-size: 10px;
+            color: var(--text-light);
+            font-family: monospace;
+        }
+
+        /* === NAV PREVIEW === */
+        .nav-preview {
+            display: flex;
+            background: var(--navy);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 24px 0;
+            font-size: 13px;
+        }
+
+        .nav-preview span {
+            padding: 14px 18px;
+            color: rgba(255,255,255,0.8);
+            font-weight: 500;
+            border-right: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .nav-preview .give {
+            background: var(--accent-red);
+            color: #fff;
+            font-weight: 700;
+            margin-left: auto;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-preview .search {
+            background: rgba(255,255,255,0.06);
+            color: var(--gold);
+        }
+
+        /* === TAGS === */
+        .tag {
+            display: inline-block;
+            font-size: 10px;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .tag-red { background: rgba(139,26,26,0.15); color: var(--accent-red); }
+        .tag-gold { background: rgba(197,165,90,0.15); color: var(--gold); }
+        .tag-blue { background: rgba(36,103,141,0.15); color: var(--blue); }
+        .tag-green { background: rgba(45,122,58,0.15); color: #2D7A3A; }
+
+        /* === TABLE === */
+        .simple-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin: 16px 0;
+        }
+
+        .simple-table th {
+            text-align: left;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold);
+            padding: 10px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            font-weight: 700;
+        }
+
+        .slide-light .simple-table th {
+            color: var(--accent-red);
+            border-bottom-color: rgba(0,0,0,0.08);
+        }
+
+        .simple-table td {
+            padding: 10px 16px 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: rgba(255,255,255,0.7);
+            vertical-align: top;
+        }
+
+        .slide-light .simple-table td {
+            border-bottom-color: rgba(0,0,0,0.04);
+            color: var(--text-medium);
+        }
+
+        .simple-table td:first-child {
+            font-weight: 600;
+            color: #fff;
+            white-space: nowrap;
+        }
+
+        .slide-light .simple-table td:first-child { color: var(--navy); }
+
+        /* === HIGHLIGHT BOX === */
+        .highlight-box {
+            background: rgba(197,165,90,0.08);
+            border-left: 3px solid var(--gold);
+            padding: 20px 24px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            font-size: 15px;
+            font-style: italic;
+            color: rgba(255,255,255,0.8);
+            max-width: none;
+        }
+
+        .slide-light .highlight-box {
+            background: rgba(197,165,90,0.06);
+        }
+
+        .slide-light .highlight-box p {
+            color: var(--text-dark);
+        }
+
+        /* === SECTION DIVIDER === */
+        .slide-divider {
+            background: var(--gold);
+            text-align: center;
+            align-items: center;
+        }
+
+        .slide-divider h2 {
+            color: var(--navy);
+            font-size: 56px;
+        }
+
+        .slide-divider p {
+            color: var(--navy);
+            opacity: 0.7;
+        }
+
+        /* Scrollbar for overflow slides */
+        .slide::-webkit-scrollbar { width: 4px; }
+        .slide::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="rs-bar">Redstitch</div>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="slide-counter" id="slideCounter"></div>
+    <div class="nav-hint">
+        <kbd>&larr;</kbd> <kbd>&rarr;</kbd> to navigate
+    </div>
+
+    <div class="presentation" id="presentation">
+
+        <!-- SLIDE 1: Title -->
+        <div class="slide slide-title active">
+            <div class="crest">
+                <svg viewBox="0 0 24 24"><path d="M12 2L14 6.5H18L14.5 9.5L16 14L12 11L8 14L9.5 9.5L6 6.5H10L12 2Z"/></svg>
+            </div>
+            <h1>Diocese of Evansville</h1>
+            <div class="subtitle">Website Consolidation &amp; Redesign &mdash; Team Kickoff</div>
+            <div class="meta">Redstitch Digital &middot; March 2026</div>
+        </div>
+
+        <!-- SLIDE 2: Project Scope -->
+        <div class="slide slide-dark">
+            <span class="label">The Project</span>
+            <h2>What We're Building</h2>
+            <p style="margin-bottom: 40px;">One consolidated website replacing two existing sites. Headless CMS architecture. Content-first, visitor-centric, bilingual.</p>
+            <div class="three-col">
+                <div class="info-card">
+                    <h3>Consolidating</h3>
+                    <p><strong>evdio.org</strong> (main diocese site, Weebly)<br>+<br><strong>evdiomessage.org</strong> (The Message newspaper, WordPress)</p>
+                </div>
+                <div class="info-card">
+                    <h3>Into</h3>
+                    <p><strong>evdio.org</strong> &mdash; a single, modern site on our headless architecture. We host and manage everything.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Not Touching</h3>
+                    <p><strong>evdiomessage-archive.org</strong> (pre-2019 articles, SSL expired)<br>School sites, Catholic Charities, MyDio portal</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: Key People -->
+        <div class="slide slide-navy">
+            <span class="label">Client Team</span>
+            <h2>Who We're Working With</h2>
+            <div class="two-col">
+                <div>
+                    <div class="person">
+                        <div class="person-avatar">DH</div>
+                        <div class="person-info">
+                            <div class="name">Dean Happe</div>
+                            <div class="role">Chancellor &amp; COO</div>
+                            <div class="note">Primary decision-maker. Cares most about storytelling, transparency, and "meeting people where they are."</div>
+                        </div>
+                    </div>
+                    <div class="person">
+                        <div class="person-avatar">ME</div>
+                        <div class="person-info">
+                            <div class="name">Megan Erbacher</div>
+                            <div class="role">Director of Communications &amp; Editor, The Message</div>
+                            <div class="note">Closest to a website owner today. Will publish articles to the new site weekly.</div>
+                        </div>
+                    </div>
+                    <div class="person">
+                        <div class="person-avatar">JR</div>
+                        <div class="person-info">
+                            <div class="name">John Rohlf</div>
+                            <div class="role">Assoc. Director of Communications &amp; Asst. Editor</div>
+                            <div class="note">Works with Megan. Manages Vocations Yearbook. Only one with Adobe access.</div>
+                        </div>
+                    </div>
+                    <div class="person">
+                        <div class="person-avatar" style="background: var(--accent-red);">RH</div>
+                        <div class="person-info">
+                            <div class="name">Ryan Hurless</div>
+                            <div class="role">IT Manager</div>
+                            <div class="note">Focused on mobile, security, speed. Will ask technical questions.</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="highlight-box">
+                        <p>"We need to be ambassadors of one another &mdash; staff and parishes supporting each other. We need to tell our story and meet people where they are."</p>
+                    </div>
+                    <p style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 12px;">&mdash; Dean Happe, on the diocese's guiding philosophy</p>
+                    <div style="margin-top: 32px;">
+                        <h3 style="color: var(--gold); margin-bottom: 16px;">Key Context</h3>
+                        <ul>
+                            <li>16 department heads have CMS logins today &mdash; only a handful actually update</li>
+                            <li>No single website quality owner exists</li>
+                            <li>Megan &amp; John publish The Message weekly &mdash; that workflow moves to our CMS</li>
+                            <li>Dean posts monthly transparency dashboards &mdash; needs a dedicated home</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: Problems We're Solving -->
+        <div class="slide slide-dark">
+            <span class="label">Discovery Findings</span>
+            <h2>Problems We're Solving</h2>
+            <div class="two-col" style="margin-top: 8px;">
+                <div>
+                    <ul>
+                        <li><strong style="color:#fff;">Department-centric navigation</strong> &mdash; site is organized how the diocese works internally, not how visitors think</li>
+                        <li><strong style="color:#fff;">Overwhelming menus</strong> &mdash; 16+ top-level items. A newcomer has no idea where to start</li>
+                        <li><strong style="color:#fff;">Invisible storytelling</strong> &mdash; great ministry work and video content, but the impact doesn't show up on the site</li>
+                        <li><strong style="color:#fff;">Giving has no context</strong> &mdash; donate button goes off-site with zero narrative or impact stories</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><strong style="color:#fff;">Two separate websites</strong> &mdash; The Message journalism lives on a separate site and isn't leveraged on the main presence</li>
+                        <li><strong style="color:#fff;">No site search</strong> &mdash; required content (Safe Environment, allegations) can't be found without prominent placement</li>
+                        <li><strong style="color:#fff;">Inconsistent upkeep</strong> &mdash; 16 department logins but only a few update regularly</li>
+                        <li><strong style="color:#fff;">Weak mobile experience</strong> &mdash; basic responsive with a single breakpoint at 767px</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: Divider -->
+        <div class="slide slide-divider">
+            <h2>Design Direction</h2>
+            <p>Colors, typography, and visual approach</p>
+        </div>
+
+        <!-- SLIDE 6: Design Direction -->
+        <div class="slide slide-light">
+            <span class="label">Visual Identity</span>
+            <h2>Brand Palette &amp; Typography</h2>
+            <div class="two-col">
+                <div>
+                    <p style="margin-bottom: 24px;">No formal brand guide exists. Colors are derived from the coat of arms. Our prototype establishes the system.</p>
+                    <div class="swatch-row">
+                        <div class="swatch">
+                            <div class="color" style="background: #1B2A4A;"></div>
+                            <div class="name">Navy</div>
+                            <div class="hex">#1B2A4A</div>
+                        </div>
+                        <div class="swatch">
+                            <div class="color" style="background: #24678D;"></div>
+                            <div class="name">Blue</div>
+                            <div class="hex">#24678D</div>
+                        </div>
+                        <div class="swatch">
+                            <div class="color" style="background: #F5F0E8; border: 1px solid #ddd;"></div>
+                            <div class="name">Cream</div>
+                            <div class="hex">#F5F0E8</div>
+                        </div>
+                        <div class="swatch">
+                            <div class="color" style="background: #C5A55A;"></div>
+                            <div class="name">Gold</div>
+                            <div class="hex">#C5A55A</div>
+                        </div>
+                        <div class="swatch">
+                            <div class="color" style="background: #8B1A1A;"></div>
+                            <div class="name">Accent Red</div>
+                            <div class="hex">#8B1A1A</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 14px; margin-top: 20px;"><strong>Reference site:</strong> <span style="color: var(--blue);">archden.org</span> (Archdiocese of Denver) &mdash; they liked the clean layout, hero treatment, and parish finder approach.</p>
+                </div>
+                <div>
+                    <div style="margin-bottom: 24px;">
+                        <h3 style="color: var(--accent-red);">Headings</h3>
+                        <p style="font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: var(--navy); line-height: 1.2;">Cormorant Garamond</p>
+                        <p style="font-size: 13px;">Elegant serif. Tradition, authority, warmth. Works at large display sizes and in article headlines.</p>
+                    </div>
+                    <div style="margin-bottom: 24px;">
+                        <h3 style="color: var(--accent-red);">Body</h3>
+                        <p style="font-size: 22px; font-weight: 400; color: var(--navy); line-height: 1.3;">Libre Franklin</p>
+                        <p style="font-size: 13px;">Clean sans-serif. Readable across devices and for all age groups. Pairs naturally with Cormorant.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <p style="font-style: normal; font-size: 13px; color: var(--text-medium);">The diocese liked the Bishop's face high on the page, the live hero background from Denver, and want a dedicated dashboard section.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: Sitemap Divider -->
+        <div class="slide slide-divider">
+            <h2>Complete Sitemap</h2>
+            <p>~160+ pages (English) &middot; 320+ with Spanish &middot; Migrating 177 existing pages</p>
+        </div>
+
+        <!-- SLIDE 8: Navigation + Sitemap Overview -->
+        <div class="slide slide-dark" style="padding-top: 36px; padding-bottom: 36px;">
+            <span class="label">Information Architecture</span>
+            <h2 style="margin-bottom: 16px;">Navigation &amp; Top-Level Structure</h2>
+            <p style="margin-bottom: 20px;">Reorganized around visitor needs &mdash; not departments. Down from 16+ items to 6 sections + Give + Search.</p>
+            <div class="nav-preview">
+                <span>About</span>
+                <span>Parishes &amp; Mass</span>
+                <span>Faith &amp; Sacraments</span>
+                <span>Catholic Schools</span>
+                <span>Ministries</span>
+                <span>Events</span>
+                <span>The Message</span>
+                <span class="give">Give</span>
+                <span class="search">Search</span>
+            </div>
+            <div class="three-col" style="margin-top: 24px;">
+                <div class="info-card">
+                    <h3>About &mdash; ~18 pages</h3>
+                    <p style="font-size: 13px;">Bishop bio &amp; messages &middot; Chancellor &middot; Vicar General &middot; Offices &amp; Departments (Finance, Tribunal, Communications, Activities) &middot; Staff/Clergy/Parish Directories (PDFs) &middot; Vocations Yearbook &middot; History &amp; Previous Bishops &middot; Old Cathedral Museum &middot; Pastoral Priorities 2025-2030 &middot; Transparency Dashboard &middot; Links &amp; Resources &middot; Safe Environment (training, policies, allegations, Review Board) &middot; Official News &amp; Decrees &middot; Contact &middot; Media Inquiries</p>
+                </div>
+                <div class="info-card">
+                    <h3>Parishes &amp; Mass &mdash; ~52 pages</h3>
+                    <p style="font-size: 13px;">Parish Finder (interactive map, search by city/zip/name, filter by deanery) &middot; Mass Times Map &middot; 4 Deanery pages (N/S/E/W) &middot; <strong>45 individual parish detail pages</strong> each with Mass schedule, address, staff, sacrament info, and website link</p>
+                </div>
+                <div class="info-card">
+                    <h3>Faith &amp; Sacraments &mdash; ~18 pages</h3>
+                    <p style="font-size: 13px;">How to Become Catholic &middot; Becoming Catholic (OCIA) &middot; Baptism &middot; First Communion &middot; Confirmation &middot; Catholic Marriage (Preparation, Retreat, NFP, Annulments) &middot; Anointing of the Sick &middot; Vocations (Priesthood, Religious Life, Becoming a Deacon) &middot; Prayer &amp; Worship Resources (Calendar, Music, Policies) &middot; Jubilee 2025</p>
+                </div>
+                <div class="info-card">
+                    <h3>Catholic Schools &mdash; ~10 pages</h3>
+                    <p style="font-size: 13px;">Schools Overview + Mission &middot; School Listings (22 elementary + 4 high, links to individual sites) &middot; Schools Map &middot; Enroll Your Child &middot; Tuition Assistance &middot; Programs for Special Needs &middot; Accreditation &amp; Standards &middot; Student Wellness &middot; Teaching Careers &middot; Staff Resources &middot; Admin Handbook &middot; School Advisory Councils</p>
+                </div>
+                <div class="info-card">
+                    <h3>The Message &mdash; ~12 pages + articles</h3>
+                    <p style="font-size: 13px;">Landing page &middot; Diocesan News &middot; Local/Regional News &middot; National/World News &middot; Faith &amp; Spirituality &middot; Special Features &middot; Opinion &amp; Columns hub (Bishop's Corner, Journey of Faith, Sunday Scriptures, 9+ recurring columns) &middot; Movie Reviews &middot; Bulletin Board &middot; Article template (image, author, social sharing, related) &middot; Archives (by date, category, location) &middot; Subscribe &middot; About &middot; Contact/Staff</p>
+                </div>
+                <div class="info-card">
+                    <h3>Events &mdash; ~4 pages + dynamic</h3>
+                    <p style="font-size: 13px;">Events Calendar (filter by ministry, date, location) &middot; Event Detail template (description, OSV registration link, directions, social sharing) &middot; Sarto Retreat Center info &middot; Catholic Center Meeting Rooms</p>
+                </div>
+                <div class="info-card">
+                    <h3>Give &mdash; ~4 pages</h3>
+                    <p style="font-size: 13px;">Giving landing page (impact stories, why give) &middot; Online Giving (OSV link) &middot; Catholic Ministries Appeal + Deo Gratias Society + Impact Report &middot; Planned Giving / Brute Society &middot; Gifts of Stock</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 9: Sitemap Detail - Ministries + Schools + Utility -->
+        <div class="slide slide-dark" style="padding-top: 36px; padding-bottom: 36px;">
+            <span class="label">Sitemap (continued)</span>
+            <h2 style="margin-bottom: 20px;">Ministries, Schools &amp; Utility Pages</h2>
+            <div class="two-col" style="gap: 32px;">
+                <div>
+                    <div class="info-card" style="margin-bottom: 16px;">
+                        <h3>Ministries &mdash; ~35 pages (largest section)</h3>
+                        <p style="font-size: 12px; line-height: 1.7;">
+                            <strong style="color: #fff;">Marriage, Family &amp; Life:</strong> Overview, Infertility, Miscarriage, Divorce Prevention, Red Bird Ministries (grief), Into the Breach (men), Foster Care, Courage, Walking with Moms, Over 55 / Seasoned Disciples<br><br>
+                            <strong style="color: #fff;">Respect Life:</strong> Overview, Project Rachel, March for Life, Capital Punishment, Healthcare Ethics, Environmental Stewardship, Faithful Citizenship<br><br>
+                            <strong style="color: #fff;">Education:</strong> Catechesis (Parish Leaders, Formation Day, Curriculum, SPRED, Faith Formation Resources, Confirmation Resources)<br><br>
+                            <strong style="color: #fff;">Youth &amp; Young Adult:</strong> Overview, Young Adult Ministry, CYC, NCYC, Confirmation Spectacular, World Youth Day, Pilgrimage for Life, TEC, Source + Summit, Scouting, St. Maria Goretti Distinction, Scholarships<br><br>
+                            <strong style="color: #fff;">Campus Ministry:</strong> U of Evansville, USI, Vanderburgh University<br><br>
+                            <strong style="color: #fff;">Hispanic Ministry:</strong> Overview, Mission &amp; Staff, Spanish Ministries, Safe Environment (ES), Services, Our Faith (ES), Hispanic Traditions, News &amp; Events (ES)<br><br>
+                            <strong style="color: #fff;">Other:</strong> Disability Ministry, Prison Ministry, Social Concerns, Missions, Catholic Charities (external link)<br><br>
+                            <strong style="color: #fff;">Stewardship:</strong> Overview, Catholic Ministries Appeal, Deo Gratias Society, Brute Society
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="info-card" style="margin-bottom: 16px;">
+                        <h3>Catholic Schools &mdash; ~10 pages</h3>
+                        <p style="font-size: 12px; line-height: 1.7;">
+                            Overview + Mission &amp; Vision &middot; School Listings (22 elementary + 4 high schools, links to individual sites) &middot; Schools Map &middot; Accreditation &middot; Tuition Assistance &middot; Exceptional Children Programs &middot; Professional Development &middot; Standards &middot; Wellness &middot; School Employment &middot; School Personnel Resources &middot; Admin Handbook &middot; School Council / Presidents Council &middot; Prospective Families (external link)
+                        </p>
+                    </div>
+                    <div class="info-card" style="margin-bottom: 16px;">
+                        <h3>Utility Pages &mdash; ~8 pages</h3>
+                        <p style="font-size: 12px; line-height: 1.7;">
+                            Careers (Diocesan, School, Parish listings + application PDF) &middot; Search Results Page &middot; Privacy Policy &middot; Accessibility Statement &middot; 404 Error Page &middot; Spanish Language Version (full translation) &middot; MyDio Staff Portal (external link)
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Global Elements (every page)</h3>
+                        <p style="font-size: 12px; line-height: 1.7;">
+                            Header (logo, nav, Give button, search, EN/ES toggle) &middot; Utility nav (MyDio, Careers, Contact, Safe Environment) &middot; Footer (address, phone, social links, quick links, Message subscribe) &middot; Breadcrumbs &middot; Back to top
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 24px; margin-top: 24px;">
+                <div class="stat-card" style="flex: 1;">
+                    <div class="num">~160+</div>
+                    <div class="lbl">English Pages</div>
+                </div>
+                <div class="stat-card" style="flex: 1;">
+                    <div class="num">45</div>
+                    <div class="lbl">Parish Pages</div>
+                </div>
+                <div class="stat-card" style="flex: 1;">
+                    <div class="num">35</div>
+                    <div class="lbl">Ministry Pages</div>
+                </div>
+                <div class="stat-card" style="flex: 1;">
+                    <div class="num">320+</div>
+                    <div class="lbl">With Spanish</div>
+                </div>
+                <div class="stat-card" style="flex: 1;">
+                    <div class="num">177</div>
+                    <div class="lbl">Current Pages to Migrate</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE: Page Naming Philosophy -->
+        <div class="slide slide-light" style="padding-top: 40px; padding-bottom: 40px;">
+            <span class="label">Content Strategy</span>
+            <h2>Page Naming: Visitor-First Language</h2>
+            <p style="margin-bottom: 24px;">The current site uses internal Catholic/diocesan jargon. We're renaming every page so any visitor &mdash; from a lifelong parishioner to someone who just moved to town &mdash; can understand what they'll find.</p>
+            <div class="two-col" style="gap: 40px;">
+                <div>
+                    <h3 style="color: var(--accent-red); margin-bottom: 16px;">Before (Internal Language)</h3>
+                    <table class="simple-table">
+                        <tbody>
+                            <tr><td style="color: var(--accent-red); opacity: 0.7; text-decoration: line-through;">OCIA / OCIA</td><td></td></tr>
+                            <tr><td style="color: var(--accent-red); opacity: 0.7; text-decoration: line-through;">Safe Environment</td><td></td></tr>
+                            <tr><td style="color: var(--accent-red); opacity: 0.7; text-decoration: line-through;">Tribunal</td><td></td></tr>
+                            <tr><td style="color: var(--accent-red); opacity: 0.7; text-decoration: line-through;">Catechesis</td><td></td></tr>
+                            <tr><td style="color: var(--accent-red); opacity: 0.7; text-decoration: line-through;">Permanent Diaconate</td><td></td></tr>
+                            <tr><td style="color: var(--accent-red); opacity: 0.7; text-decoration: line-through;">Stewardship</td><td></td></tr>
+                            <tr><td style="color: var(--accent-red); opacity: 0.7; text-decoration: line-through;">Pastoral Priorities 2025-2030</td><td></td></tr>
+                            <tr><td style="color: var(--accent-red); opacity: 0.7; text-decoration: line-through;">Project Rachel</td><td></td></tr>
+                            <tr><td style="color: var(--accent-red); opacity: 0.7; text-decoration: line-through;">Into the Breach</td><td></td></tr>
+                            <tr><td style="color: var(--accent-red); opacity: 0.7; text-decoration: line-through;">Red Bird Ministries</td><td></td></tr>
+                            <tr><td style="color: var(--accent-red); opacity: 0.7; text-decoration: line-through;">Courage</td><td></td></tr>
+                            <tr><td style="color: var(--accent-red); opacity: 0.7; text-decoration: line-through;">SPRED</td><td></td></tr>
+                            <tr><td style="color: var(--accent-red); opacity: 0.7; text-decoration: line-through;">New to Catholicism</td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 style="color: #2D7A3A; margin-bottom: 16px;">After (Visitor-Friendly)</h3>
+                    <table class="simple-table">
+                        <tbody>
+                            <tr><td style="color: #2D7A3A; font-weight: 600;">Becoming Catholic (OCIA)</td><td></td></tr>
+                            <tr><td style="color: #2D7A3A; font-weight: 600;">Child &amp; Youth Protection</td><td></td></tr>
+                            <tr><td style="color: #2D7A3A; font-weight: 600;">Marriage &amp; Annulment Tribunal</td><td></td></tr>
+                            <tr><td style="color: #2D7A3A; font-weight: 600;">Religious Education</td><td></td></tr>
+                            <tr><td style="color: #2D7A3A; font-weight: 600;">Becoming a Deacon</td><td></td></tr>
+                            <tr><td style="color: #2D7A3A; font-weight: 600;">Donate</td><td></td></tr>
+                            <tr><td style="color: #2D7A3A; font-weight: 600;">Our Vision &amp; Priorities</td><td></td></tr>
+                            <tr><td style="color: #2D7A3A; font-weight: 600;">Healing After Abortion</td><td></td></tr>
+                            <tr><td style="color: #2D7A3A; font-weight: 600;">Men's Ministry</td><td></td></tr>
+                            <tr><td style="color: #2D7A3A; font-weight: 600;">Grief Support for Parents</td><td></td></tr>
+                            <tr><td style="color: #2D7A3A; font-weight: 600;">LGBTQ+ Support (Courage)</td><td></td></tr>
+                            <tr><td style="color: #2D7A3A; font-weight: 600;">Special Needs Religious Ed</td><td></td></tr>
+                            <tr><td style="color: #2D7A3A; font-weight: 600;">How to Become Catholic</td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 20px;">
+                <p style="font-style: normal; font-size: 13px;"><strong>Naming rule:</strong> Every page name should make sense to someone who has never been to a Catholic church. The program's internal name goes in parentheses if it's well-known (e.g., "Becoming Catholic (OCIA)") but the primary label describes what the visitor gets, not what the diocese calls it internally.</p>
+            </div>
+        </div>
+
+        <!-- SLIDE: Confirmed Features -->
+        <div class="slide slide-warm" style="padding-top: 40px; padding-bottom: 40px;">
+            <span class="label">Build Requirements</span>
+            <h2>Confirmed Features</h2>
+            <table class="simple-table">
+                <thead>
+                    <tr><th>Feature</th><th>Details</th><th>Notes</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Parish Finder</td><td>Map-based, search by city/zip/name, Mass times, contact info</td><td><span class="tag tag-red">Complex Build</span></td></tr>
+                    <tr><td>Article Publishing</td><td>Streamlined CMS for The Message team to publish weekly</td><td><span class="tag tag-red">Complex Build</span></td></tr>
+                    <tr><td>Spanish Translation</td><td>Full-site bilingual version with language toggle</td><td><span class="tag tag-gold">Scope TBD</span></td></tr>
+                    <tr><td>Site Search</td><td>Full-site search in header, surfaces all content + PDFs</td><td><span class="tag tag-blue">Standard</span></td></tr>
+                    <tr><td>Events Calendar</td><td>Filterable listings, registration links to OSV</td><td><span class="tag tag-blue">Standard</span></td></tr>
+                    <tr><td>Giving Section</td><td>Impact storytelling + links to OSV, persistent header button</td><td><span class="tag tag-green">Content-heavy</span></td></tr>
+                    <tr><td>PDF Migration</td><td>All existing PDFs from both sites move to new site</td><td><span class="tag tag-gold">Volume TBD</span></td></tr>
+                    <tr><td>Social Sharing</td><td>Share buttons on articles, social links in header/footer</td><td><span class="tag tag-green">Standard</span></td></tr>
+                    <tr><td>Transparency Dashboard</td><td>Dedicated section for Dean's monthly reports</td><td><span class="tag tag-green">Content-heavy</span></td></tr>
+                    <tr><td>Video Embeds</td><td>YouTube only, diocese manages their channel</td><td><span class="tag tag-green">Standard</span></td></tr>
+                    <tr><td>301 Redirects</td><td>Old URLs from both sites redirect to new structure</td><td><span class="tag tag-blue">Standard</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SLIDE 9: Out of Scope -->
+        <div class="slide slide-dark">
+            <span class="label">Scope Boundaries</span>
+            <h2>What's Out of Scope</h2>
+            <p style="margin-bottom: 32px;">Be ready to redirect scope creep back to this list. Changes go through Dean Happe.</p>
+            <div class="two-col">
+                <ul>
+                    <li>evdiomessage-archive.org and pre-2019 content</li>
+                    <li>Booking / reservation functionality (Sarto Retreat Center)</li>
+                    <li>Third-party logins or gated member access</li>
+                    <li>Email marketing integration (Flocknote) &mdash; future phase</li>
+                    <li>Searchable digital staff/clergy directory (PDF only)</li>
+                    <li>Google Sites / MyDio portal &mdash; link-off only</li>
+                    <li>Custom event registration or payment processing</li>
+                </ul>
+                <ul>
+                    <li>School, Catholic Charities, or affiliate websites</li>
+                    <li>Any integrations beyond OSV (linking only)</li>
+                    <li>Analytics dashboards or monthly reporting</li>
+                    <li>Google Business Profile management</li>
+                    <li>Diocesan Yearbook (link to existing PDF)</li>
+                    <li>Login-gated content of any kind</li>
+                    <li>Employment application systems (listings only)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SLIDE 10: Open Items -->
+        <div class="slide slide-red">
+            <span class="label">Action Required</span>
+            <h2>Open Items &mdash; Resolve Before Build</h2>
+            <p style="color: rgba(255,255,255,0.8); margin-bottom: 32px;">These are blockers. We need answers from the Diocese before development starts.</p>
+            <div class="two-col">
+                <div>
+                    <h3 style="color: var(--gold);">Diocese Must Decide</h3>
+                    <ul>
+                        <li style="border-color: rgba(255,255,255,0.1);">Parish data ownership &mdash; who maintains it and how often?</li>
+                        <li style="border-color: rgba(255,255,255,0.1);">Department content model &mdash; centralized or distributed publishing?</li>
+                        <li style="border-color: rgba(255,255,255,0.1);">Safe Environment &mdash; what must be public vs. needs access control?</li>
+                        <li style="border-color: rgba(255,255,255,0.1);">Archive site fate &mdash; preserve pre-2019 content or sunset?</li>
+                        <li style="border-color: rgba(255,255,255,0.1);">Legally required content inventory</li>
+                        <li style="border-color: rgba(255,255,255,0.1);">Spanish translation scope &mdash; full site or targeted pages?</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: var(--gold);">We Need to Define</h3>
+                    <ul>
+                        <li style="border-color: rgba(255,255,255,0.1);">Article publishing workflow in headless CMS</li>
+                        <li style="border-color: rgba(255,255,255,0.1);">Event registration flow &mdash; confirm OSV handles all</li>
+                        <li style="border-color: rgba(255,255,255,0.1);">PDF/document migration volume and audit plan</li>
+                        <li style="border-color: rgba(255,255,255,0.1);">Video source inventory &mdash; YouTube, Facebook, Vimeo?</li>
+                        <li style="border-color: rgba(255,255,255,0.1);">URL redirect mapping strategy (177 current pages)</li>
+                        <li style="border-color: rgba(255,255,255,0.1);">Parish Finder data format and handoff</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 11: Content Model -->
+        <div class="slide slide-navy">
+            <span class="label">Content</span>
+            <h2>Content Ownership &amp; The Message</h2>
+            <div class="two-col">
+                <div>
+                    <h3 style="color: var(--gold);">Who Writes What</h3>
+                    <table class="simple-table">
+                        <thead>
+                            <tr><th>Content</th><th>Owner</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>All launch copy</td><td>Redstitch writes, Diocese reviews</td></tr>
+                            <tr><td>Photography</td><td>Diocese provides</td></tr>
+                            <tr><td>Documents &amp; PDFs</td><td>Diocese provides</td></tr>
+                            <tr><td>Weekly articles (post-launch)</td><td>Megan &amp; John via CMS</td></tr>
+                            <tr><td>Video embeds</td><td>Diocese manages YouTube</td></tr>
+                            <tr><td>Monthly dashboards</td><td>Dean provides</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 style="color: var(--gold);">The Message &mdash; Key Facts</h3>
+                    <ul>
+                        <li>Catholic journalism since 1970</li>
+                        <li>Published weekly (51 issues/year)</li>
+                        <li>Megan &amp; John publish articles and media &mdash; workflow moves to our CMS</li>
+                        <li>They're open to leaving WordPress</li>
+                        <li>Social sharing is a priority</li>
+                        <li>Categories: Diocesan News, Local News, Faith &amp; Spirituality, Opinion &amp; Columns</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top: 20px;">
+                        <p>We need to build and document the article publishing flow before launch. Megan &amp; John train on it and manage independently post-launch.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 12: Tech -->
+        <div class="slide slide-dark">
+            <span class="label">Technical</span>
+            <h2>Architecture &amp; Integrations</h2>
+            <div class="two-col">
+                <div>
+                    <table class="simple-table">
+                        <thead>
+                            <tr><th>Component</th><th>Approach</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>CMS</td><td>Headless (our standard stack)</td></tr>
+                            <tr><td>Hosting</td><td>Redstitch-managed</td></tr>
+                            <tr><td>Domain</td><td>evdio.org (maintained)</td></tr>
+                            <tr><td>Donations</td><td>OSV link-off only</td></tr>
+                            <tr><td>Events</td><td>OSV link-off only</td></tr>
+                            <tr><td>Video</td><td>YouTube embeds</td></tr>
+                            <tr><td>Social</td><td>FB, X, Instagram, YouTube</td></tr>
+                            <tr><td>Search</td><td>Full-site (built-in)</td></tr>
+                            <tr><td>Translation</td><td>Full ES version</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 style="color: var(--gold);">What We're Replacing</h3>
+                    <div class="info-card" style="margin-bottom: 16px;">
+                        <h3>evdio.org</h3>
+                        <p>Weebly &mdash; consumer-grade, limited, .html extensions, no search, no proper CMS permissions, BatchGeo embeds for maps</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>evdiomessage.org</h3>
+                        <p>WordPress &mdash; team is happy to leave it. Content workflow stays the same, just better publishing tools</p>
+                    </div>
+                    <p style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 16px;">MVP launch keeps old site accessible for transition. We'll sunset Weebly + WordPress once confirmed stable.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 13: At a Glance -->
+        <div class="slide slide-light" style="padding-top: 40px; padding-bottom: 40px;">
+            <span class="label">Quick Reference</span>
+            <h2>Project At a Glance</h2>
+            <div class="four-col" style="margin-bottom: 32px;">
+                <div class="stat-card">
+                    <div class="num">79,500</div>
+                    <div class="lbl">Catholics</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num">45</div>
+                    <div class="lbl">Parishes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num">26</div>
+                    <div class="lbl">Schools</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num">~160+</div>
+                    <div class="lbl">Pages (EN)</div>
+                </div>
+            </div>
+            <table class="simple-table">
+                <thead>
+                    <tr><th>Item</th><th>Detail</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Client</td><td>Roman Catholic Diocese of Evansville</td></tr>
+                    <tr><td>Bishop</td><td>Bishop Joseph M. Siegel</td></tr>
+                    <tr><td>Pastoral Vision</td><td>Encounter. Deepen. Engage.</td></tr>
+                    <tr><td>Geography</td><td>12 counties, SW Indiana, 4 deaneries (N/S/E/W)</td></tr>
+                    <tr><td>Primary Contact</td><td>Dean Happe, Chancellor &amp; COO</td></tr>
+                    <tr><td>Domain</td><td>evdio.org</td></tr>
+                    <tr><td>Design Reference</td><td>archden.org (Archdiocese of Denver)</td></tr>
+                    <tr><td>Fonts</td><td>Cormorant Garamond (headings) + Libre Franklin (body)</td></tr>
+                    <tr><td>Palette</td><td>Navy, Blue, Cream, Gold, Accent Red</td></tr>
+                    <tr><td>Key Integration</td><td>OSV (giving + event registration, link-off only)</td></tr>
+                    <tr><td>Current Site Pages</td><td>177 (evdio.org sitemap)</td></tr>
+                    <tr><td>Current Platform</td><td>Weebly (evdio) + WordPress (Message)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SLIDE 14: Next Steps -->
+        <div class="slide slide-navy">
+            <span class="label">What's Next</span>
+            <h2>Immediate Next Steps</h2>
+            <div class="two-col">
+                <div>
+                    <h3 style="color: var(--gold);">Redstitch Action Items</h3>
+                    <ul>
+                        <li>Send Diocese the list of open items for resolution</li>
+                        <li>Finalize article publishing workflow for headless CMS</li>
+                        <li>Define Parish Finder data requirements and format</li>
+                        <li>Begin URL redirect mapping (177 evdio.org pages + evdiomessage.org URLs)</li>
+                        <li>Refine navigation structure from prototype</li>
+                        <li>Begin homepage and interior page design</li>
+                        <li>Start content architecture and page map</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: var(--gold);">Waiting on Diocese</h3>
+                    <ul>
+                        <li>Resolution on all open items (Slide 10)</li>
+                        <li>Parish data collection for Parish Finder</li>
+                        <li>Photography assets</li>
+                        <li>Document/PDF inventory and handoff</li>
+                        <li>CMS access: Weebly admin + WordPress admin</li>
+                        <li>Domain hosting credentials</li>
+                        <li>Google Analytics access</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 32px;">
+                <p style="font-style: normal;">Homepage design preview is available in the project folder: <strong>04-homepage-design.html</strong>. Open in browser to review.</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 15: End -->
+        <div class="slide slide-title">
+            <div class="crest">
+                <svg viewBox="0 0 24 24"><path d="M12 2L14 6.5H18L14.5 9.5L16 14L12 11L8 14L9.5 9.5L6 6.5H10L12 2Z"/></svg>
+            </div>
+            <h1 style="font-size: 48px;">Questions?</h1>
+            <div class="subtitle">Full research docs, plan of action, and sitemap in the project folder</div>
+            <div class="meta" style="margin-top: 24px;">
+                01-research-document.html &middot; 02-plan-of-action.html &middot; 03-sitemap.html &middot; 04-homepage-design.html
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const counter = document.getElementById('slideCounter');
+        const progressBar = document.getElementById('progressBar');
+        let current = 0;
+        const total = slides.length;
+
+        function updateSlide() {
+            slides.forEach((s, i) => s.classList.toggle('active', i === current));
+            counter.textContent = `${current + 1} / ${total}`;
+            progressBar.style.width = `${((current + 1) / total) * 100}%`;
+        }
+
+        function next() {
+            if (current < total - 1) { current++; updateSlide(); }
+        }
+
+        function prev() {
+            if (current > 0) { current--; updateSlide(); }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+            if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+        });
+
+        // Click navigation
+        document.addEventListener('click', (e) => {
+            const x = e.clientX;
+            if (x > window.innerWidth * 0.6) next();
+            else if (x < window.innerWidth * 0.4) prev();
+        });
+
+        // Touch navigation
+        let touchStartX = 0;
+        document.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+        document.addEventListener('touchend', (e) => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); }
+        });
+
+        updateSlide();
+    </script>
+</body>
+</html>

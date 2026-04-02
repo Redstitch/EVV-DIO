@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diocese of Evansville - Website Redesign Research Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Libre+Franklin:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --navy: #1B2A4A;
+            --blue: #24678D;
+            --cream: #F5F0E8;
+            --gold: #C5A55A;
+            --accent-red: #8B1A1A;
+            --warm-white: #FDFBF7;
+            --text-dark: #2A2A2A;
+            --text-medium: #555555;
+            --border-light: #E0DCD4;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Libre Franklin', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: var(--warm-white);
+        }
+
+        .document {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .doc-header {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 3px solid var(--navy);
+            margin-bottom: 50px;
+        }
+
+        .doc-header .label {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .doc-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            color: var(--navy);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .doc-header .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            color: var(--blue);
+            font-style: italic;
+        }
+
+        .doc-header .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--text-medium);
+        }
+
+        .toc {
+            background: var(--cream);
+            padding: 30px 40px;
+            border-radius: 8px;
+            margin-bottom: 50px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .toc h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            color: var(--navy);
+            margin-bottom: 15px;
+        }
+
+        .toc ol {
+            padding-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        .toc a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 30px;
+            color: var(--navy);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        .section h3 {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 18px;
+            color: var(--blue);
+            font-weight: 600;
+            margin: 25px 0 12px 0;
+        }
+
+        .section h4 {
+            font-size: 15px;
+            color: var(--accent-red);
+            font-weight: 600;
+            margin: 20px 0 8px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            font-size: 15px;
+        }
+
+        ul, ol {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        thead th {
+            background: var(--navy);
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tbody td {
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border-light);
+            vertical-align: top;
+        }
+
+        tbody tr:nth-child(even) {
+            background: var(--cream);
+        }
+
+        .callout {
+            background: var(--cream);
+            border-left: 4px solid var(--blue);
+            padding: 20px 24px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .callout.warning {
+            border-left-color: var(--accent-red);
+        }
+
+        .callout.gold {
+            border-left-color: var(--gold);
+        }
+
+        .callout p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .color-swatch-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .color-swatch {
+            text-align: center;
+        }
+
+        .color-swatch .swatch {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            margin-bottom: 6px;
+        }
+
+        .color-swatch .label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .color-swatch .hex {
+            font-size: 11px;
+            color: var(--text-medium);
+            font-family: monospace;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: var(--cream);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 3px solid var(--gold);
+        }
+
+        .stat-card .number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .stat-card .label {
+            font-size: 13px;
+            color: var(--text-medium);
+            margin-top: 4px;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        @media print {
+            .document { padding: 20px; }
+            .section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="document">
+        <div class="doc-header">
+            <div class="label">Redstitch Digital</div>
+            <h1>Diocese of Evansville</h1>
+            <div class="subtitle">Website Consolidation &amp; Redesign &mdash; Research Document</div>
+            <div class="meta">Prepared: March 2026 | Version 1.0 | INTERNAL USE ONLY</div>
+        </div>
+
+        <nav class="toc">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li><a href="#org">Organization Overview</a></li>
+                <li><a href="#audience">Audience Analysis</a></li>
+                <li><a href="#current-evdio">Current Site Audit: evdio.org</a></li>
+                <li><a href="#current-message">Current Site Audit: evdiomessage.org</a></li>
+                <li><a href="#archive">Archive Site: evdiomessage-archive.org</a></li>
+                <li><a href="#problems">Problems Identified in Discovery</a></li>
+                <li><a href="#competitive">Competitive &amp; Reference Analysis</a></li>
+                <li><a href="#brand">Brand &amp; Visual Identity</a></li>
+                <li><a href="#tech">Technical Landscape</a></li>
+                <li><a href="#content">Content Strategy Findings</a></li>
+                <li><a href="#features">Confirmed Feature Requirements</a></li>
+                <li><a href="#scope">Scope Boundaries</a></li>
+                <li><a href="#open">Open Items &amp; Outstanding Questions</a></li>
+            </ol>
+        </nav>
+
+        <!-- SECTION 1: Organization Overview -->
+        <div class="section" id="org">
+            <h2>1. Organization Overview</h2>
+
+            <table>
+                <thead>
+                    <tr><th>Attribute</th><th>Detail</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Full Name</strong></td><td>Roman Catholic Diocese of Evansville</td></tr>
+                    <tr><td><strong>Address</strong></td><td>4200 N Kentucky Ave, Evansville, IN 47711</td></tr>
+                    <tr><td><strong>Bishop</strong></td><td>Bishop Joseph M. Siegel</td></tr>
+                    <tr><td><strong>Pastoral Vision</strong></td><td>Encounter. Deepen. Engage.</td></tr>
+                    <tr><td><strong>Geography</strong></td><td>Southwestern Indiana &mdash; 12 counties</td></tr>
+                    <tr><td><strong>Deaneries</strong></td><td>4 &mdash; North, South, East, West</td></tr>
+                    <tr><td><strong>Tagline</strong></td><td>The Catholic Church in Southwestern Indiana</td></tr>
+                </tbody>
+            </table>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="number">79,500</div>
+                    <div class="label">Catholics Served</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">45</div>
+                    <div class="label">Parishes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">26</div>
+                    <div class="label">Schools</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">28,000</div>
+                    <div class="label">Households</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">2,400</div>
+                    <div class="label">Families via Catholic Charities</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">850</div>
+                    <div class="label">Scholarships Awarded Annually</div>
+                </div>
+            </div>
+
+            <h3>Key Stakeholders</h3>
+            <table>
+                <thead>
+                    <tr><th>Name / Role</th><th>Relevance to Project</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Dean Happe</strong> &mdash; Chancellor &amp; COO</td><td>Primary decision-maker. Focused on storytelling, transparency, and meeting people where they are. Stresses monthly dashboard reporting and the importance of telling impact stories.</td></tr>
+                    <tr><td><strong>Megan Erbacher</strong> &mdash; Director of Communications &amp; Editor, The Message</td><td>Closest to an overall website owner today. Oversees The Message publication. Active content publisher. Will continue publishing to the new site.</td></tr>
+                    <tr><td><strong>John Rohlf</strong> &mdash; Assoc. Director of Communications &amp; Asst. Editor, The Message</td><td>Works alongside Megan. Manages the Vocations Yearbook in Adobe. Only team member with Adobe access.</td></tr>
+                    <tr><td><strong>Ryan Hurless</strong> &mdash; IT Manager</td><td>Focused on mobile responsiveness, security, and site speed. Key technical stakeholder.</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Affiliated Entities (Out of Scope, Link Only)</h3>
+            <ul>
+                <li>Catholic Charities of the Diocese of Evansville</li>
+                <li>26 individual Catholic school websites</li>
+                <li>Indiana Catholic Conference</li>
+                <li>USCCB (United States Conference of Catholic Bishops)</li>
+                <li>MyDio &mdash; Google Sites internal staff portal</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 2: Audience Analysis -->
+        <div class="section" id="audience">
+            <h2>2. Audience Analysis</h2>
+
+            <p>The Diocese serves a broad and diverse audience. The website must balance institutional requirements with user-friendly access for people at vastly different stages of their faith journey and familiarity with the Catholic Church.</p>
+
+            <h3>Primary Audience Segments</h3>
+            <table>
+                <thead>
+                    <tr><th>Segment</th><th>Needs</th><th>Current Pain Points</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Active Parishioners</strong><br>(28,000 households)</td>
+                        <td>Mass times, parish news, events, giving, The Message articles, sacrament information</td>
+                        <td>Content buried in department-organized navigation; hard to find relevant info quickly</td>
+                    </tr>
+                    <tr>
+                        <td><strong>"Catholic Curious"</strong><br>Seekers &amp; returners</td>
+                        <td>Understanding what the Catholic Church offers, finding a parish, OCIA/OCIA information, welcoming entry point</td>
+                        <td>No clear starting point for newcomers; site assumes familiarity with church structure</td>
+                    </tr>
+                    <tr>
+                        <td><strong>New Residents</strong><br>Families moving to SW Indiana</td>
+                        <td>Find a parish near them, Catholic school options, community connections</td>
+                        <td>Parish finder exists but is not intuitive; school information scattered</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Parish &amp; Diocesan Staff</strong></td>
+                        <td>Forms, policies, internal documents, Safe Environment resources, employment listings</td>
+                        <td>Documents scattered; no clear resource hub; 16 department pages with inconsistent upkeep</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Donors &amp; Supporters</strong></td>
+                        <td>Impact stories, giving opportunities, transparency reports, Catholic Ministries Appeal</td>
+                        <td>No storytelling around impact; giving has no context; donate button links off-site with no narrative</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Media &amp; General Public</strong></td>
+                        <td>News, press contacts, official statements, Safe Environment information</td>
+                        <td>Required content (e.g., allegation disclosures) present but hard to find; no site search</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="callout gold">
+                <p><strong>Dean Happe's guiding principle:</strong> "We need to be ambassadors of one another &mdash; staff and parishes supporting each other. We need to tell our story and meet people where they are."</p>
+            </div>
+        </div>
+
+        <!-- SECTION 3: Current Site Audit - evdio.org -->
+        <div class="section" id="current-evdio">
+            <h2>3. Current Site Audit: evdio.org</h2>
+
+            <h3>Platform &amp; Technical Details</h3>
+            <table>
+                <thead>
+                    <tr><th>Attribute</th><th>Detail</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>CMS</strong></td><td>Weebly</td></tr>
+                    <tr><td><strong>Total Pages</strong></td><td>177 (per XML sitemap, last modified 2026-03-13)</td></tr>
+                    <tr><td><strong>Analytics</strong></td><td>Google Analytics (dual tracking) + Snowplow</td></tr>
+                    <tr><td><strong>Responsive</strong></td><td>Basic (breakpoint at 767px)</td></tr>
+                    <tr><td><strong>Search</strong></td><td>None</td></tr>
+                    <tr><td><strong>Hosting</strong></td><td>Weebly-managed</td></tr>
+                    <tr><td><strong>SSL</strong></td><td>Active</td></tr>
+                    <tr><td><strong>URL Pattern</strong></td><td>.html extensions (Weebly standard)</td></tr>
+                </tbody>
+            </table>
+
+            <div class="callout">
+                <p><strong>Content Inventory Note:</strong> Full audit identified 177 pages in the XML sitemap, including approximately 15-20 test or legacy pages. Key content-heavy sections include Marriage, Family &amp; Life (15+ sub-ministries), Youth &amp; Young Adult (12 programs), Hispanic Ministry (7 bilingual sub-pages), Worship (10 sub-pages), and Catholic Schools (11 sub-pages). The new consolidated site will contain approximately 160+ English pages (320+ with Spanish translation), including 45 individual parish detail pages.</p>
+            </div>
+
+            <h3>Navigation Structure (Current)</h3>
+            <p>The current site has an extensive navigation with 16+ top-level items organized around internal department structure:</p>
+            <ul>
+                <li><strong>Home</strong></li>
+                <li><strong>Departments</strong> &mdash; 16 sub-departments including Bishop's Office, Catechesis, Catholic Charities, Communications, Finance, Marriage Family &amp; Life (14 sub-items), Hispanic Ministry (7 sub-items), Worship (10 sub-items), Youth &amp; Young Adult (12 sub-items)</li>
+                <li><strong>Directories</strong></li>
+                <li><strong>Safe Environment</strong></li>
+                <li><strong>Employment Opportunities</strong></li>
+                <li><strong>Links &amp; Resources</strong></li>
+                <li><strong>About Us</strong> &mdash; Previous Bishops, History, Old Cathedral Library &amp; Museum</li>
+                <li><strong>Contact Us</strong></li>
+                <li><strong>Media</strong> &mdash; News, Media Inquiries</li>
+                <li><strong>Mass Times Map</strong></li>
+                <li><strong>Parishes Map</strong></li>
+                <li><strong>Schools Map</strong></li>
+                <li><strong>Catholic Schools</strong> &mdash; 11 sub-items</li>
+                <li><strong>3-D Communications</strong></li>
+                <li><strong>DONATE NOW</strong> &mdash; External link to OSVHub</li>
+                <li><strong>Pastoral Priorities 2025-2030</strong></li>
+                <li><strong>MyDio</strong> &mdash; Internal staff portal (Google Sites)</li>
+            </ul>
+
+            <h3>Homepage Content</h3>
+            <ul>
+                <li>Monthly Diocesan Dashboard (PDF link) &mdash; Transparency reports</li>
+                <li>Digital mission statement</li>
+                <li>Video tour embed (MP4)</li>
+                <li>Catholic Ministries Appeal 2025 banner</li>
+                <li>Electronic Mass and Prayer Opportunities PDF</li>
+                <li>Theological statement about the Diocese</li>
+                <li>Organizational affiliation information</li>
+            </ul>
+
+            <h3>Content Management Model</h3>
+            <p>16 department heads each have login credentials and are theoretically responsible for their own landing pages. In practice, only a handful make updates regularly. Marriage &amp; Family Life (managed by Megan K) is one of the few actively maintained department sections, with regularly published materials and event registration forms.</p>
+
+            <div class="callout warning">
+                <p><strong>Key Issue:</strong> There is no single website quality owner. Megan Erbacher's office is the closest thing to an owner, but her primary responsibility is The Message publication.</p>
+            </div>
+        </div>
+
+        <!-- SECTION 4: Current Site Audit - evdiomessage.org -->
+        <div class="section" id="current-message">
+            <h2>4. Current Site Audit: evdiomessage.org</h2>
+
+            <h3>Platform &amp; Technical Details</h3>
+            <table>
+                <thead>
+                    <tr><th>Attribute</th><th>Detail</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>CMS</strong></td><td>WordPress</td></tr>
+                    <tr><td><strong>Content Type</strong></td><td>Weekly news articles, columns, event coverage</td></tr>
+                    <tr><td><strong>Publishers</strong></td><td>Megan Erbacher &amp; John Rohlf</td></tr>
+                    <tr><td><strong>Frequency</strong></td><td>Weekly (51 issues/year)</td></tr>
+                    <tr><td><strong>Search</strong></td><td>Built-in WordPress search</td></tr>
+                </tbody>
+            </table>
+
+            <h3>About The Message</h3>
+            <p>The Message is the official weekly newspaper of the Diocese of Evansville, serving Southwestern Indiana as its Catholic community newspaper since 1970. It is published 51 weeks per year by the Catholic Press of Evansville (one week off at Christmas). Print subscriptions: $24/year. Digital subscriptions: $12/year.</p>
+
+            <h3>Navigation Structure</h3>
+            <ul>
+                <li>Home</li>
+                <li>News</li>
+                <li>Events</li>
+                <li>Columns</li>
+                <li>Contact</li>
+                <li>Links</li>
+                <li>Subscribe</li>
+                <li>About Us</li>
+                <li>Movie Reviews</li>
+            </ul>
+
+            <h3>Content Features</h3>
+            <ul>
+                <li><strong>News</strong> &mdash; Local/Regional diocesan news and National/World Catholic news (Catholic News Service)</li>
+                <li><strong>Special Features</strong> &mdash; Longer-form content, decrees, special reports, seasonal guides (e.g., Lenten Fish Fries)</li>
+                <li><strong>15+ Regular Columns</strong> &mdash; The Bishop's Corner, Journey of Faith, Sunday Scriptures, Connecting Faith and Life, Perspective from the Pew, Grace Notes, Praying Through, The Christian Journey, OYAYA!, My Two Cents, Gratitude for the Gift of Faith, Musings, Sharing the Load, Young Adults, Youth First</li>
+                <li><strong>Movie Reviews</strong> &mdash; Extensive library of Catholic-perspective film reviews (hundreds of reviews)</li>
+                <li><strong>Bulletin Board</strong> &mdash; Event roundups and popular community listings</li>
+                <li><strong>Archives</strong> &mdash; Browsable by date and by location</li>
+                <li><strong>Social Integration</strong> &mdash; RSS, Facebook (@TheCatholicMessage), Twitter (@messageonline), YouTube (EvansvilleMessage)</li>
+                <li><strong>Article IDs</strong> &mdash; Numbering into the 21,000s, indicating a large content archive</li>
+            </ul>
+
+            <h3>Staff</h3>
+            <ul>
+                <li>Contact: message@evdio.org / tlilley@evdio.org (Tim Lilley)</li>
+                <li>Copyright: 2016-2020 The Message</li>
+                <li>Subscription payments via Acceptiva platform</li>
+            </ul>
+
+            <div class="callout">
+                <p><strong>Consolidation Note:</strong> The Message team (Megan &amp; John) were very open about not using WordPress going forward. They will continue publishing articles and media to the new consolidated site. Social sharing of articles is a priority for the team.</p>
+            </div>
+        </div>
+
+        <!-- SECTION 5: Archive Site -->
+        <div class="section" id="archive">
+            <h2>5. Archive Site: evdiomessage-archive.org</h2>
+
+            <table>
+                <thead>
+                    <tr><th>Attribute</th><th>Detail</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>URL</strong></td><td>evdiomessage-archive.org</td></tr>
+                    <tr><td><strong>Status</strong></td><td>SSL certificate expired; site effectively inaccessible</td></tr>
+                    <tr><td><strong>Content</strong></td><td>Pre-2019 Message articles</td></tr>
+                    <tr><td><strong>Search</strong></td><td>Broken / non-functional</td></tr>
+                    <tr><td><strong>Scope Decision</strong></td><td>OUT OF SCOPE for this project</td></tr>
+                </tbody>
+            </table>
+
+            <p>Dean Happe discovered this site during the project. It contains older Message articles with browsing by date and location. The search functionality does not work. There is an outstanding question for the Diocese about whether this content needs to be maintained going forward.</p>
+
+            <div class="callout warning">
+                <p><strong>Decision Needed (Diocese):</strong> Does the pre-2019 archive content need to be preserved? If so, a separate migration or archival strategy would need to be scoped as a future project.</p>
+            </div>
+        </div>
+
+        <!-- SECTION 6: Problems Identified -->
+        <div class="section" id="problems">
+            <h2>6. Problems Identified in Discovery</h2>
+
+            <p>During the introductory meeting on February 9, 2026, the following critical issues were identified through a collaborative walkthrough of both current websites:</p>
+
+            <h3>Navigation &amp; Structure</h3>
+            <ul>
+                <li><strong>Department-centric organization:</strong> The site is organized around the Diocese's internal structure. Visitors don't think in terms of departments; they think about what they need.</li>
+                <li><strong>Overwhelming menus:</strong> Too many items in the navigation. A newcomer looking to get married in the Church, or a family that just moved to Evansville, has no clear starting point.</li>
+            </ul>
+
+            <h3>Storytelling &amp; Impact</h3>
+            <ul>
+                <li><strong>Invisible impact:</strong> The Diocese is doing excellent ministry work and creating compelling video content, but this impact is not visible on the website.</li>
+                <li><strong>Giving without context:</strong> The donate button links off-site with no stories of impact, no reason for a visitor to believe their gift will matter.</li>
+            </ul>
+
+            <h3>Content Fragmentation</h3>
+            <ul>
+                <li><strong>Two separate websites:</strong> The Message (the Diocese's own journalism) lives on a completely separate site. This content should be working much harder for the main web presence.</li>
+                <li><strong>Inconsistent maintenance:</strong> Of 16 department heads with page management access, only a handful update their content regularly.</li>
+                <li><strong>No single owner:</strong> There is no designated website quality owner for the overall experience.</li>
+            </ul>
+
+            <h3>Technical Gaps</h3>
+            <ul>
+                <li><strong>No site search:</strong> Required content (Safe Environment disclosures, allegation information) must be on the site but has no way to be surfaced without prominent placement.</li>
+                <li><strong>Image optimization issues:</strong> Very large image files; team has been manually optimizing before upload.</li>
+                <li><strong>Limited mobile experience:</strong> Basic responsive design with a single breakpoint.</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 7: Competitive Analysis -->
+        <div class="section" id="competitive">
+            <h2>7. Competitive &amp; Reference Analysis</h2>
+
+            <h3>Primary Reference: Archdiocese of Denver (archden.org)</h3>
+            <p>Identified by the Diocese and Redstitch as the design benchmark during discovery.</p>
+
+            <table>
+                <thead>
+                    <tr><th>Feature</th><th>archden.org Approach</th><th>Application to Evansville</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hero Section</strong></td>
+                        <td>Full-width image slider with rotating content featuring Archbishop and institutional updates</td>
+                        <td>Diocese liked the live hero background. Bishop's face should be prominent (higher up than prototype had it)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Navigation</strong></td>
+                        <td>Clean horizontal menu: About, Resources, Schools, Contact, Giving. Quick-access icons for Parish Locator, Clergy Search, Schools</td>
+                        <td>Model for simplifying from 16+ items to 6-7 visitor-centric categories</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Call-to-Action Cards</strong></td>
+                        <td>Four icon-driven cards directing to parishes, clergy, schools, offices</td>
+                        <td>Strong pattern for making key actions immediately accessible</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Content Feed</strong></td>
+                        <td>Card-based grid of press releases and statements</td>
+                        <td>Perfect model for integrating The Message articles on the homepage</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spanish Content</strong></td>
+                        <td>Spanish-language content available</td>
+                        <td>Full-site Spanish translation is a confirmed feature</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Newsletter Signup</strong></td>
+                        <td>Prominent form for audience engagement</td>
+                        <td>Email strategy flagged as future enhancement; design should accommodate</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Key Takeaways from Prototype Walkthrough</h3>
+            <ul>
+                <li>Diocese liked the Bishop's face on the site but wanted it higher up on the page</li>
+                <li>Liked the live hero background from the Denver website</li>
+                <li>Need a dedicated place for the monthly dashboards to live</li>
+                <li>Site search must be prominent for surfacing required but non-featured content</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 8: Brand & Visual Identity -->
+        <div class="section" id="brand">
+            <h2>8. Brand &amp; Visual Identity</h2>
+
+            <p>The Diocese does not have a formal brand or style guide. The only established brand elements are the colors from the coat of arms displayed on the current website. The goal is to establish a consistent look and feel through this redesign.</p>
+
+            <h3>Current Site Colors (evdio.org)</h3>
+            <div class="color-swatch-row">
+                <div class="color-swatch">
+                    <div class="swatch" style="background: #24678D;"></div>
+                    <div class="label">Teal Blue</div>
+                    <div class="hex">#24678D</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch" style="background: #D5D5D5;"></div>
+                    <div class="label">Light Gray</div>
+                    <div class="hex">#D5D5D5</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch" style="background: #2A2A2A;"></div>
+                    <div class="label">Charcoal</div>
+                    <div class="hex">#2A2A2A</div>
+                </div>
+            </div>
+
+            <h3>Prototype Palette (New Design Direction)</h3>
+            <div class="color-swatch-row">
+                <div class="color-swatch">
+                    <div class="swatch" style="background: #1B2A4A;"></div>
+                    <div class="label">Navy</div>
+                    <div class="hex">#1B2A4A</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch" style="background: #24678D;"></div>
+                    <div class="label">Blue</div>
+                    <div class="hex">#24678D</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch" style="background: #F5F0E8;"></div>
+                    <div class="label">Cream / Warm White</div>
+                    <div class="hex">#F5F0E8</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch" style="background: #C5A55A;"></div>
+                    <div class="label">Gold</div>
+                    <div class="hex">#C5A55A</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch" style="background: #8B1A1A;"></div>
+                    <div class="label">Accent Red</div>
+                    <div class="hex">#8B1A1A</div>
+                </div>
+            </div>
+
+            <h3>Typography (Prototype)</h3>
+            <table>
+                <thead>
+                    <tr><th>Usage</th><th>Font</th><th>Notes</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Headings</strong></td><td>Cormorant Garamond</td><td>Serif; conveys tradition, authority, and elegance appropriate for a Catholic institution</td></tr>
+                    <tr><td><strong>Body</strong></td><td>Libre Franklin</td><td>Clean sans-serif; strong readability across devices and for a wide age range</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Brand Elements</h3>
+            <ul>
+                <li><strong>Coat of Arms:</strong> Established diocese crest, currently used on evdio.org header</li>
+                <li><strong>Bishop's Photo:</strong> Should be prominent; Diocese requested it higher on the homepage</li>
+                <li><strong>The Message Masthead:</strong> Established newspaper branding to be integrated, not replicated</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 9: Technical Landscape -->
+        <div class="section" id="tech">
+            <h2>9. Technical Landscape</h2>
+
+            <h3>Current Stack</h3>
+            <table>
+                <thead>
+                    <tr><th>Component</th><th>Current</th><th>New</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>evdio.org CMS</strong></td><td>Weebly</td><td>Headless CMS (Redstitch standard architecture)</td></tr>
+                    <tr><td><strong>evdiomessage.org CMS</strong></td><td>WordPress</td><td>Consolidated into new site</td></tr>
+                    <tr><td><strong>Hosting</strong></td><td>Weebly / WordPress hosted</td><td>Redstitch-managed hosting</td></tr>
+                    <tr><td><strong>Donations</strong></td><td>OSV (OSVHub)</td><td>OSV (link-off only, no custom build)</td></tr>
+                    <tr><td><strong>Event Registration</strong></td><td>Google Forms + OSV</td><td>OSV (link-off only)</td></tr>
+                    <tr><td><strong>Video</strong></td><td>MP4 embeds + YouTube</td><td>YouTube embeds only</td></tr>
+                    <tr><td><strong>Analytics</strong></td><td>Google Analytics + Snowplow</td><td>TBD (Redstitch standard)</td></tr>
+                    <tr><td><strong>Domain</strong></td><td>evdio.org (primary)</td><td>evdio.org (maintained)</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Third-Party Integrations</h3>
+            <ul>
+                <li><strong>OSV (Our Sunday Visitor):</strong> Event registration, fee collection, and online giving/donations. All links go to OSV; nothing is built inside Redstitch's stack.</li>
+                <li><strong>YouTube:</strong> Diocese manages their own YouTube channel. Videos are embedded via links; no video hosting or migration.</li>
+                <li><strong>Social Media:</strong> Facebook, X/Twitter, Instagram, YouTube &mdash; social sharing links prominent on site</li>
+                <li><strong>Flocknote:</strong> Mentioned as potential future email marketing platform. NOT in scope for this project.</li>
+            </ul>
+
+            <h3>Key Technical Decisions</h3>
+            <div class="callout">
+                <p><strong>Architecture:</strong> Headless CMS approach. Not WordPress. This addresses Ryan Hurless's concerns about security and speed while giving the content team a modern publishing experience.</p>
+            </div>
+        </div>
+
+        <!-- SECTION 10: Content Strategy -->
+        <div class="section" id="content">
+            <h2>10. Content Strategy Findings</h2>
+
+            <h3>Content Ownership Model</h3>
+            <ul>
+                <li><strong>Initial launch content:</strong> Redstitch researches and writes all website content</li>
+                <li><strong>Diocese role:</strong> Reviews and may provide direction or revisions; content production is not on the Diocese</li>
+                <li><strong>Photography:</strong> Provided by the Diocese</li>
+                <li><strong>Documents &amp; PDFs:</strong> Provided by the Diocese; all existing PDFs migrate to the new site</li>
+                <li><strong>The Message articles:</strong> Megan &amp; John continue publishing weekly via the new CMS post-launch</li>
+            </ul>
+
+            <h3>Content Categories for The Message</h3>
+            <ul>
+                <li>Diocesan News</li>
+                <li>Local News</li>
+                <li>Faith &amp; Spirituality</li>
+                <li>Opinion &amp; Columns</li>
+                <li>Archives</li>
+                <li>Subscribe</li>
+            </ul>
+
+            <h3>Mandatory Content (Non-Negotiable)</h3>
+            <ul>
+                <li>Safe Environment policies and disclosures</li>
+                <li>Allegation information / credible allegations list</li>
+                <li>Employment listings (school and diocesan)</li>
+                <li>Parish directory and Mass times</li>
+                <li>Monthly transparency dashboards</li>
+                <li>Bishop's messages and official statements</li>
+            </ul>
+
+            <h3>Spanish Language</h3>
+            <p>Full-site Spanish translation is confirmed. Outstanding question: Is there Spanish-language content being created today beyond the Hispanic Ministry section? Do we need full translation of key pages, or a targeted approach? Currently the Hispanic Ministry section on evdio.org has 7 sub-pages.</p>
+        </div>
+
+        <!-- SECTION 11: Features -->
+        <div class="section" id="features">
+            <h2>11. Confirmed Feature Requirements</h2>
+
+            <table>
+                <thead>
+                    <tr><th>Feature</th><th>Description</th><th>Notes</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Parish Finder</strong></td>
+                        <td>Map-based tool; search by city, zip, or parish name; shows Mass times and contact info</td>
+                        <td>More involved build. Parish data provided by Diocese. Seasonal Mass time updates managed by Redstitch under support agreement. Organized by 4 deaneries.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Events &amp; Calendar</strong></td>
+                        <td>Event listings on site; registration and payment link off to OSV</td>
+                        <td>No custom registration or payment built. Sub-items TBD.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Article Publishing</strong></td>
+                        <td>Streamlined CMS process for The Message team</td>
+                        <td>Built and documented before launch. Message team trains and manages independently post-launch.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spanish Translation</strong></td>
+                        <td>Full-site Spanish-language version</td>
+                        <td>Approach (full vs. targeted) to be finalized.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PDF Migration</strong></td>
+                        <td>All existing PDFs from both sites migrate to new site</td>
+                        <td>Significant volume of documents across departments.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Site Search</strong></td>
+                        <td>Full-site search; available in utility nav and mobile header</td>
+                        <td>Dean's specific request. Key for surfacing required content without prominent placement.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Social Sharing</strong></td>
+                        <td>Article sharing functionality; social channel links prominent on site</td>
+                        <td>Important to The Message team.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Giving</strong></td>
+                        <td>Persistent "Give" button in header; links to OSV</td>
+                        <td>No custom giving platform. Impact storytelling around giving is a priority for Dean.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Video</strong></td>
+                        <td>YouTube embeds throughout the site</td>
+                        <td>Diocese manages their own channel. No video hosting or migration.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transparency Dashboard</strong></td>
+                        <td>Dedicated section for monthly results reports</td>
+                        <td>Currently published as PDF links; needs a proper home.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECTION 12: Scope -->
+        <div class="section" id="scope">
+            <h2>12. Scope Boundaries</h2>
+
+            <h3>In Scope</h3>
+            <ul>
+                <li>Consolidation of evdio.org + evdiomessage.org into a single site</li>
+                <li>All features listed in Section 11</li>
+                <li>Content writing for initial launch (by Redstitch)</li>
+                <li>Hosting and ongoing technical support (by Redstitch)</li>
+                <li>MVP launch with access retained to old site for forms/documents during transition</li>
+            </ul>
+
+            <h3>Out of Scope</h3>
+            <table>
+                <thead>
+                    <tr><th>Item</th><th>Rationale</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>evdiomessage-archive.org (pre-2019 content)</td><td>Separate archival decision needed by Diocese</td></tr>
+                    <tr><td>Booking/reservation functionality</td><td>Sarto Retreat Center, meeting rooms &mdash; not in initial scope</td></tr>
+                    <tr><td>Third-party logins or gated access</td><td>No member portal; all content public</td></tr>
+                    <tr><td>Email marketing integration</td><td>Flocknote or similar &mdash; future enhancement</td></tr>
+                    <tr><td>Searchable digital staff/clergy directory</td><td>PDF link only for now</td></tr>
+                    <tr><td>MyDio portal (Google Sites)</td><td>Link-off only if needed</td></tr>
+                    <tr><td>School/Catholic Charities websites</td><td>Separate sites; new site links to them</td></tr>
+                    <tr><td>Any third-party integrations beyond OSV</td><td>Linking only</td></tr>
+                    <tr><td>Analytics dashboards/reporting</td><td>Standard Redstitch setup only</td></tr>
+                    <tr><td>Diocesan Yearbook</td><td>Redstitch links to existing PDF; does not create/manage</td></tr>
+                    <tr><td>Custom event registration/payment</td><td>All handled by OSV</td></tr>
+                    <tr><td>Login-gated content</td><td>All content is public</td></tr>
+                    <tr><td>Employment application systems</td><td>Listings only; no application processing</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECTION 13: Open Items -->
+        <div class="section" id="open">
+            <h2>13. Open Items &amp; Outstanding Questions</h2>
+
+            <h4>Needs Internal Resolution Before Build</h4>
+            <ul>
+                <li>Article publishing process &mdash; What does this look like technically in the headless CMS?</li>
+                <li>Parish data ownership &mdash; Who maintains parish data, Mass times, contact info, and staff listings? How often does it change?</li>
+                <li>Event registration flow &mdash; What happens after someone registers? Where does data go? Can all registrations flow through OSV?</li>
+                <li>Department content model &mdash; Will departments still manage their own pages? Or will content be centralized?</li>
+            </ul>
+
+            <h4>Content &amp; Legal Questions</h4>
+            <ul>
+                <li>What on the current site is legally or institutionally required?</li>
+                <li>What are the absolute non-negotiables?</li>
+                <li>What documents can be archived or removed?</li>
+                <li>Safe Environment &mdash; What specifically must be public vs. behind a login?</li>
+                <li>Message archive &mdash; What happens to pre-2019 content on evdiomessage-archive.org?</li>
+            </ul>
+
+            <h4>Features &amp; Functionality</h4>
+            <ul>
+                <li>Spanish translation &mdash; Full translation or targeted approach?</li>
+                <li>Sarto Retreat Center &amp; Meeting Rooms &mdash; Booking/reservation needed? (Currently out of scope)</li>
+                <li>Clergy/staff directories &mdash; Use case for digital directory beyond the Yearbook PDF?</li>
+                <li>Employment &mdash; Are school and diocesan listings managed separately? Is the application process digital?</li>
+                <li>Email marketing &mdash; Is there a newsletter platform to integrate with? Flocknote mentioned.</li>
+            </ul>
+
+            <h4>Technical &amp; Platform</h4>
+            <ul>
+                <li>Where do all videos live today &mdash; YouTube, Facebook, Vimeo?</li>
+                <li>What about MyDio (Google Sites portal) &mdash; What lives there and who uses it?</li>
+                <li>Does the website need to be a resource hub for parishes and staff &mdash; forms, policies, internal documents?</li>
+                <li>If so, is there an inventory of these documents and where they need to live?</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
