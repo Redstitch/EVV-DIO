@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diocese of Evansville — Information Architecture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1B2A4A;
+            --blue: #24678D;
+            --cream: #F5F0E8;
+            --gold: #C5A55A;
+            --accent-red: #8B1A1A;
+            --warm-white: #FDFBF7;
+            --text-dark: #2A2A2A;
+            --text-medium: #5A574F;
+            --text-light: #8A857B;
+            --border: #DDD7CC;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Libre Franklin', sans-serif;
+            background: var(--warm-white);
+            color: var(--text-dark);
+            padding: 48px 40px 80px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .header .label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 8px;
+        }
+
+        /* Primary Nav Bar */
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2px;
+            margin-bottom: 40px;
+        }
+
+        .nav-btn {
+            padding: 14px 22px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid var(--border);
+            background: #fff;
+            color: var(--text-dark);
+            transition: all 0.25s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: var(--navy);
+            color: #fff;
+            border-color: var(--navy);
+        }
+
+        .nav-btn.give {
+            background: var(--accent-red);
+            color: #fff;
+            border-color: var(--accent-red);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .nav-btn.give:hover { background: #A52222; border-color: #A52222; }
+
+        .nav-btn.search {
+            background: var(--cream);
+            border-color: var(--cream);
+            color: var(--text-medium);
+        }
+
+        .nav-btn.search:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+        /* Utility Nav */
+        .utility-bar {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .utility-bar span {
+            padding: 4px 10px;
+            background: var(--cream);
+            border-radius: 4px;
+        }
+
+        /* Section Panel */
+        .section-panel {
+            display: none;
+            max-width: 1100px;
+            margin: 0 auto;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .section-panel.visible { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 28px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .section-title-bar h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .section-title-bar .count {
+            font-size: 12px;
+            background: var(--navy);
+            color: #fff;
+            padding: 3px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        /* Columns */
+        .columns {
+            display: grid;
+            gap: 32px;
+        }
+
+        .columns.cols-2 { grid-template-columns: 1fr 1fr; }
+        .columns.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+        .columns.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+        .column {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .column-header {
+            padding: 12px 18px;
+            background: var(--cream);
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--gold);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .column-body {
+            padding: 12px 18px;
+        }
+
+        .page-link {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            padding: 7px 0;
+            border-bottom: 1px solid #f5f3ef;
+            font-size: 13px;
+            color: var(--text-dark);
+        }
+
+        .page-link:last-child { border-bottom: none; }
+
+        .page-link::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+            margin-top: 6px;
+        }
+
+        .page-link.featured {
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .page-link.sub {
+            padding-left: 16px;
+            font-size: 12px;
+            color: var(--text-medium);
+        }
+
+        .page-link.sub::before {
+            width: 3px;
+            height: 3px;
+            background: var(--border);
+        }
+
+        .page-link .tag {
+            margin-left: auto;
+            font-size: 9px;
+            padding: 1px 7px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .tag.new { background: #E8F5E9; color: #2D7A3A; }
+        .tag.interactive { background: #FFF3E0; color: #E65100; }
+        .tag.external { background: #F3E5F5; color: #6B2D5B; }
+
+        /* Highlight Card */
+        .highlight {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-top: 10px;
+        }
+
+        .highlight h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .highlight p {
+            font-size: 11px;
+            color: var(--text-medium);
+            line-height: 1.5;
+        }
+
+        /* Global Elements */
+        .global-bar {
+            max-width: 1100px;
+            margin: 48px auto 0;
+            padding-top: 32px;
+            border-top: 2px solid var(--border);
+        }
+
+        .global-bar h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: var(--navy);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .global-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+
+        .global-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 14px;
+            border-top: 3px solid var(--gold);
+        }
+
+        .global-card h4 {
+            font-size: 12px;
+            color: var(--navy);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .global-card p {
+            font-size: 10px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* All sections overview */
+        .overview-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .overview-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            border-left: 4px solid var(--gold);
+        }
+
+        .overview-card:hover {
+            box-shadow: 0 6px 24px rgba(27,42,74,0.1);
+            transform: translateY(-2px);
+        }
+
+        .overview-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            color: var(--navy);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .overview-card .page-count {
+            font-size: 12px;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .overview-card p {
+            font-size: 13px;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .back-link:hover { color: var(--navy); }
+        .back-link svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+
+        @media (max-width: 800px) {
+            .nav-bar { flex-wrap: wrap; justify-content: center; }
+            .columns { grid-template-columns: 1fr !important; }
+            .overview-grid { grid-template-columns: 1fr; }
+        }
+
+        @media print {
+            .nav-bar { display: none; }
+            .section-panel { display: block !important; page-break-inside: avoid; margin-bottom: 40px; }
+            .back-link { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="label">Diocese of Evansville</div>
+        <h1>Information Architecture</h1>
+        <p>Click any section to see the full page structure. This is the complete sitemap organized by navigation.</p>
+    </div>
+
+    <div class="utility-bar">
+        <span>MyDio Staff Portal</span>
+        <span>Careers</span>
+        <span>Contact Us</span>
+        <span>Safe Environment</span>
+        <span>EN / ES</span>
+    </div>
+
+    <div class="nav-bar" id="navBar">
+        <button class="nav-btn" onclick="showSection('overview')">All Sections</button>
+        <button class="nav-btn" onclick="showSection('about')">About</button>
+        <button class="nav-btn" onclick="showSection('parishes')">Parishes &amp; Mass</button>
+        <button class="nav-btn" onclick="showSection('faith')">Faith &amp; Sacraments</button>
+        <button class="nav-btn" onclick="showSection('schools')">Catholic Schools</button>
+        <button class="nav-btn" onclick="showSection('ministries')">Ministries</button>
+        <button class="nav-btn" onclick="showSection('events')">Events</button>
+        <button class="nav-btn" onclick="showSection('message')">The Message</button>
+        <button class="nav-btn give">Give</button>
+        <button class="nav-btn search">Search</button>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div class="section-panel visible" id="panel-overview">
+        <div class="overview-grid">
+            <div class="overview-card" onclick="showSection('about')">
+                <h3>About</h3>
+                <div class="page-count">~18 pages</div>
+                <p>Our Bishop, Diocesan Leadership, Offices & Departments, Directories, History, Our Vision, Monthly Dashboard, Safe Environment, Report Abuse, Contact, Press Room, Careers</p>
+            </div>
+            <div class="overview-card" onclick="showSection('parishes')">
+                <h3>Parishes &amp; Mass</h3>
+                <div class="page-count">~52 pages</div>
+                <p>Interactive Parish Finder, Mass Times, 4 Deanery pages, 45 individual parish detail pages with Mass schedules, staff, and contact info</p>
+            </div>
+            <div class="overview-card" onclick="showSection('faith')">
+                <h3>Faith &amp; Sacraments</h3>
+                <div class="page-count">~18 pages</div>
+                <p>How to Become Catholic, Baptism, Communion, Confirmation, Catholic Marriage, Anointing of the Sick, Vocations, Becoming a Deacon, Prayer & Worship Resources</p>
+            </div>
+            <div class="overview-card" onclick="showSection('schools')">
+                <h3>Catholic Schools</h3>
+                <div class="page-count">~10 pages</div>
+                <p>Schools Overview, Find a School, Schools Map, Enrollment, Tuition Assistance, Special Needs Programs, Accreditation, Teaching Careers</p>
+            </div>
+            <div class="overview-card" onclick="showSection('ministries')">
+                <h3>Ministries</h3>
+                <div class="page-count">~35 pages</div>
+                <p>Marriage & Family, Respect for Life, Youth & Young Adults, Campus Ministry, Religious Education, Hispanic Ministry, Prison Ministry, Social Justice, Donate, Catholic Ministries Appeal</p>
+            </div>
+            <div class="overview-card" onclick="showSection('events')">
+                <h3>Events</h3>
+                <div class="page-count">~4 pages + dynamic</div>
+                <p>Events Calendar with filtering, Event Detail pages, Watch Mass Online, Retreats, Meeting Rooms & Spaces</p>
+            </div>
+            <div class="overview-card" onclick="showSection('message')">
+                <h3>The Message</h3>
+                <div class="page-count">~12 pages + articles</div>
+                <p>Diocesan News, Local & Regional, National & World, Faith & Spirituality, Opinion & Columns, Movie Reviews, Archives, Subscribe</p>
+            </div>
+            <div class="overview-card" onclick="showSection('give')">
+                <h3>Give</h3>
+                <div class="page-count">~4 pages</div>
+                <p>Why Give?, Give Online (OSV), Annual Catholic Ministries Appeal, Planned & Legacy Giving, Give Stock</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="section-panel" id="panel-about">
+        <a class="back-link" onclick="showSection('overview')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> All Sections</a>
+        <div class="section-title-bar">
+            <h2>About</h2>
+            <span class="count">~18 pages</span>
+        </div>
+        <div class="columns cols-3">
+            <div class="column">
+                <div class="column-header">Our Diocese</div>
+                <div class="column-body">
+                    <div class="page-link featured">Our Bishop</div>
+                    <div class="page-link sub">Biography, coat of arms, motto</div>
+                    <div class="page-link sub">Messages &amp; statements</div>
+                    <div class="page-link">Diocesan Leadership</div>
+                    <div class="page-link">Our History</div>
+                    <div class="page-link sub">Past Bishops</div>
+                    <div class="page-link sub">Cathedral Library &amp; Museum</div>
+                    <div class="page-link">Our Vision &amp; Priorities</div>
+                    <div class="page-link">Monthly Dashboard</div>
+                    <div class="page-link sub">Monthly reports archive</div>
+                    <div class="page-link">Official Statements &amp; Decrees</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-header">Offices &amp; Resources</div>
+                <div class="column-body">
+                    <div class="page-link">Offices &amp; Departments</div>
+                    <div class="page-link sub">Finance &amp; Administration</div>
+                    <div class="page-link sub">Marriage &amp; Annulment Tribunal</div>
+                    <div class="page-link sub">Communications Office</div>
+                    <div class="page-link sub">Facilities &amp; Meeting Spaces</div>
+                    <div class="page-link">Staff Directory</div>
+                    <div class="page-link">Clergy Directory</div>
+                    <div class="page-link">Parish Directory</div>
+                    <div class="page-link">Catholic Resources &amp; Links</div>
+                    <div class="page-link">Careers <span class="tag new">New</span></div>
+                    <div class="page-link">Contact Us</div>
+                    <div class="page-link">Press Room</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-header">Safety</div>
+                <div class="column-body">
+                    <div class="page-link featured">Safe Environment</div>
+                    <div class="page-link sub">How to report abuse</div>
+                    <div class="page-link sub">Required training</div>
+                    <div class="page-link sub">Background checks</div>
+                    <div class="page-link sub">Safety curriculum</div>
+                    <div class="page-link sub">Review Board</div>
+                    <div class="page-link sub">Credible allegations list</div>
+                    <div class="page-link sub">Policies &amp; charter docs</div>
+                    <div class="page-link featured">Report Abuse <span class="tag new">New</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PARISHES -->
+    <div class="section-panel" id="panel-parishes">
+        <a class="back-link" onclick="showSection('overview')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> All Sections</a>
+        <div class="section-title-bar">
+            <h2>Parishes &amp; Mass</h2>
+            <span class="count">~52 pages</span>
+        </div>
+        <div class="columns cols-2">
+            <div class="column">
+                <div class="column-header">Find a Parish</div>
+                <div class="column-body">
+                    <div class="page-link featured">Parish Finder Map <span class="tag interactive">Interactive</span></div>
+                    <div class="page-link sub">Search by city, zip, or name</div>
+                    <div class="page-link sub">Filter by deanery</div>
+                    <div class="page-link sub">Mass times display</div>
+                    <div class="page-link sub">Contact info &amp; directions</div>
+                    <div class="page-link">Mass Times</div>
+                    <div class="page-link">Watch Mass Online <span class="tag new">New</span></div>
+                    <div class="page-link">Parish Directory</div>
+                    <div class="highlight">
+                        <h4>New to the area?</h4>
+                        <p>Welcome to Southwestern Indiana. Find a Catholic community near you.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-header">Browse by Deanery</div>
+                <div class="column-body">
+                    <div class="page-link">North Deanery <span class="tag new">New</span></div>
+                    <div class="page-link">South Deanery <span class="tag new">New</span></div>
+                    <div class="page-link">East Deanery <span class="tag new">New</span></div>
+                    <div class="page-link">West Deanery <span class="tag new">New</span></div>
+                    <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid #eee;">
+                        <div class="page-link featured">45 Individual Parish Pages <span class="tag new">New</span></div>
+                        <div class="page-link sub">Mass schedule (weekday + weekend)</div>
+                        <div class="page-link sub">Address, phone, email</div>
+                        <div class="page-link sub">Pastor &amp; staff listing</div>
+                        <div class="page-link sub">Directions / map</div>
+                        <div class="page-link sub">Link to parish website</div>
+                        <div class="page-link sub">Sacrament schedules</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAITH -->
+    <div class="section-panel" id="panel-faith">
+        <a class="back-link" onclick="showSection('overview')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> All Sections</a>
+        <div class="section-title-bar">
+            <h2>Faith &amp; Sacraments</h2>
+            <span class="count">~18 pages</span>
+        </div>
+        <div class="columns cols-3">
+            <div class="column">
+                <div class="column-header">Encounter</div>
+                <div class="column-body">
+                    <div class="page-link featured">How to Become Catholic <span class="tag new">New</span></div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-header">Deepen</div>
+                <div class="column-body">
+                    <div class="page-link">Baptism</div>
+                    <div class="page-link">First Communion</div>
+                    <div class="page-link">Confirmation</div>
+                    <div class="page-link sub">Confirmation Preparation</div>
+                    <div class="page-link">Catholic Marriage</div>
+                    <div class="page-link sub">Marriage Preparation</div>
+                    <div class="page-link sub">Pre-Marriage Retreat (UNVEILED)</div>
+                    <div class="page-link sub">Natural Family Planning</div>
+                    <div class="page-link sub">Annulments</div>
+                    <div class="page-link">Anointing of the Sick</div>
+                    <div class="page-link">Vocations</div>
+                    <div class="page-link sub">Priesthood</div>
+                    <div class="page-link sub">Religious Life</div>
+                    <div class="page-link sub">Deacon Formation</div>
+                    <div class="page-link">Becoming a Deacon</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-header">Engage</div>
+                <div class="column-body">
+                    <div class="page-link">Prayer &amp; Worship Resources</div>
+                    <div class="page-link sub">Policies &amp; Guidelines</div>
+                    <div class="page-link sub">Worship Newsletter</div>
+                    <div class="page-link">Church Calendar</div>
+                    <div class="page-link">Music Resources for Parishes</div>
+                    <div class="page-link">Year of Jubilee 2025</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCHOOLS -->
+    <div class="section-panel" id="panel-schools">
+        <a class="back-link" onclick="showSection('overview')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> All Sections</a>
+        <div class="section-title-bar">
+            <h2>Catholic Schools</h2>
+            <span class="count">~10 pages</span>
+        </div>
+        <div class="columns cols-2">
+            <div class="column">
+                <div class="column-header">Our Schools</div>
+                <div class="column-body">
+                    <div class="page-link featured">Catholic Schools Overview</div>
+                    <div class="page-link sub">Mission &amp; Vision</div>
+                    <div class="page-link">Find a School / School Listings</div>
+                    <div class="page-link sub">22 elementary schools</div>
+                    <div class="page-link sub">4 high schools</div>
+                    <div class="page-link">Schools Map</div>
+                    <div class="page-link featured">Enroll Your Child <span class="tag external">External</span></div>
+                    <div class="highlight">
+                        <h4>26 Schools</h4>
+                        <p>Faith-based education across all 12 counties of Southwestern Indiana.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-header">For Families &amp; Staff</div>
+                <div class="column-body">
+                    <div class="page-link">Tuition Assistance &amp; Affordability</div>
+                    <div class="page-link">Programs for Children with Special Needs</div>
+                    <div class="page-link">Accreditation &amp; Standards</div>
+                    <div class="page-link">Student Health &amp; Wellness</div>
+                    <div class="page-link">Teaching &amp; Staff Careers</div>
+                    <div class="page-link sub">Resources for School Staff</div>
+                    <div class="page-link sub">Administrative Handbook</div>
+                    <div class="page-link sub">School Advisory Councils</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MINISTRIES -->
+    <div class="section-panel" id="panel-ministries">
+        <a class="back-link" onclick="showSection('overview')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> All Sections</a>
+        <div class="section-title-bar">
+            <h2>Ministries</h2>
+            <span class="count">~35 pages</span>
+        </div>
+        <div class="columns cols-4">
+            <div class="column">
+                <div class="column-header">Family &amp; Life</div>
+                <div class="column-body">
+                    <div class="page-link featured">Marriage &amp; Family Life</div>
+                    <div class="page-link sub">Help with Infertility</div>
+                    <div class="page-link sub">Miscarriage &amp; Loss Support</div>
+                    <div class="page-link sub">Marriage Enrichment</div>
+                    <div class="page-link sub">Grief Support for Parents</div>
+                    <div class="page-link sub">Foster Care &amp; Adoption</div>
+                    <div class="page-link sub">LGBTQ+ Support (Courage)</div>
+                    <div class="page-link featured">Respect for Life</div>
+                    <div class="page-link sub">March for Life</div>
+                    <div class="page-link sub">Capital Punishment</div>
+                    <div class="page-link sub">Healthcare &amp; Ethics</div>
+                    <div class="page-link sub">Caring for Creation</div>
+                    <div class="page-link sub">Faith &amp; Civic Responsibility</div>
+                    <div class="page-link">Healing After Abortion</div>
+                    <div class="page-link">Support for Expectant Mothers</div>
+                    <div class="page-link">Men's Ministry</div>
+                    <div class="page-link">Senior Ministry</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-header">Youth &amp; Education</div>
+                <div class="column-body">
+                    <div class="page-link featured">Youth &amp; Young Adults</div>
+                    <div class="page-link sub">Young Adult Community</div>
+                    <div class="page-link sub">Diocesan Youth Conference</div>
+                    <div class="page-link sub">National Catholic Youth Conf.</div>
+                    <div class="page-link sub">Confirmation Spectacular</div>
+                    <div class="page-link sub">World Youth Day</div>
+                    <div class="page-link sub">Pro-Life Pilgrimage</div>
+                    <div class="page-link sub">Teens Encounter Christ</div>
+                    <div class="page-link sub">Source + Summit Retreat</div>
+                    <div class="page-link sub">Catholic Scouting</div>
+                    <div class="page-link sub">St. Maria Goretti Award</div>
+                    <div class="page-link featured">College Campus Ministry <span class="tag new">New</span></div>
+                    <div class="page-link sub">Univ. of Evansville</div>
+                    <div class="page-link sub">Univ. of Southern Indiana</div>
+                    <div class="page-link sub">Vanderburgh University</div>
+                    <div class="page-link featured">Religious Education</div>
+                    <div class="page-link sub">Parish Education Leaders</div>
+                    <div class="page-link sub">Teacher Formation Day</div>
+                    <div class="page-link sub">Religion Curriculum</div>
+                    <div class="page-link sub">Faith Formation Resources</div>
+                    <div class="page-link">Special Needs Religious Ed</div>
+                    <div class="page-link">Scholarships &amp; Financial Aid</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-header">Community &amp; Outreach</div>
+                <div class="column-body">
+                    <div class="page-link featured">Ministerio Hispano</div>
+                    <div class="page-link sub">Nuestro Equipo</div>
+                    <div class="page-link sub">Ministerios en Espa&ntilde;ol</div>
+                    <div class="page-link sub">Protecci&oacute;n de Menores</div>
+                    <div class="page-link sub">Servicios</div>
+                    <div class="page-link sub">Nuestra Fe</div>
+                    <div class="page-link sub">Tradiciones Hispanas</div>
+                    <div class="page-link sub">Noticias y Eventos</div>
+                    <div class="page-link">Disability &amp; Inclusion</div>
+                    <div class="page-link">Prison &amp; Jail Ministry <span class="tag new">New</span></div>
+                    <div class="page-link">Social Justice</div>
+                    <div class="page-link">Mission &amp; Outreach</div>
+                    <div class="page-link">Catholic Charities <span class="tag external">External</span></div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-header">Giving &amp; Support</div>
+                <div class="column-body">
+                    <div class="page-link featured">Donate</div>
+                    <div class="page-link">Catholic Ministries Appeal</div>
+                    <div class="page-link sub">Donor Recognition</div>
+                    <div class="page-link">Planned &amp; Legacy Giving</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EVENTS -->
+    <div class="section-panel" id="panel-events">
+        <a class="back-link" onclick="showSection('overview')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> All Sections</a>
+        <div class="section-title-bar">
+            <h2>Events</h2>
+            <span class="count">~4 pages + dynamic</span>
+        </div>
+        <div class="columns cols-2">
+            <div class="column">
+                <div class="column-header">Events</div>
+                <div class="column-body">
+                    <div class="page-link featured">Events Calendar <span class="tag new">New</span></div>
+                    <div class="page-link sub">Filter by ministry / department</div>
+                    <div class="page-link sub">Filter by date range</div>
+                    <div class="page-link sub">Filter by deanery / location</div>
+                    <div class="page-link">Event Detail Pages <span class="tag new">New</span></div>
+                    <div class="page-link sub">Description &amp; details</div>
+                    <div class="page-link sub">Registration link (OSV) <span class="tag external">External</span></div>
+                    <div class="page-link sub">Location &amp; directions</div>
+                    <div class="page-link sub">Social sharing</div>
+                    <div class="page-link">Retreats</div>
+                    <div class="page-link">Meeting Rooms &amp; Spaces</div>
+                    <div class="page-link">Watch Mass Online <span class="tag new">New</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- THE MESSAGE -->
+    <div class="section-panel" id="panel-message">
+        <a class="back-link" onclick="showSection('overview')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> All Sections</a>
+        <div class="section-title-bar">
+            <h2>The Message</h2>
+            <span class="count">~12 pages + articles</span>
+        </div>
+        <div class="columns cols-2">
+            <div class="column">
+                <div class="column-header">News &amp; Stories</div>
+                <div class="column-body">
+                    <div class="page-link featured">Latest Headlines</div>
+                    <div class="page-link">Diocesan News</div>
+                    <div class="page-link">Local &amp; Regional News</div>
+                    <div class="page-link">National &amp; World News</div>
+                    <div class="page-link">Faith &amp; Spirituality <span class="tag new">New</span></div>
+                    <div class="page-link">Special Features</div>
+                    <div style="margin-top: 12px; padding-top: 8px; border-top: 1px solid #eee;">
+                        <div class="page-link featured">Article Detail Template</div>
+                        <div class="page-link sub">Featured image</div>
+                        <div class="page-link sub">Author, date, category</div>
+                        <div class="page-link sub">Social sharing buttons</div>
+                        <div class="page-link sub">Related articles</div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-header">Columns &amp; More</div>
+                <div class="column-body">
+                    <div class="page-link">Opinion &amp; Columns</div>
+                    <div class="page-link sub">The Bishop's Corner</div>
+                    <div class="page-link sub">Journey of Faith</div>
+                    <div class="page-link sub">Sunday Scriptures</div>
+                    <div class="page-link sub">+ additional recurring columns</div>
+                    <div class="page-link">Movie Reviews</div>
+                    <div class="page-link">Archives</div>
+                    <div class="page-link sub">Browse by date / category / location</div>
+                    <div class="page-link">About The Message</div>
+                    <div class="page-link sub">Contact / Staff</div>
+                    <div class="page-link sub">Bulletin Board</div>
+                    <div class="highlight">
+                        <h4>Subscribe</h4>
+                        <p>Get The Message delivered weekly — print ($24/yr) or digital ($12/yr).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GIVE -->
+    <div class="section-panel" id="panel-give">
+        <a class="back-link" onclick="showSection('overview')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> All Sections</a>
+        <div class="section-title-bar">
+            <h2>Give</h2>
+            <span class="count">~4 pages</span>
+        </div>
+        <div class="columns cols-2">
+            <div class="column">
+                <div class="column-header">Ways to Give</div>
+                <div class="column-body">
+                    <div class="page-link featured">Why Give? <span class="tag new">New</span></div>
+                    <div class="page-link sub">Stories of impact</div>
+                    <div class="page-link sub">How your gift makes a difference</div>
+                    <div class="page-link">Give Online <span class="tag external">External</span></div>
+                    <div class="page-link">Give Stock or Securities</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-header">Campaigns &amp; Planned Giving</div>
+                <div class="column-body">
+                    <div class="page-link featured">Annual Catholic Ministries Appeal</div>
+                    <div class="page-link sub">Donor Recognition (Deo Gratias Society)</div>
+                    <div class="page-link sub">Annual Impact Report</div>
+                    <div class="page-link">Planned &amp; Legacy Giving</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Elements -->
+    <div class="global-bar">
+        <h3>Global Elements (Every Page)</h3>
+        <div class="global-grid">
+            <div class="global-card">
+                <h4>Header</h4>
+                <p>Logo, main nav (7 items), Give button, Search, EN/ES toggle</p>
+            </div>
+            <div class="global-card">
+                <h4>Utility Nav</h4>
+                <p>MyDio, Careers, Contact, Safe Environment</p>
+            </div>
+            <div class="global-card">
+                <h4>Footer</h4>
+                <p>Address, phone, social links, quick links, Message subscribe</p>
+            </div>
+            <div class="global-card">
+                <h4>Search</h4>
+                <p>Full-site search covering pages, PDFs, and articles</p>
+            </div>
+            <div class="global-card">
+                <h4>Give CTA</h4>
+                <p>Persistent Give button in header at all screen sizes</p>
+            </div>
+            <div class="global-card">
+                <h4>Breadcrumbs</h4>
+                <p>Contextual navigation on all interior pages</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section-panel').forEach(p => p.classList.remove('visible'));
+            const panel = document.getElementById('panel-' + id);
+            if (panel) {
+                panel.classList.add('visible');
+                // Re-trigger animation
+                panel.style.animation = 'none';
+                panel.offsetHeight;
+                panel.style.animation = '';
+            }
+            // Update active nav button
+            document.querySelectorAll('.nav-btn').forEach((btn, i) => {
+                btn.classList.remove('active');
+            });
+            const sections = ['overview','about','parishes','faith','schools','ministries','events','message'];
+            const idx = sections.indexOf(id);
+            if (idx >= 0) document.querySelectorAll('.nav-btn')[idx].classList.add('active');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize
+        document.querySelectorAll('.nav-btn')[0].classList.add('active');
+    </script>
+</body>
+</html>

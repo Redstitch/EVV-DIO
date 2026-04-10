@@ -1,0 +1,161 @@
+import type { Metadata } from "next";
+import { PageHero } from "@/components/PageHero";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Diocese of Evansville",
+  description:
+    "Privacy policy for the Diocese of Evansville website. How we collect, use, and protect your personal information.",
+};
+
+export default function PrivacyPolicyPage() {
+  return (
+    <>
+      <PageHero
+        label="Legal"
+        title="Privacy Policy"
+        subtitle="How we collect, use, and protect your personal information."
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Privacy Policy" },
+        ]}
+      />
+
+      <main id="main-content">
+        <section className="section-padding bg-warm-white">
+          <div className="max-w-[800px] mx-auto prose-container">
+            <p className="text-sm text-text-light mb-8">
+              Effective Date: January 1, 2025 &nbsp;|&nbsp; Last Updated: January 1, 2025
+            </p>
+
+            <PolicySection title="1. Introduction">
+              <p>
+                The Catholic Diocese of Evansville (&ldquo;the Diocese,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at evdio.org (the &ldquo;Site&rdquo;) or interact with our digital services.
+              </p>
+              <p>
+                By accessing or using our Site, you agree to the terms of this Privacy Policy. If you do not agree with the terms, please do not access the Site.
+              </p>
+            </PolicySection>
+
+            <PolicySection title="2. Information We Collect">
+              <h4 className="font-heading text-base font-bold text-navy mb-2">Information You Provide</h4>
+              <p>We may collect personal information that you voluntarily provide when you:</p>
+              <ul>
+                <li>Make a donation or financial contribution online</li>
+                <li>Register for an event, retreat, or program</li>
+                <li>Subscribe to our newsletter or The Message</li>
+                <li>Submit a contact form or prayer request</li>
+                <li>Apply for a position, volunteer role, or school enrollment</li>
+                <li>Create an account or profile on our Site</li>
+              </ul>
+              <p>
+                This information may include your name, email address, mailing address, phone number, payment information, parish affiliation, and any other information you choose to provide.
+              </p>
+
+              <h4 className="font-heading text-base font-bold text-navy mb-2 mt-6">Information Collected Automatically</h4>
+              <p>When you visit our Site, we may automatically collect certain information, including:</p>
+              <ul>
+                <li>IP address and browser type</li>
+                <li>Operating system and device information</li>
+                <li>Pages visited, time spent, and referring URLs</li>
+                <li>Cookies and similar tracking technologies</li>
+              </ul>
+            </PolicySection>
+
+            <PolicySection title="3. How We Use Your Information">
+              <p>We use the information we collect to:</p>
+              <ul>
+                <li>Process donations and issue tax receipts</li>
+                <li>Communicate with you about diocesan news, events, and programs</li>
+                <li>Administer events, programs, and registrations</li>
+                <li>Respond to your inquiries and prayer requests</li>
+                <li>Improve our website and digital services</li>
+                <li>Comply with legal obligations and protect our rights</li>
+                <li>Send newsletters, The Message, and other communications you have opted into</li>
+              </ul>
+            </PolicySection>
+
+            <PolicySection title="4. Online Donations & Payment Security">
+              <p>
+                Online donations are processed through Our Sunday Visitor (OSV), a trusted third-party payment processor used by Catholic organizations nationwide. The Diocese does not store your credit card or bank account information on our servers. All transactions are encrypted using industry-standard SSL (Secure Socket Layer) technology. OSV&rsquo;s privacy and security practices are governed by their own policies.
+              </p>
+            </PolicySection>
+
+            <PolicySection title="5. Cookies & Tracking Technologies">
+              <p>
+                Our Site uses cookies and similar technologies to enhance your browsing experience, analyze site traffic, and understand user behavior. You can control cookie preferences through your browser settings. Disabling cookies may affect the functionality of certain features on our Site.
+              </p>
+              <p>
+                We may use Google Analytics or similar services to collect and analyze usage data. These services may use cookies to track user interactions. The information collected is used to improve our Site and is not used to personally identify individual visitors.
+              </p>
+            </PolicySection>
+
+            <PolicySection title="6. Information Sharing & Disclosure">
+              <p>We do not sell, rent, or trade your personal information to third parties. We may share your information with:</p>
+              <ul>
+                <li><strong>Service Providers:</strong> Trusted third parties who assist with payment processing, email delivery, website hosting, and analytics, under strict confidentiality agreements.</li>
+                <li><strong>Parishes and Schools:</strong> If you make a gift designated to a specific parish or school, we may share your contact information with that entity for acknowledgment purposes.</li>
+                <li><strong>Legal Requirements:</strong> We may disclose your information if required by law, regulation, court order, or governmental request.</li>
+              </ul>
+            </PolicySection>
+
+            <PolicySection title="7. Data Security">
+              <p>
+                We implement reasonable administrative, technical, and physical security measures to protect your personal information from unauthorized access, use, alteration, or destruction. However, no method of transmission over the Internet or electronic storage is completely secure, and we cannot guarantee absolute security.
+              </p>
+            </PolicySection>
+
+            <PolicySection title="8. Your Rights & Choices">
+              <p>You have the right to:</p>
+              <ul>
+                <li>Access, correct, or delete your personal information by contacting us</li>
+                <li>Opt out of email communications by clicking the &ldquo;Unsubscribe&rdquo; link in any email</li>
+                <li>Disable cookies through your browser settings</li>
+                <li>Request information about the personal data we hold about you</li>
+              </ul>
+            </PolicySection>
+
+            <PolicySection title="9. Children's Privacy">
+              <p>
+                Our Site is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us and we will promptly delete it.
+              </p>
+            </PolicySection>
+
+            <PolicySection title="10. Third-Party Links">
+              <p>
+                Our Site may contain links to third-party websites, including parish websites, Catholic organizations, and service providers. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.
+              </p>
+            </PolicySection>
+
+            <PolicySection title="11. Changes to This Policy">
+              <p>
+                We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated &ldquo;Last Updated&rdquo; date. We encourage you to review this policy periodically.
+              </p>
+            </PolicySection>
+
+            <PolicySection title="12. Contact Us">
+              <p>If you have questions or concerns about this Privacy Policy, please contact us:</p>
+              <div className="bg-cream rounded-xl border border-border p-6 mt-4">
+                <p className="mb-1"><strong className="text-navy">Catholic Diocese of Evansville</strong></p>
+                <p className="mb-1">P.O. Box 4169</p>
+                <p className="mb-1">Evansville, IN 47724</p>
+                <p className="mb-1">Phone: (812) 424-5536</p>
+                <p>Email: communications@evdio.org</p>
+              </div>
+            </PolicySection>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+}
+
+function PolicySection({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div className="mb-10">
+      <h3 className="font-heading text-xl font-bold text-navy mb-4">{title}</h3>
+      <div className="text-sm text-text-medium leading-relaxed space-y-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1.5 [&_li]:leading-relaxed">
+        {children}
+      </div>
+    </div>
+  );
+}
