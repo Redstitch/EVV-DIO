@@ -1,0 +1,273 @@
+Site,Current URL,Current Page Name,Status,New Section,New Page Name,New URL,Redirect?,Notes
+evdio.org,https://www.evdio.org/index.html,Homepage,🟢 MIGRATE,Home,Homepage,/,YES,
+evdio.org,https://www.evdio.org/about-us.html,About Us,🟢 MIGRATE,About,About (Landing),/about,YES,
+evdio.org,https://www.evdio.org/bishops-office.html,Bishop's Office,🟡 RENAME,About,Our Bishop,/about/our-bishop,YES,Renamed per IA
+evdio.org,https://www.evdio.org/3-d-communications.html,3D Communications,🟢 MIGRATE,About,Messages & Statements (3D Landing),/about/our-bishop/messages,YES,Dean priority — 3D format (written/video/audio)
+evdio.org,https://www.evdio.org/2016letter.html,2016 Bishop Letter,🟠 MERGE,About,Pastoral Letters & Written Messages,/about/our-bishop/letters,YES,Archive entry
+evdio.org,https://www.evdio.org/previous-bishops.html,Previous Bishops,🟡 RENAME,About,Past Bishops,/about/past-bishops,YES,
+evdio.org,https://www.evdio.org/history-of-the-diocese.html,History of the Diocese,🟡 RENAME,About,Our History,/about/our-history,YES,
+evdio.org,https://www.evdio.org/old-cathedral-library--museum.html,Cathedral Library & Museum,🟡 RENAME,About,Cathedral Library & Museum,/about/cathedral-library-museum,YES,
+evdio.org,https://www.evdio.org/vicar-general.html,Vicar General,🟠 MERGE,About,Diocesan Leadership,/about/leadership,YES,Merged into Diocesan Leadership
+evdio.org,https://www.evdio.org/chancellor.html,Chancellor,🟠 MERGE,About,Diocesan Leadership,/about/leadership,YES,Merged into Diocesan Leadership
+evdio.org,https://www.evdio.org/departments.html,Departments,🟡 RENAME,About,Offices & Departments,/about/offices,YES,Expanded from 4 to 17 offices
+evdio.org,https://www.evdio.org/finance-office.html,Finance Office,🟢 MIGRATE,About,Finance & Administration,/about/offices/finance,YES,
+evdio.org,https://www.evdio.org/communications.html,Communications,🟢 MIGRATE,About,Communications Office,/about/offices/communications,YES,Split public-facing into /about/press-room
+evdio.org,https://www.evdio.org/tribunal.html,Tribunal,🟡 RENAME,About,Marriage & Annulment Tribunal,/about/offices/tribunal,YES,
+evdio.org,https://www.evdio.org/tribunal-faq.html,Tribunal FAQ,🟠 MERGE,About,Marriage & Annulment Tribunal,/about/offices/tribunal,YES,Folded into Tribunal page
+evdio.org,https://www.evdio.org/activities--facilities.html,Activities & Facilities,🟡 RENAME,Events,Meeting Rooms & Spaces,/events/spaces,YES,
+evdio.org,https://www.evdio.org/catholic-center-meeting-rooms.html,Catholic Center Meeting Rooms,🟠 MERGE,Events,Meeting Rooms & Spaces,/events/spaces,YES,Merged
+evdio.org,https://www.evdio.org/it.html,IT Office,🟢 MIGRATE,About,IT Office (internal),/about/offices/it,YES,
+evdio.org,https://www.evdio.org/directories.html,Directories,🟢 MIGRATE,About,Directories (Landing),/about/directories,YES,Now web-based directories
+evdio.org,https://www.evdio.org/contact.html,Contact,🟡 RENAME,About,Contact Us,/about/contact,YES,
+evdio.org,https://www.evdio.org/contact-us.html,Contact Us (dup),🔴 DROP,—,—,/about/contact,YES,Duplicate — 301 to canonical
+evdio.org,https://www.evdio.org/contact-us1.html,Contact Us (dup 2),🔴 DROP,—,—,/about/contact,YES,Duplicate
+evdio.org,https://www.evdio.org/media.html,Media,🟠 MERGE,About,Press Room,/about/press-room,YES,Merged
+evdio.org,https://www.evdio.org/media-inquiries.html,Media Inquiries,🟡 RENAME,About,Press Room,/about/press-room,YES,
+evdio.org,https://www.evdio.org/employment-opportunities.html,Employment Opportunities,🟡 RENAME,About,Careers,/about/careers,YES,
+evdio.org,https://www.evdio.org/employment-opportunities1.html,Employment Opp (dup),🔴 DROP,—,—,/about/careers,YES,Duplicate
+evdio.org,https://www.evdio.org/applicants.html,Applicants,🟠 MERGE,About,Careers,/about/careers,YES,
+evdio.org,https://www.evdio.org/applicants-638378.html,Applicants (Weebly dup),🔴 DROP,—,—,/about/careers,YES,Weebly artifact
+evdio.org,https://www.evdio.org/safe-environment.html,Safe Environment,🟢 MIGRATE,About,Safe Environment,/about/safe-environment,YES,
+evdio.org,https://www.evdio.org/child-protection-index-forms-for-other-states.html,Child Protection Forms,🟠 MERGE,About,Safe Environment,/about/safe-environment,YES,Sub-content
+evdio.org,https://www.evdio.org/pastoral-priorities-2025-2030.html,Pastoral Priorities 2025-2030,🟡 RENAME,About,Our Vision & Priorities,/about/our-vision,YES,
+evdio.org,https://www.evdio.org/pastoral-priorities-2025-2030-test.html,Pastoral Priorities (test),🔴 DROP,—,—,,NO,Test page
+evdio.org,https://www.evdio.org/synod.html,Synod,🟠 MERGE,About,Synod Updates,/about/statements,YES,Destination TBD — verify
+evdio.org,https://www.evdio.org/links--resources.html,Links & Resources,🟡 RENAME,About,Catholic Resources & Links,/about/resources,YES,
+evdio.org,https://www.evdio.org/resources.html,Resources,🟠 MERGE,About,Catholic Resources & Links,/about/resources,YES,
+evdio.org,https://www.evdio.org/resources1.html,Resources (dup),🔴 DROP,—,—,/about/resources,YES,Duplicate
+evdio.org,https://www.evdio.org/resources2.html,Resources (dup 2),🔴 DROP,—,—,/about/resources,YES,Duplicate
+,,,,,,,,
+evdio.org,https://www.evdio.org/parishes-map.html,Parishes Map,🟠 MERGE,Parishes & Mass,Parish Finder,/parishes,YES,Merged with Mass Times Map
+evdio.org,https://www.evdio.org/mass-times-map.html,Mass Times Map,🟠 MERGE,Parishes & Mass,Parish Finder,/parishes,YES,Merged with Parishes Map
+evdio.org,https://www.evdio.org/mass.html,Mass,🟢 MIGRATE,Parishes & Mass,Mass Times,/parishes/mass-times,YES,
+,,,,,,,,
+evdio.org,https://www.evdio.org/sacraments.html,Sacraments,🟢 MIGRATE,Faith & Sacraments,Faith & Sacraments (Landing),/faith,YES,
+evdio.org,https://www.evdio.org/rcia.html,RCIA,🟠 MERGE,Faith & Sacraments,How to Become Catholic,/faith/become-catholic,YES,Merged with New to Catholicism
+evdio.org,https://www.evdio.org/thinking-of-becoming-catholic.html,Thinking of Becoming Catholic,🟠 MERGE,Faith & Sacraments,How to Become Catholic,/faith/become-catholic,YES,
+evdio.org,https://www.evdio.org/ocia.html,OCIA,🟠 MERGE,Faith & Sacraments,How to Become Catholic,/faith/become-catholic,YES,OCIA = RCIA updated name
+evdio.org,https://www.evdio.org/candidatescatechumens.html,Candidates / Catechumens,🟠 MERGE,Faith & Sacraments,How to Become Catholic,/faith/become-catholic,YES,
+evdio.org,https://www.evdio.org/vocations.html,Vocations,🟢 MIGRATE,Faith & Sacraments,Vocations,/faith/vocations,YES,
+evdio.org,https://www.evdio.org/seminarians.html,Seminarians,🟠 MERGE,Faith & Sacraments,Priesthood,/faith/vocations/priesthood,YES,Sub of Vocations
+evdio.org,https://www.evdio.org/religious-communities.html,Religious Communities,🟠 MERGE,Faith & Sacraments,Religious Life,/faith/vocations/religious-life,YES,Sub of Vocations
+evdio.org,https://www.evdio.org/discern.html,Discern,🟠 MERGE,Faith & Sacraments,Vocations,/faith/vocations,YES,Discernment resources
+evdio.org,https://www.evdio.org/permanent-diaconate.html,Permanent Diaconate,🟡 RENAME,Faith & Sacraments,Becoming a Deacon,/faith/deacon,YES,
+evdio.org,https://www.evdio.org/want-to-become-a-deacon.html,Want to Become a Deacon,🟠 MERGE,Faith & Sacraments,Becoming a Deacon,/faith/deacon,YES,
+evdio.org,https://www.evdio.org/role--function-of-the-deacon.html,Role & Function of Deacon,🟠 MERGE,Faith & Sacraments,Becoming a Deacon,/faith/deacon,YES,
+evdio.org,https://www.evdio.org/formation-program--schedule.html,Deacon Formation Schedule,🟠 MERGE,Faith & Sacraments,Deacon Formation,/faith/deacon/formation,YES,Sub of Deacon
+evdio.org,https://www.evdio.org/worship.html,Worship,🟡 RENAME,Faith & Sacraments,Prayer & Worship Resources,/faith/prayer-worship,YES,Public-facing
+evdio.org,https://www.evdio.org/policies--guidelines.html,Worship Policies & Guidelines,🔵 MOVE,About,Worship Policies & Guidelines (internal),/about/offices/worship/policies,YES,Moved off public Faith section
+evdio.org,https://www.evdio.org/newsletter.html,Worship Newsletter,🔵 MOVE,About,Worship Newsletter (internal),/about/offices/worship/newsletter,YES,Moved off public Faith section
+evdio.org,https://www.evdio.org/liturgical-music.html,Liturgical Music,🔵 MOVE,About,Music Resources for Parishes (internal),/about/offices/worship/music,YES,Parish-staff tool
+evdio.org,https://www.evdio.org/liturgical-calendar.html,Liturgical Calendar,🟡 RENAME,Faith & Sacraments,Church Calendar,/faith/calendar,YES,
+evdio.org,https://www.evdio.org/the-rosary.html,The Rosary,🟠 MERGE,Faith & Sacraments,Prayer & Worship Resources,/faith/prayer-worship,YES,Sub-content
+evdio.org,https://www.evdio.org/encounter.html,Encounter (YA retreat),🟠 MERGE,Ministries,Youth & Young Adults,/ministries/youth,YES,Verify which YA event
+evdio.org,https://www.evdio.org/jubilee-2025.html,Year of Jubilee 2025,🔴 DROP,—,—,,NO,Holy Year closed Jan 6 2026
+evdio.org,https://www.evdio.org/jubilee-event.html,Jubilee Event,🔴 DROP,—,—,,NO,Holy Year closed Jan 6 2026
+,,,,,,,,
+evdio.org,https://www.evdio.org/catholic-schools.html,Catholic Schools,🟢 MIGRATE,Catholic Schools,Catholic Schools (Landing),/schools,YES,
+evdio.org,https://www.evdio.org/schools-information.html,Schools Information,🟡 RENAME,Catholic Schools,Find a School,/schools/find,YES,
+evdio.org,https://www.evdio.org/schools-map.html,Schools Map,🟢 MIGRATE,Catholic Schools,Schools Map,/schools/map,YES,
+evdio.org,https://www.evdio.org/information-for-prospective-families---original.html,Prospective Families (original),🔴 DROP,—,—,/schools/enroll,YES,Stale
+evdio.org,https://www.evdio.org/mission--vision.html,Mission & Vision (schools),🟢 MIGRATE,Catholic Schools,Mission & Vision,/schools/mission-vision,YES,
+evdio.org,https://www.evdio.org/tuition-assistance.html,Tuition Assistance,🟡 RENAME,Catholic Schools,Tuition Assistance & Affordability,/schools/tuition,YES,
+evdio.org,https://www.evdio.org/accreditation.html,Accreditation,🟡 RENAME,Catholic Schools,Accreditation & Standards,/schools/accreditation,YES,
+evdio.org,https://www.evdio.org/wellness.html,Wellness,🟡 RENAME,Catholic Schools,Student Health & Wellness,/schools/health,YES,
+evdio.org,https://www.evdio.org/exceptional-children-programs.html,Exceptional Children Programs,🟡 RENAME,Catholic Schools,Programs for Children with Special Needs,/schools/special-needs,YES,
+evdio.org,https://www.evdio.org/standards.html,Standards,🟠 MERGE,Catholic Schools,Curriculum Standards,/schools/for-staff/curriculum,YES,
+evdio.org,https://www.evdio.org/curriculum.html,Curriculum,🟠 MERGE,Catholic Schools,Curriculum Standards,/schools/for-staff/curriculum,YES,
+evdio.org,https://www.evdio.org/administrative-handbook-for-schools.html,Administrative Handbook,🟢 MIGRATE,Catholic Schools,Administrative Handbook,/schools/for-staff/handbook,YES,
+evdio.org,https://www.evdio.org/school-councilpresidents-council.html,School Advisory Councils,🟢 MIGRATE,Catholic Schools,School Advisory Councils,/schools/for-staff/advisory-councils,YES,
+evdio.org,https://www.evdio.org/school-personnel.html,School Personnel,🟠 MERGE,Catholic Schools,Teaching & Staff Careers,/schools/careers,YES,
+evdio.org,https://www.evdio.org/professional-development.html,Professional Development,🟢 MIGRATE,Catholic Schools,Professional Development,/schools/for-staff/professional-development,YES,
+evdio.org,https://www.evdio.org/certified-employee-application-instructions.html,Certified Employee Application,🟠 MERGE,Catholic Schools,Teaching & Staff Careers,/schools/careers,YES,
+evdio.org,https://www.evdio.org/non-certified-employee-application-instructions.html,Non-Certified Employee Application,🟠 MERGE,Catholic Schools,Teaching & Staff Careers,/schools/careers,YES,
+evdio.org,https://www.evdio.org/substitute-teacher-application-instructions.html,Substitute Teacher Application,🟠 MERGE,Catholic Schools,Teaching & Staff Careers,/schools/careers,YES,
+evdio.org,https://www.evdio.org/bus-driver-employee-application-instructions.html,Bus Driver Application,🟠 MERGE,Catholic Schools,Teaching & Staff Careers,/schools/careers,YES,
+,,,,,,,,
+evdio.org,https://www.evdio.org/catechesis.html,Catechesis,🟡 RENAME,Ministries,Religious Education,/ministries/religious-education,YES,Office of Catechesis public-facing = Religious Education
+evdio.org,https://www.evdio.org/coordinators--catechists.html,Coordinators & Catechists,🟠 MERGE,Ministries,Parish Education Leaders,/ministries/religious-education/parish-leaders,YES,
+evdio.org,https://www.evdio.org/catechist-formation.html,Catechist Formation,🟠 MERGE,Ministries,Religious Education,/ministries/religious-education,YES,
+evdio.org,https://www.evdio.org/parish-catechetical-leaders.html,Parish Catechetical Leaders,🟡 RENAME,Ministries,Parish Education Leaders,/ministries/religious-education/parish-leaders,YES,
+evdio.org,https://www.evdio.org/parish-catechetical-leader-handbook.html,PCL Handbook,🟠 MERGE,Ministries,Parish Education Leaders,/ministries/religious-education/parish-leaders,YES,
+evdio.org,https://www.evdio.org/adult-formation.html,Adult Formation,🟠 MERGE,Ministries,Faith Formation Resources,/ministries/religious-education/faith-formation,YES,
+evdio.org,https://www.evdio.org/formation-day.html,Teacher Formation Day,🟢 MIGRATE,Ministries,Teacher Formation Day,/ministries/religious-education/formation-day,YES,
+evdio.org,https://www.evdio.org/confirmation-resources.html,Confirmation Resources,🟠 MERGE,Faith & Sacraments,Confirmation Preparation,/faith/confirmation,YES,
+evdio.org,https://www.evdio.org/spred.html,SPRED,🟡 RENAME,Ministries,Special Needs Religious Ed,/ministries/spred,YES,
+evdio.org,https://www.evdio.org/marriage-family-and-life.html,Marriage Family and Life,🟡 RENAME,Ministries,Marriage & Family Life,/ministries/marriage-family,YES,
+evdio.org,https://www.evdio.org/mfl.html,MFL,🔴 DROP,—,—,/ministries/marriage-family,YES,Duplicate abbreviation
+evdio.org,https://www.evdio.org/family-ministry-programs.html,Family Ministry Programs,🟠 MERGE,Ministries,Marriage & Family Life,/ministries/marriage-family,YES,
+evdio.org,https://www.evdio.org/marriage-preparation--enrichment-programs.html,Marriage Prep & Enrichment,🟡 RENAME,Ministries,Marriage Enrichment,/ministries/marriage-family/enrichment,YES,
+evdio.org,https://www.evdio.org/natural-family-planning.html,Natural Family Planning,🔵 MOVE,Faith & Sacraments,Natural Family Planning,/faith/marriage/nfp,YES,Moved under Marriage
+evdio.org,https://www.evdio.org/infertility-resources.html,Infertility Resources,🟡 RENAME,Ministries,Help with Infertility,/ministries/marriage-family/infertility,YES,
+evdio.org,https://www.evdio.org/miscarriage-resources.html,Miscarriage Resources,🟡 RENAME,Ministries,Miscarriage & Loss Support,/ministries/marriage-family/miscarriage,YES,
+evdio.org,https://www.evdio.org/divorce-prevention-and-support.html,Divorce Prevention,🟠 MERGE,Ministries,Marriage & Family Life,/ministries/marriage-family,YES,
+evdio.org,https://www.evdio.org/respect-life-ministry.html,Respect Life Ministry,🟡 RENAME,Ministries,Respect for Life,/ministries/respect-life,YES,
+evdio.org,https://www.evdio.org/march-for-life.html,March for Life,🟢 MIGRATE,Ministries,March for Life,/ministries/respect-life/march,YES,
+evdio.org,https://www.evdio.org/capital-punishment.html,Capital Punishment,🟢 MIGRATE,Ministries,Capital Punishment,/ministries/respect-life/capital-punishment,YES,
+evdio.org,https://www.evdio.org/healthcare.html,Healthcare,🟡 RENAME,Ministries,Healthcare & Ethics,/ministries/respect-life/healthcare,YES,
+evdio.org,https://www.evdio.org/environmental-stewardship.html,Environmental Stewardship,🟡 RENAME,Ministries,Caring for Creation,/ministries/respect-life/caring-for-creation,YES,
+evdio.org,https://www.evdio.org/faithful-citizenship.html,Faithful Citizenship,🟡 RENAME,Ministries,Faith & Civic Responsibility,/ministries/respect-life/civic,YES,
+evdio.org,https://www.evdio.org/project-rachel.html,Project Rachel,🟡 RENAME,Ministries,Healing After Abortion,/ministries/project-rachel,YES,
+evdio.org,https://www.evdio.org/walking-with-moms-in-need.html,Walking with Moms in Need,🟡 RENAME,Ministries,Support for Expectant Mothers,/ministries/expectant-mothers,YES,
+evdio.org,https://www.evdio.org/courage.html,Courage,🟡 RENAME,Ministries,LGBTQ+ Support (Courage),/ministries/marriage-family/courage,YES,
+evdio.org,https://www.evdio.org/healing-and-helping-ministry.html,Healing & Helping Ministry,🟠 MERGE,Ministries,Grief Support for Parents,/ministries/marriage-family/grief,YES,Verify — likely Red Bird Ministries
+evdio.org,https://www.evdio.org/over-55-ministry-programs.html,Over 55 Ministry,🟡 RENAME,Ministries,Senior Ministry,/ministries/senior-ministry,YES,
+evdio.org,https://www.evdio.org/youth--young-adult.html,Youth & Young Adult,🟡 RENAME,Ministries,Youth & Young Adults,/ministries/youth,YES,
+evdio.org,https://www.evdio.org/young-adult-ministry.html,Young Adult Ministry,🟡 RENAME,Ministries,Young Adult Community,/ministries/youth/young-adult,YES,
+evdio.org,https://www.evdio.org/youth-team.html,Youth Team,🟠 MERGE,Ministries,Youth & Young Adults,/ministries/youth,YES,Staff info
+evdio.org,https://www.evdio.org/diocesan-youth-day.html,Diocesan Youth Day,🟡 RENAME,Ministries,Diocesan Youth Conference,/ministries/youth/diocesan-youth-conference,YES,
+evdio.org,https://www.evdio.org/national-catholic-youth-conference.html,NCYC,🟢 MIGRATE,Ministries,National Catholic Youth Conference,/ministries/youth/ncyc,YES,
+evdio.org,https://www.evdio.org/world-youth-day.html,World Youth Day,🟢 MIGRATE,Ministries,World Youth Day,/ministries/youth/world-youth-day,YES,
+evdio.org,https://www.evdio.org/saint-maria-goretti-youth-distinction.html,St. Maria Goretti Distinction,🟡 RENAME,Ministries,St. Maria Goretti Award,/ministries/youth/maria-goretti,YES,
+evdio.org,https://www.evdio.org/scouts-bsa-and-girl-scouts.html,Scouts BSA & Girl Scouts,🟡 RENAME,Ministries,Catholic Scouting,/ministries/youth/scouting,YES,
+evdio.org,https://www.evdio.org/diocesan-forms-for-oyaya.html,OYAYA Forms,🟠 MERGE,Ministries,Youth & Young Adults (internal),/ministries/youth,YES,Internal forms
+evdio.org,https://www.evdio.org/disabilityministry.html,Disability Ministry,🟡 RENAME,Ministries,Disability & Inclusion,/ministries/disability,YES,
+evdio.org,https://www.evdio.org/catholic-social-justice-information.html,Catholic Social Justice,🟡 RENAME,Ministries,Social Justice,/ministries/social-justice,YES,
+evdio.org,https://www.evdio.org/scholarship-information.html,Scholarship Information,🟡 RENAME,Ministries,Scholarships & Financial Aid,/ministries/scholarships,YES,
+,,,,,,,,
+evdio.org,https://www.evdio.org/ministerio-hispano-hispanic-ministry.html,Ministerio Hispano,🟡 RENAME,Ministries,Hispanic Ministry,/ministries/hispanic,YES,
+evdio.org,https://www.evdio.org/nuestra-mision-y-peronal-our-mission-and-staff.html,Nuestra Mision y Personal,🟡 RENAME,Ministries,Our Team (Hispanic Ministry),/ministries/hispanic/team,YES,Spanish-only → English label
+evdio.org,https://www.evdio.org/ministeriosministries.html,Ministerios / Ministries,🟡 RENAME,Ministries,Hispanic Ministries,/ministries/hispanic/ministries,YES,Spanish-only → English label
+evdio.org,https://www.evdio.org/ambiente-segurosafe-environment.html,Ambiente Seguro,🟡 RENAME,Ministries,Safe Environment (Hispanic),/ministries/hispanic/safe-environment,YES,Spanish-only → English label
+evdio.org,https://www.evdio.org/serviciosservices.html,Servicios,🟡 RENAME,Ministries,Spanish Mass & Sacraments,/ministries/hispanic/services,YES,Spanish-only → English label
+evdio.org,https://www.evdio.org/nuestra-feour-faith.html,Nuestra Fe,🟡 RENAME,Ministries,Our Catholic Faith,/ministries/hispanic/faith,YES,Spanish-only → English label
+evdio.org,https://www.evdio.org/tradiciones-hispanashispanic-traditions.html,Tradiciones Hispanas,🟡 RENAME,Ministries,Hispanic Catholic Traditions,/ministries/hispanic/traditions,YES,Spanish-only → English label
+evdio.org,https://www.evdio.org/noticias-y-eventos--news-and-events.html,Noticias y Eventos,🟡 RENAME,Ministries,Hispanic Community News & Events,/ministries/hispanic/news,YES,Spanish-only → English label
+evdio.org,https://www.evdio.org/encuentro.html,Encuentro,🟠 MERGE,Ministries,Hispanic Ministry,/ministries/hispanic,YES,Encuentro event
+,,,,,,,,
+evdio.org,https://www.evdio.org/stewardship.html,Stewardship,🟡 RENAME,Give,Give (Landing) / Donate,/give,YES,
+evdio.org,https://www.evdio.org/stewardship-resources-for-parishes.html,Stewardship Resources (parishes),🔵 MOVE,About,Office of Stewardship (internal),/about/offices/stewardship,YES,Internal parish tool
+evdio.org,https://www.evdio.org/stewards-of-gods-grace.html,Stewards of God's Grace,🟠 MERGE,Give,Give (Landing),/give,YES,
+evdio.org,https://www.evdio.org/brute-society.html,Brute Society,🟠 MERGE,Give,Planned & Legacy Giving,/give/planned-giving,YES,
+evdio.org,https://www.evdio.org/deo-gratias-society.html,Deo Gratias Society,🟢 MIGRATE,Give,Donor Recognition (Deo Gratias),/give/donor-recognition,YES,
+evdio.org,https://www.evdio.org/dgs.html,DGS,🔴 DROP,—,—,/give,YES,Abbreviation duplicate
+evdio.org,https://www.evdio.org/catholic-ministries-appeal.html,Catholic Ministries Appeal,🟢 MIGRATE,Give,Catholic Ministries Appeal,/give/appeal,YES,
+evdio.org,https://www.evdio.org/catholic-parishes-campaign.html,Catholic Parishes Campaign,🟠 MERGE,Give,Catholic Ministries Appeal,/give/appeal,YES,Campaign subset
+evdio.org,https://www.evdio.org/impact-report.html,Impact Report,🟡 RENAME,Give,Annual Impact Report,/give/impact-report,YES,
+evdio.org,https://www.evdio.org/marketing--development.html,Marketing & Development,🟠 MERGE,About,Communications / Stewardship (internal),/about/offices,YES,Internal office
+evdio.org,https://www.evdio.org/promotional-items.html,Promotional Items,🟠 MERGE,About,Communications (internal),/about/offices/communications,YES,
+,,,,,,,,
+evdio.org,https://www.evdio.org/events.html,Events,🟢 MIGRATE,Events,Events Calendar (Landing),/events,YES,
+evdio.org,https://www.evdio.org/events1.html,Events (dup),🔴 DROP,—,—,/events,YES,Duplicate
+evdio.org,https://www.evdio.org/events2.html,Events (dup 2),🔴 DROP,—,—,/events,YES,Duplicate
+evdio.org,https://www.evdio.org/events3.html,Events (dup 3),🔴 DROP,—,—,/events,YES,Duplicate
+evdio.org,https://www.evdio.org/sarto-retreat-center.html,Sarto Retreat Center,🟡 RENAME,Events,Retreats,/events/retreats,YES,
+,,,,,,,,
+evdio.org,https://www.evdio.org/news.html,News,🟢 MIGRATE,The Message,Latest Headlines (Landing),/the-message,YES,
+evdio.org,https://www.evdio.org/message-test-page.html,Message Test,🔴 DROP,—,—,,NO,Test page
+,,,,,,,,
+evdio.org,https://www.evdio.org/forms--documents.html,Forms & Documents,🟠 MERGE,About,Finance (internal),/about/offices/finance,YES,
+evdio.org,https://www.evdio.org/general-ledger-training-videos.html,GL Training Videos,🟠 MERGE,About,Finance (internal),/about/offices/finance,YES,
+evdio.org,https://www.evdio.org/general-ledger-virtual-training.html,GL Virtual Training,🟠 MERGE,About,Finance (internal),/about/offices/finance,YES,
+evdio.org,https://www.evdio.org/best-practices-form.html,Best Practices Form,🟠 MERGE,About,Finance (internal),/about/offices/finance,YES,
+evdio.org,https://www.evdio.org/ministry-resources.html,Ministry Resources,🟠 MERGE,About,Offices & Departments,/about/offices,YES,Generic — destination TBD
+evdio.org,https://www.evdio.org/icsc-region-vii-meeting.html,ICSC Region VII Meeting,🔴 DROP,—,—,,NO,Past event
+,,,,,,,,
+evdio.org,https://www.evdio.org/andie.html,Andie,🔴 DROP,—,—,,NO,Unclear — likely stale staff bio (verify)
+evdio.org,https://www.evdio.org/nicholas.html,Nicholas,🔴 DROP,—,—,,NO,Unclear — likely stale staff bio (verify)
+evdio.org,https://www.evdio.org/scap.html,SCAP,🔴 DROP,—,—,,NO,Unclear — verify with client
+evdio.org,https://www.evdio.org/pathways.html,Pathways,🔴 DROP,—,—,,NO,Unclear — verify with client
+evdio.org,https://www.evdio.org/faq.html,FAQ,🔴 DROP,—,—,,NO,Content absorbed into specific pages
+,,,,,,,,
+evdio.org,https://www.evdio.org/dean-test-page.html,Dean Test,🔴 DROP,—,—,,NO,Test page
+evdio.org,https://www.evdio.org/testing.html,Testing,🔴 DROP,—,—,,NO,Test page
+evdio.org,https://www.evdio.org/test-steward.html,Test Steward,🔴 DROP,—,—,,NO,Test page
+evdio.org,https://www.evdio.org/steward-test-1.html,Steward Test 1,🔴 DROP,—,—,,NO,Test page
+evdio.org,https://www.evdio.org/steward-test-2.html,Steward Test 2,🔴 DROP,—,—,,NO,Test page
+evdio.org,https://www.evdio.org/videotest.html,Video Test,🔴 DROP,—,—,,NO,Test page
+evdio.org,https://www.evdio.org/oyaya-test.html,OYAYA Test,🔴 DROP,—,—,,NO,Test page
+evdio.org,https://www.evdio.org/old-files.html,Old Files,🔴 DROP,—,—,,NO,Legacy file dump
+,,,,,,,,
+— THE MESSAGE —,,,,,,,,
+evdiomessage.org,https://evdiomessage.org/,Homepage,🟠 MERGE,The Message,Latest Headlines (Landing),/the-message,YES,Merged with evdio.org /news
+evdiomessage.org,https://evdiomessage.org/news/,News (Landing),🟢 MIGRATE,The Message,Latest Headlines (Landing),/the-message,YES,
+evdiomessage.org,https://evdiomessage.org/news/diocesan-news/,Diocesan News,🟢 MIGRATE,The Message,Diocesan News,/the-message/diocesan-news,YES,
+evdiomessage.org,https://evdiomessage.org/news/local-news/,Local News,🟡 RENAME,The Message,Local & Regional News,/the-message/local-news,YES,
+evdiomessage.org,https://evdiomessage.org/news/us-world-news/,US/World News,🟡 RENAME,The Message,National & World News,/the-message/national-news,YES,
+evdiomessage.org,https://evdiomessage.org/news/special-features/,Special Features,🟢 MIGRATE,The Message,Special Features,/the-message/features,YES,
+evdiomessage.org,https://evdiomessage.org/news/seminarian-profiles/,Seminarian Profiles,🟠 MERGE,The Message,Special Features,/the-message/features/seminarians,YES,Special feature archive
+evdiomessage.org,https://evdiomessage.org/news/cathedral-dedication/,Cathedral Dedication,🟠 MERGE,The Message,Special Features,/the-message/features/cathedral-dedication,YES,Special feature archive
+evdiomessage.org,https://evdiomessage.org/news/evdio75/,#EVDIO75,🟠 MERGE,The Message,Special Features,/the-message/features/evdio75,YES,75th anniversary archive
+evdiomessage.org,https://evdiomessage.org/news/school/,School News,🟠 MERGE,The Message,Diocesan News,/the-message/diocesan-news,YES,Merged into Diocesan News feed
+evdiomessage.org,https://evdiomessage.org/news/spanish/,Spanish News,🔵 MOVE,The Message,Spanish content (via language toggle),/the-message,YES,Handled by site-wide EN/ES toggle
+evdiomessage.org,https://evdiomessage.org/special-features-2/,Special Features (old page),🔴 DROP,—,—,/the-message/features,YES,Duplicate — redirect to canonical
+evdiomessage.org,https://evdiomessage.org/catholic-education-office-covid-19-statements/,COVID-19 Statements,🔴 DROP,—,—,,NO,Stale COVID-era content
+,,,,,,,,
+evdiomessage.org,https://evdiomessage.org/columns/,Columns (Landing),🟡 RENAME,The Message,Opinion & Columns,/the-message/columns,YES,
+evdiomessage.org,https://evdiomessage.org/columns/bishops-corner/,The Bishop's Corner,🟢 MIGRATE,The Message,The Bishop's Corner,/the-message/columns/bishops-corner,YES,
+evdiomessage.org,https://evdiomessage.org/columns/journey-of-faith/,Journey of Faith,🟢 MIGRATE,The Message,Journey of Faith,/the-message/columns/journey-of-faith,YES,
+evdiomessage.org,https://evdiomessage.org/columns/sunday-scripture/,Sunday Scripture,🟢 MIGRATE,The Message,Sunday Scripture,/the-message/columns/sunday-scripture,YES,
+evdiomessage.org,https://evdiomessage.org/columns/daily-blessings/,Daily Blessings,🟢 MIGRATE,The Message,Daily Blessings,/the-message/columns/daily-blessings,YES,
+evdiomessage.org,https://evdiomessage.org/columns/question-corner/,Question Corner,🟢 MIGRATE,The Message,Question Corner,/the-message/columns/question-corner,YES,
+evdiomessage.org,https://evdiomessage.org/columns/connecting-faith-and-life/,Connecting Faith and Life,🟢 MIGRATE,The Message,Connecting Faith and Life,/the-message/columns/connecting-faith,YES,
+evdiomessage.org,https://evdiomessage.org/columns/gratitude-for-the-gift-of-faith/,Gratitude for the Gift of Faith,🟢 MIGRATE,The Message,Gratitude for the Gift of Faith,/the-message/columns/gratitude,YES,
+evdiomessage.org,https://evdiomessage.org/columns/meditatione-ignis/,Meditatione Ignis,🟢 MIGRATE,The Message,Meditatione Ignis,/the-message/columns/meditatione-ignis,YES,
+evdiomessage.org,https://evdiomessage.org/columns/gods-way/,God's Way,🟢 MIGRATE,The Message,God's Way,/the-message/columns/gods-way,YES,
+evdiomessage.org,https://evdiomessage.org/columns/from-fields-afar/,From Fields Afar,🟢 MIGRATE,The Message,From Fields Afar,/the-message/columns/from-fields-afar,YES,
+evdiomessage.org,https://evdiomessage.org/columns/liturgical-rhythm-of-life/,Liturgical Rhythm of Life,🟢 MIGRATE,The Message,Liturgical Rhythm of Life,/the-message/columns/liturgical-rhythm,YES,
+evdiomessage.org,https://evdiomessage.org/columns/catholic-healthcare/,Catholic Healthcare,🟢 MIGRATE,The Message,Catholic Healthcare,/the-message/columns/catholic-healthcare,YES,
+evdiomessage.org,https://evdiomessage.org/columns/20-something/,20-Something,🟢 MIGRATE,The Message,20-Something,/the-message/columns/20-something,YES,
+evdiomessage.org,https://evdiomessage.org/columns/youth-first/,Youth First,🟢 MIGRATE,The Message,Youth First,/the-message/columns/youth-first,YES,
+evdiomessage.org,https://evdiomessage.org/columns/lessons-learned/,Lessons Learned,🟢 MIGRATE,The Message,Lessons Learned,/the-message/columns/lessons-learned,YES,
+evdiomessage.org,https://evdiomessage.org/columns/wonderful-adventure/,Wonderful Adventure,🟢 MIGRATE,The Message,Wonderful Adventure,/the-message/columns/wonderful-adventure,YES,
+evdiomessage.org,https://evdiomessage.org/columns/because-i-am-catholic-porque-soy-catolico/,Because I Am Catholic,🟢 MIGRATE,The Message,Because I Am Catholic / Porque Soy Católico,/the-message/columns/because-i-am-catholic,YES,Bilingual column
+evdiomessage.org,https://evdiomessage.org/columns/catholic-charities/,Catholic Charities,🟢 MIGRATE,The Message,Catholic Charities,/the-message/columns/catholic-charities,YES,
+evdiomessage.org,https://evdiomessage.org/columns/a-place-for-all/,A Place for All,🟢 MIGRATE,The Message,A Place for All,/the-message/columns/a-place-for-all,YES,
+evdiomessage.org,https://evdiomessage.org/columns/natural-family-planning/,Natural Family Planning (column),🟢 MIGRATE,The Message,Natural Family Planning,/the-message/columns/nfp,YES,Column (distinct from Faith NFP page)
+evdiomessage.org,https://evdiomessage.org/columns/making-sense-of-bioethics/,Making Sense of Bioethics,🟢 MIGRATE,The Message,Making Sense of Bioethics,/the-message/columns/bioethics,YES,
+evdiomessage.org,https://evdiomessage.org/columns/the-catholic-kitchen/,The Catholic Kitchen,🟢 MIGRATE,The Message,The Catholic Kitchen,/the-message/columns/catholic-kitchen,YES,
+evdiomessage.org,https://evdiomessage.org/columns/footprints-of-our-catholic-brethren/,Footprints of Our Catholic Brethren,🟢 MIGRATE,The Message,Footprints of Our Catholic Brethren,/the-message/columns/footprints,YES,
+evdiomessage.org,https://evdiomessage.org/columns/youth-and-young-adult-ministry/,Youth and Young Adult Ministry,🟢 MIGRATE,The Message,Youth & Young Adult Ministry,/the-message/columns/youth-ministry,YES,
+evdiomessage.org,https://evdiomessage.org/columns/a-view-from-campus/,A View from Campus,🟢 MIGRATE,The Message,A View from Campus,/the-message/columns/view-from-campus,YES,
+evdiomessage.org,https://evdiomessage.org/columns/faces-of-faith/,Faces of Faith,🟢 MIGRATE,The Message,Faces of Faith,/the-message/columns/faces-of-faith,YES,
+evdiomessage.org,https://evdiomessage.org/columns/grace-notes/,Grace Notes,🟢 MIGRATE,The Message,Grace Notes,/the-message/columns/grace-notes,YES,
+evdiomessage.org,https://evdiomessage.org/columns/our-mother-earth/,Our Mother Earth,🟢 MIGRATE,The Message,Our Mother Earth,/the-message/columns/our-mother-earth,YES,
+evdiomessage.org,https://evdiomessage.org/columns/vincentians-serve-here/,Vincentians Serve Here,🟢 MIGRATE,The Message,Vincentians Serve Here,/the-message/columns/vincentians,YES,
+evdiomessage.org,https://evdiomessage.org/columns/it-seems-to-me/,It Seems to Me,🟢 MIGRATE,The Message,It Seems to Me,/the-message/columns/it-seems-to-me,YES,
+evdiomessage.org,https://evdiomessage.org/columns/radical-joy-catholic-stewardship-and-abundance/,Radical Joy,🟢 MIGRATE,The Message,Radical Joy,/the-message/columns/radical-joy,YES,
+evdiomessage.org,https://evdiomessage.org/columns/the-catholic-difference/,The Catholic Difference,🟢 MIGRATE,The Message,The Catholic Difference,/the-message/columns/catholic-difference,YES,
+evdiomessage.org,https://evdiomessage.org/columns/word-on-fire/,Word on Fire,🟢 MIGRATE,The Message,Word on Fire,/the-message/columns/word-on-fire,YES,
+evdiomessage.org,https://evdiomessage.org/columns/guest/,Guest Columns,🟢 MIGRATE,The Message,Guest Columns,/the-message/columns/guest,YES,
+,,,,,,,,
+evdiomessage.org,https://evdiomessage.org/photo-galleries/,Photo Galleries,🟢 MIGRATE,The Message,Photo Galleries,/the-message/photo-galleries,YES,New feature on new site
+evdiomessage.org,https://evdiomessage.org/video/,Videos,🟢 MIGRATE,The Message,Videos,/the-message/videos,YES,New feature on new site
+evdiomessage.org,https://evdiomessage.org/news-archive/,News Archive,🟡 RENAME,The Message,Archives,/the-message/archives,YES,
+evdiomessage.org,https://evdiomessage.org/local-news-2020/,Local News 2020,🟠 MERGE,The Message,Archives,/the-message/archives,YES,Archived year collection
+evdiomessage.org,https://evdiomessage.org/ministry-supplement/,Ministry Supplement,🟠 MERGE,The Message,Special Features,/the-message/features/ministry-supplement,YES,
+evdiomessage.org,https://evdiomessage.org/events/,Events (Message),🟠 MERGE,Events,Events Calendar,/events,YES,Merged with main Events section
+evdiomessage.org,https://evdiomessage.org/search/,Search,🟠 MERGE,The Message,Site Search,/search,YES,Uses site-wide search
+,,,,,,,,
+evdiomessage.org,https://evdiomessage.org/contact-us/change-of-address/,Change of Address,🟠 MERGE,The Message,Subscribe,/the-message/subscribe,YES,Subscriber form
+evdiomessage.org,https://evdiomessage.org/contact-us/anniversary-announcement/,Anniversary Announcement,🟢 MIGRATE,The Message,Anniversary Announcement Submission,/the-message/anniversary-announcement,YES,Submission form
+evdiomessage.org,https://evdiomessage.org/contact-us/bulletin-board-submissions/,Bulletin Board Submissions,🟢 MIGRATE,The Message,Bulletin Board,/the-message/bulletin-board,YES,
+,,,,,,,,
+evdiomessage.org,https://evdiomessage.org/front-page/,Front Page (WP artifact),🔴 DROP,—,—,/the-message,YES,WordPress artifact — redirect to landing
+evdiomessage.org,https://evdiomessage.org/uncategorized/,Uncategorized,🔴 DROP,—,—,,NO,WordPress default category — drop
+,,,,,,,,
+evdiomessage.org,https://evdiomessage.org/[all-article-posts]/,All Article Posts (~thousands),🟢 MIGRATE,The Message,Article Detail Template,/the-message/[slug],YES,Template-based migration — every article migrates via /the-message/[slug] pattern
+,,,,,,,,
+,,,,,,,,
+——— KEY ———,,,,,,,,
+STATUS CODES,,,,,,,,
+🟢 MIGRATE,Direct 1:1 port — same content moves to new URL,,,,,,,
+🟡 RENAME,Same content but with a new page title / URL per IA decisions,,,,,,,
+🟠 MERGE,Content folded into another page (one of several duplicates / consolidated topics),,,,,,,
+🔵 MOVE,Content moves to different section — audience shift (e.g. public → internal parish-staff),,,,,,,
+🔴 DROP,Not migrating — test page / duplicate / stale / deprecated,,,,,,,
+,,,,,,,,
+CONDITIONAL FORMATTING (OPTIONAL),,,,,,,,
+To color-code the Status column in Google Sheets:,,,,,,,,
+1. Select column D (Status),,,,,,,,
+2. Format > Conditional formatting,,,,,,,,
+3. Add one rule per status — "Text contains" → set fill color:,,,,,,,,
+🟢 MIGRATE → Green (#B7E1CD),,,,,,,,
+🟡 RENAME → Yellow (#FFF2CC),,,,,,,,
+🟠 MERGE → Orange (#FCE5CD),,,,,,,,
+🔵 MOVE → Blue (#C9DAF8),,,,,,,,
+🔴 DROP → Red (#F4CCCC),,,,,,,,
+,,,,,,,,
+FLAGGED FOR CLIENT VERIFICATION,,,,,,,,
+Encounter (YA retreat) — which event: TEC? Source + Summit?,,,,,,,,
+Healing & Helping Ministry — likely Red Bird Ministries. Confirm.,,,,,,,,
+SCAP / Pathways / Nicholas / Andie — confirm these can be dropped.,,,,,,,,
+Synod content — destination: About/Statements or The Message?,,,,,,,,
