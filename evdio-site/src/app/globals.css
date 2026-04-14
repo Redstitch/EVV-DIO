@@ -290,6 +290,17 @@ a { color: inherit; }
 }
 .give-wrap:hover > a.give-btn .chevron,
 .give-wrap.mega-open > a.give-btn .chevron { transform: rotate(180deg); stroke: #fff; }
+/* Override generic nav-item-wrap hover so Give stays white-on-red */
+.give-wrap > a.give-btn,
+.give-wrap:hover > a.give-btn,
+.give-wrap.mega-open > a.give-btn {
+  color: #fff;
+  background: var(--accent-red);
+}
+.give-wrap:hover > a.give-btn,
+.give-wrap.mega-open > a.give-btn {
+  background: var(--accent-red-hover);
+}
 .give-btn:hover {
   background: var(--accent-red-hover);
   transform: translateY(-1px);
