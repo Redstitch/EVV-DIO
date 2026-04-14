@@ -289,3 +289,42 @@ export const navItems: NavItem[] = [
     ],
   },
 ];
+
+export const giveItem: NavItem = {
+  key: "give",
+  label: "Give",
+  href: "/give",
+  alignRight: true,
+  menuWidth: "wide",
+  cols: 2,
+  children: [
+    {
+      heading: "Ways to Give",
+      links: [
+        { label: "Why Give?", href: "/give", featured: true },
+        { label: "Give Online", href: "/give#online", external: true },
+        { label: "Give Stock or Securities", href: "/give/stock" },
+        { label: "Planned & Legacy Giving", href: "/give/planned-giving" },
+      ],
+      highlight: {
+        title: "Give Online Now",
+        text: "Secure giving through OSV — one-time or recurring.",
+        href: "/give#online",
+        btnText: "Donate",
+      },
+    },
+    {
+      heading: "Campaigns & Impact",
+      links: [
+        { label: "Catholic Ministries Appeal", href: "/give/appeal" },
+        { label: "Donor Recognition (Deo Gratias Society)", href: "/give/donor-recognition" },
+        { label: "Annual Impact Report", href: "/give/impact-report" },
+        { label: "Stories of Impact", href: "/give/stories" },
+      ],
+      cta: {
+        label: "How Your Gift Makes a Difference",
+        href: "/give/how-your-gift-makes-a-difference",
+      },
+    },
+  ],
+};

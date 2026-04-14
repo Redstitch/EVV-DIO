@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MobileDrawer } from "./MobileDrawer";
-import { navItems } from "@/lib/navigation";
+import { navItems, giveItem } from "@/lib/navigation";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -188,9 +188,70 @@ export function Header() {
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
               </svg>
             </button>
-            <Link href="/give" className="give-btn">
-              Give
-            </Link>
+            <div
+              className={`nav-item-wrap give-wrap align-right ${
+                openMega === giveItem.key ? "mega-open" : ""
+              }`}
+              onMouseEnter={() => handleMegaEnter(giveItem.key)}
+              onMouseLeave={handleMegaLeave}
+            >
+              <Link href={giveItem.href} className="give-btn">
+                {giveItem.label}
+                <svg className="chevron" viewBox="0 0 12 12">
+                  <polyline points="2 4 6 8 10 4" />
+                </svg>
+              </Link>
+              {giveItem.children && (
+                <div className={`mega-menu ${giveItem.menuWidth || ""}`}>
+                  <div
+                    className={`grid gap-x-10 ${
+                      giveItem.cols === 4
+                        ? "grid-cols-4"
+                        : giveItem.cols === 3
+                          ? "grid-cols-3"
+                          : "grid-cols-2"
+                    }`}
+                  >
+                    {giveItem.children.map((col, ci) => (
+                      <div key={ci} className="mega-col">
+                        {col.heading && <h4>{col.heading}</h4>}
+                        {col.links.map((link, li) => (
+                          <Link
+                            key={li}
+                            href={link.href}
+                            className={`${link.featured ? "featured" : ""} ${
+                              link.external ? "external" : ""
+                            }`}
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                        {col.highlight && (
+                          <div className="mega-highlight">
+                            <h4>{col.highlight.title}</h4>
+                            <p>{col.highlight.text}</p>
+                            <Link href={col.highlight.href} className="mega-btn">
+                              {col.highlight.btnText}
+                            </Link>
+                          </div>
+                        )}
+                        {col.cta && (
+                          <div className="mega-cta">
+                            <Link href={col.cta.href}>
+                              {col.cta.label}
+                              <svg viewBox="0 0 24 24">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                              </svg>
+                            </Link>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Toggle */}
