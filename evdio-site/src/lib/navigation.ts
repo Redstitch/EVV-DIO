@@ -165,7 +165,7 @@ export const navItems: NavItem[] = [
           { label: "Catholic Schools Overview", href: "/schools", featured: true },
           { label: "Find a School / School Listings", href: "/schools/find" },
           { label: "Schools Map", href: "/schools/map" },
-          { label: "Enroll Your Child", href: "/schools/enroll", external: true },
+          { label: "Enroll Your Child", href: "/schools/enroll" },
         ],
         highlight: {
           title: "Catholic Schools",
