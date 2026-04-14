@@ -23,8 +23,29 @@ export default function Enroll() {
       />
 
       <main id="main-content">
-        {/* Steps */}
+        {/* Important: Enrollment is school-level */}
         <section className="section-padding bg-warm-white">
+          <div className="max-w-[860px] mx-auto">
+            <div className="bg-cream border-l-4 border-gold rounded-r-xl p-7">
+              <div className="section-label text-left mb-2">Important</div>
+              <h2 className="font-heading text-2xl font-bold text-navy mb-3">
+                Enrollment Happens at Each School
+              </h2>
+              <p className="text-base text-text-medium leading-relaxed mb-4">
+                Each of our 26 Catholic schools manages its own enrollment process, application forms, and admissions timeline. There is no central diocesan application — you apply directly to the school your child will attend.
+              </p>
+              <p className="text-base text-text-medium leading-relaxed mb-5">
+                The steps below walk you through the general process. To apply, find your school and follow its specific enrollment instructions.
+              </p>
+              <Link href="/schools/find" className="btn btn-primary">
+                Find Your School to Enroll
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Steps */}
+        <section className="section-padding bg-cream">
           <div className="max-w-[960px] mx-auto">
             <div className="text-center mb-14">
               <div className="section-label">Enrollment Process</div>
