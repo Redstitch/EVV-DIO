@@ -221,7 +221,6 @@ export const navItems: NavItem[] = [
           { label: "Disability & Inclusion", href: "/ministries/disability" },
           { label: "Prison & Jail Ministry", href: "/ministries/prison-ministry" },
           { label: "Social Justice", href: "/ministries/social-justice" },
-          { label: "Mission & Outreach", href: "/ministries/mission-outreach" },
           { label: "Catholic Charities", href: "https://catholiccharitiesevansville.org", external: true },
         ],
         cta: {
