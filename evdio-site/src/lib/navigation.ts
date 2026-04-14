@@ -122,6 +122,8 @@ export const navItems: NavItem[] = [
         heading: "Encounter",
         links: [
           { label: "How to Become Catholic", href: "/faith/become-catholic", featured: true },
+          { label: "Find a Parish", href: "/parishes" },
+          { label: "Watch Mass Online", href: "/parishes/watch-mass" },
         ],
       },
       {
@@ -141,7 +143,8 @@ export const navItems: NavItem[] = [
         links: [
           { label: "Prayer & Worship Resources", href: "/faith/prayer-worship" },
           { label: "Church Calendar", href: "/faith/calendar" },
-          { label: "Music Resources for Parishes", href: "/faith/music" },
+          { label: "Retreats", href: "/events/retreats" },
+          { label: "Young Adult Community", href: "/ministries/youth" },
         ],
         cta: {
           label: "Explore All Sacraments",
