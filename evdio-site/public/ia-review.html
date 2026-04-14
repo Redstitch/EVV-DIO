@@ -405,8 +405,8 @@
         <button class="nav-btn" onclick="showSection('ministries')">Ministries</button>
         <button class="nav-btn" onclick="showSection('events')">Events</button>
         <button class="nav-btn" onclick="showSection('message')">The Message</button>
-        <button class="nav-btn give">Give</button>
-        <button class="nav-btn search">Search</button>
+        <button class="nav-btn give" onclick="showSection('give')">Give</button>
+        <button class="nav-btn search" aria-label="Search">Search</button>
     </div>
 
     <!-- OVERVIEW -->
@@ -935,7 +935,7 @@
             document.querySelectorAll('.nav-btn').forEach((btn, i) => {
                 btn.classList.remove('active');
             });
-            const sections = ['overview','about','parishes','faith','schools','ministries','events','message'];
+            const sections = ['overview','about','parishes','faith','schools','ministries','events','message','give'];
             const idx = sections.indexOf(id);
             if (idx >= 0) document.querySelectorAll('.nav-btn')[idx].classList.add('active');
 

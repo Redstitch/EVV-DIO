@@ -274,11 +274,22 @@ a { color: inherit; }
   font-size: 13px; font-weight: 700; letter-spacing: 1.2px;
   text-transform: uppercase; padding: 10px 24px; border-radius: 6px;
   text-decoration: none; transition: all 0.3s; position: relative; overflow: hidden;
+  display: inline-flex; align-items: center; gap: 6px;
 }
 .give-btn::before {
   content: ''; position: absolute; inset: 0;
   background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.1));
+  pointer-events: none;
 }
+.give-wrap > a.give-btn .chevron {
+  width: 10px; height: 10px; fill: none;
+  stroke: #fff; stroke-width: 2.5;
+  stroke-linecap: round; stroke-linejoin: round;
+  transition: transform 0.3s;
+  position: relative; z-index: 1;
+}
+.give-wrap:hover > a.give-btn .chevron,
+.give-wrap.mega-open > a.give-btn .chevron { transform: rotate(180deg); stroke: #fff; }
 .give-btn:hover {
   background: var(--accent-red-hover);
   transform: translateY(-1px);
