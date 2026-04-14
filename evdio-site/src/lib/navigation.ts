@@ -190,8 +190,8 @@ export const navItems: NavItem[] = [
     key: "ministries",
     label: "Ministries",
     href: "/ministries",
-    menuWidth: "extra-wide",
-    cols: 4,
+    menuWidth: "wide",
+    cols: 3,
     children: [
       {
         heading: "Family & Life",
@@ -223,14 +223,6 @@ export const navItems: NavItem[] = [
           { label: "Social Justice", href: "/ministries/social-justice" },
           { label: "Mission & Outreach", href: "/ministries/mission-outreach" },
           { label: "Catholic Charities", href: "https://catholiccharitiesevansville.org", external: true },
-        ],
-      },
-      {
-        heading: "Giving & Support",
-        links: [
-          { label: "Donate", href: "/give" },
-          { label: "Catholic Ministries Appeal", href: "/give/appeal" },
-          { label: "Planned & Legacy Giving", href: "/give/planned-giving" },
         ],
         cta: {
           label: "View All Ministries",
