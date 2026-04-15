@@ -124,12 +124,10 @@ export function Footer() {
                 <Link href="/ministries/youth">Youth &amp; Young Adult</Link>
               </li>
               <li>
-                <Link href="/ministries/religious-education">
-                  Religious Education
-                </Link>
+                <Link href="/ministries/hispanic">Hispanic Ministry</Link>
               </li>
               <li>
-                <Link href="/ministries/hispanic">Hispanic Ministry</Link>
+                <Link href="/ministries/disability">Disability &amp; Inclusion</Link>
               </li>
               <li>
                 <Link href="https://catholiccharitiesevansville.org">

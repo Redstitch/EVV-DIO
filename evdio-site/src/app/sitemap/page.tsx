@@ -103,7 +103,6 @@ export default function SitemapPage() {
                 title="Ministries"
                 links={[
                   { label: "Ministries Overview", href: "/ministries" },
-                  { label: "Religious Education", href: "/ministries/religious-education" },
                   { label: "Youth Ministry", href: "/ministries/youth" },
                   { label: "Campus Ministry", href: "/ministries/campus-ministry" },
                   { label: "Marriage & Family Life", href: "/ministries/marriage-family" },
@@ -113,9 +112,9 @@ export default function SitemapPage() {
                   { label: "Men&rsquo;s Ministry", href: "/ministries/mens-ministry" },
                   { label: "Senior Ministry", href: "/ministries/senior-ministry" },
                   { label: "Scholarships & Financial Aid", href: "/ministries/scholarships" },
-                  { label: "SPRED (Special Needs Ed)", href: "/ministries/spred" },
                   { label: "Ministerio Hispano", href: "/ministries/hispanic" },
                   { label: "Disability & Inclusion", href: "/ministries/disability" },
+                  { label: "SPRED (Special Needs Religious Ed)", href: "/ministries/spred" },
                   { label: "Prison & Jail Ministry", href: "/ministries/prison-ministry" },
                   { label: "Social Justice", href: "/ministries/social-justice" },
                 ]}

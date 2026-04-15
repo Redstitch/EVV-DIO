@@ -18,6 +18,7 @@ export default function SpredPage() {
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Ministries", href: "/ministries" },
+          { label: "Disability & Inclusion", href: "/ministries/disability" },
           { label: "Special Needs Religious Ed" },
         ]}
       />
@@ -122,8 +123,8 @@ export default function SpredPage() {
               <Link href="/ministries/disability" className="btn btn-secondary">
                 Disability & Inclusion
               </Link>
-              <Link href="/ministries/religious-education" className="btn btn-outline">
-                Religious Education
+              <Link href="/about/offices" className="btn btn-outline">
+                Office of Catechesis
               </Link>
               <Link href="/ministries" className="btn btn-outline">
                 All Ministries

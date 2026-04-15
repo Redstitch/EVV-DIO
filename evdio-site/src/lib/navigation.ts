@@ -209,8 +209,6 @@ export const navItems: NavItem[] = [
         links: [
           { label: "Youth & Young Adults", href: "/ministries/youth", featured: true },
           { label: "College Campus Ministry", href: "/ministries/campus-ministry" },
-          { label: "Religious Education", href: "/ministries/religious-education" },
-          { label: "Special Needs Religious Ed", href: "/ministries/spred" },
           { label: "Scholarships & Financial Aid", href: "/ministries/scholarships" },
         ],
       },

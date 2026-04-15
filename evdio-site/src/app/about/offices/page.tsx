@@ -64,9 +64,8 @@ const offices: {
   {
     name: "Office of Catechesis",
     description:
-      "Coordinates faith formation programs for children, teens, and adults. Supports OCIA, sacramental preparation, VBS, and parish-based evangelization. Also known publicly as Religious Education.",
+      "Coordinates faith formation programs for children, teens, and adults across the diocese. Supports parish education leaders, Teacher Formation Day, religion curriculum, OCIA, sacramental preparation, VBS, and parish-based evangelization.",
     contact: "catechesis@evdio.org",
-    link: { href: "/ministries/religious-education", label: "Religious Education →" },
   },
   {
     name: "Office of Vocations",
