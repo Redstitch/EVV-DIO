@@ -45,9 +45,10 @@ export const navItems: NavItem[] = [
           { label: "Our Bishop", href: "/about/our-bishop", featured: true },
           { label: "Diocesan Leadership", href: "/about/leadership" },
           { label: "Our History", href: "/about/our-history" },
+          { label: "Past Bishops", href: "/about/past-bishops" },
+          { label: "Cathedral Library & Museum", href: "/about/cathedral-library" },
           { label: "Our Vision & Priorities", href: "/about/our-vision" },
           { label: "Monthly Dashboard", href: "/about/dashboard" },
-          { label: "Official Statements & Decrees", href: "/about/statements" },
         ],
         highlight: {
           title: "Monthly Dashboard",
@@ -133,9 +134,9 @@ export const navItems: NavItem[] = [
           { label: "First Communion", href: "/faith/first-communion" },
           { label: "Confirmation", href: "/faith/confirmation" },
           { label: "Catholic Marriage", href: "/faith/marriage" },
+          { label: "Annulments", href: "/faith/annulments" },
           { label: "Anointing of the Sick", href: "/faith/anointing" },
           { label: "Vocations", href: "/faith/vocations" },
-          { label: "Becoming a Deacon", href: "/faith/deacon" },
         ],
       },
       {
@@ -157,15 +158,17 @@ export const navItems: NavItem[] = [
     key: "schools",
     label: "Catholic Schools",
     href: "/schools",
-    cols: 2,
+    menuWidth: "wide",
+    cols: 3,
     children: [
       {
         heading: "Our Schools",
         links: [
           { label: "Catholic Schools Overview", href: "/schools", featured: true },
+          { label: "Mission & Vision", href: "/schools/mission-vision" },
           { label: "Find a School / School Listings", href: "/schools/find" },
           { label: "Schools Map", href: "/schools/map" },
-          { label: "Enroll Your Child", href: "/schools/enroll" },
+          { label: "Enroll Your Child", href: "/schools/enroll", featured: true },
         ],
         highlight: {
           title: "Catholic Schools",
@@ -175,6 +178,14 @@ export const navItems: NavItem[] = [
         },
       },
       {
+        heading: "Browse Schools",
+        links: [
+          { label: "High Schools", href: "/schools/high-schools" },
+          { label: "Elementary / Middle Schools (PreK-8)", href: "/schools/prek-8" },
+          { label: "Elementary Schools (PreK-5)", href: "/schools/prek-5" },
+        ],
+      },
+      {
         heading: "For Families & Staff",
         links: [
           { label: "Tuition Assistance & Affordability", href: "/schools/tuition" },
@@ -182,6 +193,7 @@ export const navItems: NavItem[] = [
           { label: "Accreditation & Standards", href: "/schools/accreditation" },
           { label: "Student Health & Wellness", href: "/schools/health" },
           { label: "Teaching & Staff Careers", href: "/schools/careers" },
+          { label: "For School Staff & Administrators", href: "/schools/staff-admin" },
         ],
       },
     ],
@@ -215,11 +227,13 @@ export const navItems: NavItem[] = [
       {
         heading: "Community & Outreach",
         links: [
-          { label: "Ministerio Hispano", href: "/ministries/hispanic" },
+          { label: "Hispanic Ministry", href: "/ministries/hispanic" },
           { label: "Disability & Inclusion", href: "/ministries/disability" },
+          { label: "Special Needs Religious Ed (SPRED)", href: "/ministries/spred" },
           { label: "Prison & Jail Ministry", href: "/ministries/prison-ministry" },
           { label: "Social Justice", href: "/ministries/social-justice" },
           { label: "Catholic Charities", href: "https://catholiccharitiesevansville.org", external: true },
+          { label: "Catholic Ministries Appeal", href: "/give/appeal" },
         ],
         cta: {
           label: "View All Ministries",
