@@ -88,7 +88,7 @@ export default function ContactPage() {
                     <QuickLink href="/about/staff-directory" label="Staff Directory" />
                     <QuickLink href="/about/clergy-directory" label="Clergy Directory" />
                     <QuickLink href="/about/offices" label="Offices & Departments" />
-                    <QuickLink href="/about/press-room" label="Press Room & Media" />
+                    <QuickLink href="/about/press-room" label="Media Inquiries" />
                   </div>
                 </div>
               </div>

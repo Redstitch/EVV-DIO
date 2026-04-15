@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Press Room",
+  title: "Media Inquiries",
   description:
     "Media resources, press releases, brand guidelines, and contact information for journalists covering the Catholic Diocese of Evansville.",
 };
@@ -46,12 +46,12 @@ export default function PressRoomPage() {
     <>
       <PageHero
         label="About"
-        title="Press Room"
+        title="Media Inquiries"
         subtitle="Media resources, press releases, and contact information for journalists."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "About", href: "/about" },
-          { label: "Press Room" },
+          { label: "Media Inquiries" },
         ]}
       />
 

@@ -21,8 +21,8 @@ evdio.org,https://www.evdio.org/directories.html,Directories,🟢 MIGRATE,About,
 evdio.org,https://www.evdio.org/contact.html,Contact,🟡 RENAME,About,Contact Us,/about/contact,YES,
 evdio.org,https://www.evdio.org/contact-us.html,Contact Us (dup),🔴 DROP,—,—,/about/contact,YES,Duplicate — 301 to canonical
 evdio.org,https://www.evdio.org/contact-us1.html,Contact Us (dup 2),🔴 DROP,—,—,/about/contact,YES,Duplicate
-evdio.org,https://www.evdio.org/media.html,Media,🟠 MERGE,About,Press Room,/about/press-room,YES,Merged
-evdio.org,https://www.evdio.org/media-inquiries.html,Media Inquiries,🟡 RENAME,About,Press Room,/about/press-room,YES,
+evdio.org,https://www.evdio.org/media.html,Media,🟠 MERGE,About,Media Inquiries,/about/press-room,YES,Merged
+evdio.org,https://www.evdio.org/media-inquiries.html,Media Inquiries,🟡 RENAME,About,Media Inquiries,/about/press-room,YES,
 evdio.org,https://www.evdio.org/employment-opportunities.html,Employment Opportunities,🟡 RENAME,About,Careers,/about/careers,YES,
 evdio.org,https://www.evdio.org/employment-opportunities1.html,Employment Opp (dup),🔴 DROP,—,—,/about/careers,YES,Duplicate
 evdio.org,https://www.evdio.org/applicants.html,Applicants,🟠 MERGE,About,Careers,/about/careers,YES,

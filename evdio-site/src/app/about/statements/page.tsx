@@ -179,7 +179,7 @@ export default function StatementsPage() {
             </p>
             <div className="flex gap-4 flex-wrap justify-center">
               <Link href="/about/press-room" className="btn btn-primary">
-                Visit the Press Room
+                Media Inquiries
               </Link>
               <Link href="/about/contact" className="btn btn-outline" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
                 Contact Communications

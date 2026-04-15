@@ -68,7 +68,7 @@ export const navItems: NavItem[] = [
           { label: "Catholic Resources & Links", href: "/about/resources" },
           { label: "Careers", href: "/about/careers" },
           { label: "Contact Us", href: "/about/contact" },
-          { label: "Press Room", href: "/about/press-room" },
+          { label: "Media Inquiries", href: "/about/press-room" },
         ],
       },
       {

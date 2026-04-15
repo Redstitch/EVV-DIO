@@ -40,7 +40,7 @@ const offices: {
     description:
       "Manages diocesan communications, including The Message newspaper, the diocesan website, social media, press relations, and internal communications to parishes.",
     contact: "communications@evdio.org",
-    link: { href: "/about/press-room", label: "Press Room →" },
+    link: { href: "/about/press-room", label: "Media Inquiries →" },
   },
   {
     name: "Finance Office",

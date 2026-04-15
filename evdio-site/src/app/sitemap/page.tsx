@@ -37,7 +37,7 @@ export default function SitemapPage() {
                   { label: "Offices & Departments", href: "/about/offices" },
                   { label: "Staff Directory", href: "/about/staff-directory" },
                   { label: "Clergy Directory", href: "/about/clergy-directory" },
-                  { label: "Press Room", href: "/about/press-room" },
+                  { label: "Media Inquiries", href: "/about/press-room" },
                   { label: "Official Statements", href: "/about/statements" },
                   { label: "Transparency Dashboard", href: "/about/dashboard" },
                   { label: "Careers", href: "/about/careers" },
