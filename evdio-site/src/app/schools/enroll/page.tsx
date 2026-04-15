@@ -3,9 +3,9 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Enroll Your Child",
+  title: "Inquire About Enrollment",
   description:
-    "Enroll your child in a Catholic school in the Diocese of Evansville. Learn about the enrollment process, required documents, important dates, and financial assistance.",
+    "Considering Catholic school for your child? Start here to learn about the enrollment process, required documents, important dates, and financial assistance across Diocese of Evansville schools.",
 };
 
 export default function Enroll() {
@@ -13,12 +13,12 @@ export default function Enroll() {
     <>
       <PageHero
         label="Catholic Schools"
-        title="Enroll Your Child"
+        title="Inquire About Enrollment"
         subtitle="Take the first step toward a Catholic education. Enrollment is open year-round at most schools, with primary registration in the spring for the following academic year."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Catholic Schools", href: "/schools" },
-          { label: "Enroll Your Child" },
+          { label: "Inquire About Enrollment" },
         ]}
       />
 

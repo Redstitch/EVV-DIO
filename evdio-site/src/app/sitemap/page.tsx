@@ -89,7 +89,7 @@ export default function SitemapPage() {
                   { label: "Schools Overview", href: "/schools" },
                   { label: "Find a School", href: "/schools/find" },
                   { label: "School Map", href: "/schools/map" },
-                  { label: "Enroll Your Child", href: "/schools/enroll" },
+                  { label: "Inquire About Enrollment", href: "/schools/enroll" },
                   { label: "Tuition & Affordability", href: "/schools/tuition" },
                   { label: "Accreditation", href: "/schools/accreditation" },
                   { label: "Special Needs Programs", href: "/schools/special-needs" },

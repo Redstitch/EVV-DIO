@@ -137,7 +137,7 @@ export default function FindSchool() {
             </p>
             <div className="flex gap-4 flex-wrap justify-center">
               <Link href="/schools/enroll" className="btn btn-primary">
-                Enroll Your Child
+                Inquire About Enrollment
               </Link>
               <Link href="/schools/tuition" className="btn btn-outline" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
                 Tuition Assistance
