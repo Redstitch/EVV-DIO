@@ -121,7 +121,7 @@ export const navItems: NavItem[] = [
     cols: 3,
     children: [
       {
-        heading: "Encounter",
+        heading: "Start Here",
         links: [
           { label: "How to Become Catholic", href: "/faith/become-catholic", featured: true },
           { label: "Find a Parish", href: "/parishes" },
@@ -129,7 +129,7 @@ export const navItems: NavItem[] = [
         ],
       },
       {
-        heading: "Deepen",
+        heading: "The Sacraments",
         links: [
           { label: "Baptism", href: "/faith/baptism" },
           { label: "First Communion", href: "/faith/first-communion" },
@@ -141,7 +141,7 @@ export const navItems: NavItem[] = [
         ],
       },
       {
-        heading: "Engage",
+        heading: "Prayer & Community",
         links: [
           { label: "Prayer & Worship Resources", href: "/faith/prayer-worship" },
           { label: "Church Calendar", href: "/faith/calendar" },
