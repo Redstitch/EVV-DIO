@@ -49,6 +49,7 @@ export const navItems: NavItem[] = [
           { label: "Cathedral Library & Museum", href: "/about/cathedral-library" },
           { label: "Our Vision & Priorities", href: "/about/our-vision" },
           { label: "Monthly Dashboard", href: "/about/dashboard" },
+          { label: "Diocesan Director Discussions", href: "/about/director-discussions" },
         ],
         highlight: {
           title: "Monthly Dashboard",

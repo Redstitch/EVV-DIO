@@ -2,10 +2,10 @@ Section,Main Page,Sub-page,Sub-sub-page,Renamed From,New?,Notes
 ABOUT,About (Landing),,,,,
 ABOUT,Our Bishop,,,Bishop's Office,,
 ABOUT,,Biography / Coat of Arms / Motto,,,,
-ABOUT,,Messages & Statements,,,,Landing for Bishop's 3D communications
-ABOUT,,,Pastoral Letters & Written Messages,,YES,Structured format (3D: written)
-ABOUT,,,Video Homilies & Messages,,YES,Structured format (3D: video)
-ABOUT,,,Podcast Appearances & Audio,,YES,Structured format (3D: audio)
+ABOUT,,Messages & Statements,,,,Landing for bishop's messages in written / video / audio formats
+ABOUT,,,Pastoral Letters & Written Messages,,YES,Written format
+ABOUT,,,Video Homilies & Messages,,YES,Video format
+ABOUT,,,Podcast Appearances & Audio,,YES,Audio format
 ABOUT,Diocesan Leadership,,,Chancellor's Office + Vicar General (merged),,
 ABOUT,Our History,,,History of the Diocese,,
 ABOUT,Past Bishops,,,,,
@@ -40,6 +40,7 @@ ABOUT,Directories,,,Directories (split into 3),,Landing page linking to three we
 ABOUT,,Staff Directory,,,YES,Full web directory — searchable / filterable
 ABOUT,,Clergy Directory,,,YES,Full web directory — searchable / filterable
 ABOUT,,Parish Directory,,,YES,Full web directory — searchable / filterable
+ABOUT,Diocesan Director Discussions (3D),,,3-D Communications,,Video series featuring diocesan office & ministry directors (migrated from evdio.org/3-d-communications.html)
 ABOUT,Catholic Resources & Links,,,Links & Resources,,
 ABOUT,Careers,,,Employment Opportunities,,
 ABOUT,Contact Us,,,,,
