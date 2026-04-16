@@ -145,8 +145,6 @@ export const navItems: NavItem[] = [
         links: [
           { label: "Prayer & Worship Resources", href: "/faith/prayer-worship" },
           { label: "Church Calendar", href: "/faith/calendar" },
-          { label: "Retreats", href: "/events/retreats" },
-          { label: "Young Adult Community", href: "/ministries/youth" },
         ],
         cta: {
           label: "Explore All Sacraments",
