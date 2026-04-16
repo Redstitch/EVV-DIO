@@ -285,6 +285,8 @@ export const navItems: NavItem[] = [
         links: [
           { label: "Opinion & Columns", href: "/the-message/columns" },
           { label: "Movie Reviews", href: "/the-message/reviews" },
+          { label: "Photo Galleries", href: "/the-message/photo-galleries" },
+          { label: "Videos", href: "/the-message/videos" },
           { label: "Archives", href: "/the-message/archives" },
           { label: "About The Message", href: "/the-message/about" },
         ],
