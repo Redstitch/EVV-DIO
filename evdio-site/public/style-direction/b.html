@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Direction B — Faith &amp; Sacraments — Diocese of Evansville</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0A2240;
+  --teal: #004E73;
+  --blue: #005CBA;
+  --brick: #A44637;
+  --dgold: #D09000;
+  --bgold: #FFD040;
+  --stone: #B5AF9B;
+  --cream: #EEDAB3;
+  --paper: #FAF6EC;
+  --parchment: #F5EBD0;
+  --ink: #0A2240;
+  --focus: #D09000;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--parchment);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--bgold); color: var(--navy); }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+/* ─── HEADER ─── */
+.header {
+  background: var(--parchment);
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(10,34,64,0.1);
+}
+.header .wrap { max-width: 1400px; margin: 0 auto; padding: 0 32px; display: flex; justify-content: space-between; align-items: center; gap: 48px; }
+.brand { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+.brand-mark {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--navy); color: var(--bgold);
+  display: grid; place-items: center;
+  font-family: 'UnifrakturMaguntia', serif; font-size: 26px;
+}
+.brand-text .tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--brick); font-weight: 500; }
+.brand-text .name { font-family: 'Cinzel', serif; font-size: 18px; color: var(--navy); letter-spacing: 1.2px; font-weight: 600; }
+.nav ul { list-style: none; display: flex; gap: 32px; }
+.nav a { text-decoration: none; color: var(--navy); font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; }
+.nav a.active { color: var(--brick); border-bottom: 2px solid var(--brick); padding-bottom: 4px; }
+.nav a:hover { color: var(--brick); }
+.give-btn {
+  background: var(--brick); color: #fff;
+  padding: 11px 22px; border-radius: 3px;
+  font-family: 'Cinzel', serif; letter-spacing: 2px; font-size: 12px; font-weight: 600;
+  text-decoration: none; text-transform: uppercase;
+}
+
+/* ─── BREADCRUMB RAIL ─── */
+.rail { background: var(--parchment); padding: 18px 0; border-bottom: 1px solid rgba(10,34,64,0.08); }
+.rail .wrap { max-width: 1400px; margin: 0 auto; padding: 0 32px; font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal); font-weight: 500; }
+.rail a { text-decoration: none; color: var(--teal); }
+.rail .sep { margin: 0 12px; color: var(--dgold); }
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  padding: 96px 0 64px;
+  background: var(--parchment);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(208,144,0,0.12) 0%, transparent 70%);
+  z-index: 0;
+}
+.hero .wrap {
+  max-width: 1100px; margin: 0 auto; padding: 0 32px;
+  text-align: center; position: relative; z-index: 1;
+}
+.hero-flourish {
+  display: inline-flex; align-items: center; gap: 20px;
+  color: var(--dgold); margin-bottom: 32px;
+}
+.hero-flourish::before, .hero-flourish::after {
+  content: ''; width: 100px; height: 1px; background: var(--dgold);
+}
+.hero-flourish span {
+  font-family: 'Cinzel', serif;
+  font-size: 12px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--brick); font-weight: 600;
+}
+.hero h1 {
+  font-family: 'UnifrakturMaguntia', serif;
+  font-weight: 400;
+  font-size: clamp(60px, 8.5vw, 128px);
+  line-height: 0.9;
+  color: var(--navy);
+  margin-bottom: 28px;
+  letter-spacing: -1px;
+}
+.hero h1 em {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-weight: 500;
+  color: var(--brick);
+  font-size: 0.7em;
+  display: block;
+  margin-top: 8px;
+}
+.hero-lede {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.55;
+  color: #3a3631;
+  max-width: 680px; margin: 0 auto 40px;
+  font-style: italic;
+}
+.hero-ornament {
+  font-family: 'UnifrakturMaguntia', serif;
+  font-size: 48px;
+  color: var(--dgold);
+  line-height: 1;
+}
+
+/* ─── INTRO + ICON ROW ─── */
+.intro {
+  padding: 80px 0 96px;
+  background: var(--parchment);
+  position: relative;
+}
+.intro .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
+.intro-copy .dropcap {
+  font-family: 'UnifrakturMaguntia', serif;
+  color: var(--brick);
+  font-size: 84px;
+  line-height: 0.85;
+  float: left;
+  padding: 6px 14px 0 0;
+  margin-top: 4px;
+}
+.intro-copy p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px; line-height: 1.7;
+  color: #2c2a25;
+}
+.intro-copy p + p { margin-top: 20px; }
+.intro-scripture {
+  background: var(--navy);
+  color: var(--cream);
+  padding: 56px 48px;
+  position: relative;
+  border: 1px solid var(--dgold);
+}
+.intro-scripture::before {
+  content: ''; position: absolute; inset: 8px; border: 1px solid rgba(208,144,0,0.35); pointer-events: none;
+}
+.intro-scripture .label {
+  font-family: 'Cinzel', serif;
+  font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--bgold); margin-bottom: 20px; font-weight: 600;
+}
+.intro-scripture blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 26px; line-height: 1.4;
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+.intro-scripture .cite {
+  font-family: 'Cinzel', serif;
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--bgold); font-weight: 500;
+}
+
+/* ─── SEVEN SACRAMENTS ─── */
+.sacraments {
+  background: var(--navy);
+  color: var(--cream);
+  padding: 120px 0 140px;
+  position: relative;
+  overflow: hidden;
+}
+.sacraments::before, .sacraments::after {
+  content: '';
+  position: absolute; left: 50%; transform: translateX(-50%);
+  width: 70%; max-width: 600px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dgold), transparent);
+}
+.sacraments::before { top: 40px; }
+.sacraments::after { bottom: 40px; }
+.sacraments .wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+.sacraments-head { text-align: center; margin-bottom: 80px; }
+.sacraments-head .flourish {
+  color: var(--bgold); font-family: 'UnifrakturMaguntia', serif; font-size: 36px;
+  margin-bottom: 16px; line-height: 1;
+}
+.sacraments-head .eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 12px; letter-spacing: 5px; text-transform: uppercase;
+  color: var(--dgold); margin-bottom: 16px; font-weight: 500;
+}
+.sacraments-head h2 {
+  font-family: 'UnifrakturMaguntia', serif;
+  font-weight: 400;
+  font-size: clamp(48px, 6.5vw, 84px);
+  line-height: 1;
+  color: var(--cream);
+}
+.sacraments-head h2 em {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-weight: 400;
+  font-size: 0.55em;
+  display: block; margin-top: 12px;
+  color: var(--bgold);
+}
+.sacrament-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  margin-bottom: 24px;
+}
+.sacrament-grid.row2 { grid-template-columns: repeat(3, 1fr); max-width: 960px; margin: 0 auto; }
+.sacrament {
+  border: 1px solid rgba(208,144,0,0.35);
+  background: rgba(10,34,64,0.3);
+  padding: 48px 28px 36px;
+  text-align: center;
+  text-decoration: none; color: inherit;
+  display: flex; flex-direction: column; align-items: center;
+  transition: all .35s ease;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(50% + 20px) 100%, calc(50% - 20px) 100%, 0 calc(100% - 20px));
+}
+.sacrament:hover {
+  background: rgba(255,208,64,0.08);
+  transform: translateY(-4px);
+  border-color: var(--bgold);
+}
+.sacrament .roman {
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 700;
+  font-size: 40px; line-height: 1;
+  color: var(--bgold);
+  margin-bottom: 14px;
+}
+.sacrament h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 500;
+  color: var(--cream);
+  margin-bottom: 10px;
+  line-height: 1.15;
+}
+.sacrament p {
+  font-size: 13px;
+  color: rgba(238,218,179,0.75);
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+.sacrament .chev {
+  font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--bgold); font-weight: 600;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+
+/* ─── PATH + PRAYER RAIL ─── */
+.path {
+  background: var(--parchment);
+  padding: 120px 0;
+}
+.path .wrap {
+  max-width: 1280px; margin: 0 auto; padding: 0 32px;
+  display: grid; grid-template-columns: 1.5fr 1fr; gap: 80px;
+}
+.path-main h2 {
+  font-family: 'UnifrakturMaguntia', serif;
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 60px);
+  color: var(--navy); line-height: 1;
+  margin-bottom: 12px;
+}
+.path-main .sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-style: italic;
+  color: var(--brick);
+  margin-bottom: 48px;
+}
+.step {
+  display: grid; grid-template-columns: 100px 1fr; gap: 28px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(10,34,64,0.12);
+  align-items: start;
+}
+.step:last-child { border-bottom: none; }
+.step-number {
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 700;
+  font-size: 60px; line-height: 0.9;
+  color: var(--dgold);
+}
+.step-body h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.step-body p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; line-height: 1.55;
+  color: #3a3631;
+}
+.prayer-rail {
+  background: var(--cream);
+  border: 1px solid rgba(164,70,55,0.25);
+  padding: 48px 40px;
+  position: sticky; top: 40px;
+}
+.prayer-rail .ornament {
+  font-family: 'UnifrakturMaguntia', serif;
+  color: var(--brick); font-size: 32px; line-height: 1;
+  margin-bottom: 16px;
+}
+.prayer-rail .label {
+  font-family: 'Cinzel', serif;
+  font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--brick); font-weight: 600; margin-bottom: 12px;
+}
+.prayer-rail h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 500;
+  color: var(--navy); margin-bottom: 18px;
+  line-height: 1.2;
+}
+.prayer-rail p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; line-height: 1.6;
+  color: #2c2a25;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.prayer-rail .cite {
+  font-family: 'Cinzel', serif;
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--dgold); font-weight: 600;
+  display: block; margin-bottom: 32px;
+}
+.prayer-rail .links {
+  list-style: none; padding: 24px 0 0; margin: 0;
+  border-top: 1px solid rgba(164,70,55,0.2);
+}
+.prayer-rail .links li { margin-bottom: 14px; }
+.prayer-rail .links a {
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 600;
+  display: flex; align-items: center; gap: 10px;
+}
+.prayer-rail .links a:hover { color: var(--brick); }
+
+/* ─── CTA ─── */
+.cta {
+  background: var(--brick);
+  color: var(--cream);
+  padding: 100px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta::before, .cta::after {
+  content: '';
+  position: absolute;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,208,64,0.12) 0%, transparent 70%);
+}
+.cta::before { top: -200px; left: -100px; }
+.cta::after { bottom: -200px; right: -100px; }
+.cta .wrap { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+.cta .eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 12px; letter-spacing: 5px; text-transform: uppercase;
+  color: var(--bgold); margin-bottom: 20px; font-weight: 500;
+}
+.cta h2 {
+  font-family: 'UnifrakturMaguntia', serif;
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1; margin-bottom: 24px;
+  color: var(--cream);
+}
+.cta p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; line-height: 1.5;
+  color: var(--cream); opacity: 0.95;
+  margin-bottom: 40px; font-style: italic;
+}
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: var(--bgold); color: var(--navy);
+  padding: 18px 36px; border-radius: 3px;
+  font-family: 'Cinzel', serif; letter-spacing: 2.5px; font-size: 13px; font-weight: 700; text-transform: uppercase;
+  text-decoration: none;
+  transition: background .2s;
+}
+.cta-btn:hover { background: var(--cream); }
+
+/* ─── FOOTER ─── */
+.footer {
+  background: var(--navy); color: var(--cream);
+  padding: 64px 32px 32px;
+  text-align: center;
+  border-top: 4px solid var(--dgold);
+}
+.footer .ornament { font-family: 'UnifrakturMaguntia', serif; font-size: 32px; color: var(--bgold); margin-bottom: 20px; }
+.footer .verse { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: var(--cream); opacity: 0.85; max-width: 600px; margin: 0 auto 36px; }
+.footer .links { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+.footer .links a {
+  font-family: 'Cinzel', serif;
+  font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--bgold); text-decoration: none;
+  font-weight: 600;
+}
+.footer .copy {
+  font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: rgba(238,218,179,0.6);
+  padding-top: 24px; border-top: 1px solid rgba(238,218,179,0.15);
+  max-width: 900px; margin: 0 auto;
+}
+
+/* ─── SWATCHES STRIP ─── */
+.swatches { display: flex; background: var(--parchment); padding: 20px 32px; gap: 12px; align-items: center; border-top: 1px solid rgba(10,34,64,0.1); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--brick); font-family: 'Cinzel', serif; font-weight: 600; }
+.swatch { width: 32px; height: 32px; border-radius: 50%; box-shadow: 0 0 0 2px var(--parchment), 0 0 0 3px rgba(10,34,64,0.1); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .sacrament-grid, .sacrament-grid.row2 { grid-template-columns: repeat(2, 1fr); }
+  .intro .wrap, .path .wrap { grid-template-columns: 1fr; gap: 48px; }
+  .prayer-rail { position: static; }
+  .nav { display: none; }
+}
+@media (max-width: 640px) {
+  .sacrament-grid, .sacrament-grid.row2 { grid-template-columns: 1fr; }
+  .hero { padding: 64px 0 48px; }
+  .step { grid-template-columns: 64px 1fr; gap: 16px; }
+  .step-number { font-size: 42px; }
+}
+</style>
+</head>
+<body>
+
+<header class="header" role="banner">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="Diocese of Evansville, home">
+      <span class="brand-mark" aria-hidden="true">✠</span>
+      <span class="brand-text">
+        <span class="tag">Roman Catholic</span>
+        <span class="name">Diocese of Evansville</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Parishes &amp; Mass</a></li>
+        <li><a href="#" class="active">Faith &amp; Sacraments</a></li>
+        <li><a href="#">Schools</a></li>
+        <li><a href="#">Ministries</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">The Message</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="give-btn">Give</a>
+  </div>
+</header>
+
+<div class="rail" aria-label="Breadcrumb">
+  <div class="wrap">
+    <a href="/">Home</a> <span class="sep">·</span> <a href="#">Faith &amp; Sacraments</a>
+  </div>
+</div>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-flourish"><span>Sacramenta Septem</span></div>
+    <h1>Faith &amp; Sacraments<em>the grace-filled life</em></h1>
+    <p class="hero-lede">The Church hands us seven sacred signs — visible moments of invisible grace that carry us from the waters of Baptism to the bedside of anointing.</p>
+    <div class="hero-ornament" aria-hidden="true">✠ &nbsp; ❦ &nbsp; ✠</div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <div class="intro-copy">
+      <p><span class="dropcap">T</span>o be Catholic is to believe that God meets us in matter — in water and oil, in bread and wine, in a whispered confession, a wedding vow, the laying on of hands. These are not mere rituals. They are <em>the very action of Christ</em>, still unfolding today in forty-six parishes across Southwestern Indiana.</p>
+      <p>Whether you're preparing a child for First Communion, standing before Confirmation, planning a Catholic wedding, or walking with a loved one toward the final anointing — this is the doorway. Find what you need, find who can help.</p>
+    </div>
+    <aside class="intro-scripture">
+      <p class="label">A Word from Scripture</p>
+      <blockquote>&ldquo;Come to me, all you who labor and are burdened, and I will give you rest.&rdquo;</blockquote>
+      <p class="cite">— Matthew 11:28</p>
+    </aside>
+  </div>
+</section>
+
+<section class="sacraments" aria-labelledby="sacraments-title">
+  <div class="wrap">
+    <div class="sacraments-head">
+      <div class="flourish" aria-hidden="true">✠</div>
+      <p class="eyebrow">The Seven</p>
+      <h2 id="sacraments-title">The Sacraments <em>of the Catholic Church</em></h2>
+    </div>
+    <div class="sacrament-grid">
+      <a href="#" class="sacrament"><span class="roman">I</span><h3>Baptism</h3><p>Welcomed into the family of God through water and the Spirit.</p><span class="chev">Learn more ›</span></a>
+      <a href="#" class="sacrament"><span class="roman">II</span><h3>First Communion</h3><p>The first taste of the Eucharist — Christ given, Christ received.</p><span class="chev">Learn more ›</span></a>
+      <a href="#" class="sacrament"><span class="roman">III</span><h3>Confirmation</h3><p>Sealed with the Holy Spirit, sent as a witness.</p><span class="chev">Learn more ›</span></a>
+      <a href="#" class="sacrament"><span class="roman">IV</span><h3>Matrimony</h3><p>A covenant between two baptized persons, reflecting Christ and the Church.</p><span class="chev">Learn more ›</span></a>
+    </div>
+    <div class="sacrament-grid row2">
+      <a href="#" class="sacrament"><span class="roman">V</span><h3>Reconciliation</h3><p>Confession and absolution — the sacrament of mercy.</p><span class="chev">Learn more ›</span></a>
+      <a href="#" class="sacrament"><span class="roman">VI</span><h3>Anointing of the Sick</h3><p>Grace for the sick, the suffering, and the dying.</p><span class="chev">Learn more ›</span></a>
+      <a href="#" class="sacrament"><span class="roman">VII</span><h3>Holy Orders</h3><p>The sacrament of service — deacons, priests, and bishops.</p><span class="chev">Learn more ›</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="path">
+  <div class="wrap">
+    <div class="path-main">
+      <h2>How to begin</h2>
+      <p class="sub">Becoming Catholic, or returning after years away.</p>
+
+      <div class="step">
+        <span class="step-number">I</span>
+        <div class="step-body">
+          <h4>Attend a parish — any parish</h4>
+          <p>You don't need an appointment. You don't need to belong yet. Show up to Mass, sit in the back if you'd like, and stay a moment afterward. The Mass itself is the starting line.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-number">II</span>
+        <div class="step-body">
+          <h4>Speak with a priest or parish staff</h4>
+          <p>Every parish has someone whose job is to welcome seekers and returners. They'll listen, answer your questions honestly, and help you understand what the next step might look like for your life.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-number">III</span>
+        <div class="step-body">
+          <h4>Join the OCIA (formerly RCIA) process</h4>
+          <p>The Order of Christian Initiation of Adults walks you through what Catholics believe and practice. Most parishes begin a new group each fall, with sacraments received at Easter.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-number">IV</span>
+        <div class="step-body">
+          <h4>Receive the sacraments of initiation</h4>
+          <p>At the Easter Vigil, the most ancient liturgy of the year, the Church receives new members through Baptism, Confirmation, and First Communion — or completes what is already begun.</p>
+        </div>
+      </div>
+    </div>
+
+    <aside class="prayer-rail" aria-label="Prayer for today">
+      <div class="ornament" aria-hidden="true">✠</div>
+      <p class="label">A Prayer for Today</p>
+      <h3>The Shepherd's Psalm</h3>
+      <p>The Lord is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul.</p>
+      <span class="cite">— Psalm 23 · 1–3</span>
+      <ul class="links">
+        <li><a href="#">Prayer &amp; Worship Resources →</a></li>
+        <li><a href="#">Church Calendar →</a></li>
+        <li><a href="#">Find a Parish →</a></li>
+        <li><a href="#">Watch Mass Online →</a></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="cta-title">
+  <div class="wrap">
+    <p class="eyebrow">Ready to take the first step?</p>
+    <h2 id="cta-title">Contact a priest today</h2>
+    <p>Every parish in the diocese has a priest or staff member ready to answer your questions about the sacraments — without pressure, without cost, without judgement.</p>
+    <a href="#" class="cta-btn">Find a Parish Near You <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="ornament" aria-hidden="true">✠</div>
+  <p class="verse">&ldquo;Do this in remembrance of me.&rdquo;</p>
+  <div class="links">
+    <a href="#">Find a Parish</a>
+    <a href="#">Mass Times</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Give</a>
+    <a href="#">The Message</a>
+    <a href="#">Safe Environment</a>
+  </div>
+  <div class="copy">
+    © 2026 Roman Catholic Diocese of Evansville · 4200 N. Kentucky Ave. · Accessibility AAA
+  </div>
+</footer>
+
+<div class="swatches" aria-label="Brand palette">
+  <span>Brand Palette</span>
+  <span class="swatch" style="background:#0A2240" title="Navy #0A2240"></span>
+  <span class="swatch" style="background:#004E73" title="Teal #004E73"></span>
+  <span class="swatch" style="background:#005CBA" title="Blue #005CBA"></span>
+  <span class="swatch" style="background:#A44637" title="Brick #A44637"></span>
+  <span class="swatch" style="background:#D09000" title="Dark Gold #D09000"></span>
+  <span class="swatch" style="background:#FFD040" title="Bright Gold #FFD040"></span>
+  <span class="swatch" style="background:#B5AF9B" title="Stone #B5AF9B"></span>
+  <span class="swatch" style="background:#EEDAB3" title="Cream #EEDAB3"></span>
+</div>
+
+</body>
+</html>
