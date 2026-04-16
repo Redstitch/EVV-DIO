@@ -62,6 +62,7 @@ export const navItems: NavItem[] = [
         heading: "Offices & Resources",
         links: [
           { label: "Offices & Departments", href: "/about/offices" },
+          { label: "Directories", href: "/about/directories" },
           { label: "Staff Directory", href: "/about/staff-directory" },
           { label: "Clergy Directory", href: "/about/clergy-directory" },
           { label: "Parish Directory", href: "/parishes" },
