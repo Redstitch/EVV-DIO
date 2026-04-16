@@ -3,770 +3,684 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
-<title>Style Direction A — v5 — Diocese of Evansville</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Style Direction A — v7 — Diocese of Evansville</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --navy: #0A2240;
   --teal: #004E73;
+  --blue: #005CBA;
   --brick: #A44637;
   --dgold: #D09000;
   --bgold: #FFD040;
+  --stone: #B5AF9B;
   --cream: #EEDAB3;
   --cream-lt: #FAF3E0;
   --cream-xlt: #FDFAF0;
-  --ink: #0A2240;
-  --muted: #524E44;
   --line: rgba(10,34,64,0.12);
+  --muted: rgba(10,34,64,0.62);
+  --serif: 'Instrument Serif', 'Times New Roman', serif;
+  --sans: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'DM Sans', -apple-system, sans-serif;
-  font-optical-sizing: auto;
+  font-family: var(--sans);
+  color: var(--navy);
+  background: var(--cream-lt);
   line-height: 1.55;
-  color: var(--ink);
-  background: var(--cream-lt);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-::selection { background: var(--bgold); color: var(--navy); }
-a { color: inherit; }
-a:focus-visible, button:focus-visible { outline: 3px solid var(--brick); outline-offset: 3px; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
 
-.version {
-  position: fixed; bottom: 20px; right: 20px; z-index: 100;
-  background: var(--navy); color: var(--cream);
-  padding: 8px 14px; font-size: 11px; font-weight: 700;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-}
+.wrap { max-width: 1360px; margin: 0 auto; padding: 0 40px; }
 
-/* ─── ANNOUNCE STRIP (thin navy, minimal) ─── */
-.announce {
-  background: var(--navy); color: var(--cream);
-  font-size: 13px; font-weight: 400;
-  padding: 10px 0;
-}
-.announce .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
-.announce .left { display: flex; gap: 24px; color: rgba(238,218,179,0.85); }
-.announce a { color: rgba(238,218,179,0.85); text-decoration: none; }
-.announce a:hover { color: var(--bgold); }
-.announce .right { color: var(--bgold); font-weight: 500; }
+/* ─── Skip link ─── */
+.skip { position: absolute; left: -9999px; top: 0; background: var(--navy); color: var(--cream); padding: 12px 20px; z-index: 100; }
+.skip:focus { left: 0; }
 
-/* ─── HEADER ─── */
-.header {
-  background: var(--cream-lt);
-  padding: 22px 0;
-  position: sticky; top: 0; z-index: 50;
-  backdrop-filter: blur(10px);
-  background: rgba(250,243,224,0.95);
+/* ─── TOP BAR ─── */
+.topbar {
   border-bottom: 1px solid var(--line);
+  background: var(--cream-lt);
 }
-.header .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; gap: 40px; }
-.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
-.brand-mark {
-  width: 40px; height: 40px;
-  background: var(--navy);
-  display: grid; place-items: center;
-  color: var(--bgold);
+.topbar .row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 40px;
+  max-width: 1360px; margin: 0 auto;
 }
-.brand-mark svg { width: 20px; height: 20px; fill: currentColor; }
-.brand-text .name {
-  font-family: 'DM Serif Display', serif;
-  font-size: 22px; color: var(--navy);
-  letter-spacing: -0.02em; line-height: 1;
+.mark {
+  font-family: var(--serif);
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  color: var(--navy);
 }
-.brand-text .tag {
-  font-size: 11px; color: var(--muted); margin-top: 3px;
-  font-weight: 500;
+.mark em { font-style: italic; color: var(--brick); }
+.topnav { display: flex; gap: 28px; }
+.topnav a {
+  font-size: 13px; font-weight: 500; color: var(--navy);
+  position: relative; padding: 6px 0;
 }
-.nav ul { list-style: none; display: flex; gap: 28px; }
-.nav a { text-decoration: none; color: var(--navy); font-size: 14px; font-weight: 500; padding: 6px 0; }
-.nav a:hover { color: var(--brick); }
-.give-btn {
+.topnav a:hover { color: var(--brick); }
+.topbar .give {
   background: var(--navy); color: var(--cream);
-  padding: 11px 22px;
-  font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
-  text-decoration: none; text-transform: uppercase;
+  padding: 10px 18px; font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
   transition: background .2s;
 }
-.give-btn:hover { background: var(--brick); }
+.topbar .give:hover { background: var(--brick); color: var(--cream); }
 
-/* ─── HERO — restrained, editorial ─── */
-.hero {
-  background: var(--cream-lt);
-  padding: 80px 0 100px;
-  position: relative;
+/* ─── MASTHEAD ─── */
+.masthead {
+  padding: 48px 40px 36px;
+  border-bottom: 1px solid var(--line);
+  max-width: 1360px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  gap: 32px;
+  align-items: end;
 }
-.hero .wrap {
-  max-width: 1440px; margin: 0 auto; padding: 0 40px;
-  display: grid; grid-template-columns: 1.1fr 1fr;
-  gap: 80px;
-  align-items: center;
+.masthead .vol {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); line-height: 1.6;
+  border-top: 1px solid var(--navy);
+  padding-top: 10px;
 }
-.hero-content .eyebrow {
-  font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--brick); margin-bottom: 32px;
-  display: inline-flex; align-items: center; gap: 12px;
-}
-.hero-content .eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--brick); }
-.hero-content h1 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: clamp(44px, 5.5vw, 82px);
-  line-height: 1.02; letter-spacing: -0.02em;
+.masthead .vol b { color: var(--navy); font-weight: 600; }
+.masthead .title {
+  text-align: center;
+  font-family: var(--serif);
+  font-size: clamp(48px, 8vw, 132px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
   color: var(--navy);
-  margin-bottom: 28px;
+  font-weight: 400;
 }
-.hero-content h1 em {
+.masthead .title em {
   font-style: italic;
   color: var(--brick);
+  display: inline;
 }
-.hero-content .lede {
-  font-size: 18px; line-height: 1.6; font-weight: 400;
-  color: var(--muted);
-  max-width: 520px;
-  margin-bottom: 36px;
+.masthead .dateline {
+  text-align: right;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); line-height: 1.6;
+  border-top: 1px solid var(--navy);
+  padding-top: 10px;
 }
-.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 14px 24px;
-  font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
-  text-decoration: none; transition: all .2s;
-  cursor: pointer; border-radius: 0;
-}
-.btn-primary { background: var(--navy); color: var(--cream); border: 1.5px solid var(--navy); }
-.btn-primary:hover { background: var(--brick); border-color: var(--brick); }
-.btn-outline { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
-.btn-outline:hover { background: var(--navy); color: var(--cream); }
-.btn .arrow { font-family: serif; font-weight: normal; transition: transform .25s; }
-.btn:hover .arrow { transform: translateX(4px); }
-
-.hero-image {
-  aspect-ratio: 4/5;
-  background: url('/images/hero/hero-cathedral-generated.png') center/cover;
-  position: relative;
-}
-.hero-image::after {
-  content: '';
-  position: absolute; left: -16px; bottom: -16px; width: 140px; height: 140px;
-  background: var(--bgold);
-  z-index: -1;
-}
-.hero-image .caption {
-  position: absolute; left: 0; right: 0; bottom: 0;
-  padding: 20px 24px;
-  background: rgba(10,34,64,0.85);
-  color: var(--cream);
-  font-size: 12px; font-weight: 500; letter-spacing: 0.06em;
-  display: flex; justify-content: space-between; gap: 16px;
-}
-.hero-image .caption b { color: var(--bgold); font-weight: 600; }
-
-/* ─── QUICK INFO STRIP ─── */
-.quick {
-  background: var(--cream-lt);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 36px 0;
-}
-.quick .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center; }
-.quick .item { display: flex; flex-direction: column; gap: 4px; }
-.quick .num {
-  font-family: 'DM Serif Display', serif;
-  font-size: 36px; line-height: 1; color: var(--navy);
-  letter-spacing: -0.02em;
-}
-.quick .lbl {
-  font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--muted);
-}
-
-/* ─── MISSION QUOTE ─── */
-.mission {
-  background: var(--cream-lt);
-  padding: 140px 0 120px;
+.masthead .dateline b { color: var(--navy); font-weight: 600; }
+.subtitle {
+  max-width: 820px; margin: 20px auto 0;
   text-align: center;
-  position: relative;
-}
-.mission .wrap { max-width: 980px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
-.mission .eyebrow {
-  font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--brick); margin-bottom: 36px;
-}
-.mission blockquote {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: clamp(26px, 3.5vw, 42px);
-  line-height: 1.25; letter-spacing: -0.015em;
-  color: var(--navy);
-  margin-bottom: 32px;
-}
-.mission blockquote em { font-style: italic; color: var(--dgold); }
-.mission cite {
-  display: inline-block;
-  font-style: normal;
-  font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(18px, 2vw, 22px);
   color: var(--muted);
-  border-top: 1px solid var(--dgold);
-  padding-top: 14px;
+  line-height: 1.45;
 }
 
-/* ─── FEATURE ─── */
-.feature {
-  background: var(--cream-xlt);
-  padding: 100px 0 120px;
-  border-top: 1px solid var(--line);
+/* ─── ESTABLISHING PHOTO ─── */
+.establishing { margin: 0; position: relative; }
+.establishing img {
+  width: 100%; height: auto; display: block;
 }
-.feature .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-.feature-media {
-  aspect-ratio: 4/5;
-  overflow: hidden; background: var(--navy);
-  position: relative;
+.establishing figcaption {
+  padding: 12px 40px;
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: center;
+  max-width: 1360px; margin: 0 auto;
 }
-.feature-media img { width: 100%; height: 100%; object-fit: cover; }
-.feature-copy .tag {
-  display: inline-block;
-  font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--brick);
-  border: 1px solid var(--brick);
-  padding: 4px 10px;
-  margin-bottom: 28px;
-}
-.feature-copy h2 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: clamp(36px, 4.5vw, 58px);
-  line-height: 1.05; letter-spacing: -0.02em;
-  color: var(--navy);
-  margin-bottom: 24px;
-}
-.feature-copy h2 em { font-style: italic; color: var(--brick); }
-.feature-copy p { font-size: 17px; line-height: 1.65; color: var(--muted); margin-bottom: 16px; max-width: 520px; }
-.feature-copy .read-more {
-  display: inline-flex; align-items: center; gap: 10px;
-  margin-top: 20px;
-  color: var(--navy); text-decoration: none;
-  font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
-  border-bottom: 1px solid var(--dgold); padding-bottom: 4px;
-}
-.feature-copy .read-more:hover { color: var(--brick); border-color: var(--brick); }
+.establishing figcaption b { color: var(--navy); font-weight: 600; letter-spacing: 0.1em; }
 
-/* ─── FIND A PARISH (navy, not red) ─── */
-.parishes {
-  background: var(--navy); color: var(--cream);
-  padding: 120px 0;
+/* ─── INDEX (table of contents, 3-col) ─── */
+.index {
+  padding: 80px 0 64px;
+  border-bottom: 1px solid var(--line);
 }
-.parishes .wrap { max-width: 1280px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 64px; align-items: center; }
-.parishes .eyebrow {
-  font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--bgold); margin-bottom: 24px;
-  display: inline-flex; align-items: center; gap: 12px;
+.index .inner {
+  max-width: 1360px; margin: 0 auto; padding: 0 40px;
+  display: grid; grid-template-columns: 220px 1fr; gap: 60px;
 }
-.parishes .eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--bgold); }
-.parishes h2 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: clamp(40px, 5vw, 64px);
-  line-height: 1.05; letter-spacing: -0.02em;
+.index .section-label {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--brick); font-weight: 600;
+  border-top: 2px solid var(--brick);
+  padding-top: 10px;
 }
-.parishes h2 em { font-style: italic; color: var(--bgold); }
-.parishes p {
-  font-size: 17px; line-height: 1.6;
-  color: rgba(238,218,179,0.85);
-  margin-top: 20px; max-width: 480px;
+.index .cols {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px;
 }
-.parishes .find {
-  display: inline-flex; align-items: center; gap: 14px;
-  padding: 20px 28px;
-  background: transparent; color: var(--cream);
-  border: 1px solid var(--cream);
-  font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
-  text-decoration: none; transition: all .25s;
-  align-self: end;
+.index .col {
+  border-top: 1px solid var(--navy);
+  padding-top: 20px;
 }
-.parishes .find:hover { background: var(--bgold); color: var(--navy); border-color: var(--bgold); }
-.parishes .find .arrow { font-family: serif; font-size: 18px; font-weight: normal; transition: transform .25s; }
-.parishes .find:hover .arrow { transform: translateX(4px); }
-
-/* ─── MASS + EVENTS (restrained cream panels) ─── */
-.pair { background: var(--cream-lt); padding: 120px 0; }
-.pair .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.panel { padding: 48px; background: var(--cream-xlt); border-top: 3px solid var(--navy); }
-.panel .eyebrow {
-  font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--brick); margin-bottom: 20px;
+.index .col .num {
+  font-family: var(--serif); font-style: italic;
+  font-size: 20px; color: var(--dgold);
+  margin-bottom: 8px; display: block;
 }
-.panel h2 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: clamp(30px, 3.5vw, 44px);
-  line-height: 1.05; letter-spacing: -0.02em;
-  color: var(--navy);
-  margin-bottom: 32px;
+.index .col h3 {
+  font-family: var(--serif);
+  font-size: clamp(30px, 2.4vw, 38px);
+  line-height: 1.05; letter-spacing: -0.01em;
+  color: var(--navy); font-weight: 400;
+  margin-bottom: 14px;
 }
-.panel h2 em { font-style: italic; color: var(--dgold); }
-.mass-list { display: grid; grid-template-columns: auto 1fr; gap: 12px 24px; margin-bottom: 24px; }
-.mass-list .day { font-weight: 600; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-top: 6px; }
-.mass-list .time {
-  font-family: 'DM Serif Display', serif;
-  font-size: 22px; color: var(--navy); letter-spacing: -0.01em; line-height: 1.4;
-}
-.panel-link {
-  font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--navy); text-decoration: none;
-  border-bottom: 1px solid var(--dgold); padding-bottom: 4px;
-  display: inline-flex; align-items: center; gap: 8px;
-}
-.panel-link:hover { color: var(--brick); border-color: var(--brick); }
-
-.event { display: grid; grid-template-columns: 64px 1fr auto; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: center; }
-.event:last-of-type { border-bottom: none; margin-bottom: 20px; }
-.event .date {
-  font-family: 'DM Serif Display', serif;
-  font-size: 32px; line-height: 1; color: var(--navy); letter-spacing: -0.02em;
-}
-.event .date small { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brick); margin-top: 2px; font-family: 'DM Sans', sans-serif; }
-.event .title { font-size: 15px; color: var(--navy); line-height: 1.3; }
-.event .meta { font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
-
-/* ─── BISHOP ─── */
-.bishop {
-  background: var(--cream-lt);
-  padding: 120px 0;
-  border-top: 1px solid var(--line);
-}
-.bishop .wrap { max-width: 1200px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; align-items: center; }
-.bishop-portrait {
-  aspect-ratio: 4/5;
-  background: url('/images/bishop/bishop-siegel.jpg') center/cover;
-  max-width: 380px;
-  position: relative;
-}
-.bishop-portrait::after {
-  content: ''; position: absolute;
-  right: -14px; bottom: -14px; width: 84px; height: 84px;
-  background: var(--bgold);
-  z-index: -1;
-}
-.bishop-content .eyebrow {
-  font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--brick); margin-bottom: 24px;
-  display: inline-flex; align-items: center; gap: 12px;
-}
-.bishop-content .eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--brick); }
-.bishop-content .quote {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: clamp(26px, 3vw, 38px);
-  line-height: 1.2; letter-spacing: -0.015em;
-  color: var(--navy);
-  margin-bottom: 28px;
-}
-.bishop-content .quote em { font-style: italic; color: var(--brick); }
-.bishop-content .signature { padding-top: 20px; border-top: 1px solid var(--dgold); }
-.bishop-content .sig-name {
-  font-family: 'DM Serif Display', serif;
-  font-size: 20px; color: var(--navy); letter-spacing: -0.01em;
-}
-.bishop-content .sig-title {
-  font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--muted); margin-top: 2px;
-}
-
-/* ─── GIVE (minimal, not a gold band) ─── */
-.give-section {
-  background: var(--cream-xlt);
-  padding: 120px 0;
-  border-top: 1px solid var(--line);
-}
-.give-section .wrap { max-width: 1200px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 64px; align-items: center; }
-.give-section .eyebrow {
-  font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--brick); margin-bottom: 24px;
-}
-.give-section h2 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: clamp(36px, 4.5vw, 58px);
-  line-height: 1.05; letter-spacing: -0.02em;
-  color: var(--navy);
+.index .col h3 em { font-style: italic; color: var(--brick); }
+.index .col p {
+  font-size: 15px; line-height: 1.55; color: var(--muted);
   margin-bottom: 20px;
 }
-.give-section h2 em { font-style: italic; color: var(--dgold); }
-.give-section p { font-size: 16px; line-height: 1.6; color: var(--muted); max-width: 500px; margin-bottom: 28px; }
-.give-stat-box {
-  background: var(--cream);
-  padding: 40px;
-  text-align: center;
+.index .col .read {
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 600; color: var(--navy);
+  border-bottom: 1px solid var(--dgold); padding-bottom: 4px;
+  display: inline-flex; gap: 6px; align-items: center;
+  transition: color .2s, border-color .2s;
+}
+.index .col .read:hover { color: var(--brick); border-color: var(--brick); }
+
+/* ─── BISHOP FEATURE ─── */
+.bishop {
+  padding: 96px 0;
+  background: var(--cream-xlt);
+  border-bottom: 1px solid var(--line);
+}
+.bishop .inner {
+  max-width: 1280px; margin: 0 auto; padding: 0 40px;
+  display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 72px;
+  align-items: center;
+}
+.bishop .portrait {
   position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
 }
-.give-stat-box::before {
-  content: '';
-  position: absolute; top: -1px; left: 0; right: 0;
-  height: 4px; background: var(--dgold);
+.bishop .portrait img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: saturate(0.95) contrast(1.02);
 }
-.give-stat-box .num {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(52px, 6vw, 76px);
-  line-height: 1; color: var(--navy); letter-spacing: -0.03em;
+.bishop .portrait::after {
+  content: ''; position: absolute; right: -18px; bottom: -18px;
+  width: 72px; height: 72px;
+  background: var(--bgold);
+  z-index: -1;
 }
-.give-stat-box .lbl {
-  font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--muted); margin-top: 12px;
+.bishop .text .eyebrow {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--brick); font-weight: 600; margin-bottom: 28px;
+  display: inline-flex; align-items: center; gap: 12px;
 }
-.give-stat-box .btn { margin-top: 24px; display: inline-flex; }
+.bishop .text .eyebrow::before {
+  content: ''; width: 32px; height: 1px; background: var(--brick);
+}
+.bishop .text .quote {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.1vw, 46px);
+  line-height: 1.18; letter-spacing: -0.01em;
+  color: var(--navy);
+  margin-bottom: 28px;
+}
+.bishop .text .quote em { font-style: italic; color: var(--brick); }
+.bishop .text .attrib {
+  font-size: 13px; letter-spacing: 0.04em;
+  color: var(--muted); line-height: 1.5;
+  padding-top: 20px; border-top: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+.bishop .text .attrib b { color: var(--navy); font-weight: 600; letter-spacing: 0.02em; }
+.bishop .btn-outline {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 24px;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600;
+  background: transparent; color: var(--navy);
+  border: 1px solid var(--navy);
+  transition: background .2s, color .2s;
+}
+.bishop .btn-outline:hover { background: var(--navy); color: var(--cream); }
 
 /* ─── STORIES ─── */
-.stories { background: var(--cream-lt); padding: 120px 0; }
-.stories .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
-.stories-head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; margin-bottom: 56px; padding-bottom: 20px; border-bottom: 1px solid var(--navy); }
-.stories-head .eyebrow {
-  font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--brick); margin-bottom: 10px;
+.stories {
+  padding: 96px 0;
+  border-bottom: 1px solid var(--line);
 }
-.stories-head h2 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: clamp(40px, 5vw, 64px);
-  line-height: 1.05; letter-spacing: -0.02em;
+.stories .head {
+  max-width: 1360px; margin: 0 auto 48px; padding: 0 40px;
+  display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 40px;
+}
+.stories .head h2 {
+  font-family: var(--serif);
+  font-size: clamp(40px, 4.5vw, 68px);
+  line-height: 1;
   color: var(--navy);
-}
-.stories-head h2 em { font-style: italic; color: var(--brick); }
-.stories-head .all {
-  font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--navy); text-decoration: none;
-  border-bottom: 1px solid var(--dgold); padding-bottom: 4px;
-}
-.stories-head .all:hover { color: var(--brick); border-color: var(--brick); }
-.articles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-.article { text-decoration: none; color: inherit; transition: transform .3s; }
-.article:hover { transform: translateY(-4px); }
-.article .img { aspect-ratio: 4/3; background: var(--navy); overflow: hidden; margin-bottom: 16px; }
-.article .img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
-.article:hover .img img { transform: scale(1.05); }
-.article .meta {
-  display: inline-block;
-  font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--brick); margin-bottom: 10px;
-}
-.article h3 {
-  font-family: 'DM Serif Display', serif;
   font-weight: 400;
-  font-size: 26px; line-height: 1.15; letter-spacing: -0.015em;
-  color: var(--navy); margin-bottom: 10px;
 }
-.article p { font-size: 14px; line-height: 1.55; color: var(--muted); }
-.article .date { font-size: 12px; color: var(--dgold); margin-top: 12px; letter-spacing: 0.04em; }
+.stories .head h2 em { font-style: italic; color: var(--brick); }
+.stories .head .kicker {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--brick); font-weight: 600;
+  border-top: 2px solid var(--brick); padding-top: 10px;
+  margin-bottom: 16px;
+}
+.stories .head .all {
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 600;
+  padding-bottom: 4px; border-bottom: 1px solid var(--dgold);
+}
+.stories .grid {
+  max-width: 1360px; margin: 0 auto; padding: 0 40px;
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px;
+}
+.story { display: block; }
+.story .img { aspect-ratio: 3/2; overflow: hidden; margin-bottom: 20px; background: var(--cream); }
+.story .img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.story:hover .img img { transform: scale(1.04); }
+.story .meta {
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--brick); font-weight: 600; margin-bottom: 10px;
+}
+.story .meta b { color: var(--muted); font-weight: 500; letter-spacing: 0.1em; }
+.story h3 {
+  font-family: var(--serif);
+  font-size: clamp(22px, 1.8vw, 30px);
+  line-height: 1.12; color: var(--navy); font-weight: 400;
+  margin-bottom: 10px;
+}
+.story.lead h3 { font-size: clamp(28px, 2.4vw, 40px); }
+.story h3 em { font-style: italic; color: var(--brick); }
+.story p {
+  font-size: 14px; color: var(--muted); line-height: 1.55;
+}
+
+/* ─── SACRAMENTS band (cream + navy) ─── */
+.sacraments {
+  background: var(--navy);
+  color: var(--cream);
+}
+.sacraments .inner {
+  max-width: 1360px; margin: 0 auto; padding: 96px 40px;
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: center;
+}
+.sacraments .photo {
+  aspect-ratio: 5/4;
+  overflow: hidden;
+  position: relative;
+}
+.sacraments .photo img { width: 100%; height: 100%; object-fit: cover; }
+.sacraments .photo::after {
+  content: ''; position: absolute; left: -14px; top: -14px;
+  width: 72px; height: 72px; background: var(--bgold); z-index: -1;
+}
+.sacraments .text .kicker {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--bgold); font-weight: 600;
+  border-top: 1px solid var(--bgold); padding-top: 10px; margin-bottom: 24px;
+  display: inline-block;
+}
+.sacraments .text h2 {
+  font-family: var(--serif);
+  font-size: clamp(40px, 4.4vw, 64px);
+  line-height: 1.02; letter-spacing: -0.015em;
+  color: var(--cream); font-weight: 400;
+  margin-bottom: 20px;
+}
+.sacraments .text h2 em { font-style: italic; color: var(--bgold); }
+.sacraments .text .lede {
+  font-family: var(--serif); font-style: italic;
+  font-size: 20px; line-height: 1.45;
+  color: rgba(238,218,179,0.85);
+  margin-bottom: 36px; max-width: 520px;
+}
+.sacraments .list {
+  list-style: none; display: grid;
+  grid-template-columns: 1fr 1fr; gap: 4px 32px;
+  border-top: 1px solid rgba(238,218,179,0.25);
+  padding-top: 18px;
+}
+.sacraments .list li {
+  padding: 10px 0; border-bottom: 1px solid rgba(238,218,179,0.14);
+  display: flex; align-items: baseline; gap: 14px;
+  font-size: 15px; color: var(--cream);
+}
+.sacraments .list .num {
+  font-family: var(--serif); font-style: italic;
+  color: var(--bgold); font-size: 15px; min-width: 28px;
+}
+.sacraments .list a { border-bottom: 1px solid transparent; padding-bottom: 1px; transition: border-color .2s; }
+.sacraments .list a:hover { border-color: var(--bgold); }
+
+/* ─── ACTION ROW ─── */
+.action {
+  padding: 96px 0;
+  border-bottom: 1px solid var(--line);
+}
+.action .grid {
+  max-width: 1200px; margin: 0 auto; padding: 0 40px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+}
+.action .card {
+  background: var(--cream-xlt);
+  padding: 48px 40px 40px;
+  border: 1px solid var(--line);
+  display: flex; flex-direction: column;
+  transition: border-color .2s, transform .2s;
+}
+.action .card:hover { border-color: var(--navy); transform: translateY(-2px); }
+.action .card .num {
+  font-family: var(--serif); font-style: italic;
+  font-size: 22px; color: var(--dgold); margin-bottom: 12px;
+}
+.action .card h3 {
+  font-family: var(--serif);
+  font-size: clamp(30px, 3vw, 46px);
+  line-height: 1.05; color: var(--navy); font-weight: 400;
+  margin-bottom: 14px;
+}
+.action .card h3 em { font-style: italic; color: var(--brick); }
+.action .card p {
+  font-size: 15px; color: var(--muted); line-height: 1.55;
+  margin-bottom: 24px; flex: 1;
+}
+.action .card .cta {
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 600; color: var(--navy);
+  border-bottom: 1px solid var(--dgold); padding-bottom: 4px;
+  display: inline-flex; gap: 8px; align-self: flex-start;
+}
 
 /* ─── FOOTER ─── */
-.footer { background: var(--navy); color: var(--cream); padding: 80px 0 28px; border-top: 3px solid var(--dgold); }
-.footer .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
-.footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 56px; padding-bottom: 44px; border-bottom: 1px solid rgba(238,218,179,0.18); margin-bottom: 24px; }
-.footer-brand h3 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 38px; line-height: 1; color: var(--cream); margin-bottom: 18px; letter-spacing: -0.02em;
+footer {
+  background: var(--navy);
+  color: rgba(238,218,179,0.75);
+  padding: 72px 0 32px;
 }
-.footer-brand h3 em { font-style: italic; color: var(--bgold); }
-.footer-brand p { font-size: 14px; line-height: 1.6; color: rgba(238,218,179,0.75); max-width: 320px; }
-.footer h4 { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bgold); margin-bottom: 16px; }
-.footer ul { list-style: none; }
-.footer li { margin-bottom: 10px; }
-.footer a { color: rgba(238,218,179,0.8); font-size: 14px; text-decoration: none; }
-.footer a:hover { color: var(--bgold); }
-.footer-base { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 12px; color: rgba(238,218,179,0.5); }
-.footer-base .links { display: flex; gap: 18px; }
-.footer-base a { color: inherit; }
+footer .grid {
+  max-width: 1360px; margin: 0 auto; padding: 0 40px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 56px;
+}
+footer .mark {
+  font-family: var(--serif); font-size: 26px; color: var(--cream); margin-bottom: 14px;
+}
+footer .mark em { color: var(--bgold); }
+footer p.addr { font-size: 14px; line-height: 1.6; }
+footer h4 {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--bgold); font-weight: 600; margin-bottom: 14px;
+}
+footer ul { list-style: none; }
+footer ul li { margin-bottom: 8px; }
+footer ul a { font-size: 14px; color: rgba(238,218,179,0.75); transition: color .2s; }
+footer ul a:hover { color: var(--cream); }
+footer .legal {
+  max-width: 1360px; margin: 56px auto 0; padding: 24px 40px 0;
+  border-top: 1px solid rgba(238,218,179,0.15);
+  display: flex; justify-content: space-between;
+  font-size: 12px; color: rgba(238,218,179,0.5);
+}
 
-/* ─── SWATCHES ─── */
-.swatches { display: flex; background: var(--cream-lt); padding: 20px 40px; gap: 10px; align-items: center; border-top: 1px solid var(--line); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); }
-.swatch { width: 32px; height: 32px; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12); }
+/* ─── VERSION STAMP ─── */
+.version {
+  position: fixed; right: 20px; bottom: 20px;
+  background: var(--brick); color: var(--cream);
+  padding: 10px 16px;
+  font-family: var(--sans); font-size: 11px;
+  letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600;
+  z-index: 1000;
+  box-shadow: 0 6px 16px rgba(10,34,64,0.35);
+}
+
+/* ─── FOCUS STATES ─── */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--bgold);
+  outline-offset: 3px;
+}
 
 /* ─── RESPONSIVE ─── */
-@media (max-width: 1024px) {
-  .hero .wrap, .feature .wrap, .parishes .wrap, .pair .wrap, .bishop .wrap, .give-section .wrap { grid-template-columns: 1fr; gap: 48px; }
-  .bishop-portrait { max-width: 100%; }
-  .quick .wrap { grid-template-columns: 1fr 1fr; gap: 24px; }
-  .articles { grid-template-columns: 1fr; }
-  .footer-top { grid-template-columns: 1fr 1fr; }
-  .nav { display: none; }
-}
-@media (max-width: 640px) {
-  .hero { padding: 56px 0 72px; }
-  .mission { padding: 80px 0; }
-  .footer-top { grid-template-columns: 1fr; gap: 28px; }
-  .panel { padding: 32px 28px; }
+@media (max-width: 960px) {
+  .masthead { grid-template-columns: 1fr; gap: 20px; padding: 36px 24px 28px; }
+  .masthead .vol, .masthead .dateline { text-align: left; }
+  .index .inner { grid-template-columns: 1fr; gap: 32px; }
+  .index .cols { grid-template-columns: 1fr; gap: 40px; }
+  .bishop .inner { grid-template-columns: 1fr; gap: 40px; padding: 0 24px; }
+  .bishop { padding: 64px 0; }
+  .stories .head { grid-template-columns: 1fr; padding: 0 24px; }
+  .stories .grid { grid-template-columns: 1fr; gap: 40px; padding: 0 24px; }
+  .sacraments .inner { grid-template-columns: 1fr; gap: 40px; padding: 64px 24px; }
+  .sacraments .list { grid-template-columns: 1fr; }
+  .action .grid { grid-template-columns: 1fr; padding: 0 24px; }
+  .action { padding: 64px 0; }
+  footer .grid { grid-template-columns: 1fr 1fr; gap: 32px; padding: 0 24px; }
+  footer .legal { flex-direction: column; gap: 8px; padding: 24px 24px 0; }
+  .topnav { display: none; }
+  .topbar .row { padding: 14px 24px; }
+  .wrap { padding: 0 24px; }
+  .establishing figcaption { padding: 12px 24px; flex-direction: column; gap: 6px; align-items: flex-start; }
 }
 </style>
 </head>
 <body>
+<a href="#main" class="skip">Skip to content</a>
 
-<div class="announce" role="complementary" aria-label="Announcement">
-  <div class="wrap">
-    <div class="left">
-      <a href="#">MyDio Portal</a>
-      <a href="#">Español</a>
-    </div>
-    <div class="right">Holy Week · April 13 – 20</div>
-  </div>
-</div>
-
-<header class="header" role="banner">
-  <div class="wrap">
-    <a href="/" class="brand" aria-label="Diocese of Evansville, home">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M11 2v4H7v2h4v14h2V8h4V6h-4V2h-2z"/></svg>
-      </span>
-      <span class="brand-text">
-        <span class="name">Diocese of Evansville</span>
-        <span class="tag">Southwestern Indiana · Est. 1944</span>
-      </span>
-    </a>
-    <nav class="nav" aria-label="Primary">
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Parishes &amp; Mass</a></li>
-        <li><a href="#">Faith</a></li>
-        <li><a href="#">Schools</a></li>
-        <li><a href="#">Ministries</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">The Message</a></li>
-      </ul>
+<!-- ─── TOP BAR ─── -->
+<header class="topbar" role="banner">
+  <div class="row">
+    <a href="/" class="mark">Diocese of <em>Evansville</em></a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="#">About</a>
+      <a href="#">Parishes &amp; Mass</a>
+      <a href="#">Faith &amp; Sacraments</a>
+      <a href="#">Catholic Schools</a>
+      <a href="#">Ministries</a>
+      <a href="#">The Message</a>
     </nav>
-    <a href="#" class="give-btn">Give</a>
+    <a href="#give" class="give">Give</a>
   </div>
 </header>
 
 <main id="main">
 
-<section class="hero" aria-labelledby="hero-title">
-  <div class="wrap">
-    <div class="hero-content">
-      <div class="eyebrow">A Catholic community · Southwestern Indiana</div>
-      <h1 id="hero-title">Come as you are. <em>Stay as long as you need.</em></h1>
-      <p class="lede">Forty-six parishes. Twenty-six Catholic schools. Hundreds of ministries — one family of faith across twelve counties, with a table set and a seat saved for you.</p>
-      <div class="hero-cta">
-        <a href="#" class="btn btn-primary">Find a Parish <span class="arrow" aria-hidden="true">→</span></a>
-        <a href="#" class="btn btn-outline">Watch Mass Live</a>
-      </div>
-    </div>
-    <div class="hero-image" role="img" aria-label="Cathedral interior">
-      <div class="caption">
-        <span>This week at the Cathedral</span>
-        <span>Chrism Mass · <b>Tues 6 PM</b></span>
-      </div>
-    </div>
-  </div>
+<!-- ─── MASTHEAD ─── -->
+<section class="masthead" aria-labelledby="masthead-title">
+  <p class="vol"><b>Est. MDCCCXLIV</b><br>The Catholic Church in Southwest Indiana</p>
+  <h1 id="masthead-title" class="title">Come <em>home.</em></h1>
+  <p class="dateline"><b>April 2026</b><br>Volume XLVI · Nº 12</p>
 </section>
+<p class="subtitle">Forty-five parishes across twelve counties — one Church, one family, one hope.</p>
 
-<section class="quick" aria-label="By the numbers">
-  <div class="wrap">
-    <div class="item"><span class="num">46</span><span class="lbl">Parishes</span></div>
-    <div class="item"><span class="num">26</span><span class="lbl">Catholic Schools</span></div>
-    <div class="item"><span class="num">80,000</span><span class="lbl">Faithful</span></div>
-    <div class="item"><span class="num">12</span><span class="lbl">Counties</span></div>
-  </div>
-</section>
+<!-- ─── ESTABLISHING PHOTO ─── -->
+<figure class="establishing">
+  <img src="/images/stock/presbyterate-group.jpg" alt="The priests of the Diocese of Evansville with Bishop Joseph M. Siegel at the 2025 Chrism Mass." loading="eager" fetchpriority="high">
+  <figcaption>
+    <span><b>The Presbyterate</b> · 2025</span>
+    <span>Photograph by the Office of Communications</span>
+  </figcaption>
+</figure>
 
-<section class="mission" aria-labelledby="mission-q">
-  <div class="wrap">
-    <div class="eyebrow">Our Mission</div>
-    <blockquote id="mission-q">
-      To joyfully proclaim the Gospel, serve those in need, and form disciples by inviting <em>everyone</em> to encounter, deepen, and engage.
-    </blockquote>
-    <cite>Pastoral Priorities 2025–2030</cite>
-  </div>
-</section>
-
-<section class="feature" aria-labelledby="feature-title">
-  <div class="wrap">
-    <div class="feature-media"><img src="/images/articles/becoming-one-roadmap.jpg" alt=""></div>
-    <div class="feature-copy">
-      <span class="tag">The Message · Feature</span>
-      <h2 id="feature-title">A five-year plan, <em>one family</em></h2>
-      <p>Bishop Siegel announces Pastoral Priorities for 2025–2030 — a diocesan-wide plan centered on the themes of Encounter, Deepen, and Engage.</p>
-      <p>Across forty-six parishes, twenty-six schools, and every ministry of the diocese, the plan marks the first comprehensive pastoral roadmap since 2017 and asks every Catholic in Southwestern Indiana to take one concrete step this year.</p>
-      <a href="#" class="read-more">Read the full announcement <span aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="parishes" aria-labelledby="p-title">
-  <div class="wrap">
+<!-- ─── INDEX ─── -->
+<section class="index" aria-labelledby="index-title">
+  <div class="inner">
     <div>
-      <div class="eyebrow">Find Your Parish</div>
-      <h2 id="p-title">Forty-six doors <em>open</em>, across twelve counties.</h2>
-      <p>From Evansville to Washington, Jasper to Vincennes — find the parish nearest you, its Mass times, and the priest who'll know you by name.</p>
+      <p class="section-label">In this issue</p>
+      <h2 id="index-title" style="font-family:var(--serif);font-size:48px;line-height:1;color:var(--navy);font-weight:400;margin-top:16px;">
+        <em>Three</em> ways in.
+      </h2>
     </div>
-    <a href="#" class="find">Open the parish finder <span class="arrow" aria-hidden="true">→</span></a>
-  </div>
-</section>
-
-<section class="pair" aria-label="Mass and events">
-  <div class="wrap">
-    <div class="panel">
-      <div class="eyebrow">This Sunday · Cathedral</div>
-      <h2>Mass <em>times</em></h2>
-      <div class="mass-list">
-        <div class="day">Sat Vigil</div><div class="time">5:30 PM</div>
-        <div class="day">Sunday</div><div class="time">7:30 · 9:30 · 11:30 AM</div>
-        <div class="day">Spanish</div><div class="time">1:00 PM</div>
-        <div class="day">Daily</div><div class="time">12:05 PM (Mon–Fri)</div>
-      </div>
-      <a href="#" class="panel-link">All Mass times across the diocese <span aria-hidden="true">→</span></a>
-    </div>
-
-    <div class="panel">
-      <div class="eyebrow">Upcoming</div>
-      <h2>Events &amp; <em>liturgies</em></h2>
-      <div class="event">
-        <div class="date">15<small>Apr</small></div>
-        <div class="title">Chrism Mass · Blessing of the Oils</div>
-        <div class="meta">6:00 PM</div>
-      </div>
-      <div class="event">
-        <div class="date">18<small>Apr</small></div>
-        <div class="title">Good Friday · Veneration of the Cross</div>
-        <div class="meta">3:00 PM</div>
-      </div>
-      <div class="event">
-        <div class="date">19<small>Apr</small></div>
-        <div class="title">Easter Vigil · Reception of new Catholics</div>
-        <div class="meta">8:30 PM</div>
-      </div>
-      <a href="#" class="panel-link">Full diocesan calendar <span aria-hidden="true">→</span></a>
+    <div class="cols">
+      <article class="col">
+        <span class="num">I.</span>
+        <h3>Find your <em>parish.</em></h3>
+        <p>Forty-five parishes across twelve counties. Enter your town, your ZIP, or the name of a saint — we'll get you to the right door.</p>
+        <a href="#" class="read">Open the map <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="col">
+        <span class="num">II.</span>
+        <h3>Become <em>Catholic.</em></h3>
+        <p>The Order of Christian Initiation of Adults (OCIA) welcomes new Catholics each Easter. Questions, conversations, and companionship — begin here.</p>
+        <a href="#" class="read">Start the conversation <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="col">
+        <span class="num">III.</span>
+        <h3>Give — and <em>give thanks.</em></h3>
+        <p>Your gift to the Catholic Ministries Appeal supports seminarians, Catholic Charities, schools, and every parish in the diocese.</p>
+        <a href="#" class="read">See where your gift goes <span aria-hidden="true">→</span></a>
+      </article>
     </div>
   </div>
 </section>
 
+<!-- ─── BISHOP FEATURE ─── -->
 <section class="bishop" aria-labelledby="bishop-title">
-  <div class="wrap">
-    <div class="bishop-portrait" role="img" aria-label="Bishop Joseph M. Siegel"></div>
-    <div class="bishop-content">
-      <div class="eyebrow">A word from our Bishop</div>
-      <p class="quote" id="bishop-title">To be Catholic in Southwestern Indiana is to belong to something <em>older than yourself, more hopeful than the news</em>, and steadier than the season.</p>
-      <div class="signature">
-        <div class="sig-name">+ Joseph M. Siegel</div>
-        <div class="sig-title">Sixth Bishop of Evansville</div>
-      </div>
+  <div class="inner">
+    <figure class="portrait">
+      <img src="/images/stock/white-mass.jpg" alt="Bishop Joseph M. Siegel speaking at the ambo.">
+    </figure>
+    <div class="text">
+      <p class="eyebrow">From the Bishop</p>
+      <p class="quote" id="bishop-title">
+        &ldquo;The Church is not a museum for the perfect. It is a <em>field hospital</em> for the soul.&rdquo;
+      </p>
+      <p class="attrib">
+        <b>The Most Rev. Joseph M. Siegel</b><br>
+        Sixth Bishop of the Diocese of Evansville
+      </p>
+      <a href="#" class="btn-outline">Read the Bishop's Letter <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
-<section class="give-section" aria-labelledby="give-title">
-  <div class="wrap">
-    <div>
-      <div class="eyebrow">Catholic Ministries Appeal</div>
-      <h2 id="give-title">Your gift keeps <em>the doors open</em></h2>
-      <p>The Catholic Ministries Appeal funds seminarian education, Catholic Charities, youth retreats, Hispanic ministry, and outreach to the poorest across the diocese.</p>
-      <a href="#" class="btn btn-primary">Give today <span class="arrow" aria-hidden="true">→</span></a>
-    </div>
-    <div class="give-stat-box">
-      <div class="num">$2.4M</div>
-      <div class="lbl">Raised in 2025 · 4,800 donors</div>
-    </div>
-  </div>
-</section>
-
+<!-- ─── STORIES ─── -->
 <section class="stories" aria-labelledby="stories-title">
-  <div class="wrap">
-    <div class="stories-head">
-      <div>
-        <div class="eyebrow">The Message · Vol. 56</div>
-        <h2 id="stories-title">More <em>stories</em></h2>
+  <div class="head">
+    <div>
+      <p class="kicker">From The Message</p>
+      <h2 id="stories-title">News from the <em>diocese.</em></h2>
+    </div>
+    <a href="#" class="all">All stories →</a>
+  </div>
+  <div class="grid">
+    <a class="story lead" href="#">
+      <div class="img">
+        <img src="https://evdiomessage.org/wp-content/uploads/2026/04/p01_or_p06_or_p07___Holy_Week___Holy_Saturday_2026___FOUR__1775841432_39613.jpg" alt="Easter Vigil at St. Benedict Cathedral.">
       </div>
-      <a href="#" class="all">Read all →</a>
+      <p class="meta">Liturgy &middot; <b>April 10, 2026</b></p>
+      <h3>A light in the darkness: Easter <em>Vigil</em> at the cathedral.</h3>
+      <p>From darkness to Easter fire — the ancient liturgy marks the heart of the Christian year. Images and reflections from Holy Saturday at St. Benedict.</p>
+    </a>
+    <a class="story" href="#">
+      <div class="img">
+        <img src="https://evdiomessage.org/wp-content/uploads/2026/04/p01___Dr._Palmer_and_family__1775744140_65409.jpg" alt="Dr. Douglas Palmer with family.">
+      </div>
+      <p class="meta">Schools &middot; <b>April 8, 2026</b></p>
+      <h3>Washington Catholic names <em>first president.</em></h3>
+      <p>Dr. Douglas Palmer begins a new chapter for Catholic education in Daviess County.</p>
+    </a>
+    <a class="story" href="#">
+      <div class="img">
+        <img src="https://evdiomessage.org/wp-content/uploads/2026/04/Folz_and_Riecker_Headshots__1775224519_49623.jpg" alt="Seminarians Folz and Riecker.">
+      </div>
+      <p class="meta">Vocations &middot; <b>April 3, 2026</b></p>
+      <h3>Two seminarians to be ordained <em>transitional deacons.</em></h3>
+      <p>Folz and Riecker move one step closer to the priesthood this June at the cathedral.</p>
+    </a>
+  </div>
+</section>
+
+<!-- ─── SACRAMENTS ─── -->
+<section class="sacraments" aria-labelledby="sacraments-title">
+  <div class="inner">
+    <figure class="photo">
+      <img src="/images/stock/blue-mass-cathedral.jpg" alt="Clergy venerating the altar at St. Benedict Cathedral.">
+    </figure>
+    <div class="text">
+      <p class="kicker">A Life in the Sacraments</p>
+      <h2 id="sacraments-title">Seven gifts, one <em>grace-filled</em> life.</h2>
+      <p class="lede">From the waters of baptism to the final anointing, the sacraments trace the arc of a Catholic life — outward signs of an inward grace.</p>
+      <ol class="list">
+        <li><span class="num">I.</span><a href="#">Baptism</a></li>
+        <li><span class="num">II.</span><a href="#">Confirmation</a></li>
+        <li><span class="num">III.</span><a href="#">Eucharist</a></li>
+        <li><span class="num">IV.</span><a href="#">Reconciliation</a></li>
+        <li><span class="num">V.</span><a href="#">Anointing of the Sick</a></li>
+        <li><span class="num">VI.</span><a href="#">Holy Orders</a></li>
+        <li><span class="num">VII.</span><a href="#">Matrimony</a></li>
+      </ol>
     </div>
-    <div class="articles">
-      <a href="#" class="article">
-        <div class="img"><img src="/images/hero/hero-church.jpg" alt=""></div>
-        <span class="meta">News</span>
-        <h3>Catholic Charities expands family services in Vanderburgh County</h3>
-        <p>New programs will serve an additional 400 families annually.</p>
-        <p class="date">March 15, 2026</p>
-      </a>
-      <a href="#" class="article">
-        <div class="img"><img src="/images/articles/become-one.jpg" alt=""></div>
-        <span class="meta">Schools</span>
-        <h3>Record 850 scholarships awarded for 2026–27</h3>
-        <p>Families across the diocese receive support through CMA.</p>
-        <p class="date">February 20, 2026</p>
-      </a>
-      <a href="#" class="article">
-        <div class="img"><img src="/images/articles/catholic-ministries-appeal.png" alt=""></div>
-        <span class="meta">Ministries</span>
-        <h3>Project Rachel launches Spanish-language retreat</h3>
-        <p>Post-abortion healing ministry doubles its capacity.</p>
-        <p class="date">January 10, 2026</p>
-      </a>
-    </div>
+  </div>
+</section>
+
+<!-- ─── ACTION ─── -->
+<section class="action" aria-label="Next steps">
+  <div class="grid">
+    <a class="card" href="#">
+      <span class="num">a.</span>
+      <h3>Find a <em>parish</em> near you.</h3>
+      <p>Mass times, deanery map, and directions to every parish in the diocese — from Evansville to the river towns of Southwest Indiana.</p>
+      <span class="cta">Open the parish map <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="card" href="#" id="give">
+      <span class="num">b.</span>
+      <h3>Make a <em>gift.</em></h3>
+      <p>Support the Catholic Ministries Appeal, give to your parish, or establish a legacy gift. Every gift is stewarded carefully.</p>
+      <span class="cta">Give online today <span aria-hidden="true">→</span></span>
+    </a>
   </div>
 </section>
 
 </main>
 
-<footer class="footer" role="contentinfo">
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <h3>Come, <em>and see.</em></h3>
-        <p>The Roman Catholic Diocese of Evansville — a communion of 80,000 faithful in forty-six parishes across Southwestern Indiana since 1944.</p>
-      </div>
-      <div>
-        <h4>Worship</h4>
-        <ul>
-          <li><a href="#">Find a Parish</a></li>
-          <li><a href="#">Mass Times</a></li>
-          <li><a href="#">Watch Online</a></li>
-          <li><a href="#">Church Calendar</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Community</h4>
-        <ul>
-          <li><a href="#">Ministries</a></li>
-          <li><a href="#">Schools</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">The Message</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Media Inquiries</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Safe Environment</a></li>
-        </ul>
-      </div>
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="grid">
+    <div>
+      <p class="mark">Diocese of <em>Evansville</em></p>
+      <p class="addr">
+        4200 N. Kentucky Avenue<br>
+        Evansville, Indiana 47711<br>
+        812-424-5536
+      </p>
     </div>
-    <div class="footer-base">
-      <span>© 2026 Roman Catholic Diocese of Evansville · 4200 N. Kentucky Ave., Evansville IN 47711</span>
-      <span class="links">
-        <a href="#">Privacy</a>
-        <a href="#">Accessibility AAA</a>
-        <a href="#">Sitemap</a>
-      </span>
+    <div>
+      <h4>Find</h4>
+      <ul>
+        <li><a href="#">Parishes</a></li>
+        <li><a href="#">Mass Times</a></li>
+        <li><a href="#">Schools</a></li>
+        <li><a href="#">Priests</a></li>
+      </ul>
     </div>
+    <div>
+      <h4>Know</h4>
+      <ul>
+        <li><a href="#">Our Bishop</a></li>
+        <li><a href="#">Our History</a></li>
+        <li><a href="#">The Message</a></li>
+        <li><a href="#">Safe Environment</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Give</h4>
+      <ul>
+        <li><a href="#">Catholic Ministries Appeal</a></li>
+        <li><a href="#">Planned Giving</a></li>
+        <li><a href="#">Impact Report</a></li>
+        <li><a href="#">Stories of Impact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal">
+    <span>&copy; 2026 Diocese of Evansville. All rights reserved.</span>
+    <span>Privacy &middot; Accessibility &middot; Press Room</span>
   </div>
 </footer>
 
-<div class="swatches" aria-label="Brand palette">
-  <span>Palette</span>
-  <span class="swatch" style="background:#0A2240" title="Navy"></span>
-  <span class="swatch" style="background:#004E73" title="Teal"></span>
-  <span class="swatch" style="background:#A44637" title="Brick"></span>
-  <span class="swatch" style="background:#D09000" title="Dark Gold"></span>
-  <span class="swatch" style="background:#FFD040" title="Bright Gold"></span>
-  <span class="swatch" style="background:#EEDAB3" title="Cream"></span>
-  <span class="swatch" style="background:#FAF3E0" title="Cream Lt"></span>
-</div>
-
-<div class="version" aria-hidden="true">v5 · Restrained · Navy + Cream</div>
-
+<div class="version" aria-hidden="true">v7 · Editorial</div>
 </body>
 </html>
