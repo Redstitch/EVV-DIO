@@ -3,28 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Style Direction A — Diocese of Evansville</title>
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<title>Style Direction A — v4 — Diocese of Evansville</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy: #0A2240;
-  --teal: #004E73;
-  --blue: #005CBA;
+  --navy:  #0A2240;
+  --teal:  #004E73;
+  --blue:  #005CBA;
   --brick: #A44637;
   --dgold: #D09000;
   --bgold: #FFD040;
   --stone: #B5AF9B;
   --cream: #EEDAB3;
-  --cream-lt: #FAF3E0;   /* lighter PANTONE 7506 C for backgrounds */
-  --cream-xlt: #FDF9EE;  /* even lighter */
+  --cream-lt: #FAF3E0;
+  --cream-xlt: #FDF9EE;
   --ink: #0A2240;
+  --muted: #524E44;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   line-height: 1.55;
   color: var(--ink);
   background: var(--cream-lt);
@@ -34,438 +39,532 @@ body {
 a { color: inherit; }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--brick); outline-offset: 3px; }
 
-/* ─── ANNOUNCE BAR ─── */
-.announce {
+/* ─── VERSION STAMP (to confirm you're seeing the new build) ─── */
+.version {
+  position: fixed; bottom: 20px; right: 20px; z-index: 100;
   background: var(--brick); color: var(--cream);
-  padding: 12px 0;
-  font-family: 'Inter', sans-serif;
-  font-size: 13px; font-weight: 500;
-  text-align: center;
-  letter-spacing: 0.02em;
+  padding: 8px 14px; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
-.announce .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
-.announce strong { font-weight: 700; color: var(--bgold); }
-.announce a { color: var(--bgold); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ─── DISPLAY TYPE CLASS ─── */
+.display {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  line-height: 1; letter-spacing: -0.02em;
+}
+.display-italic {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic; font-weight: 400;
+  line-height: 1; letter-spacing: -0.015em;
+}
+
+/* ─── ANNOUNCE STRIP ─── */
+.announce {
+  background: var(--navy); color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; font-weight: 500;
+  text-align: center; padding: 12px 0;
+}
+.announce .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+.announce strong { color: var(--bgold); font-weight: 700; }
+.announce .dot { color: var(--bgold); margin: 0 10px; }
 
 /* ─── HEADER ─── */
 .header {
   background: var(--cream-lt);
-  padding: 22px 0;
-  border-bottom: 1px solid rgba(10,34,64,0.1);
+  padding: 24px 0;
   position: sticky; top: 0; z-index: 50;
-  backdrop-filter: blur(6px);
-  background: rgba(250,243,224,0.95);
+  backdrop-filter: blur(10px);
+  background: rgba(250,243,224,0.96);
+  border-bottom: 1px solid rgba(10,34,64,0.08);
 }
 .header .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; gap: 40px; }
 .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
 .brand-mark {
-  width: 48px; height: 48px; border-radius: 50%;
+  width: 44px; height: 44px;
   background: var(--navy);
   display: grid; place-items: center;
   color: var(--bgold);
 }
-.brand-mark svg { width: 24px; height: 24px; fill: currentColor; }
+.brand-mark svg { width: 22px; height: 22px; fill: currentColor; }
 .brand-text .name {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 24, "SOFT" 50;
-  font-weight: 600; font-size: 20px; color: var(--navy);
-  letter-spacing: -0.01em; line-height: 1;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 22px; color: var(--navy);
+  letter-spacing: -0.02em; line-height: 1;
 }
 .brand-text .tag {
-  font-size: 11px; font-weight: 500; color: var(--brick); margin-top: 4px;
-  letter-spacing: 0.02em;
+  font-size: 11px; color: var(--brick); margin-top: 4px;
+  font-weight: 500; letter-spacing: 0.04em;
 }
 .nav ul { list-style: none; display: flex; gap: 28px; }
-.nav a { text-decoration: none; color: var(--navy); font-size: 14px; font-weight: 500; padding: 6px 0; }
+.nav a {
+  text-decoration: none; color: var(--navy);
+  font-size: 14px; font-weight: 500; padding: 6px 0;
+  transition: color .2s;
+}
 .nav a:hover { color: var(--brick); }
 .give-btn {
   background: var(--brick); color: #fff;
   padding: 12px 22px;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.04em; font-size: 13px; font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
   text-decoration: none; text-transform: uppercase;
-  display: inline-flex; align-items: center; gap: 8px;
   transition: background .2s;
+  display: inline-flex; align-items: center; gap: 8px;
 }
 .give-btn:hover { background: #8B3A2E; }
-.give-btn::before { content: '♡'; font-size: 14px; }
+.give-btn svg { width: 14px; height: 14px; fill: var(--bgold); }
 
-/* ─── HERO ─── */
-.hero { display: grid; grid-template-columns: 5fr 4fr; min-height: 82vh; }
-.hero-left {
-  background: var(--bgold);
-  padding: 80px 72px 56px;
-  position: relative;
-  display: flex; flex-direction: column; justify-content: space-between;
+/* ─── HERO — FULL-BLEED EDITORIAL PHOTO ─── */
+.hero {
+  position: relative; min-height: 92vh;
   overflow: hidden;
+  color: var(--cream);
+  background: var(--navy);
 }
-.hero-left::after {
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('/images/hero/hero-cathedral-generated.png') center/cover;
+}
+.hero-bg::after {
   content: '';
-  position: absolute; right: -80px; bottom: -80px;
-  width: 360px; height: 360px; border-radius: 50%;
-  background: rgba(208,144,0,0.22);
-  z-index: 0;
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(10,34,64,0.3) 0%, rgba(10,34,64,0.55) 50%, rgba(10,34,64,0.9) 100%);
 }
-.hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--brick); margin-bottom: 32px;
+.hero .wrap {
   position: relative; z-index: 1;
+  max-width: 1440px; margin: 0 auto; padding: 80px 40px 64px;
+  min-height: 92vh;
+  display: flex; flex-direction: column; justify-content: space-between;
 }
-.hero-eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--brick); }
+.hero-top {
+  display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(238,218,179,0.3);
+}
+.hero-top .label {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--bgold);
+}
+.hero-top .date {
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(238,218,179,0.8);
+}
 .hero-headline {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 144, "SOFT" 50;
-  font-weight: 700;
-  font-size: clamp(72px, 11vw, 176px);
-  line-height: 0.86;
-  letter-spacing: -0.035em;
-  color: var(--navy);
-  position: relative; z-index: 1;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: clamp(64px, 11vw, 172px);
+  line-height: 0.9; letter-spacing: -0.025em;
+  color: var(--cream);
+  margin-bottom: 32px;
+  max-width: 1200px;
 }
-.hero-headline .line-b {
-  color: var(--brick); font-style: italic; font-weight: 600;
-  font-variation-settings: "opsz" 144, "SOFT" 100;
-  display: block;
+.hero-headline em {
+  font-style: italic;
+  color: var(--bgold);
+}
+.hero-bottom {
+  display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 48px; align-items: end;
+  padding-top: 24px;
 }
 .hero-lede {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px; line-height: 1.55; font-weight: 400;
-  color: var(--navy); max-width: 440px;
-  margin-top: 32px;
-  position: relative; z-index: 1;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 19px; line-height: 1.5; font-weight: 400;
+  color: rgba(238,218,179,0.95);
+  max-width: 460px;
 }
 .hero-cta {
-  display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap;
-  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 12px; align-items: flex-start;
 }
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
-  padding: 14px 22px;
-  font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600;
-  letter-spacing: 0.02em;
-  text-decoration: none; transition: all .2s;
-  border-radius: 0; cursor: pointer;
+  padding: 16px 26px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  text-decoration: none; transition: all .25s;
+  cursor: pointer; border-radius: 0;
+  white-space: nowrap;
 }
-.btn-primary { background: var(--navy); color: var(--cream); border: 2px solid var(--navy); }
-.btn-primary:hover { background: transparent; color: var(--navy); }
-.btn-outline { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
-.btn-outline:hover { background: var(--navy); color: var(--cream); }
-.btn .arrow { transition: transform .25s; }
+.btn-primary { background: var(--bgold); color: var(--navy); border: 2px solid var(--bgold); }
+.btn-primary:hover { background: var(--brick); color: var(--cream); border-color: var(--brick); }
+.btn-ghost { background: transparent; color: var(--cream); border: 2px solid rgba(238,218,179,0.5); }
+.btn-ghost:hover { background: var(--cream); color: var(--navy); border-color: var(--cream); }
+.btn .arrow { transition: transform .25s; font-family: serif; font-weight: normal; }
 .btn:hover .arrow { transform: translateX(4px); }
-
-.hero-right {
-  position: relative; overflow: hidden;
-  background: var(--navy) url('/images/hero/hero-cathedral-generated.png') center/cover;
-}
-.hero-right::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(10,34,64,0.2) 0%, rgba(10,34,64,0.55) 100%);
-}
-.hero-ribbon {
-  position: absolute; bottom: 40px; left: 0; right: 0;
-  padding: 24px 48px;
+.hero-announcement {
   background: var(--brick); color: var(--cream);
-  display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 16px; z-index: 1;
+  padding: 20px 28px;
+  border-left: 4px solid var(--bgold);
 }
-.hero-ribbon .lbl {
-  font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--bgold);
+.hero-announcement .eyebrow {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--bgold); margin-bottom: 8px;
 }
-.hero-ribbon .title {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 72, "SOFT" 50;
-  font-weight: 500; font-size: 22px; line-height: 1.2;
+.hero-announcement h3 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400; font-size: 22px; line-height: 1.2;
   letter-spacing: -0.01em;
+  margin-bottom: 6px;
 }
-.hero-ribbon .when {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px; font-weight: 500; color: var(--cream);
-}
-.hero-ribbon .when b { color: var(--bgold); font-weight: 700; }
+.hero-announcement .when { font-size: 13px; font-weight: 500; color: rgba(238,218,179,0.9); }
+.hero-announcement .when b { color: var(--bgold); font-weight: 700; }
 
-/* ─── WELCOME BAND ─── */
-.welcome {
+/* ─── QUOTE CENTERPIECE ─── */
+.quote-block {
   background: var(--cream-lt);
-  padding: 100px 0 80px;
+  padding: 140px 0 120px;
+  text-align: center;
   position: relative;
 }
-.welcome .wrap { max-width: 1200px; margin: 0 auto; padding: 0 40px; text-align: center; }
-.welcome .eyebrow {
-  font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--brick); margin-bottom: 20px;
+.quote-block::before {
+  content: '"';
+  position: absolute; top: 48px; left: 50%; transform: translateX(-50%);
+  font-family: 'DM Serif Display', serif;
+  font-size: 280px; line-height: 1;
+  color: var(--bgold);
+  opacity: 0.5;
 }
-.welcome h2 {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 144, "SOFT" 50;
-  font-weight: 600;
-  font-size: clamp(36px, 4.5vw, 60px);
-  line-height: 1.1; letter-spacing: -0.02em;
+.quote-block .wrap { max-width: 980px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
+.quote-block .eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--brick); margin-bottom: 56px;
+  display: inline-flex; align-items: center; gap: 14px;
+}
+.quote-block .eyebrow::before, .quote-block .eyebrow::after {
+  content: ''; width: 32px; height: 1px; background: var(--brick);
+}
+.quote-block blockquote {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: clamp(30px, 4.5vw, 56px);
+  line-height: 1.2; letter-spacing: -0.02em;
   color: var(--navy);
-  max-width: 900px; margin: 0 auto;
+  margin-bottom: 40px;
 }
-.welcome h2 em {
-  font-style: italic; font-weight: 600; color: var(--dgold);
-  font-variation-settings: "opsz" 144, "SOFT" 100;
+.quote-block blockquote em {
+  font-style: italic; color: var(--brick);
 }
-.welcome .stats {
-  display: flex; justify-content: center; gap: 64px; flex-wrap: wrap;
-  margin-top: 56px; padding-top: 40px;
-  border-top: 1px solid rgba(10,34,64,0.15);
-}
-.welcome .stat { text-align: center; }
-.welcome .stat .num {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 144, "SOFT" 50;
-  font-weight: 700;
-  font-size: clamp(48px, 6vw, 72px); line-height: 1;
-  color: var(--brick);
-  letter-spacing: -0.03em;
-}
-.welcome .stat .lbl {
-  font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--navy); margin-top: 8px;
+.quote-block cite {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--dgold);
+  border-top: 2px solid var(--dgold);
+  padding-top: 16px;
 }
 
-/* ─── MODULAR GRID ─── */
-.modules {
+/* ─── FEATURE STORY (MAGAZINE) ─── */
+.feature {
   background: var(--cream-lt);
-  padding: 60px 0 120px;
+  padding: 80px 0 140px;
 }
-.modules .wrap {
-  max-width: 1440px; margin: 0 auto; padding: 0 40px;
-  display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px;
-  grid-auto-rows: minmax(180px, auto);
+.feature .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.feature-media { aspect-ratio: 4/5; overflow: hidden; background: var(--navy); position: relative; }
+.feature-media img { width: 100%; height: 100%; object-fit: cover; }
+.feature-media::after {
+  content: 'Featured';
+  position: absolute; top: 24px; left: 24px;
+  background: var(--bgold); color: var(--navy);
+  padding: 6px 12px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
 }
-.mod { padding: 32px; display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; color: inherit; position: relative; overflow: hidden; transition: transform .3s; }
-.mod:hover { transform: translateY(-4px); }
-.mod .eyebrow {
+.feature-copy .kicker {
+  display: inline-block;
+  padding: 5px 12px; background: var(--brick); color: var(--cream);
   font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
-.mod h3 {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 96, "SOFT" 50;
-  font-weight: 600;
-  font-size: 30px; line-height: 1.1;
-  letter-spacing: -0.02em;
-  margin-bottom: 12px;
-}
-.mod p {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px; line-height: 1.55;
+.feature-copy h2 {
+  font-family: 'DM Serif Display', serif;
   font-weight: 400;
-  margin-bottom: 24px;
-  flex: 1;
+  font-size: clamp(40px, 5.5vw, 76px);
+  line-height: 0.95; letter-spacing: -0.025em;
+  color: var(--navy);
+  margin-bottom: 28px;
 }
-.mod .link {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+.feature-copy h2 em { font-style: italic; color: var(--brick); }
+.feature-copy p { font-size: 17px; line-height: 1.65; color: var(--muted); margin-bottom: 18px; max-width: 540px; }
+.feature-copy .read-more {
+  margin-top: 16px;
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--navy); text-decoration: none;
+  font-size: 14px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  border-bottom: 2px solid var(--bgold); padding-bottom: 4px;
+}
+.feature-copy .read-more:hover { color: var(--brick); border-color: var(--brick); }
+
+/* ─── PARISH STRIP ─── */
+.parishes-strip {
+  background: var(--brick); color: var(--cream);
+  padding: 96px 0;
+  position: relative; overflow: hidden;
+}
+.parishes-strip::before {
+  content: '46';
+  position: absolute; right: -40px; top: -60px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 480px; line-height: 0.8; color: rgba(255,208,64,0.15);
+  letter-spacing: -0.04em;
+}
+.parishes-strip .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; }
+.parishes-strip .eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--bgold); margin-bottom: 24px;
+  display: inline-flex; align-items: center; gap: 12px;
+}
+.parishes-strip .eyebrow::before { content: ''; width: 32px; height: 2px; background: var(--bgold); }
+.parishes-strip h2 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: clamp(48px, 6.5vw, 96px);
+  line-height: 0.95; letter-spacing: -0.02em;
+}
+.parishes-strip h2 em { font-style: italic; color: var(--bgold); }
+.parishes-strip p {
+  font-size: 17px; line-height: 1.6;
+  color: rgba(238,218,179,0.95);
+  margin-top: 20px; max-width: 480px;
+}
+.parishes-strip .find {
+  display: inline-flex; align-items: center; gap: 14px;
+  background: var(--bgold); color: var(--navy);
+  padding: 24px 32px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  text-decoration: none; transition: all .25s;
+}
+.parishes-strip .find:hover { background: var(--cream); }
+.parishes-strip .find .arrow { font-family: serif; font-weight: normal; font-size: 22px; transition: transform .25s; }
+.parishes-strip .find:hover .arrow { transform: translateX(6px); }
+
+/* ─── MASS + EVENTS (SPLIT) ─── */
+.pair {
+  background: var(--cream-lt);
+  padding: 120px 0;
+}
+.pair .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.panel { padding: 56px 48px; min-height: 420px; }
+.panel-mass { background: var(--bgold); color: var(--navy); }
+.panel-events { background: var(--navy); color: var(--cream); }
+.panel .eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.panel-mass .eyebrow { color: var(--brick); }
+.panel-events .eyebrow { color: var(--bgold); }
+.panel h2 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: clamp(36px, 4.5vw, 56px);
+  line-height: 0.95; letter-spacing: -0.02em;
+  margin-bottom: 28px;
+}
+.panel-mass h2 em { color: var(--brick); font-style: italic; }
+.panel-events h2 em { color: var(--bgold); font-style: italic; }
+.mass-list { display: grid; grid-template-columns: auto 1fr; gap: 14px 24px; margin-bottom: 32px; }
+.mass-list .day { font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brick); padding-top: 4px; }
+.mass-list .time { font-family: 'DM Serif Display', serif; font-size: 24px; letter-spacing: -0.01em; }
+.panel-link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 2px solid;
+  padding-bottom: 4px;
   display: inline-flex; align-items: center; gap: 8px;
 }
-.mod .link .arrow { transition: transform .25s; }
-.mod:hover .link .arrow { transform: translateX(4px); }
+.panel-mass .panel-link { color: var(--navy); border-color: var(--brick); }
+.panel-events .panel-link { color: var(--bgold); border-color: var(--bgold); }
 
-.mod-findparish { grid-column: span 5; grid-row: span 2; background: var(--navy); color: var(--cream); }
-.mod-findparish .eyebrow { color: var(--bgold); }
-.mod-findparish h3 { font-size: 48px; color: var(--cream); }
-.mod-findparish .link { color: var(--bgold); }
-.mod-findparish .mod-img { margin: -32px -32px 24px; aspect-ratio: 16/9; background: url('/images/hero/hero-church.jpg') center/cover; position: relative; }
-.mod-findparish .mod-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,34,64,0) 50%, rgba(10,34,64,0.8) 100%); }
-
-.mod-mass { grid-column: span 4; background: var(--bgold); color: var(--navy); }
-.mod-mass .eyebrow { color: var(--brick); }
-.mod-mass h3 { color: var(--navy); }
-.mod-mass .times { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 72; font-weight: 600; font-size: 32px; line-height: 1.3; color: var(--navy); letter-spacing: -0.02em; }
-.mod-mass .times .day { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brick); font-family: 'Inter', sans-serif; display: block; margin-top: 14px; }
-.mod-mass .link { color: var(--brick); }
-
-.mod-become { grid-column: span 3; background: var(--brick); color: var(--cream); }
-.mod-become .eyebrow { color: var(--bgold); }
-.mod-become h3 { color: var(--cream); }
-.mod-become .link { color: var(--bgold); }
-
-.mod-events { grid-column: span 4; background: var(--cream); color: var(--navy); border: 1px solid rgba(10,34,64,0.1); }
-.mod-events .eyebrow { color: var(--brick); }
-.mod-events h3 { color: var(--navy); }
-.mod-events .eventlist { margin-bottom: 20px; flex: 1; }
-.mod-events .evt { display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid rgba(10,34,64,0.1); align-items: center; }
-.mod-events .evt:last-child { border-bottom: none; }
-.mod-events .evt .date {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 72; font-weight: 600;
-  font-size: 28px; line-height: 1; color: var(--brick);
-  min-width: 54px; text-align: center; letter-spacing: -0.02em;
+.event { display: grid; grid-template-columns: 72px 1fr auto; gap: 20px; padding: 16px 0; border-bottom: 1px solid rgba(238,218,179,0.2); align-items: center; }
+.event:last-of-type { border-bottom: none; margin-bottom: 24px; }
+.event .date {
+  font-family: 'DM Serif Display', serif;
+  font-size: 38px; line-height: 1; color: var(--bgold);
+  letter-spacing: -0.03em;
 }
-.mod-events .evt .date small { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy); font-family: 'Inter', sans-serif; margin-top: 2px; }
-.mod-events .evt .title { font-size: 14px; font-weight: 500; color: var(--navy); line-height: 1.3; }
-.mod-events .link { color: var(--brick); }
+.event .date small { display: block; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(238,218,179,0.7); margin-top: 2px; }
+.event .title { font-size: 15px; font-weight: 500; color: var(--cream); line-height: 1.3; }
+.event .meta { font-size: 11px; color: rgba(238,218,179,0.6); letter-spacing: 0.06em; text-transform: uppercase; }
 
-.mod-give { grid-column: span 3; background: var(--dgold); color: var(--navy); }
-.mod-give .eyebrow { color: var(--navy); }
-.mod-give h3 { color: var(--navy); font-size: 36px; }
-.mod-give .link { color: var(--navy); }
-.mod-give .big-num {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 144; font-weight: 700;
-  font-size: 80px; line-height: 1; color: var(--navy); letter-spacing: -0.04em;
-  margin-top: auto;
+/* ─── MISSION BAND ─── */
+.mission-band {
+  background: var(--cream);
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
 }
-.mod-give .big-num small { font-size: 14px; font-weight: 600; display: block; letter-spacing: 0.04em; text-transform: uppercase; color: var(--brick); font-family: 'Inter', sans-serif; margin-top: 6px; }
-
-.mod-schools { grid-column: span 5; background: var(--teal); color: var(--cream); position: relative; overflow: hidden; }
-.mod-schools::after { content: '26'; position: absolute; right: -20px; bottom: -60px; font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144; font-weight: 700; font-size: 320px; color: rgba(255,208,64,0.15); line-height: 0.8; }
-.mod-schools .eyebrow { color: var(--bgold); }
-.mod-schools h3 { font-size: 44px; color: var(--cream); position: relative; z-index: 1; }
-.mod-schools p { position: relative; z-index: 1; }
-.mod-schools .link { color: var(--bgold); position: relative; z-index: 1; }
+.mission-band .wrap { max-width: 1000px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
+.mission-band .eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--brick); margin-bottom: 24px;
+}
+.mission-band h2 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: clamp(32px, 4.5vw, 56px);
+  line-height: 1.15; letter-spacing: -0.02em;
+  color: var(--navy);
+}
+.mission-band h2 em { font-style: italic; color: var(--dgold); }
+.mission-band .rule {
+  width: 64px; height: 3px; background: var(--brick);
+  margin: 48px auto 0;
+}
 
 /* ─── BISHOP ─── */
 .bishop {
   background: var(--cream-lt);
   padding: 140px 0;
-  position: relative;
 }
-.bishop .wrap {
-  max-width: 1280px; margin: 0 auto; padding: 0 40px;
-  display: grid; grid-template-columns: 1fr 1.4fr; gap: 72px; align-items: center;
-}
+.bishop .wrap { max-width: 1280px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 72px; align-items: center; }
 .bishop-portrait {
-  position: relative;
   aspect-ratio: 4/5;
   background: url('/images/bishop/bishop-siegel.jpg') center/cover;
-  max-width: 420px;
+  max-width: 440px;
+  position: relative;
 }
-.bishop-portrait::before {
-  content: '';
-  position: absolute; inset: 20px -20px -20px 20px;
+.bishop-portrait::after {
+  content: ''; position: absolute;
+  right: -20px; bottom: -20px; width: 120px; height: 120px;
   background: var(--bgold);
   z-index: -1;
 }
 .bishop-content .eyebrow {
-  font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--brick); margin-bottom: 24px;
-  display: flex; align-items: center; gap: 10px;
+  display: inline-flex; align-items: center; gap: 12px;
 }
 .bishop-content .eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--brick); }
 .bishop-content .quote {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 144, "SOFT" 30;
-  font-weight: 500;
-  font-size: clamp(30px, 3.4vw, 48px);
-  line-height: 1.15; letter-spacing: -0.02em;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.2; letter-spacing: -0.02em;
   color: var(--navy);
   margin-bottom: 32px;
 }
-.bishop-content .quote em {
-  font-style: italic; font-weight: 500; color: var(--brick);
-  font-variation-settings: "opsz" 144, "SOFT" 100;
-}
-.bishop-content .signature {
-  display: flex; align-items: center; gap: 16px;
-  padding-top: 24px; border-top: 2px solid var(--brick);
-}
+.bishop-content .quote em { font-style: italic; color: var(--brick); }
+.bishop-content .signature { padding-top: 24px; border-top: 2px solid var(--dgold); display: flex; align-items: center; gap: 16px; }
 .bishop-content .sig-name {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 36, "SOFT" 50;
-  font-weight: 700; font-size: 20px; color: var(--navy); letter-spacing: -0.01em;
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px; color: var(--navy); letter-spacing: -0.01em;
 }
 .bishop-content .sig-title {
   font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--brick);
 }
 
-/* ─── SACRAMENTS STRIP ─── */
-.sacs {
-  background: var(--cream);
+/* ─── GIVE BAND ─── */
+.give-band {
+  background: var(--bgold);
   padding: 100px 0;
-  border-top: 8px solid var(--bgold);
+  position: relative; overflow: hidden;
 }
-.sacs .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
-.sacs-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; flex-wrap: wrap; gap: 24px; }
-.sacs-head .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brick); margin-bottom: 12px; }
-.sacs-head h2 { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 50; font-weight: 700; font-size: clamp(40px, 5vw, 64px); line-height: 1; color: var(--navy); letter-spacing: -0.02em; }
-.sacs-head h2 em { color: var(--brick); font-style: italic; font-weight: 600; font-variation-settings: "opsz" 144, "SOFT" 100; }
-.sacs-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
-.sac {
-  background: var(--cream-lt);
-  padding: 28px 18px 22px;
-  text-align: center;
-  text-decoration: none; color: var(--navy);
-  transition: all .25s;
-  border: 2px solid transparent;
-  display: flex; flex-direction: column; align-items: center; justify-content: space-between;
-  aspect-ratio: 1;
+.give-band::before {
+  content: '$';
+  position: absolute; left: -30px; top: -40px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 400px; line-height: 0.8; color: rgba(208,144,0,0.3);
 }
-.sac:hover { background: var(--bgold); border-color: var(--navy); transform: translateY(-4px); }
-.sac .num {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 144; font-weight: 700;
-  font-size: 40px; color: var(--brick); line-height: 1; letter-spacing: -0.03em;
+.give-band .wrap { max-width: 1280px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 64px; align-items: center; position: relative; z-index: 1; }
+.give-band .eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--brick); margin-bottom: 20px;
 }
-.sac h3 {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 36, "SOFT" 50;
-  font-weight: 600; font-size: 18px; color: var(--navy); line-height: 1.1;
-  margin-bottom: 4px;
+.give-band h2 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: clamp(44px, 6vw, 88px);
+  line-height: 0.95; letter-spacing: -0.025em;
+  color: var(--navy);
+  margin-bottom: 24px;
 }
-.sac small { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brick); }
+.give-band h2 em { font-style: italic; color: var(--brick); }
+.give-band p { font-size: 17px; line-height: 1.6; color: var(--navy); max-width: 500px; }
+.give-stat { text-align: right; }
+.give-stat .num {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(72px, 10vw, 140px);
+  line-height: 1; color: var(--brick); letter-spacing: -0.04em;
+}
+.give-stat .lbl {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--navy); margin-top: 10px;
+}
+.give-stat .give-link {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-top: 28px;
+  background: var(--navy); color: var(--cream);
+  padding: 16px 26px;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  text-decoration: none;
+}
+.give-stat .give-link:hover { background: var(--brick); }
+.give-stat .give-link .arrow { font-family: serif; font-weight: normal; font-size: 18px; }
 
 /* ─── STORIES ─── */
-.stories { background: var(--cream-lt); padding: 120px 0; }
-.stories .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
-.stories-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; padding-bottom: 28px; border-bottom: 2px solid var(--navy); flex-wrap: wrap; gap: 24px; }
-.stories-head .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brick); margin-bottom: 12px; }
-.stories-head h2 { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 50; font-weight: 700; font-size: clamp(40px, 5vw, 64px); line-height: 1; color: var(--navy); letter-spacing: -0.02em; }
-.stories-head h2 em { color: var(--brick); font-style: italic; font-weight: 600; font-variation-settings: "opsz" 144, "SOFT" 100; }
-.stories-head .all {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
-  color: var(--navy); text-decoration: none;
-  padding: 14px 24px; background: var(--bgold);
-  display: inline-flex; align-items: center; gap: 8px;
+.stories {
+  background: var(--cream-lt);
+  padding: 140px 0;
 }
-.stories-head .all:hover { background: var(--brick); color: var(--cream); }
-.articles { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 32px; }
-.article { text-decoration: none; color: inherit; background: var(--cream-xlt); padding: 24px; transition: transform .3s; }
+.stories .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+.stories-head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; margin-bottom: 64px; padding-bottom: 24px; border-bottom: 2px solid var(--navy); }
+.stories-head .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brick); margin-bottom: 12px; }
+.stories-head h2 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: clamp(44px, 5.5vw, 76px);
+  line-height: 0.95; letter-spacing: -0.025em;
+  color: var(--navy);
+}
+.stories-head h2 em { font-style: italic; color: var(--brick); }
+.stories-head .all {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--navy); text-decoration: none;
+  border-bottom: 2px solid var(--bgold); padding-bottom: 4px;
+}
+.stories-head .all:hover { color: var(--brick); border-color: var(--brick); }
+.articles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.article { text-decoration: none; color: inherit; transition: transform .3s; }
 .article:hover { transform: translateY(-4px); }
-.article .img { aspect-ratio: 3/2; background: var(--navy); overflow: hidden; margin: -24px -24px 20px; }
-.article.feature .img { aspect-ratio: 5/3; }
+.article .img { aspect-ratio: 4/3; background: var(--navy); overflow: hidden; margin-bottom: 18px; }
 .article .img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
-.article:hover .img img { transform: scale(1.04); }
+.article:hover .img img { transform: scale(1.05); }
 .article .meta {
-  display: inline-block; padding: 4px 10px; background: var(--brick); color: var(--cream);
-  font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-  margin-bottom: 14px;
+  display: inline-block;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--brick); margin-bottom: 12px;
 }
 .article h3 {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: "opsz" 72, "SOFT" 50;
-  font-weight: 600;
-  font-size: 22px; line-height: 1.2; letter-spacing: -0.01em;
-  color: var(--navy); margin-bottom: 10px;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 28px; line-height: 1.15; letter-spacing: -0.015em;
+  color: var(--navy); margin-bottom: 12px;
 }
-.article.feature h3 { font-size: 38px; line-height: 1.05; font-variation-settings: "opsz" 144, "SOFT" 50; font-weight: 700; }
-.article p { font-size: 14px; line-height: 1.55; color: rgba(10,34,64,0.8); }
-.article .date { font-size: 12px; font-weight: 600; color: var(--brick); margin-top: 12px; letter-spacing: 0.04em; }
+.article p { font-size: 14px; line-height: 1.55; color: var(--muted); }
+.article .date { font-size: 12px; font-weight: 600; color: var(--dgold); margin-top: 14px; letter-spacing: 0.06em; }
 
 /* ─── FOOTER ─── */
-.footer { background: var(--navy); color: var(--cream); padding: 100px 0 28px; }
+.footer { background: var(--navy); color: var(--cream); padding: 100px 0 28px; border-top: 6px solid var(--bgold); }
 .footer .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
 .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 56px; padding-bottom: 48px; border-bottom: 1px solid rgba(238,218,179,0.2); margin-bottom: 28px; }
 .footer-brand h3 {
-  font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 50; font-weight: 700;
-  font-size: 42px; line-height: 1; color: var(--bgold); margin-bottom: 20px; letter-spacing: -0.02em;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 48px; line-height: 1; color: var(--bgold); margin-bottom: 20px; letter-spacing: -0.025em;
 }
-.footer-brand p { font-size: 14px; line-height: 1.6; color: rgba(238,218,179,0.75); max-width: 320px; }
-.footer h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bgold); margin-bottom: 18px; }
+.footer-brand h3 em { font-style: italic; color: var(--cream); }
+.footer-brand p { font-size: 14px; line-height: 1.6; color: rgba(238,218,179,0.75); max-width: 340px; }
+.footer h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bgold); margin-bottom: 18px; }
 .footer ul { list-style: none; }
 .footer li { margin-bottom: 10px; }
 .footer a { color: rgba(238,218,179,0.8); font-size: 14px; text-decoration: none; }
 .footer a:hover { color: var(--bgold); }
-.footer-base { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 12px; color: rgba(238,218,179,0.55); }
+.footer-base { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 12px; color: rgba(238,218,179,0.55); letter-spacing: 0.04em; }
 .footer-base .links { display: flex; gap: 20px; }
 .footer-base a { color: inherit; }
 
@@ -475,30 +574,23 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--brick); outline
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 1024px) {
-  .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-right { min-height: 360px; }
-  .modules .wrap { grid-template-columns: repeat(6, 1fr); }
-  .mod-findparish { grid-column: span 6; }
-  .mod-mass { grid-column: span 3; }
-  .mod-become { grid-column: span 3; }
-  .mod-events { grid-column: span 3; }
-  .mod-give { grid-column: span 3; }
-  .mod-schools { grid-column: span 6; }
-  .bishop .wrap { grid-template-columns: 1fr; }
+  .hero-bottom { grid-template-columns: 1fr; gap: 32px; }
+  .feature .wrap { grid-template-columns: 1fr; gap: 40px; }
+  .parishes-strip .wrap { grid-template-columns: 1fr; gap: 32px; }
+  .pair .wrap { grid-template-columns: 1fr; }
+  .bishop .wrap { grid-template-columns: 1fr; gap: 40px; }
   .bishop-portrait { max-width: 100%; }
-  .sacs-grid { grid-template-columns: repeat(4, 1fr); }
+  .give-band .wrap { grid-template-columns: 1fr; gap: 40px; }
+  .give-stat { text-align: left; }
   .articles { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr 1fr; }
   .nav { display: none; }
 }
 @media (max-width: 640px) {
-  .announce { font-size: 12px; }
-  .hero-left { padding: 48px 28px; }
-  .modules .wrap { grid-template-columns: 1fr; }
-  .mod-findparish, .mod-mass, .mod-become, .mod-events, .mod-give, .mod-schools { grid-column: span 1; }
-  .sacs-grid { grid-template-columns: repeat(2, 1fr); }
-  .welcome .stats { gap: 32px; }
+  .hero .wrap { padding: 48px 24px; }
+  .mission-band { padding: 72px 0; }
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .panel { padding: 40px 28px; }
 }
 </style>
 </head>
@@ -506,7 +598,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--brick); outline
 
 <div class="announce" role="complementary" aria-label="Announcement">
   <div class="wrap">
-    <span><strong>Holy Week</strong> · April 13 – 20 · <a href="#">See all Mass times &amp; services →</a></span>
+    <strong>Holy Week</strong> <span class="dot">·</span> April 13 – 20, 2026 <span class="dot">·</span> <a href="#" style="color: var(--bgold)">See Mass times &amp; services →</a>
   </div>
 </div>
 
@@ -532,114 +624,123 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--brick); outline
         <li><a href="#">The Message</a></li>
       </ul>
     </nav>
-    <a href="#" class="give-btn">Give</a>
+    <a href="#" class="give-btn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      Give
+    </a>
   </div>
 </header>
 
 <main id="main">
 
 <section class="hero" aria-labelledby="hero-title">
-  <div class="hero-left">
-    <div>
-      <div class="hero-eyebrow">A Catholic Community in Southwestern Indiana</div>
-      <h1 class="hero-headline" id="hero-title">
-        Come as<br>you are.
-        <span class="line-b">Stay as long as you need.</span>
-      </h1>
+  <div class="hero-bg" role="img" aria-label="Cathedral interior with candlelight and morning light"></div>
+  <div class="wrap">
+    <div class="hero-top">
+      <span class="label">A Catholic Community · Southwestern Indiana</span>
+      <span class="date">Thursday · April 16, 2026</span>
     </div>
-    <div>
+    <h1 class="hero-headline" id="hero-title">Come as you are.<br><em>Stay as long as you need.</em></h1>
+    <div class="hero-bottom">
       <p class="hero-lede">Forty-six parishes. Twenty-six Catholic schools. Hundreds of ministries. One family of faith across twelve counties — and a table with a seat saved for you.</p>
       <div class="hero-cta">
         <a href="#" class="btn btn-primary">Find a Parish <span class="arrow" aria-hidden="true">→</span></a>
-        <a href="#" class="btn btn-outline">Watch Mass Online</a>
+        <a href="#" class="btn btn-ghost">Watch Mass Live</a>
       </div>
-    </div>
-  </div>
-  <div class="hero-right" role="img" aria-label="Cathedral interior">
-    <div class="hero-ribbon">
-      <div>
-        <div class="lbl">This Week at the Cathedral</div>
-        <div class="title">Chrism Mass &amp; Blessing of the Oils</div>
-      </div>
-      <div class="when">Tuesday · <b>April 15 · 6:00 PM</b></div>
+      <aside class="hero-announcement" aria-label="This week at the Cathedral">
+        <div class="eyebrow">This Week at the Cathedral</div>
+        <h3>Chrism Mass &amp; Blessing of the Oils</h3>
+        <p class="when">Tuesday · <b>April 15 · 6:00 PM</b> · Open to the faithful</p>
+      </aside>
     </div>
   </div>
 </section>
 
-<section class="welcome" aria-labelledby="welcome-title">
+<section class="quote-block" aria-labelledby="mission-q">
   <div class="wrap">
     <div class="eyebrow">Our Mission</div>
-    <h2 id="welcome-title">To joyfully proclaim the Gospel, serve those in need, and form disciples by inviting <em>everyone</em> to encounter, deepen, and engage.</h2>
-    <div class="stats">
-      <div class="stat"><div class="num">46</div><div class="lbl">Parishes</div></div>
-      <div class="stat"><div class="num">26</div><div class="lbl">Catholic Schools</div></div>
-      <div class="stat"><div class="num">80k</div><div class="lbl">Faithful</div></div>
-      <div class="stat"><div class="num">12</div><div class="lbl">Counties</div></div>
+    <blockquote id="mission-q">
+      To joyfully proclaim the Gospel, serve those in need, and form disciples by inviting <em>everyone</em> to encounter, deepen, and engage.
+    </blockquote>
+    <cite>The Diocese of Evansville · Pastoral Priorities 2025–2030</cite>
+  </div>
+</section>
+
+<section class="feature" aria-labelledby="feature-title">
+  <div class="wrap">
+    <div class="feature-media">
+      <img src="/images/articles/becoming-one-roadmap.jpg" alt="">
+    </div>
+    <div class="feature-copy">
+      <span class="kicker">The Message · Feature</span>
+      <h2 id="feature-title">A five-year plan, <em>one family</em></h2>
+      <p>Bishop Siegel announces Pastoral Priorities for 2025–2030 — a diocesan-wide plan centered on the themes of Encounter, Deepen, and Engage.</p>
+      <p>Across all forty-six parishes, twenty-six schools, and every ministry of the diocese, the plan marks the first comprehensive pastoral roadmap since 2017 and asks every Catholic in Southwestern Indiana to take one concrete step this year.</p>
+      <a href="#" class="read-more">Read the full announcement <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
-<section class="modules" aria-label="Quick access">
+<section class="parishes-strip" aria-labelledby="p-title">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Find Your Parish</div>
+      <h2 id="p-title">Forty-six <em>doors open</em>, across twelve counties.</h2>
+      <p>From Evansville to Washington, Jasper to Vincennes — find the parish nearest you, its Mass times, and the priest who'll know you by name.</p>
+    </div>
+    <a href="#" class="find">Open the parish finder <span class="arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section class="pair" aria-label="Mass and events">
   <div class="wrap">
 
-    <a href="#" class="mod mod-findparish">
-      <div class="mod-img"></div>
-      <div>
-        <div class="eyebrow">Worship · Parishes</div>
-        <h3>Find a parish near you</h3>
-        <p>Search 46 Catholic parishes across 12 counties. Filter by city, deanery, or Mass time.</p>
+    <div class="panel panel-mass">
+      <div class="eyebrow">This Sunday · Cathedral</div>
+      <h2>Sunday <em>Mass times</em></h2>
+      <div class="mass-list">
+        <div class="day">Sat Vigil</div><div class="time">5:30 PM</div>
+        <div class="day">Sunday</div><div class="time">7:30 · 9:30 · 11:30 AM</div>
+        <div class="day">Spanish</div><div class="time">1:00 PM</div>
+        <div class="day">Daily</div><div class="time">12:05 PM (Mon–Fri)</div>
       </div>
-      <span class="link">Browse the directory <span class="arrow" aria-hidden="true">→</span></span>
-    </a>
-
-    <a href="#" class="mod mod-mass">
-      <div class="eyebrow">Mass Times</div>
-      <h3>Cathedral this Sunday</h3>
-      <div class="times">
-        7:30 AM · 9:30 AM · 11:30 AM
-        <span class="day">Saturday Vigil 5:30 PM</span>
-      </div>
-      <span class="link">All Mass times <span class="arrow" aria-hidden="true">→</span></span>
-    </a>
-
-    <a href="#" class="mod mod-become">
-      <div>
-        <div class="eyebrow">Belonging</div>
-        <h3>Become Catholic</h3>
-      </div>
-      <p>Exploring faith, or returning home? Start here.</p>
-      <span class="link">Begin <span class="arrow" aria-hidden="true">→</span></span>
-    </a>
-
-    <div class="mod mod-events">
-      <div class="eyebrow">Upcoming</div>
-      <h3>This week</h3>
-      <div class="eventlist">
-        <div class="evt"><div class="date">15<small>Apr</small></div><div class="title">Chrism Mass · Cathedral, 6:00 PM</div></div>
-        <div class="evt"><div class="date">18<small>Apr</small></div><div class="title">Good Friday Veneration · all parishes</div></div>
-        <div class="evt"><div class="date">20<small>Apr</small></div><div class="title">Easter Vigil · OCIA reception of new members</div></div>
-      </div>
-      <a href="#" class="link">Full calendar <span class="arrow" aria-hidden="true">→</span></a>
+      <a href="#" class="panel-link">All Mass times across the diocese <span aria-hidden="true">→</span></a>
     </div>
 
-    <a href="#" class="mod mod-give">
-      <div>
-        <div class="eyebrow">Catholic Ministries Appeal</div>
-        <h3>Give today</h3>
+    <div class="panel panel-events">
+      <div class="eyebrow">Upcoming This Month</div>
+      <h2>Events &amp; <em>liturgies</em></h2>
+      <div class="event">
+        <div class="date">15<small>Apr</small></div>
+        <div class="title">Chrism Mass · Blessing of the Oils</div>
+        <div class="meta">6:00 PM</div>
       </div>
-      <div class="big-num">2.4M<small>Raised in 2025</small></div>
-      <span class="link">Make a gift <span class="arrow" aria-hidden="true">→</span></span>
-    </a>
-
-    <a href="#" class="mod mod-schools">
-      <div>
-        <div class="eyebrow">Education</div>
-        <h3>Catholic Schools</h3>
-        <p>Faith-based education across 26 schools — 5,800 students from pre-K through 12th grade.</p>
+      <div class="event">
+        <div class="date">18<small>Apr</small></div>
+        <div class="title">Good Friday · Veneration of the Cross</div>
+        <div class="meta">3:00 PM</div>
       </div>
-      <span class="link">Explore our schools <span class="arrow" aria-hidden="true">→</span></span>
-    </a>
+      <div class="event">
+        <div class="date">19<small>Apr</small></div>
+        <div class="title">Easter Vigil · Reception of new Catholics</div>
+        <div class="meta">8:30 PM</div>
+      </div>
+      <div class="event">
+        <div class="date">27<small>Apr</small></div>
+        <div class="title">Divine Mercy Sunday Pilgrimage</div>
+        <div class="meta">2:00 PM</div>
+      </div>
+      <a href="#" class="panel-link">Full diocesan calendar <span aria-hidden="true">→</span></a>
+    </div>
 
+  </div>
+</section>
+
+<section class="mission-band" aria-labelledby="become-title">
+  <div class="wrap">
+    <div class="eyebrow">Exploring the Faith</div>
+    <h2 id="become-title">Whether you're new to the Catholic faith or <em>returning home</em> after years away — there's a place for you at this table, and a priest ready to talk.</h2>
+    <div class="rule" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -659,23 +760,17 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--brick); outline
   </div>
 </section>
 
-<section class="sacs" aria-labelledby="sacs-title">
+<section class="give-band" aria-labelledby="give-title">
   <div class="wrap">
-    <div class="sacs-head">
-      <div>
-        <div class="eyebrow">Faith &amp; Sacraments</div>
-        <h2 id="sacs-title">The seven <em>sacraments</em></h2>
-      </div>
-      <a href="#" class="btn btn-outline">View all →</a>
+    <div>
+      <div class="eyebrow">Catholic Ministries Appeal</div>
+      <h2 id="give-title">Your gift <em>keeps the doors open.</em></h2>
+      <p>The Catholic Ministries Appeal funds seminarian education, Catholic Charities, youth retreats, Hispanic ministry, and outreach to the poorest across the diocese.</p>
     </div>
-    <div class="sacs-grid">
-      <a href="#" class="sac"><span class="num">1</span><div><h3>Baptism</h3><small>Water &amp; Spirit</small></div></a>
-      <a href="#" class="sac"><span class="num">2</span><div><h3>Communion</h3><small>The Table</small></div></a>
-      <a href="#" class="sac"><span class="num">3</span><div><h3>Confirmation</h3><small>Sealed</small></div></a>
-      <a href="#" class="sac"><span class="num">4</span><div><h3>Marriage</h3><small>The Covenant</small></div></a>
-      <a href="#" class="sac"><span class="num">5</span><div><h3>Reconciliation</h3><small>Mercy</small></div></a>
-      <a href="#" class="sac"><span class="num">6</span><div><h3>Anointing</h3><small>The Sick</small></div></a>
-      <a href="#" class="sac"><span class="num">7</span><div><h3>Holy Orders</h3><small>Service</small></div></a>
+    <div class="give-stat">
+      <div class="num">$2.4M</div>
+      <div class="lbl">Raised in 2025 from 4,800 donors</div>
+      <a href="#" class="give-link">Give today <span class="arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -685,29 +780,31 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--brick); outline
     <div class="stories-head">
       <div>
         <div class="eyebrow">The Message · Vol. 56</div>
-        <h2 id="stories-title">Stories from the <em>diocese</em></h2>
+        <h2 id="stories-title">More <em>stories</em></h2>
       </div>
       <a href="#" class="all">Read all stories →</a>
     </div>
     <div class="articles">
-      <a href="#" class="article feature">
-        <div class="img"><img src="/images/articles/becoming-one-roadmap.jpg" alt=""></div>
-        <span class="meta">Feature</span>
-        <h3>Bishop Siegel announces Pastoral Priorities for 2025–2030</h3>
-        <p>A five-year plan centered on Encounter, Deepen, and Engage — across all forty-six parishes and every ministry of the diocese.</p>
-        <p class="date">March 28, 2026</p>
-      </a>
       <a href="#" class="article">
         <div class="img"><img src="/images/hero/hero-church.jpg" alt=""></div>
         <span class="meta">News</span>
         <h3>Catholic Charities expands family services in Vanderburgh County</h3>
+        <p>New programs will serve an additional 400 families annually.</p>
         <p class="date">March 15, 2026</p>
       </a>
       <a href="#" class="article">
         <div class="img"><img src="/images/articles/become-one.jpg" alt=""></div>
         <span class="meta">Schools</span>
-        <h3>Record 850 scholarships awarded for the 2026–27 school year</h3>
+        <h3>Record 850 scholarships awarded for 2026–27 school year</h3>
+        <p>Families across the diocese receive support through CMA.</p>
         <p class="date">February 20, 2026</p>
+      </a>
+      <a href="#" class="article">
+        <div class="img"><img src="/images/articles/catholic-ministries-appeal.png" alt=""></div>
+        <span class="meta">Ministries</span>
+        <h3>Project Rachel launches Spanish-language retreat in Evansville</h3>
+        <p>Post-abortion healing ministry doubles its capacity to serve.</p>
+        <p class="date">January 10, 2026</p>
       </a>
     </div>
   </div>
@@ -719,7 +816,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--brick); outline
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <h3>Come, and see.</h3>
+        <h3>Come, <em>and see.</em></h3>
         <p>The Roman Catholic Diocese of Evansville — a communion of 80,000 faithful in forty-six parishes across Southwestern Indiana since 1944.</p>
       </div>
       <div>
@@ -751,7 +848,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--brick); outline
       </div>
     </div>
     <div class="footer-base">
-      <span>© 2026 Roman Catholic Diocese of Evansville · 4200 N. Kentucky Ave.</span>
+      <span>© 2026 Roman Catholic Diocese of Evansville · 4200 N. Kentucky Ave., Evansville IN 47711</span>
       <span class="links">
         <a href="#">Privacy</a>
         <a href="#">Accessibility AAA</a>
@@ -763,15 +860,16 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--brick); outline
 
 <div class="swatches" aria-label="Brand palette">
   <span>Palette</span>
-  <span class="swatch" style="background:#0A2240"></span>
-  <span class="swatch" style="background:#004E73"></span>
-  <span class="swatch" style="background:#005CBA"></span>
-  <span class="swatch" style="background:#A44637"></span>
-  <span class="swatch" style="background:#D09000"></span>
-  <span class="swatch" style="background:#FFD040"></span>
-  <span class="swatch" style="background:#EEDAB3"></span>
-  <span class="swatch" style="background:#FAF3E0"></span>
+  <span class="swatch" style="background:#0A2240" title="Navy"></span>
+  <span class="swatch" style="background:#004E73" title="Teal"></span>
+  <span class="swatch" style="background:#A44637" title="Brick"></span>
+  <span class="swatch" style="background:#D09000" title="Dark Gold"></span>
+  <span class="swatch" style="background:#FFD040" title="Bright Gold"></span>
+  <span class="swatch" style="background:#EEDAB3" title="Cream"></span>
+  <span class="swatch" style="background:#FAF3E0" title="Cream Lt"></span>
 </div>
+
+<div class="version" aria-hidden="true">v4 · April 16 · DM Serif + DM Sans</div>
 
 </body>
 </html>
