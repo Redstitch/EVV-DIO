@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editorial — Style Sheet · Diocese of Evansville</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0A2240; --teal: #004E73; --blue: #005CBA; --brick: #A44637;
+  --dgold: #D09000; --bgold: #FFD040; --stone: #B5AF9B;
+  --cream: #EEDAB3; --cream-lt: #FAF3E0; --cream-xlt: #FDFAF0;
+  --line: rgba(10,34,64,0.12); --muted: rgba(10,34,64,0.62);
+  --serif: 'Instrument Serif', 'Times New Roman', serif;
+  --sans: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--sans); color: var(--navy);
+  background: var(--cream-lt); line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+
+/* shell */
+.utility { background: var(--teal); color: rgba(238,218,179,0.92); font-size: 12px; letter-spacing: 0.02em; }
+.utility .row { max-width: 1360px; margin: 0 auto; padding: 9px 40px; display: flex; justify-content: space-between; }
+.utility a { color: var(--cream); }
+.topbar { background: var(--navy); border-bottom: 3px solid var(--bgold); }
+.topbar .row { max-width: 1360px; margin: 0 auto; padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; }
+.mark img { height: 56px; filter: brightness(0) invert(1); }
+.topnav { display: flex; gap: 28px; }
+.topnav a { font-size: 13px; font-weight: 500; color: var(--cream); }
+.topnav a:hover { color: var(--bgold); }
+.give { background: var(--brick); color: var(--cream); padding: 10px 22px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* hero */
+.sheet-hero { padding: 72px 40px 56px; text-align: center; border-bottom: 1px solid var(--line); background: var(--cream-lt); }
+.sheet-hero .eyebrow {
+  font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--teal); font-weight: 600; margin-bottom: 22px;
+  display: inline-flex; align-items: center; gap: 14px;
+}
+.sheet-hero .eyebrow::before, .sheet-hero .eyebrow::after {
+  content: ''; width: 32px; height: 1px; background: var(--teal);
+}
+.sheet-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(48px, 6vw, 96px);
+  line-height: 1; letter-spacing: -0.025em;
+  color: var(--navy); font-weight: 400;
+}
+.sheet-hero h1 em { font-style: italic; color: var(--blue); }
+.sheet-hero p {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(18px, 1.8vw, 22px);
+  color: var(--muted); margin: 18px auto 0; max-width: 640px; line-height: 1.45;
+}
+
+/* sections */
+section.block { padding: 80px 40px; border-bottom: 1px solid var(--line); }
+.block .inner { max-width: 1200px; margin: 0 auto; }
+.block .kicker {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--brick); font-weight: 600;
+  border-top: 2px solid var(--brick); padding-top: 10px;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+.block h2 {
+  font-family: var(--serif);
+  font-size: clamp(40px, 4vw, 60px);
+  line-height: 1.02; letter-spacing: -0.02em;
+  color: var(--navy); font-weight: 400;
+  margin-bottom: 18px;
+}
+.block h2 em { font-style: italic; color: var(--blue); }
+.block .intro {
+  font-size: 16px; color: var(--muted); max-width: 640px; margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* palette */
+.palette { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 20px; }
+.sw {
+  background: #fff; padding: 20px; border: 1px solid var(--line);
+}
+.sw .chip { width: 100%; height: 100px; margin-bottom: 14px; }
+.sw .name { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+.sw .hex { font-size: 12px; color: var(--muted); letter-spacing: 0.04em; font-variant-numeric: tabular-nums; margin-bottom: 10px; }
+.sw .use { font-size: 12px; color: var(--muted); line-height: 1.45; }
+
+/* typography */
+.type-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+.type-row { background: #fff; padding: 28px 32px; border: 1px solid var(--line); display: grid; grid-template-columns: 180px 1fr; gap: 32px; align-items: center; }
+.type-row .meta { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brick); font-weight: 600; }
+.type-row .meta b { color: var(--navy); display: block; font-size: 13px; margin-bottom: 6px; letter-spacing: 0.02em; text-transform: none; font-weight: 600; }
+.demo-h1 { font-family: var(--serif); font-size: 84px; line-height: 1; color: var(--navy); font-weight: 400; letter-spacing: -0.02em; }
+.demo-h1 em { font-style: italic; color: var(--blue); }
+.demo-h2 { font-family: var(--serif); font-size: 56px; line-height: 1.04; color: var(--navy); font-weight: 400; }
+.demo-h2 em { font-style: italic; color: var(--brick); }
+.demo-h3 { font-family: var(--serif); font-size: 32px; line-height: 1.1; color: var(--navy); font-weight: 400; }
+.demo-lede { font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--muted); line-height: 1.45; }
+.demo-body { font-family: var(--sans); font-size: 16px; color: var(--navy); line-height: 1.6; }
+.demo-label { font-family: var(--sans); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); font-weight: 600; }
+
+/* buttons */
+.btns { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 28px;
+  font-family: var(--sans); font-size: 15px; font-weight: 500;
+  border: 1.5px solid transparent;
+  transition: background .25s, color .25s, border-color .25s;
+}
+.btn .arrow { transition: transform .3s; }
+.btn:hover .arrow { transform: translateX(5px); }
+.btn-primary { background: var(--brick); color: var(--cream); border-color: var(--brick); }
+.btn-primary:hover { background: var(--navy); border-color: var(--navy); color: var(--cream); }
+.btn-outline { background: transparent; color: var(--navy); border-color: var(--navy); }
+.btn-outline:hover { background: var(--navy); color: var(--cream); }
+.link-cta {
+  font-size: 15px; font-weight: 500; color: var(--navy);
+  padding: 15px 6px;
+  border-bottom: 1px solid var(--dgold);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.link-cta:hover { color: var(--brick); border-color: var(--brick); }
+.caption { font-size: 12px; color: var(--muted); margin-top: 16px; letter-spacing: 0.02em; }
+code { font-family: 'SF Mono', Menlo, monospace; font-size: 12.5px; background: var(--cream); padding: 2px 6px; color: var(--navy); }
+
+/* eyebrows / labels */
+.eyebrow-demo-centered {
+  font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--teal); font-weight: 600;
+  display: inline-flex; align-items: center; gap: 14px;
+}
+.eyebrow-demo-centered::before, .eyebrow-demo-centered::after {
+  content: ''; width: 32px; height: 1px; background: var(--teal);
+}
+.eyebrow-demo-leading {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--teal); font-weight: 600;
+  display: inline-flex; align-items: center; gap: 12px;
+}
+.eyebrow-demo-leading::before { content: ''; width: 28px; height: 1px; background: var(--teal); }
+.eyebrow-demo-topbar {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--brick); font-weight: 600;
+  border-top: 2px solid var(--brick); padding-top: 10px;
+  display: inline-block;
+}
+.eyebrow-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+.eyebrow-cell { background: #fff; padding: 32px; border: 1px solid var(--line); text-align: center; }
+.eyebrow-cell.left { text-align: left; }
+
+/* cards */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.demo-card { background: #fff; border: 1px solid var(--line); padding: 28px; }
+.demo-card.photo-card { padding: 0; overflow: hidden; }
+.demo-card .photo-area { aspect-ratio: 3/2; background: var(--navy) url('/images/stock/presbyterate-group.jpg') center/cover; }
+.demo-card .body { padding: 24px; }
+.demo-card .meta { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); font-weight: 600; margin-bottom: 10px; }
+.demo-card h4 { font-family: var(--serif); font-size: 24px; line-height: 1.15; color: var(--navy); font-weight: 400; margin-bottom: 10px; }
+.demo-card h4 em { font-style: italic; color: var(--teal); }
+.demo-card p { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+/* photo treatment */
+.photo-demo { background: #fff; border: 1px solid var(--line); }
+.photo-demo img { width: 100%; height: 280px; object-fit: cover; display: block; }
+.photo-demo .fig-caption {
+  background: var(--navy); color: rgba(238,218,179,0.8);
+  padding: 16px 24px;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  display: flex; justify-content: space-between;
+}
+.photo-demo .fig-caption b { color: var(--bgold); font-weight: 600; }
+
+/* accessibility */
+.contrast-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.contrast-tile { padding: 24px; font-size: 14px; }
+.contrast-tile .label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 12px; opacity: 0.75; }
+.contrast-tile .ratio { font-family: var(--serif); font-size: 34px; line-height: 1; margin-bottom: 4px; }
+.contrast-tile .level { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
+
+/* footer */
+footer { background: var(--navy); color: rgba(238,218,179,0.75); padding: 56px 40px 32px; }
+footer .inner { max-width: 1360px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap; }
+footer .mark-text { font-family: var(--serif); font-size: 22px; color: var(--cream); }
+footer .mark-text em { color: var(--bgold); font-style: italic; }
+footer .links a { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-left: 28px; color: rgba(238,218,179,0.75); }
+footer .links a:hover { color: var(--bgold); }
+
+@media (max-width: 800px) {
+  .topnav { display: none; }
+  .type-row { grid-template-columns: 1fr; gap: 12px; }
+  .eyebrow-row { grid-template-columns: 1fr; }
+  .utility .row, .topbar .row, .sheet-hero, section.block, footer { padding-left: 24px; padding-right: 24px; }
+  .utility .row { flex-direction: column; gap: 4px; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<div class="utility"><div class="row"><span>Style sheet reference</span><span>Editorial direction</span></div></div>
+<header class="topbar"><div class="row">
+  <div class="mark"><img src="/images/branding/diocese-logo-full.png" alt="Diocese of Evansville"></div>
+  <nav class="topnav" aria-label="Primary">
+    <a href="a.html">Homepage A</a>
+    <a href="b.html">Faith B</a>
+    <a href="style-sheet-curves.html">Curves sheet</a>
+  </nav>
+  <a href="#" class="give">Give</a>
+</div></header>
+
+<section class="sheet-hero">
+  <p class="eyebrow">Style sheet · Editorial</p>
+  <h1>The <em>editorial</em> system.</h1>
+  <p>Sharp corners, full-width bands, thin rules, centered kickers with hairlines. The language of a broadsheet paper, dialed down to the scale of a diocesan website.</p>
+</section>
+
+<!-- ─── COLOR ─── -->
+<section class="block">
+  <div class="inner">
+    <p class="kicker">01 · Color</p>
+    <h2>Eight brand <em>colors,</em> no others.</h2>
+    <p class="intro">Every surface draws from these eight colors and their opacities. Navy is the institutional anchor. Teal and blue carry the "blue" family through bands and accents. Brick drives every call to action. Gold flags sacred moments; cream warms the page.</p>
+    <div class="palette">
+      <div class="sw"><div class="chip" style="background:#0A2240"></div><p class="name">Navy</p><p class="hex">#0A2240</p><p class="use">Body text · topbar · footer · figcaption</p></div>
+      <div class="sw"><div class="chip" style="background:#004E73"></div><p class="name">Teal</p><p class="hex">#004E73</p><p class="use">Utility strip · eyebrows · section hover</p></div>
+      <div class="sw"><div class="chip" style="background:#005CBA"></div><p class="name">Blue</p><p class="hex">#005CBA</p><p class="use">Italic accent words in headlines</p></div>
+      <div class="sw"><div class="chip" style="background:#A44637"></div><p class="name">Brick</p><p class="hex">#A44637</p><p class="use">Primary buttons · CTA underlines · Give</p></div>
+      <div class="sw"><div class="chip" style="background:#D09000"></div><p class="name">Dark Gold</p><p class="hex">#D09000</p><p class="use">Thin rules · underline accents</p></div>
+      <div class="sw"><div class="chip" style="background:#FFD040"></div><p class="name">Bright Gold</p><p class="hex">#FFD040</p><p class="use">Topbar border · accent on dark</p></div>
+      <div class="sw"><div class="chip" style="background:#B5AF9B"></div><p class="name">Stone</p><p class="hex">#B5AF9B</p><p class="use">Muted borders · disabled states</p></div>
+      <div class="sw"><div class="chip" style="background:#EEDAB3;border:1px solid var(--line)"></div><p class="name">Cream</p><p class="hex">#EEDAB3</p><p class="use">Text on navy · brand cream family</p></div>
+      <div class="sw"><div class="chip" style="background:#FAF3E0;border:1px solid var(--line)"></div><p class="name">Cream-LT</p><p class="hex">#FAF3E0</p><p class="use">Page background · hero surface</p></div>
+      <div class="sw"><div class="chip" style="background:#FDFAF0;border:1px solid var(--line)"></div><p class="name">Cream-XLT</p><p class="hex">#FDFAF0</p><p class="use">Card surface · action band</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TYPOGRAPHY ─── -->
+<section class="block">
+  <div class="inner">
+    <p class="kicker">02 · Typography</p>
+    <h2>One family, <em>two</em> registers.</h2>
+    <p class="intro">Instrument Serif carries every display and accent moment. Instrument Sans handles everything interactive — buttons, labels, body copy, nav. Italic in a contrasting color is the only decorative move the system needs.</p>
+    <div class="type-grid">
+      <div class="type-row"><div class="meta"><b>H1 · Hero</b>Instrument Serif · 84px · line-height 1 · letter-spacing &minus;0.02em</div><div class="demo-h1">Welcome <em>home.</em></div></div>
+      <div class="type-row"><div class="meta"><b>H2 · Section</b>Instrument Serif · 56px · line-height 1.04</div><div class="demo-h2">News from the <em>diocese.</em></div></div>
+      <div class="type-row"><div class="meta"><b>H3 · Article</b>Instrument Serif · 32px · line-height 1.1</div><div class="demo-h3">Questions about becoming Catholic?</div></div>
+      <div class="type-row"><div class="meta"><b>Lede / pull</b>Instrument Serif Italic · 22px · line-height 1.45</div><div class="demo-lede">Forty-five parishes across twelve counties.</div></div>
+      <div class="type-row"><div class="meta"><b>Body</b>Instrument Sans 400 · 16px · line-height 1.6</div><div class="demo-body">Every parish in the Diocese of Evansville has a priest or staff member ready to answer your questions about becoming Catholic, requesting a sacrament, or finding the right community for your family.</div></div>
+      <div class="type-row"><div class="meta"><b>Label · Eyebrow</b>Instrument Sans 600 · 11px · tracking 0.22em · uppercase</div><div class="demo-label">Serving Southwest Indiana since 1944</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BUTTONS ─── -->
+<section class="block">
+  <div class="inner">
+    <p class="kicker">03 · Buttons &amp; CTAs</p>
+    <h2>Sharp corners, <em>sentence</em> case.</h2>
+    <p class="intro">All buttons are rectangular. Sentence-case labels, 15px weight 500, arrow slides right on hover. Brick is the single primary color; navy is the outline. Inline text links ride on a dark-gold hairline.</p>
+    <div class="btns">
+      <a href="#" class="btn btn-primary">Find a Mass time <span class="arrow">→</span></a>
+      <a href="#" class="btn btn-outline">Find a parish <span class="arrow">→</span></a>
+      <a href="#" class="link-cta">Becoming Catholic <span class="arrow">→</span></a>
+    </div>
+    <p class="caption">Primary: <code>.btn-primary</code> brick on cream, hover to navy · Outline: <code>.btn-outline</code> navy on cream, hover inverts · Text link: <code>.link-cta</code> brick with dark-gold hairline</p>
+  </div>
+</section>
+
+<!-- ─── EYEBROWS ─── -->
+<section class="block">
+  <div class="inner">
+    <p class="kicker">04 · Labels &amp; eyebrows</p>
+    <h2>Three <em>label</em> forms.</h2>
+    <p class="intro">Eyebrows frame a headline. Three treatments: centered with hairlines on both sides for hero moments, leading hairline for section intros, top-rule kicker with number for editorial sections.</p>
+    <div class="eyebrow-row">
+      <div class="eyebrow-cell">
+        <p class="eyebrow-demo-centered">Serving Southwest Indiana since 1944</p>
+        <p class="caption">Hero · both-side hairlines</p>
+      </div>
+      <div class="eyebrow-cell left">
+        <p class="eyebrow-demo-leading">Faith &amp; Sacraments</p>
+        <p class="caption">Section intro · leading hairline</p>
+      </div>
+      <div class="eyebrow-cell left">
+        <p class="eyebrow-demo-topbar">01 · Sacraments</p>
+        <p class="caption">Editorial kicker · top rule</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CARDS ─── -->
+<section class="block">
+  <div class="inner">
+    <p class="kicker">05 · Cards</p>
+    <h2>Square corners, <em>thin</em> borders.</h2>
+    <p class="intro">Story cards, action cards, directory cards all share a sharp-cornered rectangle with a 1px line in navy-at-12% and interior padding of 28–48px. No shadows; the system relies on rules and color bands for hierarchy.</p>
+    <div class="cards-grid">
+      <article class="demo-card photo-card">
+        <div class="photo-area"></div>
+        <div class="body">
+          <p class="meta">Liturgy · April 10, 2026</p>
+          <h4>A light in the darkness: Easter <em>Vigil</em> at the cathedral.</h4>
+          <p>From darkness to Easter fire — the ancient liturgy marks the heart of the Christian year.</p>
+        </div>
+      </article>
+      <article class="demo-card">
+        <h4 style="margin-bottom:14px;">Find a <em>parish</em> near you.</h4>
+        <p>Mass times, deanery map, and directions to every parish in the diocese.</p>
+        <p style="margin-top:20px"><a href="#" class="link-cta" style="padding:10px 6px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;color:var(--brick);border-color:var(--brick);">Open the parish map <span class="arrow">→</span></a></p>
+      </article>
+      <article class="demo-card">
+        <p style="font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted);margin-bottom:8px;">I.</p>
+        <h4>Find your <em>parish.</em></h4>
+        <p>Forty-five parishes across twelve counties. Enter your town or ZIP — we'll get you to the right door.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PHOTO ─── -->
+<section class="block">
+  <div class="inner">
+    <p class="kicker">06 · Photography</p>
+    <h2>Real photographs, <em>navy</em> captions.</h2>
+    <p class="intro">Only real diocesan photography — no stock, no AI. Hero images fill their column edge-to-edge. Caption bands are navy with cream tracked-caps and a bright-gold highlight word.</p>
+    <figure class="photo-demo">
+      <img src="/images/stock/presbyterate-group.jpg" alt="Presbyterate 2025">
+      <figcaption class="fig-caption">
+        <span><b>The Presbyterate</b> · 2025</span>
+        <span>Photograph by the Office of Communications</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ─── DECORATIVE ─── -->
+<section class="block">
+  <div class="inner">
+    <p class="kicker">07 · Accents</p>
+    <h2>One gesture only: <em>italic</em> in color.</h2>
+    <p class="intro">The editorial system adds almost no ornament. The only consistent decorative move is italic accent words inside headlines — blue on hero titles, teal on section titles, brick on kickers. That's enough.</p>
+    <div style="background:#fff;padding:56px 40px;border:1px solid var(--line);text-align:center;">
+      <h2 style="font-size:clamp(40px,5vw,80px);color:var(--navy);font-weight:400;line-height:1.02;letter-spacing:-0.02em;margin:0;">Come <em style="font-style:italic;color:var(--blue);">home.</em></h2>
+      <p class="caption" style="margin-top:24px;">Blue italic accent · <code>color: var(--blue)</code></p>
+    </div>
+    <div style="background:#fff;padding:56px 40px;border:1px solid var(--line);text-align:center;margin-top:16px;">
+      <h2 style="font-size:clamp(32px,3.5vw,56px);color:var(--navy);font-weight:400;line-height:1.02;letter-spacing:-0.02em;margin:0;">News from the <em style="font-style:italic;color:var(--teal);">diocese.</em></h2>
+      <p class="caption" style="margin-top:24px;">Teal italic accent · section level</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ACCESSIBILITY ─── -->
+<section class="block">
+  <div class="inner">
+    <p class="kicker">08 · Accessibility</p>
+    <h2>Built to <em>AAA.</em></h2>
+    <p class="intro">Every text-on-background pairing hits WCAG AAA at body sizes. Decorative gold appears only on thin rules and italic heading accents where size and weight grant AA Large compliance. Focus states are a 2px bright-gold outline with 3px offset on every interactive element.</p>
+    <div class="contrast-grid">
+      <div class="contrast-tile" style="background:#FAF3E0;color:#0A2240;"><p class="label">Navy on cream-LT</p><p class="ratio">14.1:1</p><p class="level">AAA · all sizes</p></div>
+      <div class="contrast-tile" style="background:#0A2240;color:#EEDAB3;"><p class="label">Cream on navy</p><p class="ratio">12.3:1</p><p class="level">AAA · all sizes</p></div>
+      <div class="contrast-tile" style="background:#FAF3E0;color:#A44637;"><p class="label">Brick on cream-LT</p><p class="ratio">6.0:1</p><p class="level">AAA · large &middot; AA · body</p></div>
+      <div class="contrast-tile" style="background:#004E73;color:#EEDAB3;"><p class="label">Cream on teal</p><p class="ratio">8.1:1</p><p class="level">AAA · all sizes</p></div>
+      <div class="contrast-tile" style="background:#0A2240;color:#FFD040;"><p class="label">Bright-gold on navy</p><p class="ratio">9.1:1</p><p class="level">AAA · all sizes</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <p class="mark-text">Diocese of <em>Evansville</em> · Editorial style sheet</p>
+    <div class="links">
+      <a href="a.html">Homepage A</a>
+      <a href="b.html">Faith B</a>
+      <a href="style-sheet-curves.html">Curves sheet →</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -46,84 +46,142 @@ img { display: block; max-width: 100%; height: auto; }
 .skip { position: absolute; left: -9999px; top: 0; background: var(--navy); color: var(--cream); padding: 12px 20px; z-index: 100; }
 .skip:focus { left: 0; }
 
-/* ─── TOP BAR ─── */
+/* ─── UTILITY BAR (teal strip) ─── */
+.utility {
+  background: var(--teal);
+  color: rgba(238,218,179,0.92);
+  font-size: 12px; letter-spacing: 0.02em;
+}
+.utility .row {
+  max-width: 1360px; margin: 0 auto; padding: 9px 40px;
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+}
+.utility a { color: var(--cream); transition: color .2s; }
+.utility a:hover { color: var(--bgold); }
+.utility .links { display: flex; align-items: center; gap: 24px; }
+.utility .links a { font-weight: 500; }
+.utility .lang { display: inline-flex; align-items: center; gap: 8px; padding-left: 20px; margin-left: 4px; border-left: 1px solid rgba(238,218,179,0.3); }
+.utility .lang a { font-size: 11px; letter-spacing: 0.14em; font-weight: 600; text-transform: uppercase; color: rgba(238,218,179,0.6); }
+.utility .lang a.active { color: var(--cream); }
+.utility .lang a:hover { color: var(--bgold); }
+.utility .lang .sep { color: rgba(238,218,179,0.3); font-size: 10px; }
+
+/* ─── TOP BAR (navy, reversed logo) ─── */
 .topbar {
-  border-bottom: 1px solid var(--line);
-  background: var(--cream-lt);
+  background: var(--navy);
+  border-bottom: 1px solid rgba(238,218,179,0.15);
 }
 .topbar .row {
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 40px;
   max-width: 1360px; margin: 0 auto;
 }
-.mark {
-  font-family: var(--serif);
-  font-size: 22px;
-  letter-spacing: -0.01em;
-  color: var(--navy);
-}
-.mark em { font-style: italic; color: var(--brick); }
+.mark { display: inline-flex; align-items: center; }
+.mark img { height: 60px; width: auto; display: block; }
 .topnav { display: flex; gap: 28px; }
 .topnav a {
-  font-size: 13px; font-weight: 500; color: var(--navy);
+  font-size: 13px; font-weight: 500; color: var(--cream);
   position: relative; padding: 6px 0;
 }
-.topnav a:hover { color: var(--brick); }
+.topnav a:hover { color: var(--bgold); }
+.topbar-actions { display: flex; align-items: center; gap: 6px; }
+.search-btn { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; color: var(--cream); background: transparent; border: 0; cursor: pointer; transition: color .2s, background .2s; }
+.search-btn:hover { color: var(--bgold); background: rgba(238,218,179,0.08); }
 .topbar .give {
-  background: var(--navy); color: var(--cream);
+  background: var(--brick); color: var(--cream);
   padding: 10px 18px; font-size: 12px; font-weight: 600;
   letter-spacing: 0.08em; text-transform: uppercase;
   transition: background .2s;
 }
-.topbar .give:hover { background: var(--brick); color: var(--cream); }
+.topbar .give:hover { background: var(--navy); color: var(--cream); }
 
-/* ─── MASTHEAD ─── */
-.masthead {
-  padding: 48px 40px 36px;
-  border-bottom: 1px solid var(--line);
-  max-width: 1360px; margin: 0 auto;
-  display: grid;
-  grid-template-columns: 180px 1fr 180px;
-  gap: 32px;
-  align-items: end;
-}
-.masthead .vol {
-  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--muted); line-height: 1.6;
-  border-top: 1px solid var(--navy);
-  padding-top: 10px;
-}
-.masthead .vol b { color: var(--navy); font-weight: 600; }
-.masthead .title {
+/* ─── HERO (institutional, text-forward) ─── */
+.hero {
+  background: var(--cream-lt);
+  padding: 80px 40px 72px;
   text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.hero .inner {
+  max-width: 960px; margin: 0 auto;
+}
+.hero .eyebrow {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--teal); font-weight: 600;
+  margin-bottom: 22px;
+  display: inline-flex; align-items: center; gap: 14px;
+}
+.hero .eyebrow::before, .hero .eyebrow::after {
+  content: ''; width: 32px; height: 1px; background: var(--teal);
+}
+.hero h1 {
   font-family: var(--serif);
-  font-size: clamp(48px, 8vw, 132px);
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-  color: var(--navy);
+  font-size: clamp(44px, 5.6vw, 84px);
+  line-height: 1.02; letter-spacing: -0.02em;
+  color: var(--navy); font-weight: 400;
+  margin: 0 auto 22px;
+  max-width: 18ch;
+}
+.hero h1 em { font-style: italic; color: var(--blue); }
+.hero .lede {
+  font-size: clamp(17px, 1.5vw, 19px); line-height: 1.6;
+  color: var(--muted);
+  max-width: 640px; margin: 0 auto 36px;
+}
+.hero .lede b { color: var(--navy); font-weight: 500; }
+.hero .quick {
+  display: inline-flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+  align-items: center;
+}
+.hero .link-cta {
+  font-size: 15px; font-weight: 500; color: var(--navy);
+  padding: 15px 6px;
+  border-bottom: 1px solid var(--dgold);
+  transition: color .2s, border-color .2s;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.hero .link-cta .arrow { transition: transform .3s ease; }
+.hero .link-cta:hover { color: var(--brick); border-color: var(--brick); }
+.hero .link-cta:hover .arrow { transform: translateX(4px); }
+
+/* Establishing image strip below the hero */
+.establishing-strip {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+}
+.establishing-strip img {
+  width: 100%; height: auto; display: block;
+  max-height: 520px; object-fit: cover; object-position: center 45%;
+}
+
+/* ─── BUTTONS (brick primary, sentence case, soft) ─── */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 28px;
+  font-family: var(--sans);
+  font-size: 15px; font-weight: 500;
+  letter-spacing: 0; text-transform: none;
+  text-decoration: none; cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
+}
+.btn .arrow {
+  display: inline-block;
+  transition: transform .3s ease;
   font-weight: 400;
 }
-.masthead .title em {
-  font-style: italic;
-  color: var(--brick);
-  display: inline;
+.btn:hover .arrow { transform: translateX(5px); }
+.btn-primary {
+  background: var(--brick); color: var(--cream);
+  border-color: var(--brick);
 }
-.masthead .dateline {
-  text-align: right;
-  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--muted); line-height: 1.6;
-  border-top: 1px solid var(--navy);
-  padding-top: 10px;
+.btn-primary:hover { background: var(--navy); border-color: var(--navy); color: var(--cream); }
+.btn-outline {
+  background: transparent; color: var(--navy);
+  border-color: var(--navy);
 }
-.masthead .dateline b { color: var(--navy); font-weight: 600; }
-.subtitle {
-  max-width: 820px; margin: 20px auto 0;
-  text-align: center;
-  font-family: var(--serif); font-style: italic;
-  font-size: clamp(18px, 2vw, 22px);
-  color: var(--muted);
-  line-height: 1.45;
-}
+.btn-outline:hover { background: var(--navy); color: var(--cream); }
 
 /* ─── ESTABLISHING PHOTO ─── */
 .establishing { margin: 0; position: relative; }
@@ -131,14 +189,16 @@ img { display: block; max-width: 100%; height: auto; }
   width: 100%; height: auto; display: block;
 }
 .establishing figcaption {
-  padding: 12px 40px;
-  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--muted);
-  border-bottom: 1px solid var(--line);
+  background: var(--navy); color: rgba(238,218,179,0.8);
+  border-bottom: none;
+}
+.establishing figcaption .inner {
+  padding: 16px 40px;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
   display: flex; justify-content: space-between; align-items: center;
   max-width: 1360px; margin: 0 auto;
 }
-.establishing figcaption b { color: var(--navy); font-weight: 600; letter-spacing: 0.1em; }
+.establishing figcaption b { color: var(--bgold); font-weight: 600; letter-spacing: 0.1em; }
 
 /* ─── INDEX (table of contents, 3-col) ─── */
 .index {
@@ -159,12 +219,12 @@ img { display: block; max-width: 100%; height: auto; }
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px;
 }
 .index .col {
-  border-top: 1px solid var(--navy);
+  border-top: 3px solid var(--blue);
   padding-top: 20px;
 }
 .index .col .num {
   font-family: var(--serif); font-style: italic;
-  font-size: 20px; color: var(--dgold);
+  font-size: 20px; color: var(--blue);
   margin-bottom: 8px; display: block;
 }
 .index .col h3 {
@@ -174,24 +234,24 @@ img { display: block; max-width: 100%; height: auto; }
   color: var(--navy); font-weight: 400;
   margin-bottom: 14px;
 }
-.index .col h3 em { font-style: italic; color: var(--brick); }
+.index .col h3 em { font-style: italic; color: var(--teal); }
 .index .col p {
   font-size: 15px; line-height: 1.55; color: var(--muted);
   margin-bottom: 20px;
 }
 .index .col .read {
   font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
-  font-weight: 600; color: var(--navy);
-  border-bottom: 1px solid var(--dgold); padding-bottom: 4px;
+  font-weight: 600; color: var(--brick);
+  border-bottom: 1px solid var(--brick); padding-bottom: 4px;
   display: inline-flex; gap: 6px; align-items: center;
   transition: color .2s, border-color .2s;
 }
-.index .col .read:hover { color: var(--brick); border-color: var(--brick); }
+.index .col .read:hover { color: var(--navy); border-color: var(--navy); }
 
 /* ─── BISHOP FEATURE ─── */
 .bishop {
   padding: 96px 0;
-  background: var(--cream-xlt);
+  background: linear-gradient(rgba(0,78,115,0.06), rgba(0,78,115,0.06)), var(--cream-lt);
   border-bottom: 1px solid var(--line);
 }
 .bishop .inner {
@@ -216,11 +276,11 @@ img { display: block; max-width: 100%; height: auto; }
 }
 .bishop .text .eyebrow {
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--brick); font-weight: 600; margin-bottom: 28px;
+  color: var(--teal); font-weight: 600; margin-bottom: 28px;
   display: inline-flex; align-items: center; gap: 12px;
 }
 .bishop .text .eyebrow::before {
-  content: ''; width: 32px; height: 1px; background: var(--brick);
+  content: ''; width: 32px; height: 1px; background: var(--teal);
 }
 .bishop .text .quote {
   font-family: var(--serif);
@@ -229,7 +289,7 @@ img { display: block; max-width: 100%; height: auto; }
   color: var(--navy);
   margin-bottom: 28px;
 }
-.bishop .text .quote em { font-style: italic; color: var(--brick); }
+.bishop .text .quote em { font-style: italic; color: var(--blue); }
 .bishop .text .attrib {
   font-size: 13px; letter-spacing: 0.04em;
   color: var(--muted); line-height: 1.5;
@@ -237,15 +297,6 @@ img { display: block; max-width: 100%; height: auto; }
   margin-bottom: 28px;
 }
 .bishop .text .attrib b { color: var(--navy); font-weight: 600; letter-spacing: 0.02em; }
-.bishop .btn-outline {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 14px 24px;
-  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600;
-  background: transparent; color: var(--navy);
-  border: 1px solid var(--navy);
-  transition: background .2s, color .2s;
-}
-.bishop .btn-outline:hover { background: var(--navy); color: var(--cream); }
 
 /* ─── STORIES ─── */
 .stories {
@@ -263,17 +314,18 @@ img { display: block; max-width: 100%; height: auto; }
   color: var(--navy);
   font-weight: 400;
 }
-.stories .head h2 em { font-style: italic; color: var(--brick); }
+.stories .head h2 em { font-style: italic; color: var(--teal); }
 .stories .head .kicker {
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--brick); font-weight: 600;
-  border-top: 2px solid var(--brick); padding-top: 10px;
+  color: var(--teal); font-weight: 600;
+  border-top: 2px solid var(--teal); padding-top: 10px;
   margin-bottom: 16px;
 }
 .stories .head .all {
   font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
   font-weight: 600;
-  padding-bottom: 4px; border-bottom: 1px solid var(--dgold);
+  padding-bottom: 4px; border-bottom: 1px solid var(--brick);
+  color: var(--brick);
 }
 .stories .grid {
   max-width: 1360px; margin: 0 auto; padding: 0 40px;
@@ -285,7 +337,7 @@ img { display: block; max-width: 100%; height: auto; }
 .story:hover .img img { transform: scale(1.04); }
 .story .meta {
   font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--brick); font-weight: 600; margin-bottom: 10px;
+  color: var(--teal); font-weight: 600; margin-bottom: 10px;
 }
 .story .meta b { color: var(--muted); font-weight: 500; letter-spacing: 0.1em; }
 .story h3 {
@@ -295,14 +347,14 @@ img { display: block; max-width: 100%; height: auto; }
   margin-bottom: 10px;
 }
 .story.lead h3 { font-size: clamp(28px, 2.4vw, 40px); }
-.story h3 em { font-style: italic; color: var(--brick); }
+.story h3 em { font-style: italic; color: var(--teal); }
 .story p {
   font-size: 14px; color: var(--muted); line-height: 1.55;
 }
 
-/* ─── SACRAMENTS band (cream + navy) ─── */
+/* ─── SACRAMENTS band (teal) ─── */
 .sacraments {
-  background: var(--navy);
+  background: var(--teal);
   color: var(--cream);
 }
 .sacraments .inner {
@@ -351,59 +403,123 @@ img { display: block; max-width: 100%; height: auto; }
   font-size: 15px; color: var(--cream);
 }
 .sacraments .list .num {
-  font-family: var(--serif); font-style: italic;
-  color: var(--bgold); font-size: 15px; min-width: 28px;
+  color: var(--bgold);
+  width: 32px; height: 32px;
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
 }
+.sacraments .list .num svg { width: 26px; height: 26px; display: block; }
 .sacraments .list a { border-bottom: 1px solid transparent; padding-bottom: 1px; transition: border-color .2s; }
 .sacraments .list a:hover { border-color: var(--bgold); }
 
-/* ─── ACTION ROW ─── */
+/* ─── ACTION ROW (light, distinct from footer) ─── */
 .action {
   padding: 96px 0;
-  border-bottom: 1px solid var(--line);
+  background: var(--cream-xlt);
+  color: var(--navy);
 }
 .action .grid {
   max-width: 1200px; margin: 0 auto; padding: 0 40px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
 }
 .action .card {
-  background: var(--cream-xlt);
+  background: var(--cream-lt);
+  color: var(--navy);
   padding: 48px 40px 40px;
   border: 1px solid var(--line);
   display: flex; flex-direction: column;
   transition: border-color .2s, transform .2s;
+  position: relative;
 }
-.action .card:hover { border-color: var(--navy); transform: translateY(-2px); }
-.action .card .num {
-  font-family: var(--serif); font-style: italic;
-  font-size: 22px; color: var(--dgold); margin-bottom: 12px;
+.action .card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 4px; background: var(--blue);
 }
+.action .card:hover { transform: translateY(-3px); border-color: var(--navy); }
+.action .card .num { display: none; }
 .action .card h3 {
   font-family: var(--serif);
   font-size: clamp(30px, 3vw, 46px);
   line-height: 1.05; color: var(--navy); font-weight: 400;
   margin-bottom: 14px;
 }
-.action .card h3 em { font-style: italic; color: var(--brick); }
+.action .card h3 em { font-style: italic; color: var(--blue); }
 .action .card p {
   font-size: 15px; color: var(--muted); line-height: 1.55;
   margin-bottom: 24px; flex: 1;
 }
 .action .card .cta {
   font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
-  font-weight: 600; color: var(--navy);
-  border-bottom: 1px solid var(--dgold); padding-bottom: 4px;
+  font-weight: 600; color: var(--brick);
+  border-bottom: 1px solid var(--brick); padding-bottom: 4px;
   display: inline-flex; gap: 8px; align-self: flex-start;
+  transition: color .2s, border-color .2s;
 }
+.action .card:hover .cta { color: var(--navy); border-color: var(--navy); }
 
 /* ─── FOOTER ─── */
 footer {
   background: var(--navy);
   color: rgba(238,218,179,0.75);
-  padding: 72px 0 32px;
+  padding: 0 0 32px;
+}
+.subscribe {
+  max-width: 1360px; margin: 0 auto;
+  padding: 72px 40px;
+  display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px;
+  align-items: center;
+  border-bottom: 1px solid rgba(238,218,179,0.15);
+}
+.subscribe .copy .eyebrow {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--bgold); font-weight: 600; margin-bottom: 10px;
+}
+.subscribe .copy h3 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.05; letter-spacing: -0.015em;
+  color: var(--cream); font-weight: 400; margin-bottom: 8px;
+}
+.subscribe .copy h3 em { font-style: italic; color: var(--bgold); }
+.subscribe .copy p {
+  font-size: 14px; color: rgba(238,218,179,0.75); line-height: 1.5;
+  max-width: 440px;
+}
+.subscribe form {
+  display: flex; gap: 0;
+  background: rgba(238,218,179,0.08);
+  border: 1px solid rgba(238,218,179,0.2);
+  padding: 4px;
+}
+.subscribe input[type="email"] {
+  flex: 1; min-width: 0;
+  background: transparent; border: 0; color: var(--cream);
+  padding: 14px 16px;
+  font-family: var(--sans); font-size: 15px;
+  outline: none;
+}
+.subscribe input[type="email"]::placeholder { color: rgba(238,218,179,0.5); }
+.subscribe input[type="email"]:focus { background: rgba(238,218,179,0.04); }
+.subscribe button {
+  background: var(--brick); color: var(--cream);
+  border: 0; cursor: pointer;
+  padding: 14px 24px;
+  font-family: var(--sans); font-size: 14px; font-weight: 500;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: background .25s;
+}
+.subscribe button:hover { background: var(--bgold); color: var(--navy); }
+.subscribe button .arrow { transition: transform .3s; }
+.subscribe button:hover .arrow { transform: translateX(4px); }
+footer .grid { padding-top: 80px; }
+@media (max-width: 800px) {
+  .subscribe { grid-template-columns: 1fr; gap: 24px; padding: 48px 24px; }
+  .subscribe form { flex-direction: column; background: transparent; border: 0; padding: 0; gap: 10px; }
+  .subscribe input[type="email"] { background: rgba(238,218,179,0.08); border: 1px solid rgba(238,218,179,0.2); }
+  .subscribe button { justify-content: center; }
 }
 footer .grid {
-  max-width: 1360px; margin: 0 auto; padding: 0 40px;
+  max-width: 1360px; margin: 0 auto; padding: 80px 40px 0;
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 56px;
 }
 footer .mark {
@@ -445,8 +561,10 @@ a:focus-visible, button:focus-visible {
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 960px) {
-  .masthead { grid-template-columns: 1fr; gap: 20px; padding: 36px 24px 28px; }
-  .masthead .vol, .masthead .dateline { text-align: left; }
+  .hero { padding: 56px 24px 48px; }
+  .hero h1 { font-size: clamp(40px, 9vw, 60px); }
+  .hero .lede { font-size: 16px; margin-bottom: 28px; }
+  .establishing-strip img { max-height: 320px; }
   .index .inner { grid-template-columns: 1fr; gap: 32px; }
   .index .cols { grid-template-columns: 1fr; gap: 40px; }
   .bishop .inner { grid-template-columns: 1fr; gap: 40px; padding: 0 24px; }
@@ -461,18 +579,40 @@ a:focus-visible, button:focus-visible {
   footer .legal { flex-direction: column; gap: 8px; padding: 24px 24px 0; }
   .topnav { display: none; }
   .topbar .row { padding: 14px 24px; }
+  .utility .row { padding: 9px 24px; font-size: 11px; }
+  .utility .links { display: none; }
+  .mark img { height: 44px; }
+  .establishing figcaption .inner { padding: 14px 24px; flex-direction: column; gap: 6px; align-items: flex-start; }
   .wrap { padding: 0 24px; }
-  .establishing figcaption { padding: 12px 24px; flex-direction: column; gap: 6px; align-items: flex-start; }
 }
 </style>
 </head>
 <body>
 <a href="#main" class="skip">Skip to content</a>
 
+<!-- ─── UTILITY STRIP (navy) ─── -->
+<div class="utility">
+  <div class="row">
+    <span>4200 N. Kentucky Ave, Evansville IN · <a href="tel:8124245536">812-424-5536</a></span>
+    <span class="links">
+      <a href="#">Find a Parish</a>
+      <a href="#">Mass Times</a>
+      <a href="#">Watch Mass Online</a>
+      <span class="lang" aria-label="Language">
+        <a href="#" class="active" aria-current="true">EN</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="#" lang="es" hreflang="es">ES</a>
+      </span>
+    </span>
+  </div>
+</div>
+
 <!-- ─── TOP BAR ─── -->
 <header class="topbar" role="banner">
   <div class="row">
-    <a href="/" class="mark">Diocese of <em>Evansville</em></a>
+    <div class="mark">
+      <img src="/images/branding/diocese-logo-reversed.png" alt="Diocese of Evansville">
+    </div>
     <nav class="topnav" aria-label="Primary">
       <a href="#">About</a>
       <a href="#">Parishes &amp; Mass</a>
@@ -481,34 +621,41 @@ a:focus-visible, button:focus-visible {
       <a href="#">Ministries</a>
       <a href="#">The Message</a>
     </nav>
-    <a href="#give" class="give">Give</a>
+    <div class="topbar-actions">
+      <button class="search-btn" aria-label="Search the site">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><line x1="14" y1="14" x2="18" y2="18"/></svg>
+      </button>
+      <a href="#give" class="give">Give</a>
+    </div>
   </div>
 </header>
 
 <main id="main">
 
-<!-- ─── MASTHEAD ─── -->
-<section class="masthead" aria-labelledby="masthead-title">
-  <p class="vol"><b>Est. MDCCCXLIV</b><br>The Catholic Church in Southwest Indiana</p>
-  <h1 id="masthead-title" class="title">Come <em>home.</em></h1>
-  <p class="dateline"><b>April 2026</b><br>Volume XLVI · Nº 12</p>
+<!-- ─── HERO (institutional) ─── -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="inner">
+    <p class="eyebrow">Serving Southwest Indiana since 1944</p>
+    <h1 id="hero-title">The Catholic Diocese of <em>Evansville.</em></h1>
+    <p class="lede"><b>Forty-five parishes, twenty-six schools, and a Church alive</b> across twelve counties of Southwest Indiana &mdash; from the Ohio River to the cornfields of the north. Wherever you are on the journey, you're welcome here.</p>
+    <div class="quick">
+      <a href="#" class="btn btn-primary">Find a Mass time <span class="arrow" aria-hidden="true">→</span></a>
+      <a href="#" class="btn btn-outline">Find a parish <span class="arrow" aria-hidden="true">→</span></a>
+      <a href="#" class="link-cta">Becoming Catholic <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
 </section>
-<p class="subtitle">Forty-five parishes across twelve counties — one Church, one family, one hope.</p>
 
-<!-- ─── ESTABLISHING PHOTO ─── -->
-<figure class="establishing">
+<!-- ─── ESTABLISHING STRIP ─── -->
+<figure class="establishing-strip" aria-label="Presbyterate of the Diocese of Evansville, 2025">
   <img src="/images/stock/presbyterate-group.jpg" alt="The priests of the Diocese of Evansville with Bishop Joseph M. Siegel at the 2025 Chrism Mass." loading="eager" fetchpriority="high">
-  <figcaption>
-    <span><b>The Presbyterate</b> · 2025</span>
-    <span>Photograph by the Office of Communications</span>
-  </figcaption>
 </figure>
 
 <!-- ─── INDEX ─── -->
 <section class="index" aria-labelledby="index-title">
   <div class="inner">
     <div>
-      <p class="section-label">In this issue</p>
+      <p class="section-label">Get started</p>
       <h2 id="index-title" style="font-family:var(--serif);font-size:48px;line-height:1;color:var(--navy);font-weight:400;margin-top:16px;">
         <em>Three</em> ways in.
       </h2>
@@ -540,7 +687,7 @@ a:focus-visible, button:focus-visible {
 <section class="bishop" aria-labelledby="bishop-title">
   <div class="inner">
     <figure class="portrait">
-      <img src="/images/stock/white-mass.jpg" alt="Bishop Joseph M. Siegel speaking at the ambo.">
+      <img src="/images/bishop/bishop-siegel.jpg" alt="The Most Reverend Joseph M. Siegel, Bishop of the Diocese of Evansville.">
     </figure>
     <div class="text">
       <p class="eyebrow">From the Bishop</p>
@@ -551,7 +698,7 @@ a:focus-visible, button:focus-visible {
         <b>The Most Rev. Joseph M. Siegel</b><br>
         Sixth Bishop of the Diocese of Evansville
       </p>
-      <a href="#" class="btn-outline">Read the Bishop's Letter <span aria-hidden="true">→</span></a>
+      <a href="#" class="btn btn-primary">Read the Bishop's Letter <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -604,13 +751,13 @@ a:focus-visible, button:focus-visible {
       <h2 id="sacraments-title">Seven gifts, one <em>grace-filled</em> life.</h2>
       <p class="lede">From the waters of baptism to the final anointing, the sacraments trace the arc of a Catholic life — outward signs of an inward grace.</p>
       <ol class="list">
-        <li><span class="num">I.</span><a href="#">Baptism</a></li>
-        <li><span class="num">II.</span><a href="#">Confirmation</a></li>
-        <li><span class="num">III.</span><a href="#">Eucharist</a></li>
-        <li><span class="num">IV.</span><a href="#">Reconciliation</a></li>
-        <li><span class="num">V.</span><a href="#">Anointing of the Sick</a></li>
-        <li><span class="num">VI.</span><a href="#">Holy Orders</a></li>
-        <li><span class="num">VII.</span><a href="#">Matrimony</a></li>
+        <li><span class="num"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4 C11 12 8 16 8 20 A8 8 0 0 0 24 20 C24 16 21 12 16 4 Z"/></svg></span><a href="#">Baptism</a></li>
+        <li><span class="num"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4 C12 10 10 14 10 18 C10 23 13 26 16 28 C19 26 22 23 22 18 C22 14 20 10 16 4 Z"/><path d="M16 14 C15 17 14 19 14 21"/></svg></span><a href="#">Confirmation</a></li>
+        <li><span class="num"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 H24 V10 A8 8 0 0 1 16 18 A8 8 0 0 1 8 10 V6 Z"/><line x1="16" y1="18" x2="16" y2="25"/><line x1="11" y1="26" x2="21" y2="26"/></svg></span><a href="#">Eucharist</a></li>
+        <li><span class="num"><svg viewBox="0 0 32 32" fill="currentColor"><rect x="14" y="4" width="4" height="24" rx="1"/><rect x="6" y="12" width="20" height="4" rx="1"/></svg></span><a href="#">Reconciliation</a></li>
+        <li><span class="num"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 H20 V8 L22 12 V24 A4 4 0 0 1 18 28 H14 A4 4 0 0 1 10 24 V12 L12 8 Z"/><line x1="13" y1="14" x2="19" y2="14"/></svg></span><a href="#">Anointing of the Sick</a></li>
+        <li><span class="num"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12 L16 4 L24 12 V26 H8 V12 Z"/><line x1="8" y1="18" x2="24" y2="18"/><line x1="16" y1="6" x2="16" y2="14"/><line x1="13" y1="10" x2="19" y2="10"/></svg></span><a href="#">Holy Orders</a></li>
+        <li><span class="num"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="16" r="7"/><circle cx="20" cy="16" r="7"/></svg></span><a href="#">Matrimony</a></li>
       </ol>
     </div>
   </div>
@@ -638,6 +785,17 @@ a:focus-visible, button:focus-visible {
 
 <!-- ─── FOOTER ─── -->
 <footer>
+  <div class="subscribe">
+    <div class="copy">
+      <p class="eyebrow">The Message &middot; Subscribe</p>
+      <h3>Every week in <em>The Message.</em></h3>
+      <p>Diocesan news, features, and reflections — delivered to your mailbox or inbox, every Friday.</p>
+    </div>
+    <form action="#" method="post" aria-label="Subscribe to The Message">
+      <input type="email" id="email-sub" name="email" placeholder="your@email.com" aria-label="Email address" required>
+      <button type="submit">Subscribe <span class="arrow" aria-hidden="true">→</span></button>
+    </form>
+  </div>
   <div class="grid">
     <div>
       <p class="mark">Diocese of <em>Evansville</em></p>
@@ -681,6 +839,6 @@ a:focus-visible, button:focus-visible {
   </div>
 </footer>
 
-<div class="version" aria-hidden="true">v7 · Editorial</div>
+<div class="version" aria-hidden="true">v24 · Light action band</div>
 </body>
 </html>

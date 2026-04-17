@@ -49,7 +49,7 @@ img { display: block; max-width: 100%; height: auto; }
   line-height: 0.95; letter-spacing: -0.02em;
   color: var(--navy); font-weight: 400;
 }
-.masthead .title em { font-style: italic; color: var(--brick); }
+.masthead .title em { font-style: italic; color: var(--blue); }
 .masthead .dateline {
   text-align: right;
   font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
@@ -89,7 +89,7 @@ img { display: block; max-width: 100%; height: auto; }
 .pair:hover .pair-img img { transform: scale(1.04); }
 .pair-img .label {
   position: absolute; top: 20px; left: 20px;
-  background: var(--navy); color: var(--bgold);
+  background: var(--teal); color: var(--bgold);
   padding: 8px 14px;
   font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;
 }
@@ -105,15 +105,15 @@ img { display: block; max-width: 100%; height: auto; }
   color: var(--navy); font-weight: 400;
   margin-bottom: 14px;
 }
-.pair-body h2 em { font-style: italic; color: var(--brick); }
+.pair-body h2 em { font-style: italic; color: var(--teal); }
 .pair-body p {
   font-size: 15px; line-height: 1.6; color: var(--muted);
   margin-bottom: 24px; flex: 1;
 }
 .pair-body .cta {
   font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
-  font-weight: 600; color: var(--navy);
-  border-bottom: 1px solid var(--dgold); padding-bottom: 4px;
+  font-weight: 600; color: var(--brick);
+  border-bottom: 1px solid var(--brick); padding-bottom: 4px;
   align-self: flex-start;
   display: inline-flex; gap: 8px;
 }
@@ -126,7 +126,7 @@ img { display: block; max-width: 100%; height: auto; }
   line-height: 1; color: var(--navy); font-weight: 400;
   margin-bottom: 32px; letter-spacing: -0.015em;
 }
-.notes h3 em { font-style: italic; color: var(--brick); }
+.notes h3 em { font-style: italic; color: var(--blue); }
 .notes h4 {
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--brick); font-weight: 600;
@@ -165,7 +165,7 @@ img { display: block; max-width: 100%; height: auto; }
   color: var(--brick); font-weight: 600; margin-bottom: 14px;
 }
 .font-sample .demo-serif { font-family: var(--serif); font-size: 42px; line-height: 1; color: var(--navy); }
-.font-sample .demo-serif-it { font-family: var(--serif); font-style: italic; font-size: 32px; color: var(--brick); line-height: 1.1; }
+.font-sample .demo-serif-it { font-family: var(--serif); font-style: italic; font-size: 32px; color: var(--blue); line-height: 1.1; }
 .font-sample .demo-sans { font-family: var(--sans); font-size: 22px; font-weight: 600; color: var(--navy); }
 .font-sample .demo-body { font-family: var(--sans); font-size: 15px; color: var(--navy); line-height: 1.55; }
 .font-sample .use {
@@ -195,6 +195,19 @@ a:focus-visible { outline: 2px solid var(--bgold); outline-offset: 3px; }
 </style>
 </head>
 <body>
+
+<div style="background:var(--navy);color:rgba(238,218,179,0.85);font-size:12px;">
+  <div style="max-width:1360px;margin:0 auto;padding:9px 40px;display:flex;justify-content:space-between;">
+    <span>4200 N. Kentucky Ave, Evansville IN · <a href="tel:8124245536" style="color:var(--cream);">812-424-5536</a></span>
+    <span>Style Direction Review &middot; Client preview</span>
+  </div>
+</div>
+<div style="background:var(--cream-lt);border-bottom:2px solid var(--teal);">
+  <div style="max-width:1360px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;">
+    <img src="/images/branding/diocese-logo-full.png" alt="Diocese of Evansville" style="height:54px;width:auto;display:block;">
+    <span style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);font-weight:600;">Style Direction &middot; v9</span>
+  </div>
+</div>
 
 <section class="masthead">
   <p class="vol"><b>Est. MDCCCXLIV</b><br>The Catholic Church in Southwest Indiana</p>
@@ -296,6 +309,6 @@ a:focus-visible { outline: 2px solid var(--bgold); outline-offset: 3px; }
   </ul>
 </section>
 
-<div class="version" aria-hidden="true">v7 · Editorial</div>
+<div class="version" aria-hidden="true">v11 · Diocesan hero + brick CTAs</div>
 </body>
 </html>

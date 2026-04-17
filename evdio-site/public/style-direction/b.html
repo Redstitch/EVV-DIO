@@ -42,81 +42,108 @@ img { display: block; max-width: 100%; height: auto; }
 .skip { position: absolute; left: -9999px; top: 0; background: var(--navy); color: var(--cream); padding: 12px 20px; z-index: 100; }
 .skip:focus { left: 0; }
 
-.topbar { border-bottom: 1px solid var(--line); background: var(--cream-lt); }
+.utility { background: var(--teal); color: rgba(238,218,179,0.92); font-size: 12px; letter-spacing: 0.02em; }
+.utility .row {
+  max-width: 1360px; margin: 0 auto; padding: 9px 40px;
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+}
+.utility a { color: var(--cream); transition: color .2s; }
+.utility a:hover { color: var(--bgold); }
+.utility .links { display: flex; align-items: center; gap: 24px; }
+.utility .links a { font-weight: 500; }
+.utility .lang { display: inline-flex; align-items: center; gap: 8px; padding-left: 20px; margin-left: 4px; border-left: 1px solid rgba(238,218,179,0.3); }
+.utility .lang a { font-size: 11px; letter-spacing: 0.14em; font-weight: 600; text-transform: uppercase; color: rgba(238,218,179,0.6); }
+.utility .lang a.active { color: var(--cream); }
+.utility .lang a:hover { color: var(--bgold); }
+.utility .lang .sep { color: rgba(238,218,179,0.3); font-size: 10px; }
+
+.topbar { background: var(--navy); border-bottom: 1px solid rgba(238,218,179,0.15); }
 .topbar .row {
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 40px;
   max-width: 1360px; margin: 0 auto;
 }
-.mark { font-family: var(--serif); font-size: 22px; letter-spacing: -0.01em; color: var(--navy); }
-.mark em { font-style: italic; color: var(--brick); }
+.mark { display: inline-flex; align-items: center; }
+.mark img { height: 60px; width: auto; display: block; }
 .topnav { display: flex; gap: 28px; }
 .topnav a {
-  font-size: 13px; font-weight: 500; color: var(--navy);
+  font-size: 13px; font-weight: 500; color: var(--cream);
   position: relative; padding: 6px 0;
 }
-.topnav a.active { color: var(--brick); }
+.topnav a.active { color: var(--bgold); }
 .topnav a.active::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: 0;
-  height: 2px; background: var(--brick);
+  height: 2px; background: var(--bgold);
 }
-.topnav a:hover { color: var(--brick); }
+.topnav a:hover { color: var(--bgold); }
+.topbar-actions { display: flex; align-items: center; gap: 6px; }
+.search-btn { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; color: var(--cream); background: transparent; border: 0; cursor: pointer; transition: color .2s, background .2s; }
+.search-btn:hover { color: var(--bgold); background: rgba(238,218,179,0.08); }
 .topbar .give {
-  background: var(--navy); color: var(--cream);
+  background: var(--brick); color: var(--cream);
   padding: 10px 18px; font-size: 12px; font-weight: 600;
   letter-spacing: 0.08em; text-transform: uppercase;
   transition: background .2s;
 }
-.topbar .give:hover { background: var(--brick); }
+.topbar .give:hover { background: var(--navy); }
 
 .crumbs {
-  max-width: 1360px; margin: 0 auto;
-  padding: 20px 40px 0;
   font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--muted);
+  margin-bottom: 20px;
 }
 .crumbs a { color: var(--muted); }
 .crumbs a:hover { color: var(--brick); }
-.crumbs .sep { margin: 0 10px; color: var(--dgold); }
+.crumbs .sep { margin: 0 10px; color: var(--blue); }
 .crumbs b { color: var(--navy); font-weight: 600; }
 
 .feature-head {
-  max-width: 1360px; margin: 0 auto;
-  padding: 48px 40px 40px;
-  display: grid; grid-template-columns: 1fr; gap: 24px;
+  background: var(--cream-lt);
+  border-bottom: 1px solid var(--line);
 }
+.feature-head .grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  align-items: stretch;
+  min-height: 540px;
+}
+.feature-head .text {
+  padding: 80px 56px 80px 40px;
+  display: flex; flex-direction: column; justify-content: center;
+  max-width: 1360px; width: 100%;
+  margin-left: auto;
+}
+.feature-head .text > * { max-width: 560px; }
 .feature-head .kicker {
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--brick); font-weight: 600;
-  border-top: 2px solid var(--brick); padding-top: 10px;
-  max-width: 320px;
+  color: var(--teal); font-weight: 600;
+  margin-bottom: 20px;
+  display: inline-flex; align-items: center; gap: 14px;
+  align-self: flex-start;
 }
+.feature-head .kicker::before { content: ''; width: 28px; height: 1px; background: var(--teal); }
 .feature-head h1 {
   font-family: var(--serif);
-  font-size: clamp(48px, 8.5vw, 148px);
-  line-height: 0.92; letter-spacing: -0.025em;
+  font-size: clamp(44px, 5.6vw, 84px);
+  line-height: 1.02; letter-spacing: -0.02em;
   color: var(--navy); font-weight: 400;
-  max-width: 16ch;
+  max-width: 18ch;
+  margin-bottom: 22px;
 }
-.feature-head h1 em { font-style: italic; color: var(--brick); }
+.feature-head h1 em { font-style: italic; color: var(--blue); }
 .feature-head .deck {
   font-family: var(--serif); font-style: italic;
-  font-size: clamp(20px, 2.1vw, 26px);
+  font-size: clamp(18px, 1.7vw, 22px);
   color: var(--muted);
-  max-width: 680px; line-height: 1.45;
+  max-width: 560px; line-height: 1.45;
 }
-
-.establishing { margin: 0; }
-.establishing img { width: 100%; height: auto; display: block; }
-.establishing figcaption {
-  max-width: 1360px; margin: 0 auto;
-  padding: 12px 40px;
-  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--muted);
-  border-bottom: 1px solid var(--line);
-  display: flex; justify-content: space-between;
+.feature-head .photo {
+  position: relative; overflow: hidden;
+  background: var(--navy);
 }
-.establishing figcaption b { color: var(--navy); font-weight: 600; letter-spacing: 0.1em; }
+.feature-head .photo img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
+  display: block;
+}
 
 .intro { padding: 96px 0; border-bottom: 1px solid var(--line); }
 .intro .inner { max-width: 1040px; margin: 0 auto; padding: 0 40px; }
@@ -127,7 +154,7 @@ img { display: block; max-width: 100%; height: auto; }
   letter-spacing: -0.01em;
   margin-bottom: 48px;
 }
-.intro .pull em { color: var(--brick); }
+.intro .pull em { color: var(--teal); }
 .intro .body {
   font-size: 17px; line-height: 1.72; color: var(--navy);
   column-count: 2; column-gap: 48px;
@@ -137,7 +164,7 @@ img { display: block; max-width: 100%; height: auto; }
   font-family: var(--serif);
   float: left; font-size: 84px; line-height: 0.85;
   padding: 6px 12px 0 0;
-  color: var(--brick);
+  color: var(--blue);
   font-weight: 400;
 }
 @media (max-width: 760px) { .intro .body { column-count: 1; } }
@@ -163,7 +190,7 @@ img { display: block; max-width: 100%; height: auto; }
   color: var(--navy); font-weight: 400;
   letter-spacing: -0.02em;
 }
-.seven .head h2 em { font-style: italic; color: var(--brick); }
+.seven .head h2 em { font-style: italic; color: var(--teal); }
 .seven .list {
   max-width: 1360px; margin: 0 auto; padding: 0 40px;
   border-top: 1px solid var(--navy);
@@ -179,7 +206,7 @@ img { display: block; max-width: 100%; height: auto; }
 .seven .item:hover { background: rgba(208,144,0,0.06); }
 .seven .item .num {
   font-family: var(--serif); font-style: italic;
-  font-size: 38px; color: var(--dgold);
+  font-size: 38px; color: var(--blue);
   line-height: 1;
 }
 .seven .item .body h3 {
@@ -188,23 +215,23 @@ img { display: block; max-width: 100%; height: auto; }
   line-height: 1.04; color: var(--navy); font-weight: 400;
   margin-bottom: 8px; letter-spacing: -0.01em;
 }
-.seven .item .body h3 em { font-style: italic; color: var(--brick); }
+.seven .item .body h3 em { font-style: italic; color: var(--teal); }
 .seven .item .body p {
   font-size: 15px; color: var(--muted); line-height: 1.55;
   max-width: 540px;
 }
 .seven .item .cta {
   font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
-  font-weight: 600; color: var(--navy);
-  border-bottom: 1px solid var(--dgold); padding-bottom: 4px;
+  font-weight: 600; color: var(--brick);
+  border-bottom: 1px solid var(--brick); padding-bottom: 4px;
   align-self: center;
   display: inline-flex; gap: 8px; justify-self: end;
   transition: color .2s, border-color .2s;
 }
-.seven .item:hover .cta { color: var(--brick); border-color: var(--brick); }
+.seven .item:hover .cta { color: var(--navy); border-color: var(--navy); }
 
 .scripture {
-  background: var(--navy); color: var(--cream);
+  background: var(--teal); color: var(--cream);
   padding: 120px 40px;
   text-align: center;
 }
@@ -235,7 +262,7 @@ img { display: block; max-width: 100%; height: auto; }
   letter-spacing: -0.015em;
   margin-bottom: 20px;
 }
-.steps h2 em { font-style: italic; color: var(--brick); }
+.steps h2 em { font-style: italic; color: var(--blue); }
 .steps .kicker {
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--brick); font-weight: 600;
@@ -261,7 +288,7 @@ img { display: block; max-width: 100%; height: auto; }
 .steps .faq summary::-webkit-details-marker { display: none; }
 .steps .faq summary::after {
   content: '+'; font-family: var(--sans); font-weight: 400; font-size: 24px;
-  color: var(--dgold); transition: transform .25s;
+  color: var(--blue); transition: transform .25s;
   flex-shrink: 0;
 }
 .steps .faq details[open] summary::after { transform: rotate(45deg); }
@@ -273,7 +300,7 @@ img { display: block; max-width: 100%; height: auto; }
 .cta-strip {
   padding: 96px 40px;
   text-align: center;
-  background: var(--cream-xlt);
+  background: linear-gradient(rgba(0,78,115,0.08), rgba(0,78,115,0.08)), var(--cream-lt);
   border-bottom: 1px solid var(--line);
 }
 .cta-strip .kicker {
@@ -288,20 +315,58 @@ img { display: block; max-width: 100%; height: auto; }
   letter-spacing: -0.02em;
   max-width: 18ch; margin: 0 auto 32px;
 }
-.cta-strip h2 em { font-style: italic; color: var(--brick); }
+.cta-strip h2 em { font-style: italic; color: var(--blue); }
 .cta-strip .btn {
   display: inline-flex; align-items: center; gap: 10px;
-  padding: 16px 28px;
-  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600;
-  background: var(--navy); color: var(--cream);
-  border: 1px solid var(--navy);
-  transition: background .2s, color .2s;
+  padding: 15px 28px;
+  font-family: var(--sans);
+  font-size: 15px; font-weight: 500;
+  letter-spacing: 0; text-transform: none;
+  background: var(--brick); color: var(--cream);
+  border: 1.5px solid var(--brick);
+  transition: background .25s ease, border-color .25s ease;
 }
-.cta-strip .btn:hover { background: var(--brick); border-color: var(--brick); }
+.cta-strip .btn .arrow { transition: transform .3s ease; }
+.cta-strip .btn:hover { background: var(--navy); border-color: var(--navy); }
+.cta-strip .btn:hover .arrow { transform: translateX(5px); }
 
-footer { background: var(--navy); color: rgba(238,218,179,0.75); padding: 72px 0 32px; }
+footer { background: var(--navy); color: rgba(238,218,179,0.75); padding: 0 0 32px; }
+.subscribe {
+  max-width: 1360px; margin: 0 auto;
+  padding: 72px 40px;
+  display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px;
+  align-items: center;
+  border-bottom: 1px solid rgba(238,218,179,0.15);
+}
+.subscribe .copy .eyebrow {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--bgold); font-weight: 600; margin-bottom: 10px;
+}
+.subscribe .copy h3 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.05; letter-spacing: -0.015em;
+  color: var(--cream); font-weight: 400; margin-bottom: 8px;
+}
+.subscribe .copy h3 em { font-style: italic; color: var(--bgold); }
+.subscribe .copy p { font-size: 14px; color: rgba(238,218,179,0.75); line-height: 1.5; max-width: 440px; }
+.subscribe form { display: flex; gap: 0; background: rgba(238,218,179,0.08); border: 1px solid rgba(238,218,179,0.2); padding: 4px; }
+.subscribe input[type="email"] { flex: 1; min-width: 0; background: transparent; border: 0; color: var(--cream); padding: 14px 16px; font-family: var(--sans); font-size: 15px; outline: none; }
+.subscribe input[type="email"]::placeholder { color: rgba(238,218,179,0.5); }
+.subscribe input[type="email"]:focus { background: rgba(238,218,179,0.04); }
+.subscribe button { background: var(--brick); color: var(--cream); border: 0; cursor: pointer; padding: 14px 24px; font-family: var(--sans); font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; transition: background .25s; }
+.subscribe button:hover { background: var(--bgold); color: var(--navy); }
+.subscribe button .arrow { transition: transform .3s; }
+.subscribe button:hover .arrow { transform: translateX(4px); }
+footer .grid { padding-top: 80px; }
+@media (max-width: 800px) {
+  .subscribe { grid-template-columns: 1fr; gap: 24px; padding: 48px 24px; }
+  .subscribe form { flex-direction: column; background: transparent; border: 0; padding: 0; gap: 10px; }
+  .subscribe input[type="email"] { background: rgba(238,218,179,0.08); border: 1px solid rgba(238,218,179,0.2); }
+  .subscribe button { justify-content: center; }
+}
 footer .grid {
-  max-width: 1360px; margin: 0 auto; padding: 0 40px;
+  max-width: 1360px; margin: 0 auto; padding: 80px 40px 0;
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 56px;
 }
 footer .mark { font-family: var(--serif); font-size: 26px; color: var(--cream); margin-bottom: 14px; }
@@ -338,8 +403,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 
 @media (max-width: 960px) {
-  .feature-head { padding: 32px 24px 28px; }
-  .crumbs { padding: 16px 24px 0; }
+  .feature-head .grid { grid-template-columns: 1fr; min-height: 0; }
+  .feature-head .text { padding: 40px 24px 48px; order: 2; max-width: none; margin: 0; }
+  .feature-head .photo { order: 1; aspect-ratio: 3/2; }
   .intro { padding: 64px 0; }
   .intro .inner { padding: 0 24px; }
   .seven { padding: 64px 0; }
@@ -355,16 +421,36 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   footer .legal { flex-direction: column; gap: 8px; padding: 24px 24px 0; }
   .topnav { display: none; }
   .topbar .row { padding: 14px 24px; }
-  .establishing figcaption { padding: 12px 24px; flex-direction: column; gap: 6px; }
+  .utility .row { padding: 9px 24px; font-size: 11px; }
+  .utility .links { display: none; }
+  .mark img { height: 44px; }
 }
 </style>
 </head>
 <body>
 <a href="#main" class="skip">Skip to content</a>
 
+<div class="utility">
+  <div class="row">
+    <span>4200 N. Kentucky Ave, Evansville IN · <a href="tel:8124245536">812-424-5536</a></span>
+    <span class="links">
+      <a href="#">Find a Parish</a>
+      <a href="#">Mass Times</a>
+      <a href="#">Watch Mass Online</a>
+      <span class="lang" aria-label="Language">
+        <a href="#" class="active" aria-current="true">EN</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="#" lang="es" hreflang="es">ES</a>
+      </span>
+    </span>
+  </div>
+</div>
+
 <header class="topbar" role="banner">
   <div class="row">
-    <a href="index.html" class="mark">Diocese of <em>Evansville</em></a>
+    <div class="mark">
+      <img src="/images/branding/diocese-logo-reversed.png" alt="Diocese of Evansville">
+    </div>
     <nav class="topnav" aria-label="Primary">
       <a href="#">About</a>
       <a href="#">Parishes &amp; Mass</a>
@@ -373,29 +459,29 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
       <a href="#">Ministries</a>
       <a href="#">The Message</a>
     </nav>
-    <a href="#" class="give">Give</a>
+    <div class="topbar-actions">
+      <button class="search-btn" aria-label="Search the site">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><line x1="14" y1="14" x2="18" y2="18"/></svg>
+      </button>
+      <a href="#" class="give">Give</a>
+    </div>
   </div>
 </header>
-
-<nav class="crumbs" aria-label="Breadcrumb">
-  <a href="#">Home</a><span class="sep">/</span><b>Faith &amp; Sacraments</b>
-</nav>
 
 <main id="main">
 
 <section class="feature-head" aria-labelledby="title">
-  <p class="kicker">Faith &amp; Sacraments</p>
-  <h1 id="title">A grace-filled <em>life,</em> marked in seven signs.</h1>
-  <p class="deck">The sacraments are the ordinary ways Christ continues to act in the world — outward signs of an inward grace, traced from font to altar to the final anointing.</p>
+  <div class="grid">
+    <div class="text">
+      <p class="kicker">Faith &amp; Sacraments</p>
+      <h1 id="title">A grace-filled <em>life,</em> marked in seven signs.</h1>
+      <p class="deck">The sacraments are the ordinary ways Christ continues to act in the world — outward signs of an inward grace, traced from font to altar to the final anointing.</p>
+    </div>
+    <figure class="photo">
+      <img src="/images/stock/confirmation-stmary.jpg" alt="Young Catholics at a Confirmation Mass at St. Mary Parish, Ireland, Indiana." loading="eager" fetchpriority="high">
+    </figure>
+  </div>
 </section>
-
-<figure class="establishing">
-  <img src="/images/stock/blue-mass-cathedral.jpg" alt="Clergy venerating the altar at St. Benedict Cathedral during the Blue Mass." loading="eager" fetchpriority="high">
-  <figcaption>
-    <span><b>Venerating the altar</b> · Blue Mass at St. Benedict Cathedral · October 2025</span>
-    <span>Photograph by the Office of Communications</span>
-  </figcaption>
-</figure>
 
 <section class="intro">
   <div class="inner">
@@ -516,12 +602,23 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 <section class="cta-strip">
   <p class="kicker">Next</p>
   <h2>Find a parish — <em>take the first step.</em></h2>
-  <a href="#" class="btn">Open the parish map <span aria-hidden="true">→</span></a>
+  <a href="#" class="btn">Open the parish map <span class="arrow" aria-hidden="true">→</span></a>
 </section>
 
 </main>
 
 <footer>
+  <div class="subscribe">
+    <div class="copy">
+      <p class="eyebrow">The Message &middot; Subscribe</p>
+      <h3>Every week in <em>The Message.</em></h3>
+      <p>Diocesan news, features, and reflections — delivered to your mailbox or inbox, every Friday.</p>
+    </div>
+    <form action="#" method="post" aria-label="Subscribe to The Message">
+      <input type="email" id="email-sub" name="email" placeholder="your@email.com" aria-label="Email address" required>
+      <button type="submit">Subscribe <span class="arrow" aria-hidden="true">→</span></button>
+    </form>
+  </div>
   <div class="grid">
     <div>
       <p class="mark">Diocese of <em>Evansville</em></p>
@@ -561,6 +658,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   </div>
 </footer>
 
-<div class="version" aria-hidden="true">v7 · Editorial</div>
+<div class="version" aria-hidden="true">v27 · Gap fix</div>
 </body>
 </html>

@@ -70,10 +70,7 @@ img { display: block; max-width: 100%; height: auto; }
 .topbar {
   background: var(--navy);
   border-bottom: 1px solid rgba(238,218,179,0.15);
-  position: sticky; top: 0; z-index: 50;
-  transition: box-shadow .3s;
 }
-.topbar.scrolled { box-shadow: 0 8px 24px rgba(10,34,64,0.2); }
 .topbar .row {
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 40px;
@@ -99,103 +96,54 @@ img { display: block; max-width: 100%; height: auto; }
 }
 .topbar .give:hover { background: var(--navy); color: var(--cream); }
 
-/* ─── HERO (cathedral image background, curves variant) ─── */
+/* ─── HERO (institutional, text-forward) ─── */
 .hero {
-  position: relative;
-  min-height: 640px;
-  display: flex; align-items: center; justify-content: center;
-  padding: 120px 40px;
-  overflow: hidden;
-  isolation: isolate;
-  background: var(--navy);
+  background: var(--cream-lt);
+  padding: 80px 40px 72px;
+  text-align: center;
   border-bottom: 1px solid var(--line);
 }
-.hero::before {
-  content: '';
-  position: absolute; inset: 0; z-index: -2;
-  background: url('/images/stock/blue-mass-cathedral.jpg') center/cover;
-  background-position: center 30%;
-  animation: kenBurns 22s ease-in-out infinite alternate;
-}
-@keyframes kenBurns {
-  0% { transform: scale(1) translateY(0); }
-  100% { transform: scale(1.08) translateY(-12px); }
-}
-.hero .inner > * { opacity: 0; transform: translateY(24px); animation: heroFadeUp .9s ease forwards; }
-.hero .inner > *:nth-child(1) { animation-delay: 0.15s; }
-.hero .inner > *:nth-child(2) { animation-delay: 0.3s; }
-.hero .inner > *:nth-child(3) { animation-delay: 0.45s; }
-.hero .inner > *:nth-child(4) { animation-delay: 0.6s; }
-@keyframes heroFadeUp { to { opacity: 1; transform: translateY(0); } }
-
-/* Scroll-triggered fade-up */
-.fade-up { opacity: 0; transform: translateY(28px); transition: opacity .85s ease, transform .85s ease; }
-.fade-up.in-view { opacity: 1; transform: translateY(0); }
-
-@media (prefers-reduced-motion: reduce) {
-  .hero::before { animation: none; }
-  .hero .inner > * { opacity: 1; transform: none; animation: none; }
-  .fade-up { opacity: 1; transform: none; transition: none; }
-}
-.hero::after {
-  content: '';
-  position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(180deg, rgba(10,34,64,0.55) 0%, rgba(10,34,64,0.65) 45%, rgba(10,34,64,0.85) 100%);
-}
 .hero .inner {
-  position: relative; z-index: 1;
   max-width: 960px; margin: 0 auto;
-  text-align: center;
-  color: var(--cream);
 }
 .hero .eyebrow {
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--bgold); font-weight: 600;
+  color: var(--teal); font-weight: 600;
   margin-bottom: 26px;
   padding: 9px 20px;
-  background: rgba(255,208,64,0.12);
+  background: rgba(0,78,115,0.1);
   border-radius: 999px;
   display: inline-block;
 }
 .hero h1 {
   font-family: var(--serif);
-  font-size: clamp(48px, 6vw, 104px);
+  font-size: clamp(44px, 5.6vw, 84px);
   line-height: 1.02; letter-spacing: -0.02em;
-  color: var(--cream); font-weight: 400;
+  color: var(--navy); font-weight: 400;
   margin: 0 auto 22px;
   max-width: 18ch;
 }
-.hero h1 em { font-style: italic; color: var(--bgold); }
+.hero h1 em { font-style: italic; color: var(--blue); }
 .hero .lede {
-  font-size: clamp(17px, 1.5vw, 20px); line-height: 1.6;
-  color: rgba(238,218,179,0.95);
+  font-size: clamp(17px, 1.5vw, 19px); line-height: 1.6;
+  color: var(--muted);
   max-width: 640px; margin: 0 auto 36px;
 }
-.hero .lede b { color: var(--cream); font-weight: 500; }
+.hero .lede b { color: var(--navy); font-weight: 500; }
 .hero .quick {
   display: inline-flex; flex-wrap: wrap; gap: 14px; justify-content: center;
   align-items: center;
 }
-.hero .btn-outline { color: var(--cream); border-color: var(--cream); }
-.hero .btn-outline:hover { background: var(--cream); color: var(--navy); border-color: var(--cream); }
 .hero .link-cta {
-  font-size: 15px; font-weight: 500; color: var(--cream);
+  font-size: 15px; font-weight: 500; color: var(--navy);
   padding: 15px 6px;
-  border-bottom: 1px solid var(--bgold);
+  border-bottom: 1px solid var(--dgold);
   transition: color .2s, border-color .2s;
   display: inline-flex; align-items: center; gap: 8px;
 }
 .hero .link-cta .arrow { transition: transform .3s ease; }
-.hero .link-cta:hover { color: var(--bgold); border-color: var(--bgold); }
+.hero .link-cta:hover { color: var(--brick); border-color: var(--brick); }
 .hero .link-cta:hover .arrow { transform: translateX(4px); }
-.hero .credit {
-  position: absolute; bottom: 14px; left: 0; right: 0;
-  text-align: center;
-  font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: rgba(238,218,179,0.6);
-  z-index: 1;
-}
-.hero .credit b { color: var(--bgold); font-weight: 600; }
 
 /* Establishing image strip below the hero (rounded, inset) */
 .establishing-strip {
@@ -611,9 +559,10 @@ a:focus-visible, button:focus-visible {
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 960px) {
-  .hero { padding: 96px 24px; min-height: 540px; }
-  .hero h1 { font-size: clamp(42px, 9vw, 64px); }
+  .hero { padding: 56px 24px 48px; }
+  .hero h1 { font-size: clamp(40px, 9vw, 60px); }
   .hero .lede { font-size: 16px; margin-bottom: 28px; }
+  .establishing-strip img { max-height: 320px; }
   .index .inner { grid-template-columns: 1fr; gap: 32px; }
   .index .cols { grid-template-columns: 1fr; gap: 40px; }
   .bishop .inner { grid-template-columns: 1fr; gap: 40px; padding: 0 24px; }
@@ -681,7 +630,7 @@ a:focus-visible, button:focus-visible {
 
 <main id="main">
 
-<!-- ─── HERO (cathedral image backdrop) ─── -->
+<!-- ─── HERO (institutional) ─── -->
 <section class="hero" aria-labelledby="hero-title">
   <div class="inner">
     <p class="eyebrow">Serving Southwest Indiana since 1944</p>
@@ -693,8 +642,14 @@ a:focus-visible, button:focus-visible {
       <a href="#" class="link-cta">Becoming Catholic <span class="arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
-  <p class="credit"><b>St. Benedict Cathedral</b> &middot; Blue Mass 2025</p>
 </section>
+
+<!-- ─── ESTABLISHING STRIP (rounded) ─── -->
+<figure class="establishing-strip" aria-label="Presbyterate of the Diocese of Evansville, 2025">
+  <div class="frame">
+    <img src="/images/stock/presbyterate-group.jpg" alt="The priests of the Diocese of Evansville with Bishop Joseph M. Siegel at the 2025 Chrism Mass." loading="eager" fetchpriority="high">
+  </div>
+</figure>
 
 <!-- ─── FLOURISH DIVIDER — cross ─── -->
 <div class="flourish" aria-hidden="true">
@@ -716,19 +671,19 @@ a:focus-visible, button:focus-visible {
       </h2>
     </div>
     <div class="cols">
-      <article class="col fade-up">
+      <article class="col">
         <span class="num">I.</span>
         <h3>Find your <em>parish.</em></h3>
         <p>Forty-five parishes across twelve counties. Enter your town, your ZIP, or the name of a saint — we'll get you to the right door.</p>
         <a href="#" class="read">Open the map <span aria-hidden="true">→</span></a>
       </article>
-      <article class="col fade-up" style="transition-delay: 0.15s;">
+      <article class="col">
         <span class="num">II.</span>
         <h3>Become <em>Catholic.</em></h3>
         <p>The Order of Christian Initiation of Adults (OCIA) welcomes new Catholics each Easter. Questions, conversations, and companionship — begin here.</p>
         <a href="#" class="read">Start the conversation <span aria-hidden="true">→</span></a>
       </article>
-      <article class="col fade-up" style="transition-delay: 0.3s;">
+      <article class="col">
         <span class="num">III.</span>
         <h3>Give — and <em>give thanks.</em></h3>
         <p>Your gift to the Catholic Ministries Appeal supports seminarians, Catholic Charities, schools, and every parish in the diocese.</p>
@@ -741,10 +696,10 @@ a:focus-visible, button:focus-visible {
 <!-- ─── BISHOP FEATURE ─── -->
 <section class="bishop" aria-labelledby="bishop-title">
   <div class="inner">
-    <figure class="portrait fade-up">
+    <figure class="portrait">
       <img src="/images/bishop/bishop-siegel.jpg" alt="The Most Reverend Joseph M. Siegel, Bishop of the Diocese of Evansville.">
     </figure>
-    <div class="text fade-up" style="transition-delay: 0.15s;">
+    <div class="text">
       <p class="eyebrow">From the Bishop</p>
       <p class="quote" id="bishop-title">
         &ldquo;The Church is not a museum for the perfect. It is a <em>field hospital</em> for the soul.&rdquo;
@@ -768,7 +723,7 @@ a:focus-visible, button:focus-visible {
     <a href="#" class="all">All stories →</a>
   </div>
   <div class="grid">
-    <a class="story lead fade-up" href="#">
+    <a class="story lead" href="#">
       <div class="img">
         <img src="https://evdiomessage.org/wp-content/uploads/2026/04/p01_or_p06_or_p07___Holy_Week___Holy_Saturday_2026___FOUR__1775841432_39613.jpg" alt="Easter Vigil at St. Benedict Cathedral.">
       </div>
@@ -776,7 +731,7 @@ a:focus-visible, button:focus-visible {
       <h3>A light in the darkness: Easter <em>Vigil</em> at the cathedral.</h3>
       <p>From darkness to Easter fire — the ancient liturgy marks the heart of the Christian year. Images and reflections from Holy Saturday at St. Benedict.</p>
     </a>
-    <a class="story fade-up" style="transition-delay: 0.12s;" href="#">
+    <a class="story" href="#">
       <div class="img">
         <img src="https://evdiomessage.org/wp-content/uploads/2026/04/p01___Dr._Palmer_and_family__1775744140_65409.jpg" alt="Dr. Douglas Palmer with family.">
       </div>
@@ -784,7 +739,7 @@ a:focus-visible, button:focus-visible {
       <h3>Washington Catholic names <em>first president.</em></h3>
       <p>Dr. Douglas Palmer begins a new chapter for Catholic education in Daviess County.</p>
     </a>
-    <a class="story fade-up" style="transition-delay: 0.24s;" href="#">
+    <a class="story" href="#">
       <div class="img">
         <img src="https://evdiomessage.org/wp-content/uploads/2026/04/Folz_and_Riecker_Headshots__1775224519_49623.jpg" alt="Seminarians Folz and Riecker.">
       </div>
@@ -797,9 +752,9 @@ a:focus-visible, button:focus-visible {
 
 <!-- ─── SACRAMENTS ─── -->
 <section class="sacraments" aria-labelledby="sacraments-title">
-  <div class="inner fade-up">
+  <div class="inner">
     <figure class="photo">
-      <img src="/images/stock/confirmation-stmary.jpg" alt="Young Catholics at a Confirmation Mass at St. Mary Parish, Ireland, Indiana.">
+      <img src="/images/stock/blue-mass-cathedral.jpg" alt="Clergy venerating the altar at St. Benedict Cathedral.">
     </figure>
     <div class="text">
       <p class="kicker">A Life in the Sacraments</p>
@@ -834,13 +789,13 @@ a:focus-visible, button:focus-visible {
     <span class="dot"></span>
   </div>
   <div class="grid">
-    <a class="card fade-up" href="#">
+    <a class="card" href="#">
       <svg class="corner-ornament" width="18" height="22" viewBox="0 0 14 18" fill="currentColor" aria-hidden="true"><rect x="6" y="0" width="2" height="18"/><rect x="2" y="5" width="10" height="2"/></svg>
       <h3>Find a <em>parish</em> near you.</h3>
       <p>Mass times, deanery map, and directions to every parish in the diocese — from Evansville to the river towns of Southwest Indiana.</p>
       <span class="cta">Open the parish map <span aria-hidden="true">→</span></span>
     </a>
-    <a class="card fade-up" style="transition-delay: 0.15s;" href="#" id="give">
+    <a class="card" href="#" id="give">
       <svg class="corner-ornament" width="18" height="22" viewBox="0 0 14 18" fill="currentColor" aria-hidden="true"><rect x="6" y="0" width="2" height="18"/><rect x="2" y="5" width="10" height="2"/></svg>
       <h3>Make a <em>gift.</em></h3>
       <p>Support the Catholic Ministries Appeal, give to your parish, or establish a legacy gift. Every gift is stewarded carefully.</p>
@@ -907,27 +862,6 @@ a:focus-visible, button:focus-visible {
   </div>
 </footer>
 
-<div class="version" aria-hidden="true">Curves · Cathedral hero</div>
-<script>
-  (function() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
-    document.querySelectorAll('.fade-up').forEach((el) => io.observe(el));
-
-    const topbar = document.querySelector('.topbar');
-    const onScroll = () => {
-      if (window.scrollY > 8) topbar.classList.add('scrolled');
-      else topbar.classList.remove('scrolled');
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-  })();
-</script>
+<div class="version" aria-hidden="true">Curves · A</div>
 </body>
 </html>
