@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 
@@ -20,6 +21,17 @@ export default function TheMessagePage() {
           { label: "The Message" },
         ]}
       />
+
+      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
+        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
+          <Image
+            src="/images/stock/presbyterate-group.jpg"
+            alt="The presbyterate of the Diocese of Evansville at the 2025 Chrism Mass."
+            fill
+            style={{ objectFit: "cover", objectPosition: "center 45%" }}
+          />
+        </div>
+      </div>
 
       <main id="main-content">
         {/* Featured Article */}

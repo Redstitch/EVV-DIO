@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 
@@ -21,6 +22,17 @@ export default function SocialJusticePage() {
           { label: "Social Justice" },
         ]}
       />
+
+      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
+        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
+          <Image
+            src="/images/stock/catholics-for-habitat.jpg"
+            alt="Catholics for Habitat volunteers building homes in the Diocese of Evansville."
+            fill
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      </div>
 
       <main id="main-content">
         {/* Mission */}

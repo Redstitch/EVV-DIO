@@ -1,244 +1,268 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Faith & Sacraments | Diocese of Evansville",
   description:
-    "Explore the Catholic faith in the Diocese of Evansville. From the sacraments to prayer resources, find everything you need to encounter Christ, deepen your faith, and engage your community.",
+    "Explore the Catholic faith in the Diocese of Evansville — the seven sacraments, becoming Catholic, and resources for every stage of your journey.",
 };
 
 export default function FaithPage() {
   return (
-    <>
-      <PageHero
-        label="Faith & Sacraments"
-        title="Your Journey of Faith"
-        subtitle="Whether you are exploring Catholicism for the first time or seeking to deepen a lifelong relationship with Christ, we are here to walk with you."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Faith & Sacraments" },
-        ]}
-      />
-
-      <main id="main-content">
-        {/* Three Pillars */}
-        <section className="page-content">
-          <div className="section-head">
-            <span className="section-tag">Our Pastoral Vision</span>
-            <h2 className="section-h2">Encounter. Deepen. Engage.</h2>
-            <p className="section-desc">
-              Bishop Siegel&rsquo;s pastoral vision guides everything we do. Each pillar offers a pathway into the life of the Church.
+    <main id="main-content">
+      {/* ─── FEATURE HEAD (split: text + arch photo) ─── */}
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Faith &amp; Sacraments</p>
+            <h1 id="title">
+              A grace-filled <em>life,</em> marked in seven signs.
+            </h1>
+            <p className="deck">
+              The sacraments are the ordinary ways Christ continues to act in the
+              world — outward signs of an inward grace, traced from font to altar
+              to the final anointing.
             </p>
           </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/confirmation-stmary.jpg"
+              alt="Young Catholics at a Confirmation Mass at St. Mary Parish, Ireland, Indiana."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
-          {/* Encounter */}
-          <span className="section-tag section-tag-left">Pillar One</span>
-          <h2 className="section-h2 section-h2-left" style={{ fontSize: "clamp(24px,3vw,34px)" }}>
-            Encounter &mdash; Meet Christ &amp; His Church
-          </h2>
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 24, marginBottom: 48 }}>
-            <Link href="/faith/become-catholic" className="interior-card">
-              <div className="interior-card-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                </svg>
-              </div>
-              <h3>How to Become Catholic</h3>
-              <p>Begin your journey through OCIA (formerly RCIA). Learn what it means to enter the Catholic Church and how to take your first step.</p>
-            </Link>
-
-            <Link href="/faith/baptism" className="interior-card">
-              <div className="interior-card-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 11.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
-                </svg>
-              </div>
-              <h3>Baptism</h3>
-              <p>The gateway to life in the Spirit. Learn about infant baptism, adult baptism, and how to prepare for this first sacrament.</p>
-            </Link>
-
-            <Link href="/parishes" className="interior-card">
-              <div className="interior-card-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
-              </div>
-              <h3>Find a Parish</h3>
-              <p>Connect with one of 45 parish communities across the diocese. Search by location, Mass time, or deanery.</p>
-            </Link>
-          </div>
-
-          <hr className="section-divider" />
-
-          {/* Deepen */}
-          <span className="section-tag section-tag-left">Pillar Two</span>
-          <h2 className="section-h2 section-h2-left" style={{ fontSize: "clamp(24px,3vw,34px)" }}>
-            Deepen &mdash; Grow in Faith &amp; Grace
-          </h2>
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 24, marginBottom: 48 }}>
-            <Link href="/faith/first-communion" className="interior-card">
-              <div className="interior-card-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M2 21h20v-2H2v2zm0-4h20v-2H2v2zM5.5 9.5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5S9.38 7 8 7 5.5 8.12 5.5 9.5zm7 0c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5S16.38 7 15 7s-2.5 1.12-2.5 2.5z" />
-                </svg>
-              </div>
-              <h3>First Communion</h3>
-              <p>Preparing to receive the source and summit of Christian life &mdash; the Body and Blood of Christ in the Eucharist.</p>
-            </Link>
-
-            <Link href="/faith/confirmation" className="interior-card">
-              <div className="interior-card-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M13 6.06V3h-2v3.06c-4.5.5-8 4.31-8 8.93C3 16.1 3.9 17 5.01 17h13.98C20.1 17 21 16.1 21 14.99c0-4.62-3.5-8.43-8-8.93zM12 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" />
-                </svg>
-              </div>
-              <h3>Confirmation</h3>
-              <p>Sealed with the gifts of the Holy Spirit. Discover how teens and adults prepare for this sacrament of initiation.</p>
-            </Link>
-
-            <Link href="/faith/prayer-worship" className="interior-card">
-              <div className="interior-card-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z" />
-                </svg>
-              </div>
-              <h3>Prayer &amp; Worship Resources</h3>
-              <p>Daily readings, prayer guides, and spiritual resources to enrich your personal and family prayer life.</p>
-            </Link>
-
-            <Link href="/faith/calendar" className="interior-card">
-              <div className="interior-card-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z" />
-                </svg>
-              </div>
-              <h3>Church Calendar</h3>
-              <p>Follow the liturgical year: Advent, Lent, Easter, Ordinary Time, and the feasts and solemnities of the Church.</p>
-            </Link>
-
-            <Link href="/faith/vocations" className="interior-card">
-              <div className="interior-card-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
-                </svg>
-              </div>
-              <h3>Vocations</h3>
-              <p>Discern God&rsquo;s call for your life &mdash; priesthood, diaconate, religious life, or the lay vocation.</p>
-            </Link>
-          </div>
-
-          <hr className="section-divider" />
-
-          {/* Engage */}
-          <span className="section-tag section-tag-left">Pillar Three</span>
-          <h2 className="section-h2 section-h2-left" style={{ fontSize: "clamp(24px,3vw,34px)" }}>
-            Engage &mdash; Live &amp; Share the Faith
-          </h2>
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 24 }}>
-            <Link href="/faith/marriage" className="interior-card">
-              <div className="interior-card-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                </svg>
-              </div>
-              <h3>Catholic Marriage</h3>
-              <p>Prepare for the sacrament of Matrimony. Marriage prep, enrichment programs, and support for married couples.</p>
-            </Link>
-
-            <Link href="/faith/anointing" className="interior-card">
-              <div className="interior-card-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M17.73 12.02l3.98-3.98c.39-.39.39-1.02 0-1.41l-4.34-4.34c-.39-.39-1.02-.39-1.41 0l-3.98 3.98L8 2.29C7.8 2.1 7.55 2 7.29 2c-.25 0-.51.1-.7.29L2.25 6.63c-.39.39-.39 1.02 0 1.41l3.98 3.98L2.25 16c-.39.39-.39 1.02 0 1.41l4.34 4.34c.39.39 1.02.39 1.41 0l3.98-3.98 3.98 3.98c.2.2.45.29.71.29.26 0 .51-.1.71-.29l4.34-4.34c.39-.39.39-1.02 0-1.41l-3.99-3.98z" />
-                </svg>
-              </div>
-              <h3>Anointing of the Sick</h3>
-              <p>Healing, comfort, and spiritual strength for those who are seriously ill or facing surgery.</p>
-            </Link>
-
-            <Link href="/faith/deacon" className="interior-card">
-              <div className="interior-card-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 2L13.09 8.26L20 9L14.14 13.14L15.68 20L12 16.27L8.32 20L9.86 13.14L4 9L10.91 8.26L12 2z" />
-                </svg>
-              </div>
-              <h3>Becoming a Deacon</h3>
-              <p>Learn about the permanent diaconate formation program and how to discern a call to ordained service.</p>
-            </Link>
-
-            <Link href="/faith/music" className="interior-card">
-              <div className="interior-card-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
-                </svg>
-              </div>
-              <h3>Music Resources</h3>
-              <p>Liturgical music resources, workshops, and training for parish musicians and worship leaders.</p>
-            </Link>
-          </div>
-        </section>
-
-        {/* Sacraments Overview */}
-        <section className="page-content" style={{ background: "var(--cream)" }}>
-          <div className="section-head">
-            <span className="section-tag">The Seven Sacraments</span>
-            <h2 className="section-h2">Signs of Grace, Encounters with Christ</h2>
-            <p className="section-desc">
-              The sacraments are the foundation of Catholic life. Through them, we receive God&rsquo;s grace at every stage of our journey.
-            </p>
-          </div>
-
-          <div className="interior-grid interior-grid-4">
-            <Link href="/faith/baptism" className="interior-card" style={{ textAlign: "center" }}>
-              <h3>Baptism</h3>
-              <p>New life in Christ and entry into the Church</p>
-            </Link>
-            <Link href="/faith/first-communion" className="interior-card" style={{ textAlign: "center" }}>
-              <h3>Eucharist</h3>
-              <p>The source and summit of the Christian life</p>
-            </Link>
-            <Link href="/faith/confirmation" className="interior-card" style={{ textAlign: "center" }}>
-              <h3>Confirmation</h3>
-              <p>Strengthened by the Holy Spirit</p>
-            </Link>
-            <Link href="/parishes" className="interior-card" style={{ textAlign: "center" }}>
-              <h3>Reconciliation</h3>
-              <p>God&rsquo;s mercy and forgiveness restored</p>
-            </Link>
-            <Link href="/faith/marriage" className="interior-card" style={{ textAlign: "center" }}>
-              <h3>Matrimony</h3>
-              <p>A covenant of love mirroring Christ and the Church</p>
-            </Link>
-            <Link href="/faith/vocations" className="interior-card" style={{ textAlign: "center" }}>
-              <h3>Holy Orders</h3>
-              <p>Called to serve as priest, bishop, or deacon</p>
-            </Link>
-            <Link href="/faith/anointing" className="interior-card" style={{ textAlign: "center" }}>
-              <h3>Anointing of the Sick</h3>
-              <p>Healing, comfort, and spiritual strength</p>
-            </Link>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <div className="page-content">
-          <div className="cta-block">
-            <h3>Not Sure Where to Start?</h3>
+      {/* ─── INTRO ─── */}
+      <section className="intro">
+        <div className="inner">
+          <p className="pull">
+            Every Catholic life moves through these <em>seven doors.</em> Some
+            open once — baptism, confirmation, ordination, marriage. Others we
+            return to again and again.
+          </p>
+          <div className="body">
             <p>
-              Whether you are curious about the Catholic faith, returning after time away, or looking to receive a sacrament, we are here to help. Contact your local parish or reach out to our diocesan offices.
+              The sacraments are not symbols of something absent but encounters
+              with Someone present: the risen Lord, acting in water and oil,
+              bread and wine, word and touch.
             </p>
-            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/faith/become-catholic" className="btn-gold">
-                How to Become Catholic
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </Link>
-              <Link href="/parishes" className="btn-ghost-white">
-                Find a Parish
-              </Link>
-            </div>
+            <p>
+              In the Diocese of Evansville, every parish is a place where this
+              grace is offered freely — at the font where new Christians are
+              born, at the altar where the Paschal Mystery is renewed, in the
+              confessional where mercy is spoken aloud, at the bedside where the
+              sick are anointed with holy oil.
+            </p>
+            <p>
+              Each of the seven sacraments has its own shape, its own history,
+              its own rite. But all seven speak in the same grammar: God gives,
+              and we receive. Taken together, they form the arc of a grace-filled
+              life.
+            </p>
+            <p>
+              What follows is a short guide — the seven doors and where each of
+              them opens. If you have questions, any priest or parish staff
+              member in the diocese is ready to answer them.
+            </p>
           </div>
         </div>
-      </main>
-    </>
+      </section>
+
+      {/* ─── FLOURISH ─── */}
+      <div className="flourish flourish-quatrefoil" aria-hidden="true">
+        <span className="dot" />
+        <span className="line" />
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+          <circle cx="16" cy="8" r="6" />
+          <circle cx="16" cy="24" r="6" />
+          <circle cx="8" cy="16" r="6" />
+          <circle cx="24" cy="16" r="6" />
+          <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+        </svg>
+        <span className="line" />
+        <span className="dot" />
+      </div>
+
+      {/* ─── SEVEN SACRAMENTS ─── */}
+      <section className="seven" aria-labelledby="seven-title">
+        <div className="head">
+          <p className="label">The Sacraments</p>
+          <h2 id="seven-title">
+            Seven doors, <em>one Christ.</em>
+          </h2>
+        </div>
+        <div className="list">
+          {sacraments.map((s) => (
+            <Link key={s.label} className="item" href={s.href}>
+              <span
+                className="num"
+                dangerouslySetInnerHTML={{ __html: s.icon }}
+              />
+              <div className="body">
+                <h3>{s.label}</h3>
+                <p>{s.desc}</p>
+              </div>
+              <span className="cta">
+                {s.cta} <span aria-hidden="true">→</span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ─── SCRIPTURE ─── */}
+      <section className="scripture" aria-label="Scripture">
+        <blockquote>
+          &ldquo;I came that they might have life, and have it{" "}
+          <em>abundantly.</em>&rdquo;
+          <cite>John 10:10</cite>
+        </blockquote>
+      </section>
+
+      {/* ─── FLOURISH ─── */}
+      <div
+        className="flourish flourish-quatrefoil"
+        aria-hidden="true"
+        style={{ padding: "48px 0 8px", background: "var(--cream-lt)" }}
+      >
+        <span className="dot" />
+        <span className="line" />
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+          <circle cx="16" cy="8" r="6" />
+          <circle cx="16" cy="24" r="6" />
+          <circle cx="8" cy="16" r="6" />
+          <circle cx="24" cy="16" r="6" />
+          <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+        </svg>
+        <span className="line" />
+        <span className="dot" />
+      </div>
+
+      {/* ─── STEPS / FAQ ─── */}
+      <section className="steps" aria-labelledby="steps-title">
+        <div className="inner">
+          <div>
+            <p className="kicker">Begin here</p>
+            <h2 id="steps-title">
+              Questions about <em>becoming</em> Catholic?
+            </h2>
+            <p className="note">
+              Every parish has a priest or staff member ready to answer. There is
+              no form you need to fill out first, and no cost.
+            </p>
+          </div>
+          <div className="faq">
+            {faqs.map((faq, i) => (
+              <details key={i} open={i === 0}>
+                <summary>{faq.q}</summary>
+                <p>{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── CTA STRIP ─── */}
+      <section className="cta-strip">
+        <div className="flourish" aria-hidden="true" style={{ padding: "0 0 32px" }}>
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
+        </div>
+        <p className="kicker">Next</p>
+        <h2>
+          Find a parish — <em>take the first step.</em>
+        </h2>
+        <Link href="/parishes" className="btn btn-primary">
+          Open the parish map <span className="arrow" aria-hidden="true">→</span>
+        </Link>
+      </section>
+    </main>
   );
 }
+
+/* ─── Data ─── */
+
+const sacraments = [
+  {
+    label: "Baptism",
+    href: "/faith/baptism",
+    desc: "Entry into the life of Christ. Celebrated for infants and adults alike, usually at a parish Mass or Easter Vigil.",
+    cta: "Learn more",
+    icon: '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4 C11 12 8 16 8 20 A8 8 0 0 0 24 20 C24 16 21 12 16 4 Z"/></svg>',
+  },
+  {
+    label: "Confirmation",
+    href: "/faith/confirmation",
+    desc: "The sealing of baptism with the Holy Spirit. Typically received in the teenage years, or at the Easter Vigil for new Catholics.",
+    cta: "Learn more",
+    icon: '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4 C12 10 10 14 10 18 C10 23 13 26 16 28 C19 26 22 23 22 18 C22 14 20 10 16 4 Z"/><path d="M16 14 C15 17 14 19 14 21"/></svg>',
+  },
+  {
+    label: "Eucharist",
+    href: "/faith/first-communion",
+    desc: "The source and summit of Christian life — the Body and Blood of Christ offered at every Mass in every parish.",
+    cta: "Learn more",
+    icon: '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 H24 V10 A8 8 0 0 1 16 18 A8 8 0 0 1 8 10 V6 Z"/><line x1="16" y1="18" x2="16" y2="25"/><line x1="11" y1="26" x2="21" y2="26"/></svg>',
+  },
+  {
+    label: "Reconciliation",
+    href: "/faith/prayer-worship",
+    desc: "Confession, absolution, and return. Every parish offers regular hours; most hear confessions before each weekend Mass.",
+    cta: "Find a time",
+    icon: '<svg viewBox="0 0 32 32" fill="currentColor"><rect x="14" y="4" width="4" height="24" rx="1"/><rect x="6" y="12" width="20" height="4" rx="1"/></svg>',
+  },
+  {
+    label: "Anointing of the Sick",
+    href: "/faith/anointing",
+    desc: "Prayer and holy oil for healing, courage, and peace. Call your parish when serious illness or surgery is coming.",
+    cta: "How to request",
+    icon: '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 H20 V8 L22 12 V24 A4 4 0 0 1 18 28 H14 A4 4 0 0 1 10 24 V12 L12 8 Z"/><line x1="13" y1="14" x2="19" y2="14"/></svg>',
+  },
+  {
+    label: "Holy Orders",
+    href: "/faith/vocations",
+    desc: "The consecration of deacons, priests, and bishops for service of the Church. Pray for our seminarians; consider your own call.",
+    cta: "Vocations",
+    icon: '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12 L16 4 L24 12 V26 H8 V12 Z"/><line x1="8" y1="18" x2="24" y2="18"/><line x1="16" y1="6" x2="16" y2="14"/><line x1="13" y1="10" x2="19" y2="10"/></svg>',
+  },
+  {
+    label: "Matrimony",
+    href: "/faith/marriage",
+    desc: "A covenant between husband and wife that images Christ's love for the Church. Begin with your parish priest at least six months ahead.",
+    cta: "Begin preparation",
+    icon: '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="16" r="7"/><circle cx="20" cy="16" r="7"/></svg>',
+  },
+];
+
+const faqs = [
+  {
+    q: "What is OCIA / RCIA?",
+    a: "The Order of Christian Initiation of Adults is the Church's process for welcoming new Catholics. It meets weekly at most parishes and culminates in reception of the sacraments at the Easter Vigil each spring.",
+  },
+  {
+    q: "I was baptized in another Christian tradition. Do I need to be re-baptized?",
+    a: "No. The Catholic Church recognizes valid baptism from most Christian traditions. Speak with your local priest about what the full reception into the Catholic Church looks like for you.",
+  },
+  {
+    q: "How do I know which parish I belong to?",
+    a: "In general, you belong to the parish whose boundaries include your home. But you are welcome to register at any parish whose community and Mass schedule suit your family best.",
+  },
+  {
+    q: "How do I request the Anointing of the Sick?",
+    a: "Call your parish office as soon as serious illness, surgery, or decline is known. Any Catholic priest can anoint; you do not need to be actively dying.",
+  },
+  {
+    q: "How soon should we begin marriage preparation?",
+    a: "The diocese asks engaged couples to meet with a priest or deacon at least six months before the wedding. Longer is welcome — preparation is meant to serve the marriage, not just the wedding.",
+  },
+];

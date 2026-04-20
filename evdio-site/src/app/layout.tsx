@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Libre_Franklin } from "next/font/google";
+import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
 
-const cormorantGaramond = Cormorant_Garamond({
-  variable: "--font-heading",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: "400",
   style: ["normal", "italic"],
   display: "swap",
 });
 
-const libreFranklin = Libre_Franklin({
-  variable: "--font-body",
+const instrumentSans = Instrument_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Diocese of Evansville",
   },
   description:
-    "The Catholic Diocese of Evansville serves 79,500 Catholics across 45 parishes, 26 schools, and 12 counties in Southwestern Indiana. Encounter. Deepen. Engage.",
+    "The Catholic Diocese of Evansville serves 79,500 Catholics across 45 parishes, 26 schools, and 12 counties in Southwestern Indiana.",
   keywords: [
     "Diocese of Evansville",
     "Catholic",
@@ -53,7 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorantGaramond.variable} ${libreFranklin.variable}`}
+      className={`${instrumentSerif.variable} ${instrumentSans.variable}`}
     >
       <body>
         <a href="#main-content" className="skip-to-content">

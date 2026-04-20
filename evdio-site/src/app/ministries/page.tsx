@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
@@ -20,6 +21,18 @@ export default function MinistriesPage() {
           { label: "Ministries" },
         ]}
       />
+
+      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
+        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
+          <Image
+            src="/images/stock/community-service.jpg"
+            alt="Diocesan volunteers serving the community in Southwestern Indiana."
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+          />
+        </div>
+      </div>
 
       <main id="main-content">
         {/* Family & Life */}

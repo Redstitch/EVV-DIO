@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
@@ -20,6 +21,18 @@ export default function ParishesPage() {
           { label: "Parishes & Mass" },
         ]}
       />
+
+      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
+        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
+          <Image
+            src="/images/stock/white-mass.jpg"
+            alt="Catholic faithful at Mass in the Diocese of Evansville."
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+          />
+        </div>
+      </div>
 
       <main id="main-content">
         {/* Parish Finder CTA */}

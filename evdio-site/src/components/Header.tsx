@@ -11,11 +11,10 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMega, setOpenMega] = useState<string | null>(null);
   const megaTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 8);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -50,57 +49,45 @@ export function Header() {
 
   return (
     <>
-      {/* Utility Nav */}
-      <nav className="utility-nav" aria-label="Utility navigation">
-        <div className="flex justify-between items-center max-w-full mx-0 px-10">
-          <div className="flex gap-5 items-center">
-            <Link href="/about/careers">MyDio Staff Portal</Link>
-            <Link href="/about/careers">Careers</Link>
-            <Link href="/about/contact">Contact Us</Link>
-          </div>
-          <div className="flex gap-5 items-center">
-            <Link href="/about/safe-environment">Safe Environment</Link>
-            <div className="lang-toggle" role="group" aria-label="Language selection">
-              <span className="active">EN</span>
-              <span className="divider">|</span>
-              <span>ES</span>
-            </div>
-          </div>
+      {/* Utility Strip (teal) */}
+      <div className="utility-nav">
+        <div className="row">
+          <span>
+            4200 N. Kentucky Ave, Evansville IN &middot;{" "}
+            <a href="tel:8124245536">812-424-5536</a>
+          </span>
+          <span className="links">
+            <Link href="/parishes">Find a Parish</Link>
+            <Link href="/parishes/mass-times">Mass Times</Link>
+            <Link href="/parishes/watch-mass">Watch Mass Online</Link>
+            <span className="lang" aria-label="Language">
+              <a href="#" className="active" aria-current="true">EN</a>
+              <span className="sep" aria-hidden="true">&middot;</span>
+              <a href="#" lang="es" hrefLang="es">ES</a>
+            </span>
+          </span>
         </div>
-      </nav>
+      </div>
 
-      {/* Main Header */}
+      {/* Main Header (navy) */}
       <header
-        ref={headerRef}
         className={`main-header ${scrolled ? "scrolled" : ""}`}
         role="banner"
       >
-        <div
-          className={`flex items-center max-w-full mx-0 px-10 transition-all ${
-            scrolled ? "h-16" : "h-20"
-          }`}
-        >
+        <div className="row">
           <Link href="/" className="logo" aria-label="Diocese of Evansville - Home">
-            <div className="logo-crest">
-              <Image
-                src="/images/branding/diocese-crest.png"
-                alt="Diocese of Evansville crest"
-                width={52}
-                height={52}
-                priority
-              />
-            </div>
-            <div className="logo-text">
-              <span className="name">Diocese of Evansville</span>
-              <span className="tagline">The Catholic Church in Southwestern Indiana</span>
-            </div>
+            <Image
+              src="/images/branding/diocese-logo-reversed.png"
+              alt="Diocese of Evansville"
+              width={200}
+              height={60}
+              priority
+              style={{ width: "auto", height: "60px" }}
+            />
           </Link>
 
-          {/* Main Nav */}
-          <nav
-            className="main-nav hidden lg:flex items-center gap-0.5 h-full flex-1 justify-center"
-            aria-label="Main navigation"
-          >
+          {/* Desktop Nav */}
+          <nav className="main-nav" aria-label="Primary">
             {navItems.map((item) => (
               <div
                 key={item.key}
@@ -174,18 +161,21 @@ export function Header() {
           </nav>
 
           {/* Header Actions */}
-          <div className="header-actions flex items-center gap-3 flex-shrink-0">
-            <button className="search-btn hidden lg:flex" aria-label="Search">
+          <div className="header-actions">
+            <button className="search-btn" aria-label="Search the site">
               <svg
-                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="1.8"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 aria-hidden="true"
               >
-                <circle cx="11" cy="11" r="8" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                <circle cx="9" cy="9" r="6.5" />
+                <line x1="14" y1="14" x2="18" y2="18" />
               </svg>
             </button>
             <div
@@ -197,9 +187,6 @@ export function Header() {
             >
               <Link href={giveItem.href} className="give-btn">
                 {giveItem.label}
-                <svg className="chevron" viewBox="0 0 12 12">
-                  <polyline points="2 4 6 8 10 4" />
-                </svg>
               </Link>
               {giveItem.children && (
                 <div className={`mega-menu ${giveItem.menuWidth || ""}`}>
@@ -252,19 +239,19 @@ export function Header() {
                 </div>
               )}
             </div>
-          </div>
 
-          {/* Mobile Toggle */}
-          <button
-            className={`mobile-toggle lg:hidden ${mobileOpen ? "active" : ""}`}
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileOpen}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
+            {/* Mobile Toggle */}
+            <button
+              className={`mobile-toggle ${mobileOpen ? "active" : ""}`}
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
         </div>
       </header>
 

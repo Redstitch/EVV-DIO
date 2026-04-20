@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
@@ -20,6 +21,18 @@ export default function AboutPage() {
           { label: "About" },
         ]}
       />
+
+      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
+        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
+          <Image
+            src="/images/stock/cathedral-interior.jpg"
+            alt="Interior of St. Benedict Cathedral, Evansville, Indiana."
+            fill
+            style={{ objectFit: "cover", objectPosition: "center 40%" }}
+            priority
+          />
+        </div>
+      </div>
 
       <main id="main-content">
         {/* Diocesan Snapshot */}

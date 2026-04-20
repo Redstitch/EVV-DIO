@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
@@ -21,6 +22,17 @@ export default function BecomeCatholic() {
           { label: "How to Become Catholic" },
         ]}
       />
+
+      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
+        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
+          <Image
+            src="/images/stock/holy-week-good-friday.jpg"
+            alt="Good Friday observance in the Diocese of Evansville."
+            fill
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      </div>
 
       <main id="main-content">
         {/* Introduction */}
