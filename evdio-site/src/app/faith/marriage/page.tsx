@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHero } from "@/components/PageHero";
-
 export const metadata: Metadata = {
   title: "Catholic Marriage",
   description:
@@ -12,27 +10,25 @@ export const metadata: Metadata = {
 export default function Marriage() {
   return (
     <>
-      <PageHero
-        label="Faith & Sacraments"
-        title="Catholic Marriage"
-        subtitle="The Sacrament of Matrimony is a covenant by which a man and a woman establish a partnership of the whole of life, ordered toward the good of the spouses and the procreation and education of children."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Faith & Sacraments", href: "/faith" },
-          { label: "Catholic Marriage" },
-        ]}
-      />
-
-      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
-        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
-          <Image
-            src="/images/stock/cathedral-interior.jpg"
-            alt="St. Benedict Cathedral, a place of sacramental celebration in the Diocese of Evansville."
-            fill
-            style={{ objectFit: "cover" }}
-          />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Faith &amp; Sacraments</p>
+            <h1 id="title">Catholic <em>Marriage.</em></h1>
+            <p className="deck">The Sacrament of Matrimony is a covenant by which a man and a woman establish a partnership of the whole of life, ordered toward the good of the spouses and the procreation and education of children.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/cathedral-interior.jpg"
+              alt="St. Benedict Cathedral, Evansville."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+              priority
+            />
+          </figure>
         </div>
-      </div>
+      </section>
 
       <main id="main-content">
         {/* Teaching */}

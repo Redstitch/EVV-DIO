@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Parishes & Mass | Diocese of Evansville",
@@ -12,27 +11,27 @@ export const metadata: Metadata = {
 export default function ParishesPage() {
   return (
     <>
-      <PageHero
-        label="Parishes & Mass"
-        title="Find Your Parish"
-        subtitle="45 parishes across 12 counties in Southwestern Indiana, united in faith and service under four deaneries."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Parishes & Mass" },
-        ]}
-      />
-
-      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
-        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
-          <Image
-            src="/images/stock/white-mass.jpg"
-            alt="Catholic faithful at Mass in the Diocese of Evansville."
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Parishes &amp; Mass</p>
+            <h1 id="title">Find your <em>parish.</em></h1>
+            <p className="deck">
+              45 parishes across 12 counties in Southwestern Indiana, united in faith and service under four deaneries.
+            </p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/white-mass.jpg"
+              alt="Catholic faithful at Mass in the Diocese of Evansville."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
         </div>
-      </div>
+      </section>
 
       <main id="main-content">
         {/* Parish Finder CTA */}

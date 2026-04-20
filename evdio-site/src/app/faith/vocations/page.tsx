@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHero } from "@/components/PageHero";
-
 export const metadata: Metadata = {
   title: "Vocations",
   description:
@@ -12,27 +10,25 @@ export const metadata: Metadata = {
 export default function Vocations() {
   return (
     <>
-      <PageHero
-        label="Faith & Sacraments"
-        title="Vocations"
-        subtitle="God calls each of us to a unique path of love and service. Whether to the priesthood, religious life, the diaconate, or the lay faithful, your vocation is a gift."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Faith & Sacraments", href: "/faith" },
-          { label: "Vocations" },
-        ]}
-      />
-
-      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
-        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
-          <Image
-            src="/images/stock/presbyterate-group.jpg"
-            alt="The priests of the Diocese of Evansville gathered at the 2025 Chrism Mass."
-            fill
-            style={{ objectFit: "cover", objectPosition: "center 45%" }}
-          />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Faith &amp; Sacraments</p>
+            <h1 id="title"><em>Vocations.</em></h1>
+            <p className="deck">God calls each of us to a unique path of love and service. Whether to the priesthood, religious life, the diaconate, or the lay faithful, your vocation is a gift.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/presbyterate-group.jpg"
+              alt="The priests of the Diocese of Evansville."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 45%" }}
+              priority
+            />
+          </figure>
         </div>
-      </div>
+      </section>
 
       <main id="main-content">
         {/* Introduction */}

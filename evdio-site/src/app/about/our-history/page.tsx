@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Our History",
@@ -93,27 +92,27 @@ const timeline = [
 export default function OurHistoryPage() {
   return (
     <>
-      <PageHero
-        label="About"
-        title="Our History"
-        subtitle="Over 275 years of Catholic faith, community, and service in Southwestern Indiana."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About", href: "/about" },
-          { label: "Our History" },
-        ]}
-      />
-
-      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
-        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
-          <Image
-            src="/images/branding/coat-of-arms.jpg"
-            alt="The coat of arms of the Diocese of Evansville."
-            fill
-            style={{ objectFit: "cover" }}
-          />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">About</p>
+            <h1 id="title">Our <em>History.</em></h1>
+            <p className="deck">
+              Over 275 years of Catholic faith, community, and service in Southwestern Indiana.
+            </p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/branding/coat-of-arms.jpg"
+              alt="The coat of arms of the Diocese of Evansville."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
         </div>
-      </div>
+      </section>
 
       <main id="main-content">
         {/* Intro */}

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Why Give? | Diocese of Evansville",
@@ -12,27 +11,27 @@ export const metadata: Metadata = {
 export default function GivePage() {
   return (
     <>
-      <PageHero
-        label="Stewardship"
-        title="Why Give?"
-        subtitle="Every gift, no matter the size, strengthens parishes, educates children, feeds families, and brings the light of Christ to Southwestern Indiana."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Why Give?" },
-        ]}
-      />
-
-      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
-        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
-          <Image
-            src="/images/stock/catholics-for-habitat.jpg"
-            alt="Catholics for Habitat volunteers building homes in the Diocese of Evansville."
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Stewardship</p>
+            <h1 id="title">Why <em>give?</em></h1>
+            <p className="deck">
+              Every gift, no matter the size, strengthens parishes, educates children, feeds families, and brings the light of Christ to Southwestern Indiana.
+            </p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/catholics-for-habitat.jpg"
+              alt="Catholics for Habitat volunteers building homes."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
         </div>
-      </div>
+      </section>
 
       <main id="main-content">
         {/* Impact Stats */}

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Catholic Ministries Appeal | Diocese of Evansville",
@@ -12,27 +11,27 @@ export const metadata: Metadata = {
 export default function AppealPage() {
   return (
     <>
-      <PageHero
-        label="Give"
-        title="Catholic Ministries Appeal"
-        subtitle="One gift. Many ministries. Every corner of the diocese."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Give", href: "/give" },
-          { label: "Catholic Ministries Appeal" },
-        ]}
-      />
-
-      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
-        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
-          <Image
-            src="/images/articles/catholic-ministries-appeal.png"
-            alt="Catholic Ministries Appeal — Diocese of Evansville."
-            fill
-            style={{ objectFit: "cover" }}
-          />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Catholic Ministries Appeal</p>
+            <h1 id="title">Catholic Ministries <em>Appeal.</em></h1>
+            <p className="deck">
+              One gift. Many ministries. Every corner of the diocese.
+            </p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/articles/catholic-ministries-appeal.png"
+              alt="Catholic Ministries Appeal — Diocese of Evansville."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
         </div>
-      </div>
+      </section>
 
       <main id="main-content">
         {/* Campaign Progress */}

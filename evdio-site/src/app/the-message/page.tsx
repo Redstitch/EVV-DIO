@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "The Message | Diocese of Evansville",
@@ -12,33 +11,30 @@ export const metadata: Metadata = {
 export default function TheMessagePage() {
   return (
     <>
-      <section className="page-hero">
-        <div className="page-hero-inner">
-          <nav className="crumbs" aria-label="Breadcrumb">
-            <span><Link href="/">Home</Link></span>
-            <span className="sep" aria-hidden="true">/</span>
-            <span><b>The Message</b></span>
-          </nav>
-          <h1 className="message-masthead" style={{ fontSize: "clamp(48px, 6vw, 88px)", lineHeight: 1.05, marginBottom: 16 }}>
-            <span className="the">The </span>
-            <span className="name">Message</span>
-          </h1>
-          <p className="subtitle">
-            Serving Southwestern Indiana with faith-based journalism since 1970.
-          </p>
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">The Message</p>
+            <h1 id="title" className="message-masthead" style={{ fontSize: "clamp(48px, 6vw, 88px)", lineHeight: 1.05 }}>
+              <span className="the">The </span>
+              <span className="name">Message</span>
+            </h1>
+            <p className="deck">
+              Serving Southwestern Indiana with faith-based journalism since 1970.
+            </p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/presbyterate-group.jpg"
+              alt="The presbyterate of the Diocese of Evansville."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 45%" }}
+              priority
+            />
+          </figure>
         </div>
       </section>
-
-      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
-        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
-          <Image
-            src="/images/stock/presbyterate-group.jpg"
-            alt="The presbyterate of the Diocese of Evansville at the 2025 Chrism Mass."
-            fill
-            style={{ objectFit: "cover", objectPosition: "center 45%" }}
-          />
-        </div>
-      </div>
 
       <main id="main-content">
         {/* Featured Article */}

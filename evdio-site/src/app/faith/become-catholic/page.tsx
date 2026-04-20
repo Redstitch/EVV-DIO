@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHero } from "@/components/PageHero";
-
 export const metadata: Metadata = {
   title: "How to Become Catholic",
   description:
@@ -12,27 +10,25 @@ export const metadata: Metadata = {
 export default function BecomeCatholic() {
   return (
     <>
-      <PageHero
-        label="Faith & Sacraments"
-        title="How to Become Catholic"
-        subtitle="Every journey of faith is unique. The Catholic Church welcomes you wherever you are, and we are here to walk with you every step of the way."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Faith & Sacraments", href: "/faith" },
-          { label: "How to Become Catholic" },
-        ]}
-      />
-
-      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
-        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
-          <Image
-            src="/images/stock/holy-week-good-friday.jpg"
-            alt="Good Friday observance in the Diocese of Evansville."
-            fill
-            style={{ objectFit: "cover" }}
-          />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Faith &amp; Sacraments</p>
+            <h1 id="title">Becoming <em>Catholic.</em></h1>
+            <p className="deck">Every journey of faith is unique. The Catholic Church welcomes you wherever you are, and we are here to walk with you every step of the way.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/holy-week-good-friday.jpg"
+              alt="Good Friday observance in the Diocese of Evansville."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+              priority
+            />
+          </figure>
         </div>
-      </div>
+      </section>
 
       <main id="main-content">
         {/* Introduction */}

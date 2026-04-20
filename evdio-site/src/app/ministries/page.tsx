@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Ministries | Diocese of Evansville",
@@ -12,27 +11,27 @@ export const metadata: Metadata = {
 export default function MinistriesPage() {
   return (
     <>
-      <PageHero
-        label="Ministries"
-        title="Our Ministries"
-        subtitle="Serving the whole person, the whole family, and the whole community across Southwestern Indiana."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Ministries" },
-        ]}
-      />
-
-      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
-        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
-          <Image
-            src="/images/stock/community-service.jpg"
-            alt="Diocesan volunteers serving the community in Southwestern Indiana."
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Ministries</p>
+            <h1 id="title">Our <em>Ministries.</em></h1>
+            <p className="deck">
+              Serving the whole person, the whole family, and the whole community across Southwestern Indiana.
+            </p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/community-service.jpg"
+              alt="Diocesan volunteers serving the community."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
         </div>
-      </div>
+      </section>
 
       <main id="main-content">
         {/* Family & Life */}

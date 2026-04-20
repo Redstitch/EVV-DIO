@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
-
 export const metadata: Metadata = {
   title: "Our Vision & Priorities",
   description:
@@ -102,27 +100,25 @@ const strategicAreas = [
 export default function OurVisionPage() {
   return (
     <>
-      <PageHero
-        label="About"
-        title="Our Vision & Priorities"
-        subtitle="Encounter. Deepen. Engage. A pastoral vision for the Diocese of Evansville."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About", href: "/about" },
-          { label: "Our Vision & Priorities" },
-        ]}
-      />
-
-      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
-        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
-          <Image
-            src="/images/articles/becoming-one-roadmap.jpg"
-            alt="The pastoral vision of the Diocese of Evansville: Encounter, Deepen, Engage."
-            fill
-            style={{ objectFit: "cover" }}
-          />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">About</p>
+            <h1 id="title">Our Vision &amp; <em>Priorities.</em></h1>
+            <p className="deck">Encounter. Deepen. Engage. A pastoral vision for the Diocese of Evansville.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/articles/becoming-one-roadmap.jpg"
+              alt="The pastoral vision: Encounter, Deepen, Engage."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+              priority
+            />
+          </figure>
         </div>
-      </div>
+      </section>
 
       <main id="main-content">
         {/* Vision Statement */}

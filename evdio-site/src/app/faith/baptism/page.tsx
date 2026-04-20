@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHero } from "@/components/PageHero";
-
 export const metadata: Metadata = {
   title: "Baptism",
   description:
@@ -12,27 +10,25 @@ export const metadata: Metadata = {
 export default function Baptism() {
   return (
     <>
-      <PageHero
-        label="Faith & Sacraments"
-        title="Baptism"
-        subtitle="The Sacrament of Baptism is the gateway to life in the Spirit and the door that gives access to the other sacraments."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Faith & Sacraments", href: "/faith" },
-          { label: "Baptism" },
-        ]}
-      />
-
-      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
-        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
-          <Image
-            src="/images/stock/blue-mass-cathedral.jpg"
-            alt="St. Benedict Cathedral during a liturgical celebration."
-            fill
-            style={{ objectFit: "cover", objectPosition: "center 30%" }}
-          />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Faith &amp; Sacraments</p>
+            <h1 id="title"><em>Baptism.</em></h1>
+            <p className="deck">The Sacrament of Baptism is the gateway to life in the Spirit and the door that gives access to the other sacraments.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/blue-mass-cathedral.jpg"
+              alt="St. Benedict Cathedral during a liturgical celebration."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
         </div>
-      </div>
+      </section>
 
       <main id="main-content">
         {/* Teaching */}

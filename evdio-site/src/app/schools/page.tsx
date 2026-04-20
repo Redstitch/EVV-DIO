@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Catholic Schools | Diocese of Evansville",
@@ -12,27 +11,27 @@ export const metadata: Metadata = {
 export default function SchoolsPage() {
   return (
     <>
-      <PageHero
-        label="Catholic Schools"
-        title="Catholic Schools"
-        subtitle="26 schools across Southwestern Indiana where faith and academic excellence come together to form the whole child — mind, body, and spirit."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Catholic Schools" },
-        ]}
-      />
-
-      <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
-        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
-          <Image
-            src="/images/stock/schools-mass-bishop.jpg"
-            alt="Catholic school students at Mass with Bishop Siegel."
-            fill
-            style={{ objectFit: "cover", objectPosition: "center 30%" }}
-            priority
-          />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Catholic Schools</p>
+            <h1 id="title">Catholic <em>Schools.</em></h1>
+            <p className="deck">
+              26 schools across Southwestern Indiana where faith and academic excellence come together to form the whole child — mind, body, and spirit.
+            </p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/schools-mass-bishop.jpg"
+              alt="Catholic school students at Mass with Bishop Siegel."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
         </div>
-      </div>
+      </section>
 
       <main id="main-content">
         {/* Stats */}
