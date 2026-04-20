@@ -6,9 +6,9 @@ export function Footer() {
       {/* Subscribe Section */}
       <div className="subscribe-section">
         <div className="copy">
-          <p className="eyebrow">The Message &middot; Subscribe</p>
+          <p className="eyebrow"><span className="message-masthead"><span className="the">The </span><span className="name">Message</span></span> &middot; Subscribe</p>
           <h3>
-            Every week in <em>The Message.</em>
+            Every week in <em><span className="message-masthead"><span className="the">The </span><span className="name">Message.</span></span></em>
           </h3>
           <p>
             Diocesan news, features, and reflections — delivered to your mailbox

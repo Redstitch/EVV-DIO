@@ -113,7 +113,7 @@ export default function Home() {
       <section className="stories-section" aria-labelledby="stories-title">
         <div className="stories-head">
           <div>
-            <p className="kicker">From The Message</p>
+            <p className="kicker">From <span className="message-masthead"><span className="the">The </span><span className="name">Message</span></span></p>
             <h2 id="stories-title">
               News from the <em>diocese.</em>
             </h2>

@@ -94,6 +94,24 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 
 /* ================================================================
+   THE MESSAGE MASTHEAD FONT
+   ================================================================ */
+.message-masthead {
+  font-family: var(--font-bodoni), 'Bodoni Moda', 'Didot', 'Georgia', serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+.message-masthead .the {
+  font-style: italic;
+  font-weight: 400;
+}
+.message-masthead .name {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ================================================================
    CONTAINERS
    ================================================================ */
 .wrap { max-width: 1360px; margin: 0 auto; padding: 0 40px; }

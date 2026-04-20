@@ -98,7 +98,14 @@ export function Header() {
                 onMouseLeave={handleMegaLeave}
               >
                 <Link href={item.href}>
-                  {item.label}
+                  {item.key === "message" ? (
+                    <span className="message-masthead">
+                      <span className="the">The </span>
+                      <span className="name">Message</span>
+                    </span>
+                  ) : (
+                    item.label
+                  )}
                   {item.children && (
                     <svg className="chevron" viewBox="0 0 12 12">
                       <polyline points="2 4 6 8 10 4" />

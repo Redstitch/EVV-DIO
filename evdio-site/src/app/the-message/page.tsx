@@ -12,15 +12,22 @@ export const metadata: Metadata = {
 export default function TheMessagePage() {
   return (
     <>
-      <PageHero
-        label="The Message"
-        title="Catholic News & Stories"
-        subtitle="Serving Southwestern Indiana with faith-based journalism since 1970."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "The Message" },
-        ]}
-      />
+      <section className="page-hero">
+        <div className="page-hero-inner">
+          <nav className="crumbs" aria-label="Breadcrumb">
+            <span><Link href="/">Home</Link></span>
+            <span className="sep" aria-hidden="true">/</span>
+            <span><b>The Message</b></span>
+          </nav>
+          <h1 className="message-masthead" style={{ fontSize: "clamp(48px, 6vw, 88px)", lineHeight: 1.05, marginBottom: 16 }}>
+            <span className="the">The </span>
+            <span className="name">Message</span>
+          </h1>
+          <p className="subtitle">
+            Serving Southwestern Indiana with faith-based journalism since 1970.
+          </p>
+        </div>
+      </section>
 
       <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
         <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 480 }}>
