@@ -1203,6 +1203,72 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 
 /* ================================================================
+   COMPATIBILITY — fix old Tailwind-styled interior sections
+   Makes bg-white cards, bg-cream sections, etc. match curves design
+   ================================================================ */
+
+/* Old section-padding sections: proper curves padding */
+.section-padding {
+  padding: 80px 40px;
+}
+.section-padding > div:first-child {
+  max-width: 1360px; margin: 0 auto;
+}
+
+/* Fix bg-white cards on bg-cream — use curves card styling */
+.bg-cream .bg-white,
+.bg-warm-white .bg-white {
+  background: var(--cream-xlt) !important;
+  border-color: var(--line) !important;
+  border-radius: 20px !important;
+}
+
+/* Fix white cards with shadow to use curves style */
+[class*="shadow-"] {
+  box-shadow: none !important;
+  border: 1px solid var(--line) !important;
+}
+
+/* Fix section-label (used in old interior sections) */
+.section-label {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--brick); font-weight: 600; margin-bottom: 10px;
+}
+
+/* Fix section-title (serif heading used in old sections) */
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400; color: var(--navy);
+  line-height: 1.1; margin-bottom: 18px;
+}
+
+/* Fix old button variants */
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 30px;
+  font-family: var(--sans); font-size: 15px; font-weight: 500;
+  background: transparent; color: var(--navy);
+  border: 1.5px solid var(--navy);
+  border-radius: 999px; text-decoration: none;
+  transition: background .25s ease, color .25s ease;
+}
+.btn-secondary:hover { background: var(--navy); color: var(--cream); }
+
+/* Old font-heading class → use serif */
+.font-heading { font-family: var(--serif) !important; }
+
+/* Fix bg-cream sections to use proper curves cream */
+.bg-cream { background: var(--cream-lt) !important; }
+.bg-warm-white { background: var(--cream-xlt) !important; }
+
+/* Fix rounded cards inside section-padding */
+.section-padding .rounded-2xl,
+.section-padding .rounded-xl {
+  border-radius: 20px !important;
+}
+
+/* ================================================================
    COMPATIBILITY — section primitives used by interior pages
    Maps old design system class names to curves equivalents
    ================================================================ */

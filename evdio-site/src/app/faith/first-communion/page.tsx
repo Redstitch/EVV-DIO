@@ -20,11 +20,11 @@ export default function FirstCommunion() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/cathedral-interior.jpg"
-              alt="St. Benedict Cathedral, Evansville."
+              src="/images/stock/confirmation-stmary.jpg"
+              alt="Young Catholics celebrating a sacrament at St. Mary Parish, Ireland, Indiana."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
               priority
             />
           </figure>
@@ -32,146 +32,117 @@ export default function FirstCommunion() {
       </section>
 
       <main id="main-content">
-        {/* Teaching */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[960px] mx-auto">
-            <div className="text-center mb-14">
-              <div className="section-label">The Sacrament of the Eucharist</div>
-              <h2 className="section-title">The Source and Summit of Our Faith</h2>
-              <p className="text-base text-text-medium leading-relaxed max-w-[680px] mx-auto">
-                The Eucharist is the most important sacrament of the Catholic Church. In the breaking of bread, we truly receive the Body and Blood of Jesus Christ. First Holy Communion is a milestone in a child&rsquo;s faith journey, marking the beginning of a lifelong relationship with Christ in the Eucharist.
-              </p>
-            </div>
-
-            <div className="bg-cream rounded-2xl p-8 border border-border">
-              <p className="font-heading text-xl italic text-navy text-center leading-relaxed">
-                &ldquo;I am the living bread that came down from heaven; whoever eats this bread will live forever; and the bread that I will give is my flesh for the life of the world.&rdquo;
-              </p>
-              <p className="text-center text-sm text-text-light mt-3">&mdash; John 6:51</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Preparation */}
-        <section className="section-padding bg-cream">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div>
-                <div className="section-label text-left">Preparation</div>
-                <h2 className="section-title text-left">Preparing Your Child</h2>
-                <p className="text-base text-text-medium leading-relaxed mb-6">
-                  In the Diocese of Evansville, children typically receive First Holy Communion in second grade, around age seven or eight. Preparation usually takes place through the parish religious education program or Catholic school.
-                </p>
-                <p className="text-base text-text-medium leading-relaxed mb-6">
-                  Before receiving First Communion, a child must also celebrate the Sacrament of Reconciliation (First Confession) for the first time. This usually occurs in the weeks leading up to First Communion.
-                </p>
-                <p className="text-base text-text-medium leading-relaxed">
-                  Parents play an essential role in this preparation. Your parish will provide resources and guidance to help you talk with your child about the Eucharist and deepen your family&rsquo;s faith together.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-2xl border border-border p-8 shadow-[var(--shadow-soft)]">
-                <h3 className="font-heading text-2xl font-bold text-navy mb-6">What Your Child Will Learn</h3>
-                <div className="space-y-4">
-                  <LearnItem
-                    title="The Real Presence"
-                    desc="That the bread and wine truly become the Body and Blood of Jesus Christ."
-                  />
-                  <LearnItem
-                    title="The Mass"
-                    desc="The meaning and flow of the Mass, and how to participate reverently."
-                  />
-                  <LearnItem
-                    title="Reconciliation"
-                    desc="How to examine their conscience and receive God's forgiveness in Confession."
-                  />
-                  <LearnItem
-                    title="Living the Eucharist"
-                    desc="How receiving Communion connects them to Jesus and to the community of believers."
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Requirements & Timeline */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[960px] mx-auto">
-            <div className="text-center mb-14">
-              <div className="section-label">Requirements</div>
-              <h2 className="section-title">What You Need to Know</h2>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <InfoCard
-                title="Age & Grade"
-                desc="Children are typically prepared in second grade. Older children or adults who have not received First Communion should contact their parish."
-              />
-              <InfoCard
-                title="Baptism Required"
-                desc="A child must be baptized before receiving First Communion. If your child has not been baptized, contact your parish about preparation."
-              />
-              <InfoCard
-                title="First Confession"
-                desc="Children must celebrate the Sacrament of Reconciliation before receiving First Communion, typically in the weeks prior."
-              />
-              <InfoCard
-                title="Regular Mass Attendance"
-                desc="Families are expected to attend Sunday Mass regularly as part of the preparation process and ongoing faith life."
-              />
-              <InfoCard
-                title="Preparation Program"
-                desc="Complete the parish's required sacramental preparation program, whether through religious education or Catholic school."
-              />
-              <InfoCard
-                title="Parish Registration"
-                desc="Families should be registered members of a parish in the Diocese of Evansville."
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* For Parents */}
-        <section className="section-padding bg-cream">
-          <div className="max-w-[800px] mx-auto text-center">
-            <div className="section-label">For Parents</div>
-            <h2 className="section-title">Walking with Your Child</h2>
-            <p className="text-base text-text-medium leading-relaxed mb-8 max-w-[600px] mx-auto">
-              First Communion is a grace-filled time for the whole family. Here are some ways to make this season meaningful at home: pray together before meals, read the Sunday Gospel as a family, attend Mass together each week, and talk with your child about what it means to receive Jesus in the Eucharist.
+        {/* ─── INTRO ─── */}
+        <section className="intro">
+          <div className="inner">
+            <p className="pull">
+              The most important sacrament of the Catholic Church &mdash; in the breaking of bread, we truly receive the Body and Blood of <em>Jesus Christ.</em>
             </p>
-            <div className="flex gap-4 flex-wrap justify-center">
-              <Link href="/parishes" className="btn btn-primary">
-                Find Your Parish
-              </Link>
-              <Link href="/faith/prayer-worship" className="btn btn-secondary">
-                Prayer Resources
-              </Link>
+            <div className="body">
+              <p>
+                First Holy Communion is a milestone in a child&rsquo;s faith journey, marking the beginning of a lifelong relationship with Christ in the Eucharist. In the Diocese of Evansville, children typically receive First Holy Communion in second grade, around age seven or eight.
+              </p>
+              <p>
+                Preparation usually takes place through the parish religious education program or Catholic school. Before receiving First Communion, a child must also celebrate the Sacrament of Reconciliation (First Confession) for the first time, usually in the weeks leading up to First Communion.
+              </p>
+              <p>
+                Parents play an essential role in this preparation. Your parish will provide resources and guidance to help you talk with your child about the Eucharist and deepen your family&rsquo;s faith together. First Communion is a grace-filled time for the whole family.
+              </p>
             </div>
           </div>
+        </section>
+
+        {/* ─── WHAT YOUR CHILD WILL LEARN ─── */}
+        <section className="page-content">
+          <span className="section-tag section-tag-left">Preparation</span>
+          <h2 className="section-h2 section-h2-left">What Your Child Will Learn</h2>
+
+          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+            <div className="interior-card">
+              <h3>The Real Presence</h3>
+              <p>That the bread and wine truly become the Body and Blood of Jesus Christ.</p>
+            </div>
+            <div className="interior-card">
+              <h3>The Mass</h3>
+              <p>The meaning and flow of the Mass, and how to participate reverently.</p>
+            </div>
+            <div className="interior-card">
+              <h3>Reconciliation</h3>
+              <p>How to examine their conscience and receive God&rsquo;s forgiveness in Confession.</p>
+            </div>
+            <div className="interior-card">
+              <h3>Living the Eucharist</h3>
+              <p>How receiving Communion connects them to Jesus and to the community of believers.</p>
+            </div>
+          </div>
+        </section>
+
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
+
+        {/* ─── REQUIREMENTS ─── */}
+        <section className="page-content">
+          <div className="section-head">
+            <span className="section-tag">Requirements</span>
+            <h2 className="section-h2">What You Need to Know</h2>
+          </div>
+
+          <div className="interior-grid interior-grid-3">
+            <div className="interior-card">
+              <h3>Age &amp; Grade</h3>
+              <p>Children are typically prepared in second grade. Older children or adults who have not received First Communion should contact their parish.</p>
+            </div>
+            <div className="interior-card">
+              <h3>Baptism Required</h3>
+              <p>A child must be baptized before receiving First Communion. If your child has not been baptized, contact your parish about preparation.</p>
+            </div>
+            <div className="interior-card">
+              <h3>First Confession</h3>
+              <p>Children must celebrate the Sacrament of Reconciliation before receiving First Communion, typically in the weeks prior.</p>
+            </div>
+            <div className="interior-card">
+              <h3>Regular Mass Attendance</h3>
+              <p>Families are expected to attend Sunday Mass regularly as part of the preparation process and ongoing faith life.</p>
+            </div>
+            <div className="interior-card">
+              <h3>Preparation Program</h3>
+              <p>Complete the parish&rsquo;s required sacramental preparation program, whether through religious education or Catholic school.</p>
+            </div>
+            <div className="interior-card">
+              <h3>Parish Registration</h3>
+              <p>Families should be registered members of a parish in the Diocese of Evansville.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── SCRIPTURE ─── */}
+        <section className="scripture" aria-label="Scripture">
+          <blockquote>
+            &ldquo;I am the living bread that came down from heaven; whoever eats this bread will live forever; and the bread that I will give is my flesh for the life of the <em>world.</em>&rdquo;
+            <cite>John 6:51</cite>
+          </blockquote>
+        </section>
+
+        {/* ─── CTA STRIP ─── */}
+        <section className="cta-strip">
+          <div className="flourish" aria-hidden="true" style={{ padding: "0 0 32px" }}>
+            <span className="line" />
+            <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+              <rect x="6" y="0" width="2" height="18" />
+              <rect x="2" y="5" width="10" height="2" />
+            </svg>
+            <span className="line" />
+          </div>
+          <p className="kicker">Next</p>
+          <h2>
+            Find a parish &mdash; <em>walk with your child.</em>
+          </h2>
+          <Link href="/parishes" className="btn btn-primary">
+            Find your parish <span className="arrow" aria-hidden="true">&rarr;</span>
+          </Link>
         </section>
       </main>
     </>
-  );
-}
-
-function LearnItem({ title, desc }: { title: string; desc: string }) {
-  return (
-    <div className="flex items-start gap-3">
-      <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0" />
-      <div>
-        <div className="font-semibold text-navy text-[15px] mb-0.5">{title}</div>
-        <div className="text-sm text-text-medium leading-relaxed">{desc}</div>
-      </div>
-    </div>
-  );
-}
-
-function InfoCard({ title, desc }: { title: string; desc: string }) {
-  return (
-    <div className="bg-white rounded-xl p-6 border border-border shadow-[var(--shadow-soft)]">
-      <h3 className="font-heading text-lg font-bold text-navy mb-2">{title}</h3>
-      <p className="text-sm text-text-medium leading-relaxed">{desc}</p>
-    </div>
   );
 }
