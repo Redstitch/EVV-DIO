@@ -183,7 +183,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 /* Desktop nav */
 .main-nav { display: flex; gap: 28px; }
-.nav-item-wrap { position: relative; height: 100%; display: flex; align-items: center; }
+.nav-item-wrap { position: static; height: 100%; display: flex; align-items: center; }
 .nav-item-wrap > a:not(.give-btn) {
   font-size: 13px; font-weight: 500; color: var(--cream);
   position: relative; padding: 6px 0;
@@ -204,21 +204,25 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 /* Mega menu */
 .mega-menu {
-  position: absolute; top: 100%; left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background: var(--cream-xlt); border-radius: 16px;
+  position: absolute; top: 100%; left: 0; right: 0;
+  transform: translateY(10px);
+  width: 100%;
+  background: var(--cream-xlt); border-radius: 0 0 16px 16px;
   box-shadow: 0 25px 70px rgba(10,34,64,0.18), 0 1px 3px rgba(0,0,0,0.06);
-  border: 1px solid var(--line);
+  border: none; border-top: 1px solid rgba(238,218,179,0.15);
   opacity: 0; visibility: hidden; pointer-events: none;
   transition: opacity .3s, transform .3s ease, visibility .3s;
-  z-index: 200; padding: 28px 32px; min-width: 540px;
+  z-index: 200; padding: 40px;
 }
-.mega-menu.wide { min-width: 720px; }
-.mega-menu.extra-wide { min-width: 800px; }
-.mega-menu.narrow { min-width: 320px; }
+.mega-menu > .grid {
+  max-width: 1360px; margin: 0 auto;
+}
+.mega-menu.wide,
+.mega-menu.extra-wide,
+.mega-menu.narrow { /* all full-width now */ }
 .nav-item-wrap.mega-open .mega-menu {
   opacity: 1; visibility: visible; pointer-events: all;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 .mega-menu::before { content: ''; position: absolute; top: -10px; left: 0; right: 0; height: 10px; }
 
@@ -268,7 +272,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   font-style: italic;
 }
 
-.nav-item-wrap.align-right .mega-menu { left: auto; right: 0; transform: translateY(10px); }
+.nav-item-wrap.align-right .mega-menu { /* full-width, same as default */ }
 .nav-item-wrap.align-right.mega-open .mega-menu { transform: translateY(0); }
 
 /* Header actions */
