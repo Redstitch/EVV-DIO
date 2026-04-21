@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHero } from "@/components/PageHero";
-
 export const metadata: Metadata = {
   title: "Our Bishop — Bishop Joseph M. Siegel",
   description:
@@ -12,16 +10,25 @@ export const metadata: Metadata = {
 export default function OurBishopPage() {
   return (
     <>
-      <PageHero
-        label="About"
-        title="Our Bishop"
-        subtitle="Bishop Joseph M. Siegel, sixth Bishop of the Diocese of Evansville"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About", href: "/about" },
-          { label: "Our Bishop" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">About</p>
+            <h1 id="title">Our <em>Bishop.</em></h1>
+            <p className="deck">Bishop Joseph M. Siegel, sixth Bishop of the Diocese of Evansville</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/bishop/bishop-siegel.jpg"
+              alt="Bishop Joseph M. Siegel"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center top" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Bishop Portrait & Bio */}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Teaching & Staff Careers | Diocese of Evansville",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function CareersPage() {
   return (
     <>
-      <PageHero
-        label="Catholic Schools"
-        title="Teaching & Staff Careers"
-        subtitle="Teaching in a Catholic school is more than a career. It is a vocation. Join a community of educators who are shaping minds, forming hearts, and building the future of the Church."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Catholic Schools", href: "/schools" },
-          { label: "Teaching & Staff Careers" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">CATHOLIC SCHOOLS</p>
+            <h1 id="title">Teaching <em>Careers.</em></h1>
+            <p className="deck">Teaching in a Catholic school is more than a career. It is a vocation. Join a community of educators who are shaping minds, forming hearts, and building the future of the Church.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/schools-mass-bishop.jpg"
+              alt="Catholic school students at Mass with the Bishop"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Why Teach */}

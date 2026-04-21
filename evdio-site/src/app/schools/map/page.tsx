@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Schools Map",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function SchoolsMap() {
   return (
     <>
-      <PageHero
-        label="Catholic Schools"
-        title="Schools Map"
-        subtitle="Find all 26 Catholic schools across the 12 counties of the Diocese of Evansville."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Catholic Schools", href: "/schools" },
-          { label: "Schools Map" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">CATHOLIC SCHOOLS</p>
+            <h1 id="title">Schools <em>Map.</em></h1>
+            <p className="deck">Find all 26 Catholic schools across the 12 counties of the Diocese of Evansville.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/schools-mass-bishop.jpg"
+              alt="Catholic school students at Mass with the Bishop"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Map Placeholder */}

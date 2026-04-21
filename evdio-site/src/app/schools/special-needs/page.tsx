@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Programs for Children with Special Needs",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function SpecialNeeds() {
   return (
     <>
-      <PageHero
-        label="Catholic Schools"
-        title="Programs for Children with Special Needs"
-        subtitle="Every child is a gift from God. Catholic schools in the Diocese of Evansville are committed to welcoming and supporting students of all abilities."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Catholic Schools", href: "/schools" },
-          { label: "Special Needs Programs" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">CATHOLIC SCHOOLS</p>
+            <h1 id="title">Special <em>Needs.</em></h1>
+            <p className="deck">Every child is a gift from God. Catholic schools in the Diocese of Evansville are committed to welcoming and supporting students of all abilities.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/schools-mass-bishop.jpg"
+              alt="Catholic school students at Mass with the Bishop"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Philosophy */}

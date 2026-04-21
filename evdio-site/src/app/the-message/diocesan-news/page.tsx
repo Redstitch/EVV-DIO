@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Diocesan News",
@@ -22,16 +22,25 @@ const articles = [
 export default function DiocesanNewsPage() {
   return (
     <>
-      <PageHero
-        label="The Message"
-        title="Diocesan News"
-        subtitle="The latest updates from the Diocese of Evansville."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "The Message", href: "/the-message" },
-          { label: "Diocesan News" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">THE MESSAGE</p>
+            <h1 id="title">Diocesan <em>News.</em></h1>
+            <p className="deck">The latest updates from the Diocese of Evansville.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/presbyterate-group.jpg"
+              alt="Presbyterate gathering of the Diocese of Evansville"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 45%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         <section className="section-padding bg-cream">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Careers",
@@ -68,16 +68,25 @@ const openPositions = [
 export default function CareersPage() {
   return (
     <>
-      <PageHero
-        label="About"
-        title="Careers"
-        subtitle="Join our mission to serve 79,500 Catholics across Southwestern Indiana."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About", href: "/about" },
-          { label: "Careers" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">About</p>
+            <h1 id="title"><em>Careers.</em></h1>
+            <p className="deck">Join our mission to serve 79,500 Catholics across Southwestern Indiana.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/community-service.jpg"
+              alt="Community service"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Intro */}

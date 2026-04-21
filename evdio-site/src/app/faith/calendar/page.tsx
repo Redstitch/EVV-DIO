@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Church Calendar",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function Calendar() {
   return (
     <>
-      <PageHero
-        label="Faith & Sacraments"
-        title="Church Calendar"
-        subtitle="The liturgical calendar guides the Church through the mysteries of Christ's life each year, from Advent through Ordinary Time."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Faith & Sacraments", href: "/faith" },
-          { label: "Church Calendar" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Faith &amp; Sacraments</p>
+            <h1 id="title">Church <em>Calendar.</em></h1>
+            <p className="deck">The liturgical calendar guides the Church through the mysteries of Christ&#8217;s life each year, from Advent through Ordinary Time.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/evigil-1.jpg"
+              alt="Easter Vigil in the Diocese of Evansville."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Liturgical Seasons */}

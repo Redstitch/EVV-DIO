@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Healing After Abortion - Project Rachel",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function ProjectRachelPage() {
   return (
     <>
-      <PageHero
-        label="Ministries"
-        title="Healing After Abortion"
-        subtitle="Confidential support and God's mercy for all who have been affected by abortion."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Ministries", href: "/ministries" },
-          { label: "Healing After Abortion" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Ministries</p>
+            <h1 id="title">Project <em>Rachel.</em></h1>
+            <p className="deck">Confidential support and God&rsquo;s mercy for all who have been affected by abortion.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/community-service.jpg"
+              alt="Community service"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         <section className="section-padding bg-cream">

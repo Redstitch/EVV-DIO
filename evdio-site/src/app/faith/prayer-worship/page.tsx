@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Prayer & Worship Resources",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function PrayerWorship() {
   return (
     <>
-      <PageHero
-        label="Faith & Sacraments"
-        title="Prayer & Worship Resources"
-        subtitle="Prayer is the foundation of the Christian life. Whether you are new to prayer or looking to deepen an existing practice, these resources are here to help."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Faith & Sacraments", href: "/faith" },
-          { label: "Prayer & Worship Resources" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Faith &amp; Sacraments</p>
+            <h1 id="title">Prayer &amp; <em>Worship.</em></h1>
+            <p className="deck">Prayer is the foundation of the Christian life. Whether you are new to prayer or looking to deepen an existing practice, these resources are here to help.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/blue-mass-cathedral.jpg"
+              alt="Liturgical celebration at St. Benedict Cathedral."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Daily Prayers */}

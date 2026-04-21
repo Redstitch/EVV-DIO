@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Retreats",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function RetreatsPage() {
   return (
     <>
-      <PageHero
-        label="Events"
-        title="Retreats"
-        subtitle="Step away from the everyday and encounter God in a deeper way."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Events", href: "/events" },
-          { label: "Retreats" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">EVENTS</p>
+            <h1 id="title"><em>Retreats.</em></h1>
+            <p className="deck">Step away from the everyday and encounter God in a deeper way.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/cathedral-interior.jpg"
+              alt="Cathedral interior"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Sarto Retreat Center */}

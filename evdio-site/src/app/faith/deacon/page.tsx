@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Becoming a Deacon",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function Deacon() {
   return (
     <>
-      <PageHero
-        label="Faith & Sacraments"
-        title="Becoming a Deacon"
-        subtitle="Permanent deacons are ordained ministers who serve the Church through word, liturgy, and charity. They bring the light of the Gospel into their families, workplaces, and communities."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Faith & Sacraments", href: "/faith" },
-          { label: "Becoming a Deacon" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Faith &amp; Sacraments</p>
+            <h1 id="title">Becoming a <em>Deacon.</em></h1>
+            <p className="deck">Permanent deacons are ordained ministers who serve the Church through word, liturgy, and charity. They bring the light of the Gospel into their families, workplaces, and communities.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/presbyterate-group.jpg"
+              alt="The clergy of the Diocese of Evansville."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 45%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* What is a Deacon */}

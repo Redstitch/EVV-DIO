@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Planned & Legacy Giving | Diocese of Evansville",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function PlannedGivingPage() {
   return (
     <>
-      <PageHero
-        label="Give"
-        title="Planned & Legacy Giving"
-        subtitle="A gift that outlasts a lifetime. Build the future of the Church in Southwestern Indiana."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Give", href: "/give" },
-          { label: "Planned & Legacy Giving" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">STEWARDSHIP</p>
+            <h1 id="title">Planned <em>Giving.</em></h1>
+            <p className="deck">A gift that outlasts a lifetime. Build the future of the Church in Southwestern Indiana.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/catholics-for-habitat.jpg"
+              alt="Catholics for Habitat community service"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Intro */}

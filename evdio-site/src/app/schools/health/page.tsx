@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Student Health & Wellness | Diocese of Evansville",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function HealthPage() {
   return (
     <>
-      <PageHero
-        label="Catholic Schools"
-        title="Student Health & Wellness"
-        subtitle="The well-being of every student — body, mind, and spirit — is at the heart of Catholic education. Our schools create safe, healthy environments where children can flourish."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Catholic Schools", href: "/schools" },
-          { label: "Student Health & Wellness" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">CATHOLIC SCHOOLS</p>
+            <h1 id="title">Student <em>Health.</em></h1>
+            <p className="deck">The well-being of every student — body, mind, and spirit — is at the heart of Catholic education. Our schools create safe, healthy environments where children can flourish.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/schools-mass-bishop.jpg"
+              alt="Catholic school students at Mass with the Bishop"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Overview */}

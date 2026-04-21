@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "National & World News",
@@ -20,16 +20,25 @@ const articles = [
 export default function NationalNewsPage() {
   return (
     <>
-      <PageHero
-        label="The Message"
-        title="National & World News"
-        subtitle="Catholic news from across the nation and around the world."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "The Message", href: "/the-message" },
-          { label: "National & World News" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">THE MESSAGE</p>
+            <h1 id="title">National <em>News.</em></h1>
+            <p className="deck">Catholic news from across the nation and around the world.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/cathedral-interior.jpg"
+              alt="Interior of the cathedral"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         <section className="section-padding bg-cream">

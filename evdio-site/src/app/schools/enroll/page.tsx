@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Inquire About Enrollment",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function Enroll() {
   return (
     <>
-      <PageHero
-        label="Catholic Schools"
-        title="Inquire About Enrollment"
-        subtitle="Take the first step toward a Catholic education. Enrollment is open year-round at most schools, with primary registration in the spring for the following academic year."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Catholic Schools", href: "/schools" },
-          { label: "Inquire About Enrollment" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">CATHOLIC SCHOOLS</p>
+            <h1 id="title"><em>Enroll.</em></h1>
+            <p className="deck">Take the first step toward a Catholic education. Enrollment is open year-round at most schools, with primary registration in the spring for the following academic year.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/schools-mass-bishop.jpg"
+              alt="Catholic school students at Mass with the Bishop"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Important: Enrollment is school-level */}

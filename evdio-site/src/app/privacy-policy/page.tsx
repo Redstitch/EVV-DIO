@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Diocese of Evansville",
@@ -10,15 +10,25 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <PageHero
-        label="Legal"
-        title="Privacy Policy"
-        subtitle="How we collect, use, and protect your personal information."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Privacy Policy" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Legal</p>
+            <h1 id="title">Privacy <em>Policy.</em></h1>
+            <p className="deck">How we collect, use, and protect your personal information.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/branding/coat-of-arms.jpg"
+              alt="Diocese of Evansville coat of arms"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         <section className="section-padding bg-warm-white">

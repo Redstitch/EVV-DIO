@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Report Abuse",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function ReportAbusePage() {
   return (
     <>
-      <PageHero
-        label="About"
-        title="Report Abuse"
-        subtitle="We take every report seriously. If you or someone you know has been harmed, please reach out."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About", href: "/about" },
-          { label: "Report Abuse" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Safety</p>
+            <h1 id="title">Report <em>Abuse.</em></h1>
+            <p className="deck">We take every report seriously. If you or someone you know has been harmed, please reach out.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/cathedral-interior.jpg"
+              alt="Cathedral interior"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Emergency Banner */}

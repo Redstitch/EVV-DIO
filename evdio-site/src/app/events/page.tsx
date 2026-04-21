@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Events | Diocese of Evansville",
@@ -22,15 +22,25 @@ const upcomingEvents = [
 export default function EventsPage() {
   return (
     <>
-      <PageHero
-        label="Events & Gatherings"
-        title="Events Calendar"
-        subtitle="Worship, fellowship, and community across the Diocese of Evansville."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Events" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">EVENTS & GATHERINGS</p>
+            <h1 id="title">Events <em>Calendar.</em></h1>
+            <p className="deck">Worship, fellowship, and community across the Diocese of Evansville.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/community-service.jpg"
+              alt="Community gathering"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Upcoming Events */}

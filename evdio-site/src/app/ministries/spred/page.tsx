@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Special Needs Religious Education (SPRED) | Diocese of Evansville",
@@ -11,17 +11,25 @@ export const metadata: Metadata = {
 export default function SpredPage() {
   return (
     <>
-      <PageHero
-        label="Ministries"
-        title="Special Needs Religious Education"
-        subtitle="Every person is created in God's image and deserves to know His love."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Ministries", href: "/ministries" },
-          { label: "Disability & Inclusion", href: "/ministries/disability" },
-          { label: "Special Needs Religious Ed" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Ministries</p>
+            <h1 id="title"><em>SPRED.</em></h1>
+            <p className="deck">Every person is created in God&rsquo;s image and deserves to know His love.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/community-service.jpg"
+              alt="Community service"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* About SPRED */}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Respect for Life",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function RespectLifePage() {
   return (
     <>
-      <PageHero
-        label="Ministries"
-        title="Respect for Life"
-        subtitle="Defending the dignity of every human life from conception to natural death."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Ministries", href: "/ministries" },
-          { label: "Respect for Life" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Ministries</p>
+            <h1 id="title">Respect for <em>Life.</em></h1>
+            <p className="deck">Defending the dignity of every human life from conception to natural death.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/community-service.jpg"
+              alt="Community service"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         <section className="section-padding bg-cream">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Tuition Assistance",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function Tuition() {
   return (
     <>
-      <PageHero
-        label="Catholic Schools"
-        title="Tuition Assistance"
-        subtitle="Catholic education is an investment in your child's future. We are committed to making it accessible to every family, regardless of financial circumstances."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Catholic Schools", href: "/schools" },
-          { label: "Tuition Assistance" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">CATHOLIC SCHOOLS</p>
+            <h1 id="title">Tuition &amp; <em>Affordability.</em></h1>
+            <p className="deck">Catholic education is an investment in your child's future. We are committed to making it accessible to every family, regardless of financial circumstances.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/schools-mass-bishop.jpg"
+              alt="Catholic school students at Mass with the Bishop"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Overview */}

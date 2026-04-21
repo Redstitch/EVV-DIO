@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Scholarships & Financial Aid | Diocese of Evansville",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function ScholarshipsPage() {
   return (
     <>
-      <PageHero
-        label="Ministries"
-        title="Scholarships & Financial Aid"
-        subtitle="Making Catholic education accessible to every family in the diocese."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Ministries", href: "/ministries" },
-          { label: "Scholarships & Financial Aid" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Ministries</p>
+            <h1 id="title"><em>Scholarships.</em></h1>
+            <p className="deck">Making Catholic education accessible to every family in the diocese.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/schools-mass-bishop.jpg"
+              alt="Bishop celebrating Mass with school students"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Commitment */}

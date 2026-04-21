@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Anointing of the Sick",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function Anointing() {
   return (
     <>
-      <PageHero
-        label="Faith & Sacraments"
-        title="Anointing of the Sick"
-        subtitle="Through the Anointing of the Sick, the Church commends those who are ill to the suffering and glorified Lord, asking that He may lighten their suffering and save them."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Faith & Sacraments", href: "/faith" },
-          { label: "Anointing of the Sick" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Faith &amp; Sacraments</p>
+            <h1 id="title">Anointing of the <em>Sick.</em></h1>
+            <p className="deck">Through the Anointing of the Sick, the Church commends those who are ill to the suffering and glorified Lord, asking that He may lighten their suffering and save them.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/holy-week-good-friday.jpg"
+              alt="Holy Week observance in the Diocese of Evansville."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Teaching */}

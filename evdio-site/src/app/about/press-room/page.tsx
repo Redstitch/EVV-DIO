@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Media Inquiries",
@@ -44,16 +44,25 @@ const pressReleases = [
 export default function PressRoomPage() {
   return (
     <>
-      <PageHero
-        label="About"
-        title="Media Inquiries"
-        subtitle="Media resources, press releases, and contact information for journalists."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About", href: "/about" },
-          { label: "Media Inquiries" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">About</p>
+            <h1 id="title">Press <em>Room.</em></h1>
+            <p className="deck">Media resources, press releases, and contact information for journalists.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/branding/coat-of-arms.jpg"
+              alt="Diocesan coat of arms"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Media Contact */}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Catholic Resources & Links",
@@ -159,16 +159,25 @@ const resourceGroups = [
 export default function ResourcesPage() {
   return (
     <>
-      <PageHero
-        label="About"
-        title="Catholic Resources & Links"
-        subtitle="Helpful links to Catholic organizations, educational resources, and spiritual tools."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About", href: "/about" },
-          { label: "Catholic Resources" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">About</p>
+            <h1 id="title">Catholic <em>Resources.</em></h1>
+            <p className="deck">Helpful links to Catholic organizations, educational resources, and spiritual tools.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/cathedral-interior.jpg"
+              alt="Cathedral interior"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {resourceGroups.map((group, i) => (

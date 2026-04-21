@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Watch Mass Online",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function WatchMassPage() {
   return (
     <>
-      <PageHero
-        label="Parishes & Mass"
-        title="Watch Mass Online"
-        subtitle="Join us in worship from wherever you are. Livestreamed Masses from parishes across the diocese."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Parishes & Mass", href: "/parishes" },
-          { label: "Watch Mass Online" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">PARISHES & MASS</p>
+            <h1 id="title">Watch Mass <em>Online.</em></h1>
+            <p className="deck">Join us in worship from wherever you are. Livestreamed Masses from parishes across the diocese.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/blue-mass-cathedral.jpg"
+              alt="Cathedral Mass celebration"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         <section className="section-padding bg-cream">

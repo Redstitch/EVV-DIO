@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Disability & Inclusion Ministry | Diocese of Evansville",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function DisabilityPage() {
   return (
     <>
-      <PageHero
-        label="Ministries"
-        title="Disability & Inclusion"
-        subtitle="Every person, regardless of ability, belongs at the table of the Lord."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Ministries", href: "/ministries" },
-          { label: "Disability & Inclusion" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Ministries</p>
+            <h1 id="title">Disability &amp; <em>Inclusion.</em></h1>
+            <p className="deck">Every person, regardless of ability, belongs at the table of the Lord.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/community-service.jpg"
+              alt="Community service"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Mission */}

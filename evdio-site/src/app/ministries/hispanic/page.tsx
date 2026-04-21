@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Ministerio Hispano | Diocese of Evansville",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function HispanicMinistryPage() {
   return (
     <>
-      <PageHero
-        label="Ministerios"
-        title="Ministerio Hispano"
-        subtitle="Bienvenidos. Welcoming and serving the Hispanic Catholic community in Southwestern Indiana."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Ministries", href: "/ministries" },
-          { label: "Ministerio Hispano" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Ministries</p>
+            <h1 id="title">Hispanic <em>Ministry.</em></h1>
+            <p className="deck">Bienvenidos. Welcoming and serving the Hispanic Catholic community in Southwestern Indiana.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/community-service.jpg"
+              alt="Community service"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Mission */}

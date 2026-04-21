@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Music Resources for Parishes",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function Music() {
   return (
     <>
-      <PageHero
-        label="Faith & Sacraments"
-        title="Music Resources for Parishes"
-        subtitle="Sacred music is an integral part of Catholic worship. These resources support parish musicians in their ministry of leading the faithful in song."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Faith & Sacraments", href: "/faith" },
-          { label: "Music Resources" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Faith &amp; Sacraments</p>
+            <h1 id="title">Liturgical <em>Music.</em></h1>
+            <p className="deck">Sacred music is an integral part of Catholic worship. These resources support parish musicians in their ministry of leading the faithful in song.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/cathedral-interior.jpg"
+              alt="St. Benedict Cathedral interior."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Introduction */}

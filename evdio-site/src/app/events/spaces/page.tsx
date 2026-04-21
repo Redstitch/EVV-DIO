@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Meeting Rooms & Spaces",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function SpacesPage() {
   return (
     <>
-      <PageHero
-        label="Events"
-        title="Meeting Rooms & Spaces"
-        subtitle="Reserve spaces for meetings, events, and gatherings across the diocese."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Events", href: "/events" },
-          { label: "Meeting Rooms & Spaces" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">EVENTS</p>
+            <h1 id="title">Meeting <em>Spaces.</em></h1>
+            <p className="deck">Reserve spaces for meetings, events, and gatherings across the diocese.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/cathedral-interior.jpg"
+              alt="Cathedral interior"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         <section className="section-padding bg-cream">

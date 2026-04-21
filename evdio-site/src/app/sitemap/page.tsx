@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Sitemap | Diocese of Evansville",
@@ -11,15 +11,25 @@ export const metadata: Metadata = {
 export default function SitemapPage() {
   return (
     <>
-      <PageHero
-        label="Navigation"
-        title="Sitemap"
-        subtitle="A complete directory of every page on our website."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Sitemap" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Navigation</p>
+            <h1 id="title">Site <em>Map.</em></h1>
+            <p className="deck">A complete directory of every page on our website.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/cathedral-interior.jpg"
+              alt="Cathedral interior"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         <section className="section-padding bg-warm-white">

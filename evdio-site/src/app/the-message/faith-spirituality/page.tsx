@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Faith & Spirituality",
@@ -20,16 +20,25 @@ const articles = [
 export default function FaithSpiritualityPage() {
   return (
     <>
-      <PageHero
-        label="The Message"
-        title="Faith & Spirituality"
-        subtitle="Reflections, resources, and inspiration to deepen your relationship with God."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "The Message", href: "/the-message" },
-          { label: "Faith & Spirituality" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">THE MESSAGE</p>
+            <h1 id="title">Faith &amp; <em>Spirituality.</em></h1>
+            <p className="deck">Reflections, resources, and inspiration to deepen your relationship with God.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/blue-mass-cathedral.jpg"
+              alt="Blue Mass at the cathedral"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         <section className="section-padding bg-cream">

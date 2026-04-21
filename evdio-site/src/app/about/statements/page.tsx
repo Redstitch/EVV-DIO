@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Official Statements & Decrees",
@@ -91,16 +91,25 @@ function TypeBadge({ type }: { type: string }) {
 export default function StatementsPage() {
   return (
     <>
-      <PageHero
-        label="About"
-        title="Official Statements & Decrees"
-        subtitle="Pastoral letters, official statements, and decrees from Bishop Siegel and diocesan leadership."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About", href: "/about" },
-          { label: "Statements & Decrees" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">About</p>
+            <h1 id="title">Official <em>Statements.</em></h1>
+            <p className="deck">Pastoral letters, official statements, and decrees from Bishop Siegel and diocesan leadership.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/branding/coat-of-arms.jpg"
+              alt="Diocesan coat of arms"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Featured Statement */}

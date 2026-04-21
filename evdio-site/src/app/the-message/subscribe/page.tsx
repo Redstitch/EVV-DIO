@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Subscribe to The Message",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function SubscribePage() {
   return (
     <>
-      <PageHero
-        label="The Message"
-        title="Subscribe"
-        subtitle="Stay connected with the Catholic community in Southwestern Indiana."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "The Message", href: "/the-message" },
-          { label: "Subscribe" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">THE MESSAGE</p>
+            <h1 id="title"><em>Subscribe.</em></h1>
+            <p className="deck">Stay connected with the Catholic community in Southwestern Indiana.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/presbyterate-group.jpg"
+              alt="Presbyterate gathering of the Diocese of Evansville"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 45%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         <section className="section-padding bg-cream">

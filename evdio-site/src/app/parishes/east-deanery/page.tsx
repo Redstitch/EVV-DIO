@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "East Deanery",
@@ -25,16 +25,25 @@ const parishes = [
 export default function EastDeaneryPage() {
   return (
     <>
-      <PageHero
-        label="Parishes & Mass"
-        title="East Deanery"
-        subtitle="Serving Dubois, Spencer, and Perry counties, rich in Catholic heritage and tradition."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Parishes & Mass", href: "/parishes" },
-          { label: "East Deanery" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">PARISHES & MASS</p>
+            <h1 id="title">East <em>Deanery.</em></h1>
+            <p className="deck">Serving Dubois, Spencer, and Perry counties, rich in Catholic heritage and tradition.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/cathedral-interior.jpg"
+              alt="Cathedral interior"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         <section className="section-padding bg-cream">

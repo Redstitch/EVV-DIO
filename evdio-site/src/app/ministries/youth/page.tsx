@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Youth & Young Adults",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function YouthPage() {
   return (
     <>
-      <PageHero
-        label="Ministries"
-        title="Youth & Young Adults"
-        subtitle="Encounter Christ. Build community. Discover your purpose."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Ministries", href: "/ministries" },
-          { label: "Youth & Young Adults" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Ministries</p>
+            <h1 id="title">Youth &amp; Young <em>Adults.</em></h1>
+            <p className="deck">Encounter Christ. Build community. Discover your purpose.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/confirmation-stmary.jpg"
+              alt="Confirmation at St. Mary"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         <section className="section-padding bg-cream">

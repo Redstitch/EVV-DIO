@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "First Communion",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function FirstCommunion() {
   return (
     <>
-      <PageHero
-        label="Faith & Sacraments"
-        title="First Communion"
-        subtitle="The Eucharist is the source and summit of the Christian life. First Holy Communion marks a child's first reception of the Body and Blood of Christ."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Faith & Sacraments", href: "/faith" },
-          { label: "First Communion" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Faith &amp; Sacraments</p>
+            <h1 id="title">First <em>Communion.</em></h1>
+            <p className="deck">The Eucharist is the source and summit of the Christian life. First Holy Communion marks a child&#8217;s first reception of the Body and Blood of Christ.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/cathedral-interior.jpg"
+              alt="St. Benedict Cathedral, Evansville."
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Teaching */}

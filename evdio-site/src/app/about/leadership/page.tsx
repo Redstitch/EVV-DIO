@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Diocesan Leadership",
@@ -74,16 +74,25 @@ const consultativeGroups = [
 export default function LeadershipPage() {
   return (
     <>
-      <PageHero
-        label="About"
-        title="Diocesan Leadership"
-        subtitle="The leaders and consultative bodies guiding the mission and administration of our diocese."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About", href: "/about" },
-          { label: "Leadership" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">About</p>
+            <h1 id="title">Diocesan <em>Leadership.</em></h1>
+            <p className="deck">The leaders and consultative bodies guiding the mission and administration of our diocese.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/presbyterate-group.jpg"
+              alt="Diocesan leadership"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 45%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Leadership Team */}

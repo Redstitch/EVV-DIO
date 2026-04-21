@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Prison & Jail Ministry | Diocese of Evansville",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function PrisonMinistryPage() {
   return (
     <>
-      <PageHero
-        label="Ministries"
-        title="Prison & Jail Ministry"
-        subtitle="&ldquo;I was in prison and you came to visit me.&rdquo; &mdash; Matthew 25:36"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Ministries", href: "/ministries" },
-          { label: "Prison & Jail Ministry" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">Ministries</p>
+            <h1 id="title">Prison <em>Ministry.</em></h1>
+            <p className="deck">&ldquo;I was in prison and you came to visit me.&rdquo; &mdash; Matthew 25:36</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/community-service.jpg"
+              alt="Community service"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Mission */}

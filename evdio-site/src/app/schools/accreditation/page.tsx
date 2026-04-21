@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Accreditation & Standards",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function Accreditation() {
   return (
     <>
-      <PageHero
-        label="Catholic Schools"
-        title="Accreditation & Standards"
-        subtitle="Catholic schools in the Diocese of Evansville meet or exceed the same rigorous academic standards as public schools, with the added dimension of faith formation."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Catholic Schools", href: "/schools" },
-          { label: "Accreditation & Standards" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">CATHOLIC SCHOOLS</p>
+            <h1 id="title"><em>Accreditation.</em></h1>
+            <p className="deck">Catholic schools in the Diocese of Evansville meet or exceed the same rigorous academic standards as public schools, with the added dimension of faith formation.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/schools-mass-bishop.jpg"
+              alt="Catholic school students at Mass with the Bishop"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Accreditation */}

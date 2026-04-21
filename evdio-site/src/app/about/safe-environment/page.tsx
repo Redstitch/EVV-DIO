@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Safe Environment",
@@ -11,16 +11,25 @@ export const metadata: Metadata = {
 export default function SafeEnvironmentPage() {
   return (
     <>
-      <PageHero
-        label="About"
-        title="Safe Environment"
-        subtitle="Our unwavering commitment to the protection of children and vulnerable adults."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About", href: "/about" },
-          { label: "Safe Environment" },
-        ]}
-      />
+      <section className="feature-head" aria-labelledby="title">
+        <div className="grid">
+          <div className="text">
+            <p className="kicker">About</p>
+            <h1 id="title">Safe <em>Environment.</em></h1>
+            <p className="deck">Our unwavering commitment to the protection of children and vulnerable adults.</p>
+          </div>
+          <figure className="photo">
+            <Image
+              src="/images/stock/community-service.jpg"
+              alt="Community service"
+              fill
+              sizes="(max-width: 960px) 100vw, 50vw"
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* Commitment Statement */}
