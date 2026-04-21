@@ -184,7 +184,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 /* Desktop nav */
 .main-nav { display: flex; gap: 28px; }
 .nav-item-wrap { position: relative; height: 100%; display: flex; align-items: center; }
-.nav-item-wrap > a {
+.nav-item-wrap > a:not(.give-btn) {
   font-size: 13px; font-weight: 500; color: var(--cream);
   position: relative; padding: 6px 0;
   text-decoration: none; transition: color .2s;
@@ -283,16 +283,19 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .search-btn:hover { color: var(--bgold); background: rgba(238,218,179,0.08); }
 .search-btn svg { width: 20px; height: 20px; }
 
-.give-btn {
+.give-btn,
+a.give-btn {
   background: var(--brick); color: var(--cream);
-  padding: 10px 22px; font-size: 12px; font-weight: 600;
+  padding: 10px 22px !important; font-size: 12px; font-weight: 600;
   letter-spacing: 0.06em; text-transform: uppercase;
   border-radius: 999px; text-decoration: none;
   transition: background .2s;
   display: inline-flex; align-items: center; gap: 6px;
   border: none; cursor: pointer;
+  white-space: nowrap;
 }
-.give-btn:hover { background: #8b3a2d; }
+.give-btn:hover,
+a.give-btn:hover { background: #8b3a2d; }
 /* Override nav-item-wrap hover styles for give button */
 .give-wrap > a.give-btn,
 .give-wrap:hover > a.give-btn,
