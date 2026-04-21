@@ -136,7 +136,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   letter-spacing: 0.02em;
 }
 .utility-nav .row {
-  max-width: 1360px; margin: 0 auto; padding: 9px 40px;
+  padding: 9px 40px;
   display: flex; justify-content: space-between; align-items: center; gap: 20px;
 }
 .utility-nav a {
@@ -173,7 +173,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .main-header .row {
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 40px;
-  max-width: 1360px; margin: 0 auto;
 }
 
 /* Logo */
