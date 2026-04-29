@@ -3,9 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   getRecentArticles,
+  getArticlesByCategory,
   getCategoriesForArticle,
   formatDate,
   stripHtml,
+  getCategoryBySlug,
 } from "@/lib/articles";
 
 export const metadata: Metadata = {
@@ -15,10 +17,9 @@ export const metadata: Metadata = {
 };
 
 export default function TheMessagePage() {
-  const recent = getRecentArticles(25);
+  const recent = getRecentArticles(6);
   const featured = recent[0];
   const headlines = recent.slice(1, 4);
-  const moreStories = recent.slice(4, 16);
 
   return (
     <>
@@ -53,7 +54,7 @@ export default function TheMessagePage() {
       </section>
 
       <main id="main-content">
-        {/* Featured Article */}
+        {/* ─── LATEST NEWS ─── */}
         <section className="page-content">
           <span className="section-tag section-tag-left">Latest</span>
 
@@ -64,8 +65,7 @@ export default function TheMessagePage() {
           >
             <div
               style={{
-                background:
-                  "linear-gradient(135deg, var(--navy), var(--teal))",
+                background: "linear-gradient(135deg, var(--navy), var(--teal))",
                 padding: "48px 40px",
               }}
             >
@@ -101,166 +101,128 @@ export default function TheMessagePage() {
                 }}
                 dangerouslySetInnerHTML={{ __html: featured.title.rendered }}
               />
-              <p
-                style={{
-                  fontSize: 15,
-                  color: "rgba(238,218,179,0.75)",
-                  lineHeight: 1.65,
-                  marginBottom: 16,
-                  maxWidth: 640,
-                }}
-              >
+              <p style={{ fontSize: 15, color: "rgba(238,218,179,0.75)", lineHeight: 1.65, marginBottom: 16, maxWidth: 640 }}>
                 {stripHtml(featured.excerpt.rendered).slice(0, 200)}...
               </p>
-              <span
-                style={{ fontSize: 12, color: "rgba(238,218,179,0.5)" }}
-              >
+              <span style={{ fontSize: 12, color: "rgba(238,218,179,0.5)" }}>
                 {formatDate(featured.date)}
               </span>
             </div>
           </Link>
 
-          {/* Next 3 Headlines */}
           <div className="interior-grid interior-grid-3" style={{ marginTop: 24 }}>
             {headlines.map((a) => {
               const cats = getCategoriesForArticle(a);
               return (
-                <Link
-                  key={a.id}
-                  href={`/the-message/article/${a.slug}`}
-                  className="interior-card"
-                >
+                <Link key={a.id} href={`/the-message/article/${a.slug}`} className="interior-card">
                   {cats[0] && (
-                    <span
-                      style={{
-                        display: "block",
-                        fontSize: 10,
-                        textTransform: "uppercase",
-                        letterSpacing: "0.16em",
-                        color: "var(--brick)",
-                        fontWeight: 700,
-                        marginBottom: 8,
-                      }}
-                    >
+                    <span style={{ display: "block", fontSize: 10, textTransform: "uppercase", letterSpacing: "0.16em", color: "var(--brick)", fontWeight: 700, marginBottom: 8 }}>
                       {cats[0].name}
                     </span>
                   )}
-                  <h3
-                    style={{ fontSize: 18 }}
-                    dangerouslySetInnerHTML={{ __html: a.title.rendered }}
-                  />
-                  <p
-                    style={{
-                      marginTop: 8,
-                      fontSize: 12,
-                      color: "var(--muted)",
-                    }}
-                  >
-                    {formatDate(a.date)}
-                  </p>
+                  <h3 style={{ fontSize: 18 }} dangerouslySetInnerHTML={{ __html: a.title.rendered }} />
+                  <p style={{ marginTop: 8, fontSize: 12, color: "var(--muted)" }}>{formatDate(a.date)}</p>
                 </Link>
               );
             })}
           </div>
         </section>
 
-        <div
-          className="page-content"
-          style={{ paddingTop: 0, paddingBottom: 0 }}
-        >
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
-        {/* More Stories */}
+        {/* ─── NEWS SECTIONS ─── */}
         <section className="page-content">
           <div className="section-head">
-            <span className="section-tag">More Stories</span>
-            <h2 className="section-h2">Recent Articles</h2>
+            <span className="section-tag">News</span>
+            <h2 className="section-h2">News Coverage</h2>
+            <p className="section-desc">
+              Reporting from the diocese, the region, and the universal Church.
+            </p>
           </div>
 
           <div className="interior-grid interior-grid-3">
-            {moreStories.map((a) => {
-              const cats = getCategoriesForArticle(a);
+            {newsSections.map((s) => {
+              const cat = getCategoryBySlug(s.slug);
               return (
-                <Link
-                  key={a.id}
-                  href={`/the-message/article/${a.slug}`}
-                  className="interior-card"
-                >
-                  {cats[0] && (
-                    <span
-                      style={{
-                        display: "block",
-                        fontSize: 10,
-                        textTransform: "uppercase",
-                        letterSpacing: "0.16em",
-                        color: "var(--brick)",
-                        fontWeight: 700,
-                        marginBottom: 8,
-                      }}
-                    >
-                      {cats[0].name}
-                    </span>
+                <Link key={s.slug} href={`/the-message/category/${s.slug}`} className="interior-card">
+                  <h3>{s.name}</h3>
+                  <p>{s.desc}</p>
+                  {cat && (
+                    <p style={{ marginTop: 12, fontSize: 11, color: "var(--brick)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase" }}>
+                      {cat.count} articles →
+                    </p>
                   )}
-                  <h3
-                    style={{ fontSize: 17 }}
-                    dangerouslySetInnerHTML={{ __html: a.title.rendered }}
-                  />
-                  <p
-                    style={{
-                      marginTop: 6,
-                      fontSize: 13,
-                      color: "var(--muted)",
-                      lineHeight: 1.55,
-                    }}
-                  >
-                    {stripHtml(a.excerpt.rendered).slice(0, 120)}...
-                  </p>
-                  <p
-                    style={{
-                      marginTop: 8,
-                      fontSize: 11,
-                      color: "var(--muted)",
-                    }}
-                  >
-                    {formatDate(a.date)}
-                  </p>
                 </Link>
               );
             })}
           </div>
         </section>
 
-        <div
-          className="page-content"
-          style={{ paddingTop: 0, paddingBottom: 0 }}
-        >
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
-        {/* Browse by Section */}
+        {/* ─── COLUMNS & SERIES ─── */}
         <section className="page-content">
           <div className="section-head">
-            <span className="section-tag">Sections</span>
-            <h2 className="section-h2">Browse by Section</h2>
+            <span className="section-tag">Columns</span>
+            <h2 className="section-h2">Recurring Columns</h2>
+            <p className="section-desc">
+              Voices and perspectives from across the diocese — faith, family, Scripture, and daily life.
+            </p>
           </div>
 
-          <div className="interior-grid interior-grid-4">
-            {sections.map((s) => (
-              <Link
-                key={s.href}
-                href={s.href}
-                className="interior-card"
-                style={{ textAlign: "center" }}
-              >
-                <h3>{s.name}</h3>
-                <p>{s.desc}</p>
-              </Link>
-            ))}
+          <div className="interior-grid interior-grid-3">
+            {columnSeries.map((col) => {
+              const cat = getCategoryBySlug(col.slug);
+              const latest = cat ? getArticlesByCategory(cat.id, 1)[0] : null;
+              return (
+                <Link key={col.slug} href={`/the-message/category/${col.slug}`} className="interior-card">
+                  <h3>{col.name}</h3>
+                  {col.author && (
+                    <p style={{ fontSize: 13, color: "var(--teal)", fontWeight: 500, marginBottom: 6 }}>
+                      By {col.author}
+                    </p>
+                  )}
+                  <p style={{ fontSize: 13, color: "var(--muted)", lineHeight: 1.5 }}>{col.desc}</p>
+                  {latest && (
+                    <p style={{ marginTop: 12, fontSize: 11, color: "var(--brick)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase" }}>
+                      Latest: {formatDate(latest.date)} →
+                    </p>
+                  )}
+                </Link>
+              );
+            })}
           </div>
         </section>
 
-        {/* About & Subscribe */}
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
+
+        {/* ─── MORE SECTIONS ─── */}
+        <section className="page-content">
+          <div className="section-head">
+            <span className="section-tag">More</span>
+            <h2 className="section-h2">Special Sections</h2>
+          </div>
+
+          <div className="interior-grid interior-grid-4">
+            {specialSections.map((s) => {
+              const cat = getCategoryBySlug(s.slug);
+              return (
+                <Link key={s.slug} href={`/the-message/category/${s.slug}`} className="interior-card" style={{ textAlign: "center" }}>
+                  <h3>{s.name}</h3>
+                  {cat && <p>{cat.count} articles</p>}
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ─── ABOUT & SUBSCRIBE ─── */}
         <div className="page-content" style={{ paddingTop: 0 }}>
           <div className="info-block">
             <h3>About The Message</h3>
@@ -286,10 +248,7 @@ export default function TheMessagePage() {
               the digital edition online.
             </p>
             <Link href="/the-message/subscribe" className="btn btn-primary">
-              Subscribe Now{" "}
-              <span className="arrow" aria-hidden="true">
-                →
-              </span>
+              Subscribe Now <span className="arrow" aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -298,13 +257,55 @@ export default function TheMessagePage() {
   );
 }
 
-const sections = [
-  { name: "Diocesan News", desc: "The latest from the diocese", href: "/the-message/diocesan-news" },
-  { name: "Local & Regional", desc: "SW Indiana coverage", href: "/the-message/local-news" },
-  { name: "National & World", desc: "Catholic news nationwide", href: "/the-message/national-news" },
-  { name: "Faith & Spirituality", desc: "Spiritual reflections", href: "/the-message/faith-spirituality" },
-  { name: "Columns", desc: "Voices and perspectives", href: "/the-message/columns" },
-  { name: "Special Features", desc: "In-depth stories", href: "/the-message/features" },
-  { name: "Archives", desc: "Every issue since 1970", href: "/the-message/archives" },
-  { name: "Subscribe", desc: "Get The Message weekly", href: "/the-message/subscribe" },
+/* ─── Data ─── */
+
+const newsSections = [
+  { slug: "diocesan-news", name: "Diocesan News", desc: "The latest from the Diocese of Evansville" },
+  { slug: "local-news", name: "Local & Regional News", desc: "Coverage from Southwestern Indiana parishes and communities" },
+  { slug: "news", name: "General News", desc: "Catholic news and announcements" },
+  { slug: "school", name: "Catholic Schools", desc: "News from the 26 schools of the diocese" },
+  { slug: "us-world-news", name: "National & World", desc: "Catholic news from across the nation and the universal Church" },
+  { slug: "spanish", name: "En Español", desc: "Noticias y artículos en español" },
+];
+
+const columnSeries = [
+  { slug: "bishops-corner", name: "The Bishop's Corner", author: "Bishop Siegel", desc: "Messages from the Bishop of Evansville" },
+  { slug: "sunday-scripture", name: "Sunday Scripture", author: null, desc: "Weekly reflections on the Sunday readings" },
+  { slug: "connecting-faith-and-life", name: "Connecting Faith and Life", author: null, desc: "Where faith meets everyday life" },
+  { slug: "question-corner", name: "Question Corner", author: null, desc: "Answers to common questions about Catholic faith and practice" },
+  { slug: "gratitude-for-the-gift-of-faith", name: "Gratitude for the Gift of Faith", author: null, desc: "Personal reflections on the gift of faith" },
+  { slug: "journey-of-faith", name: "Journey of Faith", author: null, desc: "Stories of conversion and deepening faith" },
+  { slug: "20-something", name: "20-Something", author: null, desc: "Faith and life from a young adult perspective" },
+  { slug: "youth-first", name: "Youth First", author: null, desc: "Resources and reflections for young Catholics" },
+  { slug: "grace-notes", name: "Grace Notes", author: null, desc: "Brief meditations on grace in daily life" },
+  { slug: "meditatione-ignis", name: "Meditatione Ignis", author: null, desc: "Meditations on the fire of faith" },
+  { slug: "gods-way", name: "God's Way", author: null, desc: "Following God's path in the modern world" },
+  { slug: "liturgical-rhythm-of-life", name: "Liturgical Rhythm of Life", author: null, desc: "Living in tune with the liturgical calendar" },
+  { slug: "the-catholic-kitchen", name: "The Catholic Kitchen", author: null, desc: "Faith, food, and family traditions" },
+  { slug: "lessons-learned", name: "Lessons Learned", author: null, desc: "Wisdom drawn from life experience" },
+  { slug: "radical-joy-catholic-stewardship-and-abundance", name: "Radical Joy", author: null, desc: "Catholic stewardship and the abundance of giving" },
+  { slug: "wonderful-adventure", name: "Wonderful Adventure", author: null, desc: "Finding wonder in the journey of faith" },
+  { slug: "a-place-for-all", name: "A Place for All", author: null, desc: "Inclusion and belonging in the Catholic community" },
+  { slug: "our-mother-earth", name: "Our Mother Earth", author: null, desc: "Care for creation and Catholic ecology" },
+  { slug: "it-seems-to-me", name: "It Seems to Me", author: null, desc: "Personal observations on faith and culture" },
+  { slug: "making-sense-of-bioethics", name: "Making Sense of Bioethics", author: null, desc: "Catholic perspectives on bioethical issues" },
+  { slug: "from-fields-afar", name: "From Fields Afar", author: null, desc: "Global perspectives on Catholic mission" },
+  { slug: "catholic-healthcare", name: "Catholic Healthcare", author: null, desc: "Faith-based health and healing" },
+  { slug: "guest", name: "Guest Columnists", author: null, desc: "Invited voices and perspectives" },
+  { slug: "daily-blessings", name: "Daily Blessings", author: null, desc: "Finding blessings in the ordinary" },
+];
+
+const specialSections = [
+  { slug: "seminarian-profiles", name: "Seminarian Profiles" },
+  { slug: "special-features", name: "Special Features" },
+  { slug: "video", name: "Video" },
+  { slug: "photo-galleries", name: "Photo Gallery" },
+  { slug: "evdio75", name: "#EVDIO75" },
+  { slug: "cathedral-dedication", name: "Cathedral Dedication" },
+  { slug: "because-i-am-catholic-porque-soy-catolico", name: "Because I Am Catholic" },
+  { slug: "natural-family-planning", name: "Natural Family Planning" },
+  { slug: "catholic-charities", name: "Catholic Charities" },
+  { slug: "faces-of-faith", name: "Faces of Faith" },
+  { slug: "a-view-from-campus", name: "A View from Campus" },
+  { slug: "footprints-of-our-catholic-brethren", name: "Footprints of Our Catholic Brethren" },
 ];
