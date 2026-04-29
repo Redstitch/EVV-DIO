@@ -271,25 +271,26 @@ export const navItems: NavItem[] = [
     cols: 2,
     children: [
       {
-        heading: "News & Stories",
+        heading: "News",
         links: [
           { label: "Latest Headlines", href: "/the-message", featured: true },
-          { label: "Diocesan News", href: "/the-message/diocesan-news" },
-          { label: "Local & Regional News", href: "/the-message/local-news" },
-          { label: "National & World News", href: "/the-message/national-news" },
-          { label: "Faith & Spirituality", href: "/the-message/faith-spirituality" },
-          { label: "Special Features", href: "/the-message/features" },
+          { label: "Diocesan News", href: "/the-message/category/diocesan-news" },
+          { label: "Local News", href: "/the-message/category/local-news" },
+          { label: "US/World News", href: "/the-message/category/us-world-news" },
+          { label: "Catholic Schools", href: "/the-message/category/school" },
+          { label: "Special Features", href: "/the-message/category/special-features" },
+          { label: "Seminarian Profiles", href: "/the-message/category/seminarian-profiles" },
         ],
       },
       {
         heading: "Columns & More",
         links: [
-          { label: "Opinion & Columns", href: "/the-message/columns" },
-          { label: "Movie Reviews", href: "/the-message/reviews" },
-          { label: "Photo Galleries", href: "/the-message/photo-galleries" },
-          { label: "Videos", href: "/the-message/videos" },
-          { label: "Archives", href: "/the-message/archives" },
+          { label: "Columns", href: "/the-message/category/columns", featured: true },
+          { label: "Photo Galleries", href: "/the-message/category/photo-galleries" },
+          { label: "Videos", href: "/the-message/category/video" },
+          { label: "En Español", href: "/the-message/category/spanish" },
           { label: "About The Message", href: "/the-message/about" },
+          { label: "Contact Us", href: "/about/contact" },
         ],
         highlight: {
           title: "Subscribe",
