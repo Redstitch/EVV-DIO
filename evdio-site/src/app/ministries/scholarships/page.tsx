@@ -134,7 +134,7 @@ export default function ScholarshipsPage() {
             </p>
             <p style={{ color: "var(--dgold)", fontWeight: 600, fontSize: 18, margin: "16px 0" }}>(812) 424-5536 | schools@evdio.org</p>
             <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/schools/tuition" className="btn-ghost-white">
+              <Link href="/schools/tuition" className="btn btn-outline">
                 Tuition &amp; Affordability
               </Link>
               <Link href="/give/appeal" className="btn-gold">

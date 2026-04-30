@@ -1150,16 +1150,19 @@ a.give-btn:hover { background: #8b3a2d; }
 
 /* CTA blocks */
 .cta-block {
-  background: var(--teal); border-radius: 20px;
-  padding: 36px; text-align: center; color: var(--cream);
+  background: var(--cream-xlt); border-radius: 20px;
+  padding: 48px 40px; text-align: center; color: var(--navy);
+  border: 1px solid var(--line);
 }
 .cta-block h3 {
-  font-family: var(--serif); font-size: 24px;
-  font-weight: 400; color: var(--cream); margin-bottom: 10px;
+  font-family: var(--serif); font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400; color: var(--navy); margin-bottom: 14px;
 }
+.cta-block h3 em { font-style: italic; color: var(--blue); }
 .cta-block p {
-  font-size: 15px; color: rgba(238,218,179,0.8);
-  margin-bottom: 20px; line-height: 1.65;
+  font-size: 15px; color: var(--muted);
+  margin-bottom: 24px; line-height: 1.65;
+  max-width: 540px; margin-left: auto; margin-right: auto;
 }
 
 /* Prose / body content */
@@ -1542,8 +1545,8 @@ a.give-btn:hover { background: #8b3a2d; }
 .cta-strip {
   padding: 96px 40px;
   text-align: center;
-  background: linear-gradient(rgba(0,78,115,0.08), rgba(0,78,115,0.08)), var(--cream-lt);
-  border-bottom: 1px solid var(--line);
+  background: var(--cream-lt);
+  border-top: 1px solid var(--line);
 }
 .cta-strip .kicker {
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
@@ -1726,18 +1729,10 @@ a.give-btn:hover { background: #8b3a2d; }
   box-shadow: 0 12px 48px rgba(0,78,115,0.25);
 }
 
-/* CTA block gradient shimmer */
+/* CTA block — clean light card */
 .cta-block {
   position: relative;
   overflow: hidden;
-}
-.cta-block::after {
-  content: '';
-  position: absolute;
-  top: -50%; left: -50%;
-  width: 200%; height: 200%;
-  background: radial-gradient(ellipse at 30% 50%, rgba(255,208,64,0.06) 0%, transparent 60%);
-  pointer-events: none;
 }
 
 /* Stats number animation entry */
@@ -1834,18 +1829,9 @@ a.give-btn:hover { background: #8b3a2d; }
   transform: rotate(6deg) scale(1.08);
 }
 
-/* CTA strip background pattern */
+/* CTA strip — keep clean, no overlay */
 .cta-strip {
   position: relative;
-}
-.cta-strip::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 80%, rgba(0,78,115,0.04) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(208,144,0,0.04) 0%, transparent 50%);
-  pointer-events: none;
 }
 
 /* Smooth section transitions */

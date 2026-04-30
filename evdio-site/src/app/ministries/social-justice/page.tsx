@@ -145,7 +145,7 @@ export default function SocialJusticePage() {
             </p>
             <p style={{ color: "var(--dgold)", fontWeight: 600, fontSize: 18, margin: "16px 0" }}>(812) 424-5536 | justice@evdio.org</p>
             <div style={{ marginTop: 8 }}>
-              <Link href="/ministries" className="btn-ghost-white">
+              <Link href="/ministries" className="btn btn-outline">
                 All Ministries
               </Link>
             </div>

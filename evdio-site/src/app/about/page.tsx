@@ -272,7 +272,7 @@ export default function AboutPage() {
                 Contact Us
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
               </Link>
-              <a href="tel:8124245536" className="btn-ghost-white">
+              <a href="tel:8124245536" className="btn btn-outline">
                 (812) 424-5536
               </a>
             </div>
