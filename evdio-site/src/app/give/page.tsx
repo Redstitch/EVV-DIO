@@ -34,17 +34,55 @@ export default function GivePage() {
       </section>
 
       <main id="main-content">
-        {/* Impact Stats */}
-        <section className="page-content">
-          <div className="section-head">
-            <span className="section-tag">Your Impact</span>
-            <h2 className="section-h2">What Your Generosity Makes Possible</h2>
-            <p className="section-desc">
-              When you give to the Diocese of Evansville, your support reaches every corner of our 12-county community. Here is what your generosity accomplished last year.
+        {/* ─── INTRO ─── */}
+        <section className="intro">
+          <div className="inner">
+            <p className="pull">
+              Your generosity changes lives &mdash; 850 scholarships, 2,400
+              families served, 45 parishes strengthened. Every gift writes
+              another chapter in the story of this <em>diocese.</em>
             </p>
+            <div className="body">
+              <p>
+                When you give to the Diocese of Evansville, your support
+                reaches every corner of our 12-county community. It puts
+                children in Catholic school classrooms, feeds families through
+                Catholic Charities, forms seminarians for the priesthood, and
+                sustains the sacramental life of 45 parishes.
+              </p>
+              <p>
+                Stewardship is not a fundraising strategy &mdash; it is a way
+                of life. It flows from gratitude for what God has given and the
+                conviction that we are called to share. In this diocese, that
+                conviction is lived out daily by thousands of Catholics who
+                give their time, talent, and treasure.
+              </p>
+              <p>
+                Whether you give through the annual Catholic Ministries Appeal,
+                your weekly parish offertory, a planned gift, or a one-time
+                contribution, your generosity is a concrete act of faith. It
+                says: I believe in the mission of the Church, and I want to be
+                part of it.
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div className="stat-row" style={{ justifyContent: "center" }}>
+        {/* ─── IMPACT STATS ─── */}
+        <section
+          className="page-content"
+          style={{ background: "var(--cream-lt)" }}
+          aria-labelledby="impact-title"
+        >
+          <span className="section-tag section-tag-left">Your Impact</span>
+          <h2
+            className="section-h2 section-h2-left"
+            id="impact-title"
+          >
+            What your generosity makes <em>possible.</em>
+          </h2>
+
+          <div className="stat-row" style={{ justifyContent: "center", marginTop: 32 }}>
             <div className="stat-item">
               <span className="stat-num" style={{ color: "var(--gold)" }}>850</span>
               <span className="stat-label">Scholarships Awarded</span>
@@ -64,15 +102,33 @@ export default function GivePage() {
           </div>
         </section>
 
-        {/* Stories of Impact */}
-        <section className="page-content" style={{ background: "var(--cream)" }}>
-          <div className="section-head">
-            <span className="section-tag">Stories of Impact</span>
-            <h2 className="section-h2">Lives Changed by Your Gift</h2>
-          </div>
+        {/* ─── FLOURISH ─── */}
+        <div className="flourish flourish-quatrefoil" aria-hidden="true">
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" />
+            <circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" />
+            <circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
+        </div>
 
-          <div className="interior-grid interior-grid-3">
-            <div className="interior-card" style={{ cursor: "default" }}>
+        {/* ─── STORIES OF IMPACT ─── */}
+        <section className="page-content" aria-labelledby="stories-title">
+          <span className="section-tag section-tag-left">Stories of Impact</span>
+          <h2
+            className="section-h2 section-h2-left"
+            id="stories-title"
+          >
+            Lives changed by <em>your gift.</em>
+          </h2>
+
+          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+            <div className="info-block">
               <svg viewBox="0 0 24 24" width="24" height="24" fill="var(--gold)" aria-hidden="true" style={{ marginBottom: 12 }}>
                 <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
               </svg>
@@ -82,7 +138,7 @@ export default function GivePage() {
               <p style={{ fontSize: 13, fontWeight: 700, color: "var(--navy)" }}>&mdash; Parent, Mater Dei High School</p>
             </div>
 
-            <div className="interior-card" style={{ cursor: "default" }}>
+            <div className="info-block">
               <svg viewBox="0 0 24 24" width="24" height="24" fill="var(--gold)" aria-hidden="true" style={{ marginBottom: 12 }}>
                 <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
               </svg>
@@ -92,7 +148,7 @@ export default function GivePage() {
               <p style={{ fontSize: 13, fontWeight: 700, color: "var(--navy)" }}>&mdash; Family served by Catholic Charities</p>
             </div>
 
-            <div className="interior-card" style={{ cursor: "default" }}>
+            <div className="info-block">
               <svg viewBox="0 0 24 24" width="24" height="24" fill="var(--gold)" aria-hidden="true" style={{ marginBottom: 12 }}>
                 <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
               </svg>
@@ -104,17 +160,46 @@ export default function GivePage() {
           </div>
         </section>
 
-        {/* Three Giving Pathways */}
-        <section className="page-content">
-          <div className="section-head">
-            <span className="section-tag">Ways to Give</span>
-            <h2 className="section-h2">Choose How You Give</h2>
-            <p className="section-desc">
-              There are many ways to support the mission of the Diocese of Evansville. Every gift makes a difference.
-            </p>
-          </div>
+        {/* ─── SCRIPTURE ─── */}
+        <section className="scripture" aria-label="Scripture">
+          <blockquote>
+            &ldquo;Each one must give as he has decided in his heart, not
+            reluctantly or under compulsion, for God loves a{" "}
+            <em>cheerful giver.</em>&rdquo;
+            <cite>2 Corinthians 9:7</cite>
+          </blockquote>
+        </section>
 
-          <div className="interior-grid interior-grid-3">
+        {/* ─── FLOURISH ─── */}
+        <div
+          className="flourish flourish-quatrefoil"
+          aria-hidden="true"
+          style={{ padding: "48px 0 8px" }}
+        >
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" />
+            <circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" />
+            <circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
+        </div>
+
+        {/* ─── WAYS TO GIVE ─── */}
+        <section className="page-content" aria-labelledby="ways-title">
+          <span className="section-tag section-tag-left">Ways to Give</span>
+          <h2
+            className="section-h2 section-h2-left"
+            id="ways-title"
+          >
+            Choose how you <em>give.</em>
+          </h2>
+
+          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <Link href="/give/appeal" className="interior-card">
               <div className="interior-card-icon" style={{ background: "var(--navy)" }}>
                 <svg viewBox="0 0 24 24" aria-hidden="true" style={{ fill: "var(--gold)" }}>
@@ -153,14 +238,38 @@ export default function GivePage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        {/* ─── FLOURISH ─── */}
+        <div
+          className="flourish flourish-quatrefoil"
+          aria-hidden="true"
+          style={{ padding: "48px 0 8px", background: "var(--cream-lt)" }}
+        >
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" />
+            <circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" />
+            <circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
         </div>
 
-        {/* More Ways to Give */}
-        <section className="page-content">
+        {/* ─── MORE WAYS TO GIVE ─── */}
+        <section
+          className="page-content"
+          style={{ background: "var(--cream-lt)" }}
+          aria-labelledby="more-ways-title"
+        >
           <span className="section-tag section-tag-left">More Ways to Give</span>
-          <h2 className="section-h2 section-h2-left">Every Gift Counts</h2>
+          <h2
+            className="section-h2 section-h2-left"
+            id="more-ways-title"
+          >
+            Every gift <em>counts.</em>
+          </h2>
 
           <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <Link href="/parishes/directory" className="interior-card">
@@ -195,16 +304,28 @@ export default function GivePage() {
           </div>
         </section>
 
-        {/* Allocation Breakdown */}
-        <section className="page-content" style={{ background: "var(--cream)" }}>
+        {/* ─── ALLOCATION BREAKDOWN ─── */}
+        <section className="page-content" aria-labelledby="allocation-title">
           <div className="container-narrow">
-            <div className="section-head">
-              <span className="section-tag">Transparency</span>
-              <h2 className="section-h2">Where Your Gift Goes</h2>
-              <p className="section-desc">
-                We are committed to faithful stewardship of every dollar entrusted to us. Here is how Catholic Ministries Appeal funds are distributed.
-              </p>
-            </div>
+            <span className="section-tag section-tag-left">Transparency</span>
+            <h2
+              className="section-h2 section-h2-left"
+              id="allocation-title"
+            >
+              Where your gift <em>goes.</em>
+            </h2>
+            <p
+              style={{
+                maxWidth: 600,
+                lineHeight: 1.7,
+                marginBottom: 32,
+                color: "var(--text-medium)",
+              }}
+            >
+              We are committed to faithful stewardship of every dollar entrusted
+              to us. Here is how Catholic Ministries Appeal funds are
+              distributed.
+            </p>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               <AllocationBar label="Catholic Education & Scholarships" pct={35} />
@@ -214,7 +335,7 @@ export default function GivePage() {
               <AllocationBar label="Administration & Stewardship" pct={8} />
             </div>
 
-            <p style={{ fontSize: 13, color: "var(--text-light)", textAlign: "center", marginTop: 24 }}>
+            <p style={{ fontSize: 13, color: "var(--text-light)", marginTop: 24 }}>
               Financial reports are available in the annual Diocesan Report and on our{" "}
               <Link href="/about/dashboard" style={{ color: "var(--blue)", textDecoration: "underline" }}>
                 Transparency Dashboard
@@ -223,24 +344,60 @@ export default function GivePage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <div className="page-content">
-          <div className="cta-block">
-            <h3 style={{ fontSize: "clamp(28px,4vw,40px)" }}>Your Generosity Changes Lives</h3>
-            <p>
-              Join the thousands of faithful Catholics across the Diocese of Evansville who give generously to build up the Body of Christ. Make a gift today.
-            </p>
-            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-              <a href="#" className="btn-gold">
-                Give Online Now
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </a>
-              <Link href="/give/appeal" className="btn-ghost-white">
-                Catholic Ministries Appeal
-              </Link>
-            </div>
+        {/* ─── CTA STRIP ─── */}
+        <section className="cta-strip">
+          <div
+            className="flourish"
+            aria-hidden="true"
+            style={{ padding: "0 0 32px" }}
+          >
+            <span className="line" />
+            <svg
+              width="14"
+              height="18"
+              viewBox="0 0 14 18"
+              fill="currentColor"
+            >
+              <rect x="6" y="0" width="2" height="18" />
+              <rect x="2" y="5" width="10" height="2" />
+            </svg>
+            <span className="line" />
           </div>
-        </div>
+          <p className="kicker">Take the Next Step</p>
+          <h2>
+            Your generosity changes <em>lives.</em>
+          </h2>
+          <p
+            style={{
+              maxWidth: 520,
+              margin: "0 auto 28px",
+              lineHeight: 1.7,
+              opacity: 0.85,
+            }}
+          >
+            Join the thousands of faithful Catholics across the Diocese of
+            Evansville who give generously to build up the Body of Christ. Make
+            a gift today.
+          </p>
+          <div
+            style={{
+              display: "flex",
+              gap: 16,
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+          >
+            <a href="#" className="btn btn-primary">
+              Give Online Now{" "}
+              <span className="arrow" aria-hidden="true">
+                &rarr;
+              </span>
+            </a>
+            <Link href="/give/appeal" className="btn btn-outline">
+              Catholic Ministries Appeal
+            </Link>
+          </div>
+        </section>
       </main>
     </>
   );

@@ -34,17 +34,57 @@ export default function SchoolsPage() {
       </section>
 
       <main id="main-content">
-        {/* Stats */}
-        <section className="page-content">
-          <div className="section-head">
-            <span className="section-tag">At a Glance</span>
-            <h2 className="section-h2">Excellence Rooted in Faith</h2>
-            <p className="section-desc">
-              Catholic schools in the Diocese of Evansville have been forming students in faith, knowledge, and character for over 150 years.
+        {/* ─── INTRO ─── */}
+        <section className="intro">
+          <div className="inner">
+            <p className="pull">
+              Catholic schools do more than educate &mdash; they{" "}
+              <em>form.</em> Our students attend Mass, pray daily, serve their
+              communities, and develop a personal relationship with Jesus
+              Christ.
             </p>
+            <div className="body">
+              <p>
+                For over 150 years, the Catholic schools of the Diocese of
+                Evansville have been shaping young lives in faith, knowledge,
+                and character. From pre-kindergarten through high school,
+                26 schools across 12 counties offer an education that is
+                academically rigorous, spiritually grounded, and deeply rooted
+                in community.
+              </p>
+              <p>
+                With a 98% graduation rate, an average class size of 18, a 14:1
+                student-teacher ratio, and 100% licensed teachers, our schools
+                consistently outperform state and national averages. All 26
+                schools are fully accredited by Cognia. Catholic identity is
+                woven into every aspect of school life, producing graduates who
+                are prepared academically, spiritually, and morally for the
+                challenges ahead.
+              </p>
+              <p>
+                Whether your family is exploring Catholic education for the
+                first time or continuing a multi-generational tradition,
+                you&rsquo;ll find a school community ready to welcome you.
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div className="stat-row" style={{ justifyContent: "center" }}>
+        {/* ─── STATS ─── */}
+        <section
+          className="page-content"
+          style={{ background: "var(--cream-lt)" }}
+          aria-labelledby="stats-title"
+        >
+          <span className="section-tag section-tag-left">At a Glance</span>
+          <h2
+            className="section-h2 section-h2-left"
+            id="stats-title"
+          >
+            Excellence rooted in <em>faith.</em>
+          </h2>
+
+          <div className="stat-row" style={{ justifyContent: "center", marginTop: 32 }}>
             <div className="stat-item">
               <span className="stat-num">26</span>
               <span className="stat-label">Schools</span>
@@ -64,14 +104,32 @@ export default function SchoolsPage() {
           </div>
         </section>
 
-        {/* Action Cards */}
-        <section className="page-content" style={{ background: "var(--cream)" }}>
-          <div className="section-head">
-            <span className="section-tag">Explore</span>
-            <h2 className="section-h2">What Are You Looking For?</h2>
-          </div>
+        {/* ─── FLOURISH ─── */}
+        <div className="flourish flourish-quatrefoil" aria-hidden="true">
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" />
+            <circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" />
+            <circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
+        </div>
 
-          <div className="interior-grid interior-grid-3">
+        {/* ─── ACTION CARDS ─── */}
+        <section className="page-content" aria-labelledby="explore-title">
+          <span className="section-tag section-tag-left">Explore</span>
+          <h2
+            className="section-h2 section-h2-left"
+            id="explore-title"
+          >
+            What are you <em>looking for?</em>
+          </h2>
+
+          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <Link href="/schools/find" className="interior-card">
               <div className="interior-card-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -134,39 +192,58 @@ export default function SchoolsPage() {
           </div>
         </section>
 
-        {/* Catholic Education Mission */}
-        <div className="page-content">
-          <div className="info-block">
-            <h3>The Catholic Difference</h3>
-            <p>
-              Catholic schools in the Diocese of Evansville do more than educate &mdash; they <strong>form</strong>. Our students attend Mass, pray daily, serve their communities, and develop a personal relationship with Jesus Christ. With a 98% graduation rate, an average class size of 18, a 14:1 student-teacher ratio, and 100% licensed teachers, our schools consistently outperform state and national averages. All 26 schools are fully accredited by Cognia. Catholic identity is woven into every aspect of school life, producing graduates who are prepared academically, spiritually, and morally for the challenges ahead.
-            </p>
-          </div>
+        {/* ─── SCRIPTURE ─── */}
+        <section className="scripture" aria-label="Scripture">
+          <blockquote>
+            &ldquo;Train up a child in the way he should go; even when he is
+            old he will not <em>depart from it.</em>&rdquo;
+            <cite>Proverbs 22:6</cite>
+          </blockquote>
+        </section>
+
+        {/* ─── FLOURISH ─── */}
+        <div
+          className="flourish flourish-quatrefoil"
+          aria-hidden="true"
+          style={{ padding: "48px 0 8px" }}
+        >
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" />
+            <circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" />
+            <circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
         </div>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
-        </div>
-
-        {/* By the Numbers sidebar */}
-        <section className="page-content">
+        {/* ─── ACCREDITATION ─── */}
+        <section className="page-content" aria-labelledby="accreditation-title">
           <span className="section-tag section-tag-left">Quality Assurance</span>
-          <h2 className="section-h2 section-h2-left">Accredited &amp; Accountable</h2>
+          <h2
+            className="section-h2 section-h2-left"
+            id="accreditation-title"
+          >
+            Accredited &amp; <em>accountable.</em>
+          </h2>
 
           <div className="interior-grid interior-grid-4" style={{ marginTop: 24 }}>
-            <div className="interior-card" style={{ textAlign: "center", cursor: "default" }}>
+            <div className="info-block" style={{ textAlign: "center" }}>
               <h3 style={{ fontSize: 36, color: "var(--navy)" }}>18</h3>
               <p>Avg. Class Size</p>
             </div>
-            <div className="interior-card" style={{ textAlign: "center", cursor: "default" }}>
+            <div className="info-block" style={{ textAlign: "center" }}>
               <h3 style={{ fontSize: 36, color: "var(--navy)" }}>14:1</h3>
               <p>Student-Teacher Ratio</p>
             </div>
-            <div className="interior-card" style={{ textAlign: "center", cursor: "default" }}>
+            <div className="info-block" style={{ textAlign: "center" }}>
               <h3 style={{ fontSize: 36, color: "var(--navy)" }}>100%</h3>
               <p>Licensed Teachers</p>
             </div>
-            <div className="interior-card" style={{ textAlign: "center", cursor: "default" }}>
+            <div className="info-block" style={{ textAlign: "center" }}>
               <h3 style={{ fontSize: 36, color: "var(--navy)" }}>42,000+</h3>
               <p>Service Hours Annually</p>
             </div>
@@ -180,24 +257,60 @@ export default function SchoolsPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <div className="page-content">
-          <div className="cta-block">
-            <h3>Give Your Child the Gift of Catholic Education</h3>
-            <p>
-              Schedule a tour, attend an open house, or contact one of our 26 schools to learn how Catholic education can make a difference for your family.
-            </p>
-            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/schools/find" className="btn-gold">
-                Find a School
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </Link>
-              <Link href="/schools/enroll" className="btn-ghost-white">
-                Start the Enrollment Process
-              </Link>
-            </div>
+        {/* ─── CTA STRIP ─── */}
+        <section className="cta-strip">
+          <div
+            className="flourish"
+            aria-hidden="true"
+            style={{ padding: "0 0 32px" }}
+          >
+            <span className="line" />
+            <svg
+              width="14"
+              height="18"
+              viewBox="0 0 14 18"
+              fill="currentColor"
+            >
+              <rect x="6" y="0" width="2" height="18" />
+              <rect x="2" y="5" width="10" height="2" />
+            </svg>
+            <span className="line" />
           </div>
-        </div>
+          <p className="kicker">Begin Here</p>
+          <h2>
+            Give your child the gift of Catholic <em>education.</em>
+          </h2>
+          <p
+            style={{
+              maxWidth: 520,
+              margin: "0 auto 28px",
+              lineHeight: 1.7,
+              opacity: 0.85,
+            }}
+          >
+            Schedule a tour, attend an open house, or contact one of our 26
+            schools to learn how Catholic education can make a difference for
+            your family.
+          </p>
+          <div
+            style={{
+              display: "flex",
+              gap: 16,
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+          >
+            <Link href="/schools/find" className="btn btn-primary">
+              Find a School{" "}
+              <span className="arrow" aria-hidden="true">
+                &rarr;
+              </span>
+            </Link>
+            <Link href="/schools/enroll" className="btn btn-outline">
+              Start the Enrollment Process
+            </Link>
+          </div>
+        </section>
       </main>
     </>
   );

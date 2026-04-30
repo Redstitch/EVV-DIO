@@ -31,138 +31,306 @@ export default function Marriage() {
       </section>
 
       <main id="main-content">
-        {/* ─── TEACHING ─── */}
-        <section className="page-content">
-          <div className="section-head">
-            <span className="section-tag">A Sacred Covenant</span>
-            <h2 className="section-h2">A Love That Reflects Christ</h2>
-            <p className="section-desc">
-              Catholic marriage is more than a legal contract. It is a sacrament in which the couple becomes a living sign of Christ&rsquo;s love for the Church. Through marriage, spouses receive the grace to love one another faithfully, to welcome children, and to build a family rooted in faith.
+        {/* ─── INTRO ─── */}
+        <section className="intro">
+          <div className="inner">
+            <p className="pull">
+              Marriage is not merely a contract between two people — it is a
+              covenant, a living image of Christ&rsquo;s own love for
+              his <em>Church.</em>
             </p>
+            <div className="body">
+              <p>
+                Catholic marriage is more than a legal agreement or a beautiful
+                ceremony. It is a sacrament — one of the seven sacred signs
+                through which Christ acts in the world. When a man and a woman
+                exchange their vows before God and the Church, they receive a
+                grace that binds them not only to each other but to the mission
+                of love itself. Through their fidelity, their patience, their
+                daily sacrifice, they become a living icon of the relationship
+                between Christ and his people.
+              </p>
+              <p>
+                The Church asks couples to prepare seriously for this sacrament
+                because marriage is ordered toward something greater than the
+                wedding day. It is ordered toward the whole of life: the good of
+                the spouses, the welcoming of children, and the building of a
+                family rooted in faith. Every Catholic marriage in the Diocese of
+                Evansville begins with a conversation — between the couple and
+                their parish priest or deacon — that opens the door to a
+                preparation process designed to serve the marriage, not just the
+                ceremony.
+              </p>
+              <p>
+                Whether you are newly engaged, exploring an interfaith marriage,
+                or returning to the Church after a previous marriage, there is a
+                path forward. The pages below walk through the steps, the
+                requirements, and the resources available to you in the diocese.
+              </p>
+            </div>
           </div>
         </section>
+
+        {/* ─── FLOURISH ─── */}
+        <div className="flourish flourish-quatrefoil" aria-hidden="true">
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" />
+            <circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" />
+            <circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
+        </div>
 
         {/* ─── SCRIPTURE ─── */}
         <section className="scripture" aria-label="Scripture">
           <blockquote>
-            &ldquo;For this reason a man shall leave his father and mother and be joined to his wife, and the two shall become one flesh. So they are no longer two but one flesh. What therefore God has joined together, let not man put asunder.&rdquo;
-            <cite>Mark 10:7&#8211;9</cite>
+            &ldquo;What God has joined together, let no one
+            {" "}<em>separate.</em>&rdquo;
+            <cite>Mark 10:9</cite>
           </blockquote>
         </section>
 
-        {/* ─── GETTING STARTED ─── */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
-          <div className="section-head">
-            <span className="section-tag">Planning Your Wedding</span>
-            <h2 className="section-h2">Getting Started</h2>
-          </div>
-
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <span className="section-tag section-tag-left" style={{ marginBottom: 8 }}>Step 1</span>
-              <h3>Contact Your Parish</h3>
-              <p>Reach out to your parish at least six months before your desired wedding date. Some parishes require up to a year of notice. Your priest or deacon will guide you through the entire process.</p>
-            </div>
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <span className="section-tag section-tag-left" style={{ marginBottom: 8 }}>Step 2</span>
-              <h3>Marriage Preparation</h3>
-              <p>All couples participate in a marriage preparation program. This may include meetings with your priest or deacon, a pre-marriage inventory (like FOCCUS), and an Engaged Encounter retreat or approved program.</p>
-            </div>
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <span className="section-tag section-tag-left" style={{ marginBottom: 8 }}>Step 3</span>
-              <h3>Planning the Liturgy</h3>
-              <p>Work with your parish to plan the wedding liturgy, including Scripture readings, music, and prayers. Your priest or deacon will help you understand the options for a wedding within Mass or outside of Mass.</p>
-            </div>
-          </div>
-        </section>
-
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        {/* ─── FLOURISH ─── */}
+        <div
+          className="flourish flourish-quatrefoil"
+          aria-hidden="true"
+          style={{ padding: "48px 0 8px" }}
+        >
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" />
+            <circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" />
+            <circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
         </div>
 
-        {/* ─── REQUIREMENTS ─── */}
-        <section className="page-content">
-          <div className="interior-grid interior-grid-2" style={{ alignItems: "start" }}>
+        {/* ─── PREPARATION STEPS ─── */}
+        <section className="steps" aria-labelledby="steps-title">
+          <div className="inner">
             <div>
-              <span className="section-tag section-tag-left">Requirements</span>
-              <h2 className="section-h2 section-h2-left">What You Need</h2>
-              <ul style={{ marginTop: 16 }}>
-                <li><strong>Freedom to Marry</strong> &mdash; Both parties must be free to marry in the Catholic Church. If either has been previously married, an annulment process must be completed before a new marriage can be celebrated.</li>
-                <li><strong>Baptism &amp; Sacramental Records</strong> &mdash; At least one party must be Catholic. A recently issued copy of your baptismal certificate (within six months) will be required.</li>
-                <li><strong>Marriage Preparation Program</strong> &mdash; Completion of a diocesan-approved marriage preparation program, which helps couples communicate effectively and build a strong spiritual foundation.</li>
-                <li><strong>Civil Marriage License</strong> &mdash; A valid marriage license from the State of Indiana is required before the wedding can be celebrated.</li>
-                <li><strong>Two Witnesses</strong> &mdash; At least two witnesses (often the best man and maid of honor) must be present at the ceremony.</li>
-              </ul>
+              <p className="kicker">Preparation</p>
+              <h2 id="steps-title">
+                Planning your <em>wedding.</em>
+              </h2>
+              <p className="note">
+                The Diocese of Evansville asks engaged couples to begin
+                preparation at least six months before the wedding. Some
+                parishes require up to a year. Reach out early — the process is
+                meant to serve your marriage, not just your ceremony.
+              </p>
             </div>
-
-            <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-              <div className="interior-card" style={{ cursor: "default" }}>
-                <h3>Interfaith Marriages</h3>
-                <p>
-                  When a Catholic marries a non-Catholic Christian or a person of another faith, permission or dispensation from the bishop may be required. Your parish priest or deacon will help you navigate this process. The Catholic party will be asked to reaffirm their commitment to raising children in the Catholic faith.
-                </p>
-              </div>
-
-              <div className="interior-card" style={{ cursor: "default" }}>
-                <h3>Annulments</h3>
-                <p>
-                  If you or your intended spouse has been previously married, an annulment (a declaration of nullity) may be necessary. An annulment does not deny that a relationship existed, but rather determines that a sacramental marriage was not validly established.
-                </p>
-                <p>
-                  Contact the diocesan Tribunal Office for guidance. The process is pastoral, confidential, and handled with great care and compassion.
-                </p>
-              </div>
+            <div className="faq">
+              {steps.map((step, i) => (
+                <details key={i} open={i === 0}>
+                  <summary>{step.title}</summary>
+                  <p>{step.detail}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
-        </div>
-
-        {/* ─── MARRIAGE ENRICHMENT ─── */}
+        {/* ─── SIX-MONTH INFO BLOCK ─── */}
         <section className="page-content" style={{ background: "var(--cream-lt)" }}>
-          <div className="section-head">
-            <span className="section-tag">Strengthening Your Marriage</span>
-            <h2 className="section-h2">Already Married?</h2>
-            <p className="section-desc">
-              The Diocese of Evansville offers resources and programs to help married couples grow in faith and love throughout every season of life.
+          <div className="info-block">
+            <h3>The Six-Month Preparation Requirement</h3>
+            <p>
+              The Diocese of Evansville requires a minimum of six months of
+              preparation before the celebration of the Sacrament of Matrimony.
+              This is not a bureaucratic formality — it is a pastoral practice
+              rooted in the Church&rsquo;s conviction that marriage is a
+              vocation worthy of serious discernment. During this time, couples
+              meet regularly with their priest or deacon, complete a pre-marriage
+              inventory such as FOCCUS, participate in an Engaged Encounter
+              retreat or approved program, and plan the wedding liturgy itself.
+              The goal is a marriage that is free, faithful, fruitful, and
+              total — not merely a wedding that is beautiful.
             </p>
           </div>
 
           <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Marriage Encounter Weekends</h3>
-              <p>A weekend retreat designed to help couples communicate more deeply and renew their commitment to one another.</p>
+            <div className="info-block" style={{ marginBottom: 0 }}>
+              <h3>Requirements at a Glance</h3>
+              <p style={{ marginBottom: 12 }}>
+                <strong>Freedom to Marry</strong> — Both parties must be free to
+                marry in the Catholic Church. If either has been previously
+                married, an annulment must be completed first.
+              </p>
+              <p style={{ marginBottom: 12 }}>
+                <strong>Baptismal Certificate</strong> — At least one party must
+                be Catholic. A recently issued baptismal certificate (within six
+                months) is required.
+              </p>
+              <p style={{ marginBottom: 12 }}>
+                <strong>Marriage Preparation</strong> — Completion of a
+                diocesan-approved program, including meetings with your priest or
+                deacon and either an Engaged Encounter retreat or approved
+                alternative.
+              </p>
+              <p style={{ marginBottom: 12 }}>
+                <strong>Civil License</strong> — A valid marriage license from
+                the State of Indiana is required before the wedding.
+              </p>
+              <p style={{ marginBottom: 0 }}>
+                <strong>Two Witnesses</strong> — At least two witnesses (often
+                the best man and maid of honor) must be present at the ceremony.
+              </p>
             </div>
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Anniversary Blessings</h3>
-              <p>Parishes offer special blessings for couples celebrating milestone anniversaries. The bishop celebrates an annual diocesan anniversary Mass.</p>
-            </div>
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Couples Prayer Groups</h3>
-              <p>Many parishes host small groups where married couples pray together, study Scripture, and support one another.</p>
-            </div>
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Marriage &amp; Family Life Office</h3>
-              <p>The diocesan Office of Marriage and Family Life provides workshops, counseling referrals, and resources for couples at every stage.</p>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+              <div className="info-block" style={{ marginBottom: 0 }}>
+                <h3>Interfaith Marriages</h3>
+                <p>
+                  When a Catholic marries a non-Catholic Christian or a person of
+                  another faith, permission or dispensation from the bishop may
+                  be required. Your parish priest or deacon will guide you
+                  through this process. The Catholic party will be asked to
+                  reaffirm their commitment to raising children in the Catholic
+                  faith.
+                </p>
+              </div>
+              <div className="info-block" style={{ marginBottom: 0 }}>
+                <h3>Annulments</h3>
+                <p>
+                  If you or your intended spouse has been previously married, an
+                  annulment (a declaration of nullity) may be necessary. An
+                  annulment does not deny that a relationship existed, but
+                  determines that a sacramental marriage was not validly
+                  established. Contact the diocesan Tribunal Office for
+                  guidance — the process is pastoral, confidential, and handled
+                  with great care and compassion.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ─── CTA ─── */}
-        <section className="page-content">
-          <div className="cta-block">
-            <h3>Begin Your Marriage Journey</h3>
-            <p>
-              Contact your parish to begin marriage preparation. Remember to reach out at least six months before your hoped-for wedding date.
-            </p>
-            <Link href="/parishes" className="btn btn-primary">
-              Find Your Parish
-            </Link>
+        {/* ─── FLOURISH ─── */}
+        <div
+          className="flourish flourish-quatrefoil"
+          aria-hidden="true"
+          style={{ padding: "48px 0 8px", background: "var(--cream-lt)" }}
+        >
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" />
+            <circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" />
+            <circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
+        </div>
+
+        {/* ─── ENRICHMENT ─── */}
+        <section className="steps" aria-labelledby="enrich-title">
+          <div className="inner">
+            <div>
+              <p className="kicker">Already married</p>
+              <h2 id="enrich-title">
+                Strengthening your <em>marriage.</em>
+              </h2>
+              <p className="note">
+                The sacrament does not end at the altar. The Diocese of
+                Evansville offers resources and programs to help married couples
+                grow in faith and love throughout every season of life.
+              </p>
+            </div>
+            <div className="faq">
+              {enrichment.map((item, i) => (
+                <details key={i} open={i === 0}>
+                  <summary>{item.title}</summary>
+                  <p>{item.detail}</p>
+                </details>
+              ))}
+            </div>
           </div>
+        </section>
+
+        {/* ─── CTA STRIP ─── */}
+        <section className="cta-strip">
+          <div className="flourish" aria-hidden="true" style={{ padding: "0 0 32px" }}>
+            <span className="line" />
+            <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+              <rect x="6" y="0" width="2" height="18" />
+              <rect x="2" y="5" width="10" height="2" />
+            </svg>
+            <span className="line" />
+          </div>
+          <p className="kicker">Next</p>
+          <h2>
+            Begin your marriage journey — <em>find your parish.</em>
+          </h2>
+          <Link href="/parishes" className="btn btn-primary">
+            Find your parish <span className="arrow" aria-hidden="true">→</span>
+          </Link>
         </section>
       </main>
     </>
   );
 }
+
+/* ─── Data ─── */
+
+const steps = [
+  {
+    title: "Contact Your Parish",
+    detail:
+      "Reach out to your parish at least six months before your desired wedding date. Some parishes require up to a year of notice. Your priest or deacon will guide you through the entire process and help you set a date.",
+  },
+  {
+    title: "Complete the Pre-Marriage Inventory",
+    detail:
+      "All couples participate in a pre-marriage inventory such as FOCCUS, which helps you and your priest or deacon identify strengths and areas for growth in your relationship. This is not a test — it is a conversation starter.",
+  },
+  {
+    title: "Attend an Engaged Encounter or Approved Program",
+    detail:
+      "The diocese requires participation in a marriage preparation program — typically an Engaged Encounter weekend retreat or an approved alternative. These programs cover communication, conflict resolution, finances, faith, and family planning.",
+  },
+  {
+    title: "Gather Required Documents",
+    detail:
+      "You will need a recently issued baptismal certificate (within six months), a civil marriage license from the State of Indiana, and confirmation records. If either party was previously married, annulment documentation is required. Your parish will provide a full checklist.",
+  },
+  {
+    title: "Plan the Wedding Liturgy",
+    detail:
+      "Work with your priest or deacon to plan the wedding liturgy, including Scripture readings, music, and prayers. You will choose whether to celebrate your wedding within a full Mass or in a Liturgy of the Word. Your parish may have a wedding coordinator to help with logistics.",
+  },
+];
+
+const enrichment = [
+  {
+    title: "Marriage Encounter Weekends",
+    detail:
+      "A weekend retreat designed to help couples communicate more deeply and renew their commitment to one another. Worldwide Marriage Encounter weekends are offered regularly throughout the diocese.",
+  },
+  {
+    title: "Anniversary Blessings",
+    detail:
+      "Parishes offer special blessings for couples celebrating milestone anniversaries. The bishop celebrates an annual diocesan anniversary Mass honoring couples across southwestern Indiana.",
+  },
+  {
+    title: "Couples Prayer Groups",
+    detail:
+      "Many parishes host small groups where married couples pray together, study Scripture, and support one another through the joys and challenges of married life.",
+  },
+  {
+    title: "Marriage & Family Life Office",
+    detail:
+      "The diocesan Office of Marriage and Family Life provides workshops, counseling referrals, and resources for couples at every stage — from newlyweds to empty nesters.",
+  },
+];

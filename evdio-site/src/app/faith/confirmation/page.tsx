@@ -31,129 +31,293 @@ export default function Confirmation() {
       </section>
 
       <main id="main-content">
-        {/* ─── TEACHING ─── */}
-        <section className="page-content">
-          <div className="section-head">
-            <span className="section-tag">Sealed with the Spirit</span>
-            <h2 className="section-h2">Strengthened for Mission</h2>
-            <p className="section-desc">
-              Confirmation completes the grace of Baptism. Through the anointing with Sacred Chrism and the laying on of hands by the bishop, the Holy Spirit strengthens us to spread and defend the faith by word and action, to confess the name of Christ boldly, and never to be ashamed of the Cross.
+        {/* ─── INTRO ─── */}
+        <section className="intro">
+          <div className="inner">
+            <p className="pull">
+              The Spirit descends not as spectacle but as <em>seal</em> — an
+              anointing that marks the baptized for a life of witness, courage,
+              and apostolic fire.
             </p>
+            <div className="body">
+              <p>
+                Confirmation completes the grace of Baptism. Through the laying
+                on of hands and the anointing with Sacred Chrism by the bishop,
+                the Holy Spirit strengthens the baptized to spread and defend the
+                faith by word and action, to confess the name of Christ boldly,
+                and never to be ashamed of the Cross. It is not a graduation
+                from the faith but a commissioning into it.
+              </p>
+              <p>
+                The sacrament has roots in the first Pentecost, when the
+                apostles received the power Jesus had promised them. That same
+                Spirit is given today to every candidate who presents
+                themselves — teenagers preparing in their parish, adults
+                completing the sacraments of initiation, anyone who comes
+                forward in freedom and faith.
+              </p>
+              <p>
+                In the Diocese of Evansville, Bishop Siegel celebrates
+                Confirmation at parishes across all four deaneries each year.
+                The liturgy is solemn and beautiful: the candidates are
+                presented, the bishop extends his hands in prayer, each
+                forehead is anointed with the oil of chrism, and the ancient
+                words are spoken: &ldquo;Be sealed with the Gift of the Holy
+                Spirit.&rdquo;
+              </p>
+              <p>
+                What follows on this page is a guide to the sacrament — what
+                it means, what it requires, and how to begin preparation. If
+                you have questions, your parish office is the place to start.
+              </p>
+            </div>
           </div>
         </section>
+
+        {/* ─── FLOURISH ─── */}
+        <div className="flourish flourish-quatrefoil" aria-hidden="true">
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" />
+            <circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" />
+            <circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
+        </div>
 
         {/* ─── SCRIPTURE ─── */}
         <section className="scripture" aria-label="Scripture">
           <blockquote>
-            &ldquo;But you will receive power when the Holy Spirit has come upon you, and you will be my witnesses in Jerusalem and in all Judea and Samaria, and to the end of the earth.&rdquo;
+            &ldquo;But you will receive power when the Holy Spirit has come upon
+            you, and you will be my witnesses in Jerusalem and in all Judea and
+            Samaria, and to the end of the <em>earth.</em>&rdquo;
             <cite>Acts 1:8</cite>
           </blockquote>
         </section>
 
-        {/* ─── GIFTS OF THE SPIRIT ─── */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
-          <div className="section-head">
-            <span className="section-tag">The Seven Gifts</span>
-            <h2 className="section-h2">Gifts of the Holy Spirit</h2>
-            <p className="section-desc">
-              In Confirmation, the Holy Spirit bestows seven gifts that empower us to live as faithful disciples of Christ.
-            </p>
-          </div>
-
-          <div className="interior-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", marginTop: 32 }}>
-            {["Wisdom", "Understanding", "Counsel", "Fortitude", "Knowledge", "Piety", "Fear of the Lord"].map(
-              (gift) => (
-                <div className="interior-card" key={gift} style={{ cursor: "default", textAlign: "center" }}>
-                  <h3>{gift}</h3>
-                </div>
-              )
-            )}
-          </div>
-        </section>
-
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        {/* ─── FLOURISH ─── */}
+        <div
+          className="flourish flourish-quatrefoil"
+          aria-hidden="true"
+          style={{ padding: "48px 0 8px", background: "var(--cream-lt)" }}
+        >
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" />
+            <circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" />
+            <circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
         </div>
 
-        {/* ─── PREPARATION ─── */}
+        {/* ─── WHAT TO EXPECT ─── */}
         <section className="page-content">
-          <div className="interior-grid interior-grid-2">
-            {/* Teens */}
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <span className="section-tag section-tag-left" style={{ marginBottom: 12 }}>Teens</span>
+          <div style={{ maxWidth: 1040, margin: "0 auto" }}>
+            <span className="section-tag section-tag-left">What to Expect</span>
+            <h2 className="section-h2 section-h2-left" style={{ marginBottom: 12 }}>
+              The seven gifts, the rite, the preparation
+            </h2>
+            <p style={{
+              fontSize: 17,
+              lineHeight: 1.7,
+              color: "var(--muted)",
+              maxWidth: 680,
+              marginBottom: 48,
+            }}>
+              Confirmation is not complicated, but it is serious. Here is what
+              the sacrament involves — and what the Church asks of candidates
+              who receive it.
+            </p>
+
+            {/* Gifts of the Spirit — info block */}
+            <div className="info-block">
+              <h3>The Seven Gifts of the Holy Spirit</h3>
+              <p>
+                In Confirmation, the Holy Spirit bestows seven gifts that
+                empower the baptized to live as faithful disciples of Christ.
+                They are not talents to be earned but graces to be received:
+              </p>
+              <p style={{ marginTop: 16 }}>
+                <strong style={{ color: "var(--navy)" }}>Wisdom</strong> — to
+                see as God sees.{" "}
+                <strong style={{ color: "var(--navy)" }}>Understanding</strong>{" "}
+                — to grasp the truths of faith.{" "}
+                <strong style={{ color: "var(--navy)" }}>Counsel</strong> — to
+                judge rightly in difficult moments.{" "}
+                <strong style={{ color: "var(--navy)" }}>Fortitude</strong> — to
+                stand firm when the cost is real.{" "}
+                <strong style={{ color: "var(--navy)" }}>Knowledge</strong> — to
+                know the world as God&rsquo;s creation.{" "}
+                <strong style={{ color: "var(--navy)" }}>Piety</strong> — to
+                worship with a son&rsquo;s or daughter&rsquo;s heart.{" "}
+                <strong style={{ color: "var(--navy)" }}>Fear of the Lord</strong>{" "}
+                — to stand in awe before the Holy.
+              </p>
+            </div>
+
+            {/* The Rite — prose block */}
+            <div style={{ marginBottom: 48 }}>
+              <h3 style={{
+                fontFamily: "var(--serif)",
+                fontSize: 26,
+                fontWeight: 400,
+                color: "var(--navy)",
+                marginBottom: 16,
+              }}>
+                The Rite of Confirmation
+              </h3>
+              <div className="prose">
+                <p>
+                  Confirmation is ordinarily celebrated within Mass by the
+                  diocesan bishop. Candidates are presented by name. The bishop
+                  extends his hands over them and prays that the Holy Spirit
+                  will come upon them with all seven gifts. Then each candidate
+                  approaches, accompanied by their sponsor.
+                </p>
+                <p>
+                  The bishop anoints the forehead of the candidate with Sacred
+                  Chrism — a mixture of olive oil and balsam consecrated at the
+                  Chrism Mass each Holy Thursday — and says:{" "}
+                  <em>&ldquo;Be sealed with the Gift of the Holy Spirit.&rdquo;</em>{" "}
+                  The candidate responds: <em>&ldquo;Amen.&rdquo;</em> The
+                  bishop then offers the sign of peace.
+                </p>
+              </div>
+            </div>
+
+            {/* Teen vs. Adult — two info blocks */}
+            <div className="info-block" style={{ marginBottom: 24 }}>
               <h3>Teen Confirmation</h3>
               <p>
-                In the Diocese of Evansville, teens typically receive Confirmation during high school. Preparation programs vary by parish but generally span one to two years and include catechesis, service projects, retreats, and spiritual mentoring.
+                In the Diocese of Evansville, teens typically receive
+                Confirmation during high school. Preparation programs vary by
+                parish but generally span one to two years and include
+                catechesis, service projects, retreats, and spiritual mentoring.
               </p>
-              <ul>
+              <ul style={{
+                paddingLeft: 20,
+                marginTop: 16,
+                fontSize: 15,
+                lineHeight: 1.75,
+                color: "var(--muted)",
+              }}>
                 <li>Participate in your parish&#8217;s Confirmation preparation program.</li>
                 <li>Choose a Confirmation sponsor who is a confirmed, practicing Catholic.</li>
-                <li>Select a Confirmation name &mdash; a saint whose life inspires you.</li>
+                <li>Select a Confirmation name — a saint whose life inspires you.</li>
                 <li>Complete required service hours as an expression of faith in action.</li>
                 <li>Attend a Confirmation retreat for spiritual preparation.</li>
               </ul>
             </div>
 
-            {/* Adults */}
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <span className="section-tag section-tag-left" style={{ marginBottom: 12 }}>Adults</span>
+            <div className="info-block">
               <h3>Adult Confirmation</h3>
               <p>
-                If you are an adult who was baptized Catholic but never received Confirmation, it is never too late. Many parishes offer adult Confirmation preparation, often in conjunction with the OCIA process or as a separate program.
+                If you are an adult who was baptized Catholic but never received
+                Confirmation, it is never too late. Many parishes offer adult
+                Confirmation preparation, often in conjunction with the OCIA
+                process or as a separate program.
               </p>
-              <ul>
+              <ul style={{
+                paddingLeft: 20,
+                marginTop: 16,
+                fontSize: 15,
+                lineHeight: 1.75,
+                color: "var(--muted)",
+              }}>
                 <li>Contact your parish to learn about adult Confirmation preparation.</li>
                 <li>Gather a copy of your baptismal certificate from the parish where you were baptized.</li>
                 <li>Adult Confirmation is often celebrated by the bishop at a special liturgy.</li>
                 <li>Preparation may be brief if you are already active in your faith life.</li>
               </ul>
-              <div style={{ marginTop: 24 }}>
+              <div style={{ marginTop: 20 }}>
                 <Link href="/faith/become-catholic" className="read-link">
-                  Learn about OCIA for adults &rarr;
+                  Learn about OCIA for adults →
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
-        </div>
-
-        {/* ─── SPONSOR INFO ─── */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
-          <div className="section-head">
-            <span className="section-tag">Choosing a Sponsor</span>
-            <h2 className="section-h2">Your Confirmation Sponsor</h2>
-          </div>
-
-          <div className="interior-card" style={{ cursor: "default", maxWidth: 720, margin: "0 auto" }}>
-            <p>
-              A Confirmation sponsor serves as a spiritual guide and role model. They stand with the candidate during the sacrament and commit to helping them live out their Catholic faith. Ideally, one of the candidate&rsquo;s baptismal godparents serves as the Confirmation sponsor, but another qualified person may be chosen.
-            </p>
-            <h4 style={{ fontWeight: 600, marginTop: 20, marginBottom: 10 }}>A sponsor must:</h4>
-            <ul>
-              <li>Be at least 16 years old and have received Baptism, Confirmation, and Eucharist.</li>
-              <li>Be a practicing Catholic who attends Mass regularly.</li>
-              <li>Not be the candidate&#8217;s parent.</li>
-              <li>Be willing to support the candidate&#8217;s spiritual growth.</li>
-            </ul>
+        {/* ─── STEPS / FAQ ─── */}
+        <section className="steps" aria-labelledby="steps-title">
+          <div className="inner">
+            <div>
+              <p className="kicker">Common questions</p>
+              <h2 id="steps-title">
+                Sponsors, names, <em>and readiness.</em>
+              </h2>
+              <p className="note">
+                Every parish has a priest or staff member ready to walk you
+                through the details. There is no wrong question.
+              </p>
+            </div>
+            <div className="faq">
+              {faqs.map((faq, i) => (
+                <details key={i} open={i === 0}>
+                  <summary>{faq.q}</summary>
+                  <p>{faq.a}</p>
+                </details>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* ─── CTA ─── */}
-        <section className="page-content">
-          <div className="cta-block">
-            <h3>Begin Your Confirmation Journey</h3>
-            <p>
-              Contact your parish to learn about Confirmation preparation programs. Bishop Siegel celebrates Confirmation at parishes across all four deaneries of the diocese each year.
-            </p>
-            <Link href="/parishes" className="btn btn-primary">
-              Find Your Parish
-            </Link>
+        {/* ─── CTA STRIP ─── */}
+        <section className="cta-strip">
+          <div className="flourish" aria-hidden="true" style={{ padding: "0 0 32px" }}>
+            <span className="line" />
+            <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+              <rect x="6" y="0" width="2" height="18" />
+              <rect x="2" y="5" width="10" height="2" />
+            </svg>
+            <span className="line" />
           </div>
+          <p className="kicker">Begin</p>
+          <h2>
+            Start your Confirmation <em>journey.</em>
+          </h2>
+          <Link href="/parishes" className="btn btn-primary">
+            Find your parish <span className="arrow" aria-hidden="true">→</span>
+          </Link>
         </section>
       </main>
     </>
   );
 }
+
+/* ─── Data ─── */
+
+const faqs = [
+  {
+    q: "What does a Confirmation sponsor do?",
+    a: "A Confirmation sponsor serves as a spiritual guide and role model. They stand with the candidate during the sacrament and commit to helping them live out their Catholic faith. Ideally, one of the candidate\u2019s baptismal godparents serves as the Confirmation sponsor, but another qualified person may be chosen.",
+  },
+  {
+    q: "Who is eligible to be a sponsor?",
+    a: "A sponsor must be at least 16 years old and have received Baptism, Confirmation, and Eucharist. They must be a practicing Catholic who attends Mass regularly and cannot be the candidate\u2019s parent. They should be willing to support the candidate\u2019s spiritual growth over the long term.",
+  },
+  {
+    q: "How do I choose a Confirmation name?",
+    a: "Candidates select the name of a saint whose life and witness inspire them. You might choose a saint who shares your vocation, who overcame struggles similar to yours, or whose virtues you want to cultivate. Your Confirmation name becomes part of your spiritual identity.",
+  },
+  {
+    q: "Can an adult who missed Confirmation still receive it?",
+    a: "Absolutely. If you were baptized Catholic but never confirmed, contact your parish. Many offer adult Confirmation preparation, sometimes through the OCIA process. Preparation is often shorter for adults who are already active in their faith.",
+  },
+  {
+    q: "When does Confirmation happen in the diocese?",
+    a: "Bishop Siegel celebrates Confirmation at parishes across all four deaneries each year, typically in the spring. Your parish will announce the date well in advance so candidates and families can prepare.",
+  },
+  {
+    q: "Is Confirmation required for marriage in the Church?",
+    a: "Yes. The Church asks that Catholics be confirmed before entering the Sacrament of Matrimony. If you were not confirmed as a teen, speak with the priest who is preparing you for marriage — arrangements can be made.",
+  },
+];
