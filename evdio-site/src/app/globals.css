@@ -1843,10 +1843,29 @@ a.give-btn:hover { background: #8b3a2d; }
 /* Section background variants — use these classes for visual rhythm */
 .section-cream { background: var(--cream-lt); }
 .section-warm { background: var(--cream-xlt); }
-/* CTA band — soft blue, NOT the same navy as header/footer */
+/* CTA band — soft blue, full-bleed */
 .section-navy {
   background: #1B3A5C; color: var(--cream);
   border: none;
+}
+/* Full-bleed colored sections — use as standalone <section>, not inside page-content */
+.section-band {
+  padding: 80px 40px;
+}
+.section-band > * {
+  max-width: 1360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Also support page-content.section-* for backward compat */
+.page-content.section-navy,
+.page-content.section-teal {
+  max-width: 100%;
+  padding: 80px 40px;
+}
+.page-content.section-cream,
+.page-content.section-warm {
+  max-width: 100%;
 }
 .section-navy .section-tag { color: var(--bgold); }
 .section-navy .section-h2 { color: var(--cream); }
@@ -1883,10 +1902,11 @@ a.give-btn:hover { background: #8b3a2d; }
   background: rgba(238,218,179,0.1); border-color: var(--cream);
 }
 
-/* Teal accent — softer than full teal, use sparingly */
+/* Teal accent — softer, full-bleed */
 .section-teal {
   background: #15627E; color: var(--cream);
   border: none;
+  max-width: none;
 }
 .section-teal .section-tag { color: var(--bgold); }
 .section-teal .section-h2 { color: var(--cream); }
