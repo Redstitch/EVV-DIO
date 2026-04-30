@@ -32,137 +32,133 @@ export default function Calendar() {
       </section>
 
       <main id="main-content">
-        {/* Liturgical Seasons */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="text-center mb-14">
-              <div className="section-label">The Liturgical Year</div>
-              <h2 className="section-title">Seasons of the Church</h2>
-              <p className="section-subtitle mx-auto">
-                The Catholic liturgical year unfolds the whole mystery of Christ, from His Incarnation through His Ascension, Pentecost, and the expectation of His return in glory.
-              </p>
-            </div>
+        {/* ─── LITURGICAL SEASONS ─── */}
+        <section className="page-content">
+          <div className="section-head">
+            <span className="section-tag">The Liturgical Year</span>
+            <h2 className="section-h2">Seasons of the Church</h2>
+            <p className="section-desc">
+              The Catholic liturgical year unfolds the whole mystery of Christ, from His Incarnation through His Ascension, Pentecost, and the expectation of His return in glory.
+            </p>
+          </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <SeasonCard
-                color="bg-[#5B3A8C]"
-                title="Advent"
-                period="Four weeks before Christmas"
-                desc="A season of joyful anticipation as we prepare for the coming of Christ at Christmas and His second coming at the end of time. The liturgical color is violet."
-              />
-              <SeasonCard
-                color="bg-white border-2 border-gold"
-                textColor="text-navy"
-                title="Christmas"
-                period="Dec 25 through the Baptism of the Lord"
-                desc="We celebrate the Incarnation — God becoming human in the person of Jesus Christ. The liturgical color is white or gold."
-              />
-              <SeasonCard
-                color="bg-[#2E7D32]"
-                title="Ordinary Time (I)"
-                period="After Epiphany through Ash Wednesday"
-                desc="A brief period of Ordinary Time focused on Christ's public ministry. The liturgical color is green, symbolizing hope and growth."
-              />
-              <SeasonCard
-                color="bg-[#5B3A8C]"
-                title="Lent"
-                period="Ash Wednesday through Holy Thursday"
-                desc="Forty days of prayer, fasting, and almsgiving in preparation for Easter. A season of conversion and renewal. The liturgical color is violet."
-              />
-              <SeasonCard
-                color="bg-white border-2 border-gold"
-                textColor="text-navy"
-                title="Easter"
-                period="Easter Sunday through Pentecost (50 days)"
-                desc="The most joyful season of the Church year, celebrating Christ's Resurrection from the dead. The liturgical color is white or gold."
-              />
-              <SeasonCard
-                color="bg-[#2E7D32]"
-                title="Ordinary Time (II)"
-                period="After Pentecost through the Solemnity of Christ the King"
-                desc="The longest season of the year, focused on the teachings and miracles of Christ. We grow in our discipleship as we await the coming of the Kingdom."
-              />
+          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+            <div className="interior-card" style={{ cursor: "default", borderTop: "4px solid #5B3A8C" }}>
+              <h3>Advent</h3>
+              <p style={{ fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--dgold)", marginBottom: 8 }}>Four weeks before Christmas</p>
+              <p>A season of joyful anticipation as we prepare for the coming of Christ at Christmas and His second coming at the end of time. The liturgical color is violet.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default", borderTop: "4px solid var(--dgold)" }}>
+              <h3>Christmas</h3>
+              <p style={{ fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--dgold)", marginBottom: 8 }}>Dec 25 through the Baptism of the Lord</p>
+              <p>We celebrate the Incarnation &mdash; God becoming human in the person of Jesus Christ. The liturgical color is white or gold.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default", borderTop: "4px solid #2E7D32" }}>
+              <h3>Ordinary Time (I)</h3>
+              <p style={{ fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--dgold)", marginBottom: 8 }}>After Epiphany through Ash Wednesday</p>
+              <p>A brief period of Ordinary Time focused on Christ&#8217;s public ministry. The liturgical color is green, symbolizing hope and growth.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default", borderTop: "4px solid #5B3A8C" }}>
+              <h3>Lent</h3>
+              <p style={{ fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--dgold)", marginBottom: 8 }}>Ash Wednesday through Holy Thursday</p>
+              <p>Forty days of prayer, fasting, and almsgiving in preparation for Easter. A season of conversion and renewal. The liturgical color is violet.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default", borderTop: "4px solid var(--dgold)" }}>
+              <h3>Easter</h3>
+              <p style={{ fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--dgold)", marginBottom: 8 }}>Easter Sunday through Pentecost (50 days)</p>
+              <p>The most joyful season of the Church year, celebrating Christ&#8217;s Resurrection from the dead. The liturgical color is white or gold.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default", borderTop: "4px solid #2E7D32" }}>
+              <h3>Ordinary Time (II)</h3>
+              <p style={{ fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--dgold)", marginBottom: 8 }}>After Pentecost through the Solemnity of Christ the King</p>
+              <p>The longest season of the year, focused on the teachings and miracles of Christ. We grow in our discipleship as we await the coming of the Kingdom.</p>
             </div>
           </div>
         </section>
 
-        {/* Holy Days of Obligation */}
-        <section className="section-padding bg-cream">
-          <div className="max-w-[960px] mx-auto">
-            <div className="text-center mb-14">
-              <div className="section-label">Holy Days of Obligation</div>
-              <h2 className="section-title">Days When Catholics Must Attend Mass</h2>
-              <p className="section-subtitle mx-auto">
-                In addition to every Sunday, Catholics in the United States are obligated to attend Mass on these holy days.
-              </p>
-            </div>
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <HolyDayCard
-                date="January 1"
-                title="Solemnity of Mary, Mother of God"
-              />
-              <HolyDayCard
-                date="40 days after Easter"
-                title="Ascension of the Lord"
-                note="Observed on a Thursday or transferred to the following Sunday depending on the diocese"
-              />
-              <HolyDayCard
-                date="August 15"
-                title="Assumption of the Blessed Virgin Mary"
-              />
-              <HolyDayCard
-                date="November 1"
-                title="All Saints' Day"
-              />
-              <HolyDayCard
-                date="December 8"
-                title="Immaculate Conception of the Blessed Virgin Mary"
-                note="Patronal feast of the United States"
-              />
-              <HolyDayCard
-                date="December 25"
-                title="The Nativity of the Lord (Christmas)"
-              />
-            </div>
+        {/* ─── HOLY DAYS OF OBLIGATION ─── */}
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="section-head">
+            <span className="section-tag">Holy Days of Obligation</span>
+            <h2 className="section-h2">Days When Catholics Must Attend Mass</h2>
+            <p className="section-desc">
+              In addition to every Sunday, Catholics in the United States are obligated to attend Mass on these holy days.
+            </p>
+          </div>
 
-            <div className="mt-8 bg-white rounded-xl p-6 border border-border text-center">
-              <p className="text-sm text-text-medium leading-relaxed">
-                <strong className="text-navy">Note:</strong> When a holy day falls on a Saturday or Monday, the obligation to attend Mass may be lifted by the bishops&rsquo; conference. Check with your parish for specific schedules each year.
-              </p>
+          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>January 1 &mdash; Solemnity of Mary, Mother of God</h3>
             </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>40 Days After Easter &mdash; Ascension of the Lord</h3>
+              <p>Observed on a Thursday or transferred to the following Sunday depending on the diocese.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>August 15 &mdash; Assumption of the Blessed Virgin Mary</h3>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>November 1 &mdash; All Saints&#8217; Day</h3>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>December 8 &mdash; Immaculate Conception of the Blessed Virgin Mary</h3>
+              <p>Patronal feast of the United States.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>December 25 &mdash; The Nativity of the Lord (Christmas)</h3>
+            </div>
+          </div>
+
+          <div className="info-block" style={{ marginTop: 32 }}>
+            <p>
+              <strong>Note:</strong> When a holy day falls on a Saturday or Monday, the obligation to attend Mass may be lifted by the bishops&rsquo; conference. Check with your parish for specific schedules each year.
+            </p>
           </div>
         </section>
 
-        {/* Key Dates */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[960px] mx-auto">
-            <div className="text-center mb-14">
-              <div className="section-label">2026 Key Dates</div>
-              <h2 className="section-title">Important Dates This Year</h2>
-            </div>
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              <DateCard month="Feb" day="18" title="Ash Wednesday" />
-              <DateCard month="Mar" day="29" title="Palm Sunday" />
-              <DateCard month="Apr" day="2" title="Holy Thursday" />
-              <DateCard month="Apr" day="3" title="Good Friday" />
-              <DateCard month="Apr" day="5" title="Easter Sunday" />
-              <DateCard month="May" day="14" title="Ascension of the Lord" />
-              <DateCard month="May" day="24" title="Pentecost Sunday" />
-              <DateCard month="Jun" day="14" title="Corpus Christi" />
-              <DateCard month="Nov" day="29" title="First Sunday of Advent" />
-            </div>
+        {/* ─── KEY DATES ─── */}
+        <section className="page-content">
+          <div className="section-head">
+            <span className="section-tag">2026 Key Dates</span>
+            <h2 className="section-h2">Important Dates This Year</h2>
+          </div>
+
+          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+            {[
+              { month: "Feb", day: "18", title: "Ash Wednesday" },
+              { month: "Mar", day: "29", title: "Palm Sunday" },
+              { month: "Apr", day: "2", title: "Holy Thursday" },
+              { month: "Apr", day: "3", title: "Good Friday" },
+              { month: "Apr", day: "5", title: "Easter Sunday" },
+              { month: "May", day: "14", title: "Ascension of the Lord" },
+              { month: "May", day: "24", title: "Pentecost Sunday" },
+              { month: "Jun", day: "14", title: "Corpus Christi" },
+              { month: "Nov", day: "29", title: "First Sunday of Advent" },
+            ].map((d) => (
+              <div className="interior-card" key={d.title} style={{ cursor: "default", display: "flex", alignItems: "center", gap: 16 }}>
+                <div style={{ background: "var(--navy)", borderRadius: 8, width: 56, height: 56, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <span style={{ fontSize: 10, fontWeight: 700, color: "var(--dgold)", textTransform: "uppercase", letterSpacing: "0.08em", lineHeight: 1 }}>{d.month}</span>
+                  <span style={{ fontSize: 20, fontWeight: 700, color: "#fff", lineHeight: 1, marginTop: 2 }}>{d.day}</span>
+                </div>
+                <h3 style={{ margin: 0 }}>{d.title}</h3>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="section-padding bg-navy text-white">
-          <div className="max-w-[800px] mx-auto text-center">
-            <h2 className="font-heading text-[clamp(28px,4vw,40px)] font-bold text-white leading-tight mb-4">
-              Find Mass Times Near You
-            </h2>
-            <p className="text-base text-white/70 mb-8 leading-relaxed max-w-[560px] mx-auto">
+        {/* ─── CTA ─── */}
+        <section className="page-content">
+          <div className="cta-block">
+            <h3>Find Mass Times Near You</h3>
+            <p>
               Check with your local parish for Mass schedules, including vigil Masses for Sundays and holy days of obligation.
             </p>
             <Link href="/parishes" className="btn btn-primary">
@@ -172,57 +168,5 @@ export default function Calendar() {
         </section>
       </main>
     </>
-  );
-}
-
-function SeasonCard({
-  color,
-  textColor,
-  title,
-  period,
-  desc,
-}: {
-  color: string;
-  textColor?: string;
-  title: string;
-  period: string;
-  desc: string;
-}) {
-  return (
-    <div className="bg-white rounded-xl border border-border shadow-[var(--shadow-soft)] overflow-hidden">
-      <div className={`${color} p-4 flex items-center gap-3`}>
-        <h3 className={`font-heading text-xl font-bold ${textColor || "text-white"}`}>{title}</h3>
-      </div>
-      <div className="p-6">
-        <div className="text-xs font-semibold text-gold tracking-wider uppercase mb-2">{period}</div>
-        <p className="text-sm text-text-medium leading-relaxed">{desc}</p>
-      </div>
-    </div>
-  );
-}
-
-function HolyDayCard({ date, title, note }: { date: string; title: string; note?: string }) {
-  return (
-    <div className="bg-white rounded-xl p-5 border border-border shadow-[var(--shadow-soft)] flex items-start gap-4">
-      <div className="flex-shrink-0">
-        <div className="text-xs font-bold text-gold tracking-wider uppercase">{date}</div>
-      </div>
-      <div>
-        <h3 className="font-heading text-lg font-bold text-navy leading-tight">{title}</h3>
-        {note && <p className="text-xs text-text-light mt-1">{note}</p>}
-      </div>
-    </div>
-  );
-}
-
-function DateCard({ month, day, title }: { month: string; day: string; title: string }) {
-  return (
-    <div className="bg-cream rounded-xl p-5 border border-border flex items-center gap-4">
-      <div className="bg-navy rounded-lg w-14 h-14 flex flex-col items-center justify-center flex-shrink-0">
-        <div className="text-[10px] font-bold text-gold uppercase tracking-wider leading-none">{month}</div>
-        <div className="font-heading text-xl font-bold text-white leading-none mt-0.5">{day}</div>
-      </div>
-      <h3 className="font-heading text-base font-bold text-navy leading-tight">{title}</h3>
-    </div>
   );
 }

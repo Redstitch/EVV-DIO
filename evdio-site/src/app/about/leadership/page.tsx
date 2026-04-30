@@ -96,128 +96,102 @@ export default function LeadershipPage() {
 
       <main id="main-content">
         {/* Leadership Team */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[1080px] mx-auto">
-            <div className="section-label text-left">Senior Leadership</div>
-            <h2 className="section-title text-left">Diocesan Leadership Team</h2>
-            <p className="text-base text-text-medium leading-relaxed mb-10 max-w-[640px]">
-              The Catholic Center in Evansville serves as the administrative hub of the diocese. Our leadership team works collaboratively to support the Bishop&rsquo;s vision and serve our 45 parishes, 26 schools, and ministries.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {leaders.map((leader) => (
-                <div
-                  key={leader.name}
-                  className="bg-cream rounded-xl p-6 border border-border hover:border-gold/30 transition-colors"
-                >
-                  <div className="w-14 h-14 rounded-full bg-navy/[0.08] flex items-center justify-center mb-4">
-                    <svg viewBox="0 0 24 24" className="w-6 h-6 fill-navy" aria-hidden="true">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-heading text-xl font-bold text-navy mb-1">
-                    {leader.name}
-                  </h3>
-                  <p className="text-sm font-semibold text-blue mb-3">{leader.title}</p>
-                  <p className="text-sm text-text-medium leading-relaxed">
-                    {leader.description}
-                  </p>
-                  {leader.link && (
-                    <Link
-                      href={leader.link}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue mt-4 hover:text-navy transition-colors"
-                    >
-                      Read Full Bio
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        className="w-3.5 h-3.5"
-                        aria-hidden="true"
-                      >
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <polyline points="12 5 19 12 12 19" />
-                      </svg>
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </div>
+        <div className="page-content">
+          <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
+            <span className="section-tag section-tag-left">Senior Leadership</span>
+            <h2 className="section-h2 section-h2-left">Diocesan Leadership Team</h2>
           </div>
-        </section>
+          <p style={{ marginBottom: 40, maxWidth: 640 }}>
+            The Catholic Center in Evansville serves as the administrative hub of the diocese. Our leadership team works collaboratively to support the Bishop&rsquo;s vision and serve our 45 parishes, 26 schools, and ministries.
+          </p>
+
+          <div className="interior-grid interior-grid-2">
+            {leaders.map((leader) => (
+              <div key={leader.name} className="info-block">
+                <h3>{leader.name}</h3>
+                <p style={{ fontSize: 13, fontWeight: 600, color: "var(--blue)", marginBottom: 12 }}>{leader.title}</p>
+                <p>{leader.description}</p>
+                {leader.link && (
+                  <Link
+                    href={leader.link}
+                    style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "var(--blue)", marginTop: 16 }}
+                  >
+                    Read Full Bio
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" style={{ width: 14, height: 14 }} aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
         {/* Consultative Bodies */}
-        <section className="section-padding bg-cream">
-          <div className="max-w-[1080px] mx-auto">
-            <div className="section-label">Governance</div>
-            <h2 className="section-title">Consultative Bodies</h2>
-            <p className="section-subtitle">
-              These councils and bodies advise the Bishop on matters of pastoral life, finances, and governance throughout the diocese.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-              {consultativeGroups.map((group) => (
-                <div
-                  key={group.name}
-                  className="bg-white rounded-xl p-6 border border-border"
-                >
-                  <h3 className="font-heading text-xl font-bold text-navy mb-3">
-                    {group.name}
-                  </h3>
-                  <p className="text-sm text-text-medium leading-relaxed">
-                    {group.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+        <div className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="section-head">
+            <span className="section-tag">Governance</span>
+            <h2 className="section-h2">Consultative Bodies</h2>
           </div>
-        </section>
+          <p style={{ textAlign: "center", maxWidth: 560, margin: "0 auto 40px" }}>
+            These councils and bodies advise the Bishop on matters of pastoral life, finances, and governance throughout the diocese.
+          </p>
+          <div className="interior-grid interior-grid-2">
+            {consultativeGroups.map((group) => (
+              <div key={group.name} className="interior-card" style={{ cursor: "default" }}>
+                <h3>{group.name}</h3>
+                <p>{group.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
         {/* Four Deaneries */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[1080px] mx-auto">
-            <div className="section-label">Structure</div>
-            <h2 className="section-title">Four Deaneries</h2>
-            <p className="section-subtitle">
-              The diocese is organized into four deaneries, each led by a dean who coordinates pastoral activity and represents the parishes in that region.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-              {[
-                { name: "Evansville Deanery", counties: "Vanderburgh County", parishes: "16 parishes" },
-                { name: "East Deanery", counties: "Warrick, Spencer, Perry Counties", parishes: "11 parishes" },
-                { name: "North Deanery", counties: "Gibson, Pike, Dubois, Martin Counties", parishes: "10 parishes" },
-                { name: "West Deanery", counties: "Posey, Gibson, Knox, Daviess, Sullivan Counties", parishes: "8 parishes" },
-              ].map((deanery) => (
-                <div key={deanery.name} className="bg-cream rounded-xl p-6 border border-border text-center">
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
-                    <svg viewBox="0 0 24 24" className="w-5 h-5 fill-gold" aria-hidden="true">
-                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-heading text-lg font-bold text-navy mb-1">{deanery.name}</h3>
-                  <p className="text-xs text-text-light mb-1">{deanery.counties}</p>
-                  <p className="text-sm font-semibold text-blue">{deanery.parishes}</p>
-                </div>
-              ))}
-            </div>
+        <div className="page-content">
+          <div className="section-head">
+            <span className="section-tag">Structure</span>
+            <h2 className="section-h2">Four Deaneries</h2>
           </div>
-        </section>
+          <p style={{ textAlign: "center", maxWidth: 560, margin: "0 auto 40px" }}>
+            The diocese is organized into four deaneries, each led by a dean who coordinates pastoral activity and represents the parishes in that region.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
+            {[
+              { name: "Evansville Deanery", counties: "Vanderburgh County", parishes: "16 parishes" },
+              { name: "East Deanery", counties: "Warrick, Spencer, Perry Counties", parishes: "11 parishes" },
+              { name: "North Deanery", counties: "Gibson, Pike, Dubois, Martin Counties", parishes: "10 parishes" },
+              { name: "West Deanery", counties: "Posey, Gibson, Knox, Daviess, Sullivan Counties", parishes: "8 parishes" },
+            ].map((deanery) => (
+              <div key={deanery.name} className="info-block" style={{ textAlign: "center" }}>
+                <h3>{deanery.name}</h3>
+                <p style={{ fontSize: 12, marginBottom: 4 }}>{deanery.counties}</p>
+                <p style={{ fontWeight: 600, color: "var(--blue)" }}>{deanery.parishes}</p>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* CTA */}
-        <section className="bg-navy py-16 px-8">
-          <div className="max-w-[900px] mx-auto text-center">
-            <h2 className="font-heading text-[clamp(24px,3vw,36px)] font-bold text-white leading-tight mb-4">
-              Contact Our Leadership Team
-            </h2>
-            <p className="text-base text-white/70 mb-8 max-w-[560px] mx-auto leading-relaxed">
+        <div className="page-content">
+          <div className="cta-block">
+            <h3>Contact Our Leadership Team</h3>
+            <p>
               Reach the Catholic Center to connect with any member of our diocesan leadership.
             </p>
             <Link href="/about/contact" className="btn btn-primary">
               Contact the Catholic Center
             </Link>
           </div>
-        </section>
+        </div>
       </main>
     </>
   );

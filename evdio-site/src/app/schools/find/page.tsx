@@ -68,67 +68,87 @@ export default function FindSchool() {
 
       <main id="main-content">
         {/* High Schools */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="text-center mb-12">
-              <div className="section-label">Grades 9–12</div>
-              <h2 className="section-title">High Schools</h2>
-              <p className="section-subtitle mx-auto">
-                Four college-preparatory high schools across the diocese, each rooted in Catholic identity, competitive academics, and vibrant student life.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {highSchools.map((school) => (
-                <SchoolCard key={`${school.name}-${school.city}`} name={school.name} city={school.city} />
-              ))}
-            </div>
+        <section className="page-content">
+          <div className="section-head">
+            <span className="section-tag">Grades 9-12</span>
+            <h2 className="section-h2">High Schools</h2>
+            <p className="section-desc">
+              Four college-preparatory high schools across the diocese, each rooted in Catholic identity, competitive academics, and vibrant student life.
+            </p>
+          </div>
+
+          <div className="interior-grid interior-grid-2">
+            {highSchools.map((school) => (
+              <div key={`${school.name}-${school.city}`} className="interior-card" style={{ cursor: "default" }}>
+                <h3>{school.name}</h3>
+                <p>{school.city}, Indiana</p>
+              </div>
+            ))}
           </div>
         </section>
+
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
         {/* Elementary / Middle */}
-        <section className="section-padding bg-cream">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="text-center mb-12">
-              <div className="section-label">Pre-K through Grade 8</div>
-              <h2 className="section-title">Elementary &amp; Middle Schools</h2>
-              <p className="section-subtitle mx-auto">
-                Seventeen combined Pre-K–8 schools building a foundation of faith, academics, and character from the earliest years through middle school.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {elementaryMiddleSchools.map((school) => (
-                <SchoolCard key={`${school.name}-${school.city}`} name={school.name} city={school.city} />
-              ))}
-            </div>
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="section-head">
+            <span className="section-tag">Pre-K through Grade 8</span>
+            <h2 className="section-h2">Elementary &amp; Middle Schools</h2>
+            <p className="section-desc">
+              Seventeen combined Pre-K-8 schools building a foundation of faith, academics, and character from the earliest years through middle school.
+            </p>
+          </div>
+
+          <div className="interior-grid interior-grid-3">
+            {elementaryMiddleSchools.map((school) => (
+              <div key={`${school.name}-${school.city}`} className="interior-card" style={{ cursor: "default" }}>
+                <h3>{school.name}</h3>
+                <p>{school.city}, Indiana</p>
+              </div>
+            ))}
           </div>
         </section>
+
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
         {/* Elementary Only */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="text-center mb-12">
-              <div className="section-label">Pre-K through Grade 5</div>
-              <h2 className="section-title">Elementary Schools</h2>
-              <p className="section-subtitle mx-auto">
-                Five elementary schools serving younger students with small class sizes and a strong sense of community.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {elementarySchools.map((school) => (
-                <SchoolCard key={`${school.name}-${school.city}`} name={school.name} city={school.city} />
-              ))}
-            </div>
+        <section className="page-content">
+          <div className="section-head">
+            <span className="section-tag">Pre-K through Grade 5</span>
+            <h2 className="section-h2">Elementary Schools</h2>
+            <p className="section-desc">
+              Five elementary schools serving younger students with small class sizes and a strong sense of community.
+            </p>
+          </div>
+
+          <div className="interior-grid interior-grid-3">
+            {elementarySchools.map((school) => (
+              <div key={`${school.name}-${school.city}`} className="interior-card" style={{ cursor: "default" }}>
+                <h3>{school.name}</h3>
+                <p>{school.city}, Indiana</p>
+              </div>
+            ))}
           </div>
         </section>
 
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
+
         {/* Map CTA */}
-        <section className="section-padding bg-cream">
-          <div className="max-w-[800px] mx-auto text-center">
-            <div className="section-label">Visual Guide</div>
-            <h2 className="section-title">See All Schools on a Map</h2>
-            <p className="text-base text-text-medium leading-relaxed mb-8 max-w-[560px] mx-auto">
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="section-head">
+            <span className="section-tag">Visual Guide</span>
+            <h2 className="section-h2">See All Schools on a Map</h2>
+            <p className="section-desc">
               View all 26 Catholic schools plotted on an interactive map of the Diocese of Evansville. Find the school closest to your home.
             </p>
+          </div>
+          <div style={{ textAlign: "center" }}>
             <Link href="/schools/map" className="btn btn-primary">
               View Schools Map
             </Link>
@@ -136,19 +156,17 @@ export default function FindSchool() {
         </section>
 
         {/* CTA */}
-        <section className="section-padding bg-navy text-white">
-          <div className="max-w-[800px] mx-auto text-center">
-            <h2 className="font-heading text-[clamp(28px,4vw,40px)] font-bold text-white leading-tight mb-4">
-              Ready to Visit?
-            </h2>
-            <p className="text-base text-white/70 mb-8 leading-relaxed max-w-[560px] mx-auto">
+        <section className="page-content">
+          <div className="cta-block">
+            <h3>Ready to Visit?</h3>
+            <p>
               Enrollment happens at each school. Contact the school directly to schedule a tour or attend an upcoming open house.
             </p>
-            <div className="flex gap-4 flex-wrap justify-center">
+            <div className="btn-row">
               <Link href="/schools/enroll" className="btn btn-primary">
                 Inquire About Enrollment
               </Link>
-              <Link href="/schools/tuition" className="btn btn-outline" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
+              <Link href="/schools/tuition" className="btn btn-secondary">
                 Tuition Assistance
               </Link>
             </div>
@@ -156,14 +174,5 @@ export default function FindSchool() {
         </section>
       </main>
     </>
-  );
-}
-
-function SchoolCard({ name, city }: { name: string; city: string }) {
-  return (
-    <div className="bg-white rounded-xl border border-border p-5 shadow-[var(--shadow-soft)] hover:border-gold/30 transition-colors">
-      <h3 className="font-heading text-base font-bold text-navy mb-1 leading-tight">{name}</h3>
-      <p className="text-xs text-text-light">{city}, Indiana</p>
-    </div>
   );
 }

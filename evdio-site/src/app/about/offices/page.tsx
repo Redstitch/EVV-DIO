@@ -156,70 +156,55 @@ export default function OfficesPage() {
       </section>
 
       <main id="main-content">
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[1080px] mx-auto">
-            <div className="section-label text-left">Catholic Center</div>
-            <h2 className="section-title text-left">Serving Our Diocese</h2>
-            <p className="text-base text-text-medium leading-relaxed mb-4 max-w-[680px]">
-              The Catholic Center at 4200 N. Kentucky Ave., Evansville, IN 47711 serves as the administrative hub of the diocese. Our offices coordinate resources, training, and support for parishes, schools, and ministries across all 12 counties.
-            </p>
-            <p className="text-sm text-text-light mb-10">
-              General Inquiries: <a href="tel:8124245536" className="text-blue hover:text-navy font-semibold transition-colors">(812) 424-5536</a>
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {offices.map((office) => (
-                <div
-                  key={office.name}
-                  className="bg-cream rounded-xl p-6 border border-border hover:border-gold/30 transition-colors"
-                >
-                  <h3 className="font-heading text-lg font-bold text-navy mb-2">
-                    {office.name}
-                  </h3>
-                  <p className="text-sm text-text-medium leading-relaxed mb-3">
-                    {office.description}
-                  </p>
-                  <div className="flex flex-col gap-1.5">
-                    <a
-                      href={`mailto:${office.contact}`}
-                      className="text-xs font-semibold text-blue hover:text-navy transition-colors"
-                    >
-                      {office.contact}
-                    </a>
-                    {office.link && (
-                      <Link
-                        href={office.link.href}
-                        className="text-xs font-semibold text-gold hover:text-navy transition-colors"
-                      >
-                        {office.link.label}
-                      </Link>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
+        <div className="page-content">
+          <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
+            <span className="section-tag section-tag-left">Catholic Center</span>
+            <h2 className="section-h2 section-h2-left">Serving Our Diocese</h2>
           </div>
-        </section>
+          <p style={{ marginBottom: 16, maxWidth: 680 }}>
+            The Catholic Center at 4200 N. Kentucky Ave., Evansville, IN 47711 serves as the administrative hub of the diocese. Our offices coordinate resources, training, and support for parishes, schools, and ministries across all 12 counties.
+          </p>
+          <p style={{ fontSize: 14, color: "var(--muted)", marginBottom: 40 }}>
+            General Inquiries: <a href="tel:8124245536" style={{ color: "var(--blue)", fontWeight: 600 }}>(812) 424-5536</a>
+          </p>
+
+          <div className="interior-grid interior-grid-2">
+            {offices.map((office) => (
+              <div key={office.name} className="info-block">
+                <h3>{office.name}</h3>
+                <p style={{ marginBottom: 12 }}>{office.description}</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                  <a href={`mailto:${office.contact}`} style={{ fontSize: 13, fontWeight: 600, color: "var(--blue)" }}>
+                    {office.contact}
+                  </a>
+                  {office.link && (
+                    <Link href={office.link.href} style={{ fontSize: 13, fontWeight: 600, color: "var(--dgold)" }}>
+                      {office.link.label}
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* CTA */}
-        <section className="bg-navy py-16 px-8">
-          <div className="max-w-[900px] mx-auto text-center">
-            <h2 className="font-heading text-[clamp(24px,3vw,36px)] font-bold text-white leading-tight mb-4">
-              Need Help Finding the Right Office?
-            </h2>
-            <p className="text-base text-white/70 mb-8 max-w-[560px] mx-auto leading-relaxed">
+        <div className="page-content">
+          <div className="cta-block">
+            <h3>Need Help Finding the Right Office?</h3>
+            <p>
               Call the Catholic Center and our front desk team will connect you with the right department.
             </p>
-            <div className="flex gap-4 flex-wrap justify-center">
+            <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
               <Link href="/about/contact" className="btn btn-primary">
                 Contact Us
               </Link>
-              <Link href="/about/staff-directory" className="btn btn-outline" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
+              <Link href="/about/staff-directory" className="btn btn-outline">
                 Staff Directory
               </Link>
             </div>
           </div>
-        </section>
+        </div>
       </main>
     </>
   );

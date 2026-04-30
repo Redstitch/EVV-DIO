@@ -33,153 +33,183 @@ export default function Tuition() {
 
       <main id="main-content">
         {/* Overview */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[960px] mx-auto">
-            <div className="text-center mb-14">
-              <div className="section-label">Affordability</div>
-              <h2 className="section-title">More Affordable Than You Think</h2>
-              <p className="text-base text-text-medium leading-relaxed max-w-[680px] mx-auto">
-                Many families are surprised to learn how affordable Catholic education can be. Through a combination of parish support, state vouchers, scholarships, and financial aid, the vast majority of families pay significantly less than the published tuition rate. Last year, the diocese awarded over <strong className="text-navy">850 scholarships</strong> to help students attend Catholic schools.
-              </p>
-            </div>
+        <section className="page-content">
+          <div className="section-head">
+            <span className="section-tag">Affordability</span>
+            <h2 className="section-h2">More Affordable Than You Think</h2>
+            <p className="section-desc">
+              Many families are surprised to learn how affordable Catholic education can be. Through a combination of parish support, state vouchers, scholarships, and financial aid, the vast majority of families pay significantly less than the published tuition rate. Last year, the diocese awarded over <strong>850 scholarships</strong> to help students attend Catholic schools.
+            </p>
+          </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-              <StatCard number="850+" label="Scholarships Awarded" />
-              <StatCard number="$2.8M" label="Aid Distributed" />
-              <StatCard number="72%" label="Families Receiving Aid" />
-              <StatCard number="$0" label="Net Cost for Many" />
+          <div className="interior-grid interior-grid-2" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
+            <div className="info-block" style={{ textAlign: "center" }}>
+              <div style={{ fontSize: "clamp(28px,3.5vw,44px)", fontWeight: 700, lineHeight: 1 }}>850+</div>
+              <div style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginTop: 4 }}>Scholarships Awarded</div>
+            </div>
+            <div className="info-block" style={{ textAlign: "center" }}>
+              <div style={{ fontSize: "clamp(28px,3.5vw,44px)", fontWeight: 700, lineHeight: 1 }}>$2.8M</div>
+              <div style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginTop: 4 }}>Aid Distributed</div>
+            </div>
+            <div className="info-block" style={{ textAlign: "center" }}>
+              <div style={{ fontSize: "clamp(28px,3.5vw,44px)", fontWeight: 700, lineHeight: 1 }}>72%</div>
+              <div style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginTop: 4 }}>Families Receiving Aid</div>
+            </div>
+            <div className="info-block" style={{ textAlign: "center" }}>
+              <div style={{ fontSize: "clamp(28px,3.5vw,44px)", fontWeight: 700, lineHeight: 1 }}>$0</div>
+              <div style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginTop: 4 }}>Net Cost for Many</div>
             </div>
           </div>
         </section>
+
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
         {/* Assistance Types */}
-        <section className="section-padding bg-cream">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="text-center mb-14">
-              <div className="section-label">Options Available</div>
-              <h2 className="section-title">How Families Pay for Catholic School</h2>
-            </div>
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="section-head">
+            <span className="section-tag">Options Available</span>
+            <h2 className="section-h2">How Families Pay for Catholic School</h2>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <AidCard
-                title="Indiana Choice Scholarship (Voucher)"
-                desc="Indiana's School Choice Scholarship Program is the largest state-funded voucher program in the country. Eligible families can receive state funding to cover most or all of Catholic school tuition. Eligibility is based on household income and other criteria. Many families who have never attended a public school now qualify under expanded eligibility."
-                highlight="This is the single largest source of tuition assistance for most families."
-              />
-              <AidCard
-                title="Tax Credit Scholarships (SGO)"
-                desc="The Indiana Scholarship Granting Organization (SGO) program allows individuals and businesses to receive a state tax credit for donations that fund scholarships for students attending Catholic schools. These need-based scholarships can cover a significant portion of tuition for qualifying families."
-                highlight="Donations to the diocesan SGO receive a 50% Indiana state tax credit."
-              />
-              <AidCard
-                title="Parish Tuition Support"
-                desc="Most parishes in the Diocese of Evansville subsidize the cost of Catholic education for registered parishioners. This means that the tuition rate for parishioners is already reduced from the actual per-pupil cost of education. Active parish registration and regular Sunday Mass attendance are typically expected."
-                highlight="Parishioner rates are significantly lower than non-parishioner rates."
-              />
-              <AidCard
-                title="Diocesan Scholarship Fund"
-                desc="The Catholic Ministries Appeal and private donors fund the diocesan scholarship program, which provides need-based and merit-based scholarships to students in Catholic schools across the diocese. Applications are reviewed annually."
-                highlight="Funded by the generosity of Catholic Ministries Appeal donors."
-              />
+          <div className="interior-grid interior-grid-2">
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Indiana Choice Scholarship (Voucher)</h3>
+              <p>
+                Indiana&rsquo;s School Choice Scholarship Program is the largest state-funded voucher program in the country. Eligible families can receive state funding to cover most or all of Catholic school tuition. Eligibility is based on household income and other criteria. Many families who have never attended a public school now qualify under expanded eligibility.
+              </p>
+              <p style={{ background: "var(--gold-pale)", borderRadius: 8, padding: 12, fontWeight: 600, marginTop: 16 }}>
+                This is the single largest source of tuition assistance for most families.
+              </p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Tax Credit Scholarships (SGO)</h3>
+              <p>
+                The Indiana Scholarship Granting Organization (SGO) program allows individuals and businesses to receive a state tax credit for donations that fund scholarships for students attending Catholic schools. These need-based scholarships can cover a significant portion of tuition for qualifying families.
+              </p>
+              <p style={{ background: "var(--gold-pale)", borderRadius: 8, padding: 12, fontWeight: 600, marginTop: 16 }}>
+                Donations to the diocesan SGO receive a 50% Indiana state tax credit.
+              </p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Parish Tuition Support</h3>
+              <p>
+                Most parishes in the Diocese of Evansville subsidize the cost of Catholic education for registered parishioners. This means that the tuition rate for parishioners is already reduced from the actual per-pupil cost of education. Active parish registration and regular Sunday Mass attendance are typically expected.
+              </p>
+              <p style={{ background: "var(--gold-pale)", borderRadius: 8, padding: 12, fontWeight: 600, marginTop: 16 }}>
+                Parishioner rates are significantly lower than non-parishioner rates.
+              </p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Diocesan Scholarship Fund</h3>
+              <p>
+                The Catholic Ministries Appeal and private donors fund the diocesan scholarship program, which provides need-based and merit-based scholarships to students in Catholic schools across the diocese. Applications are reviewed annually.
+              </p>
+              <p style={{ background: "var(--gold-pale)", borderRadius: 8, padding: 12, fontWeight: 600, marginTop: 16 }}>
+                Funded by the generosity of Catholic Ministries Appeal donors.
+              </p>
             </div>
           </div>
         </section>
+
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
         {/* Additional Options */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="text-center mb-14">
-              <div className="section-label">Additional Options</div>
-              <h2 className="section-title">More Ways to Make It Work</h2>
-            </div>
+        <section className="page-content">
+          <div className="section-head">
+            <span className="section-tag">Additional Options</span>
+            <h2 className="section-h2">More Ways to Make It Work</h2>
+          </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <OptionCard
-                title="Payment Plans"
-                desc="Most schools offer flexible monthly payment plans so families can spread tuition payments across the school year rather than paying a lump sum."
-              />
-              <OptionCard
-                title="Multi-Child Discounts"
-                desc="Families with more than one child enrolled in a Catholic school typically receive a discount on tuition for the second, third, and additional children."
-              />
-              <OptionCard
-                title="Scrip Programs"
-                desc="Many schools offer scrip (gift card) programs where families earn tuition credits by purchasing everyday items through the school's program."
-              />
-              <OptionCard
-                title="Employer Tuition Benefits"
-                desc="Some employers in the Evansville area offer tuition assistance or educational benefits. Check with your employer's HR department."
-              />
-              <OptionCard
-                title="Education Savings Accounts"
-                desc="Indiana's Education Scholarship Account program may provide additional funding options for families who meet certain eligibility criteria."
-              />
-              <OptionCard
-                title="Fundraising & Events"
-                desc="Schools host annual fundraisers, galas, and events that help offset operational costs, which in turn helps keep tuition affordable for all families."
-              />
+          <div className="interior-grid interior-grid-3">
+            <div className="info-block">
+              <h3>Payment Plans</h3>
+              <p>Most schools offer flexible monthly payment plans so families can spread tuition payments across the school year rather than paying a lump sum.</p>
+            </div>
+            <div className="info-block">
+              <h3>Multi-Child Discounts</h3>
+              <p>Families with more than one child enrolled in a Catholic school typically receive a discount on tuition for the second, third, and additional children.</p>
+            </div>
+            <div className="info-block">
+              <h3>Scrip Programs</h3>
+              <p>Many schools offer scrip (gift card) programs where families earn tuition credits by purchasing everyday items through the school&rsquo;s program.</p>
+            </div>
+            <div className="info-block">
+              <h3>Employer Tuition Benefits</h3>
+              <p>Some employers in the Evansville area offer tuition assistance or educational benefits. Check with your employer&rsquo;s HR department.</p>
+            </div>
+            <div className="info-block">
+              <h3>Education Savings Accounts</h3>
+              <p>Indiana&rsquo;s Education Scholarship Account program may provide additional funding options for families who meet certain eligibility criteria.</p>
+            </div>
+            <div className="info-block">
+              <h3>Fundraising &amp; Events</h3>
+              <p>Schools host annual fundraisers, galas, and events that help offset operational costs, which in turn helps keep tuition affordable for all families.</p>
             </div>
           </div>
         </section>
 
-        {/* How to Apply */}
-        <section className="section-padding bg-cream">
-          <div className="max-w-[800px] mx-auto">
-            <div className="text-center mb-10">
-              <div className="section-label">Get Started</div>
-              <h2 className="section-title">How to Apply for Assistance</h2>
-            </div>
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
-            <div className="bg-white rounded-2xl border border-border p-8 shadow-[var(--shadow-soft)]">
-              <ol className="space-y-5 text-sm text-text-medium">
-                <li className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-navy text-gold font-heading font-bold text-sm flex items-center justify-center flex-shrink-0">1</div>
-                  <div>
-                    <div className="font-semibold text-navy text-[15px] mb-0.5">Contact your preferred school</div>
-                    <div className="leading-relaxed">The school office can walk you through all available financial assistance options and help determine what you may qualify for.</div>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-navy text-gold font-heading font-bold text-sm flex items-center justify-center flex-shrink-0">2</div>
-                  <div>
-                    <div className="font-semibold text-navy text-[15px] mb-0.5">Apply for the Indiana Choice Scholarship</div>
-                    <div className="leading-relaxed">If eligible, apply through the school for the state voucher program. The school will guide you through the process.</div>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-navy text-gold font-heading font-bold text-sm flex items-center justify-center flex-shrink-0">3</div>
-                  <div>
-                    <div className="font-semibold text-navy text-[15px] mb-0.5">Complete the FACTS application</div>
-                    <div className="leading-relaxed">Many schools use the FACTS Grant & Aid Assessment to determine need-based financial assistance. This confidential process evaluates your family&rsquo;s financial situation.</div>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-navy text-gold font-heading font-bold text-sm flex items-center justify-center flex-shrink-0">4</div>
-                  <div>
-                    <div className="font-semibold text-navy text-[15px] mb-0.5">Receive your aid package</div>
-                    <div className="leading-relaxed">The school will combine all sources of assistance into a financial aid package and work with you on a payment plan for any remaining balance.</div>
-                  </div>
-                </li>
-              </ol>
+        {/* How to Apply */}
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="section-head">
+            <span className="section-tag">Get Started</span>
+            <h2 className="section-h2">How to Apply for Assistance</h2>
+          </div>
+
+          <div className="interior-card" style={{ cursor: "default" }}>
+            <div className="step-list">
+              <div className="step-item">
+                <div className="step-number">1</div>
+                <div>
+                  <h4 style={{ fontWeight: 600, marginBottom: 4 }}>Contact your preferred school</h4>
+                  <p>The school office can walk you through all available financial assistance options and help determine what you may qualify for.</p>
+                </div>
+              </div>
+              <div className="step-item">
+                <div className="step-number">2</div>
+                <div>
+                  <h4 style={{ fontWeight: 600, marginBottom: 4 }}>Apply for the Indiana Choice Scholarship</h4>
+                  <p>If eligible, apply through the school for the state voucher program. The school will guide you through the process.</p>
+                </div>
+              </div>
+              <div className="step-item">
+                <div className="step-number">3</div>
+                <div>
+                  <h4 style={{ fontWeight: 600, marginBottom: 4 }}>Complete the FACTS application</h4>
+                  <p>Many schools use the FACTS Grant &amp; Aid Assessment to determine need-based financial assistance. This confidential process evaluates your family&rsquo;s financial situation.</p>
+                </div>
+              </div>
+              <div className="step-item">
+                <div className="step-number">4</div>
+                <div>
+                  <h4 style={{ fontWeight: 600, marginBottom: 4 }}>Receive your aid package</h4>
+                  <p>The school will combine all sources of assistance into a financial aid package and work with you on a payment plan for any remaining balance.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="section-padding bg-navy text-white">
-          <div className="max-w-[800px] mx-auto text-center">
-            <div className="section-label text-gold">Every Child Deserves This</div>
-            <h2 className="font-heading text-[clamp(28px,4vw,40px)] font-bold text-white leading-tight mb-4">
-              Do Not Let Cost Be a Barrier
-            </h2>
-            <p className="text-base text-white/70 mb-8 leading-relaxed max-w-[560px] mx-auto">
+        <section className="page-content">
+          <div className="cta-block">
+            <span className="section-tag" style={{ color: "var(--gold)" }}>Every Child Deserves This</span>
+            <h3>Do Not Let Cost Be a Barrier</h3>
+            <p>
               We are committed to making Catholic education available to every family that desires it. Contact us and we will work together to find a solution.
             </p>
-            <div className="flex gap-4 flex-wrap justify-center">
+            <div className="btn-row">
               <Link href="/schools/find" className="btn btn-primary">
                 Find a School
               </Link>
-              <Link href="/give/appeal" className="btn btn-outline" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
+              <Link href="/give/appeal" className="btn btn-secondary">
                 Support Catholic Schools
               </Link>
             </div>
@@ -187,35 +217,5 @@ export default function Tuition() {
         </section>
       </main>
     </>
-  );
-}
-
-function StatCard({ number, label }: { number: string; label: string }) {
-  return (
-    <div className="bg-cream rounded-xl p-6 border border-border text-center">
-      <div className="font-heading text-[clamp(28px,3.5vw,44px)] font-bold text-navy leading-none mb-1">{number}</div>
-      <div className="text-xs font-semibold text-text-light tracking-wider uppercase">{label}</div>
-    </div>
-  );
-}
-
-function AidCard({ title, desc, highlight }: { title: string; desc: string; highlight: string }) {
-  return (
-    <div className="bg-white rounded-2xl border border-border p-8 shadow-[var(--shadow-soft)]">
-      <h3 className="font-heading text-2xl font-bold text-navy mb-3">{title}</h3>
-      <p className="text-sm text-text-medium leading-relaxed mb-4">{desc}</p>
-      <div className="bg-gold-pale rounded-lg p-3 text-sm font-semibold text-navy">
-        {highlight}
-      </div>
-    </div>
-  );
-}
-
-function OptionCard({ title, desc }: { title: string; desc: string }) {
-  return (
-    <div className="bg-cream rounded-xl p-6 border border-border">
-      <h3 className="font-heading text-lg font-bold text-navy mb-2">{title}</h3>
-      <p className="text-sm text-text-medium leading-relaxed">{desc}</p>
-    </div>
   );
 }

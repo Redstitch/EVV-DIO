@@ -33,92 +33,96 @@ export default function SpecialNeeds() {
 
       <main id="main-content">
         {/* Philosophy */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[960px] mx-auto">
-            <div className="text-center mb-14">
-              <div className="section-label">Our Commitment</div>
-              <h2 className="section-title">Every Child Belongs</h2>
-              <p className="text-base text-text-medium leading-relaxed max-w-[680px] mx-auto">
-                Catholic teaching affirms the inherent dignity of every person, created in the image and likeness of God. Our schools strive to be communities of inclusion where students with learning differences, developmental disabilities, and other special needs can thrive alongside their peers. We believe that diversity within our classrooms enriches the educational experience for all students.
-              </p>
-            </div>
+        <section className="page-content">
+          <div className="section-head">
+            <span className="section-tag">Our Commitment</span>
+            <h2 className="section-h2">Every Child Belongs</h2>
+            <p className="section-desc">
+              Catholic teaching affirms the inherent dignity of every person, created in the image and likeness of God. Our schools strive to be communities of inclusion where students with learning differences, developmental disabilities, and other special needs can thrive alongside their peers. We believe that diversity within our classrooms enriches the educational experience for all students.
+            </p>
           </div>
         </section>
+
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
         {/* Services */}
-        <section className="section-padding bg-cream">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="text-center mb-14">
-              <div className="section-label">Support Services</div>
-              <h2 className="section-title">How We Support Students</h2>
-            </div>
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="section-head">
+            <span className="section-tag">Support Services</span>
+            <h2 className="section-h2">How We Support Students</h2>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <ServiceCard
-                title="Individualized Learning Plans"
-                desc="Working in partnership with families, our schools develop individualized plans to address each student's unique learning needs, including accommodations for instruction and assessment."
-              />
-              <ServiceCard
-                title="Resource Specialists"
-                desc="Many of our schools employ resource teachers or learning specialists who provide small-group and one-on-one instruction for students who need additional academic support."
-              />
-              <ServiceCard
-                title="Speech & Language Services"
-                desc="Through partnerships with local school corporations and private providers, students in Catholic schools can access speech and language therapy services."
-              />
-              <ServiceCard
-                title="Occupational Therapy"
-                desc="Occupational therapy services are available to students who need support with fine motor skills, sensory processing, and other functional areas."
-              />
-              <ServiceCard
-                title="Behavioral Support"
-                desc="Our schools provide positive behavioral supports and interventions to help students develop social-emotional skills and succeed in the classroom environment."
-              />
-              <ServiceCard
-                title="Assistive Technology"
-                desc="Schools utilize assistive technology tools and accommodations to help students with disabilities access the curriculum, including specialized software, audio books, and adaptive equipment."
-              />
+          <div className="interior-grid interior-grid-3">
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Individualized Learning Plans</h3>
+              <p>Working in partnership with families, our schools develop individualized plans to address each student&rsquo;s unique learning needs, including accommodations for instruction and assessment.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Resource Specialists</h3>
+              <p>Many of our schools employ resource teachers or learning specialists who provide small-group and one-on-one instruction for students who need additional academic support.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Speech &amp; Language Services</h3>
+              <p>Through partnerships with local school corporations and private providers, students in Catholic schools can access speech and language therapy services.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Occupational Therapy</h3>
+              <p>Occupational therapy services are available to students who need support with fine motor skills, sensory processing, and other functional areas.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Behavioral Support</h3>
+              <p>Our schools provide positive behavioral supports and interventions to help students develop social-emotional skills and succeed in the classroom environment.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Assistive Technology</h3>
+              <p>Schools utilize assistive technology tools and accommodations to help students with disabilities access the curriculum, including specialized software, audio books, and adaptive equipment.</p>
             </div>
           </div>
         </section>
 
-        {/* Partnerships */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div>
-                <div className="section-label text-left">Partnerships</div>
-                <h2 className="section-title text-left">Working Together</h2>
-                <p className="text-base text-text-medium leading-relaxed mb-5">
-                  Catholic schools work in collaboration with local public school corporations, who are required under federal law to make certain services available to students with disabilities regardless of where they attend school. This includes evaluation, identification, and related services such as speech therapy and counseling.
-                </p>
-                <p className="text-base text-text-medium leading-relaxed mb-5">
-                  Schools also partner with families, pediatricians, psychologists, and community organizations to ensure that each student receives the support they need to succeed.
-                </p>
-                <p className="text-base text-text-medium leading-relaxed">
-                  If your child has an IEP (Individualized Education Program) or a 504 plan from a public school, please share this documentation during the enrollment process so that we can determine how best to meet your child&rsquo;s needs.
-                </p>
-              </div>
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
-              <div className="bg-cream rounded-2xl border border-border p-8">
-                <h3 className="font-heading text-xl font-bold text-navy mb-5">For Parents</h3>
-                <div className="space-y-4">
-                  <TipItem
-                    title="Start the Conversation Early"
-                    desc="Contact the school before enrollment to discuss your child's needs. Schools want to partner with you to find the right fit."
-                  />
-                  <TipItem
-                    title="Share Documentation"
-                    desc="Provide any existing evaluations, IEPs, 504 plans, or medical documentation so the school can prepare to support your child."
-                  />
-                  <TipItem
-                    title="Stay Involved"
-                    desc="Regular communication between parents and teachers is essential. Schedule conferences and stay connected with your child's progress."
-                  />
-                  <TipItem
-                    title="Advocate with Love"
-                    desc="You know your child best. Do not hesitate to ask questions, share concerns, and work with the school team to adjust supports as needed."
-                  />
+        {/* Partnerships */}
+        <section className="page-content">
+          <div className="interior-grid interior-grid-2">
+            <div>
+              <div className="section-head" style={{ textAlign: "left" }}>
+                <span className="section-tag" style={{ textAlign: "left" }}>Partnerships</span>
+                <h2 className="section-h2" style={{ textAlign: "left" }}>Working Together</h2>
+              </div>
+              <p>
+                Catholic schools work in collaboration with local public school corporations, who are required under federal law to make certain services available to students with disabilities regardless of where they attend school. This includes evaluation, identification, and related services such as speech therapy and counseling.
+              </p>
+              <p>
+                Schools also partner with families, pediatricians, psychologists, and community organizations to ensure that each student receives the support they need to succeed.
+              </p>
+              <p>
+                If your child has an IEP (Individualized Education Program) or a 504 plan from a public school, please share this documentation during the enrollment process so that we can determine how best to meet your child&rsquo;s needs.
+              </p>
+            </div>
+
+            <div className="info-block">
+              <h3>For Parents</h3>
+              <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                <div>
+                  <h4 style={{ fontWeight: 600, marginBottom: 4 }}>Start the Conversation Early</h4>
+                  <p>Contact the school before enrollment to discuss your child&rsquo;s needs. Schools want to partner with you to find the right fit.</p>
+                </div>
+                <div>
+                  <h4 style={{ fontWeight: 600, marginBottom: 4 }}>Share Documentation</h4>
+                  <p>Provide any existing evaluations, IEPs, 504 plans, or medical documentation so the school can prepare to support your child.</p>
+                </div>
+                <div>
+                  <h4 style={{ fontWeight: 600, marginBottom: 4 }}>Stay Involved</h4>
+                  <p>Regular communication between parents and teachers is essential. Schedule conferences and stay connected with your child&rsquo;s progress.</p>
+                </div>
+                <div>
+                  <h4 style={{ fontWeight: 600, marginBottom: 4 }}>Advocate with Love</h4>
+                  <p>You know your child best. Do not hesitate to ask questions, share concerns, and work with the school team to adjust supports as needed.</p>
                 </div>
               </div>
             </div>
@@ -126,19 +130,17 @@ export default function SpecialNeeds() {
         </section>
 
         {/* CTA */}
-        <section className="section-padding bg-navy text-white">
-          <div className="max-w-[800px] mx-auto text-center">
-            <h2 className="font-heading text-[clamp(28px,4vw,40px)] font-bold text-white leading-tight mb-4">
-              Your Child Is Welcome Here
-            </h2>
-            <p className="text-base text-white/70 mb-8 leading-relaxed max-w-[560px] mx-auto">
+        <section className="page-content">
+          <div className="cta-block">
+            <h3>Your Child Is Welcome Here</h3>
+            <p>
               Contact the Catholic Schools Office or a specific school to discuss how we can support your child&rsquo;s learning journey. Every child deserves to be known, loved, and challenged to grow.
             </p>
-            <div className="flex gap-4 flex-wrap justify-center">
+            <div className="btn-row">
               <Link href="/schools/find" className="btn btn-primary">
                 Find a School
               </Link>
-              <Link href="/schools/enroll" className="btn btn-outline" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
+              <Link href="/schools/enroll" className="btn btn-secondary">
                 Start Enrollment
               </Link>
             </div>
@@ -146,26 +148,5 @@ export default function SpecialNeeds() {
         </section>
       </main>
     </>
-  );
-}
-
-function ServiceCard({ title, desc }: { title: string; desc: string }) {
-  return (
-    <div className="bg-white rounded-xl p-6 border border-border shadow-[var(--shadow-soft)]">
-      <h3 className="font-heading text-lg font-bold text-navy mb-2">{title}</h3>
-      <p className="text-sm text-text-medium leading-relaxed">{desc}</p>
-    </div>
-  );
-}
-
-function TipItem({ title, desc }: { title: string; desc: string }) {
-  return (
-    <div className="flex items-start gap-3 pb-4 border-b border-border last:border-b-0 last:pb-0">
-      <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0" />
-      <div>
-        <div className="font-semibold text-navy text-[15px] mb-0.5">{title}</div>
-        <div className="text-sm text-text-medium leading-relaxed">{desc}</div>
-      </div>
-    </div>
   );
 }

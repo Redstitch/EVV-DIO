@@ -31,126 +31,145 @@ export default function AccessibilityPage() {
       </section>
 
       <main id="main-content">
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[800px] mx-auto">
+        <section className="page-content">
+          <div style={{ maxWidth: 800, margin: "0 auto" }}>
             {/* Commitment */}
-            <div className="mb-10">
-              <h2 className="font-heading text-2xl font-bold text-navy mb-4">Our Commitment</h2>
-              <p className="text-sm text-text-medium leading-relaxed mb-4">
+            <div style={{ marginBottom: 40 }}>
+              <h2 style={{ fontFamily: "var(--font-heading)", fontSize: 24, fontWeight: 400, color: "var(--navy)", marginBottom: 16 }}>Our Commitment</h2>
+              <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.75, marginBottom: 16 }}>
                 The Catholic Diocese of Evansville is committed to providing a website that is accessible to the widest possible audience, regardless of ability or technology. We believe that every person is created in the image of God and deserves equal access to information and services. This commitment reflects the Catholic understanding of the dignity of every human person.
               </p>
-              <p className="text-sm text-text-medium leading-relaxed">
+              <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.75 }}>
                 We strive to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 at the AA level, published by the World Wide Web Consortium (W3C). These guidelines provide a framework for making web content more accessible to people with visual, auditory, motor, and cognitive disabilities.
               </p>
             </div>
 
+            <hr className="section-divider" />
+
             {/* Standards */}
-            <div className="mb-10">
-              <h2 className="font-heading text-2xl font-bold text-navy mb-4">Accessibility Standards</h2>
-              <p className="text-sm text-text-medium leading-relaxed mb-4">
+            <div style={{ marginBottom: 40 }}>
+              <h2 style={{ fontFamily: "var(--font-heading)", fontSize: 24, fontWeight: 400, color: "var(--navy)", marginBottom: 16 }}>Accessibility Standards</h2>
+              <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.75, marginBottom: 16 }}>
                 We aim to meet or exceed the following standards across our website:
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <StandardCard
-                  title="Perceivable"
-                  items={[
-                    "Text alternatives for non-text content",
-                    "Captions and alternatives for multimedia",
-                    "Content that can be presented in different ways",
-                    "Sufficient color contrast for readability",
-                  ]}
-                />
-                <StandardCard
-                  title="Operable"
-                  items={[
-                    "Full keyboard navigation support",
-                    "Sufficient time to read and use content",
-                    "No content that causes seizures or physical reactions",
-                    "Clear navigation and wayfinding aids",
-                  ]}
-                />
-                <StandardCard
-                  title="Understandable"
-                  items={[
-                    "Readable and understandable text",
-                    "Predictable page behavior and navigation",
-                    "Input assistance and error prevention",
-                    "Consistent identification of interface elements",
-                  ]}
-                />
-                <StandardCard
-                  title="Robust"
-                  items={[
-                    "Compatible with current and future assistive technologies",
-                    "Valid, standards-compliant HTML markup",
-                    "Proper use of ARIA roles and attributes",
-                    "Support for screen readers and other tools",
-                  ]}
-                />
+              <div className="interior-grid interior-grid-2">
+                {[
+                  { title: "Perceivable", items: ["Text alternatives for non-text content", "Captions and alternatives for multimedia", "Content that can be presented in different ways", "Sufficient color contrast for readability"] },
+                  { title: "Operable", items: ["Full keyboard navigation support", "Sufficient time to read and use content", "No content that causes seizures or physical reactions", "Clear navigation and wayfinding aids"] },
+                  { title: "Understandable", items: ["Readable and understandable text", "Predictable page behavior and navigation", "Input assistance and error prevention", "Consistent identification of interface elements"] },
+                  { title: "Robust", items: ["Compatible with current and future assistive technologies", "Valid, standards-compliant HTML markup", "Proper use of ARIA roles and attributes", "Support for screen readers and other tools"] },
+                ].map((standard) => (
+                  <div key={standard.title} className="info-block" style={{ marginBottom: 0 }}>
+                    <h3>{standard.title}</h3>
+                    <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 6, marginTop: 12 }}>
+                      {standard.items.map((item) => (
+                        <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: 8, fontSize: 12, color: "var(--muted)", lineHeight: 1.65 }}>
+                          <div style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--dgold)", marginTop: 6, flexShrink: 0 }} />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
+
+            <hr className="section-divider" />
 
             {/* Features */}
-            <div className="mb-10">
-              <h2 className="font-heading text-2xl font-bold text-navy mb-4">Accessibility Features</h2>
-              <p className="text-sm text-text-medium leading-relaxed mb-4">
+            <div style={{ marginBottom: 40 }}>
+              <h2 style={{ fontFamily: "var(--font-heading)", fontSize: 24, fontWeight: 400, color: "var(--navy)", marginBottom: 16 }}>Accessibility Features</h2>
+              <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.75, marginBottom: 16 }}>
                 Our website includes the following accessibility features:
               </p>
-              <ul className="space-y-2.5 text-sm text-text-medium">
-                <FeatureItem text="Semantic HTML structure with proper heading hierarchy" />
-                <FeatureItem text="Skip navigation links to bypass repetitive content" />
-                <FeatureItem text="Descriptive alt text for all meaningful images" />
-                <FeatureItem text="ARIA labels and landmarks for screen reader navigation" />
-                <FeatureItem text="Keyboard-accessible navigation, forms, and interactive elements" />
-                <FeatureItem text="Color contrast ratios that meet WCAG 2.1 AA requirements" />
-                <FeatureItem text="Responsive design that adapts to various screen sizes and zoom levels" />
-                <FeatureItem text="Clear, consistent page layouts and navigation patterns" />
-                <FeatureItem text="Form labels, instructions, and error messages" />
-                <FeatureItem text="Focus indicators visible on all interactive elements" />
+              <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+                {[
+                  "Semantic HTML structure with proper heading hierarchy",
+                  "Skip navigation links to bypass repetitive content",
+                  "Descriptive alt text for all meaningful images",
+                  "ARIA labels and landmarks for screen reader navigation",
+                  "Keyboard-accessible navigation, forms, and interactive elements",
+                  "Color contrast ratios that meet WCAG 2.1 AA requirements",
+                  "Responsive design that adapts to various screen sizes and zoom levels",
+                  "Clear, consistent page layouts and navigation patterns",
+                  "Form labels, instructions, and error messages",
+                  "Focus indicators visible on all interactive elements",
+                ].map((feature) => (
+                  <li key={feature} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 14, color: "var(--muted)", lineHeight: 1.65 }}>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--dgold)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }} aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>{feature}</span>
+                  </li>
+                ))}
               </ul>
             </div>
+
+            <hr className="section-divider" />
 
             {/* Ongoing Efforts */}
-            <div className="mb-10">
-              <h2 className="font-heading text-2xl font-bold text-navy mb-4">Ongoing Efforts</h2>
-              <p className="text-sm text-text-medium leading-relaxed mb-4">
+            <div style={{ marginBottom: 40 }}>
+              <h2 style={{ fontFamily: "var(--font-heading)", fontSize: 24, fontWeight: 400, color: "var(--navy)", marginBottom: 16 }}>Ongoing Efforts</h2>
+              <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.75, marginBottom: 16 }}>
                 Accessibility is an ongoing effort, not a one-time task. We regularly review and test our website to identify and address accessibility barriers. Our efforts include:
               </p>
-              <ul className="space-y-2.5 text-sm text-text-medium">
-                <FeatureItem text="Regular automated and manual accessibility testing" />
-                <FeatureItem text="Staff training on accessibility best practices" />
-                <FeatureItem text="Incorporating accessibility into our design and development process" />
-                <FeatureItem text="Reviewing third-party content and tools for accessibility compliance" />
-                <FeatureItem text="Responding to user feedback and accessibility reports" />
+              <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+                {[
+                  "Regular automated and manual accessibility testing",
+                  "Staff training on accessibility best practices",
+                  "Incorporating accessibility into our design and development process",
+                  "Reviewing third-party content and tools for accessibility compliance",
+                  "Responding to user feedback and accessibility reports",
+                ].map((effort) => (
+                  <li key={effort} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 14, color: "var(--muted)", lineHeight: 1.65 }}>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--dgold)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }} aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>{effort}</span>
+                  </li>
+                ))}
               </ul>
             </div>
+
+            <hr className="section-divider" />
 
             {/* Known Limitations */}
-            <div className="mb-10">
-              <h2 className="font-heading text-2xl font-bold text-navy mb-4">Known Limitations</h2>
-              <p className="text-sm text-text-medium leading-relaxed mb-4">
+            <div style={{ marginBottom: 40 }}>
+              <h2 style={{ fontFamily: "var(--font-heading)", fontSize: 24, fontWeight: 400, color: "var(--navy)", marginBottom: 16 }}>Known Limitations</h2>
+              <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.75, marginBottom: 16 }}>
                 While we strive for full WCAG 2.1 AA compliance, some content may not yet fully meet all standards. Known limitations include:
               </p>
-              <ul className="space-y-2.5 text-sm text-text-medium">
-                <FeatureItem text="Some older PDF documents may not be fully accessible. We are working to remediate these documents and will provide accessible alternatives upon request." />
-                <FeatureItem text="Third-party content, including embedded maps, videos, and donation forms, is governed by the accessibility practices of those providers." />
-                <FeatureItem text="Some legacy content from previous website versions may contain accessibility gaps that are being addressed on an ongoing basis." />
+              <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+                {[
+                  "Some older PDF documents may not be fully accessible. We are working to remediate these documents and will provide accessible alternatives upon request.",
+                  "Third-party content, including embedded maps, videos, and donation forms, is governed by the accessibility practices of those providers.",
+                  "Some legacy content from previous website versions may contain accessibility gaps that are being addressed on an ongoing basis.",
+                ].map((limitation) => (
+                  <li key={limitation} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 14, color: "var(--muted)", lineHeight: 1.65 }}>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--dgold)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }} aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>{limitation}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
+            <hr className="section-divider" />
+
             {/* Feedback */}
-            <div className="bg-cream rounded-xl border border-border p-8">
-              <h2 className="font-heading text-2xl font-bold text-navy mb-4">Feedback & Contact</h2>
-              <p className="text-sm text-text-medium leading-relaxed mb-4">
+            <div className="info-block">
+              <h3>Feedback &amp; Contact</h3>
+              <p style={{ marginBottom: 16 }}>
                 We welcome your feedback on the accessibility of our website. If you encounter an accessibility barrier, need content in an alternative format, or have suggestions for improvement, please contact us:
               </p>
-              <div className="bg-white rounded-lg border border-border p-5 text-sm text-text-medium space-y-1.5">
-                <p><strong className="text-navy">Catholic Diocese of Evansville</strong></p>
-                <p>P.O. Box 4169, Evansville, IN 47724</p>
-                <p>Phone: (812) 424-5536</p>
-                <p>Email: communications@evdio.org</p>
+              <div className="interior-card" style={{ cursor: "default", padding: 20 }}>
+                <p style={{ marginBottom: 4 }}><strong style={{ color: "var(--navy)" }}>Catholic Diocese of Evansville</strong></p>
+                <p style={{ marginBottom: 4, fontSize: 14, color: "var(--muted)" }}>P.O. Box 4169, Evansville, IN 47724</p>
+                <p style={{ marginBottom: 4, fontSize: 14, color: "var(--muted)" }}>Phone: (812) 424-5536</p>
+                <p style={{ fontSize: 14, color: "var(--muted)" }}>Email: communications@evdio.org</p>
               </div>
-              <p className="text-sm text-text-medium leading-relaxed mt-4">
+              <p style={{ marginTop: 16 }}>
                 We will make every reasonable effort to respond to your request within two business days and to provide the information or assistance you need.
               </p>
             </div>
@@ -158,32 +177,5 @@ export default function AccessibilityPage() {
         </section>
       </main>
     </>
-  );
-}
-
-function StandardCard({ title, items }: { title: string; items: string[] }) {
-  return (
-    <div className="bg-cream rounded-xl border border-border p-6">
-      <h3 className="font-heading text-lg font-bold text-navy mb-3">{title}</h3>
-      <ul className="space-y-1.5 text-xs text-text-medium">
-        {items.map((item) => (
-          <li key={item} className="flex items-start gap-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 flex-shrink-0" />
-            <span className="leading-relaxed">{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function FeatureItem({ text }: { text: string }) {
-  return (
-    <li className="flex items-start gap-2.5">
-      <svg viewBox="0 0 24 24" className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-      <span className="leading-relaxed">{text}</span>
-    </li>
   );
 }

@@ -32,173 +32,141 @@ export default function OurBishopPage() {
 
       <main id="main-content">
         {/* Bishop Portrait & Bio */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[1080px] mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-12 items-start">
-              <div className="flex flex-col items-center">
-                <div className="w-[280px] h-[360px] rounded-[140px_140px_20px_20px] relative overflow-hidden shadow-[0_12px_40px_rgba(27,42,74,0.2)]">
-                  <Image
-                    src="/images/bishop/bishop-siegel.jpg"
-                    alt="Bishop Joseph M. Siegel"
-                    fill
-                    className="object-cover object-[center_top]"
-                    priority
-                  />
-                </div>
-                <div className="mt-6 text-center">
-                  <Image
-                    src="/images/branding/diocese-crest.png"
-                    alt="Diocese of Evansville crest"
-                    width={80}
-                    height={80}
-                    className="mx-auto mb-3"
-                  />
-                  <p className="text-xs text-text-light tracking-wider uppercase font-semibold">
-                    Sixth Bishop of Evansville
-                  </p>
-                  <p className="text-xs text-text-light mt-1">
-                    Installed December 15, 2017
-                  </p>
-                </div>
+        <div className="page-content">
+          <div style={{ display: "grid", gridTemplateColumns: "300px 1fr", gap: 48, alignItems: "start" }}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <div style={{ width: 280, height: 360, borderRadius: "140px 140px 20px 20px", position: "relative", overflow: "hidden", boxShadow: "0 12px 40px rgba(27,42,74,0.2)" }}>
+                <Image
+                  src="/images/bishop/bishop-siegel.jpg"
+                  alt="Bishop Joseph M. Siegel"
+                  fill
+                  className="object-cover object-[center_top]"
+                  priority
+                />
               </div>
-
-              <div>
-                <div className="section-label text-left">Meet Our Bishop</div>
-                <h2 className="font-heading text-[clamp(28px,4vw,40px)] font-bold text-navy leading-tight mb-2">
-                  Most Reverend Joseph M. Siegel, D.D.
-                </h2>
-                <p className="font-heading text-xl italic text-blue mb-6 leading-snug">
-                  &ldquo;We need to be ambassadors of one another &mdash; staff and parishes supporting each other. We are called to tell our story and meet people where they are.&rdquo;
+              <div style={{ marginTop: 24, textAlign: "center" }}>
+                <Image
+                  src="/images/branding/diocese-crest.png"
+                  alt="Diocese of Evansville crest"
+                  width={80}
+                  height={80}
+                  style={{ margin: "0 auto 12px" }}
+                />
+                <p style={{ fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 600, color: "var(--muted)" }}>
+                  Sixth Bishop of Evansville
                 </p>
+                <p style={{ fontSize: 12, color: "var(--muted)", marginTop: 4 }}>
+                  Installed December 15, 2017
+                </p>
+              </div>
+            </div>
 
-                <div className="space-y-4 text-base text-text-medium leading-relaxed">
-                  <p>
-                    Bishop Joseph M. Siegel was ordained and installed as the sixth Bishop of the Diocese of Evansville on December 15, 2017, at St. Benedict Cathedral. He was appointed by Pope Francis following a distinguished career of priestly service and episcopal leadership.
-                  </p>
-                  <p>
-                    Born on September 7, 1959, in Joliet, Illinois, Bishop Siegel was ordained a priest for the Diocese of Joliet on May 24, 1986. He served in various pastoral and administrative roles before being ordained as an Auxiliary Bishop of the Diocese of Joliet on January 19, 2009.
-                  </p>
-                  <p>
-                    As Bishop of Evansville, he leads a diocese of 79,500 Catholics across 45 parishes, 26 schools, and 12 counties in Southwestern Indiana. His pastoral vision &mdash; <strong className="text-navy">Encounter. Deepen. Engage.</strong> &mdash; calls every Catholic to encounter Christ, deepen their faith, and engage in the life and mission of the Church.
-                  </p>
-                  <p>
-                    Bishop Siegel is known for his warmth, accessibility, and commitment to transparency. He has prioritized outreach to young adults, support for Catholic education, strengthening parish life, and the charitable mission of the diocese through Catholic Charities and the Catholic Ministries Appeal.
-                  </p>
-                </div>
+            <div>
+              <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
+                <span className="section-tag section-tag-left">Meet Our Bishop</span>
+                <h2 className="section-h2 section-h2-left">Most Reverend Joseph M. Siegel, D.D.</h2>
+              </div>
+              <p style={{ fontFamily: "var(--serif)", fontSize: 20, fontStyle: "italic", color: "var(--blue)", marginBottom: 24, lineHeight: 1.4 }}>
+                &ldquo;We need to be ambassadors of one another &mdash; staff and parishes supporting each other. We are called to tell our story and meet people where they are.&rdquo;
+              </p>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                <p>
+                  Bishop Joseph M. Siegel was ordained and installed as the sixth Bishop of the Diocese of Evansville on December 15, 2017, at St. Benedict Cathedral. He was appointed by Pope Francis following a distinguished career of priestly service and episcopal leadership.
+                </p>
+                <p>
+                  Born on September 7, 1959, in Joliet, Illinois, Bishop Siegel was ordained a priest for the Diocese of Joliet on May 24, 1986. He served in various pastoral and administrative roles before being ordained as an Auxiliary Bishop of the Diocese of Joliet on January 19, 2009.
+                </p>
+                <p>
+                  As Bishop of Evansville, he leads a diocese of 79,500 Catholics across 45 parishes, 26 schools, and 12 counties in Southwestern Indiana. His pastoral vision &mdash; <strong>Encounter. Deepen. Engage.</strong> &mdash; calls every Catholic to encounter Christ, deepen their faith, and engage in the life and mission of the Church.
+                </p>
+                <p>
+                  Bishop Siegel is known for his warmth, accessibility, and commitment to transparency. He has prioritized outreach to young adults, support for Catholic education, strengthening parish life, and the charitable mission of the diocese through Catholic Charities and the Catholic Ministries Appeal.
+                </p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
         {/* Pastoral Vision Highlight */}
-        <section className="bg-cream py-16 px-8">
-          <div className="max-w-[1080px] mx-auto">
-            <div className="bg-white rounded-2xl border border-border p-10 shadow-[var(--shadow-soft)]">
-              <div className="section-label text-left">Pastoral Vision</div>
-              <h2 className="section-title text-left">Encounter. Deepen. Engage.</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-                <VisionCard
-                  number="01"
-                  title="Encounter"
-                  description="Create opportunities for every person to encounter the living Christ through worship, parish life, and personal invitation. We meet people where they are."
-                />
-                <VisionCard
-                  number="02"
-                  title="Deepen"
-                  description="Provide formation and resources that help Catholics at every stage of life grow in their understanding of the faith and relationship with God."
-                />
-                <VisionCard
-                  number="03"
-                  title="Engage"
-                  description="Empower the faithful to actively participate in the mission of the Church through service, evangelization, stewardship, and leadership."
-                />
+        <div className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="interior-card" style={{ cursor: "default" }}>
+            <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
+              <span className="section-tag section-tag-left">Pastoral Vision</span>
+              <h2 className="section-h2 section-h2-left">Encounter. Deepen. Engage.</h2>
+            </div>
+            <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+              <div>
+                <div style={{ fontSize: 48, fontFamily: "var(--serif)", color: "rgba(183,141,58,0.2)", lineHeight: 1, marginBottom: 8 }}>01</div>
+                <h3>Encounter</h3>
+                <p>Create opportunities for every person to encounter the living Christ through worship, parish life, and personal invitation. We meet people where they are.</p>
+              </div>
+              <div>
+                <div style={{ fontSize: 48, fontFamily: "var(--serif)", color: "rgba(183,141,58,0.2)", lineHeight: 1, marginBottom: 8 }}>02</div>
+                <h3>Deepen</h3>
+                <p>Provide formation and resources that help Catholics at every stage of life grow in their understanding of the faith and relationship with God.</p>
+              </div>
+              <div>
+                <div style={{ fontSize: 48, fontFamily: "var(--serif)", color: "rgba(183,141,58,0.2)", lineHeight: 1, marginBottom: 8 }}>03</div>
+                <h3>Engage</h3>
+                <p>Empower the faithful to actively participate in the mission of the Church through service, evangelization, stewardship, and leadership.</p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
         {/* Key Priorities */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[1080px] mx-auto">
-            <div className="section-label">Bishop&rsquo;s Priorities</div>
-            <h2 className="section-title">Areas of Focus</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
-              <PriorityCard
-                title="Catholic Education"
-                description="Sustaining and strengthening our 26 schools, awarding 850 scholarships annually, and ensuring every child has access to a Catholic education rooted in faith and academic excellence."
-              />
-              <PriorityCard
-                title="Parish Vitality"
-                description="Supporting vibrant parish communities across all four deaneries with resources for worship, faith formation, and community building that bring people together."
-              />
-              <PriorityCard
-                title="Charitable Mission"
-                description="Expanding Catholic Charities to serve more than 2,400 families each year with food assistance, counseling, immigration services, and emergency aid."
-              />
-              <PriorityCard
-                title="Transparency & Trust"
-                description="Publishing monthly diocesan dashboards, maintaining open financial reporting, and fostering a culture of accountability that strengthens the bond between parishes and the Catholic Center."
-              />
+        <div className="page-content">
+          <div className="section-head">
+            <span className="section-tag">Bishop&rsquo;s Priorities</span>
+            <h2 className="section-h2">Areas of Focus</h2>
+          </div>
+          <div className="interior-grid interior-grid-2">
+            <div className="info-block">
+              <h3>Catholic Education</h3>
+              <p>Sustaining and strengthening our 26 schools, awarding 850 scholarships annually, and ensuring every child has access to a Catholic education rooted in faith and academic excellence.</p>
+            </div>
+            <div className="info-block">
+              <h3>Parish Vitality</h3>
+              <p>Supporting vibrant parish communities across all four deaneries with resources for worship, faith formation, and community building that bring people together.</p>
+            </div>
+            <div className="info-block">
+              <h3>Charitable Mission</h3>
+              <p>Expanding Catholic Charities to serve more than 2,400 families each year with food assistance, counseling, immigration services, and emergency aid.</p>
+            </div>
+            <div className="info-block">
+              <h3>Transparency &amp; Trust</h3>
+              <p>Publishing monthly diocesan dashboards, maintaining open financial reporting, and fostering a culture of accountability that strengthens the bond between parishes and the Catholic Center.</p>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Contact / Learn More */}
-        <section className="bg-navy py-16 px-8 relative overflow-hidden">
-          <div className="absolute -top-[150px] -right-[150px] w-[400px] h-[400px] border border-gold/[0.08] rounded-full pointer-events-none" />
-          <div className="max-w-[900px] mx-auto text-center relative z-10">
-            <h2 className="font-heading text-[clamp(24px,3vw,36px)] font-bold text-white leading-tight mb-4">
-              Connect with Our Bishop
-            </h2>
-            <p className="text-base text-white/70 mb-8 max-w-[560px] mx-auto leading-relaxed">
+        {/* Connect CTA */}
+        <div className="page-content">
+          <div className="cta-block">
+            <h3>Connect with Our Bishop</h3>
+            <p>
               Bishop Siegel welcomes your correspondence. Write to the Office of the Bishop at the Catholic Center or contact us to request a meeting.
             </p>
-            <div className="flex gap-4 flex-wrap justify-center">
+            <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
               <Link href="/about/contact" className="btn btn-primary">
                 Contact the Bishop&rsquo;s Office
               </Link>
-              <Link href="/about/our-vision" className="btn btn-outline" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
+              <Link href="/about/our-vision" className="btn btn-outline">
                 Read Pastoral Priorities
               </Link>
             </div>
           </div>
-        </section>
+        </div>
       </main>
     </>
-  );
-}
-
-function VisionCard({
-  number,
-  title,
-  description,
-}: {
-  number: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="relative">
-      <div className="text-[48px] font-heading font-bold text-gold/20 leading-none mb-2">
-        {number}
-      </div>
-      <h3 className="font-heading text-2xl font-bold text-navy mb-3">{title}</h3>
-      <p className="text-sm text-text-medium leading-relaxed">{description}</p>
-    </div>
-  );
-}
-
-function PriorityCard({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="bg-cream rounded-xl p-6 border border-border">
-      <h3 className="font-heading text-xl font-bold text-navy mb-3">{title}</h3>
-      <p className="text-sm text-text-medium leading-relaxed">{description}</p>
-    </div>
   );
 }

@@ -32,103 +32,105 @@ export default function MassTimesPage() {
       </section>
 
       <main id="main-content">
-        <section className="section-padding bg-cream">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="bg-white rounded-xl border border-border p-8 mb-8">
-              <h2 className="font-heading text-2xl font-bold text-navy mb-4">Weekend Mass Schedule</h2>
-              <p className="text-text-medium text-sm mb-6">
-                Most parishes in the Diocese of Evansville offer Saturday vigil Masses and Sunday morning Masses. Some parishes also offer Sunday evening Masses. Contact your parish for the most current schedule.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-cream rounded-lg p-5">
-                  <h3 className="font-heading text-lg font-bold text-navy mb-2">Saturday Vigil</h3>
-                  <p className="text-sm text-text-medium">Typically 4:00 PM or 5:00 PM. Fulfills the Sunday obligation.</p>
-                </div>
-                <div className="bg-cream rounded-lg p-5">
-                  <h3 className="font-heading text-lg font-bold text-navy mb-2">Sunday</h3>
-                  <p className="text-sm text-text-medium">Most parishes offer Masses at 8:00 AM, 10:00 AM, and/or 12:00 PM.</p>
-                </div>
+        {/* Weekend Mass */}
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="interior-card" style={{ cursor: "default" }}>
+            <h2>Weekend Mass Schedule</h2>
+            <p>
+              Most parishes in the Diocese of Evansville offer Saturday vigil Masses and Sunday morning Masses. Some parishes also offer Sunday evening Masses. Contact your parish for the most current schedule.
+            </p>
+            <div className="interior-grid interior-grid-2" style={{ marginTop: 20 }}>
+              <div className="info-block">
+                <h3>Saturday Vigil</h3>
+                <p>Typically 4:00 PM or 5:00 PM. Fulfills the Sunday obligation.</p>
+              </div>
+              <div className="info-block">
+                <h3>Sunday</h3>
+                <p>Most parishes offer Masses at 8:00 AM, 10:00 AM, and/or 12:00 PM.</p>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div className="bg-white rounded-xl border border-border p-8 mb-8">
-              <h2 className="font-heading text-2xl font-bold text-navy mb-4">Daily Mass</h2>
-              <p className="text-text-medium text-sm mb-4">
-                Daily Mass is celebrated Monday through Friday at many parishes, with some also offering Saturday morning Mass. Common times include 7:00 AM, 8:00 AM, and 12:10 PM.
-              </p>
-              <p className="text-text-medium text-sm">
-                The following parishes offer daily Mass on a regular basis:
-              </p>
-              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {[
-                  "St. Benedict Cathedral, Evansville",
-                  "Holy Rosary, Evansville",
-                  "Annunciation, Evansville",
-                  "Holy Redeemer, Evansville",
-                  "St. Joseph, Jasper",
-                  "Holy Family, Jasper",
-                  "St. Ferdinand, Ferdinand",
-                  "St. Meinrad, St. Meinrad",
-                  "Sts. Peter & Paul, Haubstadt",
-                  "St. Philip, Posey County",
-                  "St. Francis Xavier, Vincennes",
-                  "Good Shepherd, Evansville",
-                ].map((parish) => (
-                  <div key={parish} className="text-sm text-navy font-medium bg-cream/60 rounded-lg px-4 py-2.5">
-                    {parish}
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
-            <div className="bg-white rounded-xl border border-border p-8 mb-8">
-              <h2 className="font-heading text-2xl font-bold text-navy mb-4">Confession (Sacrament of Reconciliation)</h2>
-              <p className="text-text-medium text-sm mb-4">
-                The Sacrament of Reconciliation is typically available 30 minutes before Saturday vigil Mass at most parishes. Many parishes also offer confession by appointment. Contact your parish office to schedule.
-              </p>
-              <p className="text-text-medium text-sm">
-                During Advent and Lent, communal penance services with individual absolution are offered at parishes across the diocese.
-              </p>
+        {/* Daily Mass */}
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="interior-card" style={{ cursor: "default" }}>
+            <h2>Daily Mass</h2>
+            <p>
+              Daily Mass is celebrated Monday through Friday at many parishes, with some also offering Saturday morning Mass. Common times include 7:00 AM, 8:00 AM, and 12:10 PM.
+            </p>
+            <p>
+              The following parishes offer daily Mass on a regular basis:
+            </p>
+            <div className="interior-grid interior-grid-3" style={{ marginTop: 16 }}>
+              {[
+                "St. Benedict Cathedral, Evansville",
+                "Holy Rosary, Evansville",
+                "Annunciation, Evansville",
+                "Holy Redeemer, Evansville",
+                "St. Joseph, Jasper",
+                "Holy Family, Jasper",
+                "St. Ferdinand, Ferdinand",
+                "St. Meinrad, St. Meinrad",
+                "Sts. Peter & Paul, Haubstadt",
+                "St. Philip, Posey County",
+                "St. Francis Xavier, Vincennes",
+                "Good Shepherd, Evansville",
+              ].map((parish) => (
+                <div key={parish} className="info-block" style={{ textAlign: "center" }}>
+                  <p style={{ fontWeight: 500 }}>{parish}</p>
+                </div>
+              ))}
             </div>
+          </div>
+        </section>
 
-            <div className="bg-white rounded-xl border border-border p-8">
-              <h2 className="font-heading text-2xl font-bold text-navy mb-4">Holy Days of Obligation</h2>
-              <p className="text-text-medium text-sm mb-4">
-                In addition to every Sunday, Catholics are obligated to attend Mass on six Holy Days throughout the year. Parishes offer vigil and day-of Masses for each Holy Day.
-              </p>
-              <ul className="space-y-2 text-sm text-text-medium">
-                <li className="flex items-start gap-2">
-                  <span className="text-gold mt-1">&#8226;</span>
-                  <span><strong className="text-navy">January 1</strong> &mdash; Solemnity of Mary, Mother of God</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gold mt-1">&#8226;</span>
-                  <span><strong className="text-navy">Ascension Thursday</strong> &mdash; 40 days after Easter</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gold mt-1">&#8226;</span>
-                  <span><strong className="text-navy">August 15</strong> &mdash; Assumption of the Blessed Virgin Mary</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gold mt-1">&#8226;</span>
-                  <span><strong className="text-navy">November 1</strong> &mdash; All Saints Day</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gold mt-1">&#8226;</span>
-                  <span><strong className="text-navy">December 8</strong> &mdash; Immaculate Conception</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gold mt-1">&#8226;</span>
-                  <span><strong className="text-navy">December 25</strong> &mdash; Christmas</span>
-                </li>
-              </ul>
-            </div>
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
-            <div className="mt-8 text-center">
-              <Link href="/parishes/watch-mass" className="btn btn-secondary">
-                Watch Mass Online
-              </Link>
-            </div>
+        {/* Confession */}
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="interior-card" style={{ cursor: "default" }}>
+            <h2>Confession (Sacrament of Reconciliation)</h2>
+            <p>
+              The Sacrament of Reconciliation is typically available 30 minutes before Saturday vigil Mass at most parishes. Many parishes also offer confession by appointment. Contact your parish office to schedule.
+            </p>
+            <p>
+              During Advent and Lent, communal penance services with individual absolution are offered at parishes across the diocese.
+            </p>
+          </div>
+        </section>
+
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
+
+        {/* Holy Days */}
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="interior-card" style={{ cursor: "default" }}>
+            <h2>Holy Days of Obligation</h2>
+            <p>
+              In addition to every Sunday, Catholics are obligated to attend Mass on six Holy Days throughout the year. Parishes offer vigil and day-of Masses for each Holy Day.
+            </p>
+            <ul style={{ marginTop: 12 }}>
+              <li><strong>January 1</strong> &mdash; Solemnity of Mary, Mother of God</li>
+              <li><strong>Ascension Thursday</strong> &mdash; 40 days after Easter</li>
+              <li><strong>August 15</strong> &mdash; Assumption of the Blessed Virgin Mary</li>
+              <li><strong>November 1</strong> &mdash; All Saints Day</li>
+              <li><strong>December 8</strong> &mdash; Immaculate Conception</li>
+              <li><strong>December 25</strong> &mdash; Christmas</li>
+            </ul>
+          </div>
+
+          <div style={{ textAlign: "center", marginTop: 32 }}>
+            <Link href="/parishes/watch-mass" className="btn btn-secondary">
+              Watch Mass Online
+            </Link>
           </div>
         </section>
       </main>

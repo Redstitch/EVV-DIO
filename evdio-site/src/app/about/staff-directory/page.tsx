@@ -105,81 +105,67 @@ export default function StaffDirectoryPage() {
       </section>
 
       <main id="main-content">
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[1080px] mx-auto">
-            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-              <div>
-                <div className="section-label text-left">Catholic Center</div>
-                <h2 className="section-title text-left !mb-2">Our Team</h2>
-                <p className="text-sm text-text-medium">
-                  4200 N. Kentucky Ave., Evansville, IN 47711 &middot; <a href="tel:8124245536" className="text-blue font-semibold hover:text-navy transition-colors">(812) 424-5536</a>
-                </p>
+        <div className="page-content">
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: 16, marginBottom: 40 }}>
+            <div>
+              <div className="section-head" style={{ textAlign: "left", marginBottom: 8 }}>
+                <span className="section-tag section-tag-left">Catholic Center</span>
+                <h2 className="section-h2 section-h2-left" style={{ marginBottom: 8 }}>Our Team</h2>
               </div>
-              <p className="text-xs text-text-light max-w-[280px]">
-                Office hours: Monday&ndash;Friday, 8:00 a.m.&ndash;4:30 p.m. (ET)
+              <p style={{ fontSize: 14 }}>
+                4200 N. Kentucky Ave., Evansville, IN 47711 &middot; <a href="tel:8124245536" style={{ color: "var(--blue)", fontWeight: 600 }}>(812) 424-5536</a>
               </p>
             </div>
+            <p style={{ fontSize: 12, color: "var(--muted)", maxWidth: 280 }}>
+              Office hours: Monday&ndash;Friday, 8:00 a.m.&ndash;4:30 p.m. (ET)
+            </p>
+          </div>
 
-            <div className="space-y-8">
-              {departments.map((dept) => (
-                <div key={dept.name}>
-                  <h3 className="font-heading text-xl font-bold text-navy mb-4 pb-2 border-b-2 border-gold/20">
-                    {dept.name}
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {dept.staff.map((person) => (
-                      <div
-                        key={person.email}
-                        className="bg-cream rounded-xl p-5 border border-border flex items-start gap-4"
-                      >
-                        <div className="w-12 h-12 rounded-full bg-navy/[0.08] flex items-center justify-center flex-shrink-0">
-                          <svg viewBox="0 0 24 24" className="w-5 h-5 fill-navy/40" aria-hidden="true">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
-                          </svg>
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <h4 className="font-heading text-base font-bold text-navy leading-tight">
-                            {person.name}
-                          </h4>
-                          <p className="text-xs text-text-light mt-0.5">{person.title}</p>
-                          <div className="mt-2 flex flex-col gap-0.5">
-                            <a
-                              href={`mailto:${person.email}`}
-                              className="text-xs text-blue hover:text-navy transition-colors truncate"
-                            >
-                              {person.email}
-                            </a>
-                            <a
-                              href={`tel:${person.phone.replace(/[^0-9+]/g, "")}`}
-                              className="text-xs text-text-medium hover:text-navy transition-colors"
-                            >
-                              {person.phone}
-                            </a>
-                          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
+            {departments.map((dept) => (
+              <div key={dept.name}>
+                <h3 style={{ fontFamily: "var(--serif)", fontSize: 22, color: "var(--navy)", marginBottom: 16, paddingBottom: 8, borderBottom: "2px solid rgba(183,141,58,0.2)" }}>
+                  {dept.name}
+                </h3>
+                <div className="interior-grid interior-grid-2">
+                  {dept.staff.map((person) => (
+                    <div
+                      key={person.email}
+                      className="info-block"
+                      style={{ display: "flex", alignItems: "flex-start", gap: 16 }}
+                    >
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <h3 style={{ fontSize: 16 }}>{person.name}</h3>
+                        <p style={{ fontSize: 12, color: "var(--muted)", marginBottom: 8 }}>{person.title}</p>
+                        <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                          <a href={`mailto:${person.email}`} style={{ fontSize: 12, color: "var(--blue)" }}>
+                            {person.email}
+                          </a>
+                          <a href={`tel:${person.phone.replace(/[^0-9+]/g, "")}`} style={{ fontSize: 12, color: "var(--muted)" }}>
+                            {person.phone}
+                          </a>
                         </div>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
 
         {/* CTA */}
-        <section className="bg-navy py-16 px-8">
-          <div className="max-w-[900px] mx-auto text-center">
-            <h2 className="font-heading text-[clamp(24px,3vw,36px)] font-bold text-white leading-tight mb-4">
-              Looking for Clergy?
-            </h2>
-            <p className="text-base text-white/70 mb-8 max-w-[560px] mx-auto leading-relaxed">
+        <div className="page-content">
+          <div className="cta-block">
+            <h3>Looking for Clergy?</h3>
+            <p>
               Visit our Clergy Directory for contact information for priests, deacons, and religious serving across the diocese.
             </p>
             <Link href="/about/clergy-directory" className="btn btn-primary">
               Clergy Directory
             </Link>
           </div>
-        </section>
+        </div>
       </main>
     </>
   );

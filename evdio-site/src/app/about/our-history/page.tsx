@@ -116,101 +116,97 @@ export default function OurHistoryPage() {
 
       <main id="main-content">
         {/* Intro */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[900px] mx-auto text-center">
-            <div className="section-label">Our Story</div>
-            <h2 className="section-title">
-              From Pioneer Missionaries to a Thriving Diocese
-            </h2>
-            <p className="text-base text-text-medium leading-relaxed max-w-[680px] mx-auto">
-              The Catholic faith in Southwestern Indiana traces its roots to French missionaries who traveled the river valleys in the eighteenth century. Through generations of immigrants, pioneers, and faithful families, the Church has grown into the vibrant diocese we know today &mdash; 79,500 Catholics strong across 12 counties.
-            </p>
+        <div className="page-content">
+          <div className="section-head">
+            <span className="section-tag">Our Story</span>
+            <h2 className="section-h2">From Pioneer Missionaries to a Thriving Diocese</h2>
           </div>
-        </section>
+          <p style={{ textAlign: "center", maxWidth: 680, margin: "0 auto" }}>
+            The Catholic faith in Southwestern Indiana traces its roots to French missionaries who traveled the river valleys in the eighteenth century. Through generations of immigrants, pioneers, and faithful families, the Church has grown into the vibrant diocese we know today &mdash; 79,500 Catholics strong across 12 counties.
+          </p>
+        </div>
+
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
         {/* Timeline */}
-        <section className="section-padding bg-cream">
-          <div className="max-w-[800px] mx-auto">
-            <div className="relative">
-              {/* Vertical Line */}
-              <div className="absolute left-[39px] top-0 bottom-0 w-px bg-border hidden md:block" />
+        <div className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div style={{ maxWidth: 800, margin: "0 auto", position: "relative" }}>
+            {/* Vertical Line */}
+            <div style={{ position: "absolute", left: 39, top: 0, bottom: 0, width: 1, background: "var(--line)", display: "var(--md-show, none)" }} />
 
-              <div className="space-y-8">
-                {timeline.map((item, i) => (
-                  <div key={i} className="flex gap-6 items-start">
-                    {/* Year Badge */}
-                    <div className="hidden md:flex flex-shrink-0 w-[80px] h-[80px] rounded-full bg-navy items-center justify-center relative z-10">
-                      <span className="font-heading text-sm font-bold text-gold leading-none text-center">
-                        {item.year}
-                      </span>
-                    </div>
-
-                    {/* Content */}
-                    <div className="flex-1 bg-white rounded-xl p-6 border border-border shadow-[var(--shadow-soft)]">
-                      <span className="md:hidden inline-block text-xs font-bold text-gold bg-navy rounded-full px-3 py-1 mb-3">
-                        {item.year}
-                      </span>
-                      <h3 className="font-heading text-xl font-bold text-navy mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm text-text-medium leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
+              {timeline.map((item, i) => (
+                <div key={i} style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
+                  {/* Year Badge */}
+                  <div style={{ display: "var(--md-show, none)", flexShrink: 0, width: 80, height: 80, borderRadius: "50%", background: "var(--navy)", alignItems: "center", justifyContent: "center", position: "relative", zIndex: 1 }} className="hidden md:flex">
+                    <span style={{ fontFamily: "var(--serif)", fontSize: 13, fontWeight: 700, color: "var(--dgold)", lineHeight: 1, textAlign: "center" }}>
+                      {item.year}
+                    </span>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Bishops Summary */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[1080px] mx-auto">
-            <div className="section-label">Episcopal Lineage</div>
-            <h2 className="section-title">Bishops of Evansville</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-              {[
-                { name: "Henry J. Grimmelsman", years: "1944\u20131965", ordinal: "1st" },
-                { name: "Paul F. Leibold", years: "1965\u20131969", ordinal: "2nd" },
-                { name: "Francis R. Shea", years: "1970\u20131989", ordinal: "3rd" },
-                { name: "Gerald A. Gettelfinger", years: "1989\u20132011", ordinal: "4th" },
-                { name: "Charles C. Thompson", years: "2011\u20132017", ordinal: "5th" },
-                { name: "Joseph M. Siegel", years: "2017\u2013Present", ordinal: "6th" },
-              ].map((bishop) => (
-                <div key={bishop.name} className="bg-cream rounded-xl p-6 border border-border text-center">
-                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-3">
-                    <span className="font-heading text-sm font-bold text-gold">{bishop.ordinal}</span>
+                  {/* Content */}
+                  <div className="interior-card" style={{ cursor: "default", flex: 1 }}>
+                    <span className="md:hidden" style={{ display: "inline-block", fontSize: 11, fontWeight: 700, color: "var(--dgold)", background: "var(--navy)", borderRadius: 999, padding: "4px 12px", marginBottom: 12 }}>
+                      {item.year}
+                    </span>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
                   </div>
-                  <h3 className="font-heading text-lg font-bold text-navy mb-1">
-                    Bishop {bishop.name}
-                  </h3>
-                  <p className="text-sm text-text-light">{bishop.years}</p>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
+
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
+
+        {/* Bishops Summary */}
+        <div className="page-content">
+          <div className="section-head">
+            <span className="section-tag">Episcopal Lineage</span>
+            <h2 className="section-h2">Bishops of Evansville</h2>
+          </div>
+          <div className="interior-grid interior-grid-3">
+            {[
+              { name: "Henry J. Grimmelsman", years: "1944\u20131965", ordinal: "1st" },
+              { name: "Paul F. Leibold", years: "1965\u20131969", ordinal: "2nd" },
+              { name: "Francis R. Shea", years: "1970\u20131989", ordinal: "3rd" },
+              { name: "Gerald A. Gettelfinger", years: "1989\u20132011", ordinal: "4th" },
+              { name: "Charles C. Thompson", years: "2011\u20132017", ordinal: "5th" },
+              { name: "Joseph M. Siegel", years: "2017\u2013Present", ordinal: "6th" },
+            ].map((bishop) => (
+              <div key={bishop.name} className="info-block" style={{ textAlign: "center" }}>
+                <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(183,141,58,0.1)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px" }}>
+                  <span style={{ fontFamily: "var(--serif)", fontSize: 14, fontWeight: 700, color: "var(--dgold)" }}>{bishop.ordinal}</span>
+                </div>
+                <h3>Bishop {bishop.name}</h3>
+                <p>{bishop.years}</p>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* CTA */}
-        <section className="bg-navy py-16 px-8">
-          <div className="max-w-[900px] mx-auto text-center">
-            <h2 className="font-heading text-[clamp(24px,3vw,36px)] font-bold text-white leading-tight mb-4">
-              Continue the Story
-            </h2>
-            <p className="text-base text-white/70 mb-8 max-w-[560px] mx-auto leading-relaxed">
+        <div className="page-content">
+          <div className="cta-block">
+            <h3>Continue the Story</h3>
+            <p>
               The history of our diocese is still being written. Learn about our vision for the future and how you can be part of the next chapter.
             </p>
-            <div className="flex gap-4 flex-wrap justify-center">
+            <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
               <Link href="/about/our-vision" className="btn btn-primary">
                 Our Vision &amp; Priorities
               </Link>
-              <Link href="/about/our-bishop" className="btn btn-outline" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
+              <Link href="/about/our-bishop" className="btn btn-outline">
                 Meet Our Bishop
               </Link>
             </div>
           </div>
-        </section>
+        </div>
       </main>
     </>
   );

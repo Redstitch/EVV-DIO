@@ -31,146 +31,130 @@ export default function Marriage() {
       </section>
 
       <main id="main-content">
-        {/* Teaching */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[960px] mx-auto">
-            <div className="text-center mb-14">
-              <div className="section-label">A Sacred Covenant</div>
-              <h2 className="section-title">A Love That Reflects Christ</h2>
-              <p className="text-base text-text-medium leading-relaxed max-w-[680px] mx-auto">
-                Catholic marriage is more than a legal contract. It is a sacrament in which the couple becomes a living sign of Christ&rsquo;s love for the Church. Through marriage, spouses receive the grace to love one another faithfully, to welcome children, and to build a family rooted in faith.
-              </p>
-            </div>
+        {/* ─── TEACHING ─── */}
+        <section className="page-content">
+          <div className="section-head">
+            <span className="section-tag">A Sacred Covenant</span>
+            <h2 className="section-h2">A Love That Reflects Christ</h2>
+            <p className="section-desc">
+              Catholic marriage is more than a legal contract. It is a sacrament in which the couple becomes a living sign of Christ&rsquo;s love for the Church. Through marriage, spouses receive the grace to love one another faithfully, to welcome children, and to build a family rooted in faith.
+            </p>
+          </div>
+        </section>
 
-            <div className="bg-cream rounded-2xl p-8 border border-border">
-              <p className="font-heading text-xl italic text-navy text-center leading-relaxed">
-                &ldquo;For this reason a man shall leave his father and mother and be joined to his wife, and the two shall become one flesh. So they are no longer two but one flesh. What therefore God has joined together, let not man put asunder.&rdquo;
-              </p>
-              <p className="text-center text-sm text-text-light mt-3">&mdash; Mark 10:7-9</p>
+        {/* ─── SCRIPTURE ─── */}
+        <section className="scripture" aria-label="Scripture">
+          <blockquote>
+            &ldquo;For this reason a man shall leave his father and mother and be joined to his wife, and the two shall become one flesh. So they are no longer two but one flesh. What therefore God has joined together, let not man put asunder.&rdquo;
+            <cite>Mark 10:7&#8211;9</cite>
+          </blockquote>
+        </section>
+
+        {/* ─── GETTING STARTED ─── */}
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="section-head">
+            <span className="section-tag">Planning Your Wedding</span>
+            <h2 className="section-h2">Getting Started</h2>
+          </div>
+
+          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <span className="section-tag section-tag-left" style={{ marginBottom: 8 }}>Step 1</span>
+              <h3>Contact Your Parish</h3>
+              <p>Reach out to your parish at least six months before your desired wedding date. Some parishes require up to a year of notice. Your priest or deacon will guide you through the entire process.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <span className="section-tag section-tag-left" style={{ marginBottom: 8 }}>Step 2</span>
+              <h3>Marriage Preparation</h3>
+              <p>All couples participate in a marriage preparation program. This may include meetings with your priest or deacon, a pre-marriage inventory (like FOCCUS), and an Engaged Encounter retreat or approved program.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <span className="section-tag section-tag-left" style={{ marginBottom: 8 }}>Step 3</span>
+              <h3>Planning the Liturgy</h3>
+              <p>Work with your parish to plan the wedding liturgy, including Scripture readings, music, and prayers. Your priest or deacon will help you understand the options for a wedding within Mass or outside of Mass.</p>
             </div>
           </div>
         </section>
 
-        {/* Getting Started */}
-        <section className="section-padding bg-cream">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="text-center mb-14">
-              <div className="section-label">Planning Your Wedding</div>
-              <h2 className="section-title">Getting Started</h2>
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
+
+        {/* ─── REQUIREMENTS ─── */}
+        <section className="page-content">
+          <div className="interior-grid interior-grid-2" style={{ alignItems: "start" }}>
+            <div>
+              <span className="section-tag section-tag-left">Requirements</span>
+              <h2 className="section-h2 section-h2-left">What You Need</h2>
+              <ul style={{ marginTop: 16 }}>
+                <li><strong>Freedom to Marry</strong> &mdash; Both parties must be free to marry in the Catholic Church. If either has been previously married, an annulment process must be completed before a new marriage can be celebrated.</li>
+                <li><strong>Baptism &amp; Sacramental Records</strong> &mdash; At least one party must be Catholic. A recently issued copy of your baptismal certificate (within six months) will be required.</li>
+                <li><strong>Marriage Preparation Program</strong> &mdash; Completion of a diocesan-approved marriage preparation program, which helps couples communicate effectively and build a strong spiritual foundation.</li>
+                <li><strong>Civil Marriage License</strong> &mdash; A valid marriage license from the State of Indiana is required before the wedding can be celebrated.</li>
+                <li><strong>Two Witnesses</strong> &mdash; At least two witnesses (often the best man and maid of honor) must be present at the ceremony.</li>
+              </ul>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <StepCard
-                number="1"
-                title="Contact Your Parish"
-                desc="Reach out to your parish at least six months before your desired wedding date. Some parishes require up to a year of notice. Your priest or deacon will guide you through the entire process."
-              />
-              <StepCard
-                number="2"
-                title="Marriage Preparation"
-                desc="All couples participate in a marriage preparation program. This may include meetings with your priest or deacon, a pre-marriage inventory (like FOCCUS), and an Engaged Encounter retreat or approved program."
-              />
-              <StepCard
-                number="3"
-                title="Planning the Liturgy"
-                desc="Work with your parish to plan the wedding liturgy, including Scripture readings, music, and prayers. Your priest or deacon will help you understand the options for a wedding within Mass or outside of Mass."
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Requirements */}
-        <section className="section-padding bg-warm-white">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div>
-                <div className="section-label text-left">Requirements</div>
-                <h2 className="section-title text-left">What You Need</h2>
-                <ul className="space-y-4 text-sm text-text-medium">
-                  <ReqItem
-                    title="Freedom to Marry"
-                    desc="Both parties must be free to marry in the Catholic Church. If either has been previously married, an annulment process must be completed before a new marriage can be celebrated."
-                  />
-                  <ReqItem
-                    title="Baptism & Sacramental Records"
-                    desc="At least one party must be Catholic. A recently issued copy of your baptismal certificate (within six months) will be required."
-                  />
-                  <ReqItem
-                    title="Marriage Preparation Program"
-                    desc="Completion of a diocesan-approved marriage preparation program, which helps couples communicate effectively and build a strong spiritual foundation."
-                  />
-                  <ReqItem
-                    title="Civil Marriage License"
-                    desc="A valid marriage license from the State of Indiana is required before the wedding can be celebrated."
-                  />
-                  <ReqItem
-                    title="Two Witnesses"
-                    desc="At least two witnesses (often the best man and maid of honor) must be present at the ceremony."
-                  />
-                </ul>
+            <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+              <div className="interior-card" style={{ cursor: "default" }}>
+                <h3>Interfaith Marriages</h3>
+                <p>
+                  When a Catholic marries a non-Catholic Christian or a person of another faith, permission or dispensation from the bishop may be required. Your parish priest or deacon will help you navigate this process. The Catholic party will be asked to reaffirm their commitment to raising children in the Catholic faith.
+                </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="bg-cream rounded-2xl border border-border p-8">
-                  <h3 className="font-heading text-xl font-bold text-navy mb-4">Interfaith Marriages</h3>
-                  <p className="text-sm text-text-medium leading-relaxed">
-                    When a Catholic marries a non-Catholic Christian or a person of another faith, permission or dispensation from the bishop may be required. Your parish priest or deacon will help you navigate this process. The Catholic party will be asked to reaffirm their commitment to raising children in the Catholic faith.
-                  </p>
-                </div>
-
-                <div className="bg-cream rounded-2xl border border-border p-8">
-                  <h3 className="font-heading text-xl font-bold text-navy mb-4">Annulments</h3>
-                  <p className="text-sm text-text-medium leading-relaxed mb-3">
-                    If you or your intended spouse has been previously married, an annulment (a declaration of nullity) may be necessary. An annulment does not deny that a relationship existed, but rather determines that a sacramental marriage was not validly established.
-                  </p>
-                  <p className="text-sm text-text-medium leading-relaxed">
-                    Contact the diocesan Tribunal Office for guidance. The process is pastoral, confidential, and handled with great care and compassion.
-                  </p>
-                </div>
+              <div className="interior-card" style={{ cursor: "default" }}>
+                <h3>Annulments</h3>
+                <p>
+                  If you or your intended spouse has been previously married, an annulment (a declaration of nullity) may be necessary. An annulment does not deny that a relationship existed, but rather determines that a sacramental marriage was not validly established.
+                </p>
+                <p>
+                  Contact the diocesan Tribunal Office for guidance. The process is pastoral, confidential, and handled with great care and compassion.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Marriage Enrichment */}
-        <section className="section-padding bg-cream">
-          <div className="max-w-[960px] mx-auto">
-            <div className="text-center mb-14">
-              <div className="section-label">Strengthening Your Marriage</div>
-              <h2 className="section-title">Already Married?</h2>
-              <p className="section-subtitle mx-auto">
-                The Diocese of Evansville offers resources and programs to help married couples grow in faith and love throughout every season of life.
-              </p>
-            </div>
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <EnrichCard
-                title="Marriage Encounter Weekends"
-                desc="A weekend retreat designed to help couples communicate more deeply and renew their commitment to one another."
-              />
-              <EnrichCard
-                title="Anniversary Blessings"
-                desc="Parishes offer special blessings for couples celebrating milestone anniversaries. The bishop celebrates an annual diocesan anniversary Mass."
-              />
-              <EnrichCard
-                title="Couples Prayer Groups"
-                desc="Many parishes host small groups where married couples pray together, study Scripture, and support one another."
-              />
-              <EnrichCard
-                title="Marriage & Family Life Office"
-                desc="The diocesan Office of Marriage and Family Life provides workshops, counseling referrals, and resources for couples at every stage."
-              />
+        {/* ─── MARRIAGE ENRICHMENT ─── */}
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="section-head">
+            <span className="section-tag">Strengthening Your Marriage</span>
+            <h2 className="section-h2">Already Married?</h2>
+            <p className="section-desc">
+              The Diocese of Evansville offers resources and programs to help married couples grow in faith and love throughout every season of life.
+            </p>
+          </div>
+
+          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Marriage Encounter Weekends</h3>
+              <p>A weekend retreat designed to help couples communicate more deeply and renew their commitment to one another.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Anniversary Blessings</h3>
+              <p>Parishes offer special blessings for couples celebrating milestone anniversaries. The bishop celebrates an annual diocesan anniversary Mass.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Couples Prayer Groups</h3>
+              <p>Many parishes host small groups where married couples pray together, study Scripture, and support one another.</p>
+            </div>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Marriage &amp; Family Life Office</h3>
+              <p>The diocesan Office of Marriage and Family Life provides workshops, counseling referrals, and resources for couples at every stage.</p>
             </div>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="section-padding bg-navy text-white">
-          <div className="max-w-[800px] mx-auto text-center">
-            <h2 className="font-heading text-[clamp(28px,4vw,40px)] font-bold text-white leading-tight mb-4">
-              Begin Your Marriage Journey
-            </h2>
-            <p className="text-base text-white/70 mb-8 leading-relaxed max-w-[560px] mx-auto">
+        {/* ─── CTA ─── */}
+        <section className="page-content">
+          <div className="cta-block">
+            <h3>Begin Your Marriage Journey</h3>
+            <p>
               Contact your parish to begin marriage preparation. Remember to reach out at least six months before your hoped-for wedding date.
             </p>
             <Link href="/parishes" className="btn btn-primary">
@@ -180,38 +164,5 @@ export default function Marriage() {
         </section>
       </main>
     </>
-  );
-}
-
-function StepCard({ number, title, desc }: { number: string; title: string; desc: string }) {
-  return (
-    <div className="bg-white rounded-xl p-6 border border-border shadow-[var(--shadow-soft)]">
-      <div className="w-10 h-10 rounded-full bg-navy text-gold font-heading font-bold text-lg flex items-center justify-center mb-4">
-        {number}
-      </div>
-      <h3 className="font-heading text-xl font-bold text-navy mb-2">{title}</h3>
-      <p className="text-sm text-text-medium leading-relaxed">{desc}</p>
-    </div>
-  );
-}
-
-function ReqItem({ title, desc }: { title: string; desc: string }) {
-  return (
-    <li className="flex items-start gap-3">
-      <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0" />
-      <div>
-        <div className="font-semibold text-navy text-[15px] mb-0.5">{title}</div>
-        <div className="leading-relaxed">{desc}</div>
-      </div>
-    </li>
-  );
-}
-
-function EnrichCard({ title, desc }: { title: string; desc: string }) {
-  return (
-    <div className="bg-white rounded-xl p-6 border border-border shadow-[var(--shadow-soft)]">
-      <h3 className="font-heading text-lg font-bold text-navy mb-2">{title}</h3>
-      <p className="text-sm text-text-medium leading-relaxed">{desc}</p>
-    </div>
   );
 }

@@ -49,44 +49,45 @@ export default function SouthDeaneryPage() {
       </section>
 
       <main id="main-content">
-        <section className="section-padding bg-cream">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="bg-white rounded-xl border border-border p-8 mb-10">
-              <h2 className="font-heading text-2xl font-bold text-navy mb-3">About the South Deanery</h2>
-              <p className="text-text-medium text-sm leading-relaxed">
-                The South Deanery is the largest in the diocese, encompassing Vanderburgh and Warrick counties. As the urban center of the diocese, Evansville and its surrounding communities are home to 14 parishes, including St. Benedict Cathedral, the mother church of the diocese. The deanery serves the greatest concentration of Catholics in Southwestern Indiana, with vibrant parish communities offering diverse worship, education, and ministry opportunities.
-              </p>
-            </div>
+        {/* About */}
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="interior-card" style={{ cursor: "default" }}>
+            <h2>About the South Deanery</h2>
+            <p>
+              The South Deanery is the largest in the diocese, encompassing Vanderburgh and Warrick counties. As the urban center of the diocese, Evansville and its surrounding communities are home to 14 parishes, including St. Benedict Cathedral, the mother church of the diocese. The deanery serves the greatest concentration of Catholics in Southwestern Indiana, with vibrant parish communities offering diverse worship, education, and ministry opportunities.
+            </p>
+          </div>
+        </section>
 
-            <h2 className="font-heading text-2xl font-bold text-navy mb-6">
-              Parishes ({parishes.length})
-            </h2>
+        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <hr className="section-divider" />
+        </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {parishes.map((p) => (
-                <div
-                  key={`${p.name}-${p.city}`}
-                  className="bg-white rounded-xl border border-border p-6 hover:shadow-[var(--shadow-soft)] transition-shadow"
-                >
-                  <h3 className="font-heading text-xl font-bold text-navy mb-1">{p.name}</h3>
-                  <p className="text-xs text-text-light mb-3">{p.city}</p>
-                  <div className="space-y-1.5 text-sm text-text-medium">
-                    <div><strong className="text-navy">Pastor:</strong> {p.pastor}</div>
-                    <div><strong className="text-navy">Phone:</strong> {p.phone}</div>
-                    <div><strong className="text-navy">Mass:</strong> {p.masses}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
+        {/* Parishes */}
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="section-head">
+            <h2 className="section-h2">Parishes ({parishes.length})</h2>
+          </div>
 
-            <div className="mt-10 flex gap-4 flex-wrap">
-              <Link href="/parishes/directory" className="btn btn-secondary">
-                Full Parish Directory
-              </Link>
-              <Link href="/parishes" className="btn btn-outline">
-                All Deaneries
-              </Link>
-            </div>
+          <div className="interior-grid interior-grid-2">
+            {parishes.map((p) => (
+              <div key={`${p.name}-${p.city}`} className="interior-card" style={{ cursor: "default" }}>
+                <h3>{p.name}</h3>
+                <p style={{ fontSize: 13, opacity: 0.6, marginBottom: 12 }}>{p.city}</p>
+                <p><strong>Pastor:</strong> {p.pastor}</p>
+                <p><strong>Phone:</strong> {p.phone}</p>
+                <p><strong>Mass:</strong> {p.masses}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="btn-row" style={{ marginTop: 40 }}>
+            <Link href="/parishes/directory" className="btn btn-secondary">
+              Full Parish Directory
+            </Link>
+            <Link href="/parishes" className="btn btn-outline">
+              All Deaneries
+            </Link>
           </div>
         </section>
       </main>

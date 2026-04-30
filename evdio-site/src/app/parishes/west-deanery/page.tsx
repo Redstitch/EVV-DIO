@@ -43,44 +43,45 @@ export default function WestDeaneryPage() {
       </section>
 
       <main id="main-content">
-        <section className="section-padding bg-cream">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="bg-white rounded-xl border border-border p-8 mb-10">
-              <h2 className="font-heading text-2xl font-bold text-navy mb-3">About the West Deanery</h2>
-              <p className="text-text-medium text-sm leading-relaxed">
-                The West Deanery spans Gibson, Pike, Posey, and Crawford counties along the western and southern edges of the diocese. This largely rural deanery includes historic river towns, farming communities, and some of the most beautiful countryside in Southern Indiana. The parishes of the West Deanery are known for their warm hospitality, strong sense of community, and deep devotion to the traditions of the faith. Many parishes in this deanery share pastors and collaborate closely on ministry and outreach.
-              </p>
-            </div>
+        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <div className="info-block">
+            <h3>About the West Deanery</h3>
+            <p>
+              The West Deanery spans Gibson, Pike, Posey, and Crawford counties along the western and southern edges of the diocese. This largely rural deanery includes historic river towns, farming communities, and some of the most beautiful countryside in Southern Indiana. The parishes of the West Deanery are known for their warm hospitality, strong sense of community, and deep devotion to the traditions of the faith. Many parishes in this deanery share pastors and collaborate closely on ministry and outreach.
+            </p>
+          </div>
 
-            <h2 className="font-heading text-2xl font-bold text-navy mb-6">
-              Parishes ({parishes.length})
-            </h2>
+          <div className="section-head">
+            <span className="section-tag">DIRECTORY</span>
+            <h2 className="section-h2">Parishes ({parishes.length})</h2>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {parishes.map((p) => (
-                <div
-                  key={`${p.name}-${p.city}`}
-                  className="bg-white rounded-xl border border-border p-6 hover:shadow-[var(--shadow-soft)] transition-shadow"
-                >
-                  <h3 className="font-heading text-xl font-bold text-navy mb-1">{p.name}</h3>
-                  <p className="text-xs text-text-light mb-3">{p.city}</p>
-                  <div className="space-y-1.5 text-sm text-text-medium">
-                    <div><strong className="text-navy">Pastor:</strong> {p.pastor}</div>
-                    <div><strong className="text-navy">Phone:</strong> {p.phone}</div>
-                    <div><strong className="text-navy">Mass:</strong> {p.masses}</div>
-                  </div>
+          <div className="interior-grid interior-grid-2">
+            {parishes.map((p) => (
+              <div
+                key={`${p.name}-${p.city}`}
+                className="interior-card"
+                style={{ cursor: "default" }}
+              >
+                <h3>{p.name}</h3>
+                <p style={{ fontSize: 12, color: "var(--muted)", marginBottom: 12 }}>{p.city}</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: 14, color: "var(--muted)" }}>
+                  <div><strong style={{ color: "var(--navy)" }}>Pastor:</strong> {p.pastor}</div>
+                  <div><strong style={{ color: "var(--navy)" }}>Phone:</strong> {p.phone}</div>
+                  <div><strong style={{ color: "var(--navy)" }}>Mass:</strong> {p.masses}</div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
 
-            <div className="mt-10 flex gap-4 flex-wrap">
-              <Link href="/parishes/directory" className="btn btn-secondary">
-                Full Parish Directory
-              </Link>
-              <Link href="/parishes" className="btn btn-outline">
-                All Deaneries
-              </Link>
-            </div>
+          <div style={{ marginTop: 40, display: "flex", gap: 12, flexWrap: "wrap" }}>
+            <Link href="/parishes/directory" className="btn-gold">
+              Full Parish Directory
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+            </Link>
+            <Link href="/parishes" className="btn-ghost-white">
+              All Deaneries
+            </Link>
           </div>
         </section>
       </main>
