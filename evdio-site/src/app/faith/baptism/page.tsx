@@ -96,18 +96,6 @@ export default function Baptism() {
           </div>
         </section>
 
-        {/* ─── IMAGE STRIP ─── */}
-        <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
-          <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 400 }}>
-            <Image
-              src="/images/stock/holy-week-good-friday.jpg"
-              alt="Good Friday observance in the Diocese of Evansville."
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-        </div>
-
         {/* ─── SCRIPTURE ─── */}
         <section className="scripture" aria-label="Scripture">
           <blockquote>
