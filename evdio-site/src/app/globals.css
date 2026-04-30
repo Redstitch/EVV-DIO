@@ -1860,8 +1860,8 @@ a.give-btn:hover { background: #8b3a2d; }
 }
 
 /* Section background variants — use these classes for visual rhythm */
-.section-cream { background: #F7F2E8; }
-.section-warm { background: #F7F2E8; }
+.section-cream { background: #F5F0E3; }
+.section-warm { background: #F5F0E3; }
 /* CTA band — soft blue, full-bleed */
 .section-navy {
   background: #1B3A5C; color: var(--cream);
