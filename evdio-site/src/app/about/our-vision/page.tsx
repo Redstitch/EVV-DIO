@@ -104,7 +104,7 @@ export default function OurVisionPage() {
 
       <main id="main-content">
         {/* Vision Statement */}
-        <div className="page-content">
+        <div className="page-content section-warm">
           <div className="section-head">
             <span className="section-tag">Pastoral Vision 2025&ndash;2030</span>
             <h2 className="section-h2">Encounter. Deepen. Engage.</h2>
@@ -122,7 +122,7 @@ export default function OurVisionPage() {
         </div>
 
         {/* Three Pillars */}
-        <div className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <div className="page-content section-cream">
           <div className="section-head">
             <span className="section-tag">The Three Pillars</span>
             <h2 className="section-h2">Pastoral Priorities</h2>
@@ -184,33 +184,31 @@ export default function OurVisionPage() {
         </div>
 
         {/* Impact Numbers */}
-        <div className="page-content">
-          <div className="cta-block">
-            <div style={{ marginBottom: 8 }}>
-              <span style={{ fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", fontWeight: 600, color: "var(--dgold)" }}>By the Numbers</span>
-            </div>
-            <h3>Our Diocese at a Glance</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 32, marginTop: 32 }}>
-              {[
-                { value: "79,500", label: "Catholics" },
-                { value: "45", label: "Parishes" },
-                { value: "26", label: "Schools" },
-                { value: "12", label: "Counties" },
-                { value: "2,400", label: "Families Served" },
-                { value: "850", label: "Scholarships" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <div style={{ fontFamily: "var(--serif)", fontSize: 36, fontWeight: 700, color: "var(--dgold)", lineHeight: 1, marginBottom: 4 }}>
-                    {stat.value}
-                  </div>
-                  <div style={{ fontSize: 11, color: "rgba(238,218,179,0.6)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600 }}>
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <div style={{ marginBottom: 8 }}>
+            <span className="section-tag">By the Numbers</span>
           </div>
-        </div>
+          <h2 className="section-h2">Our Diocese at a Glance</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 32, marginTop: 32 }}>
+            {[
+              { value: "79,500", label: "Catholics" },
+              { value: "45", label: "Parishes" },
+              { value: "26", label: "Schools" },
+              { value: "12", label: "Counties" },
+              { value: "2,400", label: "Families Served" },
+              { value: "850", label: "Scholarships" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <div style={{ fontFamily: "var(--serif)", fontSize: 36, fontWeight: 700, color: "var(--dgold)", lineHeight: 1, marginBottom: 4 }}>
+                  {stat.value}
+                </div>
+                <div style={{ fontSize: 11, color: "rgba(238,218,179,0.6)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600 }}>
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* CTA */}
         <div className="page-content">

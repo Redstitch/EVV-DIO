@@ -56,7 +56,7 @@ export default function SafeEnvironmentPage() {
         </div>
 
         {/* Programs & Policies */}
-        <div className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <div className="page-content section-cream">
           <div className="section-head">
             <span className="section-tag">Programs &amp; Policies</span>
             <h2 className="section-h2">How We Protect</h2>
@@ -94,7 +94,7 @@ export default function SafeEnvironmentPage() {
         </div>
 
         {/* Victim Assistance */}
-        <div className="page-content">
+        <div className="page-content section-warm">
           <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
             <span className="section-tag section-tag-left">Victim Assistance</span>
             <h2 className="section-h2 section-h2-left">Support for Survivors</h2>
@@ -134,7 +134,7 @@ export default function SafeEnvironmentPage() {
         </div>
 
         {/* Resources & Links */}
-        <div className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <div className="page-content section-cream">
           <div className="section-head">
             <span className="section-tag">Additional Resources</span>
             <h2 className="section-h2">Safe Environment Resources</h2>
@@ -208,22 +208,20 @@ export default function SafeEnvironmentPage() {
         </div>
 
         {/* CTA */}
-        <div className="page-content">
-          <div className="cta-block">
-            <h3>Questions About Our Safe Environment Programs?</h3>
-            <p>
-              Contact the Office of Safe Environment for information about training, policies, or compliance.
-            </p>
-            <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
-              <a href="mailto:safeenvironment@evdio.org" className="btn btn-primary">
-                safeenvironment@evdio.org
-              </a>
-              <Link href="/about/report-abuse" className="btn btn-outline">
-                Report Abuse
-              </Link>
-            </div>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2">Questions About Our Safe Environment Programs?</h2>
+          <p className="section-desc">
+            Contact the Office of Safe Environment for information about training, policies, or compliance.
+          </p>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center", marginTop: 32 }}>
+            <a href="mailto:safeenvironment@evdio.org" className="btn btn-primary">
+              safeenvironment@evdio.org
+            </a>
+            <Link href="/about/report-abuse" className="btn btn-outline">
+              Report Abuse
+            </Link>
           </div>
-        </div>
+        </section>
       </main>
     </>
   );

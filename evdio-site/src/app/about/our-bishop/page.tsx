@@ -90,8 +90,7 @@ export default function OurBishopPage() {
 
         {/* ─── PASTORAL VISION ─── */}
         <section
-          className="page-content"
-          style={{ background: "var(--cream-lt)" }}
+          className="page-content section-navy"
           aria-labelledby="vision-title"
         >
           <span className="section-tag section-tag-left">Pastoral Vision</span>
@@ -192,7 +191,7 @@ export default function OurBishopPage() {
         </div>
 
         {/* ─── KEY PRIORITIES ─── */}
-        <section className="page-content" aria-labelledby="priorities-title">
+        <section className="page-content section-warm" aria-labelledby="priorities-title">
           <span className="section-tag section-tag-left">
             Bishop&rsquo;s Priorities
           </span>
@@ -241,36 +240,11 @@ export default function OurBishopPage() {
         </section>
 
         {/* ─── CTA STRIP ─── */}
-        <section className="cta-strip">
-          <div
-            className="flourish"
-            aria-hidden="true"
-            style={{ padding: "0 0 32px" }}
-          >
-            <span className="line" />
-            <svg
-              width="14"
-              height="18"
-              viewBox="0 0 14 18"
-              fill="currentColor"
-            >
-              <rect x="6" y="0" width="2" height="18" />
-              <rect x="2" y="5" width="10" height="2" />
-            </svg>
-            <span className="line" />
-          </div>
-          <p className="kicker">Get in Touch</p>
-          <h2>
+        <section className="page-content section-teal" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)" }}>
             Connect with <em>our Bishop.</em>
           </h2>
-          <p
-            style={{
-              maxWidth: 520,
-              margin: "0 auto 28px",
-              lineHeight: 1.7,
-              opacity: 0.85,
-            }}
-          >
+          <p className="section-desc" style={{ color: "rgba(238,218,179,0.75)" }}>
             Bishop Siegel welcomes your correspondence. Write to the Office of
             the Bishop at the Catholic Center or contact us to request a
             meeting.
@@ -281,6 +255,7 @@ export default function OurBishopPage() {
               gap: 16,
               flexWrap: "wrap",
               justifyContent: "center",
+              marginTop: 32,
             }}
           >
             <Link href="/about/contact" className="btn btn-primary">

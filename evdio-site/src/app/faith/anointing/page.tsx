@@ -33,7 +33,7 @@ export default function Anointing() {
 
       <main id="main-content">
         {/* ─── TEACHING ─── */}
-        <section className="page-content">
+        <section className="page-content section-warm">
           <div className="section-head">
             <span className="section-tag">A Sacrament of Healing</span>
             <h2 className="section-h2">Comfort, Strength, and Peace</h2>
@@ -52,7 +52,7 @@ export default function Anointing() {
         </section>
 
         {/* ─── WHO CAN RECEIVE ─── */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content section-cream">
           <div className="section-head">
             <span className="section-tag">Who May Receive</span>
             <h2 className="section-h2">When Should You Request This Sacrament?</h2>
@@ -120,12 +120,12 @@ export default function Anointing() {
         </section>
 
         {/* ─── CTA ─── */}
-        <section className="page-content">
-          <div className="cta-block">
-            <h3>Do Not Wait to Ask</h3>
-            <p>
-              If you or a loved one is seriously ill, facing surgery, or weakened by age, do not hesitate to reach out. Your parish priest is ready to bring the comfort and grace of this sacrament.
-            </p>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2">Do Not Wait to Ask</h2>
+          <p className="section-desc">
+            If you or a loved one is seriously ill, facing surgery, or weakened by age, do not hesitate to reach out. Your parish priest is ready to bring the comfort and grace of this sacrament.
+          </p>
+          <div style={{ marginTop: 32 }}>
             <Link href="/parishes" className="btn btn-primary">
               Contact Your Parish
             </Link>

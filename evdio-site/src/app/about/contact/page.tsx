@@ -32,7 +32,7 @@ export default function ContactPage() {
       </section>
 
       <main id="main-content">
-        <div className="page-content">
+        <div className="page-content section-cream">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.3fr", gap: 48 }}>
             {/* Contact Info */}
             <div>
@@ -248,20 +248,20 @@ export default function ContactPage() {
         </div>
 
         {/* Map Placeholder */}
-        <div className="page-content" style={{ background: "var(--cream-lt)" }}>
-          <div style={{ borderRadius: 20, border: "1px solid var(--line)", overflow: "hidden" }}>
-            <div style={{ aspectRatio: "3/1", minHeight: 250, display: "flex", alignItems: "center", justifyContent: "center", background: "var(--cream-lt)", position: "relative" }}>
+        <div className="page-content section-navy">
+          <div style={{ borderRadius: 20, border: "1px solid rgba(238,218,179,0.15)", overflow: "hidden" }}>
+            <div style={{ aspectRatio: "3/1", minHeight: 250, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(238,218,179,0.06)", position: "relative" }}>
               <div style={{ textAlign: "center" }}>
-                <svg viewBox="0 0 24 24" style={{ width: 48, height: 48, fill: "rgba(10,34,64,0.2)", margin: "0 auto 12px" }} aria-hidden="true">
+                <svg viewBox="0 0 24 24" style={{ width: 48, height: 48, fill: "rgba(238,218,179,0.3)", margin: "0 auto 12px" }} aria-hidden="true">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                 </svg>
-                <p style={{ fontFamily: "var(--serif)", fontSize: 18, color: "var(--navy)", marginBottom: 4 }}>Catholic Center</p>
-                <p style={{ fontSize: 14, color: "var(--muted)" }}>4200 N. Kentucky Ave., Evansville, IN 47711</p>
+                <p style={{ fontFamily: "var(--serif)", fontSize: 18, color: "var(--cream)", marginBottom: 4 }}>Catholic Center</p>
+                <p style={{ fontSize: 14, color: "rgba(238,218,179,0.7)" }}>4200 N. Kentucky Ave., Evansville, IN 47711</p>
                 <a
                   href="https://maps.google.com/?q=4200+N+Kentucky+Ave+Evansville+IN+47711"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "var(--blue)", marginTop: 12 }}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "var(--bgold)", marginTop: 12 }}
                 >
                   Open in Google Maps
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" style={{ width: 14, height: 14 }} aria-hidden="true">

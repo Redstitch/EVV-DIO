@@ -1840,9 +1840,54 @@ a.give-btn:hover { background: #8b3a2d; }
   position: relative;
 }
 
-/* Smooth section transitions */
-.page-content + .page-content {
-  border-top: 1px solid var(--line);
+/* Section background variants — use these classes for visual rhythm */
+.section-cream { background: var(--cream-lt); }
+.section-warm { background: var(--cream-xlt); }
+.section-navy {
+  background: var(--navy); color: var(--cream);
+  border: none;
+}
+.section-navy .section-tag,
+.section-navy .section-h2 { color: var(--cream); }
+.section-navy .section-tag { color: var(--bgold); }
+.section-navy .section-desc { color: rgba(238,218,179,0.7); }
+.section-navy .interior-card {
+  background: rgba(238,218,179,0.06);
+  border-color: rgba(238,218,179,0.12);
+  color: var(--cream);
+}
+.section-navy .interior-card h3 { color: var(--cream); }
+.section-navy .interior-card p { color: rgba(238,218,179,0.7); }
+.section-navy .interior-card:hover {
+  background: rgba(238,218,179,0.1);
+  border-color: rgba(238,218,179,0.25);
+}
+.section-navy .info-block {
+  background: rgba(238,218,179,0.06);
+  border-left-color: var(--dgold);
+}
+.section-navy .info-block h3 { color: var(--cream); }
+.section-navy .info-block p { color: rgba(238,218,179,0.75); }
+
+/* Teal accent band — for key callout sections */
+.section-teal {
+  background: var(--teal); color: var(--cream);
+  border: none;
+}
+.section-teal .section-tag { color: var(--bgold); }
+.section-teal .section-h2 { color: var(--cream); }
+.section-teal .section-desc { color: rgba(238,218,179,0.75); }
+.section-teal .interior-card {
+  background: rgba(238,218,179,0.06);
+  border-color: rgba(238,218,179,0.12);
+  color: var(--cream);
+}
+.section-teal .interior-card h3 { color: var(--cream); }
+.section-teal .interior-card p { color: rgba(238,218,179,0.7); }
+.section-teal .interior-card:hover {
+  background: rgba(238,218,179,0.1);
+  border-color: rgba(238,218,179,0.25);
+  transform: translateY(-6px);
 }
 
 /* Link hover underline animation */

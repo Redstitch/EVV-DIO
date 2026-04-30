@@ -88,7 +88,7 @@ export default function BecomeCatholic() {
         </div>
 
         {/* ─── THE OCIA JOURNEY ─── */}
-        <section className="steps" aria-labelledby="ocia-title">
+        <section className="steps section-cream" aria-labelledby="ocia-title">
           <div className="inner">
             <div>
               <p className="kicker">The Journey</p>
@@ -184,7 +184,7 @@ export default function BecomeCatholic() {
         </div>
 
         {/* ─── COMMON QUESTIONS ─── */}
-        <section className="steps" aria-labelledby="faq-title">
+        <section className="steps section-warm" aria-labelledby="faq-title">
           <div className="inner">
             <div>
               <p className="kicker">Common questions</p>
@@ -254,34 +254,21 @@ export default function BecomeCatholic() {
         </section>
 
         {/* ─── CTA STRIP ─── */}
-        <section className="cta-strip">
-          <div
-            className="flourish"
-            aria-hidden="true"
-            style={{ padding: "0 0 32px" }}
-          >
-            <span className="line" />
-            <svg
-              width="14"
-              height="18"
-              viewBox="0 0 14 18"
-              fill="currentColor"
-            >
-              <rect x="6" y="0" width="2" height="18" />
-              <rect x="2" y="5" width="10" height="2" />
-            </svg>
-            <span className="line" />
-          </div>
-          <p className="kicker">Ready to begin?</p>
-          <h2>
-            Find a parish &mdash; <em>take the first step.</em>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)" }}>
+            Find a parish — <em>take the first step.</em>
           </h2>
-          <Link href="/parishes" className="btn btn-primary">
-            Find a Parish Near You{" "}
-            <span className="arrow" aria-hidden="true">
-              &rarr;
-            </span>
-          </Link>
+          <p className="section-desc" style={{ color: "rgba(238,218,179,0.75)" }}>
+            There is no wrong moment to start asking questions. Your parish community is waiting to welcome you.
+          </p>
+          <div style={{ marginTop: 32 }}>
+            <Link href="/parishes" className="btn btn-primary">
+              Find a Parish Near You{" "}
+              <span className="arrow" aria-hidden="true">
+                &rarr;
+              </span>
+            </Link>
+          </div>
         </section>
       </main>
     </>

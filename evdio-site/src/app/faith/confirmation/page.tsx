@@ -119,7 +119,7 @@ export default function Confirmation() {
         </div>
 
         {/* ─── WHAT TO EXPECT ─── */}
-        <section className="page-content">
+        <section className="page-content section-cream">
           <div style={{ maxWidth: 1040, margin: "0 auto" }}>
             <span className="section-tag section-tag-left">What to Expect</span>
             <h2 className="section-h2 section-h2-left" style={{ marginBottom: 12 }}>
@@ -247,7 +247,7 @@ export default function Confirmation() {
         </section>
 
         {/* ─── STEPS / FAQ ─── */}
-        <section className="steps" aria-labelledby="steps-title">
+        <section className="steps section-warm" aria-labelledby="steps-title">
           <div className="inner">
             <div>
               <p className="kicker">Common questions</p>
@@ -271,22 +271,18 @@ export default function Confirmation() {
         </section>
 
         {/* ─── CTA STRIP ─── */}
-        <section className="cta-strip">
-          <div className="flourish" aria-hidden="true" style={{ padding: "0 0 32px" }}>
-            <span className="line" />
-            <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
-              <rect x="6" y="0" width="2" height="18" />
-              <rect x="2" y="5" width="10" height="2" />
-            </svg>
-            <span className="line" />
-          </div>
-          <p className="kicker">Begin</p>
-          <h2>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)" }}>
             Start your Confirmation <em>journey.</em>
           </h2>
-          <Link href="/parishes" className="btn btn-primary">
-            Find your parish <span className="arrow" aria-hidden="true">→</span>
-          </Link>
+          <p className="section-desc" style={{ color: "rgba(238,218,179,0.75)" }}>
+            Your parish is ready to help you prepare. Reach out today and take the first step.
+          </p>
+          <div style={{ marginTop: 32 }}>
+            <Link href="/parishes" className="btn btn-primary">
+              Find your parish <span className="arrow" aria-hidden="true">→</span>
+            </Link>
+          </div>
         </section>
       </main>
     </>

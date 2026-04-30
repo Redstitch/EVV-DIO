@@ -35,7 +35,7 @@ export default function AboutPage() {
 
       <main id="main-content">
         {/* Diocesan Snapshot */}
-        <section className="page-content">
+        <section className="page-content section-cream">
           <div className="section-head">
             <span className="section-tag">At a Glance</span>
             <h2 className="section-h2">The Catholic Church in Southwestern Indiana</h2>
@@ -151,7 +151,7 @@ export default function AboutPage() {
         </div>
 
         {/* Offices & Administration */}
-        <section className="page-content">
+        <section className="page-content section-warm">
           <span className="section-tag section-tag-left">Administration</span>
           <h2 className="section-h2 section-h2-left">Offices &amp; Transparency</h2>
 
@@ -223,7 +223,7 @@ export default function AboutPage() {
         </div>
 
         {/* Safety & Accountability */}
-        <section className="page-content">
+        <section className="page-content section-navy">
           <span className="section-tag section-tag-left">Safety &amp; Accountability</span>
           <h2 className="section-h2 section-h2-left">Protecting Our Community</h2>
 
@@ -261,23 +261,21 @@ export default function AboutPage() {
         </section>
 
         {/* CTA Block */}
-        <div className="page-content">
-          <div className="cta-block">
-            <h3>Have Questions? We Are Here to Help.</h3>
-            <p>
-              The Catholic Center is open Monday through Friday, 8:00 a.m. to 4:30 p.m. Reach us by phone, email, or visit us in person at 4200 N. Kentucky Avenue, Evansville, IN 47711.
-            </p>
-            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/about/contact" className="btn-gold">
-                Contact Us
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </Link>
-              <a href="tel:8124245536" className="btn btn-outline">
-                (812) 424-5536
-              </a>
-            </div>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2">Have Questions? We Are Here to Help.</h2>
+          <p className="section-desc">
+            The Catholic Center is open Monday through Friday, 8:00 a.m. to 4:30 p.m. Reach us by phone, email, or visit us in person at 4200 N. Kentucky Avenue, Evansville, IN 47711.
+          </p>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
+            <Link href="/about/contact" className="btn-gold">
+              Contact Us
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+            </Link>
+            <a href="tel:8124245536" className="btn btn-outline">
+              (812) 424-5536
+            </a>
           </div>
-        </div>
+        </section>
       </main>
     </>
   );

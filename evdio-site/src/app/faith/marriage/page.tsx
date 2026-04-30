@@ -115,7 +115,7 @@ export default function Marriage() {
         </div>
 
         {/* ─── PREPARATION STEPS ─── */}
-        <section className="steps" aria-labelledby="steps-title">
+        <section className="steps section-warm" aria-labelledby="steps-title">
           <div className="inner">
             <div>
               <p className="kicker">Preparation</p>
@@ -141,7 +141,7 @@ export default function Marriage() {
         </section>
 
         {/* ─── SIX-MONTH INFO BLOCK ─── */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content section-cream">
           <div className="info-block">
             <h3>The Six-Month Preparation Requirement</h3>
             <p>
@@ -235,7 +235,7 @@ export default function Marriage() {
         </div>
 
         {/* ─── ENRICHMENT ─── */}
-        <section className="steps" aria-labelledby="enrich-title">
+        <section className="steps section-cream" aria-labelledby="enrich-title">
           <div className="inner">
             <div>
               <p className="kicker">Already married</p>
@@ -260,22 +260,18 @@ export default function Marriage() {
         </section>
 
         {/* ─── CTA STRIP ─── */}
-        <section className="cta-strip">
-          <div className="flourish" aria-hidden="true" style={{ padding: "0 0 32px" }}>
-            <span className="line" />
-            <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
-              <rect x="6" y="0" width="2" height="18" />
-              <rect x="2" y="5" width="10" height="2" />
-            </svg>
-            <span className="line" />
-          </div>
-          <p className="kicker">Next</p>
-          <h2>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)" }}>
             Begin your marriage journey — <em>find your parish.</em>
           </h2>
-          <Link href="/parishes" className="btn btn-primary">
-            Find your parish <span className="arrow" aria-hidden="true">→</span>
-          </Link>
+          <p className="section-desc" style={{ color: "rgba(238,218,179,0.75)" }}>
+            Reach out to your parish at least six months before your desired wedding date to begin preparation.
+          </p>
+          <div style={{ marginTop: 32 }}>
+            <Link href="/parishes" className="btn btn-primary">
+              Find your parish <span className="arrow" aria-hidden="true">→</span>
+            </Link>
+          </div>
         </section>
       </main>
     </>

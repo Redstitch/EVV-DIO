@@ -35,7 +35,7 @@ export default function MinistriesPage() {
 
       <main id="main-content">
         {/* Family & Life */}
-        <section className="page-content">
+        <section className="page-content section-cream">
           <span className="section-tag section-tag-left">Family &amp; Life</span>
           <h2 className="section-h2 section-h2-left">Marriage, Family &amp; Respect for Life</h2>
 
@@ -107,7 +107,7 @@ export default function MinistriesPage() {
         </div>
 
         {/* Youth & Education */}
-        <section className="page-content">
+        <section className="page-content section-warm">
           <span className="section-tag section-tag-left">Youth &amp; Education</span>
           <h2 className="section-h2 section-h2-left">Young People &amp; Faith Formation</h2>
 
@@ -217,18 +217,18 @@ export default function MinistriesPage() {
         </div>
 
         {/* CTA */}
-        <div className="page-content" style={{ paddingTop: 0 }}>
-          <div className="cta-block" style={{ background: "var(--accent-red)" }}>
-            <h3>Your Gifts Make These Ministries Possible</h3>
-            <p style={{ color: "rgba(255,255,255,0.85)" }}>
-              Every dollar given to the Catholic Ministries Appeal directly supports the programs and services on this page. Join thousands of faithful Catholics in building up the Body of Christ.
-            </p>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2">Your Gifts Make These Ministries Possible</h2>
+          <p className="section-desc">
+            Every dollar given to the Catholic Ministries Appeal directly supports the programs and services on this page. Join thousands of faithful Catholics in building up the Body of Christ.
+          </p>
+          <div style={{ marginTop: 32 }}>
             <Link href="/give" className="btn-gold">
               Support Our Ministries
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
             </Link>
           </div>
-        </div>
+        </section>
       </main>
     </>
   );

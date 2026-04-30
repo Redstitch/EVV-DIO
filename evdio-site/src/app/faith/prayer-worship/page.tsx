@@ -33,7 +33,7 @@ export default function PrayerWorship() {
 
       <main id="main-content">
         {/* ─── DAILY PRAYERS ─── */}
-        <section className="page-content">
+        <section className="page-content section-warm">
           <div className="section-head">
             <span className="section-tag">Daily Prayer</span>
             <h2 className="section-h2">Prayers for Every Day</h2>
@@ -75,7 +75,7 @@ export default function PrayerWorship() {
         </div>
 
         {/* ─── DEVOTIONS ─── */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content section-cream">
           <div className="section-head">
             <span className="section-tag">Catholic Devotions</span>
             <h2 className="section-h2">Deepen Your Prayer Life</h2>
@@ -144,20 +144,18 @@ export default function PrayerWorship() {
         </section>
 
         {/* ─── CTA ─── */}
-        <section className="page-content">
-          <div className="cta-block">
-            <h3>Want to Grow in Prayer?</h3>
-            <p>
-              Your parish is the best place to start. Many parishes offer prayer groups, adoration hours, and spiritual direction. Find a parish near you and get connected.
-            </p>
-            <div style={{ display: "flex", gap: 14, flexWrap: "wrap", justifyContent: "center" }}>
-              <Link href="/parishes" className="btn btn-primary">
-                Find a Parish
-              </Link>
-              <Link href="/faith/calendar" className="btn btn-outline">
-                View the Church Calendar
-              </Link>
-            </div>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2">Want to Grow in Prayer?</h2>
+          <p className="section-desc">
+            Your parish is the best place to start. Many parishes offer prayer groups, adoration hours, and spiritual direction. Find a parish near you and get connected.
+          </p>
+          <div style={{ display: "flex", gap: 14, flexWrap: "wrap", justifyContent: "center", marginTop: 32 }}>
+            <Link href="/parishes" className="btn btn-primary">
+              Find a Parish
+            </Link>
+            <Link href="/faith/calendar" className="btn btn-outline">
+              View the Church Calendar
+            </Link>
           </div>
         </section>
       </main>

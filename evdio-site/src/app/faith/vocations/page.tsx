@@ -47,7 +47,7 @@ export default function Vocations() {
         </div>
 
         {/* ─── PATHS ─── */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content section-cream">
           <div className="section-head">
             <span className="section-tag">Paths of Service</span>
             <h2 className="section-h2">Ways God Calls</h2>
@@ -98,7 +98,7 @@ export default function Vocations() {
         </div>
 
         {/* ─── DISCERNMENT ─── */}
-        <section className="page-content">
+        <section className="page-content section-warm">
           <div className="section-head">
             <span className="section-tag">Discernment</span>
             <h2 className="section-h2">How Do I Discern My Calling?</h2>
@@ -137,7 +137,7 @@ export default function Vocations() {
         </div>
 
         {/* ─── SEMINARY ─── */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content section-cream">
           <div className="interior-grid interior-grid-2" style={{ alignItems: "start" }}>
             <div>
               <span className="section-tag section-tag-left">Seminary Formation</span>
@@ -173,20 +173,18 @@ export default function Vocations() {
         </section>
 
         {/* ─── CTA ─── */}
-        <section className="page-content">
-          <div className="cta-block">
-            <h3>Is God Calling You?</h3>
-            <p>
-              If you are considering the priesthood, religious life, or the diaconate, the Diocese of Evansville is here to support your discernment. Reach out to our Vocation Director to begin the conversation.
-            </p>
-            <div style={{ display: "flex", gap: 14, flexWrap: "wrap", justifyContent: "center" }}>
-              <Link href="/contact" className="btn btn-primary">
-                Contact the Vocation Director
-              </Link>
-              <Link href="/faith/deacon" className="btn btn-outline">
-                Learn About the Diaconate
-              </Link>
-            </div>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2">Is God Calling You?</h2>
+          <p className="section-desc">
+            If you are considering the priesthood, religious life, or the diaconate, the Diocese of Evansville is here to support your discernment. Reach out to our Vocation Director to begin the conversation.
+          </p>
+          <div style={{ display: "flex", gap: 14, flexWrap: "wrap", justifyContent: "center", marginTop: 32 }}>
+            <Link href="/contact" className="btn btn-primary">
+              Contact the Vocation Director
+            </Link>
+            <Link href="/faith/deacon" className="btn btn-outline">
+              Learn About the Diaconate
+            </Link>
           </div>
         </section>
       </main>

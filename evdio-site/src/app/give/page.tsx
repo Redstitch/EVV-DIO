@@ -70,8 +70,7 @@ export default function GivePage() {
 
         {/* ─── IMPACT STATS ─── */}
         <section
-          className="page-content"
-          style={{ background: "var(--cream-lt)" }}
+          className="page-content section-cream"
           aria-labelledby="impact-title"
         >
           <span className="section-tag section-tag-left">Your Impact</span>
@@ -118,7 +117,7 @@ export default function GivePage() {
         </div>
 
         {/* ─── STORIES OF IMPACT ─── */}
-        <section className="page-content" aria-labelledby="stories-title">
+        <section className="page-content section-navy" aria-labelledby="stories-title">
           <span className="section-tag section-tag-left">Stories of Impact</span>
           <h2
             className="section-h2 section-h2-left"
@@ -190,7 +189,7 @@ export default function GivePage() {
         </div>
 
         {/* ─── WAYS TO GIVE ─── */}
-        <section className="page-content" aria-labelledby="ways-title">
+        <section className="page-content section-cream" aria-labelledby="ways-title">
           <span className="section-tag section-tag-left">Ways to Give</span>
           <h2
             className="section-h2 section-h2-left"
@@ -259,8 +258,7 @@ export default function GivePage() {
 
         {/* ─── MORE WAYS TO GIVE ─── */}
         <section
-          className="page-content"
-          style={{ background: "var(--cream-lt)" }}
+          className="page-content section-warm"
           aria-labelledby="more-ways-title"
         >
           <span className="section-tag section-tag-left">More Ways to Give</span>
@@ -305,7 +303,7 @@ export default function GivePage() {
         </section>
 
         {/* ─── ALLOCATION BREAKDOWN ─── */}
-        <section className="page-content" aria-labelledby="allocation-title">
+        <section className="page-content section-warm" aria-labelledby="allocation-title">
           <div className="container-narrow">
             <span className="section-tag section-tag-left">Transparency</span>
             <h2
@@ -345,36 +343,11 @@ export default function GivePage() {
         </section>
 
         {/* ─── CTA STRIP ─── */}
-        <section className="cta-strip">
-          <div
-            className="flourish"
-            aria-hidden="true"
-            style={{ padding: "0 0 32px" }}
-          >
-            <span className="line" />
-            <svg
-              width="14"
-              height="18"
-              viewBox="0 0 14 18"
-              fill="currentColor"
-            >
-              <rect x="6" y="0" width="2" height="18" />
-              <rect x="2" y="5" width="10" height="2" />
-            </svg>
-            <span className="line" />
-          </div>
-          <p className="kicker">Take the Next Step</p>
-          <h2>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)" }}>
             Your generosity changes <em>lives.</em>
           </h2>
-          <p
-            style={{
-              maxWidth: 520,
-              margin: "0 auto 28px",
-              lineHeight: 1.7,
-              opacity: 0.85,
-            }}
-          >
+          <p className="section-desc" style={{ color: "rgba(238,218,179,0.75)" }}>
             Join the thousands of faithful Catholics across the Diocese of
             Evansville who give generously to build up the Body of Christ. Make
             a gift today.
@@ -385,6 +358,7 @@ export default function GivePage() {
               gap: 16,
               flexWrap: "wrap",
               justifyContent: "center",
+              marginTop: 32,
             }}
           >
             <a href="#" className="btn btn-primary">

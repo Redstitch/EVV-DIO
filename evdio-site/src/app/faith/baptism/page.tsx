@@ -87,8 +87,8 @@ export default function Baptism() {
 
         {/* ─── INFANT BAPTISM ─── */}
         <section
-          className="page-content"
-          style={{ background: "var(--cream-lt)", paddingTop: 80, paddingBottom: 80 }}
+          className="page-content section-cream"
+          style={{ paddingTop: 80, paddingBottom: 80 }}
         >
           <div
             style={{
@@ -195,7 +195,7 @@ export default function Baptism() {
 
         {/* ─── ADULT BAPTISM ─── */}
         <section
-          className="page-content"
+          className="page-content section-warm"
           style={{ paddingTop: 80, paddingBottom: 80 }}
         >
           <div
@@ -318,9 +318,8 @@ export default function Baptism() {
 
         {/* ─── FAQ ACCORDION ─── */}
         <section
-          className="steps"
+          className="steps section-warm"
           aria-labelledby="faq-title"
-          style={{ background: "var(--cream-lt)" }}
         >
           <div className="inner">
             <div>
@@ -346,34 +345,21 @@ export default function Baptism() {
         </section>
 
         {/* ─── CTA STRIP ─── */}
-        <section className="cta-strip">
-          <div
-            className="flourish"
-            aria-hidden="true"
-            style={{ padding: "0 0 32px" }}
-          >
-            <span className="line" />
-            <svg
-              width="14"
-              height="18"
-              viewBox="0 0 14 18"
-              fill="currentColor"
-            >
-              <rect x="6" y="0" width="2" height="18" />
-              <rect x="2" y="5" width="10" height="2" />
-            </svg>
-            <span className="line" />
-          </div>
-          <p className="kicker">Next</p>
-          <h2>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)" }}>
             Ready to schedule — <em>take the first step.</em>
           </h2>
-          <Link href="/parishes" className="btn btn-primary">
-            Find your parish{" "}
-            <span className="arrow" aria-hidden="true">
-              →
-            </span>
-          </Link>
+          <p className="section-desc" style={{ color: "rgba(238,218,179,0.75)" }}>
+            Contact your parish to begin the process. There is no wrong time to reach out.
+          </p>
+          <div style={{ marginTop: 32 }}>
+            <Link href="/parishes" className="btn btn-primary">
+              Find your parish{" "}
+              <span className="arrow" aria-hidden="true">
+                →
+              </span>
+            </Link>
+          </div>
         </section>
       </main>
     </>

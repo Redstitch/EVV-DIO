@@ -35,23 +35,23 @@ export default function ParishesPage() {
 
       <main id="main-content">
         {/* Parish Finder CTA */}
-        <div className="page-content">
-          <div className="cta-block" style={{ padding: "48px 36px" }}>
-            <div style={{ marginBottom: 16 }}>
-              <svg viewBox="0 0 24 24" width="48" height="48" fill="var(--gold)" aria-hidden="true">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-              </svg>
-            </div>
-            <h3 style={{ fontSize: "clamp(28px,4vw,40px)" }}>Explore Our Interactive Parish Map</h3>
-            <p>
-              Use our interactive map to find the parish closest to you. View locations, Mass times, contact information, and directions for all 45 parishes. Search by ZIP code, city, or county.
-            </p>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <div style={{ marginBottom: 16 }}>
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="var(--bgold)" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
+          </div>
+          <h2 className="section-h2" style={{ fontSize: "clamp(28px,4vw,40px)" }}>Explore Our Interactive Parish Map</h2>
+          <p className="section-desc">
+            Use our interactive map to find the parish closest to you. View locations, Mass times, contact information, and directions for all 45 parishes. Search by ZIP code, city, or county.
+          </p>
+          <div style={{ marginTop: 32 }}>
             <Link href="/parishes/directory" className="btn-gold-lg">
               Open Parish Finder
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
             </Link>
           </div>
-        </div>
+        </section>
 
         {/* Quick Links */}
         <section className="page-content">
@@ -101,7 +101,7 @@ export default function ParishesPage() {
         </div>
 
         {/* Deaneries */}
-        <section className="page-content">
+        <section className="page-content section-cream">
           <div className="section-head">
             <span className="section-tag">Four Deaneries</span>
             <h2 className="section-h2">Explore by Deanery</h2>
@@ -158,7 +158,7 @@ export default function ParishesPage() {
         </section>
 
         {/* New to the Area */}
-        <div className="page-content" style={{ paddingTop: 0 }}>
+        <div className="page-content section-warm" style={{ paddingTop: 0 }}>
           <div className="info-block">
             <h3>New to the Area?</h3>
             <p>

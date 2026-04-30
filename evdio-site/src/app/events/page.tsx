@@ -44,7 +44,7 @@ export default function EventsPage() {
 
       <main id="main-content">
         {/* Upcoming Events */}
-        <section className="page-content">
+        <section className="page-content section-cream">
           <div className="section-head">
             <span className="section-tag">Coming Up</span>
             <h2 className="section-h2">Upcoming Events</h2>
@@ -172,23 +172,21 @@ export default function EventsPage() {
         </div>
 
         {/* CTA */}
-        <div className="page-content" style={{ paddingTop: 0 }}>
-          <div className="cta-block">
-            <h3>Stay Connected</h3>
-            <p>
-              Subscribe to The Message for weekly coverage of diocesan events, parish activities, and Catholic community life across Southwestern Indiana.
-            </p>
-            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/the-message/subscribe" className="btn-gold">
-                Subscribe to The Message
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </Link>
-              <Link href="/parishes/directory" className="btn btn-outline">
-                Find Your Parish
-              </Link>
-            </div>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2">Stay Connected</h2>
+          <p className="section-desc">
+            Subscribe to The Message for weekly coverage of diocesan events, parish activities, and Catholic community life across Southwestern Indiana.
+          </p>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
+            <Link href="/the-message/subscribe" className="btn-gold">
+              Subscribe to The Message
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+            </Link>
+            <Link href="/parishes/directory" className="btn btn-outline">
+              Find Your Parish
+            </Link>
           </div>
-        </div>
+        </section>
       </main>
     </>
   );

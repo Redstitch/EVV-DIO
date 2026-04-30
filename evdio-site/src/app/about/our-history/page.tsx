@@ -116,7 +116,7 @@ export default function OurHistoryPage() {
 
       <main id="main-content">
         {/* Intro */}
-        <div className="page-content">
+        <div className="page-content section-warm">
           <div className="section-head">
             <span className="section-tag">Our Story</span>
             <h2 className="section-h2">From Pioneer Missionaries to a Thriving Diocese</h2>
@@ -131,7 +131,7 @@ export default function OurHistoryPage() {
         </div>
 
         {/* Timeline */}
-        <div className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <div className="page-content section-cream">
           <div style={{ maxWidth: 800, margin: "0 auto", position: "relative" }}>
             {/* Vertical Line */}
             <div style={{ position: "absolute", left: 39, top: 0, bottom: 0, width: 1, background: "var(--line)", display: "var(--md-show, none)" }} />
@@ -191,22 +191,20 @@ export default function OurHistoryPage() {
         </div>
 
         {/* CTA */}
-        <div className="page-content">
-          <div className="cta-block">
-            <h3>Continue the Story</h3>
-            <p>
-              The history of our diocese is still being written. Learn about our vision for the future and how you can be part of the next chapter.
-            </p>
-            <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
-              <Link href="/about/our-vision" className="btn btn-primary">
-                Our Vision &amp; Priorities
-              </Link>
-              <Link href="/about/our-bishop" className="btn btn-outline">
-                Meet Our Bishop
-              </Link>
-            </div>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2">Continue the Story</h2>
+          <p className="section-desc">
+            The history of our diocese is still being written. Learn about our vision for the future and how you can be part of the next chapter.
+          </p>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center", marginTop: 32 }}>
+            <Link href="/about/our-vision" className="btn btn-primary">
+              Our Vision &amp; Priorities
+            </Link>
+            <Link href="/about/our-bishop" className="btn btn-outline">
+              Meet Our Bishop
+            </Link>
           </div>
-        </div>
+        </section>
       </main>
     </>
   );

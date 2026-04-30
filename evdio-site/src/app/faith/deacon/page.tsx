@@ -48,7 +48,7 @@ export default function Deacon() {
         </div>
 
         {/* ─── THREE AREAS ─── */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content section-cream">
           <div className="section-head">
             <span className="section-tag">Ministry of Service</span>
             <h2 className="section-h2">Three Pillars of Diaconal Ministry</h2>
@@ -75,7 +75,7 @@ export default function Deacon() {
         </div>
 
         {/* ─── FORMATION ─── */}
-        <section className="page-content">
+        <section className="page-content section-warm">
           <div className="interior-grid interior-grid-2" style={{ alignItems: "start" }}>
             <div>
               <span className="section-tag section-tag-left">Formation Program</span>
@@ -111,7 +111,7 @@ export default function Deacon() {
         </div>
 
         {/* ─── FAQ ─── */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content section-cream">
           <div className="section-head">
             <span className="section-tag">Common Questions</span>
             <h2 className="section-h2">Frequently Asked Questions</h2>
@@ -138,12 +138,12 @@ export default function Deacon() {
         </section>
 
         {/* ─── CTA ─── */}
-        <section className="page-content">
-          <div className="cta-block">
-            <h3>Is God Calling You to the Diaconate?</h3>
-            <p>
-              If you feel stirred by the idea of ordained service, the first step is a conversation. Talk with your pastor, your wife, and the diocesan Diaconate Formation Office.
-            </p>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2">Is God Calling You to the Diaconate?</h2>
+          <p className="section-desc">
+            If you feel stirred by the idea of ordained service, the first step is a conversation. Talk with your pastor, your wife, and the diocesan Diaconate Formation Office.
+          </p>
+          <div style={{ marginTop: 32 }}>
             <Link href="/contact" className="btn btn-primary">
               Contact Diaconate Formation
             </Link>

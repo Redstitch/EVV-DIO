@@ -72,8 +72,7 @@ export default function SchoolsPage() {
 
         {/* ─── STATS ─── */}
         <section
-          className="page-content"
-          style={{ background: "var(--cream-lt)" }}
+          className="page-content section-cream"
           aria-labelledby="stats-title"
         >
           <span className="section-tag section-tag-left">At a Glance</span>
@@ -120,7 +119,7 @@ export default function SchoolsPage() {
         </div>
 
         {/* ─── ACTION CARDS ─── */}
-        <section className="page-content" aria-labelledby="explore-title">
+        <section className="page-content section-teal" aria-labelledby="explore-title">
           <span className="section-tag section-tag-left">Explore</span>
           <h2
             className="section-h2 section-h2-left"
@@ -221,7 +220,7 @@ export default function SchoolsPage() {
         </div>
 
         {/* ─── ACCREDITATION ─── */}
-        <section className="page-content" aria-labelledby="accreditation-title">
+        <section className="page-content section-warm" aria-labelledby="accreditation-title">
           <span className="section-tag section-tag-left">Quality Assurance</span>
           <h2
             className="section-h2 section-h2-left"
@@ -258,36 +257,11 @@ export default function SchoolsPage() {
         </section>
 
         {/* ─── CTA STRIP ─── */}
-        <section className="cta-strip">
-          <div
-            className="flourish"
-            aria-hidden="true"
-            style={{ padding: "0 0 32px" }}
-          >
-            <span className="line" />
-            <svg
-              width="14"
-              height="18"
-              viewBox="0 0 14 18"
-              fill="currentColor"
-            >
-              <rect x="6" y="0" width="2" height="18" />
-              <rect x="2" y="5" width="10" height="2" />
-            </svg>
-            <span className="line" />
-          </div>
-          <p className="kicker">Begin Here</p>
-          <h2>
+        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)" }}>
             Give your child the gift of Catholic <em>education.</em>
           </h2>
-          <p
-            style={{
-              maxWidth: 520,
-              margin: "0 auto 28px",
-              lineHeight: 1.7,
-              opacity: 0.85,
-            }}
-          >
+          <p className="section-desc" style={{ color: "rgba(238,218,179,0.75)" }}>
             Schedule a tour, attend an open house, or contact one of our 26
             schools to learn how Catholic education can make a difference for
             your family.
@@ -298,6 +272,7 @@ export default function SchoolsPage() {
               gap: 16,
               flexWrap: "wrap",
               justifyContent: "center",
+              marginTop: 32,
             }}
           >
             <Link href="/schools/find" className="btn btn-primary">
