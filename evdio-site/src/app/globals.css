@@ -1466,27 +1466,39 @@ a.give-btn:hover { background: #8b3a2d; }
 }
 .seven .item:hover .cta { color: var(--navy); border-color: var(--navy); }
 
-/* Scripture block */
+/* Scripture block — elegant inline quote, not a heavy banner */
 .scripture {
-  background: var(--teal); color: var(--cream);
-  padding: 120px 40px;
+  padding: 72px 40px;
   text-align: center;
-  margin: 0 40px;
-  border-radius: 28px;
+  margin: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--cream-lt);
+  position: relative;
+}
+.scripture::before {
+  content: '\201C';
+  display: block;
+  font-family: var(--serif);
+  font-size: 120px;
+  line-height: 0.4;
+  color: var(--dgold);
+  opacity: 0.25;
+  margin-bottom: 24px;
 }
 .scripture blockquote {
-  max-width: 940px; margin: 0 auto;
+  max-width: 780px; margin: 0 auto;
   font-family: var(--serif); font-style: italic;
-  font-size: clamp(32px, 4.2vw, 58px);
-  line-height: 1.16; letter-spacing: -0.01em;
-  color: var(--cream); font-weight: 400;
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.3; letter-spacing: -0.01em;
+  color: var(--navy); font-weight: 400;
 }
-.scripture blockquote em { font-style: normal; color: var(--bgold); }
+.scripture blockquote em { font-style: normal; color: var(--teal); }
 .scripture cite {
-  display: block; margin-top: 28px;
+  display: block; margin-top: 20px;
   font-family: var(--sans); font-style: normal;
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--bgold); font-weight: 600;
+  color: var(--brick); font-weight: 600;
 }
 
 /* Steps / FAQ */
@@ -1545,7 +1557,7 @@ a.give-btn:hover { background: #8b3a2d; }
 .cta-strip {
   padding: 96px 40px;
   text-align: center;
-  background: var(--cream-lt);
+  background: var(--cream-xlt);
   border-top: 1px solid var(--line);
 }
 .cta-strip .kicker {
@@ -1614,7 +1626,7 @@ a.give-btn:hover { background: #8b3a2d; }
   .seven .list { padding: 0 24px; }
   .seven .item { grid-template-columns: 50px 1fr; gap: 20px; }
   .seven .item .cta { grid-column: 1 / -1; justify-self: start; margin-top: 10px; }
-  .scripture { padding: 80px 24px; margin: 0 24px; }
+  .scripture { padding: 56px 24px; }
   .steps { padding: 64px 0; }
   .steps .inner { grid-template-columns: 1fr; gap: 40px; padding: 0 24px; }
   .cta-strip { padding: 64px 24px; }
@@ -1649,7 +1661,7 @@ a.give-btn:hover { background: #8b3a2d; }
   .back-to-top { bottom: 20px; right: 20px; width: 44px; height: 44px; }
   .mobile-drawer { width: 100%; max-width: 100vw; }
   .bishop-portrait { max-width: 280px; margin: 0 auto; }
-  .scripture { margin: 0 16px; border-radius: 20px; }
+  .scripture { padding: 48px 20px; }
   .feature-head h1 { font-size: clamp(36px, 8vw, 56px); }
   .feature-head .deck { font-size: 16px; }
   .feature-head .photo { border-radius: 0; aspect-ratio: 4/3; }
@@ -1721,13 +1733,7 @@ a.give-btn:hover { background: #8b3a2d; }
   margin-bottom: 16px;
 }
 
-/* Scripture block hover glow */
-.scripture {
-  transition: box-shadow 0.4s ease;
-}
-.scripture:hover {
-  box-shadow: 0 12px 48px rgba(0,78,115,0.25);
-}
+/* Scripture block — no hover effect needed on light bg */
 
 /* CTA block — clean light card */
 .cta-block {
@@ -1877,7 +1883,7 @@ a.give-btn:hover { background: #8b3a2d; }
   .interior-card h3 { font-size: 19px; }
   .info-block { padding: 20px; border-radius: 16px; }
   .cta-block { padding: 28px 16px; border-radius: 16px; }
-  .scripture { padding: 56px 20px; margin: 0 12px; border-radius: 16px; }
+  .scripture { padding: 40px 16px; }
   .scripture blockquote { font-size: clamp(24px, 5.5vw, 36px); }
   .steps .faq details { padding: 16px 18px; border-radius: 12px; }
   .steps .faq summary { font-size: 17px; gap: 14px; }
