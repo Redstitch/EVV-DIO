@@ -43,16 +43,23 @@ export default function Baptism() {
           </div>
         </section>
 
-        {/* ─── SCRIPTURE ─── */}
-        <section className="scripture" aria-label="Scripture">
-          <blockquote>
-            &ldquo;Go therefore and make disciples of all nations, <em>baptizing</em> them in the name of the Father and of the Son and of the Holy Spirit.&rdquo;
-            <cite>Matthew 28:19</cite>
-          </blockquote>
-        </section>
+        {/* ─── CROSS FLOURISH ─── */}
+        <div className="flourish" aria-hidden="true">
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
+        </div>
 
-        {/* ─── TYPES ─── */}
+        {/* ─── TYPES (on white) ─── */}
         <section className="page-content section-cream">
+          <div className="section-head">
+            <span className="section-tag">Two Paths, One Grace</span>
+            <h2 className="section-h2">Infant &amp; Adult <em>Baptism</em></h2>
+          </div>
+
           <div className="interior-grid interior-grid-2">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Infant Baptism</h3>
@@ -89,7 +96,40 @@ export default function Baptism() {
           </div>
         </section>
 
-        {/* ─── FAQ ─── */}
+        {/* ─── IMAGE STRIP ─── */}
+        <div style={{ padding: "0 40px", maxWidth: 1440, margin: "0 auto" }}>
+          <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", background: "var(--navy)", height: 400 }}>
+            <Image
+              src="/images/stock/holy-week-good-friday.jpg"
+              alt="Good Friday observance in the Diocese of Evansville."
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+        </div>
+
+        {/* ─── SCRIPTURE ─── */}
+        <section className="scripture" aria-label="Scripture">
+          <blockquote>
+            &ldquo;Go therefore and make disciples of all nations, <em>baptizing</em> them in the name of the Father and of the Son and of the Holy Spirit.&rdquo;
+            <cite>Matthew 28:19</cite>
+          </blockquote>
+        </section>
+
+        {/* ─── QUATREFOIL FLOURISH ─── */}
+        <div className="flourish flourish-quatrefoil" aria-hidden="true">
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" /><circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" /><circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
+        </div>
+
+        {/* ─── FAQ (back on cream) ─── */}
         <section className="page-content">
           <div className="section-head">
             <span className="section-tag">Common Questions</span>
