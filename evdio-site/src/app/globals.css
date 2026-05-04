@@ -1879,7 +1879,7 @@ main > .page-content:nth-child(even) > * {
 .section-warm { background: #FEFCF6; }
 /* CTA band — soft blue, full-bleed */
 .section-navy {
-  background: #1B3A5C; color: var(--cream);
+  background: #1B3A5C !important; color: var(--cream) !important;
   border: none;
 }
 /* Full-bleed colored sections — use as standalone <section>, not inside page-content */
