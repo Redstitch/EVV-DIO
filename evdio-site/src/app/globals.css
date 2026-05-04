@@ -623,7 +623,7 @@ a.give-btn:hover { background: #8b3a2d; }
    ================================================================ */
 .bishop-section {
   padding: 96px 0;
-  background: linear-gradient(rgba(0,78,115,0.06), rgba(0,78,115,0.06)), var(--cream-lt);
+  background: transparent;
   border-bottom: 1px solid var(--line);
 }
 .bishop-inner {
