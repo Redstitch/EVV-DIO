@@ -416,8 +416,13 @@ a.give-btn:hover { background: #8b3a2d; }
 .btn-primary {
   background: var(--brick); color: var(--cream);
   border-color: var(--brick);
+  box-shadow: 0 4px 16px rgba(164,70,55,0.35);
 }
-.btn-primary:hover { background: var(--navy); border-color: var(--navy); color: var(--cream); }
+.btn-primary:hover {
+  background: #8b3a2d; border-color: #8b3a2d; color: var(--cream);
+  box-shadow: 0 8px 28px rgba(164,70,55,0.45);
+  transform: translateY(-2px);
+}
 .btn-outline {
   background: transparent; color: var(--navy);
   border-color: var(--navy);
