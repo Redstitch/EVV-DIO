@@ -70,10 +70,18 @@ export default function ElementarySchools() {
 
           <div className="interior-grid interior-grid-3">
             {prek8Schools.map((s) => (
-              <div key={s.name} className="interior-card" style={{ cursor: "default" }}>
-                <h3>{s.name}</h3>
-                <p>{s.city}</p>
-              </div>
+              s.url ? (
+                <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer" className="interior-card">
+                  <h3>{s.name}</h3>
+                  <p>{s.city}</p>
+                  <span className="read-link" style={{ marginTop: 12 }}>Visit website <span aria-hidden="true">→</span></span>
+                </a>
+              ) : (
+                <div key={s.name} className="interior-card" style={{ cursor: "default" }}>
+                  <h3>{s.name}</h3>
+                  <p>{s.city}</p>
+                </div>
+              )
             ))}
           </div>
         </section>
@@ -100,10 +108,18 @@ export default function ElementarySchools() {
 
           <div className="interior-grid interior-grid-3">
             {prek5Schools.map((s) => (
-              <div key={s.name} className="interior-card" style={{ cursor: "default" }}>
-                <h3>{s.name}</h3>
-                <p>{s.city}</p>
-              </div>
+              s.url ? (
+                <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer" className="interior-card">
+                  <h3>{s.name}</h3>
+                  <p>{s.city}</p>
+                  <span className="read-link" style={{ marginTop: 12 }}>Visit website <span aria-hidden="true">→</span></span>
+                </a>
+              ) : (
+                <div key={s.name} className="interior-card" style={{ cursor: "default" }}>
+                  <h3>{s.name}</h3>
+                  <p>{s.city}</p>
+                </div>
+              )
             ))}
           </div>
         </section>
@@ -153,29 +169,29 @@ export default function ElementarySchools() {
 }
 
 const prek8Schools = [
-  { name: "Annunciation at Christ the King", city: "Evansville" },
-  { name: "Annunciation at Holy Spirit", city: "Evansville" },
-  { name: "Corpus Christi School", city: "Evansville" },
-  { name: "Good Shepherd School", city: "Evansville" },
-  { name: "Holy Redeemer School", city: "Evansville" },
-  { name: "Holy Rosary School", city: "Evansville" },
-  { name: "Holy Trinity School", city: "Jasper" },
-  { name: "Resurrection School", city: "Evansville" },
-  { name: "St. Benedict Cathedral School", city: "Evansville" },
-  { name: "St. Bernard School", city: "Rockport" },
-  { name: "St. James School", city: "Haubstadt" },
-  { name: "St. John the Baptist School", city: "Newburgh" },
-  { name: "St. Joseph School", city: "Evansville" },
-  { name: "St. Phillip School", city: "Mt. Vernon" },
-  { name: "St. Wendel School", city: "Wadesville" },
-  { name: "Washington Catholic School", city: "Washington" },
-  { name: "Westside Catholic School", city: "Evansville" },
+  { name: "Annunciation at Christ the King", city: "Evansville", url: "http://www.annunciationangels.org/ctk" },
+  { name: "Annunciation at Holy Spirit", city: "Evansville", url: "http://www.annunciationangels.org/HS" },
+  { name: "Corpus Christi School", city: "Evansville", url: "http://corpuschristischoolevansville.org/" },
+  { name: "Good Shepherd School", city: "Evansville", url: "https://goodshepherdrams.org/" },
+  { name: "Holy Redeemer School", city: "Evansville", url: "http://www.holyredeemercatholicschool.com/" },
+  { name: "Holy Rosary School", city: "Evansville", url: "http://www.holyrosaryrams.org/" },
+  { name: "Holy Trinity School", city: "Jasper", url: "http://holytrinitysaints.com/" },
+  { name: "Resurrection School", city: "Evansville", url: "http://www.resurrectioncatholicschool.org/" },
+  { name: "St. Benedict Cathedral School", city: "Evansville", url: "https://www.saintbenedictcathedral.org/school/" },
+  { name: "St. Bernard School", city: "Rockport", url: "http://stbernardschool.info/catholic-school" },
+  { name: "St. James School", city: "Haubstadt", url: "http://www.stjameshaubstadt.com/" },
+  { name: "St. John the Baptist School", city: "Newburgh", url: "http://www.sjbschoolnewburgh.org/" },
+  { name: "St. Joseph School", city: "Evansville", url: "http://www.stjoeco.org/school" },
+  { name: "St. Phillip School", city: "Mt. Vernon", url: null },
+  { name: "St. Wendel School", city: "Wadesville", url: "http://www.saintwendelschool.org/" },
+  { name: "Washington Catholic School", city: "Washington", url: "https://www.wccardinals.org/" },
+  { name: "Westside Catholic School", city: "Evansville", url: "http://www.westsidecatholic.org/" },
 ];
 
 const prek5Schools = [
-  { name: "Flaget Elementary School", city: "Vincennes" },
-  { name: "Holy Cross School", city: "Fort Branch" },
-  { name: "St. Joseph School", city: "Princeton" },
-  { name: "St. Matthews School", city: "Mt. Vernon" },
-  { name: "Sts. Peter & Paul School", city: "Haubstadt" },
+  { name: "Flaget Elementary School", city: "Vincennes", url: "https://www.flagetces.org/home" },
+  { name: "Holy Cross School", city: "Fort Branch", url: "https://www.holycrossparish.info/school.html" },
+  { name: "St. Joseph School", city: "Princeton", url: "http://stjosephprinceton.com/" },
+  { name: "St. Matthews School", city: "Mt. Vernon", url: "http://www.stmatthewmtvernon.org/" },
+  { name: "Sts. Peter & Paul School", city: "Haubstadt", url: "http://www.stspeterandpaulcatholicschool.net/" },
 ];

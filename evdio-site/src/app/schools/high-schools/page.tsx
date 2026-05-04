@@ -60,7 +60,7 @@ export default function HighSchoolsPage() {
           </div>
 
           <div className="interior-grid interior-grid-2">
-            <div className="interior-card" style={{ cursor: "default" }}>
+            <a href="http://www.materdeiwildcats.com/" target="_blank" rel="noopener noreferrer" className="interior-card">
               <h3>Mater Dei High School</h3>
               <p><strong>Evansville, IN</strong></p>
               <p>
@@ -69,9 +69,10 @@ export default function HighSchoolsPage() {
                 sports. The Wildcats are known for academic excellence,
                 championship athletics, and a close-knit community.
               </p>
-            </div>
+              <span className="read-link" style={{ marginTop: 12 }}>Visit website <span aria-hidden="true">→</span></span>
+            </a>
 
-            <div className="interior-card" style={{ cursor: "default" }}>
+            <a href="http://www.reitzmemorial.org/" target="_blank" rel="noopener noreferrer" className="interior-card">
               <h3>Reitz Memorial High School</h3>
               <p><strong>Evansville, IN</strong></p>
               <p>
@@ -80,9 +81,10 @@ export default function HighSchoolsPage() {
                 arts, and competitive athletics. Campus ministry ensures faith
                 formation is woven into every aspect of student life.
               </p>
-            </div>
+              <span className="read-link" style={{ marginTop: 12 }}>Visit website <span aria-hidden="true">→</span></span>
+            </a>
 
-            <div className="interior-card" style={{ cursor: "default" }}>
+            <a href="https://www.rivetchs.org" target="_blank" rel="noopener noreferrer" className="interior-card">
               <h3>Rivet High School</h3>
               <p><strong>Vincennes, IN</strong></p>
               <p>
@@ -91,9 +93,10 @@ export default function HighSchoolsPage() {
                 personal attention, and a strong sense of community rooted in the
                 Catholic tradition.
               </p>
-            </div>
+              <span className="read-link" style={{ marginTop: 12 }}>Visit website <span aria-hidden="true">→</span></span>
+            </a>
 
-            <div className="interior-card" style={{ cursor: "default" }}>
+            <a href="https://www.wccardinals.org/" target="_blank" rel="noopener noreferrer" className="interior-card">
               <h3>Washington Catholic High School</h3>
               <p><strong>Washington, IN</strong> &mdash; PreK&ndash;12</p>
               <p>
@@ -102,7 +105,8 @@ export default function HighSchoolsPage() {
                 Palmer, the school is expanding its vision for Catholic education
                 in Daviess County.
               </p>
-            </div>
+              <span className="read-link" style={{ marginTop: 12 }}>Visit website <span aria-hidden="true">→</span></span>
+            </a>
           </div>
         </section>
 
