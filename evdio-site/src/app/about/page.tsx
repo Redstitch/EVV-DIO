@@ -223,7 +223,7 @@ export default function AboutPage() {
         </div>
 
         {/* Safety & Accountability */}
-        <section className="page-content section-navy">
+        <section className="page-content">
           <span className="section-tag section-tag-left">Safety &amp; Accountability</span>
           <h2 className="section-h2 section-h2-left">Protecting Our Community</h2>
 

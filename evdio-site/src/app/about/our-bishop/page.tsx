@@ -90,7 +90,7 @@ export default function OurBishopPage() {
 
         {/* ─── PASTORAL VISION ─── */}
         <section
-          className="page-content section-navy"
+          className="page-content"
           aria-labelledby="vision-title"
         >
           <span className="section-tag section-tag-left">Pastoral Vision</span>

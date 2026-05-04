@@ -119,7 +119,7 @@ export default function SchoolsPage() {
         </div>
 
         {/* ─── ACTION CARDS ─── */}
-        <section className="page-content section-teal" aria-labelledby="explore-title">
+        <section className="page-content" aria-labelledby="explore-title">
           <span className="section-tag section-tag-left">Explore</span>
           <h2
             className="section-h2 section-h2-left"
