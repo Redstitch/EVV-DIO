@@ -1052,6 +1052,17 @@ a.give-btn:hover { background: #8b3a2d; }
   max-width: 1360px; margin: 0 auto;
   padding: 56px 40px;
 }
+/* Auto-alternate: every other page-content gets cream bg */
+main > .page-content:nth-child(even) {
+  background: var(--cream-lt);
+  max-width: 100%;
+  padding: 56px 40px;
+}
+main > .page-content:nth-child(even) > * {
+  max-width: 1360px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Content grid with sidebar */
 .content-grid { display: grid; grid-template-columns: 1fr 340px; gap: 56px; }
