@@ -1055,12 +1055,12 @@ a.give-btn:hover { background: #8b3a2d; }
   padding: 56px 40px;
 }
 /* Auto-alternate: every other page-content gets cream bg */
-main > .page-content:nth-child(even) {
+main > section.page-content:nth-of-type(even) {
   background: #F3ECD9 !important;
   max-width: 100%;
   padding: 56px 40px;
 }
-main > .page-content:nth-child(even) > * {
+main > section.page-content:nth-of-type(even) > * {
   max-width: 1360px;
   margin-left: auto;
   margin-right: auto;
