@@ -44,7 +44,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="stat-row" style={{ justifyContent: "center" }}>
+          <div className="stat-row">
             <div className="stat-item">
               <span className="stat-num">79,500</span>
               <span className="stat-label">Catholics</span>

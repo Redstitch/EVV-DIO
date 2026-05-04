@@ -47,7 +47,7 @@ export default function SchoolsPage() {
             </p>
           </div>
 
-          <div className="stat-row" style={{ justifyContent: "center" }}>
+          <div className="stat-row">
             <div className="stat-item">
               <span className="stat-num">26</span>
               <span className="stat-label">Schools</span>
@@ -176,7 +176,7 @@ export default function SchoolsPage() {
             <h2 className="section-h2">Accredited &amp; <em>accountable.</em></h2>
           </div>
 
-          <div className="stat-row" style={{ justifyContent: "center" }}>
+          <div className="stat-row">
             <div className="stat-item">
               <span className="stat-num">18</span>
               <span className="stat-label">Avg. Class Size</span>

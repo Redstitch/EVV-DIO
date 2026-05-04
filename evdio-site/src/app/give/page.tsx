@@ -81,7 +81,7 @@ export default function GivePage() {
             What your generosity makes <em>possible.</em>
           </h2>
 
-          <div className="stat-row" style={{ justifyContent: "center", marginTop: 32 }}>
+          <div className="stat-row">
             <div className="stat-item">
               <span className="stat-num" style={{ color: "var(--gold)" }}>850</span>
               <span className="stat-label">Scholarships Awarded</span>
