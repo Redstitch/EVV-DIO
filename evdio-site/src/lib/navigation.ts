@@ -181,8 +181,7 @@ export const navItems: NavItem[] = [
         heading: "Browse Schools",
         links: [
           { label: "High Schools", href: "/schools/high-schools" },
-          { label: "Elementary / Middle Schools (PreK-8)", href: "/schools/prek-8" },
-          { label: "Elementary Schools (PreK-5)", href: "/schools/prek-5" },
+          { label: "Elementary Schools", href: "/schools/prek-5" },
         ],
       },
       {
