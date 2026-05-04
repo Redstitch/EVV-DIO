@@ -414,13 +414,13 @@ a.give-btn:hover { background: #8b3a2d; }
 }
 .btn:hover .arrow { transform: translateX(5px); }
 .btn-primary {
-  background: var(--brick); color: var(--cream);
-  border-color: var(--brick);
-  box-shadow: 0 4px 16px rgba(164,70,55,0.35);
+  background: #C0442F; color: #fff;
+  border-color: #C0442F;
+  box-shadow: 0 4px 16px rgba(192,68,47,0.35);
 }
 .btn-primary:hover {
-  background: #8b3a2d; border-color: #8b3a2d; color: var(--cream);
-  box-shadow: 0 8px 28px rgba(164,70,55,0.45);
+  background: #A83B2A; border-color: #A83B2A; color: #fff;
+  box-shadow: 0 8px 28px rgba(192,68,47,0.45);
   transform: translateY(-2px);
 }
 .btn-outline {
