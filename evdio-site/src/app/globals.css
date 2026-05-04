@@ -1487,12 +1487,12 @@ a.give-btn:hover { background: #8b3a2d; }
 }
 .seven .item:hover .cta { color: var(--navy); border-color: var(--navy); }
 
-/* Scripture block — warm, inviting moment with gentle color */
+/* Scripture block — inline moment, same background as page */
 .scripture {
   padding: 80px 40px;
   text-align: center;
   margin: 0;
-  background: linear-gradient(180deg, rgba(0,78,115,0.04) 0%, rgba(0,78,115,0.08) 100%);
+  background: transparent;
   position: relative;
 }
 .scripture::before {
