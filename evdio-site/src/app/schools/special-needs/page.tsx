@@ -43,8 +43,13 @@ export default function SpecialNeeds() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish" aria-hidden="true">
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
         </div>
 
         {/* Services */}
@@ -82,8 +87,16 @@ export default function SpecialNeeds() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish flourish-quatrefoil" aria-hidden="true">
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" /><circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" /><circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
         </div>
 
         {/* Partnerships */}
@@ -130,20 +143,14 @@ export default function SpecialNeeds() {
         </section>
 
         {/* CTA */}
-        <section className="page-content">
-          <div className="cta-block">
-            <h3>Your Child Is Welcome Here</h3>
-            <p>
-              Contact the Catholic Schools Office or a specific school to discuss how we can support your child&rsquo;s learning journey. Every child deserves to be known, loved, and challenged to grow.
-            </p>
-            <div className="btn-row">
-              <Link href="/schools/find" className="btn btn-primary">
-                Find a School
-              </Link>
-              <Link href="/schools/enroll" className="btn btn-secondary">
-                Start Enrollment
-              </Link>
-            </div>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>Your Child Is Welcome Here</h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
+            Contact the Catholic Schools Office or a specific school to discuss how we can support your child&rsquo;s learning journey. Every child deserves to be known, loved, and challenged to grow.
+          </p>
+          <div style={{ marginTop: 32, display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+            <Link href="/schools/find" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>Find a School <span className="arrow" aria-hidden="true">→</span></Link>
+            <Link href="/schools/enroll" className="btn btn-outline" style={{ borderColor: "rgba(238,218,179,0.3)", color: "var(--cream)" }}>Start Enrollment <span className="arrow" aria-hidden="true">→</span></Link>
           </div>
         </section>
       </main>

@@ -188,23 +188,29 @@ export default function OfficesPage() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="page-content">
-          <div className="cta-block">
-            <h3>Need Help Finding the Right Office?</h3>
-            <p>
-              Call the Catholic Center and our front desk team will connect you with the right department.
-            </p>
-            <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
-              <Link href="/about/contact" className="btn btn-primary">
-                Contact Us
-              </Link>
-              <Link href="/about/staff-directory" className="btn btn-outline">
-                Staff Directory
-              </Link>
-            </div>
-          </div>
+        <div className="flourish flourish-quatrefoil" aria-hidden="true">
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" /><circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" /><circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
         </div>
+
+        {/* CTA */}
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>Need Help Finding the Right Office?</h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
+            Call the Catholic Center and our front desk team will connect you with the right department.
+          </p>
+          <div style={{ marginTop: 32, display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+            <Link href="/about/contact" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>Contact Us <span className="arrow" aria-hidden="true">→</span></Link>
+            <Link href="/about/staff-directory" className="btn btn-outline" style={{ color: "var(--cream)", borderColor: "rgba(238,218,179,0.3)" }}>Staff Directory</Link>
+          </div>
+        </section>
       </main>
     </>
   );

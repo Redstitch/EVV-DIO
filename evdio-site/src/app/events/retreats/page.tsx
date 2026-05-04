@@ -80,8 +80,13 @@ export default function RetreatsPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish" aria-hidden="true">
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
         </div>
 
         {/* Upcoming Retreats */}
@@ -106,25 +111,16 @@ export default function RetreatsPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
-        </div>
-
         {/* Private Retreats CTA */}
-        <div className="page-content" style={{ paddingTop: 0 }}>
-          <div className="cta-block">
-            <h3>Private &amp; Group Retreats</h3>
-            <p>
-              The Sarto Retreat Center is available for parish groups, school faculties, ministry teams, and individuals seeking a personal retreat. Contact us to plan your retreat.
-            </p>
-            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginTop: 16 }}>
-              <Link href="mailto:retreats@evdio.org" className="btn-gold">
-                Inquire About a Retreat
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </Link>
-            </div>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>Private &amp; Group Retreats</h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
+            The Sarto Retreat Center is available for parish groups, school faculties, ministry teams, and individuals seeking a personal retreat. Contact us to plan your retreat.
+          </p>
+          <div style={{ marginTop: 32 }}>
+            <Link href="mailto:retreats@evdio.org" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>Inquire About a Retreat <span className="arrow" aria-hidden="true">→</span></Link>
           </div>
-        </div>
+        </section>
       </main>
     </>
   );

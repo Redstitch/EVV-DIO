@@ -95,8 +95,13 @@ export default function AppealPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish" aria-hidden="true">
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
         </div>
 
         {/* Impact Areas */}
@@ -122,8 +127,16 @@ export default function AppealPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish flourish-quatrefoil" aria-hidden="true">
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" /><circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" /><circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
         </div>
 
         {/* Bishop's Message */}
@@ -138,10 +151,6 @@ export default function AppealPage() {
             </cite>
           </div>
         </section>
-
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
-        </div>
 
         {/* Donor Recognition */}
         <section className="page-content" style={{ background: "var(--cream-lt)" }}>
@@ -168,8 +177,13 @@ export default function AppealPage() {
           </p>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish" aria-hidden="true">
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
         </div>
 
         {/* How to Give */}
@@ -197,15 +211,13 @@ export default function AppealPage() {
         </section>
 
         {/* CTA */}
-        <div className="page-content" style={{ paddingTop: 0 }}>
-          <div className="cta-block">
-            <h3>We Are Here to Help</h3>
-            <p>
-              Contact the Stewardship and Development Office for questions about the Catholic Ministries Appeal, pledge payments, or donor recognition.
-            </p>
-            <p style={{ color: "var(--dgold)", fontWeight: 600, fontSize: 18, marginTop: 16 }}>(812) 424-5536 | appeal@evdio.org</p>
-          </div>
-        </div>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>We Are Here to Help</h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
+            Contact the Stewardship and Development Office for questions about the Catholic Ministries Appeal, pledge payments, or donor recognition.
+          </p>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "12px auto 0", fontWeight: 600, fontSize: 18 }}>(812) 424-5536 | appeal@evdio.org</p>
+        </section>
       </main>
     </>
   );

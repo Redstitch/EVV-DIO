@@ -117,8 +117,13 @@ export default function OurVisionPage() {
           </p>
         </div>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish" aria-hidden="true">
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
         </div>
 
         {/* Three Pillars */}
@@ -156,8 +161,16 @@ export default function OurVisionPage() {
           </div>
         </div>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish flourish-quatrefoil" aria-hidden="true">
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" /><circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" /><circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
         </div>
 
         {/* Strategic Areas */}
@@ -177,10 +190,6 @@ export default function OurVisionPage() {
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
         </div>
 
         {/* Impact Numbers */}
@@ -211,22 +220,22 @@ export default function OurVisionPage() {
         </section>
 
         {/* CTA */}
-        <div className="page-content">
-          <div style={{ textAlign: "center" }}>
-            <h2 className="section-h2">Be Part of the Vision</h2>
-            <p style={{ maxWidth: 560, margin: "0 auto 32px" }}>
-              Every Catholic in our diocese has a role to play. Whether through parish involvement, volunteering, giving, or prayer, you can help us Encounter, Deepen, and Engage.
-            </p>
-            <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
-              <Link href="/give" className="btn btn-primary">
-                Support Our Mission
-              </Link>
-              <Link href="/about/our-bishop" className="btn btn-secondary">
-                Meet Our Bishop
-              </Link>
-            </div>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>
+            Be Part of the Vision
+          </h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
+            Every Catholic in our diocese has a role to play. Whether through parish involvement, volunteering, giving, or prayer, you can help us Encounter, Deepen, and Engage.
+          </p>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center", marginTop: 32 }}>
+            <Link href="/give" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>
+              Support Our Mission <span className="arrow" aria-hidden="true">→</span>
+            </Link>
+            <Link href="/about/our-bishop" className="btn btn-outline">
+              Meet Our Bishop
+            </Link>
           </div>
-        </div>
+        </section>
       </main>
     </>
   );

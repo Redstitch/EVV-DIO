@@ -120,8 +120,16 @@ export default function StatementsPage() {
           </section>
         ))}
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish flourish-quatrefoil" aria-hidden="true">
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" /><circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" /><circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
         </div>
 
         {/* All Statements */}
@@ -162,23 +170,16 @@ export default function StatementsPage() {
         </section>
 
         {/* Subscribe CTA */}
-        <div className="page-content" style={{ paddingTop: 0 }}>
-          <div className="cta-block">
-            <h3>Stay Informed</h3>
-            <p>
-              Receive official statements and pastoral letters directly in your inbox. Subscribe to diocesan communications.
-            </p>
-            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginTop: 16 }}>
-              <Link href="/about/press-room" className="btn-gold">
-                Media Inquiries
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </Link>
-              <Link href="/about/contact" className="btn btn-outline">
-                Contact Communications
-              </Link>
-            </div>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>Stay Informed</h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
+            Receive official statements and pastoral letters directly in your inbox. Subscribe to diocesan communications.
+          </p>
+          <div style={{ marginTop: 32, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+            <Link href="/about/press-room" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>Media Inquiries <span className="arrow" aria-hidden="true">→</span></Link>
+            <Link href="/about/contact" className="btn btn-outline" style={{ color: "var(--cream)", borderColor: "rgba(238,218,179,0.3)" }}>Contact Communications</Link>
           </div>
-        </div>
+        </section>
       </main>
     </>
   );

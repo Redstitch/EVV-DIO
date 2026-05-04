@@ -56,8 +56,13 @@ export default function WatchMassPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish" aria-hidden="true">
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
         </div>
 
         {/* Livestreaming Parishes */}
@@ -84,23 +89,15 @@ export default function WatchMassPage() {
         </section>
 
         {/* National Resources CTA */}
-        <section className="page-content">
-          <div className="cta-block">
-            <h3>National Catholic Resources</h3>
-            <p>
-              Additional online Mass options are available through national Catholic broadcasters.
-            </p>
-            <div className="btn-row">
-              <a href="https://www.catholictv.org" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                CatholicTV
-              </a>
-              <a href="https://www.ewtn.com" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                EWTN
-              </a>
-              <a href="https://www.wordonfire.org" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                Word on Fire
-              </a>
-            </div>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>National Catholic Resources</h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
+            Additional online Mass options are available through national Catholic broadcasters.
+          </p>
+          <div style={{ marginTop: 32, display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+            <a href="https://www.catholictv.org" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>CatholicTV <span className="arrow" aria-hidden="true">→</span></a>
+            <a href="https://www.ewtn.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ borderColor: "rgba(238,218,179,0.3)", color: "var(--cream)" }}>EWTN <span className="arrow" aria-hidden="true">→</span></a>
+            <a href="https://www.wordonfire.org" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ borderColor: "rgba(238,218,179,0.3)", color: "var(--cream)" }}>Word on Fire <span className="arrow" aria-hidden="true">→</span></a>
           </div>
         </section>
       </main>

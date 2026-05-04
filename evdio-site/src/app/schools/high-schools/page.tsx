@@ -126,20 +126,18 @@ export default function HighSchoolsPage() {
         </div>
 
         {/* CTA */}
-        <div className="page-content">
-          <div className="cta-block">
-            <h3>Interested in Catholic High School?</h3>
-            <p>
-              Whether your child is entering ninth grade or transferring
-              mid-year, our high schools welcome inquiries year-round. Schedule
-              a campus visit, attend an open house, or start the enrollment
-              process today.
-            </p>
-            <Link href="/schools/enroll" className="btn btn-primary">
-              Inquire About Enrollment
-            </Link>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>Interested in Catholic High School?</h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
+            Whether your child is entering ninth grade or transferring
+            mid-year, our high schools welcome inquiries year-round. Schedule
+            a campus visit, attend an open house, or start the enrollment
+            process today.
+          </p>
+          <div style={{ marginTop: 32 }}>
+            <Link href="/schools/enroll" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>Inquire About Enrollment <span className="arrow" aria-hidden="true">→</span></Link>
           </div>
-        </div>
+        </section>
       </main>
     </>
   );

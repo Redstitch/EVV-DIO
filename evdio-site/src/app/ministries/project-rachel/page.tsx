@@ -55,8 +55,13 @@ export default function ProjectRachelPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish" aria-hidden="true">
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
         </div>
 
         {/* What We Offer */}
@@ -84,25 +89,28 @@ export default function ProjectRachelPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish flourish-quatrefoil" aria-hidden="true">
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" /><circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" /><circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
         </div>
 
         {/* CTA */}
-        <section className="page-content">
-          <div className="cta-block">
-            <h3>Reach Out Today</h3>
-            <p>
-              All inquiries are completely confidential. You do not need to give your name. A compassionate listener is ready to help.
-            </p>
-            <p><strong>(812) 424-5536</strong> or email projectrachel@evdio.org</p>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>Reach Out Today</h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
+            All inquiries are completely confidential. You do not need to give your name. A compassionate listener is ready to help.
+          </p>
+          <p style={{ color: "var(--cream)", fontWeight: 700, marginTop: 16 }}>(812) 424-5536 or email projectrachel@evdio.org</p>
+          <div style={{ marginTop: 32 }}>
+            <Link href="/ministries/respect-life" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>Respect for Life Ministry <span className="arrow" aria-hidden="true">→</span></Link>
           </div>
-        </section>
-
-        <section className="page-content" style={{ textAlign: "center" }}>
-          <Link href="/ministries/respect-life" className="btn btn-secondary">
-            Respect for Life Ministry
-          </Link>
         </section>
       </main>
     </>

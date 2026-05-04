@@ -74,8 +74,13 @@ export default function PlannedGivingPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish" aria-hidden="true">
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
         </div>
 
         {/* Giving Options */}
@@ -98,8 +103,16 @@ export default function PlannedGivingPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish flourish-quatrefoil" aria-hidden="true">
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" /><circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" /><circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
         </div>
 
         {/* Process */}
@@ -126,10 +139,6 @@ export default function PlannedGivingPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
-        </div>
-
         {/* Legal Info */}
         <section className="page-content" style={{ background: "var(--cream-lt)" }}>
           <div className="info-block" style={{ maxWidth: 800, margin: "0 auto" }}>
@@ -152,24 +161,17 @@ export default function PlannedGivingPage() {
         </section>
 
         {/* CTA */}
-        <div className="page-content" style={{ paddingTop: 0 }}>
-          <div className="cta-block">
-            <h3>Your Gift Will Serve for Generations</h3>
-            <p>
-              Contact the Development Office to begin a confidential conversation about your planned gift.
-            </p>
-            <p style={{ color: "var(--dgold)", fontWeight: 600, fontSize: 18, margin: "16px 0" }}>(812) 424-5536 | development@evdio.org</p>
-            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-              <a href="#" className="btn-gold">
-                Request Information
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </a>
-              <Link href="/give" className="btn btn-outline">
-                All Ways to Give
-              </Link>
-            </div>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>Your Gift Will Serve for Generations</h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
+            Contact the Development Office to begin a confidential conversation about your planned gift.
+          </p>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "12px auto 0", fontWeight: 600, fontSize: 18 }}>(812) 424-5536 | development@evdio.org</p>
+          <div style={{ marginTop: 32, display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+            <a href="#" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>Request Information <span className="arrow" aria-hidden="true">→</span></a>
+            <Link href="/give" className="btn btn-outline" style={{ borderColor: "rgba(238,218,179,0.3)", color: "var(--cream)" }}>All Ways to Give <span className="arrow" aria-hidden="true">→</span></Link>
           </div>
-        </div>
+        </section>
       </main>
     </>
   );

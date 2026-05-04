@@ -133,8 +133,13 @@ export default function ReportAbusePage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish" aria-hidden="true">
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
         </div>
 
         {/* Our Commitment */}
@@ -167,23 +172,22 @@ export default function ReportAbusePage() {
         </section>
 
         {/* Support CTA */}
-        <div className="page-content" style={{ paddingTop: 0 }}>
-          <div className="cta-block">
-            <h3>You Are Not Alone</h3>
-            <p>
-              If you have experienced abuse, we believe you. Support and healing are available. Please do not hesitate to reach out.
-            </p>
-            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginTop: 16 }}>
-              <a href="tel:8124245536" className="btn-gold">
-                Call (812) 424-5536
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </a>
-              <Link href="/about/safe-environment" className="btn btn-outline">
-                Safe Environment Programs
-              </Link>
-            </div>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>
+            You Are Not Alone
+          </h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
+            If you have experienced abuse, we believe you. Support and healing are available. Please do not hesitate to reach out.
+          </p>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
+            <a href="tel:8124245536" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>
+              Call (812) 424-5536 <span className="arrow" aria-hidden="true">→</span>
+            </a>
+            <Link href="/about/safe-environment" className="btn btn-outline">
+              Safe Environment Programs
+            </Link>
           </div>
-        </div>
+        </section>
       </main>
     </>
   );

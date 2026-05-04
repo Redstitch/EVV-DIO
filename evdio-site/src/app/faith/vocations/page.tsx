@@ -42,8 +42,13 @@ export default function Vocations() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish" aria-hidden="true">
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
         </div>
 
         {/* ─── PATHS ─── */}
@@ -93,8 +98,16 @@ export default function Vocations() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish flourish-quatrefoil" aria-hidden="true">
+          <span className="dot" />
+          <span className="line" />
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="8" r="6" /><circle cx="16" cy="24" r="6" />
+            <circle cx="8" cy="16" r="6" /><circle cx="24" cy="16" r="6" />
+            <circle cx="16" cy="16" r="3" fill="var(--cream-lt)" />
+          </svg>
+          <span className="line" />
+          <span className="dot" />
         </div>
 
         {/* ─── DISCERNMENT ─── */}
@@ -131,10 +144,6 @@ export default function Vocations() {
             </div>
           </div>
         </section>
-
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
-        </div>
 
         {/* ─── SEMINARY ─── */}
         <section className="page-content section-cream">
@@ -173,14 +182,16 @@ export default function Vocations() {
         </section>
 
         {/* ─── CTA ─── */}
-        <section className="page-content section-navy" style={{ textAlign: "center" }}>
-          <h2 className="section-h2">Is God Calling You?</h2>
-          <p className="section-desc">
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>
+            Is God Calling You?
+          </h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
             If you are considering the priesthood, religious life, or the diaconate, the Diocese of Evansville is here to support your discernment. Reach out to our Vocation Director to begin the conversation.
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap", justifyContent: "center", marginTop: 32 }}>
-            <Link href="/contact" className="btn btn-primary">
-              Contact the Vocation Director
+            <Link href="/contact" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>
+              Contact the Vocation Director <span className="arrow" aria-hidden="true">→</span>
             </Link>
             <Link href="/faith/deacon" className="btn btn-outline">
               Learn About the Diaconate

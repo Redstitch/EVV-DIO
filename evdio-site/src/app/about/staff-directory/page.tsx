@@ -154,18 +154,25 @@ export default function StaffDirectoryPage() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="page-content">
-          <div className="cta-block">
-            <h3>Looking for Clergy?</h3>
-            <p>
-              Visit our Clergy Directory for contact information for priests, deacons, and religious serving across the diocese.
-            </p>
-            <Link href="/about/clergy-directory" className="btn btn-primary">
-              Clergy Directory
-            </Link>
-          </div>
+        <div className="flourish" aria-hidden="true">
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
         </div>
+
+        {/* CTA */}
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>Looking for Clergy?</h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
+            Visit our Clergy Directory for contact information for priests, deacons, and religious serving across the diocese.
+          </p>
+          <div style={{ marginTop: 32 }}>
+            <Link href="/about/clergy-directory" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>Clergy Directory <span className="arrow" aria-hidden="true">→</span></Link>
+          </div>
+        </section>
       </main>
     </>
   );
