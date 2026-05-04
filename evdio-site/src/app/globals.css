@@ -1065,7 +1065,7 @@ a.give-btn:hover { background: #8b3a2d; }
    Use .bg-eggshell on sections explicitly in JSX.
    This is more reliable than nth-child hacks. */
 .bg-ivory { background: #FAF3E0; }
-.bg-eggshell { background: #F3ECD9; }
+.bg-eggshell { background: #FEFBF3; }
 
 /* Content grid with sidebar */
 .content-grid { display: grid; grid-template-columns: 1fr 340px; gap: 56px; }
