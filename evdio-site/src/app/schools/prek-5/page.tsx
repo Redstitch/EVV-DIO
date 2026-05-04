@@ -80,7 +80,6 @@ export default function ElementarySchools() {
                     PreK&ndash;8 &middot; {s.city}
                   </p>
                   <h3>{s.name}</h3>
-                  <p style={{ fontSize: 13, color: "var(--muted)", marginTop: 8 }}>{s.desc}</p>
                   {s.url && (
                     <span className="read-link" style={{ marginTop: 16 }}>Visit website <span aria-hidden="true">→</span></span>
                   )}
@@ -122,7 +121,6 @@ export default function ElementarySchools() {
                     PreK&ndash;5 &middot; {s.city}
                   </p>
                   <h3>{s.name}</h3>
-                  <p style={{ fontSize: 13, color: "var(--muted)", marginTop: 8 }}>{s.desc}</p>
                   {s.url && (
                     <span className="read-link" style={{ marginTop: 16 }}>Visit website <span aria-hidden="true">→</span></span>
                   )}
@@ -177,29 +175,29 @@ export default function ElementarySchools() {
 }
 
 const prek8Schools = [
-  { name: "Annunciation at Christ the King", city: "Evansville", url: "http://www.annunciationangels.org/ctk", desc: "Angels. East side of Evansville, serving the Christ the King parish community." },
-  { name: "Annunciation at Holy Spirit", city: "Evansville", url: "http://www.annunciationangels.org/HS", desc: "Angels. North side of Evansville, part of the Annunciation parish network." },
-  { name: "Corpus Christi School", city: "Evansville", url: "http://corpuschristischoolevansville.org/", desc: "Cougars. A diverse school community on Evansville's south side." },
-  { name: "Good Shepherd School", city: "Evansville", url: "https://goodshepherdrams.org/", desc: "Rams. Evansville's east side, known for strong academics and athletics." },
-  { name: "Holy Redeemer School", city: "Evansville", url: "http://www.holyredeemercatholicschool.com/", desc: "Lions. West side of Evansville with a legacy of faith-based education." },
-  { name: "Holy Rosary School", city: "Evansville", url: "http://www.holyrosaryrams.org/", desc: "Rams. Evansville's west side, emphasizing service and community." },
-  { name: "Holy Trinity School", city: "Jasper", url: "http://holytrinitysaints.com/", desc: "Saints. Serving the Jasper and Dubois County community." },
-  { name: "Resurrection School", city: "Evansville", url: "http://www.resurrectioncatholicschool.org/", desc: "Eagles. East side of Evansville, strong in academics and fine arts." },
-  { name: "St. Benedict Cathedral School", city: "Evansville", url: "https://www.saintbenedictcathedral.org/school/", desc: "The cathedral parish school in downtown Evansville." },
-  { name: "St. Bernard School", city: "Rockport", url: "http://stbernardschool.info/catholic-school", desc: "Serving the Spencer County community since 1871." },
-  { name: "St. James School", city: "Haubstadt", url: "http://www.stjameshaubstadt.com/", desc: "Tigers. A small-town school with strong parish support in Gibson County." },
-  { name: "St. John the Baptist School", city: "Newburgh", url: "http://www.sjbschoolnewburgh.org/", desc: "Patriots. One of the largest Catholic schools in the diocese." },
-  { name: "St. Joseph School", city: "Evansville", url: "http://www.stjoeco.org/school", desc: "Serving the St. Joseph parish community on Evansville's east side." },
-  { name: "St. Phillip School", city: "Mt. Vernon", url: null, desc: "Serving the Catholic community in Posey County." },
-  { name: "St. Wendel School", city: "Wadesville", url: "http://www.saintwendelschool.org/", desc: "A rural school with deep roots in the Wadesville farming community." },
-  { name: "Washington Catholic School", city: "Washington", url: "https://www.wccardinals.org/", desc: "Cardinals. A PreK–12 school serving Daviess County." },
-  { name: "Westside Catholic School", city: "Evansville", url: "http://www.westsidecatholic.org/", desc: "Warriors. Consolidation of west side parish schools, strong in community." },
+  { name: "Annunciation at Christ the King", city: "Evansville", url: "http://www.annunciationangels.org/ctk" },
+  { name: "Annunciation at Holy Spirit", city: "Evansville", url: "http://www.annunciationangels.org/HS" },
+  { name: "Corpus Christi School", city: "Evansville", url: "http://corpuschristischoolevansville.org/" },
+  { name: "Good Shepherd School", city: "Evansville", url: "https://goodshepherdrams.org/" },
+  { name: "Holy Redeemer School", city: "Evansville", url: "http://www.holyredeemercatholicschool.com/" },
+  { name: "Holy Rosary School", city: "Evansville", url: "http://www.holyrosaryrams.org/" },
+  { name: "Holy Trinity School", city: "Jasper", url: "http://holytrinitysaints.com/" },
+  { name: "Resurrection School", city: "Evansville", url: "http://www.resurrectioncatholicschool.org/" },
+  { name: "St. Benedict Cathedral School", city: "Evansville", url: "https://www.saintbenedictcathedral.org/school/" },
+  { name: "St. Bernard School", city: "Rockport", url: "http://stbernardschool.info/catholic-school" },
+  { name: "St. James School", city: "Haubstadt", url: "http://www.stjameshaubstadt.com/" },
+  { name: "St. John the Baptist School", city: "Newburgh", url: "http://www.sjbschoolnewburgh.org/" },
+  { name: "St. Joseph School", city: "Evansville", url: "http://www.stjoeco.org/school" },
+  { name: "St. Phillip School", city: "Mt. Vernon", url: null },
+  { name: "St. Wendel School", city: "Wadesville", url: "http://www.saintwendelschool.org/" },
+  { name: "Washington Catholic School", city: "Washington", url: "https://www.wccardinals.org/" },
+  { name: "Westside Catholic School", city: "Evansville", url: "http://www.westsidecatholic.org/" },
 ];
 
 const prek5Schools = [
-  { name: "Flaget Elementary School", city: "Vincennes", url: "https://www.flagetces.org/home", desc: "Serving the Catholic community in Knox County, Indiana's oldest city." },
-  { name: "Holy Cross School", city: "Fort Branch", url: "https://www.holycrossparish.info/school.html", desc: "A small, close-knit school in the Gibson County community." },
-  { name: "St. Joseph School", city: "Princeton", url: "http://stjosephprinceton.com/", desc: "Serving families in Gibson County with faith-centered education." },
-  { name: "St. Matthews School", city: "Mt. Vernon", url: "http://www.stmatthewmtvernon.org/", desc: "A Posey County school with a welcoming parish community." },
-  { name: "Sts. Peter & Paul School", city: "Haubstadt", url: "http://www.stspeterandpaulcatholicschool.net/", desc: "Crusaders. A thriving school in the Gibson County community." },
+  { name: "Flaget Elementary School", city: "Vincennes", url: "https://www.flagetces.org/home" },
+  { name: "Holy Cross School", city: "Fort Branch", url: "https://www.holycrossparish.info/school.html" },
+  { name: "St. Joseph School", city: "Princeton", url: "http://stjosephprinceton.com/" },
+  { name: "St. Matthews School", city: "Mt. Vernon", url: "http://www.stmatthewmtvernon.org/" },
+  { name: "Sts. Peter & Paul School", city: "Haubstadt", url: "http://www.stspeterandpaulcatholicschool.net/" },
 ];
