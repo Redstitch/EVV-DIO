@@ -101,9 +101,7 @@ export default function Confirmation() {
 
         {/* ─── FLOURISH ─── */}
         <div
-          className="flourish flourish-quatrefoil"
-          aria-hidden="true"
-          style={{ padding: "48px 0 8px", background: "var(--cream-lt)" }}
+          className="flourish flourish-quatrefoil" aria-hidden="true"
         >
           <span className="dot" />
           <span className="line" />

@@ -61,7 +61,7 @@ export default function SafeEnvironmentPage() {
         </div>
 
         {/* Programs & Policies */}
-        <div className="page-content">
+        <div className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Programs &amp; Policies</span>
             <h2 className="section-h2">How We Protect</h2>
@@ -143,12 +143,12 @@ export default function SafeEnvironmentPage() {
         </div>
 
         {/* Resources & Links */}
-        <div className="page-content">
+        <div className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Additional Resources</span>
             <h2 className="section-h2">Safe Environment Resources</h2>
           </div>
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <a
               href="https://www.usccb.org/offices/child-and-youth-protection/charter-protection-children-and-young-people"
               target="_blank"

@@ -69,7 +69,7 @@ export default function DisabilityPage() {
             <h2 className="section-h2">How We Serve</h2>
           </div>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Accessibility Assessments</h3>
               <p>We help parishes evaluate their physical spaces, liturgical practices, and communications for accessibility. From wheelchair ramps and accessible restrooms to large-print missalettes and hearing loops, we identify barriers and recommend solutions.</p>

@@ -63,7 +63,7 @@ export default function YouthPage() {
           <span className="section-tag">High School Ministry</span>
           <h2 className="section-h2">Programs for Teens</h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Youth Encounter Weekends</h3>
               <p>Powerful retreat weekends featuring music, talks by young Catholic speakers, small groups, Adoration, and the sacraments. Held three times per year.</p>
@@ -96,7 +96,7 @@ export default function YouthPage() {
           <span className="section-tag">Young Adult Ministry (18&ndash;35)</span>
           <h2 className="section-h2">Community &amp; Formation</h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Theology on Tap</h3>
               <p>Casual monthly gatherings in local venues featuring a speaker on a topic of faith, followed by open discussion and fellowship.</p>

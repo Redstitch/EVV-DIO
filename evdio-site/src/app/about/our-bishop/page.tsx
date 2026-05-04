@@ -101,7 +101,7 @@ export default function OurBishopPage() {
             Encounter. Deepen. <em>Engage.</em>
           </h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="info-block">
               <div
                 style={{
@@ -173,9 +173,7 @@ export default function OurBishopPage() {
 
         {/* ─── FLOURISH ─── */}
         <div
-          className="flourish flourish-quatrefoil"
-          aria-hidden="true"
-          style={{ padding: "48px 0 8px" }}
+          className="flourish flourish-quatrefoil" aria-hidden="true"
         >
           <span className="dot" />
           <span className="line" />
@@ -202,7 +200,7 @@ export default function OurBishopPage() {
             Areas of <em>focus.</em>
           </h2>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="info-block">
               <h3>Catholic Education</h3>
               <p>

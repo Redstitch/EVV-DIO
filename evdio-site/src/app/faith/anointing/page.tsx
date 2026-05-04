@@ -58,7 +58,7 @@ export default function Anointing() {
             <h2 className="section-h2">When Should You Request This Sacrament?</h2>
           </div>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Serious Illness</h3>
               <p>Anyone suffering from a serious illness, whether physical or mental, may receive the Anointing of the Sick. The illness need not be life-threatening.</p>

@@ -97,9 +97,7 @@ export default function Marriage() {
 
         {/* ─── FLOURISH ─── */}
         <div
-          className="flourish flourish-quatrefoil"
-          aria-hidden="true"
-          style={{ padding: "48px 0 8px" }}
+          className="flourish flourish-quatrefoil" aria-hidden="true"
         >
           <span className="dot" />
           <span className="line" />
@@ -158,7 +156,7 @@ export default function Marriage() {
             </p>
           </div>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="info-block" style={{ marginBottom: 0 }}>
               <h3>Requirements at a Glance</h3>
               <p style={{ marginBottom: 12 }}>
@@ -217,9 +215,7 @@ export default function Marriage() {
 
         {/* ─── FLOURISH ─── */}
         <div
-          className="flourish flourish-quatrefoil"
-          aria-hidden="true"
-          style={{ padding: "48px 0 8px", background: "var(--cream-lt)" }}
+          className="flourish flourish-quatrefoil" aria-hidden="true"
         >
           <span className="dot" />
           <span className="line" />

@@ -62,7 +62,7 @@ export default function MarriageFamilyPage() {
           <span className="section-tag">Programs &amp; Services</span>
           <h2 className="section-h2">What We Offer</h2>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Marriage Preparation</h3>
               <p>Required preparation for couples planning to marry in the Catholic Church, including Sponsor Couple programs, weekend retreats, and natural family planning instruction.</p>

@@ -63,7 +63,7 @@ export default function MensMinistryPage() {
           <span className="section-tag">Programs</span>
           <h2 className="section-h2">Opportunities for Men</h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Annual Men&rsquo;s Conference</h3>
               <p>A full-day event featuring national Catholic speakers, worship, Adoration, and the Sacrament of Reconciliation. Held each fall at the Catholic Center.</p>

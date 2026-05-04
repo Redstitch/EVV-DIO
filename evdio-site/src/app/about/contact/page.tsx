@@ -253,7 +253,7 @@ export default function ContactPage() {
         </div>
 
         {/* Map Placeholder */}
-        <div className="page-content">
+        <div className="page-content bg-eggshell">
           <div style={{ borderRadius: 20, border: "1px solid rgba(238,218,179,0.15)", overflow: "hidden" }}>
             <div style={{ aspectRatio: "3/1", minHeight: 250, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(238,218,179,0.06)", position: "relative" }}>
               <div style={{ textAlign: "center" }}>

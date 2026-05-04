@@ -57,7 +57,7 @@ export default function FirstCommunion() {
           <span className="section-tag">Preparation</span>
           <h2 className="section-h2">What Your Child Will Learn</h2>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="interior-card">
               <h3>The Real Presence</h3>
               <p>That the bread and wine truly become the Body and Blood of Jesus Christ.</p>
@@ -77,12 +77,12 @@ export default function FirstCommunion() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
         {/* ─── REQUIREMENTS ─── */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content">
           <div className="section-head">
             <span className="section-tag">Requirements</span>
             <h2 className="section-h2">What You Need to Know</h2>

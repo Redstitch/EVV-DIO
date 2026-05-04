@@ -58,7 +58,7 @@ export default function Vocations() {
             <h2 className="section-h2">Ways God Calls</h2>
           </div>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Diocesan Priesthood</h3>
               <p>
@@ -117,7 +117,7 @@ export default function Vocations() {
             <h2 className="section-h2">How Do I Discern My Calling?</h2>
           </div>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Pray</h3>
               <p>Bring your questions to God in prayer. Ask the Lord to reveal His will for your life. Develop a regular prayer practice and consider spending time in Eucharistic Adoration.</p>

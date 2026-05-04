@@ -42,7 +42,7 @@ export default function Calendar() {
             </p>
           </div>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="interior-card" style={{ cursor: "default", borderTop: "4px solid #5B3A8C" }}>
               <h3>Advent</h3>
               <p style={{ fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--dgold)", marginBottom: 8 }}>Four weeks before Christmas</p>
@@ -95,7 +95,7 @@ export default function Calendar() {
             </p>
           </div>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>January 1 &mdash; Solemnity of Mary, Mother of God</h3>
             </div>
@@ -144,7 +144,7 @@ export default function Calendar() {
             <h2 className="section-h2">Important Dates This Year</h2>
           </div>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             {[
               { month: "Feb", day: "18", title: "Ash Wednesday" },
               { month: "Mar", day: "29", title: "Palm Sunday" },

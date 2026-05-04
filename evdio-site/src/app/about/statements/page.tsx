@@ -133,7 +133,7 @@ export default function StatementsPage() {
         </div>
 
         {/* All Statements */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Archive</span>
             <h2 className="section-h2">All Statements &amp; Decrees</h2>

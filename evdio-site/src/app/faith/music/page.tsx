@@ -58,7 +58,7 @@ export default function Music() {
             <h2 className="section-h2">Resources &amp; Guidelines</h2>
           </div>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Liturgical Music Guidelines</h3>
               <p>Diocesan guidelines for selecting music for Mass, including principles for choosing hymns that are liturgically appropriate, theologically sound, and pastorally effective.</p>

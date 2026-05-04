@@ -138,7 +138,7 @@ export default function LeadershipPage() {
         </div>
 
         {/* Consultative Bodies */}
-        <div className="page-content">
+        <div className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Governance</span>
             <h2 className="section-h2">Consultative Bodies</h2>

@@ -63,7 +63,7 @@ export default function SeniorMinistryPage() {
           <span className="section-tag">Programs</span>
           <h2 className="section-h2">How We Serve</h2>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Homebound Ministry</h3>
               <p>Extraordinary Ministers of Holy Communion bring the Eucharist to those unable to attend Mass. Pastoral visits provide companionship and spiritual support.</p>

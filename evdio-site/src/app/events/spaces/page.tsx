@@ -91,12 +91,12 @@ export default function SpacesPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
         {/* Reservation Guidelines */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content">
           <div className="section-head">
             <span className="section-tag">Information</span>
             <h2 className="section-h2">Reservation Guidelines</h2>

@@ -110,7 +110,7 @@ export default function TheMessagePage() {
             </div>
           </Link>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 24 }}>
+          <div className="interior-grid interior-grid-3">
             {headlines.map((a) => {
               const cats = getCategoriesForArticle(a);
               return (

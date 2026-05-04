@@ -126,7 +126,7 @@ export default function GivePage() {
             Lives changed by <em>your gift.</em>
           </h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="info-block">
               <svg viewBox="0 0 24 24" width="24" height="24" fill="var(--gold)" aria-hidden="true" style={{ marginBottom: 12 }}>
                 <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
@@ -171,9 +171,7 @@ export default function GivePage() {
 
         {/* ─── FLOURISH ─── */}
         <div
-          className="flourish flourish-quatrefoil"
-          aria-hidden="true"
-          style={{ padding: "48px 0 8px" }}
+          className="flourish flourish-quatrefoil" aria-hidden="true"
         >
           <span className="dot" />
           <span className="line" />
@@ -198,7 +196,7 @@ export default function GivePage() {
             Choose how you <em>give.</em>
           </h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <Link href="/give/appeal" className="interior-card">
               <div className="interior-card-icon" style={{ background: "var(--navy)" }}>
                 <svg viewBox="0 0 24 24" aria-hidden="true" style={{ fill: "var(--gold)" }}>
@@ -239,9 +237,7 @@ export default function GivePage() {
 
         {/* ─── FLOURISH ─── */}
         <div
-          className="flourish flourish-quatrefoil"
-          aria-hidden="true"
-          style={{ padding: "48px 0 8px", background: "var(--cream-lt)" }}
+          className="flourish flourish-quatrefoil" aria-hidden="true"
         >
           <span className="dot" />
           <span className="line" />
@@ -269,7 +265,7 @@ export default function GivePage() {
             Every gift <em>counts.</em>
           </h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <Link href="/parishes/directory" className="interior-card">
               <div className="interior-card-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">

@@ -42,7 +42,7 @@ export default function PrayerWorship() {
             </p>
           </div>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Morning Offering</h3>
               <p style={{ fontStyle: "italic" }}>O Jesus, through the Immaculate Heart of Mary, I offer You my prayers, works, joys, and sufferings of this day in union with the Holy Sacrifice of the Mass throughout the world.</p>
@@ -86,7 +86,7 @@ export default function PrayerWorship() {
             <h2 className="section-h2">Deepen Your Prayer Life</h2>
           </div>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>The Rosary</h3>
               <p>The Rosary is a meditation on the mysteries of Christ&#8217;s life, prayed through the intercession of the Blessed Virgin Mary. It is one of the most beloved and powerful prayers of the Catholic tradition. Many parishes in the Diocese of Evansville pray the Rosary before daily Mass.</p>
@@ -128,7 +128,7 @@ export default function PrayerWorship() {
             </p>
           </div>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Office of Worship</h3>
               <p>The diocesan Office of Worship provides guidance on liturgical norms, sacramental preparation, and worship training for parishes across the diocese.</p>

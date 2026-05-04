@@ -59,7 +59,7 @@ export default function Deacon() {
             <h2 className="section-h2">Three Pillars of Diaconal Ministry</h2>
           </div>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Word</h3>
               <p>Deacons proclaim the Gospel at Mass, preach homilies, teach in parish faith formation programs, lead Bible studies, and bring the message of Christ to those outside the parish walls.</p>
@@ -126,7 +126,7 @@ export default function Deacon() {
             <h2 className="section-h2">Frequently Asked Questions</h2>
           </div>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Can a deacon perform weddings and baptisms?</h3>
               <p>Yes. Deacons are authorized to witness marriages, baptize, and preside at funeral services and wake services. They cannot celebrate Mass, hear Confessions, or administer the Anointing of the Sick.</p>

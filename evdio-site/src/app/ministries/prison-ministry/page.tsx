@@ -69,7 +69,7 @@ export default function PrisonMinistryPage() {
             <h2 className="section-h2">Ministry Services</h2>
           </div>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Sacramental Ministry</h3>
               <p>Priests and deacons celebrate Mass, hear confessions, and administer the sacraments of the Eucharist and Anointing of the Sick in correctional facilities. For many inmates, the weekly liturgy is the spiritual anchor of their week.</p>
@@ -122,7 +122,7 @@ export default function PrisonMinistryPage() {
             </p>
           </div>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="info-block"><strong>Vanderburgh County Jail, Evansville</strong></div>
             <div className="info-block"><strong>Warrick County Jail, Boonville</strong></div>
             <div className="info-block"><strong>Gibson County Jail, Princeton</strong></div>

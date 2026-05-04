@@ -136,7 +136,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Previous Months */}
-        <div className="page-content">
+        <div className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Archive</span>
             <h2 className="section-h2">Previous Monthly Reports</h2>

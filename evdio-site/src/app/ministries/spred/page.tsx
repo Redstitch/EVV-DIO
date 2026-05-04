@@ -45,7 +45,7 @@ export default function SpredPage() {
             </p>
           </div>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="info-block">
               <h3>Our Approach</h3>
               <p>
@@ -78,7 +78,7 @@ export default function SpredPage() {
             <h2 className="section-h2">Participation &amp; Volunteering</h2>
           </div>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Who Can Participate?</h3>
               <p>

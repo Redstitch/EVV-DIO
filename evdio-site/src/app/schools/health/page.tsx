@@ -43,12 +43,12 @@ export default function HealthPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
         {/* Areas */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content">
           <div className="section-head">
             <span className="section-tag">Health &amp; Safety</span>
             <h2 className="section-h2">Our Wellness Programs</h2>
@@ -82,7 +82,7 @@ export default function HealthPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
@@ -122,12 +122,12 @@ export default function HealthPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
         {/* Social-Emotional */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content">
           <div className="section-head">
             <span className="section-tag">Social-Emotional Learning</span>
             <h2 className="section-h2">Building Resilient Hearts</h2>
@@ -148,7 +148,7 @@ export default function HealthPage() {
         </section>
 
         {/* CTA */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <div className="cta-block">
             <h3>Your Child&rsquo;s Well-Being Matters</h3>
             <p>

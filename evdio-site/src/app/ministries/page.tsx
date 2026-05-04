@@ -39,7 +39,7 @@ export default function MinistriesPage() {
           <span className="section-tag">Family &amp; Life</span>
           <h2 className="section-h2">Marriage, Family &amp; Respect for Life</h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <Link href="/ministries/marriage-family" className="interior-card">
               <div className="interior-card-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -102,16 +102,16 @@ export default function MinistriesPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
         {/* Youth & Education */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content">
           <span className="section-tag">Youth &amp; Education</span>
           <h2 className="section-h2">Young People &amp; Faith Formation</h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <Link href="/ministries/youth" className="interior-card">
               <div className="interior-card-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -144,7 +144,7 @@ export default function MinistriesPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
@@ -153,7 +153,7 @@ export default function MinistriesPage() {
           <span className="section-tag">Community &amp; Outreach</span>
           <h2 className="section-h2">Service, Justice &amp; Inclusion</h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <Link href="/ministries/hispanic" className="interior-card">
               <div className="interior-card-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -207,7 +207,7 @@ export default function MinistriesPage() {
         </section>
 
         {/* Impact info-block */}
-        <div className="page-content" style={{ paddingTop: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0 }}>
           <div className="info-block">
             <h3>Your Generosity at Work</h3>
             <p>

@@ -52,12 +52,12 @@ export default function MassTimesPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
         {/* Daily Mass */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content">
           <div className="interior-card" style={{ cursor: "default" }}>
             <h2>Daily Mass</h2>
             <p>
@@ -89,7 +89,7 @@ export default function MassTimesPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
@@ -106,12 +106,12 @@ export default function MassTimesPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
         {/* Holy Days */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content">
           <div className="interior-card" style={{ cursor: "default" }}>
             <h2>Holy Days of Obligation</h2>
             <p>

@@ -63,7 +63,7 @@ export default function RespectLifePage() {
           <span className="section-tag">Areas of Focus</span>
           <h2 className="section-h2">How We Serve</h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Education</h3>
               <p>Parish presentations, school programs, and community workshops on Catholic social teaching and the consistent ethic of life.</p>
@@ -96,7 +96,7 @@ export default function RespectLifePage() {
           <span className="section-tag">Related Ministries</span>
           <h2 className="section-h2">Support &amp; Healing</h2>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <Link href="/ministries/project-rachel" className="interior-card" style={{ textDecoration: "none", color: "inherit" }}>
               <h3>Healing After Abortion</h3>
               <p>Confidential support through Project Rachel for anyone affected by an abortion experience.</p>

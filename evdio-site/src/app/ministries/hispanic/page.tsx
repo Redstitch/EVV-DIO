@@ -37,7 +37,7 @@ export default function HispanicMinistryPage() {
           <span className="section-tag">Our Mission</span>
           <h2 className="section-h2">Nuestra Misi&oacute;n</h2>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="prose">
               <p>
                 El Ministerio Hispano de la Di&oacute;cesis de Evansville sirve a la creciente comunidad cat&oacute;lica hispana y latina del suroeste de Indiana. Ofrecemos atenci&oacute;n pastoral, preparaci&oacute;n sacramental y programas comunitarios que honran las ricas tradiciones culturales de la fe cat&oacute;lica hispana, fomentando la plena integraci&oacute;n en la vida de la di&oacute;cesis.
@@ -67,7 +67,7 @@ export default function HispanicMinistryPage() {
             <h2 className="section-h2">Ministerios en Espa&ntilde;ol</h2>
           </div>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Nuestro Equipo</h3>
               <p style={{ marginBottom: 4, fontSize: 13, opacity: 0.6 }}>Our Team</p>

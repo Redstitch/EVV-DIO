@@ -63,7 +63,7 @@ export default function ExpectantMothersPage() {
           <span className="section-tag">Services</span>
           <h2 className="section-h2">What We Provide</h2>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Material Assistance</h3>
               <p>Diapers, formula, clothing, car seats, cribs, and other essential baby supplies through Catholic Charities and parish baby pantries.</p>

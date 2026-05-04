@@ -65,7 +65,7 @@ export default function AboutPage() {
         </section>
 
         {/* Pastoral Vision */}
-        <div className="page-content" style={{ paddingTop: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0 }}>
           <div className="info-block">
             <h3>Our Pastoral Vision: Encounter. Deepen. Engage.</h3>
             <p>
@@ -83,7 +83,7 @@ export default function AboutPage() {
           <span className="section-tag">Leadership</span>
           <h2 className="section-h2">Our Bishop &amp; Diocesan Leaders</h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <Link href="/about/our-bishop" className="interior-card">
               <div className="interior-card-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -151,11 +151,11 @@ export default function AboutPage() {
         </div>
 
         {/* Offices & Administration */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <span className="section-tag">Administration</span>
           <h2 className="section-h2">Offices &amp; Transparency</h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <Link href="/about/offices" className="interior-card">
               <div className="interior-card-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -227,7 +227,7 @@ export default function AboutPage() {
           <span className="section-tag">Safety &amp; Accountability</span>
           <h2 className="section-h2">Protecting Our Community</h2>
 
-          <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-3">
             <Link href="/about/safe-environment" className="interior-card">
               <div className="interior-card-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">

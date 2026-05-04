@@ -136,7 +136,7 @@ export default function OurHistoryPage() {
         </div>
 
         {/* Timeline */}
-        <div className="page-content">
+        <div className="page-content bg-eggshell">
           <div style={{ maxWidth: 800, margin: "0 auto", position: "relative" }}>
             {/* Vertical Line */}
             <div style={{ position: "absolute", left: 39, top: 0, bottom: 0, width: 1, background: "var(--line)", display: "var(--md-show, none)" }} />

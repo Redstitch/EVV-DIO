@@ -59,12 +59,12 @@ export default function SouthDeaneryPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
         {/* Parishes */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content">
           <div className="section-head">
             <h2 className="section-h2">Parishes ({parishes.length})</h2>
           </div>

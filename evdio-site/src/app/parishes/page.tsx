@@ -96,12 +96,12 @@ export default function ParishesPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 
         {/* Deaneries */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content">
           <div className="section-head">
             <span className="section-tag">Four Deaneries</span>
             <h2 className="section-h2">Explore by Deanery</h2>
@@ -158,7 +158,7 @@ export default function ParishesPage() {
         </section>
 
         {/* New to the Area */}
-        <div className="page-content" style={{ paddingTop: 0 }}>
+        <div className="page-content bg-eggshell" style={{ paddingTop: 0 }}>
           <div className="info-block">
             <h3>New to the Area?</h3>
             <p>

@@ -63,7 +63,7 @@ export default function CampusMinistryPage() {
           <span className="section-tag">Campus Communities</span>
           <h2 className="section-h2">Where to Find Us</h2>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>University of Southern Indiana</h3>
               <p style={{ marginBottom: 4, fontSize: 13, opacity: 0.6 }}>Evansville, Indiana</p>

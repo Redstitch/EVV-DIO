@@ -69,7 +69,7 @@ export default function ProjectRachelPage() {
           <span className="section-tag">What We Offer</span>
           <h2 className="section-h2">Support &amp; Resources</h2>
 
-          <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
+          <div className="interior-grid interior-grid-2">
             <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Confidential Referrals</h3>
               <p>Connection to trained counselors, priests, and support groups who understand the unique dimensions of post-abortion grief.</p>

@@ -127,7 +127,7 @@ export default function OurVisionPage() {
         </div>
 
         {/* Three Pillars */}
-        <div className="page-content">
+        <div className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">The Three Pillars</span>
             <h2 className="section-h2">Pastoral Priorities</h2>
