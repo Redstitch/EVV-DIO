@@ -37,8 +37,8 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div>
               <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
-                <span className="section-tag section-tag-left">Get in Touch</span>
-                <h2 className="section-h2 section-h2-left">Catholic Center</h2>
+                <span className="section-tag">Get in Touch</span>
+                <h2 className="section-h2">Catholic Center</h2>
               </div>
               <p style={{ marginBottom: 32 }}>
                 The Catholic Center serves as the administrative hub of the Diocese of Evansville, supporting 45 parishes, 26 schools, and ministries across 12 counties in Southwestern Indiana.

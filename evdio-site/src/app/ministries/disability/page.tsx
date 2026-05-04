@@ -113,8 +113,8 @@ export default function DisabilityPage() {
         <section className="page-content">
           <div className="interior-grid interior-grid-2">
             <div>
-              <span className="section-tag section-tag-left">For Parishes</span>
-              <h2 className="section-h2 section-h2-left">Creating Inclusive Communities</h2>
+              <span className="section-tag">For Parishes</span>
+              <h2 className="section-h2">Creating Inclusive Communities</h2>
               <div className="prose" style={{ marginTop: 16 }}>
                 <p>
                   Every parish in the Diocese of Evansville is called to be a welcoming community where people of all abilities feel they belong. Inclusion is not a program; it is an attitude and a practice that permeates everything we do.

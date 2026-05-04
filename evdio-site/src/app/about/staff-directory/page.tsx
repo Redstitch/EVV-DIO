@@ -109,8 +109,8 @@ export default function StaffDirectoryPage() {
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: 16, marginBottom: 40 }}>
             <div>
               <div className="section-head" style={{ textAlign: "left", marginBottom: 8 }}>
-                <span className="section-tag section-tag-left">Catholic Center</span>
-                <h2 className="section-h2 section-h2-left" style={{ marginBottom: 8 }}>Our Team</h2>
+                <span className="section-tag">Catholic Center</span>
+                <h2 className="section-h2" style={{ marginBottom: 8 }}>Our Team</h2>
               </div>
               <p style={{ fontSize: 14 }}>
                 4200 N. Kentucky Ave., Evansville, IN 47711 &middot; <a href="tel:8124245536" style={{ color: "var(--blue)", fontWeight: 600 }}>(812) 424-5536</a>

@@ -60,8 +60,8 @@ export default function YouthPage() {
 
         {/* High School */}
         <section className="page-content bg-eggshell">
-          <span className="section-tag section-tag-left">High School Ministry</span>
-          <h2 className="section-h2 section-h2-left">Programs for Teens</h2>
+          <span className="section-tag">High School Ministry</span>
+          <h2 className="section-h2">Programs for Teens</h2>
 
           <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <div className="interior-card" style={{ cursor: "default" }}>
@@ -93,8 +93,8 @@ export default function YouthPage() {
 
         {/* Young Adults */}
         <section className="page-content">
-          <span className="section-tag section-tag-left">Young Adult Ministry (18&ndash;35)</span>
-          <h2 className="section-h2 section-h2-left">Community &amp; Formation</h2>
+          <span className="section-tag">Young Adult Ministry (18&ndash;35)</span>
+          <h2 className="section-h2">Community &amp; Formation</h2>
 
           <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <div className="interior-card" style={{ cursor: "default" }}>

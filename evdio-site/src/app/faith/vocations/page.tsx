@@ -149,8 +149,8 @@ export default function Vocations() {
         <section className="page-content bg-eggshell">
           <div className="interior-grid interior-grid-2" style={{ alignItems: "start" }}>
             <div>
-              <span className="section-tag section-tag-left">Seminary Formation</span>
-              <h2 className="section-h2 section-h2-left">The Path to Priesthood</h2>
+              <span className="section-tag">Seminary Formation</span>
+              <h2 className="section-h2">The Path to Priesthood</h2>
               <p style={{ marginTop: 16 }}>
                 Men who discern a call to the diocesan priesthood enter a formation program that typically lasts six to eight years, depending on prior education. Seminary formation includes academic study in philosophy and theology, spiritual direction, pastoral ministry experience, and community life.
               </p>

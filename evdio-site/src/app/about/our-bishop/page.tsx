@@ -93,9 +93,9 @@ export default function OurBishopPage() {
           className="page-content"
           aria-labelledby="vision-title"
         >
-          <span className="section-tag section-tag-left">Pastoral Vision</span>
+          <span className="section-tag">Pastoral Vision</span>
           <h2
-            className="section-h2 section-h2-left"
+            className="section-h2"
             id="vision-title"
           >
             Encounter. Deepen. <em>Engage.</em>
@@ -192,11 +192,11 @@ export default function OurBishopPage() {
 
         {/* ─── KEY PRIORITIES ─── */}
         <section className="page-content bg-eggshell" aria-labelledby="priorities-title">
-          <span className="section-tag section-tag-left">
+          <span className="section-tag">
             Bishop&rsquo;s Priorities
           </span>
           <h2
-            className="section-h2 section-h2-left"
+            className="section-h2"
             id="priorities-title"
           >
             Areas of <em>focus.</em>

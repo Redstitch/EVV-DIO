@@ -98,8 +98,8 @@ export default function LeadershipPage() {
         {/* Leadership Team */}
         <div className="page-content">
           <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
-            <span className="section-tag section-tag-left">Senior Leadership</span>
-            <h2 className="section-h2 section-h2-left">Diocesan Leadership Team</h2>
+            <span className="section-tag">Senior Leadership</span>
+            <h2 className="section-h2">Diocesan Leadership Team</h2>
           </div>
           <p style={{ marginBottom: 40, maxWidth: 640 }}>
             The Catholic Center in Evansville serves as the administrative hub of the diocese. Our leadership team works collaboratively to support the Bishop&rsquo;s vision and serve our 45 parishes, 26 schools, and ministries.

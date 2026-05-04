@@ -59,8 +59,8 @@ export default function MarriageFamilyPage() {
 
         {/* Programs & Services */}
         <section className="page-content bg-eggshell">
-          <span className="section-tag section-tag-left">Programs &amp; Services</span>
-          <h2 className="section-h2 section-h2-left">What We Offer</h2>
+          <span className="section-tag">Programs &amp; Services</span>
+          <h2 className="section-h2">What We Offer</h2>
 
           <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
             <div className="interior-card" style={{ cursor: "default" }}>

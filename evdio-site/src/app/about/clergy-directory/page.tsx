@@ -90,8 +90,8 @@ export default function ClergyDirectoryPage() {
       <main id="main-content">
         <div className="page-content">
           <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
-            <span className="section-tag section-tag-left">Active Clergy</span>
-            <h2 className="section-h2 section-h2-left">By Deanery</h2>
+            <span className="section-tag">Active Clergy</span>
+            <h2 className="section-h2">By Deanery</h2>
           </div>
           <p style={{ marginBottom: 40, maxWidth: 680 }}>
             The Diocese of Evansville is organized into four deaneries. Each deanery is led by a vicar forane (dean) who coordinates pastoral activity among the parishes in that region.

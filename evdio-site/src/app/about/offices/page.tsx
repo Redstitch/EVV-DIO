@@ -158,8 +158,8 @@ export default function OfficesPage() {
       <main id="main-content">
         <div className="page-content">
           <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
-            <span className="section-tag section-tag-left">Catholic Center</span>
-            <h2 className="section-h2 section-h2-left">Serving Our Diocese</h2>
+            <span className="section-tag">Catholic Center</span>
+            <h2 className="section-h2">Serving Our Diocese</h2>
           </div>
           <p style={{ marginBottom: 16, maxWidth: 680 }}>
             The Catholic Center at 4200 N. Kentucky Ave., Evansville, IN 47711 serves as the administrative hub of the diocese. Our offices coordinate resources, training, and support for parishes, schools, and ministries across all 12 counties.

@@ -73,9 +73,9 @@ export default function GivePage() {
           className="page-content"
           aria-labelledby="impact-title"
         >
-          <span className="section-tag section-tag-left">Your Impact</span>
+          <span className="section-tag">Your Impact</span>
           <h2
-            className="section-h2 section-h2-left"
+            className="section-h2"
             id="impact-title"
           >
             What your generosity makes <em>possible.</em>
@@ -118,9 +118,9 @@ export default function GivePage() {
 
         {/* ─── STORIES OF IMPACT ─── */}
         <section className="section-band section-navy" aria-labelledby="stories-title">
-          <span className="section-tag section-tag-left">Stories of Impact</span>
+          <span className="section-tag">Stories of Impact</span>
           <h2
-            className="section-h2 section-h2-left"
+            className="section-h2"
             id="stories-title"
           >
             Lives changed by <em>your gift.</em>
@@ -190,9 +190,9 @@ export default function GivePage() {
 
         {/* ─── WAYS TO GIVE ─── */}
         <section className="page-content bg-eggshell" aria-labelledby="ways-title">
-          <span className="section-tag section-tag-left">Ways to Give</span>
+          <span className="section-tag">Ways to Give</span>
           <h2
-            className="section-h2 section-h2-left"
+            className="section-h2"
             id="ways-title"
           >
             Choose how you <em>give.</em>
@@ -261,9 +261,9 @@ export default function GivePage() {
           className="page-content"
           aria-labelledby="more-ways-title"
         >
-          <span className="section-tag section-tag-left">More Ways to Give</span>
+          <span className="section-tag">More Ways to Give</span>
           <h2
-            className="section-h2 section-h2-left"
+            className="section-h2"
             id="more-ways-title"
           >
             Every gift <em>counts.</em>
@@ -305,9 +305,9 @@ export default function GivePage() {
         {/* ─── ALLOCATION BREAKDOWN ─── */}
         <section className="page-content bg-eggshell" aria-labelledby="allocation-title">
           <div className="container-narrow">
-            <span className="section-tag section-tag-left">Transparency</span>
+            <span className="section-tag">Transparency</span>
             <h2
-              className="section-h2 section-h2-left"
+              className="section-h2"
               id="allocation-title"
             >
               Where your gift <em>goes.</em>

@@ -80,8 +80,8 @@ export default function AboutPage() {
 
         {/* Leadership */}
         <section className="page-content bg-eggshell">
-          <span className="section-tag section-tag-left">Leadership</span>
-          <h2 className="section-h2 section-h2-left">Our Bishop &amp; Diocesan Leaders</h2>
+          <span className="section-tag">Leadership</span>
+          <h2 className="section-h2">Our Bishop &amp; Diocesan Leaders</h2>
 
           <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <Link href="/about/our-bishop" className="interior-card">
@@ -152,8 +152,8 @@ export default function AboutPage() {
 
         {/* Offices & Administration */}
         <section className="page-content">
-          <span className="section-tag section-tag-left">Administration</span>
-          <h2 className="section-h2 section-h2-left">Offices &amp; Transparency</h2>
+          <span className="section-tag">Administration</span>
+          <h2 className="section-h2">Offices &amp; Transparency</h2>
 
           <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <Link href="/about/offices" className="interior-card">
@@ -224,8 +224,8 @@ export default function AboutPage() {
 
         {/* Safety & Accountability */}
         <section className="page-content bg-eggshell">
-          <span className="section-tag section-tag-left">Safety &amp; Accountability</span>
-          <h2 className="section-h2 section-h2-left">Protecting Our Community</h2>
+          <span className="section-tag">Safety &amp; Accountability</span>
+          <h2 className="section-h2">Protecting Our Community</h2>
 
           <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <Link href="/about/safe-environment" className="interior-card">

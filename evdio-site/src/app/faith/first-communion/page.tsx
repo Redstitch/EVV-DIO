@@ -54,8 +54,8 @@ export default function FirstCommunion() {
 
         {/* ─── WHAT YOUR CHILD WILL LEARN ─── */}
         <section className="page-content">
-          <span className="section-tag section-tag-left">Preparation</span>
-          <h2 className="section-h2 section-h2-left">What Your Child Will Learn</h2>
+          <span className="section-tag">Preparation</span>
+          <h2 className="section-h2">What Your Child Will Learn</h2>
 
           <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
             <div className="interior-card">

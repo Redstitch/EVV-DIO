@@ -99,8 +99,8 @@ export default function Anointing() {
         <section className="page-content">
           <div className="interior-grid interior-grid-2" style={{ alignItems: "start" }}>
             <div>
-              <span className="section-tag section-tag-left">How to Request</span>
-              <h2 className="section-h2 section-h2-left">Requesting the Sacrament</h2>
+              <span className="section-tag">How to Request</span>
+              <h2 className="section-h2">Requesting the Sacrament</h2>
               <p style={{ marginTop: 16 }}>
                 Do not wait until a loved one is unconscious or has already passed away. The sacrament is most effective when the person can consciously participate and receive its graces.
               </p>

@@ -60,8 +60,8 @@ export default function CampusMinistryPage() {
 
         {/* Campus Communities */}
         <section className="page-content bg-eggshell">
-          <span className="section-tag section-tag-left">Campus Communities</span>
-          <h2 className="section-h2 section-h2-left">Where to Find Us</h2>
+          <span className="section-tag">Campus Communities</span>
+          <h2 className="section-h2">Where to Find Us</h2>
 
           <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
             <div className="interior-card" style={{ cursor: "default" }}>

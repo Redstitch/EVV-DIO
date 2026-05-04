@@ -56,7 +56,7 @@ export default function TheMessagePage() {
       <main id="main-content">
         {/* ─── LATEST NEWS ─── */}
         <section className="page-content">
-          <span className="section-tag section-tag-left">Latest</span>
+          <span className="section-tag">Latest</span>
 
           <Link
             href={`/the-message/article/${featured.slug}`}

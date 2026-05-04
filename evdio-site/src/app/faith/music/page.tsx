@@ -138,8 +138,8 @@ export default function Music() {
         <section className="page-content bg-eggshell">
           <div className="interior-grid interior-grid-2" style={{ alignItems: "start" }}>
             <div>
-              <span className="section-tag section-tag-left">Formation &amp; Training</span>
-              <h2 className="section-h2 section-h2-left">Growing as a Music Minister</h2>
+              <span className="section-tag">Formation &amp; Training</span>
+              <h2 className="section-h2">Growing as a Music Minister</h2>
               <p style={{ marginTop: 16 }}>
                 The Diocese of Evansville offers periodic workshops and training sessions for parish musicians. These events cover topics such as liturgical music selection, vocal technique, keyboard skills, leading ensembles, and understanding the role of music in the Mass.
               </p>

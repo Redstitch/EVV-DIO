@@ -35,8 +35,8 @@ export default function SafeEnvironmentPage() {
         {/* Commitment Statement */}
         <div className="page-content">
           <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
-            <span className="section-tag section-tag-left">Our Commitment</span>
-            <h2 className="section-h2 section-h2-left">Protecting Those Entrusted to Our Care</h2>
+            <span className="section-tag">Our Commitment</span>
+            <h2 className="section-h2">Protecting Those Entrusted to Our Care</h2>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             <p>
@@ -109,8 +109,8 @@ export default function SafeEnvironmentPage() {
         {/* Victim Assistance */}
         <div className="page-content">
           <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
-            <span className="section-tag section-tag-left">Victim Assistance</span>
-            <h2 className="section-h2 section-h2-left">Support for Survivors</h2>
+            <span className="section-tag">Victim Assistance</span>
+            <h2 className="section-h2">Support for Survivors</h2>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 32 }}>
             <p>

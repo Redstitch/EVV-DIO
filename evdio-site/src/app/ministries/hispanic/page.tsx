@@ -34,8 +34,8 @@ export default function HispanicMinistryPage() {
       <main id="main-content">
         {/* Mission */}
         <section className="page-content">
-          <span className="section-tag section-tag-left">Our Mission</span>
-          <h2 className="section-h2 section-h2-left">Nuestra Misi&oacute;n</h2>
+          <span className="section-tag">Our Mission</span>
+          <h2 className="section-h2">Nuestra Misi&oacute;n</h2>
 
           <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
             <div className="prose">
@@ -122,8 +122,8 @@ export default function HispanicMinistryPage() {
         <section className="page-content">
           <div className="interior-grid interior-grid-2">
             <div>
-              <span className="section-tag section-tag-left">Misa en Espa&ntilde;ol</span>
-              <h2 className="section-h2 section-h2-left">Mass in Spanish</h2>
+              <span className="section-tag">Misa en Espa&ntilde;ol</span>
+              <h2 className="section-h2">Mass in Spanish</h2>
               <div className="prose" style={{ marginTop: 16 }}>
                 <p>
                   Mass in Spanish is celebrated at several parishes across the diocese, providing a spiritual home for Spanish-speaking Catholics. These liturgies feature Spanish hymns, bilingual readings, and culturally familiar expressions of worship.
@@ -146,8 +146,8 @@ export default function HispanicMinistryPage() {
             </div>
 
             <div>
-              <span className="section-tag section-tag-left">Preparaci&oacute;n Sacramental</span>
-              <h2 className="section-h2 section-h2-left">Sacramental Preparation</h2>
+              <span className="section-tag">Preparaci&oacute;n Sacramental</span>
+              <h2 className="section-h2">Sacramental Preparation</h2>
               <div className="prose" style={{ marginTop: 16 }}>
                 <p>
                   Bilingual preparation programs are available for Baptism, First Communion, Confirmation, and Marriage. OCIA (Rite of Christian Initiation of Adults) is also offered in Spanish for those exploring the Catholic faith or completing their sacraments of initiation.

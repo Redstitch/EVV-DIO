@@ -121,8 +121,8 @@ export default function Confirmation() {
         {/* ─── WHAT TO EXPECT ─── */}
         <section className="page-content">
           <div style={{ maxWidth: 1040, margin: "0 auto" }}>
-            <span className="section-tag section-tag-left">What to Expect</span>
-            <h2 className="section-h2 section-h2-left" style={{ marginBottom: 12 }}>
+            <span className="section-tag">What to Expect</span>
+            <h2 className="section-h2" style={{ marginBottom: 12 }}>
               The seven gifts, the rite, the preparation
             </h2>
             <p style={{

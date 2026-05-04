@@ -60,8 +60,8 @@ export default function RespectLifePage() {
 
         {/* Areas of Focus */}
         <section className="page-content bg-eggshell">
-          <span className="section-tag section-tag-left">Areas of Focus</span>
-          <h2 className="section-h2 section-h2-left">How We Serve</h2>
+          <span className="section-tag">Areas of Focus</span>
+          <h2 className="section-h2">How We Serve</h2>
 
           <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <div className="interior-card" style={{ cursor: "default" }}>
@@ -93,8 +93,8 @@ export default function RespectLifePage() {
 
         {/* Related Ministries */}
         <section className="page-content">
-          <span className="section-tag section-tag-left">Related Ministries</span>
-          <h2 className="section-h2 section-h2-left">Support &amp; Healing</h2>
+          <span className="section-tag">Related Ministries</span>
+          <h2 className="section-h2">Support &amp; Healing</h2>
 
           <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
             <Link href="/ministries/project-rachel" className="interior-card" style={{ textDecoration: "none", color: "inherit" }}>

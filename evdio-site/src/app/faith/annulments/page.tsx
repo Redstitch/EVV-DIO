@@ -91,8 +91,8 @@ export default function AnnulmentsPage() {
 
         {/* The Process */}
         <section className="page-content bg-eggshell">
-          <span className="section-tag section-tag-left">The Process</span>
-          <h2 className="section-h2 section-h2-left">Steps Toward a Declaration</h2>
+          <span className="section-tag">The Process</span>
+          <h2 className="section-h2">Steps Toward a Declaration</h2>
 
           <div className="interior-grid interior-grid-2">
             <div className="interior-card">

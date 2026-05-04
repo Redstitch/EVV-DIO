@@ -60,8 +60,8 @@ export default function ExpectantMothersPage() {
 
         {/* Services */}
         <section className="page-content bg-eggshell">
-          <span className="section-tag section-tag-left">Services</span>
-          <h2 className="section-h2 section-h2-left">What We Provide</h2>
+          <span className="section-tag">Services</span>
+          <h2 className="section-h2">What We Provide</h2>
 
           <div className="interior-grid interior-grid-2" style={{ marginTop: 32 }}>
             <div className="interior-card" style={{ cursor: "default" }}>

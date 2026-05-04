@@ -60,8 +60,8 @@ export default function MensMinistryPage() {
 
         {/* Programs */}
         <section className="page-content bg-eggshell">
-          <span className="section-tag section-tag-left">Programs</span>
-          <h2 className="section-h2 section-h2-left">Opportunities for Men</h2>
+          <span className="section-tag">Programs</span>
+          <h2 className="section-h2">Opportunities for Men</h2>
 
           <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <div className="interior-card" style={{ cursor: "default" }}>

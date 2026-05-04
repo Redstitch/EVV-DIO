@@ -36,8 +36,8 @@ export default function MinistriesPage() {
       <main id="main-content">
         {/* Family & Life */}
         <section className="page-content">
-          <span className="section-tag section-tag-left">Family &amp; Life</span>
-          <h2 className="section-h2 section-h2-left">Marriage, Family &amp; Respect for Life</h2>
+          <span className="section-tag">Family &amp; Life</span>
+          <h2 className="section-h2">Marriage, Family &amp; Respect for Life</h2>
 
           <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <Link href="/ministries/marriage-family" className="interior-card">
@@ -108,8 +108,8 @@ export default function MinistriesPage() {
 
         {/* Youth & Education */}
         <section className="page-content bg-eggshell">
-          <span className="section-tag section-tag-left">Youth &amp; Education</span>
-          <h2 className="section-h2 section-h2-left">Young People &amp; Faith Formation</h2>
+          <span className="section-tag">Youth &amp; Education</span>
+          <h2 className="section-h2">Young People &amp; Faith Formation</h2>
 
           <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <Link href="/ministries/youth" className="interior-card">
@@ -150,8 +150,8 @@ export default function MinistriesPage() {
 
         {/* Community & Outreach */}
         <section className="page-content">
-          <span className="section-tag section-tag-left">Community &amp; Outreach</span>
-          <h2 className="section-h2 section-h2-left">Service, Justice &amp; Inclusion</h2>
+          <span className="section-tag">Community &amp; Outreach</span>
+          <h2 className="section-h2">Service, Justice &amp; Inclusion</h2>
 
           <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <Link href="/ministries/hispanic" className="interior-card">

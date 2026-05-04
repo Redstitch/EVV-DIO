@@ -60,8 +60,8 @@ export default function DashboardPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: 48, alignItems: "start" }}>
             <div>
               <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
-                <span className="section-tag section-tag-left">Transparency</span>
-                <h2 className="section-h2 section-h2-left">We Believe in Open Reporting</h2>
+                <span className="section-tag">Transparency</span>
+                <h2 className="section-h2">We Believe in Open Reporting</h2>
               </div>
               <p style={{ marginBottom: 16 }}>
                 Each month, the Diocese of Evansville publishes a comprehensive dashboard covering key ministry metrics, financial stewardship, and impact data. We believe that trust is built through transparency.

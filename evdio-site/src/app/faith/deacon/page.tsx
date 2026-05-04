@@ -91,8 +91,8 @@ export default function Deacon() {
         <section className="page-content">
           <div className="interior-grid interior-grid-2" style={{ alignItems: "start" }}>
             <div>
-              <span className="section-tag section-tag-left">Formation Program</span>
-              <h2 className="section-h2 section-h2-left">The Path to Ordination</h2>
+              <span className="section-tag">Formation Program</span>
+              <h2 className="section-h2">The Path to Ordination</h2>
               <p style={{ marginTop: 16 }}>
                 Formation for the permanent diaconate in the Diocese of Evansville typically spans four to five years. The program includes academic coursework in theology, Scripture, Church history, and pastoral ministry, as well as spiritual formation, pastoral field education, and human development.
               </p>
