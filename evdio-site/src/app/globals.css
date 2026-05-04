@@ -75,7 +75,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--sans);
   color: var(--navy);
-  background: #FEFCF6;
+  background: var(--cream-lt);
   line-height: 1.55;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
