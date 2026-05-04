@@ -229,22 +229,22 @@ export default function SchoolsPage() {
             Accredited &amp; <em>accountable.</em>
           </h2>
 
-          <div className="interior-grid interior-grid-4" style={{ marginTop: 24 }}>
-            <div className="info-block" style={{ textAlign: "center" }}>
-              <h3 style={{ fontSize: 36, color: "var(--navy)" }}>18</h3>
-              <p>Avg. Class Size</p>
+          <div className="stat-row" style={{ justifyContent: "center", marginTop: 24 }}>
+            <div className="stat-item">
+              <span className="stat-num">18</span>
+              <span className="stat-label">Avg. Class Size</span>
             </div>
-            <div className="info-block" style={{ textAlign: "center" }}>
-              <h3 style={{ fontSize: 36, color: "var(--navy)" }}>14:1</h3>
-              <p>Student-Teacher Ratio</p>
+            <div className="stat-item">
+              <span className="stat-num">14:1</span>
+              <span className="stat-label">Student-Teacher Ratio</span>
             </div>
-            <div className="info-block" style={{ textAlign: "center" }}>
-              <h3 style={{ fontSize: 36, color: "var(--navy)" }}>100%</h3>
-              <p>Licensed Teachers</p>
+            <div className="stat-item">
+              <span className="stat-num">100%</span>
+              <span className="stat-label">Licensed Teachers</span>
             </div>
-            <div className="info-block" style={{ textAlign: "center" }}>
-              <h3 style={{ fontSize: 36, color: "var(--navy)" }}>42,000+</h3>
-              <p>Service Hours Annually</p>
+            <div className="stat-item">
+              <span className="stat-num">42,000+</span>
+              <span className="stat-label">Service Hours Annually</span>
             </div>
           </div>
 
