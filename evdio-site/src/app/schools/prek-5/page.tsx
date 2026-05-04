@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Elementary Schools",
+  title: "K-8 Schools",
   description:
-    "Explore PreK-5 Catholic elementary schools in the Diocese of Evansville. Find schools by deanery and learn about our approach to early childhood and elementary education.",
+    "Explore K-8 Catholic schools in the Diocese of Evansville. Find schools by deanery and learn about our approach to elementary and middle school education.",
 };
 
 export default function PreK5Schools() {
@@ -15,8 +15,8 @@ export default function PreK5Schools() {
         <div className="grid">
           <div className="text">
             <p className="kicker">Catholic Schools</p>
-            <h1 id="title">Elementary <em>Schools.</em></h1>
-            <p className="deck">Our PreK&ndash;5 elementary schools nurture young learners with a joyful Catholic environment where faith, curiosity, and character take root.</p>
+            <h1 id="title">K&ndash;8 <em>Schools.</em></h1>
+            <p className="deck">Our K&ndash;8 Catholic schools nurture learners from kindergarten through eighth grade in a faith-filled environment where academic excellence and character take root.</p>
           </div>
           <figure className="photo">
             <Image
