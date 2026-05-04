@@ -99,7 +99,7 @@ export default function StatementsPage() {
       <main id="main-content">
         {/* Featured Statement */}
         {statements.filter((s) => s.featured).map((statement) => (
-          <section key={statement.title} className="page-content" style={{ background: "var(--cream-lt)" }}>
+          <section key={statement.title} className="page-content">
             <div className="interior-card" style={{ cursor: "default", maxWidth: 900, margin: "0 auto", padding: "40px 48px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
                 <span style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "1.5px", padding: "5px 14px", borderRadius: 20, background: badgeColors[statement.type]?.bg, color: badgeColors[statement.type]?.color }}>

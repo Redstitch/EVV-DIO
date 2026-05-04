@@ -61,7 +61,7 @@ export default function HispanicMinistryPage() {
         </div>
 
         {/* Sections */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Secciones / Sections</span>
             <h2 className="section-h2">Ministerios en Espa&ntilde;ol</h2>
@@ -177,7 +177,7 @@ export default function HispanicMinistryPage() {
         </div>
 
         {/* Leadership */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Formaci&oacute;n de L&iacute;deres</span>
             <h2 className="section-h2">Leadership Development</h2>

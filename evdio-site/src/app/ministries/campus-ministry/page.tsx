@@ -59,7 +59,7 @@ export default function CampusMinistryPage() {
         </div>
 
         {/* Campus Communities */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <span className="section-tag section-tag-left">Campus Communities</span>
           <h2 className="section-h2 section-h2-left">Where to Find Us</h2>
 

@@ -33,7 +33,7 @@ export default function PrayerWorship() {
 
       <main id="main-content">
         {/* ─── DAILY PRAYERS ─── */}
-        <section className="page-content section-warm">
+        <section className="page-content">
           <div className="section-head">
             <span className="section-tag">Daily Prayer</span>
             <h2 className="section-h2">Prayers for Every Day</h2>
@@ -80,7 +80,7 @@ export default function PrayerWorship() {
         </div>
 
         {/* ─── DEVOTIONS ─── */}
-        <section className="page-content section-cream">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Catholic Devotions</span>
             <h2 className="section-h2">Deepen Your Prayer Life</h2>

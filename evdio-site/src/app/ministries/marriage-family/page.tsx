@@ -58,7 +58,7 @@ export default function MarriageFamilyPage() {
         </div>
 
         {/* Programs & Services */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <span className="section-tag section-tag-left">Programs &amp; Services</span>
           <h2 className="section-h2 section-h2-left">What We Offer</h2>
 

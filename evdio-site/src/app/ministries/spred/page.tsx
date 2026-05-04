@@ -72,7 +72,7 @@ export default function SpredPage() {
         </div>
 
         {/* Who Can Participate */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Who We Serve</span>
             <h2 className="section-h2">Participation &amp; Volunteering</h2>

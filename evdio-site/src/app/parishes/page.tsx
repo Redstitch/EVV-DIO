@@ -35,7 +35,7 @@ export default function ParishesPage() {
 
       <main id="main-content">
         {/* Parish Finder CTA */}
-        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
           <div style={{ marginBottom: 16 }}>
             <svg viewBox="0 0 24 24" width="48" height="48" fill="var(--bgold)" aria-hidden="true">
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
@@ -101,7 +101,7 @@ export default function ParishesPage() {
         </div>
 
         {/* Deaneries */}
-        <section className="page-content section-cream">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Four Deaneries</span>
             <h2 className="section-h2">Explore by Deanery</h2>
@@ -158,7 +158,7 @@ export default function ParishesPage() {
         </section>
 
         {/* New to the Area */}
-        <div className="page-content section-warm" style={{ paddingTop: 0 }}>
+        <div className="page-content" style={{ paddingTop: 0 }}>
           <div className="info-block">
             <h3>New to the Area?</h3>
             <p>

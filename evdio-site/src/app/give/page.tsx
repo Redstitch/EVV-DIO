@@ -70,7 +70,7 @@ export default function GivePage() {
 
         {/* ─── IMPACT STATS ─── */}
         <section
-          className="page-content section-cream"
+          className="page-content"
           aria-labelledby="impact-title"
         >
           <span className="section-tag section-tag-left">Your Impact</span>
@@ -117,7 +117,7 @@ export default function GivePage() {
         </div>
 
         {/* ─── STORIES OF IMPACT ─── */}
-        <section className="page-content section-navy" aria-labelledby="stories-title">
+        <section className="section-band section-navy" aria-labelledby="stories-title">
           <span className="section-tag section-tag-left">Stories of Impact</span>
           <h2
             className="section-h2 section-h2-left"
@@ -189,7 +189,7 @@ export default function GivePage() {
         </div>
 
         {/* ─── WAYS TO GIVE ─── */}
-        <section className="page-content section-cream" aria-labelledby="ways-title">
+        <section className="page-content bg-eggshell" aria-labelledby="ways-title">
           <span className="section-tag section-tag-left">Ways to Give</span>
           <h2
             className="section-h2 section-h2-left"
@@ -258,7 +258,7 @@ export default function GivePage() {
 
         {/* ─── MORE WAYS TO GIVE ─── */}
         <section
-          className="page-content section-warm"
+          className="page-content"
           aria-labelledby="more-ways-title"
         >
           <span className="section-tag section-tag-left">More Ways to Give</span>
@@ -303,7 +303,7 @@ export default function GivePage() {
         </section>
 
         {/* ─── ALLOCATION BREAKDOWN ─── */}
-        <section className="page-content section-warm" aria-labelledby="allocation-title">
+        <section className="page-content bg-eggshell" aria-labelledby="allocation-title">
           <div className="container-narrow">
             <span className="section-tag section-tag-left">Transparency</span>
             <h2
@@ -343,7 +343,7 @@ export default function GivePage() {
         </section>
 
         {/* ─── CTA STRIP ─── */}
-        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
           <h2 className="section-h2" style={{ color: "var(--cream)" }}>
             Your generosity changes <em>lives.</em>
           </h2>

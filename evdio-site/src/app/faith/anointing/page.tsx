@@ -33,7 +33,7 @@ export default function Anointing() {
 
       <main id="main-content">
         {/* ─── TEACHING ─── */}
-        <section className="page-content section-warm">
+        <section className="page-content">
           <div className="section-head">
             <span className="section-tag">A Sacrament of Healing</span>
             <h2 className="section-h2">Comfort, Strength, and Peace</h2>
@@ -52,7 +52,7 @@ export default function Anointing() {
         </section>
 
         {/* ─── WHO CAN RECEIVE ─── */}
-        <section className="page-content section-cream">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Who May Receive</span>
             <h2 className="section-h2">When Should You Request This Sacrament?</h2>

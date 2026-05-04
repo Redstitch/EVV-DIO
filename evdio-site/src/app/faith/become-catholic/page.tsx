@@ -254,7 +254,7 @@ export default function BecomeCatholic() {
         </section>
 
         {/* ─── CTA STRIP ─── */}
-        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
           <h2 className="section-h2" style={{ color: "var(--cream)" }}>
             Find a parish — <em>take the first step.</em>
           </h2>

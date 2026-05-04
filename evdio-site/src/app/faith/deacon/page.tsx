@@ -53,7 +53,7 @@ export default function Deacon() {
         </div>
 
         {/* ─── THREE AREAS ─── */}
-        <section className="page-content section-cream">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Ministry of Service</span>
             <h2 className="section-h2">Three Pillars of Diaconal Ministry</h2>
@@ -88,7 +88,7 @@ export default function Deacon() {
         </div>
 
         {/* ─── FORMATION ─── */}
-        <section className="page-content section-warm">
+        <section className="page-content">
           <div className="interior-grid interior-grid-2" style={{ alignItems: "start" }}>
             <div>
               <span className="section-tag section-tag-left">Formation Program</span>
@@ -120,7 +120,7 @@ export default function Deacon() {
         </section>
 
         {/* ─── FAQ ─── */}
-        <section className="page-content section-cream">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Common Questions</span>
             <h2 className="section-h2">Frequently Asked Questions</h2>

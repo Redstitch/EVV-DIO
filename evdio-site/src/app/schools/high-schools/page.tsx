@@ -53,7 +53,7 @@ export default function HighSchoolsPage() {
         </section>
 
         {/* School Cards */}
-        <section className="page-content" style={{ background: "var(--cream)" }}>
+        <section className="page-content bg-eggshell" style={{ background: "var(--cream)" }}>
           <div className="section-head">
             <span className="section-tag">Our Schools</span>
             <h2 className="section-h2">Three Schools, One Mission</h2>

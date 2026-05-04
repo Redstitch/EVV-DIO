@@ -90,7 +90,7 @@ export default function AnnulmentsPage() {
         </div>
 
         {/* The Process */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <span className="section-tag section-tag-left">The Process</span>
           <h2 className="section-h2 section-h2-left">Steps Toward a Declaration</h2>
 

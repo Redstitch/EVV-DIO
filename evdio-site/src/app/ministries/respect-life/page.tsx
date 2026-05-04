@@ -59,7 +59,7 @@ export default function RespectLifePage() {
         </div>
 
         {/* Areas of Focus */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <span className="section-tag section-tag-left">Areas of Focus</span>
           <h2 className="section-h2 section-h2-left">How We Serve</h2>
 

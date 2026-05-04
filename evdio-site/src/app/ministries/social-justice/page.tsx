@@ -80,7 +80,7 @@ export default function SocialJusticePage() {
         </div>
 
         {/* Principles */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Foundation</span>
             <h2 className="section-h2">Principles of Catholic Social Teaching</h2>
@@ -138,7 +138,7 @@ export default function SocialJusticePage() {
         </div>
 
         {/* Get Involved */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Take Action</span>
             <h2 className="section-h2">Get Involved</h2>

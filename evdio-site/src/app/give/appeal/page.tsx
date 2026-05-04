@@ -105,7 +105,7 @@ export default function AppealPage() {
         </div>
 
         {/* Impact Areas */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Where Your Gift Goes</span>
             <h2 className="section-h2">Impact Areas</h2>
@@ -153,7 +153,7 @@ export default function AppealPage() {
         </section>
 
         {/* Donor Recognition */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Donor Recognition</span>
             <h2 className="section-h2">Deo Gratias Society</h2>

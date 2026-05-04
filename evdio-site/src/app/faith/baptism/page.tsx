@@ -54,7 +54,7 @@ export default function Baptism() {
         </div>
 
         {/* ─── TYPES (on white) ─── */}
-        <section className="page-content section-cream">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Two Paths, One Grace</span>
             <h2 className="section-h2">Infant &amp; Adult <em>Baptism</em></h2>

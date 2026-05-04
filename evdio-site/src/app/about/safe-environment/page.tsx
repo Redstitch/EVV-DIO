@@ -61,7 +61,7 @@ export default function SafeEnvironmentPage() {
         </div>
 
         {/* Programs & Policies */}
-        <div className="page-content section-cream">
+        <div className="page-content">
           <div className="section-head">
             <span className="section-tag">Programs &amp; Policies</span>
             <h2 className="section-h2">How We Protect</h2>
@@ -107,7 +107,7 @@ export default function SafeEnvironmentPage() {
         </div>
 
         {/* Victim Assistance */}
-        <div className="page-content section-warm">
+        <div className="page-content">
           <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
             <span className="section-tag section-tag-left">Victim Assistance</span>
             <h2 className="section-h2 section-h2-left">Support for Survivors</h2>
@@ -143,7 +143,7 @@ export default function SafeEnvironmentPage() {
         </div>
 
         {/* Resources & Links */}
-        <div className="page-content section-cream">
+        <div className="page-content">
           <div className="section-head">
             <span className="section-tag">Additional Resources</span>
             <h2 className="section-h2">Safe Environment Resources</h2>

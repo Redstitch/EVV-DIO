@@ -59,7 +59,7 @@ export default function YouthPage() {
         </div>
 
         {/* High School */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <span className="section-tag section-tag-left">High School Ministry</span>
           <h2 className="section-h2 section-h2-left">Programs for Teens</h2>
 

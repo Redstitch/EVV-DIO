@@ -68,7 +68,7 @@ export default function Accreditation() {
         </div>
 
         {/* Academic Standards */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="interior-grid interior-grid-2">
             <div>
               <div className="section-head" style={{ textAlign: "left" }}>

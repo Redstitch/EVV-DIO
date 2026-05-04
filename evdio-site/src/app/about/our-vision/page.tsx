@@ -104,7 +104,7 @@ export default function OurVisionPage() {
 
       <main id="main-content">
         {/* Vision Statement */}
-        <div className="page-content section-warm">
+        <div className="page-content">
           <div className="section-head">
             <span className="section-tag">Pastoral Vision 2025&ndash;2030</span>
             <h2 className="section-h2">Encounter. Deepen. Engage.</h2>
@@ -127,7 +127,7 @@ export default function OurVisionPage() {
         </div>
 
         {/* Three Pillars */}
-        <div className="page-content section-cream">
+        <div className="page-content">
           <div className="section-head">
             <span className="section-tag">The Three Pillars</span>
             <h2 className="section-h2">Pastoral Priorities</h2>
@@ -193,7 +193,7 @@ export default function OurVisionPage() {
         </div>
 
         {/* Impact Numbers */}
-        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
           <div style={{ marginBottom: 8 }}>
             <span className="section-tag">By the Numbers</span>
           </div>

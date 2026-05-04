@@ -50,7 +50,7 @@ export default function SouthDeaneryPage() {
 
       <main id="main-content">
         {/* About */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content">
           <div className="interior-card" style={{ cursor: "default" }}>
             <h2>About the South Deanery</h2>
             <p>
@@ -64,7 +64,7 @@ export default function SouthDeaneryPage() {
         </div>
 
         {/* Parishes */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <h2 className="section-h2">Parishes ({parishes.length})</h2>
           </div>

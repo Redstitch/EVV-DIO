@@ -42,7 +42,7 @@ export default function WatchMassPage() {
 
       <main id="main-content">
         {/* About */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content">
           <div className="interior-card" style={{ cursor: "default" }}>
             <h2>About Online Mass</h2>
             <p>
@@ -66,7 +66,7 @@ export default function WatchMassPage() {
         </div>
 
         {/* Livestreaming Parishes */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <h2 className="section-h2">Livestreaming Parishes</h2>
           </div>

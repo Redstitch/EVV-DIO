@@ -52,7 +52,7 @@ export default function Vocations() {
         </div>
 
         {/* ─── PATHS ─── */}
-        <section className="page-content section-cream">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Paths of Service</span>
             <h2 className="section-h2">Ways God Calls</h2>
@@ -111,7 +111,7 @@ export default function Vocations() {
         </div>
 
         {/* ─── DISCERNMENT ─── */}
-        <section className="page-content section-warm">
+        <section className="page-content">
           <div className="section-head">
             <span className="section-tag">Discernment</span>
             <h2 className="section-h2">How Do I Discern My Calling?</h2>
@@ -146,7 +146,7 @@ export default function Vocations() {
         </section>
 
         {/* ─── SEMINARY ─── */}
-        <section className="page-content section-cream">
+        <section className="page-content bg-eggshell">
           <div className="interior-grid interior-grid-2" style={{ alignItems: "start" }}>
             <div>
               <span className="section-tag section-tag-left">Seminary Formation</span>

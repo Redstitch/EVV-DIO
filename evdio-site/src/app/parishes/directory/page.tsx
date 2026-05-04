@@ -95,7 +95,7 @@ export default function ParishDirectoryPage() {
         </div>
 
         {/* Directory by Deanery */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <h2 className="section-h2">Browse by Deanery</h2>
             <p className="section-desc">
@@ -140,7 +140,7 @@ export default function ParishDirectoryPage() {
         </div>
 
         {/* Alphabetical */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content">
           <div className="section-head">
             <h2 className="section-h2">All Parishes (A-Z)</h2>
           </div>

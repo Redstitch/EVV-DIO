@@ -134,7 +134,7 @@ export default function ClergyDirectoryPage() {
         </div>
 
         {/* Retired Clergy */}
-        <div className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <div className="page-content">
           <div className="section-head">
             <span className="section-tag">Honored Service</span>
             <h2 className="section-h2">Retired Clergy</h2>

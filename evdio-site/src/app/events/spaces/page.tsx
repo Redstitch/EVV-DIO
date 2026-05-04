@@ -59,7 +59,7 @@ export default function SpacesPage() {
       </section>
 
       <main id="main-content">
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content">
           <div className="section-head">
             <span className="section-tag">Venues</span>
             <h2 className="section-h2">Available Spaces</h2>
@@ -96,7 +96,7 @@ export default function SpacesPage() {
         </div>
 
         {/* Reservation Guidelines */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Information</span>
             <h2 className="section-h2">Reservation Guidelines</h2>

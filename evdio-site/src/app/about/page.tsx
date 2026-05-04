@@ -35,7 +35,7 @@ export default function AboutPage() {
 
       <main id="main-content">
         {/* Diocesan Snapshot */}
-        <section className="page-content section-cream">
+        <section className="page-content">
           <div className="section-head">
             <span className="section-tag">At a Glance</span>
             <h2 className="section-h2">The Catholic Church in Southwestern Indiana</h2>
@@ -79,7 +79,7 @@ export default function AboutPage() {
         </div>
 
         {/* Leadership */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <span className="section-tag section-tag-left">Leadership</span>
           <h2 className="section-h2 section-h2-left">Our Bishop &amp; Diocesan Leaders</h2>
 
@@ -151,7 +151,7 @@ export default function AboutPage() {
         </div>
 
         {/* Offices & Administration */}
-        <section className="page-content section-warm">
+        <section className="page-content">
           <span className="section-tag section-tag-left">Administration</span>
           <h2 className="section-h2 section-h2-left">Offices &amp; Transparency</h2>
 
@@ -223,7 +223,7 @@ export default function AboutPage() {
         </div>
 
         {/* Safety & Accountability */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <span className="section-tag section-tag-left">Safety &amp; Accountability</span>
           <h2 className="section-h2 section-h2-left">Protecting Our Community</h2>
 
@@ -261,7 +261,7 @@ export default function AboutPage() {
         </section>
 
         {/* CTA Block */}
-        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
           <h2 className="section-h2">Have Questions? We Are Here to Help.</h2>
           <p className="section-desc">
             The Catholic Center is open Monday through Friday, 8:00 a.m. to 4:30 p.m. Reach us by phone, email, or visit us in person at 4200 N. Kentucky Avenue, Evansville, IN 47711.

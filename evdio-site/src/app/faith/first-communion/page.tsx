@@ -82,7 +82,7 @@ export default function FirstCommunion() {
         </div>
 
         {/* ─── REQUIREMENTS ─── */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Requirements</span>
             <h2 className="section-h2">What You Need to Know</h2>

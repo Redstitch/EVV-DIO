@@ -141,7 +141,7 @@ export default function Marriage() {
         </section>
 
         {/* ─── SIX-MONTH INFO BLOCK ─── */}
-        <section className="page-content section-cream">
+        <section className="page-content">
           <div className="info-block">
             <h3>The Six-Month Preparation Requirement</h3>
             <p>
@@ -260,7 +260,7 @@ export default function Marriage() {
         </section>
 
         {/* ─── CTA STRIP ─── */}
-        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
           <h2 className="section-h2" style={{ color: "var(--cream)" }}>
             Begin your marriage journey — <em>find your parish.</em>
           </h2>

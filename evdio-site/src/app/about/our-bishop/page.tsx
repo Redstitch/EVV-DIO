@@ -191,7 +191,7 @@ export default function OurBishopPage() {
         </div>
 
         {/* ─── KEY PRIORITIES ─── */}
-        <section className="page-content section-warm" aria-labelledby="priorities-title">
+        <section className="page-content bg-eggshell" aria-labelledby="priorities-title">
           <span className="section-tag section-tag-left">
             Bishop&rsquo;s Priorities
           </span>
@@ -240,7 +240,7 @@ export default function OurBishopPage() {
         </section>
 
         {/* ─── CTA STRIP ─── */}
-        <section className="page-content section-teal" style={{ textAlign: "center" }}>
+        <section className="page-content" style={{ textAlign: "center" }}>
           <h2 className="section-h2" style={{ color: "var(--cream)" }}>
             Connect with <em>our Bishop.</em>
           </h2>

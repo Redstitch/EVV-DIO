@@ -155,7 +155,7 @@ export default function PressRoomPage() {
         </div>
 
         {/* Press Releases */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Recent Releases</span>
             <h2 className="section-h2">Press Releases</h2>

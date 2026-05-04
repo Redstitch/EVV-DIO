@@ -63,7 +63,7 @@ export default function DisabilityPage() {
         </div>
 
         {/* Areas of Focus */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Areas of Focus</span>
             <h2 className="section-h2">How We Serve</h2>

@@ -42,7 +42,7 @@ export default function RetreatsPage() {
 
       <main id="main-content">
         {/* Sarto Retreat Center */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content">
           <div style={{ display: "grid", gridTemplateColumns: "1.2fr 0.8fr", gap: 40, alignItems: "start" }}>
             <div>
               <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
@@ -90,7 +90,7 @@ export default function RetreatsPage() {
         </div>
 
         {/* Upcoming Retreats */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Coming Up</span>
             <h2 className="section-h2">Upcoming Retreats</h2>

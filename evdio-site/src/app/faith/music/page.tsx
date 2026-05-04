@@ -52,7 +52,7 @@ export default function Music() {
         </section>
 
         {/* ─── RESOURCES GRID ─── */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">For Parish Musicians</span>
             <h2 className="section-h2">Resources &amp; Guidelines</h2>
@@ -135,7 +135,7 @@ export default function Music() {
         </div>
 
         {/* ─── TRAINING ─── */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="interior-grid interior-grid-2" style={{ alignItems: "start" }}>
             <div>
               <span className="section-tag section-tag-left">Formation &amp; Training</span>

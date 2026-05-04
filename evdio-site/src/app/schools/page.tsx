@@ -78,7 +78,7 @@ export default function SchoolsPage() {
         </div>
 
         {/* ─── EXPLORE ─── */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Explore</span>
             <h2 className="section-h2">What are you <em>looking for?</em></h2>

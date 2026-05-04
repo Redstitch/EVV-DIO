@@ -32,7 +32,7 @@ export default function ContactPage() {
       </section>
 
       <main id="main-content">
-        <div className="page-content section-cream">
+        <div className="page-content">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.3fr", gap: 48 }}>
             {/* Contact Info */}
             <div>

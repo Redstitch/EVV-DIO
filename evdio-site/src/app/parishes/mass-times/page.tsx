@@ -33,7 +33,7 @@ export default function MassTimesPage() {
 
       <main id="main-content">
         {/* Weekend Mass */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content">
           <div className="interior-card" style={{ cursor: "default" }}>
             <h2>Weekend Mass Schedule</h2>
             <p>
@@ -57,7 +57,7 @@ export default function MassTimesPage() {
         </div>
 
         {/* Daily Mass */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="interior-card" style={{ cursor: "default" }}>
             <h2>Daily Mass</h2>
             <p>
@@ -94,7 +94,7 @@ export default function MassTimesPage() {
         </div>
 
         {/* Confession */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content">
           <div className="interior-card" style={{ cursor: "default" }}>
             <h2>Confession (Sacrament of Reconciliation)</h2>
             <p>
@@ -111,7 +111,7 @@ export default function MassTimesPage() {
         </div>
 
         {/* Holy Days */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="interior-card" style={{ cursor: "default" }}>
             <h2>Holy Days of Obligation</h2>
             <p>

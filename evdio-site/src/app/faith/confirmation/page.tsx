@@ -119,7 +119,7 @@ export default function Confirmation() {
         </div>
 
         {/* ─── WHAT TO EXPECT ─── */}
-        <section className="page-content section-cream">
+        <section className="page-content">
           <div style={{ maxWidth: 1040, margin: "0 auto" }}>
             <span className="section-tag section-tag-left">What to Expect</span>
             <h2 className="section-h2 section-h2-left" style={{ marginBottom: 12 }}>
@@ -271,7 +271,7 @@ export default function Confirmation() {
         </section>
 
         {/* ─── CTA STRIP ─── */}
-        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
           <h2 className="section-h2" style={{ color: "var(--cream)" }}>
             Start your Confirmation <em>journey.</em>
           </h2>

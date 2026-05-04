@@ -68,7 +68,7 @@ export default function SchoolsMap() {
         </div>
 
         {/* Schools by County */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">By County</span>
             <h2 className="section-h2">Schools by Location</h2>

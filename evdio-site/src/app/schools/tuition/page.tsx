@@ -72,7 +72,7 @@ export default function Tuition() {
         </div>
 
         {/* Assistance Types */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Options Available</span>
             <h2 className="section-h2">How Families Pay for Catholic School</h2>
@@ -175,7 +175,7 @@ export default function Tuition() {
         </div>
 
         {/* How to Apply */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Get Started</span>
             <h2 className="section-h2">How to Apply for Assistance</h2>

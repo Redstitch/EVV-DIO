@@ -61,7 +61,7 @@ export default function Enroll() {
         </div>
 
         {/* Steps */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Enrollment Process</span>
             <h2 className="section-h2">How to Enroll</h2>
@@ -131,7 +131,7 @@ export default function Enroll() {
         </div>
 
         {/* Required Documents */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content">
           <div className="interior-grid interior-grid-2">
             <div>
               <div className="section-head" style={{ textAlign: "left" }}>
@@ -187,7 +187,7 @@ export default function Enroll() {
         </div>
 
         {/* Indiana Voucher */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Indiana School Choice</span>
             <h2 className="section-h2">School Voucher Program</h2>

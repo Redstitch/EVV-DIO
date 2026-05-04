@@ -53,7 +53,7 @@ export default function SpecialNeeds() {
         </div>
 
         {/* Services */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Support Services</span>
             <h2 className="section-h2">How We Support Students</h2>

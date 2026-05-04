@@ -63,7 +63,7 @@ export default function PrisonMinistryPage() {
         </div>
 
         {/* What We Do */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">What We Do</span>
             <h2 className="section-h2">Ministry Services</h2>
@@ -144,7 +144,7 @@ export default function PrisonMinistryPage() {
         </div>
 
         {/* Volunteer */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Get Involved</span>
             <h2 className="section-h2">Become a Prison Ministry Volunteer</h2>

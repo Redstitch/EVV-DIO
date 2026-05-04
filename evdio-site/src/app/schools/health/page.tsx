@@ -48,7 +48,7 @@ export default function HealthPage() {
         </div>
 
         {/* Areas */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Health &amp; Safety</span>
             <h2 className="section-h2">Our Wellness Programs</h2>
@@ -127,7 +127,7 @@ export default function HealthPage() {
         </div>
 
         {/* Social-Emotional */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Social-Emotional Learning</span>
             <h2 className="section-h2">Building Resilient Hearts</h2>

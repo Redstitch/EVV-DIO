@@ -32,7 +32,7 @@ export default function AboutMessagePage() {
       </section>
 
       <main id="main-content">
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content">
           <div style={{ maxWidth: 900, margin: "0 auto" }}>
             <div className="interior-card" style={{ cursor: "default", marginBottom: 32 }}>
               <h3 style={{ fontSize: 24 }}>Our Mission</h3>

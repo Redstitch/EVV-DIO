@@ -97,7 +97,7 @@ export default function FindSchool() {
         </div>
 
         {/* Elementary / Middle */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Pre-K through Grade 8</span>
             <h2 className="section-h2">Elementary &amp; Middle Schools</h2>
@@ -149,7 +149,7 @@ export default function FindSchool() {
         </section>
 
         {/* Map CTA */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Visual Guide</span>
             <h2 className="section-h2">See All Schools on a Map</h2>

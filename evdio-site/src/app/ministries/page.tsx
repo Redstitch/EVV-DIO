@@ -35,7 +35,7 @@ export default function MinistriesPage() {
 
       <main id="main-content">
         {/* Family & Life */}
-        <section className="page-content section-cream">
+        <section className="page-content">
           <span className="section-tag section-tag-left">Family &amp; Life</span>
           <h2 className="section-h2 section-h2-left">Marriage, Family &amp; Respect for Life</h2>
 
@@ -107,7 +107,7 @@ export default function MinistriesPage() {
         </div>
 
         {/* Youth & Education */}
-        <section className="page-content section-warm">
+        <section className="page-content bg-eggshell">
           <span className="section-tag section-tag-left">Youth &amp; Education</span>
           <h2 className="section-h2 section-h2-left">Young People &amp; Faith Formation</h2>
 
@@ -217,7 +217,7 @@ export default function MinistriesPage() {
         </div>
 
         {/* CTA */}
-        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
           <h2 className="section-h2">Your Gifts Make These Ministries Possible</h2>
           <p className="section-desc">
             Every dollar given to the Catholic Ministries Appeal directly supports the programs and services on this page. Join thousands of faithful Catholics in building up the Body of Christ.

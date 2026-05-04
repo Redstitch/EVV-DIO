@@ -65,7 +65,7 @@ export default function ProjectRachelPage() {
         </div>
 
         {/* What We Offer */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <span className="section-tag section-tag-left">What We Offer</span>
           <h2 className="section-h2 section-h2-left">Support &amp; Resources</h2>
 

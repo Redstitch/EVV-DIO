@@ -116,7 +116,7 @@ export default function OurHistoryPage() {
 
       <main id="main-content">
         {/* Intro */}
-        <div className="page-content section-warm">
+        <div className="page-content">
           <div className="section-head">
             <span className="section-tag">Our Story</span>
             <h2 className="section-h2">From Pioneer Missionaries to a Thriving Diocese</h2>
@@ -136,7 +136,7 @@ export default function OurHistoryPage() {
         </div>
 
         {/* Timeline */}
-        <div className="page-content section-cream">
+        <div className="page-content">
           <div style={{ maxWidth: 800, margin: "0 auto", position: "relative" }}>
             {/* Vertical Line */}
             <div style={{ position: "absolute", left: 39, top: 0, bottom: 0, width: 1, background: "var(--line)", display: "var(--md-show, none)" }} />

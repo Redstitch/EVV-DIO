@@ -59,7 +59,7 @@ export default function MensMinistryPage() {
         </div>
 
         {/* Programs */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <span className="section-tag section-tag-left">Programs</span>
           <h2 className="section-h2 section-h2-left">Opportunities for Men</h2>
 

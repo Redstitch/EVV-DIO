@@ -46,7 +46,7 @@ export default function EastDeaneryPage() {
       </section>
 
       <main id="main-content">
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content">
           <div className="info-block">
             <h3>About the East Deanery</h3>
             <p>

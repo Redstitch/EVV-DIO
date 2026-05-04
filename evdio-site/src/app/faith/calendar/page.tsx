@@ -86,7 +86,7 @@ export default function Calendar() {
         </div>
 
         {/* ─── HOLY DAYS OF OBLIGATION ─── */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Holy Days of Obligation</span>
             <h2 className="section-h2">Days When Catholics Must Attend Mass</h2>

@@ -1051,20 +1051,21 @@ a.give-btn:hover { background: #8b3a2d; }
 
 /* Interior page content area */
 .page-content {
-  max-width: 1360px; margin: 0 auto;
   padding: 56px 40px;
 }
-/* Auto-alternate: every other page-content gets cream bg */
-main > section.page-content:nth-of-type(even) {
-  background: #F3ECD9 !important;
-  max-width: 100%;
-  padding: 56px 40px;
-}
-main > section.page-content:nth-of-type(even) > * {
+.page-content > * {
   max-width: 1360px;
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ─── ALTERNATING BACKGROUNDS ───
+   Ivory (#FAF3E0) = default body bg
+   Eggshell (#F3ECD9) = alternating sections
+   Use .bg-eggshell on sections explicitly in JSX.
+   This is more reliable than nth-child hacks. */
+.bg-ivory { background: #FAF3E0; }
+.bg-eggshell { background: #F3ECD9; }
 
 /* Content grid with sidebar */
 .content-grid { display: grid; grid-template-columns: 1fr 340px; gap: 56px; }

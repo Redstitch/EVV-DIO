@@ -143,7 +143,7 @@ export default function ReportAbusePage() {
         </div>
 
         {/* Our Commitment */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head" style={{ textAlign: "left", marginBottom: 24 }}>
             <span className="section-tag" style={{ marginInline: 0 }}>Our Promise</span>
             <h2 className="section-h2" style={{ textAlign: "left" }}>What Happens After a Report</h2>

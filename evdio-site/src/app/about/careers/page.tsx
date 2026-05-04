@@ -139,7 +139,7 @@ export default function CareersPage() {
         </div>
 
         {/* Open Positions */}
-        <section className="page-content" style={{ background: "var(--cream-lt)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Open Positions</span>
             <h2 className="section-h2">Current Opportunities</h2>

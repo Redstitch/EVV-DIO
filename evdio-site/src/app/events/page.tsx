@@ -44,7 +44,7 @@ export default function EventsPage() {
 
       <main id="main-content">
         {/* Upcoming Events */}
-        <section className="page-content section-cream">
+        <section className="page-content">
           <div className="section-head">
             <span className="section-tag">Coming Up</span>
             <h2 className="section-h2">Upcoming Events</h2>
@@ -92,7 +92,7 @@ export default function EventsPage() {
         </div>
 
         {/* Category Cards */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Browse by Type</span>
             <h2 className="section-h2">Retreats, Spaces &amp; More</h2>
@@ -172,7 +172,7 @@ export default function EventsPage() {
         </div>
 
         {/* CTA */}
-        <section className="page-content section-navy" style={{ textAlign: "center" }}>
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
           <h2 className="section-h2">Stay Connected</h2>
           <p className="section-desc">
             Subscribe to The Message for weekly coverage of diocesan events, parish activities, and Catholic community life across Southwestern Indiana.
