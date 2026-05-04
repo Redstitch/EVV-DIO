@@ -1056,7 +1056,7 @@ a.give-btn:hover { background: #8b3a2d; }
 }
 /* Auto-alternate: every other page-content gets cream bg */
 main > .page-content:nth-child(even) {
-  background: var(--cream-lt);
+  background: var(--cream-lt) !important;
   max-width: 100%;
   padding: 56px 40px;
 }
