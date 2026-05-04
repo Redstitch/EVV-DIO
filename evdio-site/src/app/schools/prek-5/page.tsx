@@ -62,9 +62,9 @@ export default function ElementarySchools() {
 
         <section className="page-content bg-eggshell">
           <div className="section-head">
-            <span className="section-tag">PreK &ndash; 8</span>
+            <span className="section-tag">Pre-8</span>
             <h2 className="section-h2">
-              PreK&ndash;8 <em>Schools</em>
+              Pre-8 <em>Schools</em>
             </h2>
           </div>
 
@@ -77,7 +77,7 @@ export default function ElementarySchools() {
               return (
                 <Card key={s.name} className="interior-card" {...props}>
                   <p style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase" as const, letterSpacing: "0.16em", color: "var(--teal)", marginBottom: 6 }}>
-                    PreK&ndash;8 &middot; {s.city}
+                    Pre-8 &middot; {s.city}
                   </p>
                   <h3>{s.name}</h3>
                   {s.url && (
@@ -103,9 +103,9 @@ export default function ElementarySchools() {
 
         <section className="page-content">
           <div className="section-head">
-            <span className="section-tag">PreK &ndash; 5</span>
+            <span className="section-tag">Pre-5</span>
             <h2 className="section-h2">
-              PreK&ndash;5 <em>Schools</em>
+              Pre-5 <em>Schools</em>
             </h2>
           </div>
 
@@ -118,7 +118,7 @@ export default function ElementarySchools() {
               return (
                 <Card key={s.name} className="interior-card" {...props}>
                   <p style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase" as const, letterSpacing: "0.16em", color: "var(--teal)", marginBottom: 6 }}>
-                    PreK&ndash;5 &middot; {s.city}
+                    Pre-5 &middot; {s.city}
                   </p>
                   <h3>{s.name}</h3>
                   {s.url && (
@@ -175,8 +175,8 @@ export default function ElementarySchools() {
 }
 
 const prek8Schools = [
-  { name: "Annunciation at Christ the King", city: "Evansville", url: "http://www.annunciationangels.org/ctk" },
-  { name: "Annunciation at Holy Spirit", city: "Evansville", url: "http://www.annunciationangels.org/HS" },
+  { name: "Annunciation at Christ the King", city: "Evansville", url: "https://www.annunciationchristtheking.org/" },
+  { name: "Annunciation at Holy Spirit", city: "Evansville", url: "https://www.annunciationevv.org/holy-spirit-homepage" },
   { name: "Corpus Christi School", city: "Evansville", url: "http://corpuschristischoolevansville.org/" },
   { name: "Good Shepherd School", city: "Evansville", url: "https://goodshepherdrams.org/" },
   { name: "Holy Redeemer School", city: "Evansville", url: "http://www.holyredeemercatholicschool.com/" },
@@ -187,8 +187,8 @@ const prek8Schools = [
   { name: "St. Bernard School", city: "Rockport", url: "http://stbernardschool.info/catholic-school" },
   { name: "St. James School", city: "Haubstadt", url: "http://www.stjameshaubstadt.com/" },
   { name: "St. John the Baptist School", city: "Newburgh", url: "http://www.sjbschoolnewburgh.org/" },
-  { name: "St. Joseph School", city: "Evansville", url: "http://www.stjoeco.org/school" },
-  { name: "St. Phillip School", city: "Mt. Vernon", url: null },
+  { name: "St. Joseph School", city: "Evansville", url: "https://www.stjoeco.org/" },
+  { name: "St. Phillip School", city: "Mt. Vernon", url: "https://www.stphilipschool.net/" },
   { name: "St. Wendel School", city: "Wadesville", url: "http://www.saintwendelschool.org/" },
   { name: "Washington Catholic School", city: "Washington", url: "https://www.wccardinals.org/" },
   { name: "Westside Catholic School", city: "Evansville", url: "http://www.westsidecatholic.org/" },
