@@ -53,54 +53,53 @@ export default function HighSchoolsPage() {
         </section>
 
         {/* School Cards */}
-        <section className="page-content bg-eggshell" style={{ background: "var(--cream)" }}>
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Our Schools</span>
-            <h2 className="section-h2">Three Schools, One Mission</h2>
+            <h2 className="section-h2">Four Schools, One <em>Mission</em></h2>
           </div>
 
-          <div className="interior-grid interior-grid-3">
-            <div className="interior-card">
+          <div className="interior-grid interior-grid-2">
+            <div className="interior-card" style={{ cursor: "default" }}>
               <h3>Mater Dei High School</h3>
+              <p><strong>Evansville, IN</strong></p>
               <p>
-                <strong>Evansville, IN</strong> &mdash; Co-ed &bull; 700+ students
-              </p>
-              <p>
-                Mater Dei provides a rigorous college-preparatory curriculum
-                alongside a vibrant faith life. Students choose from Advanced
-                Placement courses, fine arts, and more than 20 varsity sports.
-                The Wildcats are known for academic excellence, championship
-                athletics, and a close-knit community where every student is
-                known by name.
+                A college-preparatory curriculum alongside a vibrant faith life.
+                Advanced Placement courses, fine arts, and more than 20 varsity
+                sports. The Wildcats are known for academic excellence,
+                championship athletics, and a close-knit community.
               </p>
             </div>
 
-            <div className="interior-card">
-              <h3>Memorial High School</h3>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Reitz Memorial High School</h3>
+              <p><strong>Evansville, IN</strong></p>
               <p>
-                <strong>Evansville, IN</strong> &mdash; Co-ed &bull; 800+ students
-              </p>
-              <p>
-                Memorial combines strong academics with deep Catholic identity.
-                The Tigers offer an extensive selection of honors and AP courses,
-                award-winning performing arts, and competitive athletics. A
-                comprehensive campus ministry program ensures that faith
+                Strong academics with deep Catholic identity. An extensive
+                selection of honors and AP courses, award-winning performing
+                arts, and competitive athletics. Campus ministry ensures faith
                 formation is woven into every aspect of student life.
               </p>
             </div>
 
-            <div className="interior-card">
-              <h3>Washington Catholic High School</h3>
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Rivet High School</h3>
+              <p><strong>Vincennes, IN</strong></p>
               <p>
-                <strong>Washington, IN</strong> &mdash; Co-ed &bull; ~100 students
+                Serving students in Knox County and surrounding communities,
+                Rivet provides a faith-centered education with small class sizes,
+                personal attention, and a strong sense of community rooted in the
+                Catholic tradition.
               </p>
+            </div>
+
+            <div className="interior-card" style={{ cursor: "default" }}>
+              <h3>Washington Catholic High School</h3>
+              <p><strong>Washington, IN</strong> &mdash; PreK&ndash;12</p>
               <p>
-                Washington Catholic offers the personal attention that only a
-                small school can provide. With a student-teacher ratio that
-                allows individualized instruction, students build meaningful
-                relationships with faculty and peers. Under the leadership of
-                recently appointed first president Dr. Douglas Palmer, the
-                school is expanding its vision for Catholic secondary education
+                A PreK&ndash;12 school offering the personal attention that only
+                a small school can provide. Under the leadership of Dr. Douglas
+                Palmer, the school is expanding its vision for Catholic education
                 in Daviess County.
               </p>
             </div>

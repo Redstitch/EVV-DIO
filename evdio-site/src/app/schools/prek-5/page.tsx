@@ -5,10 +5,10 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Elementary Schools",
   description:
-    "Explore Catholic elementary schools (K-8) in the Diocese of Evansville. Find schools by deanery and learn about our approach to K-8 education.",
+    "Explore Catholic elementary schools in the Diocese of Evansville — PreK-5 and PreK-8 schools across Southwestern Indiana forming students in faith, knowledge, and character.",
 };
 
-export default function PreK5Schools() {
+export default function ElementarySchools() {
   return (
     <>
       <section className="feature-head" aria-labelledby="title">
@@ -16,12 +16,16 @@ export default function PreK5Schools() {
           <div className="text">
             <p className="kicker">Catholic Schools</p>
             <h1 id="title">Elementary <em>Schools.</em></h1>
-            <p className="deck">Our Catholic elementary schools serve students from kindergarten through eighth grade in a faith-filled environment where academic excellence and character take root.</p>
+            <p className="deck">
+              22 Catholic elementary schools across Southwestern Indiana — from
+              PreK through 8th grade — forming students in faith, knowledge,
+              and character.
+            </p>
           </div>
           <figure className="photo">
             <Image
               src="/images/stock/schools-mass-bishop.jpg"
-              alt="Young students gathered with the Bishop during a school liturgy."
+              alt="Catholic school students at Mass with Bishop Siegel."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"
               style={{ objectFit: "cover", objectPosition: "center 30%" }}
@@ -32,18 +36,21 @@ export default function PreK5Schools() {
       </section>
 
       <main id="main-content">
-        {/* ─── OVERVIEW ─── */}
         <section className="page-content">
           <div className="section-head">
-            <span className="section-tag">PreK &ndash; 5th Grade</span>
-            <h2 className="section-h2">Where Learning Begins</h2>
+            <span className="section-tag">Our Schools</span>
+            <h2 className="section-h2">
+              22 schools serving PreK through <em>8th grade</em>
+            </h2>
             <p className="section-desc">
-              The early years of education are among the most formative. Our PreK&ndash;5 elementary schools create warm, structured environments where children develop strong reading, writing, and math skills alongside daily faith formation. Experienced teachers guide each child with patience and purpose, helping them discover the joy of learning and the love of God from the very start.
+              The Diocese of Evansville operates 22 elementary schools — five
+              serving PreK through 5th grade and seventeen serving PreK through
+              8th grade. Every school is fully accredited and rooted in the
+              Catholic faith.
             </p>
           </div>
         </section>
 
-        {/* ─── CROSS FLOURISH ─── */}
         <div className="flourish" aria-hidden="true">
           <span className="line" />
           <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
@@ -53,69 +60,24 @@ export default function PreK5Schools() {
           <span className="line" />
         </div>
 
-        {/* ─── SCHOOLS BY DEANERY ─── */}
         <section className="page-content bg-eggshell">
           <div className="section-head">
-            <span className="section-tag">By Deanery</span>
-            <h2 className="section-h2">Elementary Schools Across the <em>Diocese</em></h2>
+            <span className="section-tag">PreK &ndash; 8</span>
+            <h2 className="section-h2">
+              PreK&ndash;8 <em>Schools</em>
+            </h2>
           </div>
 
-          <div className="interior-grid interior-grid-2">
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Evansville East Deanery</h3>
-              <ul>
-                <li>Good Shepherd School (PreK&ndash;5)</li>
-                <li>Holy Redeemer School (PreK&ndash;5)</li>
-                <li>St. Benedict Cathedral School (PreK&ndash;5)</li>
-              </ul>
-            </div>
-
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Evansville West Deanery</h3>
-              <ul>
-                <li>Corpus Christi School (PreK&ndash;5)</li>
-                <li>Holy Spirit School (PreK&ndash;5)</li>
-                <li>St. Joseph School, Evansville (PreK&ndash;5)</li>
-              </ul>
-            </div>
-
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Gibson &amp; Posey Deanery</h3>
-              <ul>
-                <li>St. Joseph School, Princeton (PreK&ndash;5)</li>
-                <li>SS. Peter &amp; Paul School, Haubstadt (PreK&ndash;5)</li>
-              </ul>
-            </div>
-
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Perry &amp; Spencer Deanery</h3>
-              <ul>
-                <li>St. Augustine School, Leopold (PreK&ndash;5)</li>
-                <li>St. Celestine School (PreK&ndash;5)</li>
-                <li>St. Joseph School, Dale (PreK&ndash;5)</li>
-              </ul>
-            </div>
-
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Dubois Deanery</h3>
-              <ul>
-                <li>Precious Blood School, Jasper (PreK&ndash;5)</li>
-                <li>Holy Trinity School, Schnellville (PreK&ndash;5)</li>
-                <li>Pine Ridge Catholic Academy (PreK&ndash;5)</li>
-              </ul>
-            </div>
-
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Warrick &amp; Vanderburgh Deanery</h3>
-              <ul>
-                <li>Annunciation School, Newburgh (PreK&ndash;5)</li>
-                <li>St. John the Baptist School, Newburgh (PreK&ndash;5)</li>
-              </ul>
-            </div>
+          <div className="interior-grid interior-grid-3">
+            {prek8Schools.map((s) => (
+              <div key={s.name} className="interior-card" style={{ cursor: "default" }}>
+                <h3>{s.name}</h3>
+                <p>{s.city}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* ─── QUATREFOIL FLOURISH ─── */}
         <div className="flourish flourish-quatrefoil" aria-hidden="true">
           <span className="dot" />
           <span className="line" />
@@ -128,55 +90,60 @@ export default function PreK5Schools() {
           <span className="dot" />
         </div>
 
-        {/* ─── EARLY CHILDHOOD ─── */}
         <section className="page-content">
           <div className="section-head">
-            <span className="section-tag">Early Childhood</span>
-            <h2 className="section-h2">Our Approach to the Youngest Learners</h2>
+            <span className="section-tag">PreK &ndash; 5</span>
+            <h2 className="section-h2">
+              PreK&ndash;5 <em>Schools</em>
+            </h2>
           </div>
 
-          <div className="interior-grid interior-grid-2">
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Preschool &amp; Pre-Kindergarten</h3>
-              <p>
-                Our preschool and pre-kindergarten programs use play-based and structured learning to develop school readiness skills in a faith-filled setting. Children explore language, numbers, social skills, and creative expression while learning to pray, share, and care for one another. Full-day and half-day options are available at most locations.
-              </p>
-            </div>
-
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Kindergarten &amp; Primary Grades</h3>
-              <p>
-                In kindergarten through second grade, students build foundational literacy and numeracy skills through engaging, hands-on instruction. Religion class, weekly Mass, and seasonal prayer services introduce young children to the rhythms of the liturgical year and the beauty of the Catholic faith. Each classroom is a community where kindness and respect are practiced daily.
-              </p>
-            </div>
-
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Upper Elementary</h3>
-              <p>
-                Third through fifth graders take on greater academic challenges, including deeper exploration of science, social studies, and the arts. Students prepare for the Sacraments of Reconciliation and Eucharist, participate in service projects, and develop leadership skills through school ministry roles and extracurricular activities.
-              </p>
-            </div>
-
-            <div className="interior-card" style={{ cursor: "default" }}>
-              <h3>Indiana Choice Scholarships</h3>
-              <p>
-                Many families qualify for Indiana Choice Scholarships (vouchers) that cover a significant portion of tuition. Our schools also offer parish-based tuition assistance and financial aid. We are committed to making Catholic education accessible to every family that seeks it.
-              </p>
-            </div>
+          <div className="interior-grid interior-grid-3">
+            {prek5Schools.map((s) => (
+              <div key={s.name} className="interior-card" style={{ cursor: "default" }}>
+                <h3>{s.name}</h3>
+                <p>{s.city}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* ─── CTA ─── */}
         <section className="section-band section-navy" style={{ textAlign: "center" }}>
-          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>
-            Give them a great start &mdash; <em style={{ color: "var(--bgold)" }}>enroll today.</em>
+          <h2
+            className="section-h2"
+            style={{
+              color: "var(--cream)",
+              maxWidth: "18ch",
+              margin: "0 auto 16px",
+            }}
+          >
+            Find the right school for your{" "}
+            <em style={{ color: "var(--bgold)" }}>family.</em>
           </h2>
-          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
-            Schedule a tour, learn about tuition options, and begin the enrollment process at a Catholic elementary school near you.
+          <p
+            style={{
+              color: "rgba(238,218,179,0.7)",
+              maxWidth: 540,
+              margin: "0 auto",
+            }}
+          >
+            Schedule a tour, learn about tuition options, and begin the
+            enrollment process at a Catholic school near you.
           </p>
           <div style={{ marginTop: 32 }}>
-            <Link href="/schools/enroll" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>
-              Enroll now <span className="arrow" aria-hidden="true">&rarr;</span>
+            <Link
+              href="/schools/enroll"
+              className="btn btn-primary"
+              style={{
+                background: "var(--dgold)",
+                color: "var(--navy)",
+                borderColor: "var(--dgold)",
+              }}
+            >
+              Enroll now{" "}
+              <span className="arrow" aria-hidden="true">
+                →
+              </span>
             </Link>
           </div>
         </section>
@@ -184,3 +151,31 @@ export default function PreK5Schools() {
     </>
   );
 }
+
+const prek8Schools = [
+  { name: "Annunciation at Christ the King", city: "Evansville" },
+  { name: "Annunciation at Holy Spirit", city: "Evansville" },
+  { name: "Corpus Christi School", city: "Evansville" },
+  { name: "Good Shepherd School", city: "Evansville" },
+  { name: "Holy Redeemer School", city: "Evansville" },
+  { name: "Holy Rosary School", city: "Evansville" },
+  { name: "Holy Trinity School", city: "Jasper" },
+  { name: "Resurrection School", city: "Evansville" },
+  { name: "St. Benedict Cathedral School", city: "Evansville" },
+  { name: "St. Bernard School", city: "Rockport" },
+  { name: "St. James School", city: "Haubstadt" },
+  { name: "St. John the Baptist School", city: "Newburgh" },
+  { name: "St. Joseph School", city: "Evansville" },
+  { name: "St. Phillip School", city: "Mt. Vernon" },
+  { name: "St. Wendel School", city: "Wadesville" },
+  { name: "Washington Catholic School", city: "Washington" },
+  { name: "Westside Catholic School", city: "Evansville" },
+];
+
+const prek5Schools = [
+  { name: "Flaget Elementary School", city: "Vincennes" },
+  { name: "Holy Cross School", city: "Fort Branch" },
+  { name: "St. Joseph School", city: "Princeton" },
+  { name: "St. Matthews School", city: "Mt. Vernon" },
+  { name: "Sts. Peter & Paul School", city: "Haubstadt" },
+];
