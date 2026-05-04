@@ -452,8 +452,10 @@ a.give-btn:hover { background: #8b3a2d; }
    ================================================================ */
 .flourish {
   display: flex; justify-content: center; align-items: center; gap: 20px;
-  padding: 24px 0;
+  padding: 12px 0;
+  margin: -1px 0;
   color: var(--dgold);
+  background: transparent;
 }
 .flourish .line { width: 72px; height: 1px; background: var(--dgold); opacity: 0.7; }
 .flourish .dot { width: 5px; height: 5px; background: var(--dgold); border-radius: 50%; flex-shrink: 0; }

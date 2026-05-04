@@ -75,15 +75,14 @@ export default function SchoolsPage() {
           className="page-content section-cream"
           aria-labelledby="stats-title"
         >
-          <span className="section-tag section-tag-left">At a Glance</span>
-          <h2
-            className="section-h2 section-h2-left"
-            id="stats-title"
-          >
-            Excellence rooted in <em>faith.</em>
-          </h2>
+          <div className="section-head">
+            <span className="section-tag">At a Glance</span>
+            <h2 className="section-h2" id="stats-title">
+              Excellence rooted in <em>faith.</em>
+            </h2>
+          </div>
 
-          <div className="stat-row" style={{ justifyContent: "center", marginTop: 32 }}>
+          <div className="stat-row" style={{ justifyContent: "center" }}>
             <div className="stat-item">
               <span className="stat-num">26</span>
               <span className="stat-label">Schools</span>
@@ -120,13 +119,12 @@ export default function SchoolsPage() {
 
         {/* ─── ACTION CARDS ─── */}
         <section className="page-content" aria-labelledby="explore-title">
-          <span className="section-tag section-tag-left">Explore</span>
-          <h2
-            className="section-h2 section-h2-left"
-            id="explore-title"
-          >
-            What are you <em>looking for?</em>
-          </h2>
+          <div className="section-head">
+            <span className="section-tag">Explore</span>
+            <h2 className="section-h2" id="explore-title">
+              What are you <em>looking for?</em>
+            </h2>
+          </div>
 
           <div className="interior-grid interior-grid-3" style={{ marginTop: 32 }}>
             <Link href="/schools/find" className="interior-card">
