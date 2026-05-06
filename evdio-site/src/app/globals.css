@@ -957,7 +957,7 @@ a.give-btn:hover { background: #A83B2A; }
    INTERIOR PAGES — FEATURE HEAD (curves B style)
    ================================================================ */
 .feature-head {
-  background: var(--cream-lt);
+  background: linear-gradient(180deg, var(--cream-lt) 0%, rgba(0,78,115,0.03) 100%);
   border-bottom: 1px solid var(--line);
 }
 .feature-head .grid {
@@ -1068,6 +1068,8 @@ a.give-btn:hover { background: #A83B2A; }
    This is more reliable than nth-child hacks. */
 .bg-ivory { background: #FAF3E0; }
 .bg-eggshell { background: #FEFBF3; }
+.bg-blue-subtle { background: linear-gradient(135deg, rgba(0,92,186,0.04) 0%, rgba(0,78,115,0.07) 100%); }
+.bg-teal-subtle { background: linear-gradient(180deg, rgba(0,78,115,0.05) 0%, rgba(0,78,115,0.02) 100%); }
 
 /* Content grid with sidebar */
 .content-grid { display: grid; grid-template-columns: 1fr 340px; gap: 56px; }
@@ -1505,12 +1507,12 @@ a.give-btn:hover { background: #A83B2A; }
 }
 .seven .item:hover .cta { color: var(--navy); border-color: var(--navy); }
 
-/* Scripture block — inline moment, same background as page */
+/* Scripture block — subtle blue gradient for texture */
 .scripture {
   padding: 48px 40px;
   text-align: center;
   margin: 0;
-  background: transparent;
+  background: linear-gradient(135deg, rgba(0,92,186,0.04) 0%, rgba(0,78,115,0.06) 100%);
   position: relative;
 }
 .scripture::before {

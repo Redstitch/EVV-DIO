@@ -223,7 +223,7 @@ export default function AboutPage() {
         </div>
 
         {/* Safety & Accountability */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content bg-blue-subtle">
           <span className="section-tag">Safety &amp; Accountability</span>
           <h2 className="section-h2">Protecting Our Community</h2>
 

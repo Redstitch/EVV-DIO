@@ -162,7 +162,7 @@ export default function EventsPage() {
         </section>
 
         {/* Submit Event */}
-        <div className="page-content bg-eggshell" style={{ paddingTop: 0 }}>
+        <div className="page-content bg-blue-subtle" style={{ paddingTop: 0 }}>
           <div className="info-block">
             <h3>Have an Event to Share?</h3>
             <p>

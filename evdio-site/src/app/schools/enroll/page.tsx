@@ -187,7 +187,7 @@ export default function Enroll() {
         </div>
 
         {/* Indiana Voucher */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content bg-blue-subtle">
           <div className="section-head">
             <span className="section-tag">Indiana School Choice</span>
             <h2 className="section-h2">School Voucher Program</h2>

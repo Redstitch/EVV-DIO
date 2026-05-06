@@ -177,7 +177,7 @@ export default function HispanicMinistryPage() {
         </div>
 
         {/* Leadership */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content bg-blue-subtle">
           <div className="section-head">
             <span className="section-tag">Formaci&oacute;n de L&iacute;deres</span>
             <h2 className="section-h2">Leadership Development</h2>

@@ -135,7 +135,7 @@ export default function Music() {
         </div>
 
         {/* ─── TRAINING ─── */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content bg-blue-subtle">
           <div className="interior-grid interior-grid-2" style={{ alignItems: "start" }}>
             <div>
               <span className="section-tag">Formation &amp; Training</span>

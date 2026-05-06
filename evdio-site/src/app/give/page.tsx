@@ -299,7 +299,7 @@ export default function GivePage() {
         </section>
 
         {/* ─── ALLOCATION BREAKDOWN ─── */}
-        <section className="page-content bg-eggshell" aria-labelledby="allocation-title">
+        <section className="page-content bg-blue-subtle" aria-labelledby="allocation-title">
           <div className="container-narrow">
             <span className="section-tag">Transparency</span>
             <h2
