@@ -84,11 +84,11 @@ export default function ParishesPage() {
                 person. Multiple parishes offer livestreaming.
               </p>
             </Link>
-            <Link href="/parishes/directory" className="interior-card">
-              <h3>Parish Directory</h3>
+            <Link href="/faith/become-catholic" className="interior-card">
+              <h3>Becoming Catholic</h3>
               <p>
-                A complete listing of all 45 parishes with addresses, phone
-                numbers, pastor information, and parish websites.
+                Interested in the Catholic faith? Learn about OCIA and how to
+                begin the journey at a parish near you.
               </p>
             </Link>
           </div>

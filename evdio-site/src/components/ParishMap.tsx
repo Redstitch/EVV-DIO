@@ -168,8 +168,15 @@ export function ParishMap() {
                     </div>
                   )}
                   {parish.churches && parish.churches.length > 1 && (
-                    <div style={{ fontSize: 10, color: "#005CBA", fontWeight: 600, marginTop: 4, textTransform: "uppercase" as const, letterSpacing: "0.08em" }}>
-                      {parish.churches.length} church locations
+                    <div style={{ marginTop: 6, paddingTop: 6, borderTop: "1px solid var(--line)" }}>
+                      <div style={{ fontSize: 10, color: "#005CBA", fontWeight: 600, textTransform: "uppercase" as const, letterSpacing: "0.08em", marginBottom: 4 }}>
+                        {parish.churches.length} church locations
+                      </div>
+                      {parish.churches.map((c, ci) => (
+                        <div key={ci} style={{ fontSize: 10, color: "var(--muted)", lineHeight: 1.4, marginBottom: 2 }}>
+                          {c.name} — {c.address}, {c.city}
+                        </div>
+                      ))}
                     </div>
                   )}
                   {parish.website && (

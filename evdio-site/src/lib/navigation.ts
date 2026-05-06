@@ -93,7 +93,7 @@ export const navItems: NavItem[] = [
           { label: "Parish Finder Map", href: "/parishes", featured: true },
           { label: "Mass Times", href: "/parishes/mass-times" },
           { label: "Watch Mass Online", href: "/parishes/watch-mass" },
-          { label: "Parish Directory", href: "/parishes/directory" },
+          { label: "Parish Directory", href: "/parishes" },
         ],
         highlight: {
           title: "New to the Area?",
