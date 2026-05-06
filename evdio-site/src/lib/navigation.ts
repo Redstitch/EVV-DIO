@@ -65,7 +65,6 @@ export const navItems: NavItem[] = [
           { label: "Directories", href: "/about/directories" },
           { label: "Staff Directory", href: "/about/staff-directory" },
           { label: "Clergy Directory", href: "/about/clergy-directory" },
-          { label: "Parish Directory", href: "/parishes" },
           { label: "Catholic Resources & Links", href: "/about/resources" },
           { label: "Careers", href: "/about/careers" },
           { label: "Contact Us", href: "/about/contact" },
@@ -93,7 +92,6 @@ export const navItems: NavItem[] = [
           { label: "Parish Finder Map", href: "/parishes", featured: true },
           { label: "Mass Times", href: "/parishes/mass-times" },
           { label: "Watch Mass Online", href: "/parishes/watch-mass" },
-          { label: "Parish Directory", href: "/parishes" },
         ],
         highlight: {
           title: "New to the Area?",
