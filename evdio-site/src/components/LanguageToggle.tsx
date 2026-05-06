@@ -1,81 +1,54 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
-
-declare global {
-  interface Window {
-    google: any;
-    googleTranslateElementInit: () => void;
-  }
-}
+import { useState, useEffect } from "react";
 
 export function LanguageToggle() {
+  const [lang, setLang] = useState("en");
+
   useEffect(() => {
-    // Only load once
-    if (document.getElementById("google-translate-script")) return;
-
-    // Initialize Google Translate
-    window.googleTranslateElementInit = () => {
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: "en",
-          includedLanguages: "en,es",
-          autoDisplay: false,
-          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-        },
-        "google_translate_element"
-      );
-    };
-
-    const script = document.createElement("script");
-    script.id = "google-translate-script";
-    script.src =
-      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
-
-  const switchLanguage = useCallback((lang: string) => {
-    // Find the Google Translate select element
-    const select = document.querySelector(
-      ".goog-te-combo"
-    ) as HTMLSelectElement;
-    if (select) {
-      select.value = lang === "es" ? "es" : "en";
-      select.dispatchEvent(new Event("change"));
+    // Check if already translated (cookie from Google Translate)
+    const match = document.cookie.match(/googtrans=\/en\/(\w+)/);
+    if (match && match[1] === "es") {
+      setLang("es");
     }
   }, []);
 
-  return (
-    <>
-      {/* Hidden Google Translate widget */}
-      <div
-        id="google_translate_element"
-        style={{ position: "absolute", top: -9999, left: -9999 }}
-      />
+  function switchToSpanish() {
+    // Set the Google Translate cookie
+    document.cookie = "googtrans=/en/es; path=/";
+    document.cookie = "googtrans=/en/es; path=/; domain=" + window.location.hostname;
+    setLang("es");
+    window.location.reload();
+  }
 
-      {/* Our styled toggle */}
-      <span className="lang" aria-label="Language">
-        <button
-          onClick={() => switchLanguage("en")}
-          className="lang-btn active"
-          aria-current="true"
-          type="button"
-        >
-          EN
-        </button>
-        <span className="sep" aria-hidden="true">
-          &middot;
-        </span>
-        <button
-          onClick={() => switchLanguage("es")}
-          className="lang-btn"
-          lang="es"
-          type="button"
-        >
-          ES
-        </button>
+  function switchToEnglish() {
+    // Clear the Google Translate cookie
+    document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    document.cookie = "googtrans=; path=/; domain=" + window.location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    setLang("en");
+    window.location.reload();
+  }
+
+  return (
+    <span className="lang" aria-label="Language">
+      <button
+        onClick={switchToEnglish}
+        className={`lang-btn ${lang === "en" ? "active" : ""}`}
+        type="button"
+      >
+        EN
+      </button>
+      <span className="sep" aria-hidden="true">
+        &middot;
       </span>
-    </>
+      <button
+        onClick={switchToSpanish}
+        className={`lang-btn ${lang === "es" ? "active" : ""}`}
+        lang="es"
+        type="button"
+      >
+        ES
+      </button>
+    </span>
   );
 }
