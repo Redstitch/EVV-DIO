@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { parishes, deaneryColors, type Parish } from "@/data/parishes";
 
-// Cross-shaped pin icon
 const createIcon = (color: string) =>
   L.divIcon({
     className: "",
@@ -31,10 +30,21 @@ function FitBounds({ parishes: ps }: { parishes: Parish[] }) {
   return null;
 }
 
+function FlyToParish({ parish }: { parish: Parish | null }) {
+  const map = useMap();
+  useEffect(() => {
+    if (parish) {
+      map.flyTo([parish.lat, parish.lng], 14, { duration: 0.8 });
+    }
+  }, [parish, map]);
+  return null;
+}
+
 export function ParishMap() {
   const [search, setSearch] = useState("");
   const [activeDeanery, setActiveDeanery] = useState<string | null>(null);
   const [selectedParish, setSelectedParish] = useState<Parish | null>(null);
+  const markerRefs = useRef<Record<string, L.Marker>>({});
 
   const filtered = useMemo(() => {
     let result = parishes;
@@ -56,11 +66,19 @@ export function ParishMap() {
 
   const deaneries = ["South", "North", "East", "West"];
 
+  function handleSidebarClick(parish: Parish) {
+    setSelectedParish(parish);
+    const key = `${parish.name}-${parish.city}`;
+    const marker = markerRefs.current[key];
+    if (marker) {
+      marker.openPopup();
+    }
+  }
+
   return (
     <div style={{ display: "grid", gridTemplateColumns: "360px 1fr", gap: 0, borderRadius: 20, overflow: "hidden", border: "1px solid var(--line)", height: 620 }}>
       {/* ─── SIDEBAR ─── */}
       <div style={{ background: "#fff", borderRight: "1px solid var(--line)", display: "flex", flexDirection: "column", height: 620, overflow: "hidden" }}>
-        {/* Search */}
         <div style={{ padding: "16px 16px 12px" }}>
           <input
             type="text"
@@ -76,10 +94,9 @@ export function ParishMap() {
           />
         </div>
 
-        {/* Deanery filters */}
         <div style={{ padding: "0 16px 12px", display: "flex", gap: 6, flexWrap: "wrap" }}>
           <button
-            onClick={() => setActiveDeanery(null)}
+            onClick={() => { setActiveDeanery(null); setSelectedParish(null); }}
             style={{
               padding: "5px 12px", fontSize: 10, fontWeight: 700,
               letterSpacing: "0.08em", textTransform: "uppercase" as const,
@@ -95,7 +112,7 @@ export function ParishMap() {
           {deaneries.map((d) => (
             <button
               key={d}
-              onClick={() => setActiveDeanery(activeDeanery === d ? null : d)}
+              onClick={() => { setActiveDeanery(activeDeanery === d ? null : d); setSelectedParish(null); }}
               style={{
                 padding: "5px 12px", fontSize: 10, fontWeight: 700,
                 letterSpacing: "0.08em", textTransform: "uppercase" as const,
@@ -111,17 +128,15 @@ export function ParishMap() {
           ))}
         </div>
 
-        {/* Count */}
         <div style={{ padding: "0 16px 8px", fontSize: 11, color: "var(--muted)" }}>
           {filtered.length} of {parishes.length} parishes
         </div>
 
-        {/* Parish list */}
         <div style={{ flex: 1, overflowY: "auto", borderTop: "1px solid var(--line)" }}>
           {filtered.map((parish, i) => (
             <button
               key={`${parish.name}-${parish.city}-${i}`}
-              onClick={() => setSelectedParish(parish)}
+              onClick={() => handleSidebarClick(parish)}
               style={{
                 display: "block", width: "100%", textAlign: "left",
                 padding: "14px 16px", border: "none", borderBottom: "1px solid var(--line)",
@@ -142,7 +157,7 @@ export function ParishMap() {
                     {parish.name}
                   </div>
                   <div style={{ fontSize: 12, color: "var(--muted)", marginTop: 2 }}>
-                    {parish.city}, {parish.state}
+                    {parish.city}, {parish.state} {parish.zip}
                   </div>
                   <div style={{ fontSize: 11, color: "var(--muted)", marginTop: 2, opacity: 0.7 }}>
                     {parish.address}
@@ -188,46 +203,48 @@ export function ParishMap() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <FitBounds parishes={filtered} />
+          <FlyToParish parish={selectedParish} />
           {filtered.map((parish, i) => (
             <Marker
               key={`${parish.name}-${parish.city}-${i}`}
               position={[parish.lat, parish.lng]}
               icon={createIcon(deaneryColors[parish.deanery])}
+              ref={(ref) => {
+                if (ref) markerRefs.current[`${parish.name}-${parish.city}`] = ref;
+              }}
               eventHandlers={{
                 click: () => setSelectedParish(parish),
               }}
             >
               <Popup>
                 <div style={{ fontFamily: "var(--sans)", minWidth: 220, padding: "4px 0" }}>
-                  <strong style={{ fontSize: 15, color: "var(--navy)", display: "block", marginBottom: 4, lineHeight: 1.3 }}>
+                  <strong style={{ fontSize: 15, color: "var(--navy)", display: "block", marginBottom: 6, lineHeight: 1.3 }}>
                     {parish.name}
                   </strong>
-                  {parish.address && (
-                    <span style={{ fontSize: 12, color: "var(--muted)", display: "block", marginBottom: 4 }}>
-                      {parish.address}<br />
-                      {parish.city}, {parish.state}
-                    </span>
-                  )}
-                  {!parish.address && (
-                    <span style={{ fontSize: 12, color: "var(--muted)", display: "block", marginBottom: 4 }}>
-                      {parish.city}, {parish.state}
+                  <span style={{ fontSize: 12, color: "var(--muted)", display: "block", marginBottom: 2 }}>
+                    {parish.address}
+                  </span>
+                  <span style={{ fontSize: 12, color: "var(--muted)", display: "block", marginBottom: 4 }}>
+                    {parish.phone}
+                  </span>
+                  {parish.pastor && (
+                    <span style={{ fontSize: 12, color: "var(--navy)", display: "block", fontWeight: 500, marginBottom: 8 }}>
+                      {parish.pastor}
                     </span>
                   )}
                   <span style={{
-                    display: "inline-block", marginTop: 4, fontSize: 10,
+                    display: "block", marginBottom: 8, fontSize: 10,
                     fontWeight: 700, textTransform: "uppercase" as const,
                     letterSpacing: "0.1em", color: deaneryColors[parish.deanery],
-                    padding: "3px 8px", borderRadius: 999,
-                    background: `${deaneryColors[parish.deanery]}15`,
                   }}>
                     {parish.deanery} Deanery
                   </span>
                   {parish.churches && parish.churches.length > 1 && (
-                    <div style={{ marginTop: 8, borderTop: "1px solid #eee", paddingTop: 8, fontSize: 11, color: "var(--muted)" }}>
+                    <div style={{ borderTop: "1px solid #eee", paddingTop: 8, marginBottom: 8, fontSize: 11, color: "var(--muted)" }}>
                       <strong style={{ display: "block", marginBottom: 4, color: "var(--navy)", fontSize: 11 }}>Church Locations:</strong>
                       {parish.churches.map((c, ci) => (
                         <div key={ci} style={{ marginBottom: 3 }}>
-                          {c.name} — {c.address}
+                          {c.name} — {c.address}, {c.city}
                         </div>
                       ))}
                     </div>
@@ -238,7 +255,7 @@ export function ParishMap() {
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{
-                        display: "inline-block", marginTop: 10, fontSize: 11,
+                        display: "block", fontSize: 11,
                         fontWeight: 700, color: "#005CBA", textDecoration: "none",
                         letterSpacing: "0.08em", textTransform: "uppercase" as const,
                       }}
