@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { MassTimesMapWrapper } from "@/components/MassTimesMapWrapper";
 
 export const metadata: Metadata = {
-  title: "Mass Times",
+  title: "Mass Times | Diocese of Evansville",
   description:
-    "Find Mass times at Catholic parishes across the Diocese of Evansville. Daily Mass, weekend Mass, Holy Days, and confession schedules.",
+    "Find Saturday and Sunday Mass times at Catholic churches across the Diocese of Evansville. Search by church name, city, or ZIP code.",
 };
 
 export default function MassTimesPage() {
@@ -14,14 +15,17 @@ export default function MassTimesPage() {
       <section className="feature-head" aria-labelledby="title">
         <div className="grid">
           <div className="text">
-            <p className="kicker">PARISHES & MASS</p>
+            <p className="kicker">Parishes &amp; Mass</p>
             <h1 id="title">Mass <em>Times.</em></h1>
-            <p className="deck">Find daily, weekend, and Holy Day Mass schedules at parishes across the diocese.</p>
+            <p className="deck">
+              Find Saturday and Sunday Mass times at Catholic churches across
+              the Diocese of Evansville.
+            </p>
           </div>
           <figure className="photo">
             <Image
               src="/images/stock/white-mass.jpg"
-              alt="Catholic Mass celebration"
+              alt="Catholic faithful at Mass in the Diocese of Evansville."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"
               style={{ objectFit: "cover" }}
@@ -32,104 +36,50 @@ export default function MassTimesPage() {
       </section>
 
       <main id="main-content">
-        {/* Weekend Mass */}
         <section className="page-content">
-          <div className="interior-card" style={{ cursor: "default" }}>
-            <h2>Weekend Mass Schedule</h2>
-            <p>
-              Most parishes in the Diocese of Evansville offer Saturday vigil Masses and Sunday morning Masses. Some parishes also offer Sunday evening Masses. Contact your parish for the most current schedule.
+          <div className="section-head">
+            <span className="section-tag">Find a Mass</span>
+            <h2 className="section-h2">Weekend Mass <em>Schedule</em></h2>
+            <p className="section-desc">
+              Search by church name, city, or ZIP code. Filter by Saturday or
+              Sunday. Click a church to see its location on the map.
             </p>
-            <div className="interior-grid interior-grid-2" style={{ marginTop: 20 }}>
-              <div className="info-block">
-                <h3>Saturday Vigil</h3>
-                <p>Typically 4:00 PM or 5:00 PM. Fulfills the Sunday obligation.</p>
-              </div>
-              <div className="info-block">
-                <h3>Sunday</h3>
-                <p>Most parishes offer Masses at 8:00 AM, 10:00 AM, and/or 12:00 PM.</p>
-              </div>
-            </div>
           </div>
+
+          <MassTimesMapWrapper />
         </section>
 
-        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
+        <div className="flourish" aria-hidden="true">
+          <span className="line" />
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
+            <rect x="6" y="0" width="2" height="18" />
+            <rect x="2" y="5" width="10" height="2" />
+          </svg>
+          <span className="line" />
         </div>
 
-        {/* Daily Mass */}
-        <section className="page-content">
-          <div className="interior-card" style={{ cursor: "default" }}>
-            <h2>Daily Mass</h2>
+        <section className="page-content bg-eggshell">
+          <div className="info-block">
+            <h3>Daily Mass &amp; Confession Times</h3>
             <p>
-              Daily Mass is celebrated Monday through Friday at many parishes, with some also offering Saturday morning Mass. Common times include 7:00 AM, 8:00 AM, and 12:10 PM.
-            </p>
-            <p>
-              The following parishes offer daily Mass on a regular basis:
-            </p>
-            <div className="interior-grid interior-grid-3" style={{ marginTop: 16 }}>
-              {[
-                "St. Benedict Cathedral, Evansville",
-                "Holy Rosary, Evansville",
-                "Annunciation, Evansville",
-                "Holy Redeemer, Evansville",
-                "St. Joseph, Jasper",
-                "Holy Family, Jasper",
-                "St. Ferdinand, Ferdinand",
-                "St. Meinrad, St. Meinrad",
-                "Sts. Peter & Paul, Haubstadt",
-                "St. Philip, Posey County",
-                "St. Francis Xavier, Vincennes",
-                "Good Shepherd, Evansville",
-              ].map((parish) => (
-                <div key={parish} className="info-block" style={{ textAlign: "center" }}>
-                  <p style={{ fontWeight: 500 }}>{parish}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
-        </div>
-
-        {/* Confession */}
-        <section className="page-content">
-          <div className="interior-card" style={{ cursor: "default" }}>
-            <h2>Confession (Sacrament of Reconciliation)</h2>
-            <p>
-              The Sacrament of Reconciliation is typically available 30 minutes before Saturday vigil Mass at most parishes. Many parishes also offer confession by appointment. Contact your parish office to schedule.
-            </p>
-            <p>
-              During Advent and Lent, communal penance services with individual absolution are offered at parishes across the diocese.
+              Most parishes offer daily Mass Monday through Friday, and many
+              offer confession before weekend Masses. For daily Mass schedules,
+              confession times, and Holy Day schedules, please contact your
+              parish directly or visit their website.
             </p>
           </div>
         </section>
 
-        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <hr className="section-divider" />
-        </div>
-
-        {/* Holy Days */}
-        <section className="page-content">
-          <div className="interior-card" style={{ cursor: "default" }}>
-            <h2>Holy Days of Obligation</h2>
-            <p>
-              In addition to every Sunday, Catholics are obligated to attend Mass on six Holy Days throughout the year. Parishes offer vigil and day-of Masses for each Holy Day.
-            </p>
-            <ul style={{ marginTop: 12 }}>
-              <li><strong>January 1</strong> &mdash; Solemnity of Mary, Mother of God</li>
-              <li><strong>Ascension Thursday</strong> &mdash; 40 days after Easter</li>
-              <li><strong>August 15</strong> &mdash; Assumption of the Blessed Virgin Mary</li>
-              <li><strong>November 1</strong> &mdash; All Saints Day</li>
-              <li><strong>December 8</strong> &mdash; Immaculate Conception</li>
-              <li><strong>December 25</strong> &mdash; Christmas</li>
-            </ul>
-          </div>
-
-          <div style={{ textAlign: "center", marginTop: 32 }}>
-            <Link href="/parishes/watch-mass" className="btn btn-secondary">
-              Watch Mass Online
+        <section className="section-band section-navy" style={{ textAlign: "center" }}>
+          <h2 className="section-h2" style={{ color: "var(--cream)", maxWidth: "18ch", margin: "0 auto 16px" }}>
+            Find your parish — <em style={{ color: "var(--bgold)" }}>come home.</em>
+          </h2>
+          <p style={{ color: "rgba(238,218,179,0.7)", maxWidth: 540, margin: "0 auto" }}>
+            Every parish in the Diocese of Evansville is ready to welcome you.
+          </p>
+          <div style={{ marginTop: 32 }}>
+            <Link href="/parishes" className="btn btn-primary" style={{ background: "var(--dgold)", color: "var(--navy)", borderColor: "var(--dgold)" }}>
+              Parish Finder Map <span className="arrow" aria-hidden="true">→</span>
             </Link>
           </div>
         </section>
