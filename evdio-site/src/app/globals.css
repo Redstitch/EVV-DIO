@@ -2100,3 +2100,9 @@ a.give-btn:hover { background: #A83B2A; }
   .flourish .line { width: 36px; }
   .intro .pull::before { font-size: 64px; }
 }
+
+/* Keep map behind sticky header */
+.leaflet-container { z-index: 1 !important; }
+.leaflet-pane { z-index: 1 !important; }
+.leaflet-top, .leaflet-bottom { z-index: 2 !important; }
+.leaflet-popup-pane { z-index: 3 !important; }
