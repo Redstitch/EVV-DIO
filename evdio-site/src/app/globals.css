@@ -460,7 +460,7 @@ a.give-btn:hover { background: #A83B2A; }
   color: #004E73;
 }
 .flourish .line { width: 72px; height: 1px; background: #004E73; opacity: 0.4; }
-.flourish .dot { width: 5px; height: 5px; background: #005CBA; border-radius: 50%; flex-shrink: 0; opacity: 0.5; }
+.flourish .dot { width: 5px; height: 5px; background: var(--dgold); border-radius: 50%; flex-shrink: 0; }
 .flourish svg { display: block; }
 .flourish-quatrefoil { gap: 12px; }
 .flourish-quatrefoil .line { width: 56px; opacity: 0.55; }
@@ -1209,7 +1209,7 @@ a.give-btn:hover { background: #A83B2A; }
   margin-bottom: 8px;
 }
 .interior-card li::marker {
-  color: #005CBA;
+  color: var(--dgold);
 }
 .interior-card-icon {
   width: 52px; height: 52px; border-radius: 14px;
@@ -1224,14 +1224,15 @@ a.give-btn:hover { background: #A83B2A; }
 /* Section divider */
 .section-divider {
   border: none; height: 1px; margin: 48px 0;
-  background: linear-gradient(90deg, transparent, #005CBA, transparent);
+  background: linear-gradient(90deg, transparent, var(--dgold), transparent);
 }
 
 /* Interior info blocks */
 .info-block {
   background: var(--cream-xlt); border-radius: 16px;
   padding: 24px 28px; margin-bottom: 20px;
-  border-left: 4px solid #005CBA;
+  border-left: 4px solid var(--dgold);
+  max-width: 900px;
 }
 .info-block h3 {
   font-family: var(--serif); font-size: 22px;
@@ -1385,6 +1386,17 @@ a.give-btn:hover { background: #A83B2A; }
   padding: 7px 16px;
   background: rgba(0,78,115,0.07);
   border-radius: 999px;
+}
+/* Always center section tags and headings inside page-content */
+.page-content > .section-tag,
+.page-content > .section-h2 {
+  text-align: center;
+  display: block;
+}
+.page-content > .section-tag {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
 }
 .section-tag-left { text-align: left; display: block; }
 .section-tag-left .section-tag,
@@ -1579,8 +1591,8 @@ a.give-btn:hover { background: #A83B2A; }
   font-family: var(--serif);
   font-size: 96px;
   line-height: 0.4;
-  color: #005CBA;
-  opacity: 0.2;
+  color: var(--dgold);
+  opacity: 0.25;
   margin-bottom: 20px;
 }
 .scripture blockquote {
@@ -2057,7 +2069,7 @@ a.give-btn:hover { background: #A83B2A; }
   position: absolute;
   bottom: 0; left: 0;
   width: 48px; height: 2px;
-  background: #005CBA;
+  background: var(--dgold);
 }
 
 /* Interior grid responsive gap tightening */
