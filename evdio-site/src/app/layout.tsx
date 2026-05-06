@@ -73,19 +73,21 @@ export default function RootLayout({
         <Footer />
         <BackToTop />
         <div id="google_translate_element" style={{ display: "none" }} />
+        <Script id="google-translate-init" strategy="afterInteractive">
+          {`
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es',
+                autoDisplay: false
+              }, 'google_translate_element');
+            }
+          `}
+        </Script>
         <Script
-          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
           strategy="afterInteractive"
         />
-        <Script id="google-translate-init" strategy="afterInteractive">
-          {`function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-              pageLanguage: 'en',
-              includedLanguages: 'en,es',
-              autoDisplay: false
-            }, 'google_translate_element');
-          }`}
-        </Script>
       </body>
     </html>
   );
