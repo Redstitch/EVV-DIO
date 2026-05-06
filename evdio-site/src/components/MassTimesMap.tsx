@@ -5,6 +5,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { massLocations, type MassLocation } from "@/data/mass-times";
+import { getSlugForParish, getWebsiteForParish } from "@/data/parish-details";
 
 const pinIcon = (color: string) =>
   L.divIcon({
@@ -138,6 +139,25 @@ export function MassTimesMap() {
                     </div>
                   )}
                 </div>
+                {(() => {
+                  const pName = loc.parish || loc.church;
+                  const slug = getSlugForParish(pName, loc.city);
+                  const website = getWebsiteForParish(pName, loc.city);
+                  return (slug || website) ? (
+                    <div style={{ display: "flex", gap: 12, marginTop: 6, flexWrap: "wrap" }}>
+                      {slug && (
+                        <a href={`/parishes/${slug}`} onClick={(e) => e.stopPropagation()} style={{ fontSize: 11, color: "#005CBA", fontWeight: 600, textDecoration: "none" }}>
+                          Parish Details →
+                        </a>
+                      )}
+                      {website && (
+                        <a href={website} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} style={{ fontSize: 11, color: "var(--muted)", fontWeight: 500, textDecoration: "none" }}>
+                          Website ↗
+                        </a>
+                      )}
+                    </div>
+                  ) : null;
+                })()}
               </button>
             );
           })}
@@ -179,6 +199,25 @@ export function MassTimesMap() {
                         <span style={{ fontSize: 13, color: "var(--navy)", fontWeight: 500 }}>{loc.sunday.join(", ")}</span>
                       </div>
                     )}
+                    {(() => {
+                      const pName = loc.parish || loc.church;
+                      const slug = getSlugForParish(pName, loc.city);
+                      const website = getWebsiteForParish(pName, loc.city);
+                      return (slug || website) ? (
+                        <div style={{ display: "flex", gap: 12, marginTop: 8, flexWrap: "wrap" }}>
+                          {slug && (
+                            <a href={`/parishes/${slug}`} style={{ fontSize: 11, fontWeight: 700, color: "#005CBA", textDecoration: "none", letterSpacing: "0.08em", textTransform: "uppercase" as const }}>
+                              Parish Details →
+                            </a>
+                          )}
+                          {website && (
+                            <a href={website} target="_blank" rel="noopener noreferrer" style={{ fontSize: 11, fontWeight: 700, color: "var(--muted)", textDecoration: "none", letterSpacing: "0.08em", textTransform: "uppercase" as const }}>
+                              Website ↗
+                            </a>
+                          )}
+                        </div>
+                      ) : null;
+                    })()}
                   </div>
                 </Popup>
               </Marker>
