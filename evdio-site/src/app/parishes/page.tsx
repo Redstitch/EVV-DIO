@@ -158,7 +158,7 @@ export default function ParishesPage() {
         </section>
 
         {/* New to the Area */}
-        <div className="page-content bg-blue-subtle" style={{ paddingTop: 0 }}>
+        <div className="page-content bg-blue" style={{ paddingTop: 0 }}>
           <div className="info-block">
             <h3>New to the Area?</h3>
             <p>

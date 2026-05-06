@@ -143,7 +143,7 @@ export default function SafeEnvironmentPage() {
         </div>
 
         {/* Resources & Links */}
-        <div className="page-content bg-blue-subtle">
+        <div className="page-content bg-teal">
           <div className="section-head">
             <span className="section-tag">Additional Resources</span>
             <h2 className="section-h2">Safe Environment Resources</h2>

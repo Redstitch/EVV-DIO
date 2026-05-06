@@ -140,7 +140,7 @@ export default function PlannedGivingPage() {
         </section>
 
         {/* Legal Info */}
-        <section className="page-content bg-blue-subtle">
+        <section className="page-content bg-blue">
           <div className="info-block" style={{ maxWidth: 800, margin: "0 auto" }}>
             <h3 style={{ textAlign: "center" }}>Legal Information</h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 12, fontSize: 14, color: "var(--muted)", lineHeight: 1.65 }}>

@@ -153,7 +153,7 @@ export default function AppealPage() {
         </section>
 
         {/* Donor Recognition */}
-        <section className="page-content bg-blue-subtle">
+        <section className="page-content bg-blue">
           <div className="section-head">
             <span className="section-tag">Donor Recognition</span>
             <h2 className="section-h2">Deo Gratias Society</h2>

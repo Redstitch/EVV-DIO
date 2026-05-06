@@ -207,7 +207,7 @@ export default function MinistriesPage() {
         </section>
 
         {/* Impact info-block */}
-        <div className="page-content bg-blue-subtle" style={{ paddingTop: 0 }}>
+        <div className="page-content bg-blue" style={{ paddingTop: 0 }}>
           <div className="info-block">
             <h3>Your Generosity at Work</h3>
             <p>

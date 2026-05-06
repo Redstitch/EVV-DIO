@@ -106,7 +106,7 @@ export default function MassTimesPage() {
           </div>
         </section>
 
-        <div className="page-content bg-blue-subtle" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-teal" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <hr className="section-divider" />
         </div>
 

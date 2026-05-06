@@ -149,7 +149,7 @@ export default function FindSchool() {
         </section>
 
         {/* Map CTA */}
-        <section className="page-content bg-blue-subtle">
+        <section className="page-content bg-teal">
           <div className="section-head">
             <span className="section-tag">Visual Guide</span>
             <h2 className="section-h2">See All Schools on a Map</h2>

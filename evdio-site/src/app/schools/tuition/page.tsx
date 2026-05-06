@@ -175,7 +175,7 @@ export default function Tuition() {
         </div>
 
         {/* How to Apply */}
-        <section className="page-content bg-blue-subtle">
+        <section className="page-content bg-teal">
           <div className="section-head">
             <span className="section-tag">Get Started</span>
             <h2 className="section-h2">How to Apply for Assistance</h2>

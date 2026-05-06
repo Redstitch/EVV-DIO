@@ -957,7 +957,7 @@ a.give-btn:hover { background: #A83B2A; }
    INTERIOR PAGES — FEATURE HEAD (curves B style)
    ================================================================ */
 .feature-head {
-  background: linear-gradient(180deg, var(--cream-lt) 0%, rgba(0,78,115,0.03) 100%);
+  background: var(--cream-lt);
   border-bottom: 1px solid var(--line);
 }
 .feature-head .grid {
@@ -1068,8 +1068,66 @@ a.give-btn:hover { background: #A83B2A; }
    This is more reliable than nth-child hacks. */
 .bg-ivory { background: #FAF3E0; }
 .bg-eggshell { background: #FEFBF3; }
-.bg-blue-subtle { background: linear-gradient(135deg, rgba(0,92,186,0.04) 0%, rgba(0,78,115,0.07) 100%); }
-.bg-teal-subtle { background: linear-gradient(180deg, rgba(0,78,115,0.05) 0%, rgba(0,78,115,0.02) 100%); }
+/* Colored section bands — real color, white text */
+.bg-blue {
+  background: linear-gradient(135deg, #005CBA 0%, #004E73 100%);
+  color: var(--cream);
+}
+.bg-blue .section-tag { background: rgba(255,255,255,0.15); color: #fff; }
+.bg-blue .section-h2 { color: #fff; }
+.bg-blue .section-h2 em { color: var(--bgold); }
+.bg-blue .section-desc { color: rgba(238,218,179,0.75); }
+.bg-blue p { color: rgba(238,218,179,0.75); }
+.bg-blue .interior-card {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.12);
+  color: #fff;
+}
+.bg-blue .interior-card h3 { color: #fff; }
+.bg-blue .interior-card p { color: rgba(238,218,179,0.7); }
+.bg-blue .interior-card:hover {
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.25);
+}
+.bg-blue .interior-card::before { background: var(--bgold); }
+.bg-blue .read-link { color: var(--bgold); border-bottom-color: var(--bgold); }
+.bg-blue .info-block {
+  background: rgba(255,255,255,0.06);
+  border-left-color: var(--bgold);
+}
+.bg-blue .info-block h3 { color: #fff; }
+.bg-blue .info-block p { color: rgba(238,218,179,0.75); }
+.bg-blue .stat-num { color: var(--bgold); }
+.bg-blue .stat-label { color: rgba(238,218,179,0.7); }
+.bg-blue .btn-primary {
+  background: var(--bgold); color: var(--navy); border-color: var(--bgold);
+}
+
+.bg-teal {
+  background: linear-gradient(135deg, #004E73 0%, #003D5C 100%);
+  color: var(--cream);
+}
+.bg-teal .section-tag { background: rgba(255,255,255,0.15); color: #fff; }
+.bg-teal .section-h2 { color: #fff; }
+.bg-teal .section-h2 em { color: var(--bgold); }
+.bg-teal .section-desc { color: rgba(238,218,179,0.75); }
+.bg-teal p { color: rgba(238,218,179,0.75); }
+.bg-teal .interior-card {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.1);
+  color: #fff;
+}
+.bg-teal .interior-card h3 { color: #fff; }
+.bg-teal .interior-card p { color: rgba(238,218,179,0.65); }
+.bg-teal .interior-card:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.22);
+}
+.bg-teal .interior-card::before { background: var(--bgold); }
+.bg-teal .read-link { color: var(--bgold); border-bottom-color: var(--bgold); }
+.bg-teal .btn-primary {
+  background: var(--bgold); color: var(--navy); border-color: var(--bgold);
+}
 
 /* Content grid with sidebar */
 .content-grid { display: grid; grid-template-columns: 1fr 340px; gap: 56px; }
@@ -1507,12 +1565,12 @@ a.give-btn:hover { background: #A83B2A; }
 }
 .seven .item:hover .cta { color: var(--navy); border-color: var(--navy); }
 
-/* Scripture block — subtle blue gradient for texture */
+/* Scripture block */
 .scripture {
   padding: 48px 40px;
   text-align: center;
   margin: 0;
-  background: linear-gradient(135deg, rgba(0,92,186,0.04) 0%, rgba(0,78,115,0.06) 100%);
+  background: transparent;
   position: relative;
 }
 .scripture::before {

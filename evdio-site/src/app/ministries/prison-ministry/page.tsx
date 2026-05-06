@@ -144,7 +144,7 @@ export default function PrisonMinistryPage() {
         </div>
 
         {/* Volunteer */}
-        <section className="page-content bg-blue-subtle">
+        <section className="page-content bg-teal">
           <div className="section-head">
             <span className="section-tag">Get Involved</span>
             <h2 className="section-h2">Become a Prison Ministry Volunteer</h2>

@@ -146,7 +146,7 @@ export default function Vocations() {
         </section>
 
         {/* ─── SEMINARY ─── */}
-        <section className="page-content bg-blue-subtle">
+        <section className="page-content bg-teal">
           <div className="interior-grid interior-grid-2" style={{ alignItems: "start" }}>
             <div>
               <span className="section-tag">Seminary Formation</span>

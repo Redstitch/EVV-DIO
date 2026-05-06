@@ -120,7 +120,7 @@ export default function Deacon() {
         </section>
 
         {/* ─── FAQ ─── */}
-        <section className="page-content bg-blue-subtle">
+        <section className="page-content bg-teal">
           <div className="section-head">
             <span className="section-tag">Common Questions</span>
             <h2 className="section-h2">Frequently Asked Questions</h2>
