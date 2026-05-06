@@ -288,7 +288,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 .give-btn,
 a.give-btn {
-  background: var(--brick); color: var(--cream);
+  background: #C0442F; color: #fff;
   padding: 10px 22px !important; font-size: 12px; font-weight: 600;
   letter-spacing: 0.06em; text-transform: uppercase;
   border-radius: 999px; text-decoration: none;
@@ -298,17 +298,17 @@ a.give-btn {
   white-space: nowrap;
 }
 .give-btn:hover,
-a.give-btn:hover { background: #8b3a2d; }
+a.give-btn:hover { background: #A83B2A; }
 /* Override nav-item-wrap hover styles for give button */
 .give-wrap > a.give-btn,
 .give-wrap:hover > a.give-btn,
 .give-wrap.mega-open > a.give-btn {
-  color: var(--cream);
-  background: var(--brick);
+  color: #fff;
+  background: #C0442F;
 }
 .give-wrap:hover > a.give-btn,
 .give-wrap.mega-open > a.give-btn {
-  background: #8b3a2d;
+  background: #A83B2A;
 }
 .give-wrap > a.give-btn .chevron {
   stroke: rgba(238,218,179,0.7);
@@ -422,10 +422,10 @@ a.give-btn:hover { background: #8b3a2d; }
   transform: translateY(-2px);
 }
 .btn-outline {
-  background: transparent; color: var(--navy);
-  border-color: var(--navy);
+  background: transparent; color: #004E73;
+  border-color: #004E73;
 }
-.btn-outline:hover { background: var(--navy); color: var(--cream); }
+.btn-outline:hover { background: #004E73; color: #fff; }
 
 /* Link CTA (underlined) */
 .link-cta {
@@ -443,12 +443,12 @@ a.give-btn:hover { background: #8b3a2d; }
 /* Small uppercase link with underline */
 .read-link {
   font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
-  font-weight: 600; color: var(--brick);
-  border-bottom: 1px solid var(--brick); padding-bottom: 4px;
+  font-weight: 600; color: #005CBA;
+  border-bottom: 1px solid #005CBA; padding-bottom: 4px;
   display: inline-flex; gap: 6px; align-items: center;
   transition: color .2s, border-color .2s; text-decoration: none;
 }
-.read-link:hover { color: var(--navy); border-color: var(--navy); }
+.read-link:hover { color: #004E73; border-color: #004E73; }
 
 /* ================================================================
    ORNAMENTAL FLOURISHES
@@ -1133,7 +1133,7 @@ a.give-btn:hover { background: #8b3a2d; }
   color: var(--navy); margin-bottom: 10px; transition: color .3s;
   letter-spacing: -0.01em;
 }
-.interior-card:hover h3 { color: var(--teal); }
+.interior-card:hover h3 { color: #005CBA; }
 .interior-card p {
   font-size: 15px; color: var(--muted); line-height: 1.7;
 }
@@ -1153,13 +1153,13 @@ a.give-btn:hover { background: #8b3a2d; }
 }
 .interior-card-icon {
   width: 52px; height: 52px; border-radius: 14px;
-  background: rgba(0,78,115,0.08); display: flex; align-items: center;
+  background: rgba(0,92,186,0.1); display: flex; align-items: center;
   justify-content: center; margin-bottom: 16px;
   transition: all .35s ease;
 }
 .interior-card-icon svg { width: 24px; height: 24px; fill: var(--teal); transition: fill .3s; }
-.interior-card:hover .interior-card-icon { background: var(--teal); }
-.interior-card:hover .interior-card-icon svg { fill: var(--cream); }
+.interior-card:hover .interior-card-icon { background: #005CBA; }
+.interior-card:hover .interior-card-icon svg { fill: #fff; }
 
 /* Section divider */
 .section-divider {
@@ -1171,7 +1171,7 @@ a.give-btn:hover { background: #8b3a2d; }
 .info-block {
   background: var(--cream-xlt); border-radius: 16px;
   padding: 24px 28px; margin-bottom: 20px;
-  border-left: 4px solid var(--dgold);
+  border-left: 4px solid #005CBA;
 }
 .info-block h3 {
   font-family: var(--serif); font-size: 22px;
