@@ -47,7 +47,8 @@ export function ParishMap() {
         (p) =>
           p.name.toLowerCase().includes(q) ||
           p.city.toLowerCase().includes(q) ||
-          (p.address && p.address.toLowerCase().includes(q))
+          p.zip.includes(q) ||
+          p.address.toLowerCase().includes(q)
       );
     }
     return result;
@@ -63,7 +64,7 @@ export function ParishMap() {
         <div style={{ padding: "16px 16px 12px" }}>
           <input
             type="text"
-            placeholder="Search parishes..."
+            placeholder="Search by name, city, or ZIP..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             style={{
@@ -143,15 +144,29 @@ export function ParishMap() {
                   <div style={{ fontSize: 12, color: "var(--muted)", marginTop: 2 }}>
                     {parish.city}, {parish.state}
                   </div>
-                  {parish.address && (
-                    <div style={{ fontSize: 11, color: "var(--muted)", marginTop: 2, opacity: 0.7 }}>
-                      {parish.address}
+                  <div style={{ fontSize: 11, color: "var(--muted)", marginTop: 2, opacity: 0.7 }}>
+                    {parish.address}
+                  </div>
+                  {parish.pastor && (
+                    <div style={{ fontSize: 11, color: "var(--navy)", marginTop: 3, fontWeight: 500 }}>
+                      {parish.pastor}
                     </div>
                   )}
                   {parish.churches && parish.churches.length > 1 && (
                     <div style={{ fontSize: 10, color: "#005CBA", fontWeight: 600, marginTop: 4, textTransform: "uppercase" as const, letterSpacing: "0.08em" }}>
                       {parish.churches.length} church locations
                     </div>
+                  )}
+                  {parish.website && (
+                    <a
+                      href={parish.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      style={{ fontSize: 11, color: "#005CBA", fontWeight: 600, marginTop: 4, display: "inline-block", textDecoration: "none" }}
+                    >
+                      Visit Website →
+                    </a>
                   )}
                 </div>
               </div>
