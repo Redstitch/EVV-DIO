@@ -56,9 +56,9 @@ export function ParishMap() {
   const deaneries = ["South", "North", "East", "West"];
 
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "360px 1fr", gap: 0, borderRadius: 20, overflow: "hidden", border: "1px solid var(--line)", minHeight: 600 }}>
+    <div style={{ display: "grid", gridTemplateColumns: "360px 1fr", gap: 0, borderRadius: 20, overflow: "hidden", border: "1px solid var(--line)", height: 620 }}>
       {/* ─── SIDEBAR ─── */}
-      <div style={{ background: "#fff", borderRight: "1px solid var(--line)", display: "flex", flexDirection: "column" }}>
+      <div style={{ background: "#fff", borderRight: "1px solid var(--line)", display: "flex", flexDirection: "column", height: 620, overflow: "hidden" }}>
         {/* Search */}
         <div style={{ padding: "16px 16px 12px" }}>
           <input
@@ -165,7 +165,7 @@ export function ParishMap() {
         <MapContainer
           center={[38.3, -87.3]}
           zoom={8}
-          style={{ height: "100%", width: "100%", minHeight: 600 }}
+          style={{ height: "100%", width: "100%" }}
           scrollWheelZoom={true}
         >
           <TileLayer
