@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MobileDrawer } from "./MobileDrawer";
+import { LanguageToggle } from "./LanguageToggle";
 import { navItems, giveItem } from "@/lib/navigation";
 
 export function Header() {
@@ -60,11 +61,7 @@ export function Header() {
             <Link href="/parishes">Find a Parish</Link>
             <Link href="/parishes/mass-times">Mass Times</Link>
             <Link href="/parishes/watch-mass">Watch Mass Online</Link>
-            <span className="lang" aria-label="Language">
-              <a href="#" className="active" aria-current="true">EN</a>
-              <span className="sep" aria-hidden="true">&middot;</span>
-              <a href="#" lang="es" hrefLang="es">ES</a>
-            </span>
+            <LanguageToggle />
           </span>
         </div>
       </div>

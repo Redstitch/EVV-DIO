@@ -150,13 +150,26 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   padding-left: 20px; margin-left: 4px;
   border-left: 1px solid rgba(238,218,179,0.3);
 }
-.utility-nav .lang a {
+.utility-nav .lang a,
+.utility-nav .lang .lang-btn {
   font-size: 11px; letter-spacing: 0.14em; font-weight: 600;
   text-transform: uppercase; color: rgba(238,218,179,0.6);
+  background: none; border: none; cursor: pointer;
+  font-family: var(--sans); padding: 0;
+  transition: color 0.2s;
 }
-.utility-nav .lang a.active { color: var(--cream); }
-.utility-nav .lang a:hover { color: var(--bgold); }
+.utility-nav .lang a.active,
+.utility-nav .lang .lang-btn.active { color: var(--cream); }
+.utility-nav .lang a:hover,
+.utility-nav .lang .lang-btn:hover { color: var(--bgold); }
 .utility-nav .lang .sep { color: rgba(238,218,179,0.3); font-size: 10px; }
+
+/* Hide Google Translate top bar and branding */
+.goog-te-banner-frame { display: none !important; }
+body { top: 0 !important; }
+.goog-te-gadget { display: none !important; }
+.skiptranslate { display: none !important; }
+body.translated-ltr { margin-top: 0 !important; }
 
 /* ================================================================
    MAIN HEADER (navy topbar)
