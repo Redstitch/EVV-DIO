@@ -457,10 +457,10 @@ a.give-btn:hover { background: #A83B2A; }
   display: flex; justify-content: center; align-items: center; gap: 20px;
   padding: 40px 0;
   margin: 0;
-  color: var(--dgold);
+  color: #004E73;
 }
-.flourish .line { width: 72px; height: 1px; background: var(--dgold); opacity: 0.7; }
-.flourish .dot { width: 5px; height: 5px; background: var(--dgold); border-radius: 50%; flex-shrink: 0; }
+.flourish .line { width: 72px; height: 1px; background: #004E73; opacity: 0.4; }
+.flourish .dot { width: 5px; height: 5px; background: #005CBA; border-radius: 50%; flex-shrink: 0; opacity: 0.5; }
 .flourish svg { display: block; }
 .flourish-quatrefoil { gap: 12px; }
 .flourish-quatrefoil .line { width: 56px; opacity: 0.55; }
@@ -1209,7 +1209,7 @@ a.give-btn:hover { background: #A83B2A; }
   margin-bottom: 8px;
 }
 .interior-card li::marker {
-  color: var(--dgold);
+  color: #005CBA;
 }
 .interior-card-icon {
   width: 52px; height: 52px; border-radius: 14px;
@@ -1224,7 +1224,7 @@ a.give-btn:hover { background: #A83B2A; }
 /* Section divider */
 .section-divider {
   border: none; height: 1px; margin: 48px 0;
-  background: linear-gradient(90deg, transparent, var(--dgold), transparent);
+  background: linear-gradient(90deg, transparent, #005CBA, transparent);
 }
 
 /* Interior info blocks */
@@ -1296,7 +1296,7 @@ a.give-btn:hover { background: #A83B2A; }
 .stat-item { text-align: center; }
 .stat-num {
   font-family: var(--serif); font-size: 40px;
-  font-weight: 400; color: var(--navy); line-height: 1;
+  font-weight: 400; color: #005CBA; line-height: 1;
   display: block;
 }
 .stat-label {
@@ -1579,7 +1579,7 @@ a.give-btn:hover { background: #A83B2A; }
   font-family: var(--serif);
   font-size: 96px;
   line-height: 0.4;
-  color: var(--dgold);
+  color: #005CBA;
   opacity: 0.2;
   margin-bottom: 20px;
 }
@@ -1590,7 +1590,7 @@ a.give-btn:hover { background: #A83B2A; }
   line-height: 1.25; letter-spacing: -0.01em;
   color: var(--navy); font-weight: 400;
 }
-.scripture blockquote em { font-style: normal; color: var(--teal); font-weight: 400; }
+.scripture blockquote em { font-style: normal; color: #005CBA; font-weight: 400; }
 .scripture cite {
   display: block; margin-top: 24px;
   font-family: var(--sans); font-style: normal;
@@ -2057,7 +2057,7 @@ a.give-btn:hover { background: #A83B2A; }
   position: absolute;
   bottom: 0; left: 0;
   width: 48px; height: 2px;
-  background: var(--dgold);
+  background: #005CBA;
 }
 
 /* Interior grid responsive gap tightening */

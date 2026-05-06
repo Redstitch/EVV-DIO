@@ -175,7 +175,7 @@ export default function CareersPage() {
         </section>
 
         {/* How to Apply */}
-        <section className="page-content bg-teal">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">How to Apply</span>
             <h2 className="section-h2">Join Our Team</h2>

@@ -138,7 +138,7 @@ export default function SocialJusticePage() {
         </div>
 
         {/* Get Involved */}
-        <section className="page-content bg-blue">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Take Action</span>
             <h2 className="section-h2">Get Involved</h2>

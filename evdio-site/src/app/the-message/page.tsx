@@ -221,7 +221,7 @@ export default function TheMessagePage() {
         </div>
 
         {/* ─── MORE SECTIONS ─── */}
-        <section className="page-content bg-blue">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">More</span>
             <h2 className="section-h2">Special Sections</h2>

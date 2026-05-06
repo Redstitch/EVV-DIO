@@ -148,7 +148,7 @@ export default function HealthPage() {
         </section>
 
         {/* CTA */}
-        <section className="page-content bg-blue">
+        <section className="page-content bg-eggshell">
           <div className="cta-block">
             <h3>Your Child&rsquo;s Well-Being Matters</h3>
             <p>
