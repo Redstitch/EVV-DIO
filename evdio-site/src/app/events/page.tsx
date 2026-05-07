@@ -87,10 +87,6 @@ export default function EventsPage() {
           </div>
         </section>
 
-        <div className="page-content bg-eggshell" >
-          <hr className="section-divider" />
-        </div>
-
         {/* Category Cards */}
         <section className="page-content">
           <div className="section-head">

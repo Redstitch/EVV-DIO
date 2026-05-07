@@ -102,10 +102,6 @@ export default function MinistriesPage() {
           </div>
         </section>
 
-        <div className="page-content bg-eggshell" >
-          <hr className="section-divider" />
-        </div>
-
         {/* Youth & Education */}
         <section className="page-content">
           <span className="section-tag">Youth &amp; Education</span>
@@ -143,10 +139,6 @@ export default function MinistriesPage() {
             </Link>
           </div>
         </section>
-
-        <div className="page-content bg-eggshell" >
-          <hr className="section-divider" />
-        </div>
 
         {/* Community & Outreach */}
         <section className="page-content">

@@ -74,10 +74,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="page-content" >
-          <hr className="section-divider" />
-        </div>
-
         {/* Leadership */}
         <section className="page-content bg-eggshell">
           <span className="section-tag">Leadership</span>
@@ -146,10 +142,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <div className="page-content" >
-          <hr className="section-divider" />
-        </div>
-
         {/* Offices & Administration */}
         <section className="page-content bg-eggshell">
           <span className="section-tag">Administration</span>
@@ -217,10 +209,6 @@ export default function AboutPage() {
             </Link>
           </div>
         </section>
-
-        <div className="page-content" >
-          <hr className="section-divider" />
-        </div>
 
         {/* Safety & Accountability */}
         <section className="page-content bg-eggshell">

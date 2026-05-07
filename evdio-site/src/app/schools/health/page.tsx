@@ -43,10 +43,6 @@ export default function HealthPage() {
           </div>
         </section>
 
-        <div className="page-content bg-eggshell" >
-          <hr className="section-divider" />
-        </div>
-
         {/* Areas */}
         <section className="page-content">
           <div className="section-head">
@@ -81,10 +77,6 @@ export default function HealthPage() {
             </div>
           </div>
         </section>
-
-        <div className="page-content bg-eggshell" >
-          <hr className="section-divider" />
-        </div>
 
         {/* Safe Environment */}
         <section className="page-content">
@@ -121,10 +113,6 @@ export default function HealthPage() {
             </div>
           </div>
         </section>
-
-        <div className="page-content bg-eggshell" >
-          <hr className="section-divider" />
-        </div>
 
         {/* Social-Emotional */}
         <section className="page-content">

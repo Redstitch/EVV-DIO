@@ -91,10 +91,6 @@ export default function SpacesPage() {
           </div>
         </section>
 
-        <div className="page-content bg-eggshell" >
-          <hr className="section-divider" />
-        </div>
-
         {/* Reservation Guidelines */}
         <section className="page-content">
           <div className="section-head">

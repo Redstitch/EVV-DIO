@@ -59,10 +59,6 @@ export default function SouthDeaneryPage() {
           </div>
         </section>
 
-        <div className="page-content bg-eggshell" >
-          <hr className="section-divider" />
-        </div>
-
         {/* Parishes */}
         <section className="page-content">
           <div className="section-head">
