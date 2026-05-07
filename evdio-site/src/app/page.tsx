@@ -6,6 +6,13 @@ export default function Home() {
     <main id="main-content">
       {/* ─── HERO (cathedral image backdrop) ─── */}
       <section className="hero-section" aria-labelledby="hero-title">
+        <div className="stained-glass" aria-hidden="true">
+          <div className="sg-ray sg-ray-1" />
+          <div className="sg-ray sg-ray-2" />
+          <div className="sg-ray sg-ray-3" />
+          <div className="sg-ray sg-ray-4" />
+          <div className="sg-ray sg-ray-5" />
+        </div>
         <div className="hero-inner">
           <p className="hero-eyebrow">The Catholic Diocese of Evansville</p>
           <h1 id="hero-title" className="hero-headline">

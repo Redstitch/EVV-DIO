@@ -613,21 +613,112 @@ section .flourish {
   100% { transform: scale(1.12) translateY(-16px); }
 }
 
-/* Multi-layer overlay: vignette + warm light leaks + base tint */
+/* Base overlay: vignette + tint */
 .hero-section::after {
   content: '';
   position: absolute; inset: 0; z-index: -1;
   background:
-    /* warm golden light leak from upper-left (like stained glass) */
-    radial-gradient(ellipse at 15% 20%, rgba(198,147,49,0.12) 0%, transparent 50%),
-    /* cool blue light from upper-right */
-    radial-gradient(ellipse at 85% 15%, rgba(38,91,180,0.08) 0%, transparent 45%),
-    /* warm glow at bottom center */
-    radial-gradient(ellipse at 50% 90%, rgba(198,147,49,0.1) 0%, transparent 40%),
-    /* vignette — dark edges */
-    radial-gradient(ellipse at center, transparent 30%, rgba(10,34,64,0.35) 100%),
-    /* base tint */
-    linear-gradient(180deg, rgba(10,34,64,0.45) 0%, rgba(10,34,64,0.55) 40%, rgba(10,34,64,0.8) 100%);
+    radial-gradient(ellipse at center, transparent 25%, rgba(10,34,64,0.4) 100%),
+    linear-gradient(180deg, rgba(10,34,64,0.4) 0%, rgba(10,34,64,0.5) 40%, rgba(10,34,64,0.78) 100%);
+}
+
+/* ─── STAINED GLASS LIGHT RAYS ─── */
+.stained-glass {
+  position: absolute; inset: 0; z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* Each ray: a long thin rotated gradient strip */
+.sg-ray {
+  position: absolute;
+  transform-origin: top left;
+  filter: blur(30px);
+  animation: rayPulse 8s ease-in-out infinite alternate;
+}
+
+/* Gold ray — dominant, from upper-left */
+.sg-ray-1 {
+  top: -10%; left: 5%;
+  width: 120%; height: 180px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(198,147,49,0.15) 20%,
+    rgba(255,208,64,0.1) 50%,
+    transparent 80%
+  );
+  transform: rotate(25deg);
+  animation-delay: 0s;
+}
+
+/* Deep blue ray */
+.sg-ray-2 {
+  top: -5%; left: 15%;
+  width: 110%; height: 140px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(38,91,180,0.12) 25%,
+    rgba(38,91,180,0.08) 55%,
+    transparent 85%
+  );
+  transform: rotate(32deg);
+  animation-delay: 1.5s;
+}
+
+/* Ruby/warm ray */
+.sg-ray-3 {
+  top: 5%; left: -5%;
+  width: 130%; height: 100px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(180,80,60,0.08) 15%,
+    rgba(198,147,49,0.1) 45%,
+    transparent 75%
+  );
+  transform: rotate(18deg);
+  animation-delay: 3s;
+}
+
+/* Narrow bright gold ray */
+.sg-ray-4 {
+  top: -15%; left: 10%;
+  width: 100%; height: 80px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,208,64,0.14) 30%,
+    rgba(198,147,49,0.08) 60%,
+    transparent 90%
+  );
+  transform: rotate(28deg);
+  filter: blur(20px);
+  animation-delay: 4.5s;
+}
+
+/* Wide soft teal/blue wash */
+.sg-ray-5 {
+  top: 10%; left: -10%;
+  width: 140%; height: 220px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(31,77,112,0.06) 20%,
+    rgba(38,91,180,0.04) 50%,
+    transparent 80%
+  );
+  transform: rotate(22deg);
+  filter: blur(50px);
+  animation-delay: 2s;
+}
+
+/* Slow pulsing glow */
+@keyframes rayPulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sg-ray { animation: none; opacity: 0.8; }
 }
 
 /* Floating gold particles — pure CSS */
