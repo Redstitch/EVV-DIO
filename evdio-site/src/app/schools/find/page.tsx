@@ -9,38 +9,38 @@ export const metadata: Metadata = {
 };
 
 const highSchools = [
-  { name: "Mater Dei High School", city: "Evansville" },
-  { name: "Reitz Memorial High School", city: "Evansville" },
-  { name: "Rivet High School", city: "Vincennes" },
-  { name: "Washington Catholic High School", city: "Washington" },
+  { name: "Mater Dei High School", city: "Evansville", url: "http://www.materdeiwildcats.com/" },
+  { name: "Reitz Memorial High School", city: "Evansville", url: "http://www.reitzmemorial.org/" },
+  { name: "Rivet High School", city: "Vincennes", url: "https://www.rivetchs.org" },
+  { name: "Washington Catholic High School", city: "Washington", url: "https://www.wccardinals.org/" },
 ];
 
 const elementaryMiddleSchools = [
-  { name: "Annunciation at Christ the King", city: "Evansville" },
-  { name: "Annunciation at Holy Spirit", city: "Evansville" },
-  { name: "Corpus Christi School", city: "Evansville" },
-  { name: "Good Shepherd School", city: "Evansville" },
-  { name: "Holy Redeemer School", city: "Evansville" },
-  { name: "Holy Rosary School", city: "Evansville" },
-  { name: "Holy Trinity School", city: "Jasper" },
-  { name: "Resurrection School", city: "Evansville" },
-  { name: "St. Benedict Cathedral School", city: "Evansville" },
-  { name: "St. Bernard School", city: "Rockport" },
-  { name: "St. James School", city: "Haubstadt" },
-  { name: "St. John the Baptist School", city: "Newburgh" },
-  { name: "St. Joseph School", city: "Evansville" },
-  { name: "St. Phillip School", city: "Mt. Vernon" },
-  { name: "St. Wendel School", city: "Wadesville" },
-  { name: "Washington Catholic Elementary", city: "Washington" },
-  { name: "Westside Catholic School", city: "Evansville" },
+  { name: "Annunciation at Christ the King", city: "Evansville", url: "https://www.annunciationchristtheking.org/" },
+  { name: "Annunciation at Holy Spirit", city: "Evansville", url: "https://www.annunciationevv.org/holy-spirit-homepage" },
+  { name: "Corpus Christi School", city: "Evansville", url: "http://corpuschristischoolevansville.org/" },
+  { name: "Good Shepherd School", city: "Evansville", url: "https://goodshepherdrams.org/" },
+  { name: "Holy Redeemer School", city: "Evansville", url: "http://www.holyredeemercatholicschool.com/" },
+  { name: "Holy Rosary School", city: "Evansville", url: "http://www.holyrosaryrams.org/" },
+  { name: "Holy Trinity School", city: "Jasper", url: "http://holytrinitysaints.com/" },
+  { name: "Resurrection School", city: "Evansville", url: "http://www.resurrectioncatholicschool.org/" },
+  { name: "St. Benedict Cathedral School", city: "Evansville", url: "https://www.saintbenedictcathedral.org/school/" },
+  { name: "St. Bernard School", city: "Rockport", url: "http://stbernardschool.info/catholic-school" },
+  { name: "St. James School", city: "Haubstadt", url: "http://www.stjameshaubstadt.com/" },
+  { name: "St. John the Baptist School", city: "Newburgh", url: "http://www.sjbschoolnewburgh.org/" },
+  { name: "St. Joseph School", city: "Evansville", url: "https://www.stjoeco.org/" },
+  { name: "St. Phillip School", city: "Mt. Vernon", url: "https://www.stphilipschool.net/" },
+  { name: "St. Wendel School", city: "Wadesville", url: "http://www.saintwendelschool.org/" },
+  { name: "Washington Catholic Elementary", city: "Washington", url: "https://www.wccardinals.org/" },
+  { name: "Westside Catholic School", city: "Evansville", url: "http://www.westsidecatholic.org/" },
 ];
 
 const elementarySchools = [
-  { name: "Flaget Elementary School", city: "Vincennes" },
-  { name: "Holy Cross School", city: "Fort Branch" },
-  { name: "St. Joseph School", city: "Princeton" },
-  { name: "St. Matthews School", city: "Mt. Vernon" },
-  { name: "Sts. Peter & Paul School", city: "Haubstadt" },
+  { name: "Flaget Elementary School", city: "Vincennes", url: "https://www.flagetces.org/home" },
+  { name: "Holy Cross School", city: "Fort Branch", url: "https://www.holycrossparish.info/school.html" },
+  { name: "St. Joseph School", city: "Princeton", url: "http://stjosephprinceton.com/" },
+  { name: "St. Matthews School", city: "Mt. Vernon", url: "http://www.stmatthewmtvernon.org/" },
+  { name: "Sts. Peter & Paul School", city: "Haubstadt", url: "http://www.stspeterandpaulcatholicschool.net/" },
 ];
 
 export default function FindSchool() {
@@ -79,10 +79,11 @@ export default function FindSchool() {
 
           <div className="interior-grid interior-grid-2">
             {highSchools.map((school) => (
-              <div key={`${school.name}-${school.city}`} className="interior-card" style={{ cursor: "default" }}>
+              <a key={`${school.name}-${school.city}`} href={school.url} target="_blank" rel="noopener noreferrer" className="interior-card" style={{ textDecoration: "none" }}>
                 <h3>{school.name}</h3>
                 <p>{school.city}, Indiana</p>
-              </div>
+                <span className="read-link" style={{ marginTop: 8, display: "inline-block" }}>Visit Website ↗</span>
+              </a>
             ))}
           </div>
         </section>
@@ -108,10 +109,11 @@ export default function FindSchool() {
 
           <div className="interior-grid interior-grid-3">
             {elementaryMiddleSchools.map((school) => (
-              <div key={`${school.name}-${school.city}`} className="interior-card" style={{ cursor: "default" }}>
+              <a key={`${school.name}-${school.city}`} href={school.url} target="_blank" rel="noopener noreferrer" className="interior-card" style={{ textDecoration: "none" }}>
                 <h3>{school.name}</h3>
                 <p>{school.city}, Indiana</p>
-              </div>
+                <span className="read-link" style={{ marginTop: 8, display: "inline-block" }}>Visit Website ↗</span>
+              </a>
             ))}
           </div>
         </section>
@@ -140,10 +142,11 @@ export default function FindSchool() {
 
           <div className="interior-grid interior-grid-3">
             {elementarySchools.map((school) => (
-              <div key={`${school.name}-${school.city}`} className="interior-card" style={{ cursor: "default" }}>
+              <a key={`${school.name}-${school.city}`} href={school.url} target="_blank" rel="noopener noreferrer" className="interior-card" style={{ textDecoration: "none" }}>
                 <h3>{school.name}</h3>
                 <p>{school.city}, Indiana</p>
-              </div>
+                <span className="read-link" style={{ marginTop: 8, display: "inline-block" }}>Visit Website ↗</span>
+              </a>
             ))}
           </div>
         </section>
