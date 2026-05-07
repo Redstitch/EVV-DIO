@@ -1218,7 +1218,7 @@ section .flourish {
 
 /* Interior page content area */
 .page-content {
-  padding: 56px 40px;
+  padding: 72px 40px;
   background: #FEFBF4;
 }
 .page-content > * {
@@ -1403,6 +1403,16 @@ section .flourish {
   padding: 24px 28px; margin-bottom: 20px;
   border-left: 4px solid #265BB4;
   max-width: 900px;
+}
+/* Space between card grids and info blocks */
+.interior-grid + .info-block,
+.interior-grid + .cta-block,
+.stat-row + .info-block {
+  margin-top: 48px;
+}
+.info-block + .interior-grid,
+.info-block + .info-block {
+  margin-top: 24px;
 }
 .info-block h3 {
   font-family: var(--serif); font-size: 22px;
