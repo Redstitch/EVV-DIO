@@ -176,9 +176,15 @@ body.translated-ltr { margin-top: 0 !important; }
    ================================================================ */
 .main-header {
   background: var(--navy);
-  border-bottom: 1px solid rgba(238,218,179,0.15);
+  border-bottom: none;
   position: sticky; top: 0; z-index: 90;
   transition: box-shadow .3s;
+}
+.main-header::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, #C69331 0%, var(--teal) 50%, #C69331 100%);
 }
 .main-header.scrolled {
   box-shadow: 0 8px 24px rgba(10,34,64,0.2);
@@ -857,18 +863,15 @@ blockquote {
    HOMEPAGE — SACRAMENTS BAND (teal)
    ================================================================ */
 .sacraments-section {
-  background: linear-gradient(160deg, #1F4D70 0%, #163D58 40%, #1A4565 100%);
-  color: var(--cream);
+  background: #F9F3E1;
+  color: var(--navy);
   position: relative;
   overflow: hidden;
 }
 .sacraments-section::before {
   content: '';
   position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse at 15% 20%, rgba(198,147,49,0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at 85% 80%, rgba(198,147,49,0.06) 0%, transparent 50%),
-    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='37' y='25' width='6' height='30' rx='2' fill='%23ffffff' opacity='0.015'/%3E%3Crect x='25' y='36' width='30' height='6' rx='2' fill='%23ffffff' opacity='0.015'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='28' y='20' width='4' height='20' rx='1' fill='%23004E73' opacity='0.025'/%3E%3Crect x='20' y='28' width='20' height='4' rx='1' fill='%23004E73' opacity='0.025'/%3E%3C/svg%3E");
   pointer-events: none;
 }
 .sacraments-section > * { position: relative; z-index: 1; }
@@ -890,47 +893,47 @@ blockquote {
 }
 .sacraments-text .kicker {
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--bgold); font-weight: 600;
-  border-top: 1px solid var(--bgold); padding-top: 10px; margin-bottom: 24px;
+  color: var(--teal); font-weight: 600;
+  border-top: 2px solid var(--teal); padding-top: 10px; margin-bottom: 24px;
   display: inline-block;
 }
 .sacraments-text h2 {
   font-family: var(--serif);
   font-size: clamp(40px, 4.4vw, 64px);
   line-height: 1.02; letter-spacing: -0.015em;
-  color: var(--cream); font-weight: 400;
+  color: var(--navy); font-weight: 400;
   margin-bottom: 20px;
 }
-.sacraments-text h2 em { font-style: italic; color: var(--bgold); }
+.sacraments-text h2 em { font-style: italic; color: var(--blue); }
 .sacraments-text .lede {
   font-family: var(--serif); font-style: italic;
   font-size: 20px; line-height: 1.45;
-  color: rgba(238,218,179,0.85);
+  color: var(--muted);
   margin-bottom: 36px; max-width: 520px;
 }
 .sacraments-list {
   list-style: none; display: grid;
   grid-template-columns: 1fr 1fr; gap: 4px 32px;
-  border-top: 1px solid rgba(238,218,179,0.2);
+  border-top: 1px solid var(--line);
   padding-top: 18px;
 }
 .sacraments-list li {
-  padding: 12px 0; border-bottom: 1px solid rgba(238,218,179,0.12);
+  padding: 12px 0; border-bottom: 1px solid var(--line);
   display: flex; align-items: center; gap: 14px;
-  font-size: 15px; color: var(--cream);
+  font-size: 15px; color: var(--navy);
 }
 .sacraments-list .icon {
-  color: var(--navy); background: var(--bgold);
+  color: #fff; background: var(--teal);
   width: 36px; height: 36px; border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
 .sacraments-list .icon svg { width: 20px; height: 20px; display: block; }
 .sacraments-list a {
-  color: var(--cream); text-decoration: none;
+  color: var(--navy); text-decoration: none;
   border-bottom: 1px solid transparent; padding-bottom: 1px; transition: border-color .2s;
 }
-.sacraments-list a:hover { border-color: var(--bgold); }
+.sacraments-list a:hover { border-color: var(--teal); }
 
 /* ================================================================
    HOMEPAGE — ACTION ROW
