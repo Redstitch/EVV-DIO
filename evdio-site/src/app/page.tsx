@@ -35,11 +35,10 @@ export default function Home() {
       </section>
 
       {/* ─── FLOURISH ─── */}
-      <div className="flourish" aria-hidden="true">
+      <div className="flourish flourish-rule" aria-hidden="true">
         <span className="line" />
-        <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor">
-          <rect x="6" y="0" width="2" height="18" />
-          <rect x="2" y="5" width="10" height="2" />
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="#C69331">
+          <path d="M9 0L11 7H18L12.5 11.5L14.5 18L9 13.5L3.5 18L5.5 11.5L0 7H7L9 0Z" opacity="0.6"/>
         </svg>
         <span className="line" />
       </div>
@@ -109,6 +108,15 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="flourish" aria-hidden="true">
+        <span className="line" />
+        <svg width="14" height="18" viewBox="0 0 14 18" fill="#C69331">
+          <rect x="6" y="0" width="2" height="18" />
+          <rect x="2" y="5" width="10" height="2" />
+        </svg>
+        <span className="line" />
+      </div>
+
       {/* ─── STORIES ─── */}
       <section className="stories-section" aria-labelledby="stories-title">
         <div className="stories-head">
@@ -147,6 +155,18 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <div className="flourish flourish-quatrefoil" aria-hidden="true">
+        <span className="dot" />
+        <span className="line" />
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="#C69331">
+          <circle cx="16" cy="8" r="6" /><circle cx="16" cy="24" r="6" />
+          <circle cx="8" cy="16" r="6" /><circle cx="24" cy="16" r="6" />
+          <circle cx="16" cy="16" r="3" fill="#F9F3E1" />
+        </svg>
+        <span className="line" />
+        <span className="dot" />
+      </div>
 
       {/* ─── SACRAMENTS ─── */}
       <section className="sacraments-section" aria-labelledby="sacraments-title">
