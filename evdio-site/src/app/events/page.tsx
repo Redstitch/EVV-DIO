@@ -88,7 +88,7 @@ export default function EventsPage() {
         </section>
 
         {/* Category Cards */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <span className="section-tag">Browse by Type</span>
             <h2 className="section-h2">Retreats, Spaces &amp; More</h2>

@@ -60,7 +60,7 @@ export default function SouthDeaneryPage() {
         </section>
 
         {/* Parishes */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <div className="section-head">
             <h2 className="section-h2">Parishes ({parishes.length})</h2>
           </div>

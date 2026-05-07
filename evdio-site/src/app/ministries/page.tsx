@@ -103,7 +103,7 @@ export default function MinistriesPage() {
         </section>
 
         {/* Youth & Education */}
-        <section className="page-content">
+        <section className="page-content bg-eggshell">
           <span className="section-tag">Youth &amp; Education</span>
           <h2 className="section-h2">Young People &amp; Faith Formation</h2>
 

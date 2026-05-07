@@ -75,7 +75,7 @@ export default function AboutPage() {
         </div>
 
         {/* Leadership */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content">
           <span className="section-tag">Leadership</span>
           <h2 className="section-h2">Our Bishop &amp; Diocesan Leaders</h2>
 
@@ -211,7 +211,7 @@ export default function AboutPage() {
         </section>
 
         {/* Safety & Accountability */}
-        <section className="page-content bg-eggshell">
+        <section className="page-content">
           <span className="section-tag">Safety &amp; Accountability</span>
           <h2 className="section-h2">Protecting Our Community</h2>
 
