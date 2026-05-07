@@ -47,7 +47,7 @@ export default function SocialJusticePage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/catholics-for-habitat.jpg"
+              src="/images/stock/habitat-build-action.jpg"
               alt="Catholics for Habitat volunteers."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

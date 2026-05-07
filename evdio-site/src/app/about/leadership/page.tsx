@@ -83,7 +83,7 @@ export default function LeadershipPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/presbyterate-group.jpg"
+              src="/images/stock/deo-gratias-bishop.jpg"
               alt="Diocesan leadership"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

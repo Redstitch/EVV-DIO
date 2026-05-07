@@ -20,7 +20,7 @@ export default function SubscribePage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/presbyterate-group.jpg"
+              src="/images/stock/easter-vigil-mass.jpg"
               alt="Presbyterate gathering of the Diocese of Evansville"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

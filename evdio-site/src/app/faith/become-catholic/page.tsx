@@ -19,7 +19,7 @@ export default function BecomeCatholic() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/holy-week-good-friday.jpg"
+              src="/images/stock/rite-of-election.jpg"
               alt="Good Friday observance in the Diocese of Evansville."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

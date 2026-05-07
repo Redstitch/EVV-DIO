@@ -34,7 +34,7 @@ export default function ScholarshipsPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/schools-mass-bishop.jpg"
+              src="/images/stock/stem-lab-students.jpg"
               alt="Bishop celebrating Mass with school students"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

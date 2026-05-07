@@ -22,7 +22,7 @@ export default function GivePage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/catholics-for-habitat.jpg"
+              src="/images/stock/stewardship-event.jpg"
               alt="Catholics for Habitat volunteers building homes."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

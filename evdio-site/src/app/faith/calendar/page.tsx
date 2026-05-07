@@ -20,7 +20,7 @@ export default function Calendar() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/evigil-1.jpg"
+              src="/images/stock/palm-sunday.jpg"
               alt="Easter Vigil in the Diocese of Evansville."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

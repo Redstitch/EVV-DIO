@@ -20,7 +20,7 @@ export default function Music() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/cathedral-interior.jpg"
+              src="/images/stock/chrism-mass.jpg"
               alt="St. Benedict Cathedral interior."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

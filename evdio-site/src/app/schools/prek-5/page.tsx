@@ -24,7 +24,7 @@ export default function ElementarySchools() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/schools-mass-bishop.jpg"
+              src="/images/stock/spelling-bee.jpg"
               alt="Catholic school students at Mass with Bishop Siegel."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

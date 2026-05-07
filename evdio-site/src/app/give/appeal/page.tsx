@@ -44,7 +44,7 @@ export default function AppealPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/articles/catholic-ministries-appeal.png"
+              src="/images/stock/catholic-charities.jpg"
               alt="Catholic Ministries Appeal — Diocese of Evansville."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

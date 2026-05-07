@@ -34,7 +34,7 @@ export default function EastDeaneryPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/cathedral-interior.jpg"
+              src="/images/stock/holy-thursday-mass.jpg"
               alt="Cathedral interior"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

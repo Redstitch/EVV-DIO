@@ -27,7 +27,7 @@ export default function FaithPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/confirmation-stmary.jpg"
+              src="/images/stock/easter-vigil-mass.jpg"
               alt="Young Catholics at a Confirmation Mass at St. Mary Parish, Ireland, Indiana."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

@@ -22,7 +22,7 @@ export default function AboutPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/cathedral-interior.jpg"
+              src="/images/stock/deo-gratias-bishop.jpg"
               alt="Interior of St. Benedict Cathedral, Evansville, Indiana."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

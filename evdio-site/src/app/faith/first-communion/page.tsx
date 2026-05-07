@@ -20,7 +20,7 @@ export default function FirstCommunion() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/confirmation-stmary.jpg"
+              src="/images/stock/eucharistic-procession.jpg"
               alt="Young Catholics celebrating a sacrament at St. Mary Parish, Ireland, Indiana."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

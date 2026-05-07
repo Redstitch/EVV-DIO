@@ -22,7 +22,7 @@ export default function MinistriesPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/community-service.jpg"
+              src="/images/stock/habitat-build-action.jpg"
               alt="Diocesan volunteers serving the community."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

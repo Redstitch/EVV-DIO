@@ -35,7 +35,7 @@ export default function NorthDeaneryPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/cathedral-interior.jpg"
+              src="/images/stock/eucharistic-procession.jpg"
               alt="Cathedral interior"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

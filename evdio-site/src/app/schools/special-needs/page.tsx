@@ -20,7 +20,7 @@ export default function SpecialNeeds() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/schools-mass-bishop.jpg"
+              src="/images/stock/day-of-service.jpg"
               alt="Catholic school students at Mass with the Bishop"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

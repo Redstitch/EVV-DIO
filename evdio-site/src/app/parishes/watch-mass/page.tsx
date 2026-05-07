@@ -29,7 +29,7 @@ export default function WatchMassPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/blue-mass-cathedral.jpg"
+              src="/images/stock/easter-vigil-mass.jpg"
               alt="Cathedral Mass celebration"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

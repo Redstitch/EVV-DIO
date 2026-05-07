@@ -20,7 +20,7 @@ export default function Directories() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/cathedral-interior.jpg"
+              src="/images/stock/community-service.jpg"
               alt="Interior of St. Benedict Cathedral, Evansville."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

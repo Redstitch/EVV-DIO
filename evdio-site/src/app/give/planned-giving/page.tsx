@@ -38,7 +38,7 @@ export default function PlannedGivingPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/catholics-for-habitat.jpg"
+              src="/images/stock/cathedral-interior.jpg"
               alt="Catholics for Habitat community service"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

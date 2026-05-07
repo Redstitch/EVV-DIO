@@ -48,7 +48,7 @@ export default function PressRoomPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/branding/coat-of-arms.jpg"
+              src="/images/stock/palm-sunday.jpg"
               alt="Diocesan coat of arms"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

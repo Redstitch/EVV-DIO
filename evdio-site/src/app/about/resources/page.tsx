@@ -68,7 +68,7 @@ export default function ResourcesPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/cathedral-interior.jpg"
+              src="/images/stock/adoration-chapel.jpg"
               alt="Cathedral interior"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

@@ -20,7 +20,7 @@ export default function YouthPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/confirmation-stmary.jpg"
+              src="/images/stock/source-summit-youth.jpg"
               alt="Confirmation at St. Mary"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

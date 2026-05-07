@@ -20,7 +20,7 @@ export default function DonorRecognition() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/community-service.jpg"
+              src="/images/stock/deo-gratias-bishop.jpg"
               alt="Community members gathered in fellowship and service."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

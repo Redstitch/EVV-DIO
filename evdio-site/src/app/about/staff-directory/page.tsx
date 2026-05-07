@@ -93,7 +93,7 @@ export default function StaffDirectoryPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/cathedral-interior.jpg"
+              src="/images/stock/catholic-charities.jpg"
               alt="Cathedral interior"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

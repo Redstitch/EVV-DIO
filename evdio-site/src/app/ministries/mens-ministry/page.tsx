@@ -20,7 +20,7 @@ export default function MensMinistryPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/community-service.jpg"
+              src="/images/stock/deo-gratias-bishop.jpg"
               alt="Community service"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

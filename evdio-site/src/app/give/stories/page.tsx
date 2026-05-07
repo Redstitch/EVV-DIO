@@ -20,7 +20,7 @@ export default function StoriesOfImpact() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/catholics-for-habitat.jpg"
+              src="/images/stock/habitat-build-action.jpg"
               alt="Volunteers and community members working together in service."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

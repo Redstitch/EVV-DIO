@@ -20,7 +20,7 @@ export default function Accreditation() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/schools-mass-bishop.jpg"
+              src="/images/stock/educator-award.jpg"
               alt="Catholic school students at Mass with the Bishop"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

@@ -20,7 +20,7 @@ export default function MissionVision() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/schools-mass-bishop.jpg"
+              src="/images/stock/stem-lab-students.jpg"
               alt="Students and Bishop gathered for a school Mass in the Diocese of Evansville."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

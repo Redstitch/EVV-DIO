@@ -91,7 +91,7 @@ export default function OurVisionPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/articles/becoming-one-roadmap.jpg"
+              src="/images/stock/easter-vigil-candle.jpg"
               alt="The pastoral vision: Encounter, Deepen, Engage."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

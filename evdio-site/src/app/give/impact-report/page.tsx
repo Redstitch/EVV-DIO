@@ -20,7 +20,7 @@ export default function ImpactReport() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/community-service.jpg"
+              src="/images/stock/day-of-service.jpg"
               alt="Community members united in service and fellowship."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

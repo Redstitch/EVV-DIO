@@ -19,7 +19,7 @@ export default function Vocations() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/presbyterate-group.jpg"
+              src="/images/stock/ordination-prostration.jpg"
               alt="The priests of the Diocese of Evansville."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

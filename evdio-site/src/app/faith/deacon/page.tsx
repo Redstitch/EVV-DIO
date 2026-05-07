@@ -20,7 +20,7 @@ export default function Deacon() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/presbyterate-group.jpg"
+              src="/images/stock/ordination-ceremony.jpg"
               alt="The clergy of the Diocese of Evansville."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

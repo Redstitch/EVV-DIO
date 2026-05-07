@@ -20,7 +20,7 @@ export default function StaffAdmin() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/schools-mass-bishop.jpg"
+              src="/images/stock/educator-award.jpg"
               alt="Bishop Siegel celebrating Mass with Catholic school students."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

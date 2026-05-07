@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/branding/coat-of-arms.jpg"
+              src="/images/stock/cathedral-interior.jpg"
               alt="Diocese of Evansville coat of arms"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

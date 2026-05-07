@@ -31,7 +31,7 @@ export default function WestDeaneryPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/blue-mass-cathedral.jpg"
+              src="/images/stock/chrism-mass.jpg"
               alt="Cathedral Mass celebration"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

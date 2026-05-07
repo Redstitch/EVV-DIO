@@ -31,7 +31,7 @@ export default function EventsPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/community-service.jpg"
+              src="/images/stock/living-stations.jpg"
               alt="Community gathering"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

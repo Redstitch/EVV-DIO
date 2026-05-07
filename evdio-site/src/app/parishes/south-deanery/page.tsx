@@ -37,7 +37,7 @@ export default function SouthDeaneryPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/white-mass.jpg"
+              src="/images/stock/palm-sunday.jpg"
               alt="Catholic Mass celebration"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

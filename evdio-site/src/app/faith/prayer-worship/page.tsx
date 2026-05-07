@@ -20,7 +20,7 @@ export default function PrayerWorship() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/blue-mass-cathedral.jpg"
+              src="/images/stock/adoration-chapel.jpg"
               alt="Liturgical celebration at St. Benedict Cathedral."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

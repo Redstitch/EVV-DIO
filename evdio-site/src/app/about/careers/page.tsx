@@ -86,7 +86,7 @@ export default function CareersPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/community-service.jpg"
+              src="/images/stock/educator-award.jpg"
               alt="Community service"
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

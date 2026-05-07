@@ -20,7 +20,7 @@ export default function GiveStock() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/catholics-for-habitat.jpg"
+              src="/images/stock/stewardship-event.jpg"
               alt="Diocesan volunteers serving the community through charitable outreach."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

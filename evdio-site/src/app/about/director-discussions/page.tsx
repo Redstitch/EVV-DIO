@@ -20,7 +20,7 @@ export default function DirectorDiscussions() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/presbyterate-group.jpg"
+              src="/images/stock/deo-gratias-bishop.jpg"
               alt="Diocesan leaders gathered for a collaborative discussion."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"
