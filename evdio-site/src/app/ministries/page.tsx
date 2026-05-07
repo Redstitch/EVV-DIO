@@ -102,7 +102,7 @@ export default function MinistriesPage() {
           </div>
         </section>
 
-        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" >
           <hr className="section-divider" />
         </div>
 
@@ -144,7 +144,7 @@ export default function MinistriesPage() {
           </div>
         </section>
 
-        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" >
           <hr className="section-divider" />
         </div>
 
@@ -207,7 +207,7 @@ export default function MinistriesPage() {
         </section>
 
         {/* Impact info-block */}
-        <div className="page-content bg-eggshell" style={{ paddingTop: 0 }}>
+        <div className="page-content bg-eggshell">
           <div className="info-block">
             <h3>Your Generosity at Work</h3>
             <p>

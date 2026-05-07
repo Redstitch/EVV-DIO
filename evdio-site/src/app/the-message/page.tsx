@@ -241,7 +241,7 @@ export default function TheMessagePage() {
         </section>
 
         {/* ─── ABOUT & SUBSCRIBE ─── */}
-        <div className="page-content" style={{ paddingTop: 0 }}>
+        <div className="page-content" >
           <div className="info-block">
             <h3>About The Message</h3>
             <p>

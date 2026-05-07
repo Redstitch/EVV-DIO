@@ -65,7 +65,7 @@ export default function AboutPage() {
         </section>
 
         {/* Pastoral Vision */}
-        <div className="page-content bg-eggshell" style={{ paddingTop: 0 }}>
+        <div className="page-content bg-eggshell" >
           <div className="info-block">
             <h3>Our Pastoral Vision: Encounter. Deepen. Engage.</h3>
             <p>
@@ -74,7 +74,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content" >
           <hr className="section-divider" />
         </div>
 
@@ -146,7 +146,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content" >
           <hr className="section-divider" />
         </div>
 
@@ -218,7 +218,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <div className="page-content" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content" >
           <hr className="section-divider" />
         </div>
 

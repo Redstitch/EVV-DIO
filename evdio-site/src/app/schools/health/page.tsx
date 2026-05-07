@@ -43,7 +43,7 @@ export default function HealthPage() {
           </div>
         </section>
 
-        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" >
           <hr className="section-divider" />
         </div>
 
@@ -82,7 +82,7 @@ export default function HealthPage() {
           </div>
         </section>
 
-        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" >
           <hr className="section-divider" />
         </div>
 
@@ -122,7 +122,7 @@ export default function HealthPage() {
           </div>
         </section>
 
-        <div className="page-content bg-eggshell" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="page-content bg-eggshell" >
           <hr className="section-divider" />
         </div>
 
