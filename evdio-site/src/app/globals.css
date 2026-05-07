@@ -427,11 +427,11 @@ a.give-btn:hover { background: #A83B2A; }
 }
 .btn:hover .arrow { transform: translateX(5px); }
 .btn-primary {
-  background: #C0442F; color: #fff;
-  border-color: #C0442F;
+  background: var(--teal); color: #fff;
+  border-color: var(--teal);
 }
 .btn-primary:hover {
-  background: #A83B2A; border-color: #A83B2A; color: #fff;
+  background: #003D5C; border-color: #003D5C; color: #fff;
   transform: translateY(-2px);
 }
 .btn-outline {
@@ -473,11 +473,13 @@ a.give-btn:hover { background: #A83B2A; }
 .flourish {
   display: flex; justify-content: center; align-items: center; gap: 20px;
   padding: 0;
-  margin: -20px 0;
-  position: relative;
-  z-index: 1;
-  height: 40px;
+  margin: 0 0 -32px;
   color: #C69331;
+}
+/* Hide standalone flourishes between sections — they create bg gaps.
+   Flourishes inside sections (inside .page-content, .section-band) stay visible. */
+main > .flourish {
+  display: none;
 }
 .flourish .line {
   width: 80px; height: 1px;
@@ -511,41 +513,36 @@ a.give-btn:hover { background: #A83B2A; }
 
 /* ─── DECORATIVE SECTION ACCENTS ─── */
 
-/* Gold ornament above section headings */
+/* Gold ornamental cross above section headings */
 .section-head::before {
-  content: '';
+  content: '✦';
   display: block;
-  width: 40px; height: 2px;
-  background: #C69331;
-  margin: 0 auto 28px;
-  border-radius: 2px;
+  font-size: 14px;
+  color: #C69331;
+  opacity: 0.5;
+  margin-bottom: 20px;
+  letter-spacing: 12px;
 }
-/* Left-aligned variant */
-.section-head[style*="text-align: left"]::before,
-.section-head[style*="text-align:left"]::before {
-  margin-left: 0;
-}
-/* Skip the ornament on colored backgrounds */
-.section-navy .section-head::before,
-.bg-blue .section-head::before,
-.bg-teal .section-head::before { background: var(--bgold); }
+/* On dark backgrounds, brighten the ornament */
+.section-navy .section-head::before { color: var(--bgold); opacity: 0.6; }
+.bg-blue .section-head::before { color: var(--bgold); opacity: 0.6; }
 
-/* Italic em in section-h2 gets gold color */
+/* Italic em in section-h2 gets teal color */
 .section-h2 em {
   font-style: italic;
-  color: #C69331;
+  color: var(--teal);
 }
 
-/* Gold top-border accent on interior cards */
+/* Teal top-border accent on interior cards */
 .interior-card::before {
   content: '';
   position: absolute; top: 0; left: 24px; right: 24px;
-  height: 2px; background: #C69331; opacity: 0;
+  height: 2px; background: var(--teal); opacity: 0;
   transition: opacity 0.3s;
 }
 .interior-card:hover::before { opacity: 1; }
 
-/* Feature-head gold accent line under h1 */
+/* Gold accent line under h1 in feature-head */
 .feature-head h1::after {
   content: '';
   display: block;
@@ -553,20 +550,6 @@ a.give-btn:hover { background: #A83B2A; }
   background: #C69331;
   margin-top: 18px;
   border-radius: 2px;
-}
-
-/* Gold corner ornaments on info-block */
-.info-block {
-  position: relative;
-}
-.info-block::before {
-  content: '';
-  position: absolute; top: -1px; left: -1px;
-  width: 20px; height: 20px;
-  border-top: 2px solid #C69331;
-  border-left: 2px solid #C69331;
-  border-radius: 4px 0 0 0;
-  opacity: 0.4;
 }
 
 /* Stat numbers get gold */
@@ -1079,15 +1062,7 @@ blockquote {
    ================================================================ */
 .feature-head {
   background: #F9F3E1;
-  border-bottom: 2px solid #C69331;
-  position: relative;
-}
-/* Gold gradient edge at bottom of hero */
-.feature-head::after {
-  content: '';
-  position: absolute; bottom: -2px; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent 10%, #C69331 30%, #C69331 70%, transparent 90%);
+  border-bottom: 1px solid var(--line);
 }
 .feature-head .grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 0;
@@ -1103,13 +1078,12 @@ blockquote {
 .feature-head .text > * { max-width: 560px; }
 .feature-head .kicker {
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--teal); font-weight: 600;
+  color: #fff; font-weight: 600;
   margin-bottom: 24px;
   padding: 9px 20px;
-  background: rgba(0,78,115,0.1);
+  background: var(--teal);
   border-radius: 999px;
   align-self: flex-start;
-  border: 1px solid rgba(198,147,49,0.2);
 }
 .feature-head h1 {
   font-family: var(--serif);
@@ -1119,7 +1093,7 @@ blockquote {
   max-width: 18ch;
   margin-bottom: 22px;
 }
-.feature-head h1 em { font-style: italic; color: var(--blue); }
+.feature-head h1 em { font-style: italic; color: var(--teal); }
 .feature-head .deck {
   font-family: var(--serif); font-style: italic;
   font-size: clamp(18px, 1.7vw, 22px);
@@ -1366,7 +1340,7 @@ blockquote {
 .info-block {
   background: var(--cream-xlt); border-radius: 16px;
   padding: 24px 28px; margin-bottom: 20px;
-  border-left: 4px solid var(--dgold);
+  border-left: 4px solid var(--teal);
   max-width: 900px;
 }
 .info-block h3 {
@@ -1516,10 +1490,10 @@ blockquote {
 .section-head { text-align: center; margin-bottom: 56px; }
 .section-tag {
   display: inline-block; font-size: 11px; letter-spacing: 0.22em;
-  text-transform: uppercase; color: var(--teal);
+  text-transform: uppercase; color: #fff;
   font-weight: 600; margin-bottom: 18px; font-family: var(--sans);
   padding: 7px 16px;
-  background: rgba(0,78,115,0.07);
+  background: var(--teal);
   border-radius: 999px;
 }
 /* Always center section tags and headings inside page-content */
@@ -2088,12 +2062,10 @@ blockquote {
 /* Section background variants — use these classes for visual rhythm */
 .section-cream { background: #FEFCF6; }
 .section-warm { background: #FEFCF6; }
-/* CTA band — deep teal, full-bleed, gold accent top */
+/* CTA band — deep teal, full-bleed */
 .section-navy {
   background: #1F4D70 !important; color: var(--cream) !important;
   border: none;
-  border-top: 3px solid #C69331;
-  position: relative;
 }
 /* Full-bleed colored sections — use as standalone <section>, not inside page-content */
 .section-band {
