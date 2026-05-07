@@ -477,15 +477,17 @@ a.give-btn:hover { background: #A83B2A; }
    Gold (#C69331) accent ornaments between sections
    ================================================================ */
 .flourish {
-  display: flex; justify-content: center; align-items: center; gap: 20px;
+  display: none;
+  justify-content: center; align-items: center; gap: 20px;
   padding: 16px 0;
   margin: 0;
   color: #C69331;
 }
-/* Standalone flourishes between sections inherit adjacent bg */
-main > .flourish {
-  padding: 12px 0;
-  background: inherit;
+/* Only show flourishes that are INSIDE a section or content area */
+.page-content .flourish,
+.section-band .flourish,
+section .flourish {
+  display: flex;
 }
 .flourish .line {
   width: 80px; height: 1px;
@@ -561,9 +563,8 @@ main > .flourish {
 /* Stat numbers get gold */
 .stat-num { color: #C69331; }
 
-/* Scripture/quote blocks get gold left border */
-.scripture-block,
-blockquote {
+/* Scripture block gets gold left border */
+.scripture-block {
   border-left: 3px solid #C69331;
   padding-left: 24px;
 }
@@ -2368,22 +2369,11 @@ blockquote {
   font-weight: 400;
 }
 
-/* ─── DECORATIVE QUOTATION MARKS ─── */
-blockquote, .scripture-block {
+/* ─── BLOCKQUOTE STYLING ─── */
+blockquote {
   position: relative;
   padding-left: 32px;
   border-left: 3px solid #C69331;
-}
-blockquote::before, .scripture-block::before {
-  content: '\201C';
-  font-family: var(--serif);
-  font-size: 72px;
-  color: #C69331;
-  opacity: 0.2;
-  position: absolute;
-  top: -16px;
-  left: -8px;
-  line-height: 1;
 }
 
 /* ─── RICH CARD DEPTH & HOVER ─── */
@@ -2517,13 +2507,7 @@ blockquote::before, .scripture-block::before {
   position: relative;
   padding-top: 8px;
 }
-.index-col::before {
-  content: '';
-  position: absolute; top: 0; left: 0;
-  width: 32px; height: 2px;
-  background: #C69331;
-  opacity: 0.5;
-}
+/* removed — gold lines above index cols were unwanted */
 .index-col h3 em { color: var(--teal); }
 
 /* ─── HOMEPAGE BISHOP SECTION POLISH ─── */
