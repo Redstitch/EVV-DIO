@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ParishMapWrapper } from "@/components/ParishMapWrapper";
 
 export default function Home() {
   return (
@@ -47,6 +48,28 @@ export default function Home() {
               <span className="quick-desc">{link.desc}</span>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* ─── PARISH FINDER ─── */}
+      <section className="hp-parish-finder">
+        <div className="hp-parish-inner">
+          <div className="hp-parish-head">
+            <p className="hp-parish-eyebrow">45 Parishes Across 12 Counties</p>
+            <h2 className="hp-parish-headline">Find a Parish <em>Near You</em></h2>
+            <p className="hp-parish-desc">
+              Search by city, ZIP code, or parish name to find Mass times and parish
+              information in the Diocese of Evansville.
+            </p>
+          </div>
+          <div className="hp-parish-map">
+            <ParishMapWrapper />
+          </div>
+          <div style={{ textAlign: "center", marginTop: 24 }}>
+            <Link href="/parishes" className="btn btn-outline" style={{ fontSize: 13 }}>
+              View All Parishes <span className="arrow" aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
       </section>
 
