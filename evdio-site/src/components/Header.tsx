@@ -1,17 +1,31 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MobileDrawer } from "./MobileDrawer";
 import { LanguageToggle } from "./LanguageToggle";
+import { SearchModal } from "./SearchModal";
 import { navItems, giveItem } from "@/lib/navigation";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [openMega, setOpenMega] = useState<string | null>(null);
   const megaTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Cmd+K / Ctrl+K keyboard shortcut
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 8);
@@ -166,7 +180,7 @@ export function Header() {
 
           {/* Header Actions */}
           <div className="header-actions">
-            <button className="search-btn" aria-label="Search the site">
+            <button className="search-btn" aria-label="Search the site" onClick={() => setSearchOpen(true)}>
               <svg
                 width="20"
                 height="20"
@@ -261,6 +275,9 @@ export function Header() {
 
       {/* Mobile Drawer */}
       <MobileDrawer open={mobileOpen} onClose={() => setMobileOpen(false)} />
+
+      {/* Search Modal */}
+      <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );
 }
