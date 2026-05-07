@@ -24,7 +24,7 @@ export default function AnnulmentsPage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/cathedral-interior.jpg"
+              src="/images/stock/confessional.jpg"
               alt="Interior of St. Benedict Cathedral, Evansville."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

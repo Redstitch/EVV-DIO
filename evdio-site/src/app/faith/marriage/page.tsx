@@ -19,7 +19,7 @@ export default function Marriage() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/holy-thursday-mass.jpg"
+              src="/images/stock/marriage-rings.jpg"
               alt="St. Benedict Cathedral, Evansville."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

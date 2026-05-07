@@ -20,7 +20,7 @@ export default function Baptism() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/confirmation-stmary.jpg"
+              src="/images/stock/baptism-ceremony.jpg"
               alt="St. Benedict Cathedral during a liturgical celebration."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"

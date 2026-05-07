@@ -19,7 +19,7 @@ export default function Confirmation() {
           </div>
           <figure className="photo">
             <Image
-              src="/images/stock/confirmation-stmary.jpg"
+              src="/images/stock/confirmation-anointing.jpg"
               alt="Young Catholics at Confirmation at St. Mary Parish."
               fill
               sizes="(max-width: 960px) 100vw, 50vw"
