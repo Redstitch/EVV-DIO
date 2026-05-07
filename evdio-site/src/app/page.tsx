@@ -45,7 +45,6 @@ export default function Home() {
             <Link key={link.label} href={link.href} className="quick-card">
               <span className="quick-icon" dangerouslySetInnerHTML={{ __html: link.icon }} />
               <span className="quick-label">{link.label}</span>
-              <span className="quick-desc">{link.desc}</span>
             </Link>
           ))}
         </div>
