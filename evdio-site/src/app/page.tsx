@@ -244,7 +244,7 @@ const quickLinks = [
     label: "Become Catholic",
     desc: "Start the journey",
     href: "/faith/become-catholic",
-    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20"/></svg>',
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="10.5" y="2" width="3" height="20" rx="1"/><rect x="4" y="8" width="16" height="3" rx="1"/></svg>',
   },
   {
     label: "Catholic Schools",
