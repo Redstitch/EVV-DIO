@@ -865,7 +865,7 @@ section .flourish {
    HOMEPAGE — QUICK ACTIONS (navy bar below hero)
    ================================================================ */
 .quick-actions {
-  background: var(--navy);
+  background: #1F4D70;
   position: relative;
   z-index: 2;
   padding: 0;
