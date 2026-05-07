@@ -1387,19 +1387,50 @@ blockquote {
 
 /* CTA blocks */
 .cta-block {
-  background: var(--cream-xlt); border-radius: 20px;
-  padding: 48px 40px; text-align: center; color: var(--navy);
-  border: 1px solid var(--line);
+  background: linear-gradient(160deg, #1F4D70 0%, #163D58 40%, #1A4565 100%);
+  border-radius: 20px;
+  padding: 48px 40px; text-align: center; color: var(--cream);
+  border: 1px solid rgba(198,147,49,0.15);
+  position: relative; overflow: hidden;
 }
+.cta-block::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(198,147,49,0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 80%, rgba(198,147,49,0.06) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='37' y='25' width='6' height='30' rx='2' fill='%23ffffff' opacity='0.015'/%3E%3Crect x='25' y='36' width='30' height='6' rx='2' fill='%23ffffff' opacity='0.015'/%3E%3C/svg%3E");
+  pointer-events: none; border-radius: inherit;
+}
+.cta-block::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 20%, rgba(198,147,49,0.3) 50%, transparent 80%);
+  pointer-events: none;
+}
+.cta-block > * { position: relative; z-index: 1; }
 .cta-block h3 {
   font-family: var(--serif); font-size: clamp(28px, 3vw, 40px);
-  font-weight: 400; color: var(--navy); margin-bottom: 14px;
+  font-weight: 400; color: var(--cream); margin-bottom: 14px;
 }
-.cta-block h3 em { font-style: italic; color: var(--blue); }
+.cta-block h3 em { font-style: italic; color: var(--bgold); }
 .cta-block p {
-  font-size: 15px; color: var(--muted);
+  font-size: 15px; color: rgba(238,218,179,0.7);
   margin-bottom: 24px; line-height: 1.65;
   max-width: 540px; margin-left: auto; margin-right: auto;
+}
+.cta-block .btn-primary {
+  background: var(--bgold); color: var(--navy); border-color: var(--bgold);
+}
+.cta-block .btn-primary:hover {
+  background: #C69331; border-color: #C69331;
+}
+.cta-block .btn-outline {
+  color: var(--cream); border-color: rgba(238,218,179,0.3);
+}
+.cta-block .btn-outline:hover {
+  background: var(--cream); color: var(--navy);
 }
 
 /* Prose / body content */
@@ -1805,26 +1836,45 @@ blockquote {
   font-size: 15px; line-height: 1.65; color: var(--muted);
 }
 
-/* CTA strip */
+/* CTA strip — dark teal with cross pattern (matches section-navy) */
 .cta-strip {
   padding: 96px 40px;
   text-align: center;
-  background: #FEFBF4;
-  border-top: 1px solid var(--line);
+  background: linear-gradient(160deg, #1F4D70 0%, #163D58 40%, #1A4565 100%);
+  color: var(--cream);
+  border-top: none;
+  position: relative; overflow: hidden;
 }
+.cta-strip::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(198,147,49,0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 80%, rgba(198,147,49,0.06) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='37' y='25' width='6' height='30' rx='2' fill='%23ffffff' opacity='0.015'/%3E%3Crect x='25' y='36' width='30' height='6' rx='2' fill='%23ffffff' opacity='0.015'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+.cta-strip > * { position: relative; z-index: 1; }
 .cta-strip .kicker {
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--brick); font-weight: 600;
+  color: var(--bgold); font-weight: 600;
   margin-bottom: 24px;
 }
 .cta-strip h2 {
   font-family: var(--serif);
   font-size: clamp(40px, 5vw, 76px);
-  line-height: 1; color: var(--navy); font-weight: 400;
+  line-height: 1; color: var(--cream); font-weight: 400;
   letter-spacing: -0.02em;
   max-width: 18ch; margin: 0 auto 32px;
 }
-.cta-strip h2 em { font-style: italic; color: var(--blue); }
+.cta-strip h2 em { font-style: italic; color: var(--bgold); }
+.cta-strip p { color: rgba(238,218,179,0.7); }
+.cta-strip .btn-primary {
+  background: var(--bgold); color: var(--navy); border-color: var(--bgold);
+}
+.cta-strip .btn-outline {
+  color: var(--cream); border-color: rgba(238,218,179,0.3);
+}
 
 /* ================================================================
    RESPONSIVE — 960px
