@@ -1221,6 +1221,13 @@ section .flourish {
   padding: 72px 40px;
   background: #FEFBF4;
 }
+/* Visible separator between same-bg sections */
+.page-content + .page-content:not(.bg-eggshell) {
+  border-top: 1px solid rgba(198,147,49,0.15);
+}
+.page-content.bg-eggshell + .page-content.bg-eggshell {
+  border-top: 1px solid rgba(198,147,49,0.15);
+}
 .page-content > * {
   max-width: 1360px;
   margin-left: auto;
