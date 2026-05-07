@@ -2569,7 +2569,7 @@ blockquote::before, .scripture-block::before {
   transform: translateY(-6px);
   box-shadow: 0 20px 60px rgba(10,34,64,0.12);
 }
-.action-card h3 em { color: var(--teal); }
+.action-card h3 em { color: var(--bgold); }
 
 /* ─── FOOTER POLISH ─── */
 .site-footer::before {
