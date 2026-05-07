@@ -7,15 +7,15 @@ export default function Home() {
       {/* ─── HERO (cathedral image backdrop) ─── */}
       <section className="hero-section" aria-labelledby="hero-title">
         <div className="hero-inner">
-          <p className="hero-eyebrow">Serving Southwest Indiana since 1944</p>
+          <p className="hero-eyebrow">The Catholic Diocese of Evansville</p>
           <h1 id="hero-title" className="hero-headline">
-            The Catholic Diocese of <em>Evansville.</em>
+            Welcome <em>home.</em>
           </h1>
           <p className="hero-lede">
             <b>Forty-five parishes, twenty-six schools, and a Church alive</b>{" "}
             across twelve counties of Southwest Indiana &mdash; from the Ohio
             River to the cornfields of the north. Wherever you are on the
-            journey, you&rsquo;re welcome here.
+            journey, you belong here.
           </p>
           <div className="hero-actions">
             <Link href="/parishes/mass-times" className="btn btn-primary">
