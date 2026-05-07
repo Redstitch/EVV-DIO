@@ -177,23 +177,6 @@ export default function Home() {
 
       {/* ─── ACTION ROW ─── */}
       <section className="action-section" aria-label="Next steps">
-        <div
-          className="flourish flourish-quatrefoil"
-          aria-hidden="true"
-          style={{ padding: "0 0 48px" }}
-        >
-          <span className="dot" />
-          <span className="line" />
-          <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor">
-            <circle cx="16" cy="8" r="6" />
-            <circle cx="16" cy="24" r="6" />
-            <circle cx="8" cy="16" r="6" />
-            <circle cx="24" cy="16" r="6" />
-            <circle cx="16" cy="16" r="3" fill="var(--cream-xlt)" />
-          </svg>
-          <span className="line" />
-          <span className="dot" />
-        </div>
         <div className="action-grid">
           <Link className="action-card" href="/parishes">
             <h3>
