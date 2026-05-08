@@ -75,6 +75,7 @@ export function Header() {
             <Link href="/parishes">Find a Parish</Link>
             <Link href="/parishes/mass-times">Mass Times</Link>
             <Link href="/parishes/watch-mass">Watch Mass Online</Link>
+            <a href="https://mydio.evdio.org" target="_blank" rel="noopener noreferrer">MyDio Staff Portal</a>
             <LanguageToggle />
           </span>
         </div>
